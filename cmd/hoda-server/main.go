@@ -12,6 +12,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/danbestan/hoda-custom-backend/internal/account"
 	"github.com/danbestan/hoda-custom-backend/internal/api"
 	"github.com/danbestan/hoda-custom-backend/internal/profile"
 	"github.com/danbestan/hoda-custom-backend/internal/session"
@@ -35,7 +36,7 @@ func parseOptions() options {
 		flag.PrintDefaults()
 	}
 	flag.StringVar(&o.addr, "addr", "127.0.0.1:8787", "listen address")
-	flag.StringVar(&o.dataDir, "data", "runtime", "directory for player profiles")
+	flag.StringVar(&o.dataDir, "data", "runtime", "directory for player accounts and profiles")
 	flag.StringVar(&o.seedProfile, "seed-profile", "", "client save file to import when the seed player has no profile")
 	flag.StringVar(&o.seedPlayer, "seed-player", "local", "player that -seed-profile is imported for")
 	flag.Parse()
@@ -76,9 +77,13 @@ func run(o options, log *slog.Logger) error {
 	if err := seed(store, o, log); err != nil {
 		return err
 	}
+	accounts, err := account.NewStore(o.dataDir, time.Now)
+	if err != nil {
+		return err
+	}
 	server := &http.Server{
 		Addr:              o.addr,
-		Handler:           api.NewServer(store, session.NewRegistry(), time.Now, log).Handler(),
+		Handler:           api.NewServer(accounts, store, session.NewRegistry(), time.Now, log).Handler(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)

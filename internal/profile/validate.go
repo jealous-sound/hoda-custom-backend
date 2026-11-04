@@ -3,9 +3,20 @@ package profile
 import (
 	"encoding/json"
 	"fmt"
+	"regexp"
+	"unicode/utf8"
 )
 
-const MaxProfileBytes = 8 << 20
+const (
+	MaxProfileBytes     = 8 << 20
+	MaxPlayerNameLength = 25
+)
+
+var playerNamePattern = regexp.MustCompile(`^[\p{L}\p{N} -]+$`)
+
+func ValidPlayerName(name string) bool {
+	return utf8.RuneCountInString(name) <= MaxPlayerNameLength && playerNamePattern.MatchString(name)
+}
 
 var requiredSections = []string{"account", "roster", "squads"}
 
@@ -41,6 +52,12 @@ func Validate(raw []byte) (json.RawMessage, error) {
 		}
 		if number < 0 {
 			return nil, fmt.Errorf("account.%s must not be negative", field)
+		}
+	}
+	if value, ok := account["name"]; ok {
+		var name string
+		if err := json.Unmarshal(value, &name); err != nil || !ValidPlayerName(name) {
+			return nil, fmt.Errorf("account.name must be 1-%d letters, digits, spaces or '-'", MaxPlayerNameLength)
 		}
 	}
 	return json.RawMessage(raw), nil

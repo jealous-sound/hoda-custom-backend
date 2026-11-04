@@ -5,7 +5,7 @@ BACKEND_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CLIENT_DIR="${HOD_CLIENT_DIR:-$BACKEND_DIR/../hoda-custom-client}"
 ADDR="${HOD_BACKEND_ADDR:-127.0.0.1:8787}"
 DATA_DIR="${HOD_BACKEND_DATA:-$BACKEND_DIR/runtime}"
-PLAYER_ID="${HOD_PLAYER_ID:-local}"
+PLAYER_ID="${HOD_PLAYER_ID:-}"
 BACKEND_URL="http://$ADDR"
 HEALTH_ATTEMPTS=50
 
@@ -37,11 +37,14 @@ if backend_healthy; then
     echo "Reusing backend already running at $BACKEND_URL"
 else
     mkdir -p "$DATA_DIR"
+    SEED_ARGS=()
+    if [[ -n "$PLAYER_ID" ]]; then
+        SEED_ARGS=(-seed-player "$PLAYER_ID" -seed-profile "$CLIENT_DIR/player_save.dat")
+    fi
     "$BACKEND_DIR/bin/hoda-server" \
         -addr "$ADDR" \
         -data "$DATA_DIR" \
-        -seed-player "$PLAYER_ID" \
-        -seed-profile "$CLIENT_DIR/player_save.dat" \
+        ${SEED_ARGS[@]+"${SEED_ARGS[@]}"} \
         >>"$DATA_DIR/server.log" 2>&1 &
     SERVER_PID=$!
     for _ in $(seq "$HEALTH_ATTEMPTS"); do
@@ -58,4 +61,7 @@ else
 fi
 
 cd "$CLIENT_DIR"
-HOD_BACKEND_URL="$BACKEND_URL" HOD_PLAYER_ID="$PLAYER_ID" ./game "$@"
+if [[ -n "$PLAYER_ID" ]]; then
+    export HOD_PLAYER_ID="$PLAYER_ID"
+fi
+HOD_BACKEND_URL="$BACKEND_URL" ./game "$@"

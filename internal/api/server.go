@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/danbestan/hoda-custom-backend/internal/account"
 	"github.com/danbestan/hoda-custom-backend/internal/profile"
 	"github.com/danbestan/hoda-custom-backend/internal/session"
 )
@@ -17,20 +18,24 @@ import (
 const RevisionHeader = "X-Profile-Revision"
 
 type Server struct {
+	accounts *account.Store
 	profiles *profile.Store
 	sessions *session.Registry
 	now      func() time.Time
 	log      *slog.Logger
 }
 
-func NewServer(profiles *profile.Store, sessions *session.Registry, now func() time.Time, log *slog.Logger) *Server {
-	return &Server{profiles: profiles, sessions: sessions, now: now, log: log}
+func NewServer(
+	accounts *account.Store, profiles *profile.Store, sessions *session.Registry, now func() time.Time, log *slog.Logger,
+) *Server {
+	return &Server{accounts: accounts, profiles: profiles, sessions: sessions, now: now, log: log}
 }
 
 func (s *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /healthz", s.health)
 	mux.HandleFunc("GET /v1/time", s.serverTime)
+	mux.HandleFunc("POST /v1/players", s.createPlayer)
 	mux.HandleFunc("POST /v1/sessions", s.openSession)
 	mux.HandleFunc("GET /v1/players/{player}/profile", s.authorized(s.getProfile))
 	mux.HandleFunc("PUT /v1/players/{player}/profile", s.authorized(s.putProfile))
@@ -65,8 +70,30 @@ func (s *Server) serverTime(w http.ResponseWriter, _ *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]int64{"server_time": s.now().Unix()})
 }
 
+type createPlayerResponse struct {
+	PlayerID   string `json:"player_id"`
+	Secret     string `json:"secret"`
+	ServerTime int64  `json:"server_time"`
+}
+
+func (s *Server) createPlayer(w http.ResponseWriter, _ *http.Request) {
+	credentials, err := s.accounts.CreateGuest()
+	if err != nil {
+		s.log.Error("create player", "error", err)
+		writeError(w, http.StatusInternalServerError, "could not create player")
+		return
+	}
+	s.log.Info("created guest player", "player", credentials.PlayerID)
+	writeJSON(w, http.StatusCreated, createPlayerResponse{
+		PlayerID:   credentials.PlayerID,
+		Secret:     credentials.Secret,
+		ServerTime: s.now().Unix(),
+	})
+}
+
 type sessionRequest struct {
 	PlayerID string `json:"player_id"`
+	Secret   string `json:"secret"`
 }
 
 type sessionResponse struct {
@@ -78,11 +105,21 @@ type sessionResponse struct {
 func (s *Server) openSession(w http.ResponseWriter, r *http.Request) {
 	var request sessionRequest
 	if err := json.NewDecoder(io.LimitReader(r.Body, 4096)).Decode(&request); err != nil {
-		writeError(w, http.StatusBadRequest, "body must be {\"player_id\": \"...\"}")
+		writeError(w, http.StatusBadRequest, "body must be {\"player_id\": \"...\", \"secret\": \"...\"}")
 		return
 	}
 	if !profile.ValidPlayerID(request.PlayerID) {
 		writeError(w, http.StatusBadRequest, "player_id must be 1-64 letters, digits, '-' or '_'")
+		return
+	}
+	verified, err := s.accounts.Verify(request.PlayerID, request.Secret)
+	if err != nil && !errors.Is(err, account.ErrNotRegistered) {
+		s.log.Error("verify player", "player", request.PlayerID, "error", err)
+		writeError(w, http.StatusInternalServerError, "could not verify player")
+		return
+	}
+	if err == nil && !verified {
+		writeError(w, http.StatusUnauthorized, "wrong secret for player")
 		return
 	}
 	token, err := s.sessions.Open(request.PlayerID)

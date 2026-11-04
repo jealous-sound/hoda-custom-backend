@@ -10,6 +10,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/danbestan/hoda-custom-backend/internal/account"
 	"github.com/danbestan/hoda-custom-backend/internal/profile"
 	"github.com/danbestan/hoda-custom-backend/internal/session"
 )
@@ -25,12 +26,18 @@ type harness struct {
 }
 
 func newHarness(t *testing.T) *harness {
-	store, err := profile.NewStore(t.TempDir(), func() time.Time { return fixedNow })
+	dir := t.TempDir()
+	clock := func() time.Time { return fixedNow }
+	store, err := profile.NewStore(dir, clock)
+	if err != nil {
+		t.Fatal(err)
+	}
+	accounts, err := account.NewStore(dir, clock)
 	if err != nil {
 		t.Fatal(err)
 	}
 	log := slog.New(slog.NewTextHandler(io.Discard, nil))
-	server := httptest.NewServer(NewServer(store, session.NewRegistry(), func() time.Time { return fixedNow }, log).Handler())
+	server := httptest.NewServer(NewServer(accounts, store, session.NewRegistry(), clock, log).Handler())
 	t.Cleanup(server.Close)
 	return &harness{t: t, server: server}
 }
@@ -167,4 +174,79 @@ func TestSessionRejectsUnsafePlayerID(t *testing.T) {
 	h := newHarness(t)
 	response, body := h.do("POST", "/v1/sessions", "", "", `{"player_id":"../etc"}`)
 	expectStatus(t, response, body, http.StatusBadRequest)
+}
+
+func (h *harness) createGuest() createPlayerResponse {
+	h.t.Helper()
+	response, body := h.do("POST", "/v1/players", "", "", "")
+	expectStatus(h.t, response, body, http.StatusCreated)
+	var created createPlayerResponse
+	if err := json.Unmarshal([]byte(body), &created); err != nil {
+		h.t.Fatal(err)
+	}
+	return created
+}
+
+func TestGuestPlayerOpensSessionWithItsSecret(t *testing.T) {
+	h := newHarness(t)
+	guest := h.createGuest()
+	if !profile.ValidPlayerID(guest.PlayerID) || !strings.HasPrefix(guest.PlayerID, "guest-") {
+		t.Fatalf("player_id = %q", guest.PlayerID)
+	}
+	if guest.Secret == "" || guest.ServerTime != fixedNow.Unix() {
+		t.Fatalf("created = %+v", guest)
+	}
+
+	request := `{"player_id":"` + guest.PlayerID + `","secret":"` + guest.Secret + `"}`
+	response, body := h.do("POST", "/v1/sessions", "", "", request)
+	expectStatus(t, response, body, http.StatusOK)
+	var opened sessionResponse
+	if err := json.Unmarshal([]byte(body), &opened); err != nil {
+		t.Fatal(err)
+	}
+	response, body = h.do("PUT", "/v1/players/"+guest.PlayerID+"/profile", opened.Token, "0", validProfile)
+	expectStatus(t, response, body, http.StatusOK)
+}
+
+func TestGuestPlayerRejectsWrongOrMissingSecret(t *testing.T) {
+	h := newHarness(t)
+	guest := h.createGuest()
+	for name, request := range map[string]string{
+		"wrong secret":   `{"player_id":"` + guest.PlayerID + `","secret":"nope"}`,
+		"missing secret": `{"player_id":"` + guest.PlayerID + `"}`,
+	} {
+		t.Run(name, func(t *testing.T) {
+			response, body := h.do("POST", "/v1/sessions", "", "", request)
+			expectStatus(t, response, body, http.StatusUnauthorized)
+		})
+	}
+}
+
+func TestEachGuestGetsItsOwnPlayer(t *testing.T) {
+	h := newHarness(t)
+	first, second := h.createGuest(), h.createGuest()
+	if first.PlayerID == second.PlayerID || first.Secret == second.Secret {
+		t.Fatalf("guests share credentials: %+v %+v", first, second)
+	}
+}
+
+func TestPlayerNameFollowsOriginalRules(t *testing.T) {
+	h := newHarness(t)
+	token := h.open("local")
+	named := func(name string) string {
+		return strings.Replace(validProfile, `"gems":7`, `"gems":7,"name":`+name, 1)
+	}
+	response, body := h.do("PUT", "/v1/players/local/profile", token, "0", named(`"Knight-Commander Meredith"`))
+	expectStatus(t, response, body, http.StatusOK)
+	for label, name := range map[string]string{
+		"underscore": `"Grey_Warden"`,
+		"empty":      `""`,
+		"too long":   `"` + strings.Repeat("a", profile.MaxPlayerNameLength+1) + `"`,
+		"not text":   `7`,
+	} {
+		t.Run(label, func(t *testing.T) {
+			response, payload := h.do("PUT", "/v1/players/local/profile", token, "1", named(name))
+			expectStatus(t, response, payload, http.StatusUnprocessableEntity)
+		})
+	}
 }
