@@ -10,6 +10,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 	"sync"
 	"time"
 )
@@ -23,9 +24,21 @@ const (
 var ErrNotRegistered = errors.New("player has no account")
 
 type Account struct {
-	PlayerID   string    `json:"player_id"`
-	SecretHash string    `json:"secret_hash"`
-	CreatedAt  time.Time `json:"created_at"`
+	PlayerID      string    `json:"player_id"`
+	SecretHash    string    `json:"secret_hash"`
+	CreatedAt     time.Time `json:"created_at"`
+	LastSessionAt time.Time `json:"last_session_at,omitzero"`
+}
+
+func (a Account) IsGuest() bool {
+	return strings.HasPrefix(a.PlayerID, guestIDPrefix)
+}
+
+func (a Account) LastSeen() time.Time {
+	if a.LastSessionAt.After(a.CreatedAt) {
+		return a.LastSessionAt
+	}
+	return a.CreatedAt
 }
 
 type Credentials struct {
@@ -78,18 +91,78 @@ func (s *Store) CreateGuest() (Credentials, error) {
 func (s *Store) Verify(playerID, secret string) (bool, error) {
 	s.mutex.Lock()
 	defer s.mutex.Unlock()
-	data, err := os.ReadFile(s.path(playerID))
-	if errors.Is(err, os.ErrNotExist) {
-		return false, ErrNotRegistered
+	record, err := s.read(playerID)
+	if err != nil {
+		return false, err
+	}
+	return subtle.ConstantTimeCompare([]byte(record.SecretHash), []byte(hashSecret(secret))) == 1, nil
+}
+
+func (s *Store) RecordSession(playerID string) error {
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
+	record, err := s.read(playerID)
+	if err != nil {
+		return err
+	}
+	record.LastSessionAt = s.now().UTC()
+	return s.write(record)
+}
+
+func (s *Store) Guests() ([]Account, error) {
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
+	entries, err := os.ReadDir(s.dir)
+	if err != nil {
+		return nil, fmt.Errorf("list accounts: %w", err)
+	}
+	var guests []Account
+	for _, entry := range entries {
+		playerID, isRecord := strings.CutSuffix(entry.Name(), ".json")
+		if !isRecord || entry.IsDir() || !strings.HasPrefix(playerID, guestIDPrefix) {
+			continue
+		}
+		record, err := s.read(playerID)
+		if err != nil {
+			return nil, err
+		}
+		guests = append(guests, record)
+	}
+	return guests, nil
+}
+
+func (s *Store) DeleteIfUnseenSince(playerID string, cutoff time.Time) (bool, error) {
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
+	record, err := s.read(playerID)
+	if errors.Is(err, ErrNotRegistered) {
+		return false, nil
 	}
 	if err != nil {
-		return false, fmt.Errorf("read account %s: %w", playerID, err)
+		return false, err
+	}
+	if record.LastSeen().After(cutoff) {
+		return false, nil
+	}
+	if err := os.Remove(s.path(playerID)); err != nil {
+		return false, fmt.Errorf("delete account %s: %w", playerID, err)
+	}
+	return true, nil
+}
+
+func (s *Store) read(playerID string) (Account, error) {
+	data, err := os.ReadFile(s.path(playerID))
+	if errors.Is(err, os.ErrNotExist) {
+		return Account{}, ErrNotRegistered
+	}
+	if err != nil {
+		return Account{}, fmt.Errorf("read account %s: %w", playerID, err)
 	}
 	var record Account
 	if err := json.Unmarshal(data, &record); err != nil {
-		return false, fmt.Errorf("decode account %s: %w", playerID, err)
+		return Account{}, fmt.Errorf("decode account %s: %w", playerID, err)
 	}
-	return subtle.ConstantTimeCompare([]byte(record.SecretHash), []byte(hashSecret(secret))) == 1, nil
+	return record, nil
 }
 
 func (s *Store) write(record Account) error {

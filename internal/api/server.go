@@ -118,9 +118,17 @@ func (s *Server) openSession(w http.ResponseWriter, r *http.Request) {
 		writeError(w, http.StatusInternalServerError, "could not verify player")
 		return
 	}
-	if err == nil && !verified {
+	registered := err == nil
+	if registered && !verified {
 		writeError(w, http.StatusUnauthorized, "wrong secret for player")
 		return
+	}
+	if registered {
+		if err := s.accounts.RecordSession(request.PlayerID); err != nil {
+			s.log.Error("record session", "player", request.PlayerID, "error", err)
+			writeError(w, http.StatusInternalServerError, "could not open session")
+			return
+		}
 	}
 	token, err := s.sessions.Open(request.PlayerID)
 	if err != nil {

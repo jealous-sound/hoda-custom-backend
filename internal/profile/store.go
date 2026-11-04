@@ -100,6 +100,19 @@ func (s *Store) Put(playerID string, expectedRevision int64, profile json.RawMes
 	return next, nil
 }
 
+func (s *Store) Delete(playerID string) error {
+	if !ValidPlayerID(playerID) {
+		return ErrInvalidPlayerID
+	}
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
+	err := os.Remove(s.path(playerID))
+	if err != nil && !errors.Is(err, os.ErrNotExist) {
+		return fmt.Errorf("delete profile %s: %w", playerID, err)
+	}
+	return nil
+}
+
 func (s *Store) write(record Record) error {
 	data, err := json.Marshal(record)
 	if err != nil {

@@ -55,6 +55,12 @@ cannot overwrite newer progress. Profiles are validated (object, `account`/`rost
 counters non-negative, `account.name` if present is 1-25 letters, digits, spaces or `-`, as in 5.4.4) and stored as
 `runtime/players/<id>.json`. Accounts live in `runtime/accounts/<id>.json` with only a hash of the secret.
 
+Guests that leave in the first minutes would pile up as empty accounts, so the server deletes a guest and its
+profile once it has gone `-guest-idle` (default `336h`, 14 days; `0` keeps everyone) without opening a session,
+counted from its creation, if its profile has no `account.name` and `tutorial.complete` is false, or it never saved
+a profile. Profiles without a `tutorial` section predate the tutorial and are kept. The check runs on start and every
+`-prune-every` (default `1h`). Each session stamps `last_session_at` in the account file.
+
 ## Next to move server-side
 
 The client still computes everything and uploads the result. In order of cheat value:

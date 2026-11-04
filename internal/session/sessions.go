@@ -35,3 +35,13 @@ func (r *Registry) Player(token string) (string, bool) {
 	playerID, ok := r.players[token]
 	return playerID, ok
 }
+
+func (r *Registry) CloseAll(playerID string) {
+	r.mutex.Lock()
+	defer r.mutex.Unlock()
+	for token, owner := range r.players {
+		if owner == playerID {
+			delete(r.players, token)
+		}
+	}
+}
