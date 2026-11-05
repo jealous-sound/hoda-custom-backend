@@ -236,9 +236,15 @@ func writeRevision(w http.ResponseWriter, revision int64) {
 }
 
 func writeJSON(w http.ResponseWriter, status int, value any) {
+	body, err := json.Marshal(value)
+	if err != nil {
+		status, body = http.StatusInternalServerError, []byte(`{"error":"could not encode reply"}`)
+	}
+	body = append(body, '\n')
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Length", strconv.Itoa(len(body)))
 	w.WriteHeader(status)
-	json.NewEncoder(w).Encode(value)
+	w.Write(body)
 }
 
 func writeError(w http.ResponseWriter, status int, message string) {

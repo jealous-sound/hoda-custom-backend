@@ -140,3 +140,19 @@ func TestRefillSpendsGems(t *testing.T) {
 		`{"request_id":"refill-stamina-1","kind":"stamina"}`)
 	expectStatus(t, response, body, http.StatusUnprocessableEntity)
 }
+
+func TestLargeActionRepliesDeclareTheirLength(t *testing.T) {
+	h := newHarness(t)
+	token := h.open("local")
+	padding := strings.Repeat("x", 64*1024)
+	large := strings.Replace(shopProfile, `"squads":[]`, `"squads":[],"notes":"`+padding+`"`, 1)
+	if _, err := h.profiles.Put("local", 0, json.RawMessage(large)); err != nil {
+		t.Fatal(err)
+	}
+	response, body := h.do("POST", "/v1/players/local/store/purchases", token, "1", recruitPurchase)
+	expectStatus(t, response, body, http.StatusOK)
+	if response.ContentLength != int64(len(body)) || len(response.TransferEncoding) != 0 {
+		t.Fatalf("content length %d, body %d, transfer encoding %v", response.ContentLength, len(body),
+			response.TransferEncoding)
+	}
+}

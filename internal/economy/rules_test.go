@@ -469,3 +469,34 @@ func TestTutorialRewardsAreGivenOnce(t *testing.T) {
 		t.Errorf("unknown action: %v", err)
 	}
 }
+
+func TestLocalSaleOrCraftUploadedFirstStillReachesItsAction(t *testing.T) {
+	c := mustCatalog(t)
+	stored := profile.Record{Profile: gameProfile(t, func(doc map[string]any) {
+		section(doc, "gear")["heroes"] = []any{map[string]any{"instance_id": 2, "ascended": false,
+			"prestige_unlocked": false, "slots": []any{"templar_longsword"}}}
+	}), Revision: 1}
+	sold := gameProfile(t, func(doc map[string]any) {
+		section(doc, "gear", "inventory")["templar_longsword"] = 1
+		section(doc, "roster")["additions"] = section(doc, "roster")["additions"].([]any)[:1]
+		runes := section(doc, "runes")
+		runes["items"] = append(runes["items"].([]any)[2:], map[string]any{
+			"uuid": 4, "def": "rune-greed-2", "expire_at": 0, "inventory_expire_at": 1900000000,
+		})
+	})
+	server := profile.ServerState{}
+	merged, err := MergeUpload(c, stored, &server, sold, ruleNow)
+	if err != nil {
+		t.Fatal(err)
+	}
+	doc := asMap(t, merged)
+	if number(t, doc, "gear", "inventory", "templar_longsword") != 2 {
+		t.Errorf("the sword to sell was not kept for the sale action, or the consumed hero's sword came back: %v",
+			doc["gear"])
+	}
+	if items := section(doc, "runes")["items"].([]any); len(items) != 3 {
+		t.Errorf("the idle runes to craft were not kept for the craft action: %v", items)
+	}
+	_, _ = mustAct(t, merged, &server, ActionGearSell, `{"gear":"templar_longsword"}`)
+	_, _ = mustAct(t, merged, &server, ActionRuneCraft, `{"pairs":[[1,2]]}`)
+}

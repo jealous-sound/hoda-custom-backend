@@ -2,6 +2,7 @@ package economy
 
 import (
 	"encoding/json"
+	"slices"
 	"time"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
@@ -226,8 +227,11 @@ func keepGear(c *catalog.Catalog, next, stored document) {
 		gear = document{}
 		next["gear"] = map[string]any(gear)
 	}
+	instances := rosterInstances(next)
 	allowed := gearTotals(storedGear, nil)
-	for id, total := range gearTotals(gear, rosterInstances(next)) {
+	uploaded := gearTotals(gear, instances)
+	forged := false
+	for id, total := range uploaded {
 		if _, known := c.GearIndex(id); !known || total > allowed[id] {
 			copied := document{}
 			for key, value := range storedGear {
@@ -235,8 +239,12 @@ func keepGear(c *catalog.Catalog, next, stored document) {
 			}
 			next["gear"] = map[string]any(copied)
 			gear = copied
+			forged = true
 			break
 		}
+	}
+	if !forged {
+		returnUnsoldGear(gear, gearTotals(storedGear, instances), uploaded)
 	}
 	if value, ok := storedGear["tomes"]; ok {
 		gear["tomes"] = value
@@ -256,7 +264,23 @@ func keepGear(c *catalog.Catalog, next, stored document) {
 	}
 }
 
+func returnUnsoldGear(gear document, kept, uploaded map[string]int64) {
+	inventory, err := gear.section("inventory")
+	if err != nil {
+		inventory = document{}
+		gear["inventory"] = map[string]any(inventory)
+	}
+	for id, total := range kept {
+		if missing := total - uploaded[id]; missing > 0 {
+			count, _ := inventory.optionalInt(id)
+			inventory.setInt(id, int64(count)+missing)
+		}
+	}
+}
+
 type ownedRune struct {
+	entry               map[string]any
+	idle                bool
 	def                 string
 	expireAt            any
 	inventoryExpireAt   any
@@ -285,7 +309,9 @@ func keepRunes(c *catalog.Catalog, next, stored document, now time.Time) {
 		def, _ := object["def"].(string)
 		expiry, _ := numberValue(object["expire_at"], "expire_at")
 		rune, _ := c.RuneByID(def)
+		inventoryExpiry, _ := numberValue(object["inventory_expire_at"], "inventory_expire_at")
 		owned[uuid] = ownedRune{
+			entry: object, idle: expiry == 0 && inventoryExpiry >= now.Unix(),
 			def: def, expireAt: object["expire_at"], inventoryExpireAt: object["inventory_expire_at"],
 			activated:           expiry != 0,
 			maxActivationExpiry: now.Add(time.Duration(rune.DurationMinutes)*time.Minute + runeActivationSlack).Unix(),
@@ -316,6 +342,16 @@ func keepRunes(c *catalog.Catalog, next, stored document, now time.Time) {
 			object["expire_at"] = numberArray([]int64{rune.maxActivationExpiry})[0]
 		}
 		kept = append(kept, object)
+	}
+	var returned []int64
+	for uuid, rune := range owned {
+		if !seen[uuid] && rune.idle {
+			returned = append(returned, uuid)
+		}
+	}
+	slices.Sort(returned)
+	for _, uuid := range returned {
+		kept = append(kept, owned[uuid].entry)
 	}
 	runes["items"] = kept
 	if value, ok := storedRunes["next_uuid"]; ok {
