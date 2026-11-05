@@ -32,9 +32,33 @@ type Record struct {
 }
 
 type ServerState struct {
-	StoreRNG      uint32          `json:"store_rng,omitempty"`
-	ScriptedPacks []string        `json:"scripted_packs,omitempty"`
-	RecentActions []ActionReceipt `json:"recent_actions,omitempty"`
+	StoreRNG        uint32           `json:"store_rng,omitempty"`
+	ScriptedPacks   []string         `json:"scripted_packs,omitempty"`
+	RecentActions   []ActionReceipt  `json:"recent_actions,omitempty"`
+	RegenAt         int64            `json:"regen_at,omitempty"`
+	TutorialRewards []string         `json:"tutorial_rewards,omitempty"`
+	PvpEvent        PvpEventState    `json:"pvp_event"`
+	PvpResults      []PvpEventResult `json:"pvp_results,omitempty"`
+}
+
+type PvpEventState struct {
+	Cycle          int64 `json:"cycle"`
+	Banners        int   `json:"banners"`
+	MilestonesPaid int   `json:"milestones_paid"`
+}
+
+type PvpEventResult struct {
+	Cycle   int64 `json:"cycle"`
+	Banners int   `json:"banners"`
+	Claimed bool  `json:"claimed"`
+}
+
+func (s ServerState) Clone() ServerState {
+	s.ScriptedPacks = append([]string(nil), s.ScriptedPacks...)
+	s.RecentActions = append([]ActionReceipt(nil), s.RecentActions...)
+	s.TutorialRewards = append([]string(nil), s.TutorialRewards...)
+	s.PvpResults = append([]PvpEventResult(nil), s.PvpResults...)
+	return s
 }
 
 type ActionReceipt struct {
@@ -106,11 +130,14 @@ func (s *Store) read(playerID string) (Record, error) {
 }
 
 func (s *Store) Put(playerID string, expectedRevision int64, profile json.RawMessage) (Record, error) {
-	return s.PutGuarded(playerID, expectedRevision, profile, nil)
+	return s.PutMerged(playerID, expectedRevision, func(_ Record, next *Record) error {
+		next.Profile = profile
+		return nil
+	})
 }
 
-func (s *Store) PutGuarded(
-	playerID string, expectedRevision int64, profile json.RawMessage, guard func(current Record) error,
+func (s *Store) PutMerged(
+	playerID string, expectedRevision int64, merge func(current Record, next *Record) error,
 ) (Record, error) {
 	if !ValidPlayerID(playerID) {
 		return Record{}, ErrInvalidPlayerID
@@ -127,17 +154,14 @@ func (s *Store) PutGuarded(
 	if current.Revision != expectedRevision {
 		return current, ErrRevisionMismatch
 	}
-	if guard != nil {
-		if err := guard(current); err != nil {
-			return current, err
-		}
-	}
 	next := Record{
 		PlayerID:  playerID,
 		Revision:  current.Revision + 1,
 		UpdatedAt: s.now().UTC(),
-		Profile:   profile,
-		Server:    current.Server,
+		Server:    current.Server.Clone(),
+	}
+	if err := merge(current, &next); err != nil {
+		return current, err
 	}
 	if err := s.write(next); err != nil {
 		return Record{}, err
@@ -156,8 +180,7 @@ func (s *Store) Transact(playerID string, change func(record *Record) error) (Re
 		return Record{}, err
 	}
 	next := current
-	next.Server.ScriptedPacks = append([]string(nil), current.Server.ScriptedPacks...)
-	next.Server.RecentActions = append([]ActionReceipt(nil), current.Server.RecentActions...)
+	next.Server = current.Server.Clone()
 	if err := change(&next); err != nil {
 		return current, err
 	}

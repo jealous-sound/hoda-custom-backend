@@ -1,4 +1,4 @@
-package shop
+package economy
 
 import (
 	"bytes"
@@ -114,4 +114,25 @@ func numberArray(values []int64) []any {
 		items[i] = json.Number(strconv.FormatInt(value, 10))
 	}
 	return items
+}
+
+func (d document) floatField(name string) (float64, error) {
+	number, ok := d[name].(json.Number)
+	if !ok {
+		return 0, fmt.Errorf("%s is not a number", name)
+	}
+	value, err := number.Float64()
+	if err != nil || math.IsNaN(value) || math.IsInf(value, 0) {
+		return 0, fmt.Errorf("%s is not a finite number", name)
+	}
+	return value, nil
+}
+
+func (d document) setFloat(name string, value float64) {
+	d[name] = json.Number(strconv.FormatFloat(value, 'f', -1, 64))
+}
+
+func (d document) optionalSection(name string) (document, bool) {
+	object, ok := d[name].(map[string]any)
+	return document(object), ok
 }

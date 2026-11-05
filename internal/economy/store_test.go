@@ -1,4 +1,4 @@
-package shop
+package economy
 
 import (
 	"encoding/json"
@@ -378,7 +378,8 @@ func TestTutorialConsumePackNeedsTheTutorial(t *testing.T) {
 }
 
 func TestRefillTopsUpForGems(t *testing.T) {
-	next, err := Refill(fixture{gems: 10}.profile(t), RefillEnergy)
+	c := mustCatalog(t)
+	next, err := Refill(c, fixture{gems: 10}.profile(t), &profile.ServerState{}, RefillEnergy, springDay)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -386,10 +387,10 @@ func TestRefillTopsUpForGems(t *testing.T) {
 	if after.Account.Energy != 30 || after.Account.Gems != 7 || after.Account.EnergyRegenTimer != 0 {
 		t.Errorf("account = %+v", after.Account)
 	}
-	if _, err := Refill(fixture{gems: 2}.profile(t), RefillEnergy); refusalCode(err) != CantAfford {
+	if _, err := Refill(c, fixture{gems: 2}.profile(t), &profile.ServerState{}, RefillEnergy, springDay); refusalCode(err) != CantAfford {
 		t.Errorf("poor refill: %v", err)
 	}
-	if _, err := Refill(fixture{gems: 10}.profile(t), RefillStamina); refusalCode(err) != AlreadyFull {
+	if _, err := Refill(c, fixture{gems: 10}.profile(t), &profile.ServerState{}, RefillStamina, springDay); refusalCode(err) != AlreadyFull {
 		t.Errorf("full stamina refill: %v", err)
 	}
 }

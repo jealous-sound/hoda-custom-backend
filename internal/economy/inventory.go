@@ -1,4 +1,4 @@
-package shop
+package economy
 
 import (
 	"encoding/json"
@@ -131,16 +131,24 @@ func (r *runeWriter) store() {
 	r.runes.setInt("next_uuid", r.nextID)
 }
 
-func grantGear(doc document, id string, tome bool) error {
+func ensureGearSection(doc document) (document, error) {
 	_, existed := doc["gear"]
 	gear, err := doc.section("gear")
 	if err != nil {
-		return refuse(BadProfile, "%v", err)
+		return nil, refuse(BadProfile, "%v", err)
 	}
 	if !existed {
 		gear["inventory"] = map[string]any{}
 		gear["heroes"] = []any{}
 		gear.setInt("tomes", 0)
+	}
+	return gear, nil
+}
+
+func grantGear(doc document, id string, tome bool) error {
+	gear, err := ensureGearSection(doc)
+	if err != nil {
+		return err
 	}
 	if tome {
 		tomes, err := gear.optionalInt("tomes")

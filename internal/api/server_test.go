@@ -19,11 +19,12 @@ import (
 var fixedNow = time.Unix(1_800_000_000, 0)
 
 const validProfile = `{"version":1,"account":{"level":3,"experience":10,"energy":5,"energy_max":30,` +
-	`"stamina":8,"stamina_max":8,"gold":100,"gems":7},"roster":{},"squads":[]}`
+	`"stamina":8,"stamina_max":8,"gold":100,"gems":7},"roster":{},"squads":[],"settings":{"fast_battles":true}}`
 
 type harness struct {
-	t      *testing.T
-	server *httptest.Server
+	t        *testing.T
+	server   *httptest.Server
+	profiles *profile.Store
 }
 
 func newHarness(t *testing.T) *harness {
@@ -44,7 +45,7 @@ func newHarness(t *testing.T) *harness {
 	log := slog.New(slog.NewTextHandler(io.Discard, nil))
 	server := httptest.NewServer(NewServer(accounts, store, session.NewRegistry(), shopCatalog, clock, log).Handler())
 	t.Cleanup(server.Close)
-	return &harness{t: t, server: server}
+	return &harness{t: t, server: server, profiles: store}
 }
 
 func (h *harness) do(method, path, token, ifMatch, body string) (*http.Response, string) {
@@ -116,8 +117,11 @@ func TestProfileRoundTripAdvancesRevision(t *testing.T) {
 
 	response, body = h.do("GET", path, token, "", "")
 	expectStatus(t, response, body, http.StatusOK)
-	if body != validProfile || response.Header.Get(RevisionHeader) != "1" {
+	if !strings.Contains(body, `"fast_battles":true`) || response.Header.Get(RevisionHeader) != "1" {
 		t.Fatalf("stored profile = %s rev %s", body, response.Header.Get(RevisionHeader))
+	}
+	if !strings.Contains(body, `"gold":1725`) || !strings.Contains(body, `"level":1`) {
+		t.Fatalf("a new player's first upload set its own economy: %s", body)
 	}
 
 	response, body = h.do("PUT", path, token, "1", validProfile)

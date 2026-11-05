@@ -8,11 +8,11 @@ import (
 	"regexp"
 	"strconv"
 
+	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
-	"github.com/jealous-sound/hoda-custom-backend/internal/shop"
 )
 
-const maxActionBodyBytes = 4096
+const maxActionBodyBytes = 16384
 
 var requestIDPattern = regexp.MustCompile(`^[A-Za-z0-9_-]{8,64}$`)
 
@@ -27,8 +27,10 @@ type actionResponse struct {
 }
 
 type refusalResponse struct {
-	Error string `json:"error"`
-	Code  string `json:"code"`
+	Error    string          `json:"error"`
+	Code     string          `json:"code"`
+	Revision int64           `json:"revision"`
+	Profile  json.RawMessage `json:"profile,omitempty"`
 }
 
 type action func(record *profile.Record) (granted any, err error)
@@ -55,7 +57,8 @@ func (s *Server) runAction(w http.ResponseWriter, r *http.Request, player string
 		return
 	}
 
-	var refusal *shop.Refusal
+	var refusal *economy.Refusal
+	var badRequest *economy.BadRequest
 	var granted json.RawMessage
 	stale := false
 	record, err := s.profiles.Transact(player, func(record *profile.Record) error {
@@ -68,7 +71,7 @@ func (s *Server) runAction(w http.ResponseWriter, r *http.Request, player string
 			return profile.ErrNoChange
 		}
 		result, err := apply(record)
-		if errors.As(err, &refusal) {
+		if errors.As(err, &refusal) || errors.As(err, &badRequest) {
 			return profile.ErrNoChange
 		}
 		if err != nil {
@@ -89,12 +92,16 @@ func (s *Server) runAction(w http.ResponseWriter, r *http.Request, player string
 	case err != nil && !errors.Is(err, profile.ErrNoChange):
 		s.log.Error("player action", "player", player, "path", r.URL.Path, "error", err)
 		writeError(w, http.StatusInternalServerError, "could not apply action")
+	case badRequest != nil:
+		writeError(w, http.StatusBadRequest, badRequest.Message)
 	case stale:
 		writeRevision(w, record.Revision)
 		writeError(w, http.StatusConflict, "profile was changed since revision "+strconv.FormatInt(expected, 10))
 	case refusal != nil:
 		writeRevision(w, record.Revision)
-		writeJSON(w, http.StatusUnprocessableEntity, refusalResponse{Error: refusal.Message, Code: string(refusal.Code)})
+		writeJSON(w, http.StatusUnprocessableEntity, refusalResponse{
+			Error: refusal.Message, Code: string(refusal.Code), Revision: record.Revision, Profile: record.Profile,
+		})
 	default:
 		writeRevision(w, record.Revision)
 		writeJSON(w, http.StatusOK, actionResponse{Revision: record.Revision, Profile: record.Profile, Granted: granted})
@@ -102,7 +109,7 @@ func (s *Server) runAction(w http.ResponseWriter, r *http.Request, player string
 }
 
 type purchaseBody struct {
-	shop.PurchaseRequest
+	economy.PurchaseRequest
 }
 
 func (s *Server) purchase(w http.ResponseWriter, r *http.Request, player string) {
@@ -112,7 +119,7 @@ func (s *Server) purchase(w http.ResponseWriter, r *http.Request, player string)
 			return nil, errors.New(`body must be {"request_id", "pack", "currency", "price"}`)
 		}
 		return func(record *profile.Record) (any, error) {
-			next, granted, err := shop.Purchase(s.catalog, record.Profile, &record.Server, request.PurchaseRequest,
+			next, granted, err := economy.Purchase(s.catalog, record.Profile, &record.Server, request.PurchaseRequest,
 				s.now())
 			if err != nil {
 				return nil, err
@@ -124,7 +131,7 @@ func (s *Server) purchase(w http.ResponseWriter, r *http.Request, player string)
 }
 
 type refillBody struct {
-	Kind shop.RefillKind `json:"kind"`
+	Kind economy.RefillKind `json:"kind"`
 }
 
 func (s *Server) refill(w http.ResponseWriter, r *http.Request, player string) {
@@ -134,14 +141,35 @@ func (s *Server) refill(w http.ResponseWriter, r *http.Request, player string) {
 			return nil, errors.New(`body must be {"request_id", "kind"}`)
 		}
 		return func(record *profile.Record) (any, error) {
-			next, err := shop.Refill(record.Profile, request.Kind)
+			next, err := economy.Refill(s.catalog, record.Profile, &record.Server, request.Kind, s.now())
 			if err != nil {
 				return nil, err
 			}
 			record.Profile = next
 			return struct {
-				Kind shop.RefillKind `json:"kind"`
+				Kind economy.RefillKind `json:"kind"`
 			}{request.Kind}, nil
+		}, nil
+	})
+}
+
+type genericActionBody struct {
+	Action string `json:"action"`
+}
+
+func (s *Server) playerAction(w http.ResponseWriter, r *http.Request, player string) {
+	s.runAction(w, r, player, func(body []byte) (action, error) {
+		var request genericActionBody
+		if err := json.Unmarshal(body, &request); err != nil || request.Action == "" {
+			return nil, errors.New(`body must be {"request_id", "action", ...}`)
+		}
+		return func(record *profile.Record) (any, error) {
+			next, result, err := economy.Act(s.catalog, record.Profile, &record.Server, request.Action, body, s.now())
+			if err != nil {
+				return nil, err
+			}
+			record.Profile = next
+			return result, nil
 		}, nil
 	})
 }

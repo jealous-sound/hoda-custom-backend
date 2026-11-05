@@ -1,4 +1,4 @@
-package shop
+package economy
 
 import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"

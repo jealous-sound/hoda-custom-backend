@@ -1,0 +1,1362 @@
+{
+ "missions": [
+  {
+   "series": 0,
+   "tier": 0,
+   "id": "a1",
+   "stat": "first_boss",
+   "target": 1,
+   "gold": 0,
+   "gems": 5
+  },
+  {
+   "series": 1,
+   "tier": 0,
+   "id": "a2",
+   "stat": "node_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 2,
+   "tier": 0,
+   "id": "a6",
+   "stat": "first_win",
+   "target": 1,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 2,
+   "tier": 1,
+   "id": "a7",
+   "stat": "maps_unlocked",
+   "target": 3,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 2,
+   "tier": 2,
+   "id": "a8",
+   "stat": "maps_unlocked",
+   "target": 5,
+   "gold": 0,
+   "gems": 5
+  },
+  {
+   "series": 2,
+   "tier": 3,
+   "id": "a9",
+   "stat": "maps_unlocked",
+   "target": 8,
+   "gold": 0,
+   "gems": 5
+  },
+  {
+   "series": 2,
+   "tier": 4,
+   "id": "a10",
+   "stat": "maps_unlocked",
+   "target": 10,
+   "gold": 0,
+   "gems": 10
+  },
+  {
+   "series": 3,
+   "tier": 0,
+   "id": "a151",
+   "stat": "maps_unlocked",
+   "target": 12,
+   "gold": 0,
+   "gems": 10
+  },
+  {
+   "series": 3,
+   "tier": 1,
+   "id": "a152",
+   "stat": "maps_unlocked",
+   "target": 15,
+   "gold": 0,
+   "gems": 10
+  },
+  {
+   "series": 4,
+   "tier": 0,
+   "id": "a15",
+   "stat": "summoned",
+   "target": 25,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 4,
+   "tier": 1,
+   "id": "a16",
+   "stat": "summoned",
+   "target": 50,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 4,
+   "tier": 2,
+   "id": "a17",
+   "stat": "summoned",
+   "target": 100,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 4,
+   "tier": 3,
+   "id": "a18",
+   "stat": "summoned",
+   "target": 500,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 4,
+   "tier": 4,
+   "id": "a81",
+   "stat": "summoned",
+   "target": 1000,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 5,
+   "tier": 0,
+   "id": "a19",
+   "stat": "gold_earned",
+   "target": 3000,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 5,
+   "tier": 1,
+   "id": "a20",
+   "stat": "gold_earned",
+   "target": 20000,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 5,
+   "tier": 2,
+   "id": "a21",
+   "stat": "gold_earned",
+   "target": 100000,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 5,
+   "tier": 3,
+   "id": "a22",
+   "stat": "gold_earned",
+   "target": 500000,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 5,
+   "tier": 4,
+   "id": "a23",
+   "stat": "gold_earned",
+   "target": 2000000,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 6,
+   "tier": 0,
+   "id": "a3",
+   "stat": "consumed",
+   "target": 1,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 6,
+   "tier": 1,
+   "id": "a38",
+   "stat": "consumed",
+   "target": 10,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 6,
+   "tier": 2,
+   "id": "a39",
+   "stat": "consumed",
+   "target": 50,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 6,
+   "tier": 3,
+   "id": "a40",
+   "stat": "consumed",
+   "target": 150,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 6,
+   "tier": 4,
+   "id": "a41",
+   "stat": "consumed",
+   "target": 500,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 7,
+   "tier": 0,
+   "id": "a4",
+   "stat": "combined",
+   "target": 1,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 7,
+   "tier": 1,
+   "id": "a56",
+   "stat": "combined",
+   "target": 2,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 7,
+   "tier": 2,
+   "id": "a57",
+   "stat": "combined",
+   "target": 10,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 7,
+   "tier": 3,
+   "id": "a58",
+   "stat": "combined",
+   "target": 25,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 7,
+   "tier": 4,
+   "id": "a79",
+   "stat": "combined",
+   "target": 50,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 8,
+   "tier": 0,
+   "id": "a42",
+   "stat": "player_level",
+   "target": 5,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 8,
+   "tier": 1,
+   "id": "a43",
+   "stat": "player_level",
+   "target": 10,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 8,
+   "tier": 2,
+   "id": "a44",
+   "stat": "player_level",
+   "target": 20,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 8,
+   "tier": 3,
+   "id": "a45",
+   "stat": "player_level",
+   "target": 35,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 8,
+   "tier": 4,
+   "id": "a46",
+   "stat": "player_level",
+   "target": 50,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 9,
+   "tier": 0,
+   "id": "a68",
+   "stat": "hero_level",
+   "target": 5,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 9,
+   "tier": 1,
+   "id": "a69",
+   "stat": "hero_level",
+   "target": 15,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 9,
+   "tier": 2,
+   "id": "a70",
+   "stat": "hero_level",
+   "target": 30,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 9,
+   "tier": 3,
+   "id": "a71",
+   "stat": "hero_level",
+   "target": 50,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 9,
+   "tier": 4,
+   "id": "a72",
+   "stat": "hero_level",
+   "target": 70,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 10,
+   "tier": 0,
+   "id": "a48",
+   "stat": "crits",
+   "target": 3,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 10,
+   "tier": 1,
+   "id": "a49",
+   "stat": "crits",
+   "target": 20,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 10,
+   "tier": 2,
+   "id": "a50",
+   "stat": "crits",
+   "target": 50,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 10,
+   "tier": 3,
+   "id": "a85",
+   "stat": "crits",
+   "target": 100,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 10,
+   "tier": 4,
+   "id": "a86",
+   "stat": "crits",
+   "target": 500,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 11,
+   "tier": 0,
+   "id": "a73",
+   "stat": "battle_damage",
+   "target": 5000,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 11,
+   "tier": 1,
+   "id": "a74",
+   "stat": "battle_damage",
+   "target": 10000,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 11,
+   "tier": 2,
+   "id": "a75",
+   "stat": "battle_damage",
+   "target": 15000,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 11,
+   "tier": 3,
+   "id": "a87",
+   "stat": "battle_damage",
+   "target": 20000,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 11,
+   "tier": 4,
+   "id": "a88",
+   "stat": "battle_damage",
+   "target": 25000,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 12,
+   "tier": 0,
+   "id": "a76",
+   "stat": "challenge_attempts",
+   "target": 25,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 12,
+   "tier": 1,
+   "id": "a77",
+   "stat": "challenge_attempts",
+   "target": 50,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 12,
+   "tier": 2,
+   "id": "a78",
+   "stat": "challenge_attempts",
+   "target": 100,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 12,
+   "tier": 3,
+   "id": "a89",
+   "stat": "challenge_attempts",
+   "target": 500,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 12,
+   "tier": 4,
+   "id": "a90",
+   "stat": "challenge_attempts",
+   "target": 1000,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 13,
+   "tier": 0,
+   "id": "a64",
+   "stat": "runes_used",
+   "target": 2,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 13,
+   "tier": 1,
+   "id": "a65",
+   "stat": "runes_used",
+   "target": 10,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 13,
+   "tier": 2,
+   "id": "a66",
+   "stat": "runes_used",
+   "target": 50,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 13,
+   "tier": 3,
+   "id": "a67",
+   "stat": "runes_used",
+   "target": 250,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 13,
+   "tier": 4,
+   "id": "a82",
+   "stat": "runes_used",
+   "target": 1000,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 14,
+   "tier": 0,
+   "id": "a136",
+   "stat": "battle_days",
+   "target": 3,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 14,
+   "tier": 1,
+   "id": "a137",
+   "stat": "battle_days",
+   "target": 7,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 14,
+   "tier": 2,
+   "id": "a138",
+   "stat": "battle_days",
+   "target": 14,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 14,
+   "tier": 3,
+   "id": "a139",
+   "stat": "battle_days",
+   "target": 30,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 14,
+   "tier": 4,
+   "id": "a140",
+   "stat": "battle_days",
+   "target": 90,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 15,
+   "tier": 0,
+   "id": "a51",
+   "stat": "faction_hits",
+   "target": 1,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 15,
+   "tier": 1,
+   "id": "a52",
+   "stat": "squad_faction",
+   "target": 1,
+   "gold": 1000,
+   "gems": 0,
+   "faction": 0
+  },
+  {
+   "series": 15,
+   "tier": 2,
+   "id": "a53",
+   "stat": "squad_faction",
+   "target": 1,
+   "gold": 2000,
+   "gems": 0,
+   "faction": 1
+  },
+  {
+   "series": 15,
+   "tier": 3,
+   "id": "a54",
+   "stat": "squad_faction",
+   "target": 1,
+   "gold": 0,
+   "gems": 2,
+   "faction": 2
+  },
+  {
+   "series": 15,
+   "tier": 4,
+   "id": "a55",
+   "stat": "squad_faction",
+   "target": 1,
+   "gold": 0,
+   "gems": 3,
+   "faction": 3
+  },
+  {
+   "series": 16,
+   "tier": 0,
+   "id": "a63",
+   "stat": "origins_squad",
+   "target": 4,
+   "gold": 0,
+   "gems": 5
+  },
+  {
+   "series": 17,
+   "tier": 0,
+   "id": "a5",
+   "stat": "pvp_trophies_won",
+   "target": 50,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 17,
+   "tier": 1,
+   "id": "a34",
+   "stat": "pvp_trophies_won",
+   "target": 500,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 17,
+   "tier": 2,
+   "id": "a35",
+   "stat": "pvp_trophies_won",
+   "target": 1000,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 17,
+   "tier": 3,
+   "id": "a36",
+   "stat": "pvp_trophies_won",
+   "target": 1500,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 17,
+   "tier": 4,
+   "id": "a37",
+   "stat": "pvp_trophies_won",
+   "target": 2500,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 18,
+   "tier": 0,
+   "id": "a60",
+   "stat": "pvp_trophies_held",
+   "target": 500,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 18,
+   "tier": 1,
+   "id": "a61",
+   "stat": "pvp_trophies_held",
+   "target": 750,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 18,
+   "tier": 2,
+   "id": "a62",
+   "stat": "pvp_trophies_held",
+   "target": 1000,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 18,
+   "tier": 3,
+   "id": "a83",
+   "stat": "pvp_trophies_held",
+   "target": 1500,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 18,
+   "tier": 4,
+   "id": "a84",
+   "stat": "pvp_trophies_held",
+   "target": 2000,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 19,
+   "tier": 0,
+   "id": "a11",
+   "stat": "pvp_battles",
+   "target": 1,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 19,
+   "tier": 1,
+   "id": "a12",
+   "stat": "pvp_wins",
+   "target": 25,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 19,
+   "tier": 2,
+   "id": "a13",
+   "stat": "pvp_wins",
+   "target": 100,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 19,
+   "tier": 3,
+   "id": "a14",
+   "stat": "pvp_wins",
+   "target": 250,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 19,
+   "tier": 4,
+   "id": "a80",
+   "stat": "pvp_wins",
+   "target": 500,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 20,
+   "tier": 0,
+   "id": "a59",
+   "stat": "pvp_win_streak",
+   "target": 5,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 21,
+   "tier": 0,
+   "id": "a121",
+   "stat": "event_banners",
+   "target": 1000,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 21,
+   "tier": 1,
+   "id": "a122",
+   "stat": "event_banners",
+   "target": 5000,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 21,
+   "tier": 2,
+   "id": "a123",
+   "stat": "event_banners",
+   "target": 10000,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 21,
+   "tier": 3,
+   "id": "a124",
+   "stat": "event_banners",
+   "target": 20000,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 21,
+   "tier": 4,
+   "id": "a125",
+   "stat": "event_banners",
+   "target": 50000,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 22,
+   "tier": 0,
+   "id": "a126",
+   "stat": "event_buffed_squads",
+   "target": 1,
+   "gold": 500,
+   "gems": 0
+  },
+  {
+   "series": 22,
+   "tier": 1,
+   "id": "a127",
+   "stat": "event_buffed_squads",
+   "target": 5,
+   "gold": 1000,
+   "gems": 0
+  },
+  {
+   "series": 22,
+   "tier": 2,
+   "id": "a128",
+   "stat": "event_buffed_squads",
+   "target": 10,
+   "gold": 2000,
+   "gems": 0
+  },
+  {
+   "series": 22,
+   "tier": 3,
+   "id": "a129",
+   "stat": "event_buffed_squads",
+   "target": 20,
+   "gold": 0,
+   "gems": 2
+  },
+  {
+   "series": 22,
+   "tier": 4,
+   "id": "a130",
+   "stat": "event_buffed_squads",
+   "target": 50,
+   "gold": 0,
+   "gems": 3
+  },
+  {
+   "series": 23,
+   "tier": 0,
+   "id": "a91",
+   "stat": "collected",
+   "target": 4,
+   "gold": 500,
+   "gems": 0,
+   "rarity": 1,
+   "hero_tier": 0
+  },
+  {
+   "series": 23,
+   "tier": 1,
+   "id": "a92",
+   "stat": "collected",
+   "target": 8,
+   "gold": 1000,
+   "gems": 0,
+   "rarity": 1,
+   "hero_tier": 1
+  },
+  {
+   "series": 23,
+   "tier": 2,
+   "id": "a93",
+   "stat": "collected",
+   "target": 12,
+   "gold": 2000,
+   "gems": 0,
+   "rarity": 1,
+   "hero_tier": 2
+  },
+  {
+   "series": 23,
+   "tier": 3,
+   "id": "a94",
+   "stat": "collected",
+   "target": 16,
+   "gold": 0,
+   "gems": 2,
+   "rarity": 1,
+   "hero_tier": 3
+  },
+  {
+   "series": 23,
+   "tier": 4,
+   "id": "a95",
+   "stat": "collected",
+   "target": 20,
+   "gold": 0,
+   "gems": 3,
+   "rarity": 1,
+   "hero_tier": 3
+  },
+  {
+   "series": 24,
+   "tier": 0,
+   "id": "a96",
+   "stat": "collected",
+   "target": 4,
+   "gold": 500,
+   "gems": 0,
+   "rarity": 2,
+   "hero_tier": 0
+  },
+  {
+   "series": 24,
+   "tier": 1,
+   "id": "a97",
+   "stat": "collected",
+   "target": 8,
+   "gold": 1000,
+   "gems": 0,
+   "rarity": 2,
+   "hero_tier": 1
+  },
+  {
+   "series": 24,
+   "tier": 2,
+   "id": "a98",
+   "stat": "collected",
+   "target": 12,
+   "gold": 2000,
+   "gems": 0,
+   "rarity": 2,
+   "hero_tier": 2
+  },
+  {
+   "series": 24,
+   "tier": 3,
+   "id": "a99",
+   "stat": "collected",
+   "target": 16,
+   "gold": 0,
+   "gems": 2,
+   "rarity": 2,
+   "hero_tier": 3
+  },
+  {
+   "series": 24,
+   "tier": 4,
+   "id": "a100",
+   "stat": "collected",
+   "target": 20,
+   "gold": 0,
+   "gems": 3,
+   "rarity": 2,
+   "hero_tier": 3
+  },
+  {
+   "series": 25,
+   "tier": 0,
+   "id": "a101",
+   "stat": "collected",
+   "target": 4,
+   "gold": 500,
+   "gems": 0,
+   "rarity": 3,
+   "hero_tier": 0
+  },
+  {
+   "series": 25,
+   "tier": 1,
+   "id": "a102",
+   "stat": "collected",
+   "target": 8,
+   "gold": 1000,
+   "gems": 0,
+   "rarity": 3,
+   "hero_tier": 1
+  },
+  {
+   "series": 25,
+   "tier": 2,
+   "id": "a103",
+   "stat": "collected",
+   "target": 12,
+   "gold": 2000,
+   "gems": 0,
+   "rarity": 3,
+   "hero_tier": 2
+  },
+  {
+   "series": 25,
+   "tier": 3,
+   "id": "a104",
+   "stat": "collected",
+   "target": 16,
+   "gold": 0,
+   "gems": 2,
+   "rarity": 3,
+   "hero_tier": 3
+  },
+  {
+   "series": 25,
+   "tier": 4,
+   "id": "a105",
+   "stat": "collected",
+   "target": 20,
+   "gold": 0,
+   "gems": 3,
+   "rarity": 3,
+   "hero_tier": 3
+  },
+  {
+   "series": 26,
+   "tier": 0,
+   "id": "a106",
+   "stat": "collected",
+   "target": 4,
+   "gold": 500,
+   "gems": 0,
+   "rarity": 4,
+   "hero_tier": 0
+  },
+  {
+   "series": 26,
+   "tier": 1,
+   "id": "a107",
+   "stat": "collected",
+   "target": 8,
+   "gold": 1000,
+   "gems": 0,
+   "rarity": 4,
+   "hero_tier": 1
+  },
+  {
+   "series": 26,
+   "tier": 2,
+   "id": "a108",
+   "stat": "collected",
+   "target": 12,
+   "gold": 2000,
+   "gems": 0,
+   "rarity": 4,
+   "hero_tier": 2
+  },
+  {
+   "series": 26,
+   "tier": 3,
+   "id": "a109",
+   "stat": "collected",
+   "target": 16,
+   "gold": 0,
+   "gems": 2,
+   "rarity": 4,
+   "hero_tier": 3
+  },
+  {
+   "series": 26,
+   "tier": 4,
+   "id": "a110",
+   "stat": "collected",
+   "target": 20,
+   "gold": 0,
+   "gems": 3,
+   "rarity": 4,
+   "hero_tier": 3
+  },
+  {
+   "series": 27,
+   "tier": 0,
+   "id": "a111",
+   "stat": "collected",
+   "target": 2,
+   "gold": 500,
+   "gems": 0,
+   "rarity": 5,
+   "hero_tier": 0
+  },
+  {
+   "series": 27,
+   "tier": 1,
+   "id": "a112",
+   "stat": "collected",
+   "target": 4,
+   "gold": 1000,
+   "gems": 0,
+   "rarity": 5,
+   "hero_tier": 1
+  },
+  {
+   "series": 27,
+   "tier": 2,
+   "id": "a113",
+   "stat": "collected",
+   "target": 6,
+   "gold": 2000,
+   "gems": 0,
+   "rarity": 5,
+   "hero_tier": 2
+  },
+  {
+   "series": 27,
+   "tier": 3,
+   "id": "a114",
+   "stat": "collected",
+   "target": 8,
+   "gold": 0,
+   "gems": 2,
+   "rarity": 5,
+   "hero_tier": 3
+  },
+  {
+   "series": 27,
+   "tier": 4,
+   "id": "a115",
+   "stat": "collected",
+   "target": 10,
+   "gold": 0,
+   "gems": 3,
+   "rarity": 5,
+   "hero_tier": 3
+  },
+  {
+   "series": 28,
+   "tier": 0,
+   "id": "a116",
+   "stat": "tier_iv_level",
+   "target": 30,
+   "gold": 0,
+   "gems": 2,
+   "rarity": 1,
+   "icon": "a95"
+  },
+  {
+   "series": 29,
+   "tier": 0,
+   "id": "a117",
+   "stat": "tier_iv_level",
+   "target": 35,
+   "gold": 0,
+   "gems": 3,
+   "rarity": 2,
+   "icon": "a100"
+  },
+  {
+   "series": 30,
+   "tier": 0,
+   "id": "a118",
+   "stat": "tier_iv_level",
+   "target": 45,
+   "gold": 0,
+   "gems": 5,
+   "rarity": 3,
+   "icon": "a105"
+  },
+  {
+   "series": 31,
+   "tier": 0,
+   "id": "a119",
+   "stat": "tier_iv_level",
+   "target": 65,
+   "gold": 0,
+   "gems": 10,
+   "rarity": 4,
+   "icon": "a110"
+  },
+  {
+   "series": 32,
+   "tier": 0,
+   "id": "a120",
+   "stat": "tier_iv_level",
+   "target": 85,
+   "gold": 0,
+   "gems": 20,
+   "rarity": 5,
+   "icon": "a115"
+  },
+  {
+   "series": 33,
+   "tier": 0,
+   "id": "a24",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 5,
+   "map": 0
+  },
+  {
+   "series": 34,
+   "tier": 0,
+   "id": "a25",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 1
+  },
+  {
+   "series": 35,
+   "tier": 0,
+   "id": "a26",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 2
+  },
+  {
+   "series": 36,
+   "tier": 0,
+   "id": "a27",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 3
+  },
+  {
+   "series": 37,
+   "tier": 0,
+   "id": "a28",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 4
+  },
+  {
+   "series": 38,
+   "tier": 0,
+   "id": "a29",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 5
+  },
+  {
+   "series": 39,
+   "tier": 0,
+   "id": "a30",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 6
+  },
+  {
+   "series": 40,
+   "tier": 0,
+   "id": "a31",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 7
+  },
+  {
+   "series": 41,
+   "tier": 0,
+   "id": "a32",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 8
+  },
+  {
+   "series": 42,
+   "tier": 0,
+   "id": "a33",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 9
+  },
+  {
+   "series": 43,
+   "tier": 0,
+   "id": "a141",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 10
+  },
+  {
+   "series": 44,
+   "tier": 0,
+   "id": "a142",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 11
+  },
+  {
+   "series": 45,
+   "tier": 0,
+   "id": "a143",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 12
+  },
+  {
+   "series": 46,
+   "tier": 0,
+   "id": "a144",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 13
+  },
+  {
+   "series": 47,
+   "tier": 0,
+   "id": "a145",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 14
+  },
+  {
+   "series": 48,
+   "tier": 0,
+   "id": "a146",
+   "stat": "map_mastered",
+   "target": 1,
+   "gold": 0,
+   "gems": 10,
+   "map": 15
+  }
+ ]
+}

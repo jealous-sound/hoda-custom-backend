@@ -12,9 +12,9 @@ import (
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/account"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
+	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/session"
-	"github.com/jealous-sound/hoda-custom-backend/internal/shop"
 )
 
 const RevisionHeader = "X-Profile-Revision"
@@ -45,6 +45,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("PUT /v1/players/{player}/profile", s.authorized(s.putProfile))
 	mux.HandleFunc("POST /v1/players/{player}/store/purchases", s.authorized(s.purchase))
 	mux.HandleFunc("POST /v1/players/{player}/refills", s.authorized(s.refill))
+	mux.HandleFunc("POST /v1/players/{player}/actions", s.authorized(s.playerAction))
 	return s.logged(mux)
 }
 
@@ -196,10 +197,12 @@ func (s *Server) putProfile(w http.ResponseWriter, r *http.Request, player strin
 		writeError(w, http.StatusUnprocessableEntity, err.Error())
 		return
 	}
-	record, err := s.profiles.PutGuarded(player, expected, body, func(current profile.Record) error {
-		return shop.KeepsServerOwnedFields(current.Profile, body)
+	record, err := s.profiles.PutMerged(player, expected, func(current profile.Record, next *profile.Record) error {
+		merged, err := economy.MergeUpload(s.catalog, current, &next.Server, body, s.now())
+		next.Profile = merged
+		return err
 	})
-	var refusal *shop.Refusal
+	var refusal *economy.Refusal
 	if errors.As(err, &refusal) {
 		writeError(w, http.StatusUnprocessableEntity, refusal.Message)
 		return

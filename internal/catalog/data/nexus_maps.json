@@ -1,0 +1,9595 @@
+[
+ {
+  "id": "Danarius",
+  "name": "Порченая кровь",
+  "name_en": "Tainted Blood",
+  "kind": "chase",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "nexus_map2_pre",
+  "node_count": 6,
+  "highlight_color": [
+   140,
+   26,
+   40
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 15.42
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   },
+   {
+    "step": 6,
+    "x": -9.43,
+    "z": 14.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_Danarius_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 500,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_Danarius_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1000,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_Danarius_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1500,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_Danarius_Chase_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 2000,
+      "xp": 500,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ElvenMages",
+  "name": "Задание \"Эльфы-маги\"",
+  "name_en": "Elven Mages",
+  "kind": "chase",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "nexus_map2_pre",
+  "node_count": 5,
+  "highlight_color": [
+   124,
+   116,
+   214
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 15.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -1.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -5.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -8.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_ElvenMages_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestruins_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 225,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ],
+    "positions": [
+     {
+      "step": 1,
+      "x": 6.6,
+      "z": 15.0
+     },
+     {
+      "step": 2,
+      "x": 3.09,
+      "z": 16.200001
+     },
+     {
+      "step": 3,
+      "x": -1.18,
+      "z": 14.92
+     },
+     {
+      "step": 4,
+      "x": -5.05,
+      "z": 15.3
+     },
+     {
+      "step": 5,
+      "x": -8.43,
+      "z": 16.0
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_ElvenMages_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestruins_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 450,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_ElvenMages_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestruins_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ElvenRogues",
+  "name": "Эльфы-разбойники",
+  "name_en": "Elven Rogues",
+  "kind": "chase",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "nexus_map3_pre",
+  "node_count": 6,
+  "highlight_color": [
+   150,
+   186,
+   92
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   },
+   {
+    "step": 6,
+    "x": -9.43,
+    "z": 14.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_ElvenRogues_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 225,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_ElvenRogues_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 450,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_ElvenRogues_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "EnemiesOfTevinter",
+  "name": "Враги Тевинтера",
+  "name_en": "Enemies of Tevinter",
+  "kind": "chase",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_VenatoriGladiator",
+  "prefab": "SnexusRC_map12_pre",
+  "node_count": 5,
+  "highlight_color": [
+   154,
+   40,
+   72
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 5.8,
+    "z": 15.7
+   },
+   {
+    "step": 2,
+    "x": -0.1,
+    "z": 15.2
+   },
+   {
+    "step": 3,
+    "x": -7.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -14.1,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -21.5,
+    "z": 15.7
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_EnemiesOfTevinter_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 500,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_EnemiesOfTevinter_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1000,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_EnemiesOfTevinter_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1500,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_EnemiesOfTevinter_Chase_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 2000,
+      "xp": 500,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "Maric",
+  "name": "Король Ферелдена",
+  "name_en": "King of Ferelden",
+  "kind": "chase",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_KingMaric",
+  "prefab": "nexus_map3_pre",
+  "node_count": 6,
+  "highlight_color": [
+   214,
+   176,
+   74
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   },
+   {
+    "step": 6,
+    "x": -9.43,
+    "z": 14.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_Maric_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_Maric_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_Maric_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_Maric_Chase_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "MaskedMayhem",
+  "name": "Суматошный маскарад",
+  "name_en": "Masked Mayhem",
+  "kind": "chase",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "SnexusVR_map11_pre",
+  "node_count": 5,
+  "highlight_color": [
+   201,
+   120,
+   214
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 11.47,
+    "z": 15.76517
+   },
+   {
+    "step": 2,
+    "x": 7.5,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": 3.440313,
+    "z": 15.91274
+   },
+   {
+    "step": 4,
+    "x": -1.125948,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -4.113458,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_MaskedMayhem_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 225,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_MaskedMayhem_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 450,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_MaskedMayhem_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_MaskedMayhem_Chase_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Ludicrous_Nexus_MaskedMayhem_Chase_Map_01",
+    "difficulty": "ludicrous",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1000,
+      "xp": 500,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "SkyHorror",
+  "name": "Событие узла \"Кошмар небесный\"",
+  "name_en": "Sky Horror Nexus Event",
+  "kind": "chase",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_SkyHorror",
+  "prefab": "nexus_map3_pre",
+  "node_count": 6,
+  "highlight_color": [
+   72,
+   78,
+   110
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   },
+   {
+    "step": 6,
+    "x": -9.43,
+    "z": 14.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_SkyHorror_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 10,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 225,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_SkyHorror_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 20,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 450,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_SkyHorror_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 30,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "Tallis",
+  "name": "Поход кунари",
+  "name_en": "Qunari Quest",
+  "kind": "chase",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_Tallis",
+  "prefab": "nexus_map3_pre",
+  "node_count": 6,
+  "highlight_color": [
+   176,
+   138,
+   88
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   },
+   {
+    "step": 6,
+    "x": -9.43,
+    "z": 14.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_Tallis_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 300,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 300,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 300,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 300,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 300,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 300,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_Tallis_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 600,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 600,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 600,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 600,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 600,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 600,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_Tallis_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1000,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_Tallis_Chase_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Ludicrous_Nexus_Event_Tallis_Chase_Map_01",
+    "difficulty": "ludicrous",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_hills_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1200,
+      "xp": 400,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1200,
+      "xp": 400,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1200,
+      "xp": 400,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1200,
+      "xp": 400,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1200,
+      "xp": 400,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "WinterWardenland",
+  "name": "Узел: Зимняя Стражляндия",
+  "name_en": "Winter Wardenland",
+  "kind": "chase",
+  "subtitle": "Nexus_Seasonal_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "nexus_map1_pre",
+  "node_count": 8,
+  "highlight_color": [
+   140,
+   208,
+   240
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 4.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": 2.18,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": 0.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -2.05,
+    "z": 15.3
+   },
+   {
+    "step": 6,
+    "x": -4.43,
+    "z": 16.4
+   },
+   {
+    "step": 7,
+    "x": -6.05,
+    "z": 15.2
+   },
+   {
+    "step": 8,
+    "x": -8.91,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_WinterWardenland_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 7,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 8,
+      "gold": 225,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_WinterWardenland_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 7,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 8,
+      "gold": 450,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_WinterWardenland_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 7,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 8,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_WinterWardenland_Chase_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 7,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 8,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Ludicrous_Nexus_WinterWardenland_Chase_Map_01",
+    "difficulty": "ludicrous",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 2500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 2500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 7,
+      "gold": 2500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 8,
+      "gold": 2500,
+      "xp": 500,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "WoodlandCritters",
+  "name": "Узел \"Природа\"",
+  "name_en": "Nature Nexus",
+  "kind": "chase",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "nexus_map2_pre",
+  "node_count": 5,
+  "highlight_color": [
+   104,
+   178,
+   84
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 15.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -1.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -5.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -8.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_WoodlandCritters_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 225,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ],
+    "positions": [
+     {
+      "step": 1,
+      "x": 6.6,
+      "z": 15.0
+     },
+     {
+      "step": 2,
+      "x": 3.09,
+      "z": 16.200001
+     },
+     {
+      "step": 3,
+      "x": -1.18,
+      "z": 14.92
+     },
+     {
+      "step": 4,
+      "x": -5.05,
+      "z": 15.3
+     },
+     {
+      "step": 5,
+      "x": -8.43,
+      "z": 16.0
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_WoodlandCritters_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 450,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_WoodlandCritters_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_WoodlandCritters_Chase_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Ludicrous_Nexus_WoodlandCritters_Chase_Map_01",
+    "difficulty": "ludicrous",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1000,
+      "xp": 500,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "WoodlandSpirits",
+  "name": "Лесные духи",
+  "name_en": "Woodland Spirits",
+  "kind": "chase",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "nexus_map2_pre",
+  "node_count": 5,
+  "highlight_color": [
+   96,
+   200,
+   186
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -1.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -5.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -8.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_WoodlandSpirits_Chase_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestruins_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 225,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 225,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ],
+    "positions": [
+     {
+      "step": 1,
+      "x": 6.6,
+      "z": 16.0
+     },
+     {
+      "step": 2,
+      "x": 3.09,
+      "z": 16.200001
+     },
+     {
+      "step": 3,
+      "x": -1.18,
+      "z": 14.92
+     },
+     {
+      "step": 4,
+      "x": -5.05,
+      "z": 15.3
+     },
+     {
+      "step": 5,
+      "x": -8.43,
+      "z": 16.0
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_WoodlandSpirits_Chase_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestruins_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 450,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_WoodlandSpirits_Chase_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestruins_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_WoodlandSpirits_Chase_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestruins_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ADreamMadeReality",
+  "name": "Сон, ставший явью",
+  "name_en": "A Dream Made Reality",
+  "kind": "boss",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "nexus_map2_pre",
+  "node_count": 5,
+  "highlight_color": [
+   90,
+   132,
+   208
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 14.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -1.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -5.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -8.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_A_Dream_Made_Reality_Boss_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 225,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 225,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ],
+    "positions": [
+     {
+      "step": 1,
+      "x": 6.6,
+      "z": 14.0
+     },
+     {
+      "step": 2,
+      "x": 3.09,
+      "z": 16.200001
+     },
+     {
+      "step": 3,
+      "x": -1.18,
+      "z": 14.92
+     },
+     {
+      "step": 4,
+      "x": -5.05,
+      "z": 15.3
+     },
+     {
+      "step": 5,
+      "x": -8.43,
+      "z": 16.0
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_A_Dream_Made_Reality_Boss_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 450,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 450,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_A_Dream_Made_Reality_Boss_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_A_Dream_Made_Reality_Boss_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "BreachOpens",
+  "name": "Брешь",
+  "name_en": "The Breach Opens",
+  "kind": "boss",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "SnexusB_map10_pre",
+  "node_count": 6,
+  "highlight_color": [
+   92,
+   214,
+   152
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 11.79,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 7.18,
+    "z": 15.09
+   },
+   {
+    "step": 3,
+    "x": 2.19,
+    "z": 15.09
+   },
+   {
+    "step": 4,
+    "x": -2.25,
+    "z": 15.09
+   },
+   {
+    "step": 5,
+    "x": -4.97,
+    "z": 16.0
+   },
+   {
+    "step": 6,
+    "x": -9.43,
+    "z": 14.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Nexus_Event_Breach_Opens_Boss_Map_01",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 454,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Nexus_Event_Breach_Opens_Boss_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 454,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_Breach_Opens_Boss_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 35,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1049,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "BreachOpensAgain",
+  "name": "Брешь открывается вновь",
+  "name_en": "The Breach Opens Again",
+  "kind": "boss",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "SnexusB_map10_pre",
+  "node_count": 6,
+  "highlight_color": [
+   46,
+   176,
+   190
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 11.79,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 7.18,
+    "z": 15.09
+   },
+   {
+    "step": 3,
+    "x": 2.19,
+    "z": 15.09
+   },
+   {
+    "step": 4,
+    "x": -2.25,
+    "z": 15.09
+   },
+   {
+    "step": 5,
+    "x": -4.97,
+    "z": 16.0
+   },
+   {
+    "step": 6,
+    "x": -9.43,
+    "z": 14.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_Breach_Opens_Again_Boss_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 454,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 454,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_Breach_Opens_Again_Boss_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1049,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_Breach_Opens_Again_Boss_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1049,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_Breach_Opens_Again_Boss_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1049,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1049,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "Halloween2015",
+  "name": "Событие: задание \"Хэллоуин\"",
+  "name_en": "Halloween Quest Event",
+  "kind": "boss",
+  "subtitle": "Nexus_Seasonal_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "SnexusFH_map7_pre",
+  "node_count": 6,
+  "highlight_color": [
+   240,
+   132,
+   32
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 7.05,
+    "z": 16.299999
+   },
+   {
+    "step": 2,
+    "x": 4.34,
+    "z": 16.440001
+   },
+   {
+    "step": 3,
+    "x": 1.63,
+    "z": 16.35
+   },
+   {
+    "step": 4,
+    "x": -1.08,
+    "z": 16.32
+   },
+   {
+    "step": 5,
+    "x": -3.79,
+    "z": 17.65
+   },
+   {
+    "step": 6,
+    "x": -6.5,
+    "z": 16.459999
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_Halloween_2015_Boss_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_blightcity_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 500,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 500,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 500,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 500,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 500,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 500,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_Halloween_2015_Boss_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_blightcity_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1000,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1000,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_Halloween_2015_Boss_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_blightcity_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1500,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_Halloween_2015_Boss_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_blightcity_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2500,
+      "xp": 600,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2500,
+      "xp": 600,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2500,
+      "xp": 600,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2500,
+      "xp": 600,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 2500,
+      "xp": 600,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 2500,
+      "xp": 600,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "SeekersDuty",
+  "name": "Долг Искателя",
+  "name_en": "Seeker's Duty",
+  "kind": "boss",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_HighSeekerAldren",
+  "prefab": "nexus_map6_pre",
+  "node_count": 6,
+  "highlight_color": [
+   158,
+   164,
+   176
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 15.8
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   },
+   {
+    "step": 6,
+    "x": -9.43,
+    "z": 15.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "VeryHard_Nexus_Event_SeekersDuty_Boss_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1500,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_SeekersDuty_Boss_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 2000,
+      "xp": 500,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "UrnOfSacredAshes",
+  "name": "Урна Священного Праха",
+  "name_en": "The Urn of Sacred Ashes",
+  "kind": "boss",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_Kolgrim",
+  "prefab": "SnexusAA_map6_pre",
+  "node_count": 6,
+  "highlight_color": [
+   232,
+   214,
+   160
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 15.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   },
+   {
+    "step": 6,
+    "x": -9.43,
+    "z": 15.92
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "VeryHard_Nexus_Event_UrnOfSacredAshes_Boss_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_UrnOfSacredAshes_Boss_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "LastStraw",
+  "name": "Последняя капля",
+  "name_en": "The Last Straw...",
+  "kind": "gauntlet",
+  "subtitle": "Nexus_Gauntlet_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "SnexusAD_map5_pre",
+  "node_count": 4,
+  "highlight_color": [
+   214,
+   60,
+   96
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 2.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -1.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -9.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "VeryHard_Nexus_Event_Last_Straw_Gauntlet_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_Last_Straw_Gauntlet_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Ludicrous_Nexus_Event_Last_Straw_Gauntlet_Map_01",
+    "difficulty": "ludicrous",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_city_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2500,
+      "xp": 700,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2500,
+      "xp": 700,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2500,
+      "xp": 700,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2500,
+      "xp": 700,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "WitchWilds",
+  "name": "Ведьма из Диких земель",
+  "name_en": "The Witch of the Wilds",
+  "kind": "gauntlet",
+  "subtitle": "Nexus_Gauntlet_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_DragonFlemeth",
+  "prefab": "nexus_map5_pre",
+  "node_count": 4,
+  "highlight_color": [
+   76,
+   122,
+   96
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 2.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -1.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -9.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_WitcH_Wilds_Gauntlet_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_swamp_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 500,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_WitcH_Wilds_Gauntlet_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_swamp_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_WitcH_Wilds_Gauntlet_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_swamp_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_WitcH_Wilds_Gauntlet_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_swamp_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2000,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Ludicrous_Nexus_Event_WitcH_Wilds_Gauntlet_Map_01",
+    "difficulty": "ludicrous",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_swamp_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2500,
+      "xp": 700,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2500,
+      "xp": 700,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2500,
+      "xp": 700,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2500,
+      "xp": 700,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "Thanksgiving2014",
+  "name": "Событие: Благодарственное задание",
+  "name_en": "Thanksgiving Quest Event",
+  "kind": "raid",
+  "subtitle": "Nexus_Raid_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "nexus_map2_pre",
+  "node_count": 1,
+  "highlight_color": [
+   150,
+   96,
+   44
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": -2.78,
+    "z": 16.35
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Nexus_Event_Thanksgiving_2014_Raid_Map_01",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 0,
+    "battle_environment": "env.bg_forestriver_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 170,
+      "xp": 20,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Nexus_Event_Thanksgiving_2014_Raid_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 10,
+    "potion_cost": 0,
+    "battle_environment": "env.bg_forestriver_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 300,
+      "xp": 140,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_Thanksgiving_2014_Raid_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 20,
+    "potion_cost": 0,
+    "battle_environment": "env.bg_forestriver_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "AnvilVoid",
+  "name": "Наковальня Пустоты",
+  "name_en": "Anvil Of The Void",
+  "kind": "map",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "SnexusAV_map3_pre",
+  "node_count": 5,
+  "highlight_color": [
+   206,
+   74,
+   30
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.9,
+    "z": 14.3
+   },
+   {
+    "step": 2,
+    "x": 3.33,
+    "z": 14.2
+   },
+   {
+    "step": 3,
+    "x": -1.87,
+    "z": 14.47
+   },
+   {
+    "step": 4,
+    "x": -5.4,
+    "z": 14.4
+   },
+   {
+    "step": 5,
+    "x": -10.38,
+    "z": 13.8
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Nexus_Event_Anvil_Void_Map_01",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 300,
+      "xp": 150,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 300,
+      "xp": 150,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 300,
+      "xp": 150,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 300,
+      "xp": 150,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 300,
+      "xp": 150,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Nexus_Event_Anvil_Void_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 300,
+      "xp": 200,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 300,
+      "xp": 200,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 300,
+      "xp": 200,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 300,
+      "xp": 200,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 300,
+      "xp": 200,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ],
+    "positions": [
+     {
+      "step": 1,
+      "x": 6.9,
+      "z": 14.3
+     },
+     {
+      "step": 2,
+      "x": 3.33,
+      "z": 14.2
+     },
+     {
+      "step": 3,
+      "x": -1.87,
+      "z": 15.97
+     },
+     {
+      "step": 4,
+      "x": -5.4,
+      "z": 14.4
+     },
+     {
+      "step": 5,
+      "x": -10.38,
+      "z": 13.8
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_Anvil_Void_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 600,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 450,
+      "xp": 250,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 450,
+      "xp": 250,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 450,
+      "xp": 250,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 450,
+      "xp": 250,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ],
+    "positions": [
+     {
+      "step": 1,
+      "x": 6.9,
+      "z": 14.3
+     },
+     {
+      "step": 2,
+      "x": 3.33,
+      "z": 14.2
+     },
+     {
+      "step": 3,
+      "x": -1.87,
+      "z": 15.97
+     },
+     {
+      "step": 4,
+      "x": -5.4,
+      "z": 14.4
+     },
+     {
+      "step": 5,
+      "x": -10.38,
+      "z": 13.8
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_Anvil_Void_Map01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 300,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 450,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 300,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_Anvil_Void_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1000,
+      "xp": 450,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1000,
+      "xp": 450,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1000,
+      "xp": 450,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1000,
+      "xp": 450,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1000,
+      "xp": 450,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "BanishedPlane",
+  "name": "Забытая равнина",
+  "name_en": "The Banished Plane",
+  "kind": "map",
+  "subtitle": "NEXUS_EVENT_TYPE_KEY_TITLE",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "SnexusDEM_map12_pre",
+  "node_count": 6,
+  "highlight_color": [
+   90,
+   90,
+   175
+  ],
+  "unlock_key": 2004,
+  "unlock_key_qty": 1,
+  "max_runs": 1,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 10.0,
+    "z": 15.6
+   },
+   {
+    "step": 2,
+    "x": 6.35,
+    "z": 15.3
+   },
+   {
+    "step": 3,
+    "x": 2.1,
+    "z": 16.200001
+   },
+   {
+    "step": 4,
+    "x": -1.85,
+    "z": 15.05
+   },
+   {
+    "step": 5,
+    "x": -5.87,
+    "z": 15.7
+   },
+   {
+    "step": 6,
+    "x": -9.76,
+    "z": 15.46
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_BanishedPlane_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 0,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_banishedplane_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 400,
+      "xp": 75,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 400,
+      "xp": 75,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 400,
+      "xp": 75,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 400,
+      "xp": 75,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 400,
+      "xp": 75,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 400,
+      "xp": 75,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_BanishedPlane_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 0,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_banishedplane_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 800,
+      "xp": 200,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 800,
+      "xp": 200,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 800,
+      "xp": 200,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 800,
+      "xp": 200,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 800,
+      "xp": 200,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 800,
+      "xp": 200,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_BanishedPlane_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 0,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_banishedplane_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1400,
+      "xp": 400,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1400,
+      "xp": 400,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1400,
+      "xp": 400,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1400,
+      "xp": 400,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1400,
+      "xp": 400,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1400,
+      "xp": 400,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_BanishedPlane_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 0,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_banishedplane_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1400,
+      "xp": 400,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1400,
+      "xp": 400,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1400,
+      "xp": 400,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1400,
+      "xp": 400,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1400,
+      "xp": 400,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 1400,
+      "xp": 400,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "DoubleXP2015",
+  "name": "Событие \"Удвоенный опыт\"",
+  "name_en": "Double Exp Event",
+  "kind": "map",
+  "subtitle": "NEXUS_EVENT_TYPE_KEY_TITLE",
+  "hub_image": "tex.NexusEvent_XP",
+  "prefab": "nexus_map4_pre",
+  "node_count": 1,
+  "highlight_color": [
+   31,
+   128,
+   244
+  ],
+  "unlock_key": 2001,
+  "unlock_key_qty": 1,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 3600,
+  "positions": [
+   {
+    "step": 1,
+    "x": -0.8,
+    "z": 14.92
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_Double_XP_2015_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 20,
+    "potion_cost": 0,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 1625
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "GiantWisps2304",
+  "name": "Событие: задание \"Гигантские огоньки\"",
+  "name_en": "Giant Wisp Quest Event",
+  "kind": "map",
+  "subtitle": "NEXUS_EVENT_TYPE_KEY_TITLE",
+  "hub_image": "tex.NexusEvent_Wisp",
+  "prefab": "nexus_map4_pre",
+  "node_count": 4,
+  "highlight_color": [
+   186,
+   232,
+   96
+  ],
+  "unlock_key": 2002,
+  "unlock_key_qty": 1,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 3600,
+  "positions": [
+   {
+    "step": 1,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 2,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 3,
+    "x": -2.8,
+    "z": 14.8
+   },
+   {
+    "step": 4,
+    "x": -6.0,
+    "z": 14.5
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_Giant_Wisps_2304_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 25,
+    "potion_cost": 0,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 100,
+      "xp": 100,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 100,
+      "xp": 100,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 100,
+      "xp": 100,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 100,
+      "xp": 100,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "Giants2302",
+  "name": "Событие: задание \"Гиганты\"",
+  "name_en": "Giants Quest Event",
+  "kind": "map",
+  "subtitle": "NEXUS_EVENT_TYPE_KEY_TITLE",
+  "hub_image": "tex.Interstitial_GiantWisps",
+  "prefab": "nexus_map4_pre",
+  "node_count": 2,
+  "highlight_color": [
+   255,
+   243,
+   69
+  ],
+  "unlock_key": 2002,
+  "unlock_key_qty": 1,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 3600,
+  "positions": [
+   {
+    "step": 1,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 2,
+    "x": -4.0,
+    "z": 14.92
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_Giants_2302_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 25,
+    "potion_cost": 0,
+    "battle_environment": "env.bg_forestgeneric_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 100,
+      "xp": 100,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 100,
+      "xp": 100,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "PotionDrop2015",
+  "name": "Событие \"Зелья\"",
+  "name_en": "Potion Drop Event",
+  "kind": "map",
+  "subtitle": "NEXUS_EVENT_TYPE_KEY_TITLE",
+  "hub_image": "tex.NexusEvent_RevivePotionEvent",
+  "prefab": "nexus_map6_pre",
+  "node_count": 1,
+  "highlight_color": [
+   98,
+   237,
+   43
+  ],
+  "unlock_key": 2003,
+  "unlock_key_qty": 1,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 3600,
+  "positions": [
+   {
+    "step": 1,
+    "x": -0.8,
+    "z": 14.92
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Medium_Nexus_Event_Potion_Drop_2015_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 30,
+    "potion_cost": 0,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 25,
+      "xp": 25,
+      "potion_reward": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "WesternApproachInquisition",
+  "name": "Западный предел: инквизиция поднимает голову",
+  "name_en": "Western Approach: Inquisition Rising",
+  "kind": "map",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "SnexusWA_map13_pre",
+  "node_count": 5,
+  "highlight_color": [
+   214,
+   186,
+   122
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 8.28,
+    "z": 14.17
+   },
+   {
+    "step": 2,
+    "x": 5.69,
+    "z": 16.09
+   },
+   {
+    "step": 3,
+    "x": 1.17,
+    "z": 16.620001
+   },
+   {
+    "step": 4,
+    "x": -3.78,
+    "z": 15.78
+   },
+   {
+    "step": 5,
+    "x": -9.89,
+    "z": 15.43
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Nexus_Event_Western_Approach_Inquisition_Map_01",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Nexus_Event_Western_Approach_Inquisition_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 300,
+      "xp": 75,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 300,
+      "xp": 75,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 300,
+      "xp": 75,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 300,
+      "xp": 75,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 300,
+      "xp": 75,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_Western_Approach_Inquisition_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_Western_Approach_Inquisition_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1250,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1250,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1250,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1250,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1250,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_Western_Approach_Inquisition_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Ludicrous_Nexus_Event_Western_Approach_Inquisition_Map_01",
+    "difficulty": "ludicrous",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2000,
+      "xp": 750,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2000,
+      "xp": 750,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2000,
+      "xp": 750,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2000,
+      "xp": 750,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 2000,
+      "xp": 750,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "WesternApproachRedLyrium",
+  "name": "Западный предел: красным по белому",
+  "name_en": "Western Approach: Written in Red",
+  "kind": "map",
+  "subtitle": "Limited_Time_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_RedLyriumMeredith",
+  "prefab": "SnexusWA_map13_pre",
+  "node_count": 5,
+  "highlight_color": [
+   198,
+   118,
+   96
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": -9.89,
+    "z": 15.43
+   },
+   {
+    "step": 2,
+    "x": -3.78,
+    "z": 15.78
+   },
+   {
+    "step": 3,
+    "x": 1.17,
+    "z": 16.620001
+   },
+   {
+    "step": 4,
+    "x": 5.69,
+    "z": 16.09
+   },
+   {
+    "step": 5,
+    "x": 8.28,
+    "z": 14.17
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Nexus_Event_Western_Approach_Red_Lyrium_Map_01",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Nexus_Event_Western_Approach_Red_Lyrium_Map_01",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 250,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Nexus_Event_Western_Approach_Red_Lyrium_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Event_Western_Approach_Red_Lyrium_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1250,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1250,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1250,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1250,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1250,
+      "xp": 300,
+      "reward_rarity": [
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Event_Western_Approach_Red_Lyrium_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 1500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 1500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 1500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 1500,
+      "xp": 500,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Ludicrous_Nexus_Event_Western_Approach_Red_Lyrium_Map_01",
+    "difficulty": "ludicrous",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_western_approach_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 2000,
+      "xp": 750,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 2000,
+      "xp": 750,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 2000,
+      "xp": 750,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 2000,
+      "xp": 750,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 2000,
+      "xp": 750,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "PHnT",
+  "name": "Нечестивая защита",
+  "name_en": "Unholy Defense",
+  "kind": "puzzle",
+  "subtitle": "Nexus_Puzzle_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "nexus_map6_pre",
+  "node_count": 6,
+  "highlight_color": [
+   116,
+   84,
+   148
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 259200,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   },
+   {
+    "step": 6,
+    "x": -9.43,
+    "z": 14.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Hard_Nexus_Puzzle_PHnT_Map_01",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.circletower_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 100,
+      "xp": 85,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 120,
+      "xp": 85,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 140,
+      "xp": 85,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 160,
+      "xp": 85,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 180,
+      "xp": 85,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 180,
+      "xp": 85,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "VeryHard_Nexus_Puzzle_PHnT_Map_01",
+    "difficulty": "veryhard",
+    "energy_cost": 40,
+    "potion_cost": 1,
+    "battle_environment": "env.circletower_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 200,
+      "xp": 85,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 240,
+      "xp": 85,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 280,
+      "xp": 85,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 320,
+      "xp": 85,
+      "reward_rarity": [
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 360,
+      "xp": 85,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 360,
+      "xp": 85,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Insane_Nexus_Puzzle_PHnT_Map_01",
+    "difficulty": "insane",
+    "energy_cost": 60,
+    "potion_cost": 1,
+    "battle_environment": "env.circletower_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 300,
+      "xp": 85,
+      "reward_rarity": [
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 360,
+      "xp": 85,
+      "reward_rarity": [
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 420,
+      "xp": 85,
+      "boss": true,
+      "reward_rarity": [
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 480,
+      "xp": 85,
+      "reward_rarity": [
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 540,
+      "xp": 85,
+      "reward_rarity": [
+       4,
+       5
+      ]
+     },
+     {
+      "step": 6,
+      "gold": 540,
+      "xp": 85,
+      "boss": true,
+      "reward_rarity": [
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "DailyMonday",
+  "name": "Событие понедельника: \"красные\"",
+  "name_en": "Monday Event: Red Faction",
+  "kind": "daily",
+  "weekday": 1,
+  "subtitle": "Nexus_Daily_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_FactionRed",
+  "prefab": "nexus_map1_pre",
+  "node_count": 5,
+  "highlight_color": [
+   214,
+   62,
+   54
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 86400,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Daily_Monday_Map_October_27",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 127,
+      "xp": 20,
+      "boss": true,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Daily_Monday_Map_October_27",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 375,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Daily_Monday_Map_October_27",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_cave_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "DailyTuesday",
+  "name": "Событие вторника: \"синие\"",
+  "name_en": "Tuesday Event: Blue Faction",
+  "kind": "daily",
+  "weekday": 2,
+  "subtitle": "Nexus_Daily_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_FactionBlue",
+  "prefab": "nexus_map3_pre",
+  "node_count": 5,
+  "highlight_color": [
+   62,
+   128,
+   220
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 86400,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Daily_Tuesday_Map_October_28",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.circletower_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 127,
+      "xp": 20,
+      "boss": true,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Daily_Tuesday_Map_October_28",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.circletower_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 375,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Daily_Tuesday_Map_October_28",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.circletower_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "DailyWednesday",
+  "name": "Событие среды: \"черные\"",
+  "name_en": "Wednesday Event: Black Faction",
+  "kind": "daily",
+  "weekday": 3,
+  "subtitle": "Nexus_Daily_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_FactionBlack",
+  "prefab": "nexus_map2_pre",
+  "node_count": 5,
+  "highlight_color": [
+   72,
+   72,
+   84
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 86400,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 14.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Daily_Wednesday_Map_October_29",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_blightcity_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 127,
+      "xp": 20,
+      "boss": true,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Daily_Wednesday_Map_October_29",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_blightcity_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 375,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Daily_Wednesday_Map_October_29",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_blightcity_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "DailyThursday",
+  "name": "Событие четверга: \"белые\"",
+  "name_en": "Thursday Event: White Faction",
+  "kind": "daily",
+  "weekday": 4,
+  "subtitle": "Nexus_Daily_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_FactionWhite",
+  "prefab": "nexus_map4_pre",
+  "node_count": 5,
+  "highlight_color": [
+   232,
+   232,
+   224
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 86400,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Daily_Thursday_Map_October_30",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_mountains_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 127,
+      "xp": 20,
+      "boss": true,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Daily_Thursday_Map_October_30",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_mountains_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 375,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Daily_Thursday_Map_October_30",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_mountains_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "DailyFriday",
+  "name": "Событие пятницы: для всех фракций",
+  "name_en": "Friday Event: Multi-faction",
+  "kind": "daily",
+  "weekday": 5,
+  "subtitle": "Nexus_Daily_Event_Loc_Key",
+  "hub_image": "tex.Interstitial_GenericAnnouncement",
+  "prefab": "nexus_map6_pre",
+  "node_count": 5,
+  "highlight_color": [
+   200,
+   120,
+   180
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 86400,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Daily_Friday_Map_October_31",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_woodfort_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Daily_Friday_Map_October_31",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_woodfort_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Daily_Friday_Map_October_31",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_woodfort_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "DailySaturday",
+  "name": "Субботнее событие: огоньки",
+  "name_en": "Saturday Event: Wisps",
+  "kind": "daily",
+  "weekday": 6,
+  "subtitle": "Nexus_Daily_Event_Loc_Key",
+  "hub_image": "tex.NexusEvent_Wisp",
+  "prefab": "nexus_map5_pre",
+  "node_count": 5,
+  "highlight_color": [
+   160,
+   232,
+   200
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 86400,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Daily_Saturday_Map_November_1",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_swamp_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 127,
+      "xp": 20,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 127,
+      "xp": 20,
+      "boss": true,
+      "reward_rarity": [
+       1,
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Medium_Daily_Saturday_Map_November_1",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_swamp_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 375,
+      "xp": 65,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 375,
+      "xp": 65,
+      "boss": true,
+      "reward_rarity": [
+       2,
+       3,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Hard_Daily_Saturday_Map_November_1",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_swamp_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 2,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 3,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 4,
+      "gold": 750,
+      "xp": 150,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     },
+     {
+      "step": 5,
+      "gold": 750,
+      "xp": 150,
+      "boss": true,
+      "reward_rarity": [
+       3,
+       4,
+       5
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "DailySunday",
+  "name": "Воскр. событие: золото и опыт",
+  "name_en": "Sunday Event: Gold and XP",
+  "kind": "daily",
+  "weekday": 7,
+  "subtitle": "Nexus_Daily_Event_Loc_Key",
+  "hub_image": "tex.NexusEvent_GoldCoins",
+  "prefab": "nexus_map3_pre",
+  "node_count": 5,
+  "highlight_color": [
+   246,
+   206,
+   84
+  ],
+  "unlock_key": 0,
+  "unlock_key_qty": 0,
+  "max_runs": 0,
+  "duration": 86400,
+  "unlock_duration": 0,
+  "positions": [
+   {
+    "step": 1,
+    "x": 6.6,
+    "z": 16.0
+   },
+   {
+    "step": 2,
+    "x": 3.09,
+    "z": 16.200001
+   },
+   {
+    "step": 3,
+    "x": -0.8,
+    "z": 14.92
+   },
+   {
+    "step": 4,
+    "x": -3.05,
+    "z": 15.3
+   },
+   {
+    "step": 5,
+    "x": -6.43,
+    "z": 16.0
+   }
+  ],
+  "difficulties": [
+   {
+    "id": "Easy_Daily_Sunday_Map_November_2",
+    "difficulty": "easy",
+    "energy_cost": 5,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_grasslands_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 200,
+      "xp": 100
+     },
+     {
+      "step": 2,
+      "gold": 200,
+      "xp": 100
+     },
+     {
+      "step": 3,
+      "gold": 200,
+      "xp": 100
+     },
+     {
+      "step": 4,
+      "gold": 200,
+      "xp": 100
+     },
+     {
+      "step": 5,
+      "gold": 200,
+      "xp": 100
+     }
+    ]
+   },
+   {
+    "id": "Medium_Daily_Sunday_Map_November_2",
+    "difficulty": "medium",
+    "energy_cost": 15,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_grasslands_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 500,
+      "xp": 325
+     },
+     {
+      "step": 2,
+      "gold": 500,
+      "xp": 325
+     },
+     {
+      "step": 3,
+      "gold": 500,
+      "xp": 455
+     },
+     {
+      "step": 4,
+      "gold": 500,
+      "xp": 325
+     },
+     {
+      "step": 5,
+      "gold": 500,
+      "xp": 325
+     }
+    ]
+   },
+   {
+    "id": "Hard_Daily_Sunday_Map_November_2",
+    "difficulty": "hard",
+    "energy_cost": 25,
+    "potion_cost": 1,
+    "battle_environment": "env.bg_grasslands_01_pre",
+    "nodes": [
+     {
+      "step": 1,
+      "gold": 1200,
+      "xp": 600
+     },
+     {
+      "step": 2,
+      "gold": 1200,
+      "xp": 600
+     },
+     {
+      "step": 3,
+      "gold": 1200,
+      "xp": 600
+     },
+     {
+      "step": 4,
+      "gold": 1200,
+      "xp": 600
+     },
+     {
+      "step": 5,
+      "gold": 1200,
+      "xp": 600
+     }
+    ]
+   }
+  ]
+ }
+]

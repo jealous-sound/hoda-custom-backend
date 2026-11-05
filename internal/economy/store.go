@@ -1,4 +1,4 @@
-package shop
+package economy
 
 import (
 	"crypto/rand"
@@ -63,10 +63,14 @@ type GrantedHero struct {
 }
 
 type Granted struct {
-	Heroes []GrantedHero `json:"heroes"`
-	Runes  []string      `json:"runes"`
-	Gear   []string      `json:"gear"`
-	Tome   bool          `json:"tome"`
+	Heroes   []GrantedHero `json:"heroes"`
+	Runes    []string      `json:"runes"`
+	Gear     []string      `json:"gear"`
+	Tome     bool          `json:"tome"`
+	Tomes    int           `json:"tomes,omitempty"`
+	Vouchers []int         `json:"vouchers,omitempty"`
+	Gold     int64         `json:"gold,omitempty"`
+	Gems     int64         `json:"gems,omitempty"`
 }
 
 type purchase struct {

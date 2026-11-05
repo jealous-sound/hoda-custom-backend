@@ -1,0 +1,25 @@
+{
+ "version": 2,
+ "source": "5.4.4 tutorial: FTUE_PART1_QUEST3_1..3 name the three starters; PlayerPos2 front, PlayerPos3/4 back, PlayerPos1 left free for Ashaad",
+ "characters": [
+  {
+   "id": "UNIT_LEGIONNAIRESCOUT"
+  },
+  {
+   "id": "UNIT_CIRCLEAPPRENTICE"
+  },
+  {
+   "id": "UNIT_FERELDANASHWARRIOR"
+  }
+ ],
+ "squads": [
+  [
+   "UNIT_LEGIONNAIRESCOUT",
+   null,
+   "UNIT_CIRCLEAPPRENTICE",
+   "UNIT_FERELDANASHWARRIOR",
+   null
+  ]
+ ],
+ "current_squad": 0
+}

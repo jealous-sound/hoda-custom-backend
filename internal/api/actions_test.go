@@ -38,8 +38,9 @@ type shopResult struct {
 func (h *harness) shopPlayer() string {
 	h.t.Helper()
 	token := h.open("local")
-	response, body := h.do("PUT", "/v1/players/local/profile", token, "0", shopProfile)
-	expectStatus(h.t, response, body, http.StatusOK)
+	if _, err := h.profiles.Put("local", 0, json.RawMessage(shopProfile)); err != nil {
+		h.t.Fatal(err)
+	}
 	return token
 }
 
@@ -107,16 +108,22 @@ func TestRefusedPurchaseExplainsWhy(t *testing.T) {
 	expectStatus(t, response, body, http.StatusBadRequest)
 }
 
-func TestStoreCountersOnlyChangeThroughPurchases(t *testing.T) {
+func TestUploadKeepsServerOwnedFields(t *testing.T) {
 	h := newHarness(t)
 	token := h.shopPlayer()
 	forged := strings.Replace(shopProfile, `"opened_total":0,"opened_by_pack":[0,0,0,0]`,
 		`"opened_total":3,"opened_by_pack":[3,0,0,0]`, 1)
+	forged = strings.Replace(forged, `"gold":1000`, `"gold":99999`, 1)
+	forged = strings.Replace(forged, `"rng_state":1`, `"rng_state":77`, 1)
 	response, body := h.do("PUT", "/v1/players/local/profile", token, "1", forged)
-	expectStatus(t, response, body, http.StatusUnprocessableEntity)
-	richer := strings.Replace(shopProfile, `"gold":1000`, `"gold":2000`, 1)
-	response, body = h.do("PUT", "/v1/players/local/profile", token, "1", richer)
 	expectStatus(t, response, body, http.StatusOK)
+	response, stored := h.do("GET", "/v1/players/local/profile", token, "", "")
+	expectStatus(t, response, stored, http.StatusOK)
+	for _, kept := range []string{`"gold":1000`, `"opened_total":0`, `"rng_state":77`} {
+		if !strings.Contains(stored, kept) {
+			t.Errorf("stored profile lacks %s: %s", kept, stored)
+		}
+	}
 }
 
 func TestRefillSpendsGems(t *testing.T) {

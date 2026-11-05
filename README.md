@@ -50,6 +50,7 @@ make format-check
 | `PUT` | `/v1/players/{id}/profile` | requires `Authorization: Bearer <token>` and `If-Match: <revision>` (`0` creates) |
 | `POST` | `/v1/players/{id}/store/purchases` | `{"request_id", "pack", "currency", "price", "scripted"}` → `{"revision", "profile", "granted"}` |
 | `POST` | `/v1/players/{id}/refills` | `{"request_id", "kind": "energy" \| "stamina"}` → `{"revision", "profile", "granted"}` |
+| `POST` | `/v1/players/{id}/actions` | `{"request_id", "action", ...}` → `{"revision", "profile", "granted"}`; see [Economy](#economy) |
 
 A guest's session needs its secret (`401` otherwise); players created before accounts existed, like a seeded
 `local`, open without one. A write with a stale revision gets `409` and the current revision, so a client that started from an old copy
@@ -75,22 +76,53 @@ in place of its own, and `granted`: the heroes with their instance ids, runes, g
   so pulls cannot be predicted or rerolled by reloading a save.
 - Both actions need `If-Match` with the current revision (`409` otherwise). A repeated `request_id` replays the
   first answer without charging again, so a client can retry after a dropped reply.
-- Refusals are `422 {"error", "code"}` with `code` one of `cant_afford`, `inventory_full`, `unavailable`,
+- Refusals are `422 {"error", "code", "revision", "profile"}` with `code` one of `cant_afford`, `inventory_full`, `unavailable`,
   `counter_limit`, `offer_changed`, `already_full`, `bad_profile`.
 - Tutorial packs from `tutorial_rewards.json` are scripted once per player and only while the tutorial runs.
-- A profile `PUT` may not change `store.opened_total`, `store.opened_by_pack` or `store.champion_since_legendary`.
 
-The pack catalog, hero pool, runes, gear and tutorial rewards are embedded from `internal/catalog/data`, copied
+## Economy
+
+The server is the only writer of the player's economy. A profile `PUT` is merged: the client's copy is kept, but
+these fields keep the server's values:
+
+- `account`: level, experience, energy, stamina, their maximums and regen timers, gold, gems.
+- `store`: opened counters, legendary pity, vouchers. `nexus`: potions, keys, event unlocks and runs, and the run's
+  progress and escrow (the event and difficulty stay the client's until the run is committed).
+- `campaign`: completions and losses. `missions.claimed`.
+- `roster`: heroes the server has not granted are dropped, and a hero keeps its id and `ascended` flag.
+- `gear`: tomes, prestige and ascension flags; the inventory may move into hero slots but a gear id may not grow.
+- `runes`: unknown runes are dropped, `inventory_expire_at` and running activations are the server's, and a new
+  activation may last at most the rune's duration.
+
+Energy and stamina regenerate from server time (`regen_at` in the server state), one point per 300 s. A new
+player's first upload starts from the new-player economy (1725 gold, 41 gems, level 1, the three starter heroes and
+starter runes) whatever it claims.
+
+Everything that grants or spends goes through `POST /v1/players/{id}/actions`:
+
+| `action` | Fields | |
+| --- | --- | --- |
+| `battle` | `mode: "campaign"`, `map`, `node`, `won`, `crit_gold` | spends the node's energy, pays first win, mastery, challenge or grind rewards from `campaign_maps.json` |
+| `battle` | `mode: "pvp"`, `seed`, `won`, `crit_gold`, `event`, `banners` | spends 1 stamina; the opponent's level comes from the seed and the player's level; event banners are capped per win and milestones paid once |
+| `battle` | `mode: "nexus"`, `step`, `won`, `crit_gold`, `revive` | spends energy (and a potion to revive), escrows gold, XP, potions and a unit roll |
+| `nexus_award` / `nexus_reset` | | pays the escrow and rolls the units / abandons the run |
+| `nexus_unlock` | `event` | spends the event's keys |
+| `mission_claim` | `mission` | once per mission; campaign, level and map stats are checked against the server's own state |
+| `pvp_event_claim` | `cycle` | once per finished event, ranked from the banners the server counted |
+| `gear_sell`, `gear_prestige`, `ascend` | `gear` / `instance_id` | sell value, prestige slot gems, a tome |
+| `rune_prestige`, `rune_craft` | `squad` / `pairs` | prestige slot gems; each pair of identical idle runes becomes one of the next tier |
+| `tutorial_reward` | `reward: "giant" \| "gem_pack" \| "parting_gift"` | once each |
+
+Rune gold and XP bonuses come from the active runes of `current_squad`. Crit gold is credited up to 100 crits. The
+client still reports who won; the deterministic battle simulation is not replayed here yet.
+
+The pack catalog, hero pool, runes, gear, tutorial rewards, campaign, Nexus, PvP rules, missions and new-player
+roster are embedded from `internal/catalog/data`, copied
 from the client's `data/` by `scripts/sync-client-data.sh`; `go test` fails when the copies drift from a client
 checkout next to this one.
 
 ## Next to move server-side
 
-The client still computes everything else and uploads the result. In order of cheat value:
-
-1. Gems, gold, vouchers and roster are still accepted from profile uploads, because battles, missions and PvP
-   grant them on the client; they can be locked once those move.
-2. Battle rewards: campaign, Nexus escrow and PvP payouts (`progression.c`), verified by replaying the
-   deterministic `battle_sim.c`.
-3. Energy and stamina regeneration from server time instead of client timers.
-4. PvP matchmaking and defense history against other players' squads.
+1. Battle outcomes: replay the deterministic `battle_sim.c` instead of trusting `won` and `crit_gold`.
+2. Hero progression (levels, consume, tiers) and mission counters fed by battles, still uploaded by the client.
+3. PvP trophies, matchmaking and defense history against other players' squads.

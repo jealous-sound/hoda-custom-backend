@@ -129,6 +129,9 @@ type Rune struct {
 	Family          string
 	Rarity          int
 	DurationMinutes int
+	CraftTo         string
+	GoldPct         int
+	XPPct           int
 }
 
 func (r Rune) Rollable() bool {
@@ -156,10 +159,20 @@ type Catalog struct {
 	Gear       []Gear
 	Scripted   map[string]ScriptedPack
 
-	packIndex  map[string]int
-	heroIndex  map[string]int
-	runeIndex  map[string]int
-	rarityPool [RarityLegendary + 1][]int
+	Campaign         []CampaignMap
+	Nexus            []NexusEvent
+	Pvp              PvpRules
+	Missions         []Mission
+	Tutorial         TutorialRewards
+	GearSellGold     []int
+	GearPrestigeGems int
+
+	packIndex    map[string]int
+	missionIndex map[string]int
+	gearIndex    map[string]int
+	heroIndex    map[string]int
+	runeIndex    map[string]int
+	rarityPool   [RarityLegendary + 1][]int
 }
 
 func (c *Catalog) Pack(id string) (*Pack, bool) {
@@ -403,6 +416,9 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		if len(c.rarityPool[rarity]) == 0 {
 			return nil, fmt.Errorf("no obtainable heroes of rarity %d", rarity)
 		}
+	}
+	if err := c.loadRules(read); err != nil {
+		return nil, err
 	}
 	return c, nil
 }
