@@ -12,11 +12,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/danbestan/hoda-custom-backend/internal/account"
-	"github.com/danbestan/hoda-custom-backend/internal/api"
-	"github.com/danbestan/hoda-custom-backend/internal/profile"
-	"github.com/danbestan/hoda-custom-backend/internal/prune"
-	"github.com/danbestan/hoda-custom-backend/internal/session"
+	"github.com/jealous-sound/hoda-custom-backend/internal/account"
+	"github.com/jealous-sound/hoda-custom-backend/internal/api"
+	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
+	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
+	"github.com/jealous-sound/hoda-custom-backend/internal/prune"
+	"github.com/jealous-sound/hoda-custom-backend/internal/session"
 )
 
 const cliDescription = "Backend for the Heroes of Dragon Age native client: sessions, server clock and player profiles."
@@ -114,10 +115,14 @@ func run(o options, log *slog.Logger) error {
 	if o.guestIdle > 0 && o.pruneEvery <= 0 {
 		return errors.New("-prune-every must be positive while -guest-idle is set")
 	}
+	shopCatalog, err := catalog.Default()
+	if err != nil {
+		return fmt.Errorf("load store catalog: %w", err)
+	}
 	sessions := session.NewRegistry()
 	server := &http.Server{
 		Addr:              o.addr,
-		Handler:           api.NewServer(accounts, store, sessions, time.Now, log).Handler(),
+		Handler:           api.NewServer(accounts, store, sessions, shopCatalog, time.Now, log).Handler(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)

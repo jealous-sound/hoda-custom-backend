@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/danbestan/hoda-custom-backend/internal/account"
-	"github.com/danbestan/hoda-custom-backend/internal/profile"
-	"github.com/danbestan/hoda-custom-backend/internal/session"
+	"github.com/jealous-sound/hoda-custom-backend/internal/account"
+	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
+	"github.com/jealous-sound/hoda-custom-backend/internal/session"
 )
 
 type Pruner struct {

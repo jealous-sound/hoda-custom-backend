@@ -10,9 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/danbestan/hoda-custom-backend/internal/account"
-	"github.com/danbestan/hoda-custom-backend/internal/profile"
-	"github.com/danbestan/hoda-custom-backend/internal/session"
+	"github.com/jealous-sound/hoda-custom-backend/internal/account"
+	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
+	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
+	"github.com/jealous-sound/hoda-custom-backend/internal/session"
 )
 
 var fixedNow = time.Unix(1_800_000_000, 0)
@@ -36,8 +37,12 @@ func newHarness(t *testing.T) *harness {
 	if err != nil {
 		t.Fatal(err)
 	}
+	shopCatalog, err := catalog.Default()
+	if err != nil {
+		t.Fatal(err)
+	}
 	log := slog.New(slog.NewTextHandler(io.Discard, nil))
-	server := httptest.NewServer(NewServer(accounts, store, session.NewRegistry(), clock, log).Handler())
+	server := httptest.NewServer(NewServer(accounts, store, session.NewRegistry(), shopCatalog, clock, log).Handler())
 	t.Cleanup(server.Close)
 	return &harness{t: t, server: server}
 }

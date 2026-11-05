@@ -10,9 +10,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/danbestan/hoda-custom-backend/internal/account"
-	"github.com/danbestan/hoda-custom-backend/internal/profile"
-	"github.com/danbestan/hoda-custom-backend/internal/session"
+	"github.com/jealous-sound/hoda-custom-backend/internal/account"
+	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
+	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
+	"github.com/jealous-sound/hoda-custom-backend/internal/session"
+	"github.com/jealous-sound/hoda-custom-backend/internal/shop"
 )
 
 const RevisionHeader = "X-Profile-Revision"
@@ -21,14 +23,16 @@ type Server struct {
 	accounts *account.Store
 	profiles *profile.Store
 	sessions *session.Registry
+	catalog  *catalog.Catalog
 	now      func() time.Time
 	log      *slog.Logger
 }
 
 func NewServer(
-	accounts *account.Store, profiles *profile.Store, sessions *session.Registry, now func() time.Time, log *slog.Logger,
+	accounts *account.Store, profiles *profile.Store, sessions *session.Registry, shopCatalog *catalog.Catalog,
+	now func() time.Time, log *slog.Logger,
 ) *Server {
-	return &Server{accounts: accounts, profiles: profiles, sessions: sessions, now: now, log: log}
+	return &Server{accounts: accounts, profiles: profiles, sessions: sessions, catalog: shopCatalog, now: now, log: log}
 }
 
 func (s *Server) Handler() http.Handler {
@@ -39,6 +43,8 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("POST /v1/sessions", s.openSession)
 	mux.HandleFunc("GET /v1/players/{player}/profile", s.authorized(s.getProfile))
 	mux.HandleFunc("PUT /v1/players/{player}/profile", s.authorized(s.putProfile))
+	mux.HandleFunc("POST /v1/players/{player}/store/purchases", s.authorized(s.purchase))
+	mux.HandleFunc("POST /v1/players/{player}/refills", s.authorized(s.refill))
 	return s.logged(mux)
 }
 
@@ -190,7 +196,14 @@ func (s *Server) putProfile(w http.ResponseWriter, r *http.Request, player strin
 		writeError(w, http.StatusUnprocessableEntity, err.Error())
 		return
 	}
-	record, err := s.profiles.Put(player, expected, body)
+	record, err := s.profiles.PutGuarded(player, expected, body, func(current profile.Record) error {
+		return shop.KeepsServerOwnedFields(current.Profile, body)
+	})
+	var refusal *shop.Refusal
+	if errors.As(err, &refusal) {
+		writeError(w, http.StatusUnprocessableEntity, refusal.Message)
+		return
+	}
 	if errors.Is(err, profile.ErrRevisionMismatch) {
 		writeRevision(w, record.Revision)
 		writeError(w, http.StatusConflict, "profile was changed since revision "+strconv.FormatInt(expected, 10))

@@ -1,0 +1,45 @@
+{
+ "version": 1,
+ "packs": {
+  "soldier": {
+   "heroes": [
+    "UNIT_ASHAAD"
+   ],
+   "source": "zzzFTUE_PART2_STORE6/STORE8 and zzzFTUE_PART3_QUEST2: the Soldier Pack yields Ashaad, an Uncommon who hits a column"
+  },
+  "champion": {
+   "heroes": [
+    "UNIT_GREYWARDENMAGE"
+   ],
+   "rune": "rune-power-2",
+   "source": "authored: zzzFTUE_PART4_STORE2 promises a Rare and a rune, the server picked both"
+  },
+  "tutorial_consume": {
+   "heroes": [
+    "UNIT_GREYWARDENWARRIOR",
+    "UNIT_GENLOCKBRUTE"
+   ],
+   "source": "Config.cs consume FTUE parent unit 434 (Grey Warden Warrior I) and child 206 (Genlock Brute I)"
+  }
+ },
+ "giant": {
+  "hero": "UNIT_BEAR",
+  "source": "authored: FTUE_PART7_QUEST3/4 award a large creature through hidden-first-giant-pack, contents were server side"
+ },
+ "hidden_gem_pack": {
+  "gems": 30,
+  "source": "authored: zzzFTUE_PART7_QUEST7 grants a few gems through hidden_ftue_gem_pack; one Champion Pack worth"
+ },
+ "parting_gift": {
+  "heroes": [
+   "UNIT_LEGIONNAIRESCOUT",
+   "UNIT_CIRCLEAPPRENTICE",
+   "UNIT_FERELDANASHWARRIOR"
+  ],
+  "runes": [
+   "rune-health-1",
+   "rune-power-1"
+  ],
+  "source": "authored: zzzFTUE_PART7_QUEST14 fills the camp with a few units and runes; duplicates feed the consume tutorial"
+ }
+}

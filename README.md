@@ -48,6 +48,8 @@ make format-check
 | `POST` | `/v1/sessions` | `{"player_id", "secret"}` → `{"token", "player_id", "server_time"}` |
 | `GET` | `/v1/players/{id}/profile` | the save JSON; revision in `X-Profile-Revision`, 404 before the first save |
 | `PUT` | `/v1/players/{id}/profile` | requires `Authorization: Bearer <token>` and `If-Match: <revision>` (`0` creates) |
+| `POST` | `/v1/players/{id}/store/purchases` | `{"request_id", "pack", "currency", "price", "scripted"}` → `{"revision", "profile", "granted"}` |
+| `POST` | `/v1/players/{id}/refills` | `{"request_id", "kind": "energy" \| "stamina"}` → `{"revision", "profile", "granted"}` |
 
 A guest's session needs its secret (`401` otherwise); players created before accounts existed, like a seeded
 `local`, open without one. A write with a stale revision gets `409` and the current revision, so a client that started from an old copy
@@ -61,11 +63,33 @@ counted from its creation, if its profile has no `account.name` and `tutorial.co
 a profile. Profiles without a `tutorial` section predate the tutorial and are kept. The check runs on start and every
 `-prune-every` (default `1h`). Each session stamps `last_session_at` in the account file.
 
+## Store
+
+Pack purchases and energy/stamina refills run on the server. The client sends the pack and the price it shows;
+the server checks the pack is on sale (UTC schedules and flash rotation), that the roster or rune inventory has room
+and the player can pay, then rolls the pack, charges it and writes the heroes, runes, gear, counters and the
+`summoned` mission counter into the stored profile. The reply carries the whole new profile, which the client loads
+in place of its own, and `granted`: the heroes with their instance ids, runes, gear and whether a tome dropped.
+
+- The roll state lives only in the server's part of `runtime/players/<id>.json` and is seeded randomly per player,
+  so pulls cannot be predicted or rerolled by reloading a save.
+- Both actions need `If-Match` with the current revision (`409` otherwise). A repeated `request_id` replays the
+  first answer without charging again, so a client can retry after a dropped reply.
+- Refusals are `422 {"error", "code"}` with `code` one of `cant_afford`, `inventory_full`, `unavailable`,
+  `counter_limit`, `offer_changed`, `already_full`, `bad_profile`.
+- Tutorial packs from `tutorial_rewards.json` are scripted once per player and only while the tutorial runs.
+- A profile `PUT` may not change `store.opened_total`, `store.opened_by_pack` or `store.champion_since_legendary`.
+
+The pack catalog, hero pool, runes, gear and tutorial rewards are embedded from `internal/catalog/data`, copied
+from the client's `data/` by `scripts/sync-client-data.sh`; `go test` fails when the copies drift from a client
+checkout next to this one.
+
 ## Next to move server-side
 
-The client still computes everything and uploads the result. In order of cheat value:
+The client still computes everything else and uploads the result. In order of cheat value:
 
-1. Store pack rolls (`store.c` RNG and pity counters) and gem spending.
+1. Gems, gold, vouchers and roster are still accepted from profile uploads, because battles, missions and PvP
+   grant them on the client; they can be locked once those move.
 2. Battle rewards: campaign, Nexus escrow and PvP payouts (`progression.c`), verified by replaying the
    deterministic `battle_sim.c`.
 3. Energy and stamina regeneration from server time instead of client timers.

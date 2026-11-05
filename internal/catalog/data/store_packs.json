@@ -1,0 +1,2765 @@
+{
+  "version": 3,
+  "balance_note_ru": "Каталог магазина сервер отдавал удалённо, и в дампе его нет. Названия паков взяты из локализации 5.4.4. Цены, виденные в записях, сохранены; все остальные цены, шансы, состав, расписание и описания заданы как локальный баланс. Лестница самоцветов восстановлена точно из строк локализации.",
+  "flash_days": 7,
+  "vouchers": [
+    {
+      "id": "bronze",
+      "icon": "cache:tex.Voucher_BronzePack"
+    },
+    {
+      "id": "silver",
+      "icon": "cache:tex.Voucher_SilverPack"
+    },
+    {
+      "id": "champion",
+      "icon": "cache:tex.Voucher_ChampPack"
+    },
+    {
+      "id": "iron",
+      "icon": "cache:tex.Voucher_IronPack"
+    },
+    {
+      "id": "bloodstone",
+      "icon": "cache:tex.Voucher_BloodstonePack"
+    },
+    {
+      "id": "goat",
+      "icon": "cache:tex.Voucher_Goat"
+    },
+    {
+      "id": "nug",
+      "icon": "gui/store/tex.Voucher_Nug.png"
+    },
+    {
+      "id": "dragon",
+      "icon": "gui/store/tex.Voucher_Dragon.png"
+    },
+    {
+      "id": "romance",
+      "icon": "gui/store/tex.Voucher_Romance.png"
+    },
+    {
+      "id": "wintersend",
+      "icon": "gui/store/tex.Voucher_Wintersend.png"
+    },
+    {
+      "id": "harvest",
+      "icon": "gui/store/tex.Voucher_Harvest.png"
+    },
+    {
+      "id": "anniversary",
+      "icon": "gui/store/tex.Voucher_Anniversary.png"
+    },
+    {
+      "id": "library",
+      "icon": "gui/store/tex.Voucher_Library.png"
+    },
+    {
+      "id": "lyrium_mine",
+      "icon": "gui/store/tex.Voucher_LyriumMine.png"
+    }
+  ],
+  "gem_skus": [
+    {
+      "id": "sackofgems",
+      "gems": 22,
+      "icon": 0
+    },
+    {
+      "id": "bagofgems",
+      "gems": 46,
+      "icon": 1
+    },
+    {
+      "id": "pileofgems",
+      "gems": 121,
+      "icon": 2,
+      "banner": "STORE_MOST_POPULAR"
+    },
+    {
+      "id": "boxofgems",
+      "gems": 275,
+      "icon": 3
+    },
+    {
+      "id": "heapofgems",
+      "gems": 425,
+      "icon": 4
+    },
+    {
+      "id": "chestofgems",
+      "gems": 720,
+      "icon": 5
+    },
+    {
+      "id": "bagfulloffunk",
+      "gems": 1600,
+      "icon": 6,
+      "banner": "STORE_BEST_VALUE"
+    }
+  ],
+  "packs": [
+    {
+      "id": "tutorial_consume",
+      "kind": "hero",
+      "loc_id": "TUTORIAL_CONSUME",
+      "category": "UNITS",
+      "order": 5,
+      "header": "cache:tex.Store_HeaderBGGoldPack",
+      "icon": "cache:tex.Store_IconGreyWardenKnight",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 0
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Для обучения",
+          "rarity": 0
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 0,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 0,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Набор для обучения",
+      "tutorial_only": true,
+      "info_ru": "Бесплатная пара героев, чтобы научиться поглощению."
+    },
+    {
+      "id": "recruit",
+      "kind": "hero",
+      "loc_id": "ITEM_BRONZE_IDENTIFIER",
+      "category": "UNITS",
+      "order": 10,
+      "header": "cache:tex.Store_HeaderBGBronzePack",
+      "icon": "cache:tex.Store_IconBronzePack",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 350
+        },
+        {
+          "currency": "voucher",
+          "voucher": "bronze",
+          "price": 1
+        }
+      ],
+      "bullets": [],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 0,
+      "hero_count": 1,
+      "minimum_rarity": "Common",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 7500,
+        "Uncommon": 2000,
+        "Rare": 400,
+        "Epic": 90,
+        "Legendary": 10
+      },
+      "rune_chance_pct": 15,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "recruit",
+      "info_ru": "Дает 1 героя и шанс на 1 руну. Как минимум обычный боец; есть шанс на необычного, редкого, эпического или легендарного."
+    },
+    {
+      "id": "soldier",
+      "kind": "hero",
+      "loc_id": "ITEM_SILVER_IDENTIFIER",
+      "category": "UNITS",
+      "order": 20,
+      "header": "cache:tex.Store_HeaderBGSilverPack",
+      "icon": "cache:tex.Store_IconSilverPack",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 1500
+        },
+        {
+          "currency": "voucher",
+          "voucher": "silver",
+          "price": 1
+        }
+      ],
+      "bullets": [],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 1,
+      "hero_count": 1,
+      "minimum_rarity": "Uncommon",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 7000,
+        "Rare": 2200,
+        "Epic": 700,
+        "Legendary": 100
+      },
+      "rune_chance_pct": 30,
+      "rune_min_rarity": 2,
+      "rune_max_rarity": 3,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "soldier",
+      "info_ru": "Дает 1 героя или крупное существо и шанс на 1 руну. Как минимум необычный боец; есть шанс на редкого, эпического или легендарного."
+    },
+    {
+      "id": "champion",
+      "kind": "hero",
+      "loc_id": "ITEM_GOLD_IDENTIFIER",
+      "category": "UNITS",
+      "order": 30,
+      "header": "cache:tex.Store_HeaderChampionPack",
+      "icon": "cache:tex.Store_IconGoldPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 30
+        },
+        {
+          "currency": "voucher",
+          "voucher": "champion",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Легендарный не позже 4-го",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 4,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 5,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "champion",
+      "info_ru": "Дает 1 героя или крупное существо и 1 руну. Как минимум редкий боец; есть шанс на эпического или легендарного."
+    },
+    {
+      "id": "grand_champion",
+      "kind": "hero",
+      "loc_id": "GRAND_CHAMPION",
+      "category": "UNITS",
+      "order": 40,
+      "header": "cache:tex.Store_HeaderGrandChampionPack",
+      "icon": "cache:tex.Store_IconLegendaryPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 270
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "10 наборов по цене 9!",
+          "rarity": 0
+        },
+        {
+          "text_ru": "2 легендарных и 3 эпических гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 3,
+      "hero_count": 10,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 2,
+      "guaranteed_epic": 3,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6000,
+        "Epic": 3200,
+        "Legendary": 800
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 5,
+      "rune_count": 10,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Большой набор защитника",
+      "info_ru": "10 наборов защитника: 2 легендарных и 3 эпических героя гарантированы."
+    },
+    {
+      "id": "mercenary",
+      "kind": "hero",
+      "loc_id": "MERCENARY",
+      "category": "UNITS",
+      "order": 50,
+      "header": "cache:tex.Store_HeaderBGSilverPack",
+      "icon": "cache:tex.Store_IconWarriorPack",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 5000
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 3
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 1,
+      "hero_count": 1,
+      "minimum_rarity": "Uncommon",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 7000,
+        "Rare": 2200,
+        "Epic": 700,
+        "Legendary": 100
+      },
+      "rune_chance_pct": 20,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 3,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "header_tint": "#B070FF",
+      "name_ru": "Набор наемника",
+      "info_ru": "Дает героев: 1. Как минимум необычный боец."
+    },
+    {
+      "id": "knight",
+      "kind": "hero",
+      "loc_id": "KNIGHT",
+      "category": "UNITS",
+      "order": 60,
+      "header": "cache:tex.Store_HeaderBGSilverPack",
+      "icon": "cache:tex.Store_IconGreyWardenKnight",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 25000
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 1,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 2,
+      "rune_max_rarity": 5,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Рыцарский набор",
+      "info_ru": "В наборе — как минимум редкий герой с шансом на эпического или легендарного, в числе которых Сэндал и Великая Чародейка Фиона. Также содержит одну необычную, редкую, эпическую или легендарную руну."
+    },
+    {
+      "id": "commander",
+      "kind": "hero",
+      "loc_id": "COMMANDER",
+      "category": "UNITS",
+      "order": 70,
+      "header": "cache:tex.Store_HeaderBGGoldPack",
+      "icon": "cache:tex.Store_IconCommanderDuhaime",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 60
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 5,
+      "rune_count": 1,
+      "gear_chance_pct": 20,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Набор командора",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "elite",
+      "kind": "hero",
+      "loc_id": "ELITE",
+      "category": "UNITS",
+      "order": 80,
+      "header": "cache:tex.Store_HeaderBGSilverPack",
+      "icon": "cache:tex.Store_IconGreyWardenFiona",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 1280
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 3,
+      "hero_count": 10,
+      "minimum_rarity": "Epic",
+      "guaranteed_legendary": 3,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 0,
+        "Epic": 8500,
+        "Legendary": 1500
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 4,
+      "rune_max_rarity": 5,
+      "rune_count": 10,
+      "gear_chance_pct": 50,
+      "gear_min_rarity": 3,
+      "gear_max_rarity": 5,
+      "header_tint": "#B070FF",
+      "name_ru": "Элитный набор",
+      "info_ru": "Дает героев: 10. Как минимум эпический боец."
+    },
+    {
+      "id": "iron",
+      "kind": "hero",
+      "loc_id": "IRON",
+      "category": "UNITS",
+      "order": 90,
+      "header": "cache:tex.Store_HeaderBGGoldPack",
+      "icon": "cache:tex.Store_IronPack",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "iron",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 6,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 50,
+      "rune_min_rarity": 2,
+      "rune_max_rarity": 4,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Железный набор",
+      "info_ru": "Премиальный призовой набор. Гарантированный легендарный герой в одном из 6 наборов!"
+    },
+    {
+      "id": "bloodstone",
+      "kind": "hero",
+      "loc_id": "BLOODSTONE",
+      "category": "UNITS",
+      "order": 100,
+      "header": "cache:tex.Store_HeaderBGGoldPack",
+      "icon": "cache:tex.Store_IconBloodstonePack",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "bloodstone",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Legendary",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 0,
+        "Epic": 0,
+        "Legendary": 10000
+      },
+      "rune_chance_pct": 50,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 5,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Кровавиковый набор",
+      "info_ru": "Потрясающий призовой набор. Как минимум однозвездочный легендарный герой с шансом получить вместо него двух- или трехзвездочного!"
+    },
+    {
+      "id": "lyrium_vein",
+      "kind": "hero",
+      "loc_id": "LYRIUM_MINE",
+      "category": "UNITS",
+      "order": 110,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "gui/store/tex.Voucher_LyriumMine.png",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "lyrium_mine",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 40,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Лириумная жила",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "starter_conversion",
+      "kind": "hero",
+      "loc_id": "MINNOW_CONVERSION_V2",
+      "category": "UNITS",
+      "order": 120,
+      "header": "cache:tex.Store_HeaderBGBronzePack",
+      "icon": "cache:tex.Store_IconSerJory",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 121
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Особое предложение!",
+          "rarity": 0
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 3,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 3,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Стартовый набор",
+      "info_ru": "Дает героев: 3. Как минимум редкий боец."
+    },
+    {
+      "id": "starter_beasts",
+      "kind": "hero",
+      "loc_id": "STARTER_PACK_BEASTS",
+      "category": "UNITS",
+      "order": 130,
+      "header": "cache:tex.Store_HeaderBGBronzePack",
+      "icon": "cache:tex.Store_IconDragonling",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 275
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Особое предложение!",
+          "rarity": 0
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 5,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 10000,
+        "Epic": 0,
+        "Legendary": 0
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 5,
+      "rune_max_rarity": 5,
+      "rune_count": 5,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "fixed_heroes": [
+        "UNIT_BARKSPAWN",
+        "UNIT_VARTERRAL"
+      ],
+      "name_ru": "Стартовый набор",
+      "info_ru": "Спешите! Легендарный Моровой, эпический гигант вартеррал, три редких героя и пять легендарных рун. Скидка более 50 %!"
+    },
+    {
+      "id": "wisp",
+      "kind": "hero",
+      "loc_id": "WISP",
+      "category": "UNITS",
+      "order": 140,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconRuneWIsp",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 800
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Для обучения",
+          "rarity": 0
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 0,
+      "hero_count": 10,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 0,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "pool_tag": "WISP",
+      "name_ru": "Набор огоньков",
+      "info_ru": "10 огоньков (редких или лучше). Как минимум 1 эпический с шансом на легендарный."
+    },
+    {
+      "id": "divine_wisp",
+      "kind": "hero",
+      "loc_id": "DIVINE_WISP",
+      "category": "UNITS",
+      "order": 150,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconDivineWisp",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 40
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Для обучения",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 10,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 1,
+      "guaranteed_epic": 2,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 0,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "pool_tag": "WISP",
+      "name_ru": "Набор \"Огоньки Верховной жрицы\"",
+      "info_ru": "10 огоньков (редких или лучше), из них как минимум 2 эпических и 1 легендарный."
+    },
+    {
+      "id": "training",
+      "kind": "hero",
+      "loc_id": "ITEM_CONSUME_IDENTIFIER",
+      "category": "UNITS",
+      "order": 160,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconRuneWIsp",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 300
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Для обучения",
+          "rarity": 0
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 0,
+      "hero_count": 2,
+      "minimum_rarity": "Uncommon",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 10000,
+        "Rare": 0,
+        "Epic": 0,
+        "Legendary": 0
+      },
+      "rune_chance_pct": 0,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "guaranteed_rare": 1,
+      "name_ru": "Учебный набор",
+      "info_ru": "Дает 1 редкого и 1 необычного героя, чтобы помочь освоить поглощение."
+    },
+    {
+      "id": "free_wisp",
+      "kind": "hero",
+      "loc_id": "ITEM_FREE_WISP_PROMO",
+      "category": "UNITS",
+      "order": 170,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconSnowball",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 0
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Подарок",
+          "rarity": 0
+        }
+      ],
+      "schedule": {
+        "start": "01-01",
+        "end": "01-07"
+      },
+      "rotation": null,
+      "opened_counter": 0,
+      "hero_count": 4,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 10000,
+        "Epic": 0,
+        "Legendary": 0
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 3,
+      "rune_count": 4,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "pool_tag": "WISP",
+      "unique_heroes": true,
+      "name_ru": "Бесплатные огоньки",
+      "info_ru": "Дает 4 уникальных редких огонька и 4 редкие руны."
+    },
+    {
+      "id": "booster_blackwhite",
+      "kind": "hero",
+      "loc_id": "HERO_BOOSTER_BLACKWHITE",
+      "category": "UNITS",
+      "order": 180,
+      "header": "cache:tex.Store_HeaderBGBlueGreenPack",
+      "icon": "cache:tex.Store_BlackWhitePack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 45
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 0,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Усилитель \"черных\" и \"белых\" героев",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "booster_redblue",
+      "kind": "hero",
+      "loc_id": "HERO_BOOSTER_REDBLUE",
+      "category": "UNITS",
+      "order": 190,
+      "header": "cache:tex.Store_HeaderBGBlueGreenPack",
+      "icon": "cache:tex.Store_BlueRedPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 45
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 0,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Усилитель \"красных\" и \"синих\" героев",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "booster_giant",
+      "kind": "hero",
+      "loc_id": "HERO_BOOSTER_GIANT",
+      "category": "UNITS",
+      "order": 200,
+      "header": "cache:tex.Store_HeaderBGBlueGreenPack",
+      "icon": "cache:tex.Store_IconAbyssalHighDragon",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 45
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 0,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Усилитель героев-гигантов",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "booster_prestige",
+      "kind": "hero",
+      "loc_id": "HERO_BOOSTER_PRESTIGE",
+      "category": "UNITS",
+      "order": 210,
+      "header": "cache:tex.Store_HeaderBGBlueGreenPack",
+      "icon": "cache:tex.Store_IconSpiritofFaith",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Epic",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 0,
+        "Epic": 8500,
+        "Legendary": 1500
+      },
+      "rune_chance_pct": 0,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Усилитель престижных героев",
+      "info_ru": "Дает героев: 1. Как минимум эпический боец."
+    },
+    {
+      "id": "goat",
+      "kind": "hero",
+      "loc_id": "GOAT",
+      "category": "UNITS",
+      "order": 300,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Voucher_Goat",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "goat",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Осторожно, козы!",
+          "rarity": 4
+        }
+      ],
+      "schedule": {
+        "start": "04-01",
+        "end": "04-14"
+      },
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Common",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 7500,
+        "Uncommon": 2000,
+        "Rare": 400,
+        "Epic": 90,
+        "Legendary": 10
+      },
+      "rune_chance_pct": 40,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "pool_tag": "GOAT",
+      "name_ru": "Кознабор!",
+      "info_ru": "Есть шанс заполучить обычную, необычную, редкую, эпическую или легендарную КОЗУ!"
+    },
+    {
+      "id": "nug",
+      "kind": "hero",
+      "loc_id": "NUG",
+      "category": "UNITS",
+      "order": 310,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconGoldenNug",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "nug",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Осторожно, наги!",
+          "rarity": 4
+        }
+      ],
+      "schedule": {
+        "start": "04-15",
+        "end": "04-30"
+      },
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 40,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Набор нагов!",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "dragon",
+      "kind": "hero",
+      "loc_id": "DRAGON",
+      "category": "UNITS",
+      "order": 320,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconDragonMalvernis",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "dragon",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на дракона",
+          "rarity": 4
+        }
+      ],
+      "schedule": {
+        "start": "08-01",
+        "end": "08-21"
+      },
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 40,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Набор драконов!",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "romance",
+      "kind": "hero",
+      "loc_id": "ROMANCE",
+      "category": "UNITS",
+      "order": 330,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "gui/store/tex.Voucher_Romance.png",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "romance",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Отрада сердца",
+          "rarity": 4
+        }
+      ],
+      "schedule": {
+        "start": "02-01",
+        "end": "02-20"
+      },
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 40,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Романтический набор!",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "wintersend",
+      "kind": "hero",
+      "loc_id": "WINTERSEND",
+      "category": "UNITS",
+      "order": 340,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconWintersEndPack",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "wintersend",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Украсьте залы",
+          "rarity": 4
+        }
+      ],
+      "schedule": {
+        "start": "12-10",
+        "end": "01-15"
+      },
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 40,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Набор Венца зимы",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "harvest",
+      "kind": "hero",
+      "loc_id": "HARVEST",
+      "category": "UNITS",
+      "order": 350,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "gui/store/tex.Voucher_Harvest.png",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "harvest",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 4
+        }
+      ],
+      "schedule": {
+        "start": "10-01",
+        "end": "10-31"
+      },
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 40,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Набор урожая",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "anniversary",
+      "kind": "hero",
+      "loc_id": "ANNIVERSARY",
+      "category": "UNITS",
+      "order": 360,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "gui/store/tex.Voucher_Anniversary.png",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "anniversary",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 4
+        }
+      ],
+      "schedule": {
+        "start": "12-01",
+        "end": "12-09"
+      },
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 40,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Юбилейный набор",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "library",
+      "kind": "hero",
+      "loc_id": "LIBRARY",
+      "category": "UNITS",
+      "order": 370,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "gui/store/tex.Voucher_Library.png",
+      "offers": [
+        {
+          "currency": "voucher",
+          "voucher": "library",
+          "price": 1
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 4
+        }
+      ],
+      "schedule": {
+        "start": "09-01",
+        "end": "09-21"
+      },
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 40,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Библиотечный набор",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "mac_tir",
+      "kind": "hero",
+      "loc_id": "TEMP_MAC_TIR",
+      "category": "UNITS",
+      "order": 380,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconMaryden",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 75
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 5
+        }
+      ],
+      "schedule": {
+        "start": "06-01",
+        "end": "06-21"
+      },
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 0,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Набор \"Мак-Тир\"",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "new_release",
+      "kind": "hero",
+      "loc_id": "NEW_RELEASE",
+      "category": "UNITS",
+      "order": 390,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 75
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 5
+        }
+      ],
+      "schedule": {
+        "start": "05-01",
+        "end": "05-21"
+      },
+      "rotation": null,
+      "opened_counter": 2,
+      "hero_count": 1,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 0,
+      "rune_min_rarity": 1,
+      "rune_max_rarity": 2,
+      "rune_count": 1,
+      "gear_chance_pct": 0,
+      "gear_min_rarity": 1,
+      "gear_max_rarity": 3,
+      "name_ru": "Набор \"Лучшие новинки\"",
+      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+    },
+    {
+      "id": "heroic",
+      "kind": "hero",
+      "loc_id": "MTX_PACK_HEROIC",
+      "category": "FEATURED",
+      "order": 400,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconGoldPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 150
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 3,
+      "hero_count": 5,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 5,
+      "rune_count": 5,
+      "gear_chance_pct": 40,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 5,
+      "name_ru": "Героический набор",
+      "info_ru": "Дает героев: 5. Как минимум редкий боец."
+    },
+    {
+      "id": "legendary",
+      "kind": "hero",
+      "loc_id": "MTX_PACK_LEGENDARY",
+      "category": "FEATURED",
+      "order": 410,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconLegendaryPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 360
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 3,
+      "hero_count": 5,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 1,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6000,
+        "Epic": 3200,
+        "Legendary": 800
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 5,
+      "rune_count": 5,
+      "gear_chance_pct": 40,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 5,
+      "name_ru": "Легендарный набор",
+      "info_ru": "Дает героев: 5. Как минимум редкий боец."
+    },
+    {
+      "id": "ultra",
+      "kind": "hero",
+      "loc_id": "MTX_PACK_ULTRA",
+      "category": "FEATURED",
+      "order": 420,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.PackPromo_Darkspawn",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 720
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 3,
+      "hero_count": 5,
+      "minimum_rarity": "Epic",
+      "guaranteed_legendary": 2,
+      "guaranteed_epic": 2,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 0,
+        "Epic": 8500,
+        "Legendary": 1500
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 5,
+      "rune_count": 5,
+      "gear_chance_pct": 40,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 5,
+      "name_ru": "Ультранабор",
+      "info_ru": "Дает героев: 5. Как минимум эпический боец."
+    },
+    {
+      "id": "ultimate",
+      "kind": "hero",
+      "loc_id": "ITEM_ULTIMATE_IDENTIFIER_V2",
+      "category": "FEATURED",
+      "order": 430,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.PackPromo_SebastianVael",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 1600
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 3,
+      "hero_count": 10,
+      "minimum_rarity": "Epic",
+      "guaranteed_legendary": 4,
+      "guaranteed_epic": 2,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 0,
+        "Epic": 8500,
+        "Legendary": 1500
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 5,
+      "rune_count": 10,
+      "gear_chance_pct": 40,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 5,
+      "name_ru": "Супернабор",
+      "info_ru": "Дает героев: 10. Как минимум эпический боец."
+    },
+    {
+      "id": "special",
+      "kind": "hero",
+      "loc_id": "SPECIAL",
+      "category": "FEATURED",
+      "order": 440,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.flashpack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 275
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "opened_counter": 3,
+      "hero_count": 3,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 1,
+      "guaranteed_epic": 0,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 5,
+      "rune_count": 3,
+      "gear_chance_pct": 40,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 5,
+      "name_ru": "Особый набор",
+      "info_ru": "Дает героев: 3. Как минимум редкий боец."
+    },
+    {
+      "id": "flash",
+      "kind": "hero",
+      "loc_id": "FLASH",
+      "category": "FEATURED",
+      "order": 500,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 0
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Эксклюзивный набор",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "flash_black_friday",
+      "kind": "hero",
+      "loc_id": "FLASH_BLACK_FRIDAY",
+      "category": "FEATURED",
+      "order": 501,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 1
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Черная пятница",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "flash_dragon_hunt",
+      "kind": "hero",
+      "loc_id": "FLASH_DRAGON_HUNT",
+      "category": "FEATURED",
+      "order": 502,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 2
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Охота на дракона",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "flash_exclusively",
+      "kind": "hero",
+      "loc_id": "FLASH_EXCLUSIVELY",
+      "category": "FEATURED",
+      "order": 503,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 3
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Исключительно",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "flash_fine_dwarven_crafts",
+      "kind": "hero",
+      "loc_id": "FLASH_FINE_DWARVEN_CRAFTS",
+      "category": "FEATURED",
+      "order": 504,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 4
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Искусная гномья работа",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "flash_fireworks",
+      "kind": "hero",
+      "loc_id": "FLASH_FIREWORKS",
+      "category": "FEATURED",
+      "order": 505,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 5
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Фейерверк",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "flash_good_company",
+      "kind": "hero",
+      "loc_id": "FLASH_GOOD_COMPANY",
+      "category": "FEATURED",
+      "order": 506,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 6
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Хорошая компания",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "flash_star_struck",
+      "kind": "hero",
+      "loc_id": "FLASH_STAR_STRUCK",
+      "category": "FEATURED",
+      "order": 507,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 7
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Звездная болезнь",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "flash_stocking_stuffers",
+      "kind": "hero",
+      "loc_id": "FLASH_STOCKING_STUFFERS",
+      "category": "FEATURED",
+      "order": 508,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 8
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Новогодние подарки",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "flash_university_supplies",
+      "kind": "hero",
+      "loc_id": "FLASH_UNIVERSITY_SUPPLIES",
+      "category": "FEATURED",
+      "order": 509,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 9
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Запасы университета",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "flash_valentines_gifts",
+      "kind": "hero",
+      "loc_id": "FLASH_VALENTINES_GIFTS",
+      "category": "FEATURED",
+      "order": 510,
+      "header": "cache:tex.Store_HeaderBGFeaturedPack",
+      "icon": "cache:tex.Store_IconFlashPack",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 90
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Только на этой неделе!",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": {
+        "group": "flash",
+        "index": 10
+      },
+      "opened_counter": 2,
+      "hero_count": 2,
+      "minimum_rarity": "Rare",
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
+      "legendary_pity": 0,
+      "weights": {
+        "Common": 0,
+        "Uncommon": 0,
+        "Rare": 6600,
+        "Epic": 2700,
+        "Legendary": 700
+      },
+      "rune_chance_pct": 100,
+      "rune_min_rarity": 3,
+      "rune_max_rarity": 4,
+      "rune_count": 2,
+      "gear_chance_pct": 25,
+      "gear_min_rarity": 2,
+      "gear_max_rarity": 4,
+      "name_ru": "Дары святого Валентина",
+      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+    },
+    {
+      "id": "speed_kills",
+      "kind": "rune",
+      "loc_id": "SPEED_KILLS_RUNE",
+      "category": "ITEMS",
+      "order": 610,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconSpeedRune",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 13
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантирована руна скорости!",
+          "rarity": 0
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "slots": [
+        {
+          "families": [
+            "rune-initiative"
+          ],
+          "min_rarity": 5,
+          "max_rarity": 6
+        },
+        {
+          "families": [
+            "rune-power",
+            "rune-health",
+            "rune-initiative"
+          ],
+          "min_rarity": 4,
+          "max_rarity": 5
+        },
+        {
+          "families": [
+            "rune-power",
+            "rune-health",
+            "rune-initiative"
+          ],
+          "min_rarity": 4,
+          "max_rarity": 5
+        }
+      ],
+      "name_ru": "Рунный набор \"Быстрота\"",
+      "info_ru": "Как минимум одна легендарная (а при удаче — сверхлегендарная) руна скорости. Также содержит еще две руны силы, здоровья или скорости, каждая из которых может быть эпической или легендарной. Ограничение — 15 в день."
+    },
+    {
+      "id": "ancient_lore",
+      "kind": "rune",
+      "loc_id": "ANCIENT_LORE_RUNE",
+      "category": "ITEMS",
+      "order": 620,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "cache:tex.Store_IconXPRune",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 13
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "3 руны знаний",
+          "rarity": 0
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "slots": [
+        {
+          "families": [
+            "rune-knowledge"
+          ],
+          "min_rarity": 5,
+          "max_rarity": 6
+        },
+        {
+          "families": [
+            "rune-knowledge"
+          ],
+          "min_rarity": 4,
+          "max_rarity": 5
+        },
+        {
+          "families": [
+            "rune-knowledge"
+          ],
+          "min_rarity": 4,
+          "max_rarity": 5
+        }
+      ],
+      "name_ru": "Рунный набор \"Легенда\"",
+      "info_ru": "Как минимум одна легендарная (а при удаче — сверхлегендарная) руна знания. Также содержит еще две руны знания, каждая из которых может быть эпической или легендарной. Ограничение — 15 в день."
+    },
+    {
+      "id": "grab_bag",
+      "kind": "rune",
+      "loc_id": "GRAB_BAG_RUNE",
+      "category": "ITEMS",
+      "order": 630,
+      "header": "cache:tex.Store_HeaderBGGoldPack",
+      "icon": "cache:tex.Store_IconRuneWIsp",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 10000
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "3 редкие или лучше руны",
+          "rarity": 0
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "slots": [
+        {
+          "families": [
+            "rune-knowledge"
+          ],
+          "min_rarity": 3,
+          "max_rarity": 5
+        },
+        {
+          "families": [
+            "rune-power",
+            "rune-health",
+            "rune-initiative",
+            "rune-stun"
+          ],
+          "min_rarity": 3,
+          "max_rarity": 5
+        },
+        {
+          "families": [
+            "rune-power",
+            "rune-health",
+            "rune-initiative",
+            "rune-stun"
+          ],
+          "min_rarity": 3,
+          "max_rarity": 5
+        }
+      ],
+      "name_ru": "Рунный набор \"Ассорти\"",
+      "info_ru": "Три как минимум редкие руны, одна из которых — руна знания, а две другие — руны силы, здоровья, скорости или контроля. Ограничение — 25 в день."
+    },
+    {
+      "id": "legendary_runes",
+      "kind": "rune",
+      "loc_id": "LEGENDARY_RUNE",
+      "category": "ITEMS",
+      "order": 640,
+      "header": "cache:tex.Store_HeaderChampionPack",
+      "icon": "cache:tex.Store_RuneCert",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 120
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "3 легендарные руны",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "slots": [
+        {
+          "families": [],
+          "min_rarity": 5,
+          "max_rarity": 5
+        },
+        {
+          "families": [],
+          "min_rarity": 5,
+          "max_rarity": 5
+        },
+        {
+          "families": [],
+          "min_rarity": 5,
+          "max_rarity": 5
+        }
+      ],
+      "name_ru": "Набор легендарных рун",
+      "info_ru": "В этом наборе — 3 гарантированные легендарные руны."
+    },
+    {
+      "id": "prestige_runes",
+      "kind": "rune",
+      "loc_id": "PRESTIGE_RUNE",
+      "category": "ITEMS",
+      "order": 650,
+      "header": "cache:tex.Store_HeaderChampionPack",
+      "icon": "cache:tex.Store_IconGoldRune",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 150
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "1 престижная руна",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "slots": [
+        {
+          "families": [],
+          "min_rarity": 7,
+          "max_rarity": 7
+        }
+      ],
+      "name_ru": "Набор престижных рун",
+      "info_ru": "Одна престижная руна для особой ячейки отряда."
+    },
+    {
+      "id": "peasant",
+      "kind": "gear",
+      "loc_id": "PEASANT_GEAR",
+      "category": "ITEMS",
+      "order": 700,
+      "header": "cache:tex.Store_HeaderBGBronzePack",
+      "icon": "gui/gear/tex.Ico_Gear_QunariWaraxe.png",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 2000
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 2
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "count": 1,
+      "min_rarity": 1,
+      "max_rarity": 2,
+      "tome_chance_pct": 0,
+      "name_ru": "Набор снаряжения крестьянина",
+      "info_ru": "1 предмет снаряжения."
+    },
+    {
+      "id": "novice",
+      "kind": "gear",
+      "loc_id": "NOVICE_GEAR",
+      "category": "ITEMS",
+      "order": 710,
+      "header": "cache:tex.Store_HeaderBGGreenPack",
+      "icon": "gui/gear/tex.Ico_Gear_QunariWaraxe.png",
+      "offers": [
+        {
+          "currency": "gold",
+          "price": 30000
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 3
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "count": 1,
+      "min_rarity": 1,
+      "max_rarity": 3,
+      "tome_chance_pct": 0,
+      "name_ru": "Набор снаряжения новичка",
+      "info_ru": "1 предмет снаряжения."
+    },
+    {
+      "id": "journeyman",
+      "kind": "gear",
+      "loc_id": "JOURNEYMAN_GEAR",
+      "category": "ITEMS",
+      "order": 720,
+      "header": "cache:tex.Store_HeaderChampionPack",
+      "icon": "gui/gear/tex.Ico_Gear_TomeOfKoslun.png",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 22
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "count": 2,
+      "min_rarity": 2,
+      "max_rarity": 3,
+      "tome_chance_pct": 2,
+      "name_ru": "Набор снаряжения Бродяги",
+      "info_ru": "2 предмета снаряжения."
+    },
+    {
+      "id": "merchant",
+      "kind": "gear",
+      "loc_id": "MERCHANT_GEAR",
+      "category": "ITEMS",
+      "order": 730,
+      "header": "cache:tex.Store_HeaderChampionPack",
+      "icon": "gui/gear/tex.Ico_Gear_TomeOfRifts.png",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 35
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Шанс на",
+          "rarity": 4
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "count": 3,
+      "min_rarity": 2,
+      "max_rarity": 4,
+      "tome_chance_pct": 5,
+      "name_ru": "Набор снаряжения торговца",
+      "info_ru": "3 предмета снаряжения."
+    },
+    {
+      "id": "masterwork",
+      "kind": "gear",
+      "loc_id": "MASTERWORK_GEAR",
+      "category": "ITEMS",
+      "order": 740,
+      "header": "cache:tex.Store_HeaderChampionPack",
+      "icon": "gui/gear/tex.Ico_Gear_BowOfTheRighteous.png",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 55
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "count": 3,
+      "min_rarity": 3,
+      "max_rarity": 5,
+      "tome_chance_pct": 10,
+      "name_ru": "Шедевральный набор снаряжения",
+      "info_ru": "3 предмета снаряжения."
+    },
+    {
+      "id": "armory",
+      "kind": "gear",
+      "loc_id": "ARMORY_GEAR",
+      "category": "ITEMS",
+      "order": 750,
+      "header": "cache:tex.Store_HeaderBGGoldPack",
+      "icon": "gui/gear/tex.Ico_Gear_AxeOfTheDragonHunter.png",
+      "offers": [
+        {
+          "currency": "gems",
+          "price": 150
+        }
+      ],
+      "bullets": [
+        {
+          "text_ru": "Гарантировано",
+          "rarity": 5
+        }
+      ],
+      "schedule": null,
+      "rotation": null,
+      "count": 5,
+      "min_rarity": 4,
+      "max_rarity": 6,
+      "tome_chance_pct": 25,
+      "name_ru": "Набор \"Арсенал\"",
+      "info_ru": "5 предметов снаряжения."
+    }
+  ]
+}

@@ -28,7 +28,40 @@ type Record struct {
 	Revision  int64           `json:"revision"`
 	UpdatedAt time.Time       `json:"updated_at"`
 	Profile   json.RawMessage `json:"profile"`
+	Server    ServerState     `json:"server"`
 }
+
+type ServerState struct {
+	StoreRNG      uint32          `json:"store_rng,omitempty"`
+	ScriptedPacks []string        `json:"scripted_packs,omitempty"`
+	RecentActions []ActionReceipt `json:"recent_actions,omitempty"`
+}
+
+type ActionReceipt struct {
+	RequestID string          `json:"request_id"`
+	Status    int             `json:"status"`
+	Response  json.RawMessage `json:"response"`
+}
+
+const recentActionLimit = 16
+
+func (s *ServerState) Receipt(requestID string) (ActionReceipt, bool) {
+	for _, receipt := range s.RecentActions {
+		if receipt.RequestID == requestID {
+			return receipt, true
+		}
+	}
+	return ActionReceipt{}, false
+}
+
+func (s *ServerState) Remember(receipt ActionReceipt) {
+	s.RecentActions = append(s.RecentActions, receipt)
+	if extra := len(s.RecentActions) - recentActionLimit; extra > 0 {
+		s.RecentActions = append([]ActionReceipt(nil), s.RecentActions[extra:]...)
+	}
+}
+
+var ErrNoChange = errors.New("transaction left the record unchanged")
 
 type Store struct {
 	dir   string
@@ -73,6 +106,12 @@ func (s *Store) read(playerID string) (Record, error) {
 }
 
 func (s *Store) Put(playerID string, expectedRevision int64, profile json.RawMessage) (Record, error) {
+	return s.PutGuarded(playerID, expectedRevision, profile, nil)
+}
+
+func (s *Store) PutGuarded(
+	playerID string, expectedRevision int64, profile json.RawMessage, guard func(current Record) error,
+) (Record, error) {
 	if !ValidPlayerID(playerID) {
 		return Record{}, ErrInvalidPlayerID
 	}
@@ -88,12 +127,43 @@ func (s *Store) Put(playerID string, expectedRevision int64, profile json.RawMes
 	if current.Revision != expectedRevision {
 		return current, ErrRevisionMismatch
 	}
+	if guard != nil {
+		if err := guard(current); err != nil {
+			return current, err
+		}
+	}
 	next := Record{
 		PlayerID:  playerID,
 		Revision:  current.Revision + 1,
 		UpdatedAt: s.now().UTC(),
 		Profile:   profile,
+		Server:    current.Server,
 	}
+	if err := s.write(next); err != nil {
+		return Record{}, err
+	}
+	return next, nil
+}
+
+func (s *Store) Transact(playerID string, change func(record *Record) error) (Record, error) {
+	if !ValidPlayerID(playerID) {
+		return Record{}, ErrInvalidPlayerID
+	}
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
+	current, err := s.read(playerID)
+	if err != nil {
+		return Record{}, err
+	}
+	next := current
+	next.Server.ScriptedPacks = append([]string(nil), current.Server.ScriptedPacks...)
+	next.Server.RecentActions = append([]ActionReceipt(nil), current.Server.RecentActions...)
+	if err := change(&next); err != nil {
+		return current, err
+	}
+	next.PlayerID = playerID
+	next.Revision = current.Revision + 1
+	next.UpdatedAt = s.now().UTC()
 	if err := s.write(next); err != nil {
 		return Record{}, err
 	}

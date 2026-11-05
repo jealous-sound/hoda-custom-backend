@@ -1,0 +1,4025 @@
+{
+ "version": 1,
+ "heroes": [
+  {
+   "id": "UNIT_ELVENMAGE",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDIRONMAGE",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDWATERRAIDER",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FERELDANKNIGHT",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DWARVENWARRIOR",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_APOSTATEWANDERER",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KIRKWALLGUARD",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEVINTERSLAVER",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_COTERIETHUG",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CASSANDRAPENTAGHAST",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HIGHDRAGON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DALISHARCANEWARRIOR",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DALISHWARRIOR",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FERELDANINFANTRY",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DALISHMAGE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ELFAPOSTATE",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CARTATHUG",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CROWASSASSIN",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SILENTSISTER",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CARTAASSASSIN",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHARPSHIGHWAYMAN",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HURLOCKGRUNT",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BLACKSTONEIRREGULAR",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CARTASMUGGLER",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEVINTERWARRIOR",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEVINTERBATTLEMAGE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_COTERIETHIEF",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SERCAUTHRIEN",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FENRIS",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEARISHOK",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DALISHHUNTER",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ELFBANDIT",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WEREWOLF",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DEVOURINGSKELETON",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PRIDEDEMON",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CIRCLESENIORENCHANTER",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ABOMINATION",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_YAVANA",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MERRILL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CHARREDSYLVAN",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_INFERNOGOLEM",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_OGRE",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DESIREDEMON",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEVINTERARCANEWARRIOR",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENMAGE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENROGUE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HURLOCKBOLTER",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DARKSPAWNEMISSARY",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SKELETONARCHER",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SKELETONMAGE",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GENLOCKBRUTE",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TAL-VASHOTHBERSERKER",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_STEN",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HARLEQUIN",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DUNCAN",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VARRICTETHRAS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SEBASTIANVAEL",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GATEGUARDIAN",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ASHAAD",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KARASHOK",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TAL-VASHOTHMARAUDER",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEMPLARASSASSIN",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEMPLARRECRUIT",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEMPLARARCHER",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CIRCLEAPPRENTICE",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REVENANT",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BLIGHTEDWEREWOLF",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DEVOURINGCORPSE",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LEGIONNAIRESCOUT",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LEGIONNAIREWARRIOR",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FERELDANASHWARRIOR",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SPIRITOFVALOR",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ENRAGEDSPIRIT",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DRAKE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DRAGONTHRALL",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WYVERN",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CORRUPTEDSPIDER",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MABARI",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BEAR",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NUG",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ISABELA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SISTERNIGHTINGALE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENCARVER",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENBETHANY",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_STROUD",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEMPLARCARVER",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENALISTAIR",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEARCHITECT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FIRSTENCHANTERORSINO",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ANDERS",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CIRCLEMAGEBETHANY",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VENGEANCEANDERS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MORRIGAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENOGHREN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FLEMETH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GRANDENCHANTERFIONA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_QUEENOFTHEBLACKMARSH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FORESTSPIRIT",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AVELINEVALLEN",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WOLF",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SYLVAN",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GENLOCKALPHA",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WALKINGCORPSE",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GENLOCKASSASSIN",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HURLOCKEMISSARY",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENWARRIOR",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GHAST",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VELGHAST",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ELFBARD",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHADOWWEREWOLF",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BLIGHTEDSHADOWWOLF",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RABIDWEREWOLF",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WEREWOLFALPHA",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GIANTCORRUPTEDSPIDER",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DARKREVENANTIV",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_OGRECOMMANDER",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CORYPHEUS",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARMOREDOGRE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHRIEKALPHA",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BERESKARN",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHRIEK",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HARVESTERORSINO",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARCANEHORROR",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HUNGERDEMON",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SLOTHDEMON",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RAGEDEMON",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHADE",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WINTERSENDDRAGON",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WINTERSENDROCKWRAITH",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KINGALISTAIR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SANDAL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ANORAMACTIR",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KINGCAILAN",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_STENOFTHEBERESAAD",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEMPLARRECRUITALISTAIR",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LAYSISTERLELIANA",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WINTERSENDHALLA",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KNIGHTCOMMANDERGREAGOIR",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WINTERSENDNUG",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CHASINDWILDER",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HALLA",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CHASINDSCOUT",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WYNNE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GUARDCAPTAINAVELINE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VELANNA",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ZEVRAN",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEOLDONE",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SIGRUN",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LELIANA",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_OGHREN",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ZATHRIAN",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BRANKA",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ASHWRAITH",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FERELDANBANN",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FERELDANARL",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FERELDANTEYRN",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEVINTERLAETANMAGE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_SLAVEFENRIS",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDLYRIUMMEREDITH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HYBRIS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LOGHAINMACTIR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CARESS",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KNIGHTCOMMANDERMEREDITH",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ANCIENTROCKWRAITH",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHADOWWARRIOR",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REANIMATEDLEANDRA",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PRIDEABOMINATION",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SLOTHABOMINATION",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BARTRANDTETHRAS",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEVINTERARCANEMAGE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHAHWYRD",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BARKSPAWN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ANCIENTDARKSPAWN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SCHMOOPLES",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FLUFFY",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SPIKE",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CORRUPTEDNUG",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NOBLENUG",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MAGENUG",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LEOPOLD",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KEEPERMARETHARI",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CHASINDGENERAL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SALIT",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ATHENRIL",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VARTERRAL",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FREEMARCHER",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARLATHANGENERAL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARMOREDBEAR",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SAAREBAS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DUKEPROSPER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BROGANDACE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARIANE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KINGENDRINAEDUCAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_COMMONWHITEWISP",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_UNCOMMONWHITEWISP",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_RAREWHITEWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICWHITEWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_LEGENDARYWHITEWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_COMMONREDWISP",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_UNCOMMONREDWISP",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_RAREREDWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICREDWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_LEGENDARYREDWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_COMMONBLACKWISP",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_UNCOMMONBLACKWISP",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_RAREBLACKWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICBLACKWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_LEGENDARYBLACKWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_COMMONBLUEWISP",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_UNCOMMONBLUEWISP",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_RAREBLUEWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICBLUEWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_LEGENDARYBLUEWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_DIAMONDSHALE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RUBYSHALE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_STONEGOLEM",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_APOSTATEJOWAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEBARONESS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CONNORGUERRIN",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NATHANIELHOWE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEFIRST",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DRAGONFLEMETH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CHEVALIER",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GHASTARCHER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GHASTBRUTE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEWITHERED",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEHERALD",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TALLIS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BEN-HASSRATH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_JUSTICE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEGRANDOAK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BYRON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KNIGHT-CAPTAINCULLEN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BRONTO",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DALISHSOLISWARRIOR",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CORRUPTEDSPIDERQUEEN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PARAGONCARIDIN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_STEELGOLEM",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ULDRED",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CALADRIUS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KINGMARIC",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PRINCEBHELEN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BROODMOTHER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SNUGTHEBRONTO",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WITHERFANG",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VELGHASTCHIEFTAIN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GHASTLEADER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CORRUPTEDSPIDERLING",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SWIFTRUNNER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DALISHLUNARWARRIOR",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GUARDIANOFTHEURN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WARDENCOMMANDERDUNCAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENGENEVIEVE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LORDPYRALHARROWMONT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ALAMARRIWARLORD",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RISENOGRE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARLEAMONGUERRIN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PRINCESEBASTIANVAEL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KOLGRIM",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_EIRIK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CULTISTREAVER",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CULTISTASSASSIN",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CULTISTOVERSEER",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CULTISTMAGE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LYRIUMFENRIS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DANARIUS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SLAVESTATUE",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MHAIRI",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RIFTWRAITH",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TERROR",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HIGHSEEKERALDREN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SEEKERCASSANDRA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_STEN,THEARISHOK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CAPTAINISABELA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SERA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SERPOUNCE-A-LOT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CROWZEVRAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SOPHIADRYDEN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NERIA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GAXKANGTHEUNBOUND",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SKYHORROR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENVELANNA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENSIGRUN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VIVIENNE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ELITEHARLEQUIN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDNUGLYSWEATER",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BLUENUGLYSWEATER",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BLACKNUGLYSWEATER",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WHITENUGLYSWEATER",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SILVERHALLA",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PHOENIX",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TUSKET",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FENNEC",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SPIRITOFHOPE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FELIXALEXIUS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MAEVARIS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AURELIANTITUS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_IMPERIALARCHON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MAGISTERPAVUS",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SOLAS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DORIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GEREONALEXIUS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ADVISORCULLEN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CILLIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ABELAS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SENTINELSPELLBINDER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SENTINELSHADOW",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SENTINELARCHER",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THORNTON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RASAAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BEHEMOTH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_EMPRESSCELENE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BRIALA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_JOSEPHINE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ASSASSINFLORIANNE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FLORIANNE",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WARDENCOMMANDERCLAREL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LORDERIMOND",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BLACKWALL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SERSTROUD",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MADDOX",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEMPLARSAMSON",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CHOCOLATENUG",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AVVARGOATLEGENDARY",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AVVARGOATEPIC",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AVVARGOATRARE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AVVARGOATUNCOMMON",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AVVARGOATCOMMON",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LEGENDARYGIANTWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICGIANTWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_RAREGIANTWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_UNCOMMONGIANTWISP",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_COMMONGIANTWISP",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_REDLYRIUMSAMSON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SAMSON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDTEMPLARARCHER",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NOBLESPIRITOFJUSTINIA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SPIRITOFJUSTINIA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NOBLESPIRITOFHOPE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_COLE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NIGHTMAREASPECT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FERELDENFROSTBACK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_IRONBULL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GIANT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDLYRIUMGIANT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HORROR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RION",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DESPAIRDEMON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ADVISORMORRIGAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SNOWYWYVERN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VINSOMER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KATARI",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BERESAADWARRIOR",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEELDERONE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CALPERNIA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GURDHAROFSEN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THANESVARAHSUN-HAIR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AVVARBARBARIAN",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DAGNA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SCOUTHARDING",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AMETHYSTSHALE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SANDYHOWLER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SKYWATCHER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LORDWOOLSLEY",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THELASTINQUISITOR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PROFESSORBRAMKENRIC",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEMOTHER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THELOST",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THESEEKER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KREM",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DALISH",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GATT",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HISSRAD",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREATERMISTRAL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TAMAR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_APOSTATESOLAS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GOLDENHALLA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BIANCA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KORBIN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_EMERALDSHALE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KETOJAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARVAARAD",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DRAGONMORRIGAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREATBEAR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HALL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RIORDAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FIRSTENCHANTERIRVING",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARLRENDONHOWE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KNIGHT-COMMANDERDELRINBARRIS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SERBELINDADARROW",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GASPARDDECHALONS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MARSHALPROULX",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MICHELDECHEVIN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NORTHERNHUNTER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARIGENA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_JARVIA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BERAHT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DRAGONOFTHEELDERONE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MACRINUS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CRASSIUSSERVIS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NECROMANCERDORIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SIDONY",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HAKKONWINTERSBREATH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HAKKONITEARCHER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HAKKONITEDEFENDER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ADVISORLELIANA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CHANTRYWARRIOR",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LAMBERTVANREEVES",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LUCIUSCORIN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HIGHLANDRAVAGER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LOYALBETYARDRAGONSLAYER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHA-BRYTOLREVEREDDEFENDER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARIQUN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TAMASSRAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SNOUFLEUR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SANTABLACKWALL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ELFIESERA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DIVINEVIVIENNE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEMPLARKNIGHT-CORPORAL",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEMESSENGER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARCHDEMONURTHEMIEL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARGENT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LUKA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ATAASHI",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VIDDASALA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MOVRANTHEUNDER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HANDOFKORTH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARTIFICERVARRIC",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PALA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ABYSSALHIGHDRAGON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PROFESSORFREDERIC",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REGALYAND'MARCALL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_YOUNGCASSANDRA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RAREWHITEBLUEWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICWHITEBLUEWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_LEGENDARYWHITEBLUEWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_RAREBLUEREDWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICBLUEREDWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_LEGENDARYBLUEREDWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_RAREBLUEBLACKWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICBLUEBLACKWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_LEGENDARYBLUEBLACKWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_RAREWHITEREDWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICWHITEREDWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_LEGENDARYWHITEREDWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_RAREWHITEBLACKWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICWHITEBLACKWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_LEGENDARYWHITEBLACKWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_RAREREDBLACKWISP",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_EPICREDBLACKWISP",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_LEGENDARYREDBLACKWISP",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_MYTHICREDWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_MYTHICBLUEWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_MYTHICBLACKWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_MYTHICWHITEWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_SAARATH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_QUNARISHOCKTROOPER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GORDIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MALIPHANT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SPIRITOFCOLE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SPIRITOFFAITH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NUGGALOPE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GUARDSMANDONNIC",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_JERRIKDACE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AMBERSHALE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VENATORIGLADIATOR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ERASTHENES",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDJENNYSERA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PLAIDEWEAVEVIVIENNE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PLAIDEWEAVEDORIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SERJORY",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DAVETH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RENN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NUGKING",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENKNIGHT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENFIONA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CRETAHL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHA-BRYTOLEARTHSHAKER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_COMMANDERDUHAIME",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VENATORIMARKSMAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FEN'HAREL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MARYDEN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GOLDENNUG",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SNOWBALL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CAHIR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DRAGONLING",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DIVINELELIANA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MARJOLAINE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDTEMPLARSHADOW",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDTEMPLARGUARD",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KNIGHT-ENCHANTERVIVIENNE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHAPERVALTA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHA-BRYTOLBOLTER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PARAGONBRANKA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DEEPSTALKERMATRIARCH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GAMORDANSTORMRIDER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DWORKINGLAVONAK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BATTLEMASTERGARRETTHAWKE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BATTLEMASTERMARIANHAWKE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDLYRIUMIRONBULL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NOBLEKINGCAILAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ZITHER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LILY",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DUKECYRIL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DIVINECASSANDRA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BROTHERGENITIVI",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BLIGHTEDOGHREN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LARIUS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TITANHEARTGUARDIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHA-BRYTOLSTALKER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VISCOUNTVARRIC",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PIOTINAEDUCAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HUNTERSHADEDRACOLISK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHARPTAILDRACOLISK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MOUNTAINDRACOLISK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_IMSHAEL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LIBRARIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARCANEGARRETTHAWKE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARCANEMARIANHAWKE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDLYRIUMBLACKWALL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ALPHAGOAT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MAGISTERDORIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VENATORIZEALOT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KALTENZAHN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SERWESLEYVALLEN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BLIGHTEDZEVRAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DRUFFALO",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENLOGHAIN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREATERFROSTBACKELK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NIGHTMARE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GIBBERINGHORROR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SABOTEURGARRETTHAWKE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SABOTEURMARIANHAWKE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEAUGUR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SIGRIDGULDSDOTTEN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MYTHICGIANTWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_FAIRBANKS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEDOWAGER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THOMRAINIER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HIVERNAL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ICEGIANT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GRANDENCHANTERVIVIENNE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AUGUSTRAM",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WINTERSENDCULLEN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REINDEERMABARI",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GUARDIANOFMYTHAL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GHOSTOFTHESPIRE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CHARTER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RITTS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ENVYDEMON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_XEBENKECK",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_NAISHE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DRAGONMALVERNIS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MALVERNIS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FORGEMASTER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARLTEAGANGUERRIN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MOTHERGISELLE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DIVINEGUARD",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SPIRITOFSHARTAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MARIUS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TESSAFORSYTHIA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GURN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MYTHICREDBLACKWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_MYTHICWHITEBLACKWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_MYTHICWHITEREDWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_MYTHICBLUEBLACKWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_MYTHICBLUEREDWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_MYTHICWHITEBLUEWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_QUNARIDEFENDER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDLYRIUMNUG",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FADE-TOUCHEDLURKER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RHYS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_EVANGELINE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_STORVACKER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HISSERA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SPIRITCHAMPION",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SERAARONHAWTHORNE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VAEA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_JANEKA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREYWARDENBANNER",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MAFERATH",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REVENANTGURD",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HAKKONITESPELLBINDER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BETHANYHAWKE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_INQUISITORAMERIDAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARCHONRADONIS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEVINTERBANNER",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHIANNI",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LURKER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LADYSEEKERCASSANDRA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CARVERHAWKE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEMPLARBANNER",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KITTY",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_XENONTHEANTIQUARIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_INVISIBLENUG",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AVERNUS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREATDRAGON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BEASTOFTELLARISWAMPS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEDARKTHEURGE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_POSSESSEDOGRECOMMANDER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BLIGHTEDFENNEC",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KINGCALENHAD",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_FERELDENBANNER",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_REDLYRIUMBARTRAND",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GARAHEL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ISSEYA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WILDSYLVAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KEEPERZATHRIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEHIGHESTONE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DALISHBANNER",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREATERMISTRALDRAGONLING",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CHAUNCEY",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHAPESHIFTERMORRIGANI",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AVVARWARNUG",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_EMERALDGRAVESNUG",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KNIGHT-CAPTAINDENAM",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WARDEN-COMMANDERSOPHIA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PARVOLLENBANNER",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SKYCULTIST",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_VINSOMERDRAGONLING",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TORPOR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WRYME",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SPIRITSPELLBINDER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ARCHIVIST",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PHANTASMALWARRIOR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KALTENZAHNDRAGONLING",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ASHA'BELLANAR",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_MYTHICPRESTIGEWISP",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "IV"
+  },
+  {
+   "id": "UNIT_STONEJAW",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LEANDRAAMELL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GAMORDANSTORMRIDERDRAGONLING",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SHADOWNUG",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_QUEENOFTHEEASTERNSEAS",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SPIRITARCHER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PHANTASMALSHADOW",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HUNTERHORNSHRIKE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SUNSHINE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TEMPESTSERAI",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DUKEREMACHEDELYDES",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_ORLESIANBANNER",
+   "rarity": "Mythic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WILDHART",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_KEEPERDESHANNA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DUKEANTOINEOFWYCOME",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HURLOCKVANGUARD",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LADYOFTHEFOREST",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GATEKEEPER",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_CASSIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BULFA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DANYLA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_PROFANE",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_RUNICGOLEM",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_DAILAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_TRANQUILMADDOX",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEFORMLESSONE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_BLIGHTEDHALLA",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WINTERSENDNUGGALOPE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_SUNDERMOUNTVARTERRAL",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GALLOWSGUARDIAN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_LANAYA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THEMADHERMIT",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_GREATERRAGEDEMON",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_OGREALPHA",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WINTERSENDVIVIENNE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_WINTERSENDHARLEQUIN",
+   "rarity": "Epic",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_AUTUMN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_THADDEUSGIGANTUSCRUMBUM",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_HEROOFRIVERDANE",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  },
+  {
+   "id": "UNIT_QUEENANORATHEIRIN",
+   "rarity": "Legendary",
+   "obtainable": true,
+   "initial_tier": "I"
+  }
+ ]
+}
