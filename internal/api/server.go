@@ -15,6 +15,7 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
 	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
+	"github.com/jealous-sound/hoda-custom-backend/internal/report"
 	"github.com/jealous-sound/hoda-custom-backend/internal/session"
 )
 
@@ -26,17 +27,18 @@ type Server struct {
 	sessions *session.Registry
 	catalog  *catalog.Catalog
 	guilds   *guild.Store
+	reports  *report.Log
 	now      func() time.Time
 	log      *slog.Logger
 }
 
 func NewServer(
 	accounts *account.Store, profiles *profile.Store, sessions *session.Registry, shopCatalog *catalog.Catalog,
-	guilds *guild.Store, now func() time.Time, log *slog.Logger,
+	guilds *guild.Store, reports *report.Log, now func() time.Time, log *slog.Logger,
 ) *Server {
 	return &Server{
-		accounts: accounts, profiles: profiles, sessions: sessions, catalog: shopCatalog, guilds: guilds, now: now,
-		log: log,
+		accounts: accounts, profiles: profiles, sessions: sessions, catalog: shopCatalog, guilds: guilds,
+		reports: reports, now: now, log: log,
 	}
 }
 
@@ -60,6 +62,10 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("POST /v1/players/{player}/guild/applications/{member}/deny", s.authorized(s.denyGuildApplication))
 	mux.HandleFunc("POST /v1/players/{player}/guild/members/{member}/rank", s.authorized(s.changeGuildRank))
 	mux.HandleFunc("POST /v1/players/{player}/guild/members/{member}/kick", s.authorized(s.kickGuildMember))
+	mux.HandleFunc("GET /v1/players/{player}/guild/members/{member}/duel", s.authorized(s.duelOpponent))
+	mux.HandleFunc("GET /v1/players/{player}/guild/onslaught", s.authorized(s.onslaughtStandings))
+	mux.HandleFunc("POST /v1/players/{player}/guild/onslaught/claim", s.authorized(s.claimOnslaught))
+	mux.HandleFunc("POST /v1/players/{player}/reports", s.authorized(s.reportAbuse))
 	mux.HandleFunc("POST /v1/players/{player}/guilds", s.authorized(s.createGuild))
 	mux.HandleFunc("GET /v1/players/{player}/guilds/recommended", s.authorized(s.recommendedGuilds))
 	mux.HandleFunc("GET /v1/players/{player}/guilds/search", s.authorized(s.searchGuilds))

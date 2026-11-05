@@ -164,11 +164,18 @@ func (s *Server) playerAction(w http.ResponseWriter, r *http.Request, player str
 			return nil, errors.New(`body must be {"request_id", "action", ...}`)
 		}
 		return func(record *profile.Record) (any, error) {
-			next, result, err := economy.Act(s.catalog, record.Profile, &record.Server, request.Action, body, s.now())
+			duels := guildDuels{server: s, player: player}
+			next, result, err := economy.ActWithDuels(s.catalog, record.Profile, &record.Server, request.Action, body,
+				s.now(), duels)
 			if err != nil {
 				return nil, err
 			}
 			record.Profile = next
+			if request.Action == economy.ActionBattle {
+				if err := s.creditOnslaught(record, player, result); err != nil {
+					return nil, err
+				}
+			}
 			return result, nil
 		}, nil
 	})

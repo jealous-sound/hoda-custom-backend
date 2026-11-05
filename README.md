@@ -142,13 +142,35 @@ creating, which charges gold like a store purchase). Everything lives in `runtim
 | `POST` | `guild/members/{player}/kick` | needs a higher rank than the target → state |
 | `POST` | `guild/leave` | the leader leaves only as the last member, which deletes the guild → state |
 | `POST` | `guild/messages` | `{"after", "text", "read_through"}`; posts `text` if set, returns messages with an id above `after` and `unread` |
+| `GET` | `guild/members/{player}/duel` | another member of your guild: `{"id", "name", "level", "trophies", "units": [{"slot", "id", "tier", "level"}], "runes"}` from their current squad and active runes |
+| `GET` | `guild/onslaught?cycle=` | a started Onslaught: `{"cycle", "finished", "total_guilds", "guilds", "mine", "members", "my_banners", "minimum_banners", "award_rank", "claimed"}`; `guilds` is the top 100 by summed member banners |
+| `POST` | `guild/onslaught/claim` | `{"request_id", "cycle"}`, needs `If-Match`; pays your guild's rank award once → `{"revision", "profile", "granted"}` |
+| `POST` | `reports` | `{"kind": "guild" or "application", "abuse_type": "HARRASSMENT", "SEXUAL", "EXPLICIT" or "OTHER", "guild_id" or "applicant_id"}` → `{"status"}` |
 
 Rules follow the 5.4.4 client: unlock at level 5, 30 members, 10 pending applications per guild, one pending
 application per player (a new one withdraws the old), names of 4 to 18 characters, descriptions and messages of the
 day up to 150, minimum level 5 to 423, 23 emblems, and leaders idle for 5 days handing over to the highest-ranked
 active member. Membership changes, rank changes and settings changes post the original `GUILD_CHAT_EVENT_*` lines
 into chat; the last 100 messages are kept. Chat lines are up to 140 characters; `<` and `>` are refused in text.
-Onslaught (guild events), duels and abuse reports are not implemented.
+
+**Onslaught.** Every fourth PvP event cycle (`guild_every_cycles` in `pvp_rules.json`) runs an Onslaught from
+`guild_catalog` instead of the ordinary event: Dangerous Purpose, War of Attrition and Ascension, with their original
+title keys. It is a normal PvP event for each player (banners, milestones, individual ranks); on top, every banner a
+member earns in its event battles is added to their guild's tally, if they were in that guild when the event
+started. Guilds rank by summed banners; banners stay with the guild they were earned in. After the event each
+member who earned at least `guild_minimum_banners` (100) claims the reward of their guild's rank once. Guild rank
+rewards are the prize tables the client announced for the first two Onslaughts
+(`INTERSTITIAL_GUILD_EVENT_ANNOUNCEMENT_MESSAGE1_KEY` and `INTERSTITIAL_GUILD_EVENT2_...`), parsed by the client's
+`tools/build_pvp_rules.py`; Ascension reuses the second table. The last six Onslaughts are kept in `guilds.json`.
+
+**Duels.** A duel is an ordinary PvP battle (`"mode": "pvp"`) against a member of your guild: the battle action
+takes `"duel": "<member id>"`, costs one stamina and pays gold and XP for the member's level. It cannot be an event
+battle. The defender's trophies do not change.
+
+**Abuse reports** append `{"time", "reporter", "issue_type", "description"}` to `runtime/reports.jsonl` and log it.
+The description is built on the server like the original help request: `Guild Name: <name>, Id: <id>` for a guild,
+`Player Name: <name>, Id: <id>, Application Text: <text>` for an application, which only officers of the guild that
+received it can report.
 
 ## Next to move server-side
 

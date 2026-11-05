@@ -1,6 +1,9 @@
 package economy
 
 import (
+	"encoding/json"
+	"time"
+
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
@@ -88,8 +91,7 @@ func pvpEventRank(rules *catalog.PvpRules, banners int, cycle, elapsed int64) in
 }
 
 func (p *player) eventDetails(cycle int64) *catalog.PvpEventDetails {
-	events := p.catalog.Pvp.Events.Catalog
-	return &events[int(cycle%int64(len(events)))]
+	return p.catalog.Pvp.Events.ForCycle(cycle)
 }
 
 func (p *player) syncPvpEvent() {
@@ -167,12 +169,29 @@ func (p *player) payMilestones(result *BattleResult) error {
 	return nil
 }
 
+func (p *player) pvpOpponent(request BattleRequest) (int, error) {
+	if request.Duel == "" {
+		return pvpOpponentLevel(&p.catalog.Pvp, p.account.Level, request.Seed), nil
+	}
+	if request.Event {
+		return 0, refuse(Unavailable, "a duel is not an event battle")
+	}
+	level, err := p.duels.DuelLevel(request.Duel)
+	if err != nil {
+		return 0, err
+	}
+	return min(max(level, 1), pvpMaxLevel), nil
+}
+
 func (p *player) pvpBattle(request BattleRequest) (BattleResult, error) {
 	rules := &p.catalog.Pvp
+	opponent, err := p.pvpOpponent(request)
+	if err != nil {
+		return BattleResult{}, err
+	}
 	if err := p.account.spendStamina(pvpStaminaCost); err != nil {
 		return BattleResult{}, err
 	}
-	opponent := pvpOpponentLevel(rules, p.account.Level, request.Seed)
 	result := BattleResult{}
 	gold := pvpGold(rules, opponent, request.Won)
 	if request.Event {
@@ -184,6 +203,7 @@ func (p *player) pvpBattle(request BattleRequest) (BattleResult, error) {
 		}
 		state.Banners += earned
 		result.Banners = earned
+		result.Cycle = state.Cycle
 		milestones := BattleResult{}
 		if err := p.payMilestones(&milestones); err != nil {
 			return BattleResult{}, err
@@ -194,6 +214,30 @@ func (p *player) pvpBattle(request BattleRequest) (BattleResult, error) {
 	}
 	xp := pvpXP(rules, opponent, request.Won)
 	return result, p.payBattle(&result, gold, xp, request.CritGold, request.Won)
+}
+
+func ClaimGuildAward(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, reward catalog.PvpReward,
+	rank int, now time.Time,
+) (json.RawMessage, BattleResult, error) {
+	p, err := openPlayer(c, raw, server, now)
+	if err != nil {
+		return nil, BattleResult{}, err
+	}
+	if rewardUnits(reward) > p.rosterRoom() {
+		return nil, BattleResult{}, refuse(InventoryFull, "roster has no room for the guild prizes")
+	}
+	result := BattleResult{EventRank: rank}
+	if err := p.payPvpReward(reward, &result); err != nil {
+		return nil, BattleResult{}, err
+	}
+	p.addGold(result.Gold)
+	p.addGems(result.Gems)
+	result.Granted = p.granted
+	encoded, err := p.close()
+	if err != nil {
+		return nil, BattleResult{}, err
+	}
+	return encoded, result, nil
 }
 
 type EventClaimRequest struct {

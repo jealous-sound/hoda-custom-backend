@@ -70,13 +70,30 @@ func (p *player) dispatch(action string, body []byte) (BattleResult, error) {
 	return BattleResult{}, &BadRequest{Message: fmt.Sprintf("no action %q", action)}
 }
 
+type Duels interface {
+	DuelLevel(memberID string) (int, error)
+}
+
+type noDuels struct{}
+
+func (noDuels) DuelLevel(memberID string) (int, error) {
+	return 0, refuse(Unavailable, "no guild to duel %q in", memberID)
+}
+
 func Act(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, action string, body []byte,
 	now time.Time,
+) (json.RawMessage, BattleResult, error) {
+	return ActWithDuels(c, raw, server, action, body, now, noDuels{})
+}
+
+func ActWithDuels(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, action string, body []byte,
+	now time.Time, duels Duels,
 ) (json.RawMessage, BattleResult, error) {
 	p, err := openPlayer(c, raw, server, now)
 	if err != nil {
 		return nil, BattleResult{}, err
 	}
+	p.duels = duels
 	result, err := p.dispatch(action, body)
 	if err != nil {
 		return nil, BattleResult{}, err

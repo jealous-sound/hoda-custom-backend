@@ -14,6 +14,7 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
+	"github.com/jealous-sound/hoda-custom-backend/internal/report"
 	"github.com/jealous-sound/hoda-custom-backend/internal/session"
 )
 
@@ -24,13 +25,16 @@ const validProfile = `{"version":1,"account":{"level":3,"experience":10,"energy"
 
 type harness struct {
 	t        *testing.T
+	now      *time.Time
 	server   *httptest.Server
 	profiles *profile.Store
+	dir      string
 }
 
 func newHarness(t *testing.T) *harness {
 	dir := t.TempDir()
-	clock := func() time.Time { return fixedNow }
+	current := fixedNow
+	clock := func() time.Time { return current }
 	store, err := profile.NewStore(dir, clock)
 	if err != nil {
 		t.Fatal(err)
@@ -47,12 +51,16 @@ func newHarness(t *testing.T) *harness {
 	if err != nil {
 		t.Fatal(err)
 	}
+	reports, err := report.NewLog(dir)
+	if err != nil {
+		t.Fatal(err)
+	}
 	log := slog.New(slog.NewTextHandler(io.Discard, nil))
 	server := httptest.NewServer(
-		NewServer(accounts, store, session.NewRegistry(), shopCatalog, guilds, clock, log).Handler(),
+		NewServer(accounts, store, session.NewRegistry(), shopCatalog, guilds, reports, clock, log).Handler(),
 	)
 	t.Cleanup(server.Close)
-	return &harness{t: t, server: server, profiles: store}
+	return &harness{t: t, now: &current, server: server, profiles: store, dir: dir}
 }
 
 func (h *harness) do(method, path, token, ifMatch, body string) (*http.Response, string) {
@@ -86,8 +94,8 @@ func (h *harness) open(player string) string {
 	if err := json.Unmarshal([]byte(body), &opened); err != nil {
 		h.t.Fatal(err)
 	}
-	if opened.ServerTime != fixedNow.Unix() {
-		h.t.Fatalf("server_time = %d, want %d", opened.ServerTime, fixedNow.Unix())
+	if opened.ServerTime != h.now.Unix() {
+		h.t.Fatalf("server_time = %d, want %d", opened.ServerTime, h.now.Unix())
 	}
 	return opened.Token
 }

@@ -3,6 +3,7 @@ package catalog
 import (
 	"encoding/json"
 	"fmt"
+	"slices"
 )
 
 const (
@@ -118,6 +119,23 @@ type PvpEvents struct {
 	TopBotBanners             int64             `json:"top_bot_banners"`
 	LadderBanners             int               `json:"ladder_banners"`
 	Catalog                   []PvpEventDetails `json:"catalog"`
+	GuildEveryCycles          int64             `json:"guild_every_cycles"`
+	GuildCatalog              []PvpEventDetails `json:"guild_catalog"`
+}
+
+func (e *PvpEvents) IsGuildCycle(cycle int64) bool {
+	return len(e.GuildCatalog) > 0 && e.GuildEveryCycles > 0 && cycle%e.GuildEveryCycles == 0
+}
+
+func (e *PvpEvents) ForCycle(cycle int64) *PvpEventDetails {
+	if e.IsGuildCycle(cycle) {
+		return &e.GuildCatalog[int((cycle/e.GuildEveryCycles)%int64(len(e.GuildCatalog)))]
+	}
+	return &e.Catalog[int(cycle%int64(len(e.Catalog)))]
+}
+
+func (e *PvpEvents) CycleStart(cycle int64) int64 {
+	return cycle * e.DurationSeconds
 }
 
 type PvpPrize struct {
@@ -145,8 +163,19 @@ type PvpRankReward struct {
 }
 
 type PvpEventDetails struct {
-	Milestones  []PvpMilestone  `json:"milestones"`
-	RankRewards []PvpRankReward `json:"rank_rewards"`
+	Milestones          []PvpMilestone  `json:"milestones"`
+	RankRewards         []PvpRankReward `json:"rank_rewards"`
+	GuildMinimumBanners int             `json:"guild_minimum_banners"`
+	GuildRankRewards    []PvpRankReward `json:"guild_rank_rewards"`
+}
+
+func (d *PvpEventDetails) GuildReward(rank int) (PvpReward, bool) {
+	for _, tier := range d.GuildRankRewards {
+		if rank >= tier.First && rank <= tier.Last {
+			return tier.PvpReward, true
+		}
+	}
+	return PvpReward{}, false
 }
 
 type Mission struct {
@@ -406,8 +435,14 @@ func (c *Catalog) checkPvp() error {
 		c.Pvp.Trophies.PointsPerStep <= 0 || c.Pvp.Trophies.MaxGain <= c.Pvp.Trophies.MinGain {
 		return fmt.Errorf("pvp_rules.json is incomplete")
 	}
-	for _, event := range events.Catalog {
-		for _, rewards := range [][]PvpReward{milestoneRewards(event.Milestones), rankRewards(event.RankRewards)} {
+	if len(events.GuildCatalog) > 0 && events.GuildEveryCycles <= 0 {
+		return fmt.Errorf("pvp_rules.json has guild events without a cadence")
+	}
+	for _, event := range append(slices.Clone(events.Catalog), events.GuildCatalog...) {
+		groups := [][]PvpReward{
+			milestoneRewards(event.Milestones), rankRewards(event.RankRewards), rankRewards(event.GuildRankRewards),
+		}
+		for _, rewards := range groups {
 			for _, reward := range rewards {
 				for _, prize := range reward.Prizes {
 					if err := c.checkPrize(prize); err != nil {

@@ -4496,6 +4496,2211 @@
      }
     ]
    }
+  ],
+  "guild_every_cycles": 4,
+  "guild_catalog": [
+   {
+    "title_key": "DANGEROUS_PURPOSE_TITLE_KEY",
+    "text_key": "DANGEROUS_PURPOSE_DESC_KEY",
+    "effects": [
+     {
+      "groups": [],
+      "factions": [
+       "Red"
+      ],
+      "units": [],
+      "health_pct": 300,
+      "power_pct": 300
+     }
+    ],
+    "source": {
+     "event_key": "pvp|battle royale",
+     "record_id": "R0371",
+     "event_date": "2019-11-21"
+    },
+    "omitted_prizes": [
+     "2x Raid Portal Key",
+     "Banished Plane Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 868,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "name": "Мифический синий огонек",
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       }
+      ]
+     },
+     {
+      "banners": 1446,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "the_golden_princes_helm",
+        "count": 1,
+        "name": "Шлем Золотого принца",
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1815,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "name": "Мифический синий огонек",
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       }
+      ]
+     },
+     {
+      "banners": 1963,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_DRAGONOFTHEELDERONE",
+        "count": 1,
+        "name": "Дракон Старшего",
+        "icon": "tex.c_dragonoftheelderone_t1_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "name": "Том вознесения",
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 100000,
+      "gems": 175,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THEELDERONE",
+        "count": 1,
+        "name": "Старший",
+        "icon": "tex.c_theelderone_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEHIGHESTONE",
+        "count": 1,
+        "name": "Высший",
+        "icon": "tex.c_thehighestone_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GEREONALEXIUS",
+        "count": 1,
+        "name": "Герион Алексиус",
+        "icon": "tex.hm_mw_alexius_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_VIVIENNE",
+        "count": 1,
+        "name": "Вивьен",
+        "icon": "tex.hf_mw_vivienne_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 96000,
+      "gems": 140,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THEHIGHESTONE",
+        "count": 1,
+        "name": "Высший",
+        "icon": "tex.c_thehighestone_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GEREONALEXIUS",
+        "count": 1,
+        "name": "Герион Алексиус",
+        "icon": "tex.hm_mw_alexius_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_VIVIENNE",
+        "count": 1,
+        "name": "Вивьен",
+        "icon": "tex.hf_mw_vivienne_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_TRANQUILMADDOX",
+        "count": 1,
+        "name": "Усмиренный Маддокс",
+        "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 92000,
+      "gems": 119,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_GEREONALEXIUS",
+        "count": 1,
+        "name": "Герион Алексиус",
+        "icon": "tex.hm_mw_alexius_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_VIVIENNE",
+        "count": 1,
+        "name": "Вивьен",
+        "icon": "tex.hf_mw_vivienne_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_TRANQUILMADDOX",
+        "count": 1,
+        "name": "Усмиренный Маддокс",
+        "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEFORMLESSONE",
+        "count": 1,
+        "name": "Бесформенный",
+        "icon": "tex.c_theformlessone_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 88000,
+      "gems": 105,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_VIVIENNE",
+        "count": 1,
+        "name": "Вивьен",
+        "icon": "tex.hf_mw_vivienne_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_TRANQUILMADDOX",
+        "count": 1,
+        "name": "Усмиренный Маддокс",
+        "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEFORMLESSONE",
+        "count": 1,
+        "name": "Бесформенный",
+        "icon": "tex.c_theformlessone_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_DAILAN",
+        "count": 1,
+        "name": "Дэйлан",
+        "icon": "tex.dm_dw_dailan_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 80000,
+      "gems": 84,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_TRANQUILMADDOX",
+        "count": 1,
+        "name": "Усмиренный Маддокс",
+        "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEFORMLESSONE",
+        "count": 1,
+        "name": "Бесформенный",
+        "icon": "tex.c_theformlessone_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_DAILAN",
+        "count": 1,
+        "name": "Дэйлан",
+        "icon": "tex.dm_dw_dailan_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PHANTASMALSHADOW",
+        "count": 1,
+        "name": "Призрачная тень",
+        "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 72000,
+      "gems": 70,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THEFORMLESSONE",
+        "count": 1,
+        "name": "Бесформенный",
+        "icon": "tex.c_theformlessone_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_DAILAN",
+        "count": 1,
+        "name": "Дэйлан",
+        "icon": "tex.dm_dw_dailan_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PHANTASMALSHADOW",
+        "count": 1,
+        "name": "Призрачная тень",
+        "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 64000,
+      "gems": 56,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_DAILAN",
+        "count": 1,
+        "name": "Дэйлан",
+        "icon": "tex.dm_dw_dailan_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PHANTASMALSHADOW",
+        "count": 1,
+        "name": "Призрачная тень",
+        "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 56000,
+      "gems": 28,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_PHANTASMALSHADOW",
+        "count": 1,
+        "name": "Призрачная тень",
+        "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 3,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 52000,
+      "gems": 21,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 4,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 48000,
+      "gems": 14,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 3,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "name": "Необычный красный огонек",
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 40000,
+      "gems": 7,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "name": "Необычный красный огонек",
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "name": "Необычный черный огонек",
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 32000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "name": "Необычный красный огонек",
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "name": "Необычный черный огонек",
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "name": "Необычный белый огонек",
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ],
+    "guild_source": "INTERSTITIAL_GUILD_EVENT_ANNOUNCEMENT_MESSAGE1_KEY",
+    "guild_minimum_banners": 100,
+    "guild_rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 0,
+      "gems": 450,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 6,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 2,
+      "gold": 0,
+      "gems": 375,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 5,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 3,
+      "last": 3,
+      "gold": 0,
+      "gems": 300,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 4,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 4,
+      "gold": 0,
+      "gems": 250,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 3,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 5,
+      "last": 5,
+      "gold": 0,
+      "gems": 200,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 2,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 6,
+      "last": 6,
+      "gold": 0,
+      "gems": 160,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 1,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 7,
+      "gold": 0,
+      "gems": 120,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 1,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 8,
+      "last": 8,
+      "gold": 0,
+      "gems": 90,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 1,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 9,
+      "last": 9,
+      "gold": 0,
+      "gems": 80,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 3,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 10,
+      "last": 10,
+      "gold": 0,
+      "gems": 75,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 0,
+      "gems": 75,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 20,
+      "gold": 0,
+      "gems": 65,
+      "prizes": []
+     },
+     {
+      "first": 21,
+      "last": 25,
+      "gold": 0,
+      "gems": 50,
+      "prizes": []
+     },
+     {
+      "first": 26,
+      "last": 10000000,
+      "gold": 0,
+      "gems": 38,
+      "prizes": []
+     }
+    ]
+   },
+   {
+    "title_key": "WAR_OF_ATTRITION_APR_14_TITLE_KEY",
+    "text_key": "",
+    "effects": [],
+    "source": {
+     "event_key": "pvp|untamed harts",
+     "record_id": "R0315",
+     "event_date": "2019-02-09"
+    },
+    "omitted_prizes": [
+     "2x Raid Portal Key",
+     "Banished Plane Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1474,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "asaarash_saddle",
+        "count": 1,
+        "name": "Асаарашское седло",
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1977,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLACKWISP",
+        "count": 1,
+        "name": "Мифический черный огонек",
+        "icon": "tex.c_wisp_mythic_black_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "name": "Том вознесения",
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 50000,
+      "gems": 75,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_WILDHART",
+        "count": 1,
+        "name": "Дикий олень",
+        "icon": "tex.c_wildhart_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SNOWYWYVERN",
+        "count": 1,
+        "name": "Снежный виверн",
+        "icon": "tex.c_snowywyvern_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SNUGTHEBRONTO",
+        "count": 1,
+        "name": "Бронто Снаг",
+        "icon": "tex.c_snugthebronto_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NUGKING",
+        "count": 1,
+        "name": "Нажий король",
+        "icon": "tex.c_nugking_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 48000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_SNOWYWYVERN",
+        "count": 1,
+        "name": "Снежный виверн",
+        "icon": "tex.c_snowywyvern_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SNUGTHEBRONTO",
+        "count": 1,
+        "name": "Бронто Снаг",
+        "icon": "tex.c_snugthebronto_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NUGKING",
+        "count": 1,
+        "name": "Нажий король",
+        "icon": "tex.c_nugking_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GHASTARCHER",
+        "count": 1,
+        "name": "Упырь-лучник",
+        "icon": "tex.c_legendaryghastarcher_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 46000,
+      "gems": 51,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_SNUGTHEBRONTO",
+        "count": 1,
+        "name": "Бронто Снаг",
+        "icon": "tex.c_snugthebronto_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NUGKING",
+        "count": 1,
+        "name": "Нажий король",
+        "icon": "tex.c_nugking_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GHASTARCHER",
+        "count": 1,
+        "name": "Упырь-лучник",
+        "icon": "tex.c_legendaryghastarcher_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GHASTBRUTE",
+        "count": 1,
+        "name": "Упырь-бестия",
+        "icon": "tex.c_legendaryghastbrute_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 44000,
+      "gems": 45,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_NUGKING",
+        "count": 1,
+        "name": "Нажий король",
+        "icon": "tex.c_nugking_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GHASTARCHER",
+        "count": 1,
+        "name": "Упырь-лучник",
+        "icon": "tex.c_legendaryghastarcher_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GHASTBRUTE",
+        "count": 1,
+        "name": "Упырь-бестия",
+        "icon": "tex.c_legendaryghastbrute_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 40000,
+      "gems": 36,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_GHASTARCHER",
+        "count": 1,
+        "name": "Упырь-лучник",
+        "icon": "tex.c_legendaryghastarcher_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GHASTBRUTE",
+        "count": 1,
+        "name": "Упырь-бестия",
+        "icon": "tex.c_legendaryghastbrute_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 36000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_GHASTBRUTE",
+        "count": 1,
+        "name": "Упырь-бестия",
+        "icon": "tex.c_legendaryghastbrute_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_FLUFFY",
+        "count": 1,
+        "name": "Пушистик",
+        "icon": "tex.c_nugfluffy_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 32000,
+      "gems": 24,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_FLUFFY",
+        "count": 1,
+        "name": "Пушистик",
+        "icon": "tex.c_nugfluffy_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SPIKE",
+        "count": 1,
+        "name": "Шипастик",
+        "icon": "tex.c_nugspike_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 28000,
+      "gems": 12,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_FLUFFY",
+        "count": 1,
+        "name": "Пушистик",
+        "icon": "tex.c_nugfluffy_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SPIKE",
+        "count": 1,
+        "name": "Шипастик",
+        "icon": "tex.c_nugspike_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "name": "Галла Венца зимы",
+        "icon": "tex.c_hallawintersend_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 26000,
+      "gems": 9,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_FLUFFY",
+        "count": 1,
+        "name": "Пушистик",
+        "icon": "tex.c_nugfluffy_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SPIKE",
+        "count": 1,
+        "name": "Шипастик",
+        "icon": "tex.c_nugspike_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "name": "Галла Венца зимы",
+        "icon": "tex.c_hallawintersend_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "name": "Эпический красный огонек",
+        "icon": "tex.c_wisp_epic_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 24000,
+      "gems": 6,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_SPIKE",
+        "count": 1,
+        "name": "Шипастик",
+        "icon": "tex.c_nugspike_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "name": "Галла Венца зимы",
+        "icon": "tex.c_hallawintersend_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "name": "Эпический красный огонек",
+        "icon": "tex.c_wisp_epic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "name": "Необычный красный огонек",
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 20000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "name": "Галла Венца зимы",
+        "icon": "tex.c_hallawintersend_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "name": "Эпический красный огонек",
+        "icon": "tex.c_wisp_epic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "name": "Необычный красный огонек",
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "name": "Необычный черный огонек",
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 16000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "name": "Эпический красный огонек",
+        "icon": "tex.c_wisp_epic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "name": "Необычный красный огонек",
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "name": "Необычный черный огонек",
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "name": "Необычный белый огонек",
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ],
+    "guild_source": "INTERSTITIAL_GUILD_EVENT2_ANNOUNCEMENT_MESSAGE1_KEY",
+    "guild_minimum_banners": 100,
+    "guild_rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 300000,
+      "gems": 500,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 7,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 2,
+      "gold": 270000,
+      "gems": 450,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 6,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 3,
+      "last": 3,
+      "gold": 245000,
+      "gems": 400,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 6,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 4,
+      "gold": 220000,
+      "gems": 350,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 5,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 5,
+      "last": 5,
+      "gold": 200000,
+      "gems": 300,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 5,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 6,
+      "last": 6,
+      "gold": 185000,
+      "gems": 260,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 4,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 7,
+      "gold": 170000,
+      "gems": 220,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 4,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 8,
+      "last": 8,
+      "gold": 150000,
+      "gems": 175,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 3,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 9,
+      "last": 9,
+      "gold": 135000,
+      "gems": 145,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 3,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 10,
+      "last": 10,
+      "gold": 120000,
+      "gems": 125,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 2,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 20,
+      "gold": 100000,
+      "gems": 110,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 1,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 21,
+      "last": 30,
+      "gold": 75000,
+      "gems": 100,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 31,
+      "last": 40,
+      "gold": 50000,
+      "gems": 90,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 50,
+      "gold": 40000,
+      "gems": 80,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 51,
+      "last": 100,
+      "gold": 25000,
+      "gems": 70,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 101,
+      "last": 1000,
+      "gold": 0,
+      "gems": 50,
+      "prizes": []
+     }
+    ]
+   },
+   {
+    "title_key": "ONSLAUGHT_ASCENSION_JUNE_19_TITLE_KEY",
+    "text_key": "ONSLAUGHT_ASCENSION_JUNE_19_DESC_KEY",
+    "effects": [
+     {
+      "groups": [],
+      "factions": [
+       "Blue"
+      ],
+      "units": [],
+      "health_pct": 200,
+      "power_pct": 0
+     },
+     {
+      "groups": [],
+      "factions": [
+       "White"
+      ],
+      "units": [],
+      "health_pct": 0,
+      "power_pct": 100
+     }
+    ],
+    "source": {
+     "event_key": "pvp|the imperium",
+     "record_id": "R0340",
+     "event_date": "2019-07-08"
+    },
+    "omitted_prizes": [
+     "2x Banished Plane Key",
+     "Giant Quest Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1474,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "scout_coat_arms",
+        "count": 1,
+        "name": "Рукава для куртки разведчика",
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1977,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "name": "Мифический синий огонек",
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "name": "Том вознесения",
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 50000,
+      "gems": 75,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-ENCHANTERVIVIENNE",
+        "count": 1,
+        "name": "Рыцарь-чародей Вивьен",
+        "icon": "tex.hf_dw_knightenchantervivienne_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_HIVERNAL",
+        "count": 1,
+        "name": "Хивернал",
+        "icon": "tex.c_hivernal_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ZITHER",
+        "count": 1,
+        "name": "ЦИТРА",
+        "icon": "tex.hm_bd_zither_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "name": "Красный Блэкволл",
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 48000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_HIVERNAL",
+        "count": 1,
+        "name": "Хивернал",
+        "icon": "tex.c_hivernal_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ZITHER",
+        "count": 1,
+        "name": "ЦИТРА",
+        "icon": "tex.hm_bd_zither_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "name": "Красный Блэкволл",
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WARDENCOMMANDERCLAREL",
+        "count": 1,
+        "name": "Страж-Командор Кларель",
+        "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 46000,
+      "gems": 51,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_ZITHER",
+        "count": 1,
+        "name": "ЦИТРА",
+        "icon": "tex.hm_bd_zither_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "name": "Красный Блэкволл",
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WARDENCOMMANDERCLAREL",
+        "count": 1,
+        "name": "Страж-Командор Кларель",
+        "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NUGGALOPE",
+        "count": 1,
+        "name": "Наголопа",
+        "icon": "tex.c_nuggalope_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 44000,
+      "gems": 45,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "name": "Красный Блэкволл",
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WARDENCOMMANDERCLAREL",
+        "count": 1,
+        "name": "Страж-Командор Кларель",
+        "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NUGGALOPE",
+        "count": 1,
+        "name": "Наголопа",
+        "icon": "tex.c_nuggalope_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MICHELDECHEVIN",
+        "count": 1,
+        "name": "Мишель де Шевен",
+        "icon": "tex.hm_sw_micheldechevin_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 40000,
+      "gems": 36,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_WARDENCOMMANDERCLAREL",
+        "count": 1,
+        "name": "Страж-Командор Кларель",
+        "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NUGGALOPE",
+        "count": 1,
+        "name": "Наголопа",
+        "icon": "tex.c_nuggalope_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MICHELDECHEVIN",
+        "count": 1,
+        "name": "Мишель де Шевен",
+        "icon": "tex.hm_sw_micheldechevin_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SNOWYWYVERN",
+        "count": 1,
+        "name": "Снежный виверн",
+        "icon": "tex.c_snowywyvern_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 36000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_NUGGALOPE",
+        "count": 1,
+        "name": "Наголопа",
+        "icon": "tex.c_nuggalope_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MICHELDECHEVIN",
+        "count": 1,
+        "name": "Мишель де Шевен",
+        "icon": "tex.hm_sw_micheldechevin_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SNOWYWYVERN",
+        "count": 1,
+        "name": "Снежный виверн",
+        "icon": "tex.c_snowywyvern_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SERSTROUD",
+        "count": 1,
+        "name": "Сэр Страуд",
+        "icon": "tex.hm_sw_serstroud_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 32000,
+      "gems": 24,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MICHELDECHEVIN",
+        "count": 1,
+        "name": "Мишель де Шевен",
+        "icon": "tex.hm_sw_micheldechevin_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SNOWYWYVERN",
+        "count": 1,
+        "name": "Снежный виверн",
+        "icon": "tex.c_snowywyvern_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SERSTROUD",
+        "count": 1,
+        "name": "Сэр Страуд",
+        "icon": "tex.hm_sw_serstroud_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_DUKEPROSPER",
+        "count": 1,
+        "name": "Герцог Проспер",
+        "icon": "tex.hm_cb_dukeprosper_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 28000,
+      "gems": 12,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_SNOWYWYVERN",
+        "count": 1,
+        "name": "Снежный виверн",
+        "icon": "tex.c_snowywyvern_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SERSTROUD",
+        "count": 1,
+        "name": "Сэр Страуд",
+        "icon": "tex.hm_sw_serstroud_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_DUKEPROSPER",
+        "count": 1,
+        "name": "Герцог Проспер",
+        "icon": "tex.hm_cb_dukeprosper_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 26000,
+      "gems": 9,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_SERSTROUD",
+        "count": 1,
+        "name": "Сэр Страуд",
+        "icon": "tex.hm_sw_serstroud_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_DUKEPROSPER",
+        "count": 1,
+        "name": "Герцог Проспер",
+        "icon": "tex.hm_cb_dukeprosper_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 24000,
+      "gems": 6,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_DUKEPROSPER",
+        "count": 1,
+        "name": "Герцог Проспер",
+        "icon": "tex.hm_cb_dukeprosper_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "name": "Необычный красный огонек",
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 20000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "name": "Необычный красный огонек",
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "name": "Необычный черный огонек",
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 16000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "name": "Необычный красный огонек",
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "name": "Необычный черный огонек",
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "name": "Необычный белый огонек",
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ],
+    "guild_source": "INTERSTITIAL_GUILD_EVENT2_ANNOUNCEMENT_MESSAGE1_KEY",
+    "guild_minimum_banners": 100,
+    "guild_rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 300000,
+      "gems": 500,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 7,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 2,
+      "gold": 270000,
+      "gems": 450,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 6,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 3,
+      "last": 3,
+      "gold": 245000,
+      "gems": 400,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 6,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 4,
+      "gold": 220000,
+      "gems": 350,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 5,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 5,
+      "last": 5,
+      "gold": 200000,
+      "gems": 300,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 5,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 6,
+      "last": 6,
+      "gold": 185000,
+      "gems": 260,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 4,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 7,
+      "gold": 170000,
+      "gems": 220,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 4,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 8,
+      "last": 8,
+      "gold": 150000,
+      "gems": 175,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 3,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 9,
+      "last": 9,
+      "gold": 135000,
+      "gems": 145,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 3,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 10,
+      "last": 10,
+      "gold": 120000,
+      "gems": 125,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 2,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 20,
+      "gold": 100000,
+      "gems": 110,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "bloodstone",
+        "count": 1,
+        "name": "Кровавиковый набор",
+        "icon": "cache:tex.Voucher_BloodstonePack",
+        "index": 4
+       }
+      ]
+     },
+     {
+      "first": 21,
+      "last": 30,
+      "gold": 75000,
+      "gems": 100,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 31,
+      "last": 40,
+      "gold": 50000,
+      "gems": 90,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 50,
+      "gold": 40000,
+      "gems": 80,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 51,
+      "last": 100,
+      "gold": 25000,
+      "gems": 70,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "name": "Железный набор",
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 101,
+      "last": 1000,
+      "gold": 0,
+      "gems": 50,
+      "prizes": []
+     }
+    ]
+   }
   ]
  },
  "bots": [

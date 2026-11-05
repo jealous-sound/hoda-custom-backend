@@ -22,6 +22,7 @@ type BattleRequest struct {
 	Banners  int    `json:"banners"`
 	Step     int    `json:"step"`
 	Revive   bool   `json:"revive"`
+	Duel     string `json:"duel"`
 }
 
 type BattleResult struct {
@@ -38,6 +39,7 @@ type BattleResult struct {
 	NodeWins  int64   `json:"node_wins,omitempty"`
 	RunStep   int64   `json:"run_step,omitempty"`
 	EventRank int     `json:"event_rank,omitempty"`
+	Cycle     int64   `json:"event_cycle,omitempty"`
 }
 
 func (p *player) Battle(request BattleRequest) (BattleResult, error) {

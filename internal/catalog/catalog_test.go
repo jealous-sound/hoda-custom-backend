@@ -105,3 +105,29 @@ func TestEmbeddedDataMatchesClientCheckout(t *testing.T) {
 		}
 	}
 }
+
+func TestOnslaughtReplacesEveryFewPvpEvents(t *testing.T) {
+	c, err := Default()
+	if err != nil {
+		t.Fatal(err)
+	}
+	events := &c.Pvp.Events
+	guildCycles := 0
+	for cycle := int64(0); cycle < events.GuildEveryCycles*int64(len(events.GuildCatalog)); cycle++ {
+		details := events.ForCycle(cycle)
+		if events.IsGuildCycle(cycle) {
+			guildCycles++
+			if len(details.GuildRankRewards) == 0 || details.GuildMinimumBanners <= 0 {
+				t.Fatalf("Onslaught cycle %d has no guild rewards", cycle)
+			}
+			if reward, found := details.GuildReward(1); !found || reward.Gems <= 0 {
+				t.Fatalf("Onslaught cycle %d pays nothing for first place", cycle)
+			}
+		} else if len(details.GuildRankRewards) != 0 {
+			t.Fatalf("ordinary cycle %d has guild rewards", cycle)
+		}
+	}
+	if guildCycles != len(events.GuildCatalog) {
+		t.Fatalf("%d Onslaughts, want %d", guildCycles, len(events.GuildCatalog))
+	}
+}

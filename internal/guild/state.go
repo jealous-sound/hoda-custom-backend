@@ -99,12 +99,13 @@ type Notice struct {
 }
 
 type State struct {
-	Guilds  []*Guild            `json:"guilds"`
-	Notices map[string][]Notice `json:"notices"`
+	Guilds     []*Guild            `json:"guilds"`
+	Notices    map[string][]Notice `json:"notices"`
+	Onslaughts []*Onslaught        `json:"onslaughts"`
 }
 
 func newState() *State {
-	return &State{Guilds: []*Guild{}, Notices: map[string][]Notice{}}
+	return &State{Guilds: []*Guild{}, Notices: map[string][]Notice{}, Onslaughts: []*Onslaught{}}
 }
 
 func (s *State) normalize() {
@@ -114,15 +115,24 @@ func (s *State) normalize() {
 	if s.Notices == nil {
 		s.Notices = map[string][]Notice{}
 	}
+	if s.Onslaughts == nil {
+		s.Onslaughts = []*Onslaught{}
+	}
 }
 
 func (s *State) clone() *State {
-	copied := &State{Guilds: make([]*Guild, 0, len(s.Guilds)), Notices: make(map[string][]Notice, len(s.Notices))}
+	copied := &State{
+		Guilds: make([]*Guild, 0, len(s.Guilds)), Notices: make(map[string][]Notice, len(s.Notices)),
+		Onslaughts: make([]*Onslaught, 0, len(s.Onslaughts)),
+	}
 	for _, g := range s.Guilds {
 		copied.Guilds = append(copied.Guilds, g.clone())
 	}
 	for player, notices := range s.Notices {
 		copied.Notices[player] = slices.Clone(notices)
+	}
+	for _, o := range s.Onslaughts {
+		copied.Onslaughts = append(copied.Onslaughts, o.clone())
 	}
 	return copied
 }

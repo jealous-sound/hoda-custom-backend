@@ -18,6 +18,7 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/prune"
+	"github.com/jealous-sound/hoda-custom-backend/internal/report"
 	"github.com/jealous-sound/hoda-custom-backend/internal/session"
 )
 
@@ -124,10 +125,14 @@ func run(o options, log *slog.Logger) error {
 	if err != nil {
 		return err
 	}
+	reports, err := report.NewLog(o.dataDir)
+	if err != nil {
+		return err
+	}
 	sessions := session.NewRegistry()
 	server := &http.Server{
 		Addr:              o.addr,
-		Handler:           api.NewServer(accounts, store, sessions, shopCatalog, guilds, time.Now, log).Handler(),
+		Handler:           api.NewServer(accounts, store, sessions, shopCatalog, guilds, reports, time.Now, log).Handler(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
