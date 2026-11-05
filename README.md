@@ -121,6 +121,35 @@ roster are embedded from `internal/catalog/data`, copied
 from the client's `data/` by `scripts/sync-client-data.sh`; `go test` fails when the copies drift from a client
 checkout next to this one.
 
+## Guilds
+
+The 5.4.4 guild system and guild chat, under `/v1/players/{id}/` with the session token (no `If-Match`, except for
+creating, which charges gold like a store purchase). Everything lives in `runtime/guilds.json`. Refusals are `422
+{"error", "code"}` with the original `GuildResponseCode` names (`GUILD_FULL`, `INSUFFICIENT_RANK`, ...).
+
+| Method | Path | |
+| --- | --- | --- |
+| `GET` | `guild` | your state: `{"rank", "guild", "applications", "notices", "unread"}`; notices are handed out once |
+| `POST` | `guilds` | `{"request_id", "name", "description", "message_of_the_day", "language", "status", "icon", "required_level"}`, needs `If-Match`; 10000 gold → `{"revision", "profile", "granted": <state>}` |
+| `GET` | `guilds/recommended` | up to 20 open or application-only guilds you can join → `{"guilds"}` |
+| `GET` | `guilds/search?name=` | the guild with that name, ignoring case → `{"guilds"}` |
+| `GET` | `guilds/{guild}` | `{"guild", "applied"}`; applications only for its officers |
+| `POST` | `guilds/{guild}/join` | `{"application_text"}`; joins an open guild or applies to an application-only one → state |
+| `POST` | `guilds/{guild}/cancel` | withdraws your application → state |
+| `POST` | `guild/settings` | officers and the leader; same fields as creating except the name → state |
+| `POST` | `guild/applications/{player}/accept` or `/deny` | officers and the leader → state |
+| `POST` | `guild/members/{player}/rank` | `{"target_rank"}`, leader only; promoting an officer to leader makes you an officer → state |
+| `POST` | `guild/members/{player}/kick` | needs a higher rank than the target → state |
+| `POST` | `guild/leave` | the leader leaves only as the last member, which deletes the guild → state |
+| `POST` | `guild/messages` | `{"after", "text", "read_through"}`; posts `text` if set, returns messages with an id above `after` and `unread` |
+
+Rules follow the 5.4.4 client: unlock at level 5, 30 members, 10 pending applications per guild, one pending
+application per player (a new one withdraws the old), names of 4 to 18 characters, descriptions and messages of the
+day up to 150, minimum level 5 to 423, 23 emblems, and leaders idle for 5 days handing over to the highest-ranked
+active member. Membership changes, rank changes and settings changes post the original `GUILD_CHAT_EVENT_*` lines
+into chat; the last 100 messages are kept. Chat lines are up to 140 characters; `<` and `>` are refused in text.
+Onslaught (guild events), duels and abuse reports are not implemented.
+
 ## Next to move server-side
 
 1. Battle outcomes: replay the deterministic `battle_sim.c` instead of trusting `won` and `crit_gold`.

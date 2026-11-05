@@ -12,6 +12,7 @@ import (
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/account"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
+	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/session"
 )
@@ -42,8 +43,14 @@ func newHarness(t *testing.T) *harness {
 	if err != nil {
 		t.Fatal(err)
 	}
+	guilds, err := guild.NewStore(dir)
+	if err != nil {
+		t.Fatal(err)
+	}
 	log := slog.New(slog.NewTextHandler(io.Discard, nil))
-	server := httptest.NewServer(NewServer(accounts, store, session.NewRegistry(), shopCatalog, clock, log).Handler())
+	server := httptest.NewServer(
+		NewServer(accounts, store, session.NewRegistry(), shopCatalog, guilds, clock, log).Handler(),
+	)
 	t.Cleanup(server.Close)
 	return &harness{t: t, server: server, profiles: store}
 }

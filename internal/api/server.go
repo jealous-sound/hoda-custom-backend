@@ -13,6 +13,7 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/account"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
+	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/session"
 )
@@ -24,15 +25,19 @@ type Server struct {
 	profiles *profile.Store
 	sessions *session.Registry
 	catalog  *catalog.Catalog
+	guilds   *guild.Store
 	now      func() time.Time
 	log      *slog.Logger
 }
 
 func NewServer(
 	accounts *account.Store, profiles *profile.Store, sessions *session.Registry, shopCatalog *catalog.Catalog,
-	now func() time.Time, log *slog.Logger,
+	guilds *guild.Store, now func() time.Time, log *slog.Logger,
 ) *Server {
-	return &Server{accounts: accounts, profiles: profiles, sessions: sessions, catalog: shopCatalog, now: now, log: log}
+	return &Server{
+		accounts: accounts, profiles: profiles, sessions: sessions, catalog: shopCatalog, guilds: guilds, now: now,
+		log: log,
+	}
 }
 
 func (s *Server) Handler() http.Handler {
@@ -46,6 +51,21 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("POST /v1/players/{player}/store/purchases", s.authorized(s.purchase))
 	mux.HandleFunc("POST /v1/players/{player}/refills", s.authorized(s.refill))
 	mux.HandleFunc("POST /v1/players/{player}/actions", s.authorized(s.playerAction))
+	mux.HandleFunc("GET /v1/players/{player}/guild", s.authorized(s.getGuild))
+	mux.HandleFunc("POST /v1/players/{player}/guild/settings", s.authorized(s.changeGuildSettings))
+	mux.HandleFunc("POST /v1/players/{player}/guild/leave", s.authorized(s.leaveGuild))
+	mux.HandleFunc("POST /v1/players/{player}/guild/messages", s.authorized(s.guildMessages))
+	mux.HandleFunc("POST /v1/players/{player}/guild/applications/{member}/accept",
+		s.authorized(s.acceptGuildApplication))
+	mux.HandleFunc("POST /v1/players/{player}/guild/applications/{member}/deny", s.authorized(s.denyGuildApplication))
+	mux.HandleFunc("POST /v1/players/{player}/guild/members/{member}/rank", s.authorized(s.changeGuildRank))
+	mux.HandleFunc("POST /v1/players/{player}/guild/members/{member}/kick", s.authorized(s.kickGuildMember))
+	mux.HandleFunc("POST /v1/players/{player}/guilds", s.authorized(s.createGuild))
+	mux.HandleFunc("GET /v1/players/{player}/guilds/recommended", s.authorized(s.recommendedGuilds))
+	mux.HandleFunc("GET /v1/players/{player}/guilds/search", s.authorized(s.searchGuilds))
+	mux.HandleFunc("GET /v1/players/{player}/guilds/{guild}", s.authorized(s.observeGuild))
+	mux.HandleFunc("POST /v1/players/{player}/guilds/{guild}/join", s.authorized(s.joinGuild))
+	mux.HandleFunc("POST /v1/players/{player}/guilds/{guild}/cancel", s.authorized(s.cancelGuildApplication))
 	return s.logged(mux)
 }
 

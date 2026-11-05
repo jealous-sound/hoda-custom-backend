@@ -15,6 +15,7 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/account"
 	"github.com/jealous-sound/hoda-custom-backend/internal/api"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
+	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/prune"
 	"github.com/jealous-sound/hoda-custom-backend/internal/session"
@@ -119,10 +120,14 @@ func run(o options, log *slog.Logger) error {
 	if err != nil {
 		return fmt.Errorf("load store catalog: %w", err)
 	}
+	guilds, err := guild.NewStore(o.dataDir)
+	if err != nil {
+		return err
+	}
 	sessions := session.NewRegistry()
 	server := &http.Server{
 		Addr:              o.addr,
-		Handler:           api.NewServer(accounts, store, sessions, shopCatalog, time.Now, log).Handler(),
+		Handler:           api.NewServer(accounts, store, sessions, shopCatalog, guilds, time.Now, log).Handler(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
