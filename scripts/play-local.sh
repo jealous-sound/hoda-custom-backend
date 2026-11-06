@@ -22,7 +22,7 @@ backend_healthy() {
 echo "Building backend..."
 (cd "$BACKEND_DIR" && go build -o bin/hoda-server ./cmd/hoda-server)
 echo "Building client..."
-make -C "$CLIENT_DIR" game
+make -C "$CLIENT_DIR"
 
 SERVER_PID=""
 stop_backend() {
@@ -64,4 +64,4 @@ cd "$CLIENT_DIR"
 if [[ -n "$PLAYER_ID" ]]; then
     export HOD_PLAYER_ID="$PLAYER_ID"
 fi
-HOD_BACKEND_URL="$BACKEND_URL" ./game "$@"
+HOD_BACKEND_URL="$BACKEND_URL" "./Heroes of Dragon Age.app/Contents/MacOS/Heroes of Dragon Age" "$@"
