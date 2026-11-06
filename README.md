@@ -177,3 +177,11 @@ received it can report.
 1. Battle outcomes: replay the deterministic `battle_sim.c` instead of trusting `won` and `crit_gold`.
 2. Hero progression (levels, consume, tiers) and mission counters fed by battles, still uploaded by the client.
 3. PvP trophies, matchmaking and defense history against other players' squads.
+
+## License
+
+The code in this repository is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0-only); see `LICENSE`.
+
+Heroes of Dragon Age is a trademark of Electronic Arts. The original game data, art, audio, fonts and APK that the
+game reads or downloads are © Electronic Arts Inc. and are not covered by this license. This is a non-commercial fan
+project and is not affiliated with or endorsed by Electronic Arts or BioWare.
