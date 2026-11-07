@@ -34,6 +34,7 @@ type Server struct {
 	trustCloudflareHeader bool
 	limiters              limiters
 	battleSeeds           economy.SeedSource
+	clientUpdates         ClientUpdates
 }
 
 type Config struct {
@@ -41,6 +42,7 @@ type Config struct {
 	TrustCloudflareHeader bool
 	Limits                Limits
 	BattleSeeds           economy.SeedSource
+	ClientUpdates         ClientUpdates
 }
 
 func NewServer(
@@ -52,6 +54,7 @@ func NewServer(
 		reports: reports, now: now, log: log, openUnregistered: config.OpenUnregistered,
 		trustCloudflareHeader: config.TrustCloudflareHeader,
 		limiters:              newLimiters(config.Limits, now), battleSeeds: config.BattleSeeds,
+		clientUpdates: config.ClientUpdates,
 	}
 }
 
@@ -59,6 +62,7 @@ func (s *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /healthz", s.health)
 	mux.HandleFunc("GET /v1/time", s.serverTime)
+	mux.HandleFunc("GET "+clientUpdatePath, s.clientRelease)
 	mux.HandleFunc("POST /v1/players", s.createPlayer)
 	mux.HandleFunc("POST /v1/sessions", s.openSession)
 	mux.HandleFunc("GET /v1/players/{player}/profile", s.authorized(s.getProfile))
@@ -85,7 +89,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /v1/players/{player}/guilds/{guild}", s.authorized(s.observeGuild))
 	mux.HandleFunc("POST /v1/players/{player}/guilds/{guild}/join", s.authorized(s.joinGuild))
 	mux.HandleFunc("POST /v1/players/{player}/guilds/{guild}/cancel", s.authorized(s.cancelGuildApplication))
-	return s.logged(mux)
+	return s.logged(s.currentClientsOnly(mux))
 }
 
 func (s *Server) logged(next http.Handler) http.Handler {

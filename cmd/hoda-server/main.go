@@ -15,6 +15,7 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/account"
 	"github.com/jealous-sound/hoda-custom-backend/internal/api"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
+	"github.com/jealous-sound/hoda-custom-backend/internal/clientversion"
 	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/prune"
@@ -32,6 +33,13 @@ const (
 	defaultSessionIdle = 24 * time.Hour
 )
 
+const (
+	defaultClientReleases      = "https://api.github.com/repos/jealous-sound/hoda-custom-client/releases/latest"
+	defaultClientReleasesEvery = 15 * time.Minute
+	defaultClientDownloadURL   = "https://hodareborn.com/#download"
+	clientReleasesTimeout      = 10 * time.Second
+)
+
 type options struct {
 	addr            string
 	dataDir         string
@@ -42,6 +50,10 @@ type options struct {
 	sessionIdle     time.Duration
 	unregistered    bool
 	trustCloudflare bool
+	minimumClient   string
+	clientReleases  string
+	releasesEvery   time.Duration
+	clientDownload  string
 }
 
 func parseOptions() options {
@@ -64,6 +76,14 @@ func parseOptions() options {
 	flag.BoolVar(&o.trustCloudflare, "trust-cf-connecting-ip", false,
 		"take the visitor address from CF-Connecting-IP whenever it is present; only behind an edge that refuses "+
 			"that header from anywhere but Cloudflare, as Railway's does")
+	flag.StringVar(&o.minimumClient, "min-client-version", "",
+		"answer 426 Upgrade Required to clients older than this tag, such as v0.5.0; empty lets every version in")
+	flag.StringVar(&o.clientReleases, "client-releases", defaultClientReleases,
+		"GitHub latest-release URL whose tag is the newest client version; empty turns the lookup off")
+	flag.DurationVar(&o.releasesEvery, "client-releases-every", defaultClientReleasesEvery,
+		"how often to look up the newest client release")
+	flag.StringVar(&o.clientDownload, "client-download-url", defaultClientDownloadURL,
+		"page the client opens to download a new version")
 	flag.Parse()
 	return o
 }
@@ -113,6 +133,42 @@ func pruneGuests(ctx context.Context, pruner *prune.Pruner, every time.Duration,
 	}
 }
 
+func followClientReleases(ctx context.Context, feed *clientversion.ReleaseFeed, every time.Duration, log *slog.Logger) {
+	ticker := time.NewTicker(every)
+	defer ticker.Stop()
+	for {
+		lookup, cancel := context.WithTimeout(ctx, clientReleasesTimeout)
+		previous := feed.Latest()
+		err := feed.Refresh(lookup)
+		cancel()
+		if err != nil {
+			log.Error("look up latest client release", "error", err)
+		} else if latest := feed.Latest(); latest.String() != previous.String() {
+			log.Info("latest client release", "version", latest.String())
+		}
+		select {
+		case <-ctx.Done():
+			return
+		case <-ticker.C:
+		}
+	}
+}
+
+func clientUpdates(o options, feed *clientversion.ReleaseFeed) (api.ClientUpdates, error) {
+	updates := api.ClientUpdates{DownloadURL: o.clientDownload}
+	if o.minimumClient != "" {
+		minimum, ok := clientversion.Parse(o.minimumClient)
+		if !ok {
+			return updates, fmt.Errorf("-min-client-version %q is not a version such as v0.5.0", o.minimumClient)
+		}
+		updates.Minimum = minimum
+	}
+	if feed != nil {
+		updates.Latest = feed.Latest
+	}
+	return updates, nil
+}
+
 func run(o options, log *slog.Logger) error {
 	store, err := profile.NewStore(o.dataDir, time.Now)
 	if err != nil {
@@ -140,16 +196,31 @@ func run(o options, log *slog.Logger) error {
 	if err != nil {
 		return err
 	}
+	var releases *clientversion.ReleaseFeed
+	if o.clientReleases != "" {
+		if o.releasesEvery <= 0 {
+			return errors.New("-client-releases-every must be positive while -client-releases is set")
+		}
+		releases = clientversion.NewReleaseFeed(o.clientReleases, &http.Client{Timeout: clientReleasesTimeout})
+	}
+	updates, err := clientUpdates(o, releases)
+	if err != nil {
+		return err
+	}
 	sessions := session.NewRegistry(time.Now, o.sessionIdle)
 	server := &http.Server{
 		Addr: o.addr,
 		Handler: api.NewServer(accounts, store, sessions, shopCatalog, guilds, reports, time.Now, log, api.Config{
 			OpenUnregistered: o.unregistered, TrustCloudflareHeader: o.trustCloudflare, Limits: api.DefaultLimits(),
+			ClientUpdates: updates,
 		}).Handler(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
+	if releases != nil {
+		go followClientReleases(ctx, releases, o.releasesEvery, log)
+	}
 	if o.guestIdle > 0 {
 		go pruneGuests(ctx, prune.NewPruner(accounts, store, sessions, time.Now, o.guestIdle), o.pruneEvery, log)
 	}
