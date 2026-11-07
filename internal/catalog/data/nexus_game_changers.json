@@ -2,7 +2,6 @@
   {
     "event": "Danarius",
     "text_key": "game_changer_200pcthealth_to_circle",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -18,7 +17,6 @@
   {
     "event": "ElvenMages",
     "text_key": "NEXUS_GAME_CHANGER_PLUS300HEALTH_AND_PLUS125POWER_TO_ELVENMAGES",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -35,7 +33,6 @@
   {
     "event": "Maric",
     "text_key": "game_changer_200pctpower_to_qunari",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -51,7 +48,6 @@
   {
     "event": "MaskedMayhem",
     "text_key": "NEXUS_GAME_CHANGER_PLUS150HEALTH_PLUS150POWER_TO_MAGES",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -66,8 +62,7 @@
   },
   {
     "event": "Tallis",
-    "text_key": "",
-    "text_ru": "Герои \"белой\" фракции получают 150 % здоровья и силы.",
+    "text_key": "HODA_NEXUS_GAME_CHANGER_PLUS150HEALTH_PLUS150POWER_TO_WHITE_FACTION",
     "effects": [
       {
         "groups": [],
@@ -83,7 +78,6 @@
   {
     "event": "WinterWardenland",
     "text_key": "NEXUS_GAME_CHANGER_PLUS200POWER_TO_WARDENS",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -99,7 +93,6 @@
   {
     "event": "ADreamMadeReality",
     "text_key": "NEXUS_GAME_CHANGER_PLUS250HEALTH_AND_PLUS350POWER_TO_QUNARI",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -115,7 +108,6 @@
   {
     "event": "BreachOpens",
     "text_key": "NEXUS_GAME_CHANGER_PLUS500PCT_POWER_TO_TEMPLARS_AND_400_Health_TO_SEEKERS_AND_PLUS250PCT_TO_INQUISITION",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -149,7 +141,6 @@
   {
     "event": "SeekersDuty",
     "text_key": "game_changer_125pctpower_and_125pcthealth_to_chantry",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -165,7 +156,6 @@
   {
     "event": "UrnOfSacredAshes",
     "text_key": "Nexus_game_changer_300_power_blue_faction",
-    "text_ru": "",
     "effects": [
       {
         "groups": [],
@@ -181,7 +171,6 @@
   {
     "event": "LastStraw",
     "text_key": "game_changer_300pctpower_to_mages",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -197,7 +186,6 @@
   {
     "event": "WitchWilds",
     "text_key": "game_changer_125pctpower_and_200pcthealth_to_templar",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -223,7 +211,6 @@
   {
     "event": "AnvilVoid",
     "text_key": "NEXUS_GAME_CHANGER_PLUS300_HEALTH_POWER_TO_BEAST_DEMON",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -248,7 +235,6 @@
   {
     "event": "WesternApproachInquisition",
     "text_key": "game_changer_35pctpower_and_health_to_red_lyrium",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -264,7 +250,6 @@
   {
     "event": "WesternApproachRedLyrium",
     "text_key": "game_changer_35pctpower_and_health_to_inquisition",
-    "text_ru": "",
     "effects": [
       {
         "groups": [
@@ -279,8 +264,7 @@
   },
   {
     "event": "DailyMonday",
-    "text_key": "",
-    "text_ru": "Герои \"белой\" фракции получают 150 % здоровья и силы.",
+    "text_key": "HODA_NEXUS_GAME_CHANGER_PLUS150HEALTH_PLUS150POWER_TO_WHITE_FACTION",
     "effects": [
       {
         "groups": [],
@@ -295,8 +279,7 @@
   },
   {
     "event": "DailyTuesday",
-    "text_key": "",
-    "text_ru": "Герои \"красной\" фракции получают 150 % здоровья и силы.",
+    "text_key": "HODA_NEXUS_GAME_CHANGER_PLUS150HEALTH_PLUS150POWER_TO_RED_FACTION",
     "effects": [
       {
         "groups": [],
@@ -311,8 +294,7 @@
   },
   {
     "event": "DailyWednesday",
-    "text_key": "",
-    "text_ru": "Герои \"синей\" фракции получают 150 % здоровья и силы.",
+    "text_key": "HODA_NEXUS_GAME_CHANGER_PLUS150HEALTH_PLUS150POWER_TO_BLUE_FACTION",
     "effects": [
       {
         "groups": [],
@@ -327,8 +309,7 @@
   },
   {
     "event": "DailyThursday",
-    "text_key": "",
-    "text_ru": "Герои \"черной\" фракции получают 150 % здоровья и силы.",
+    "text_key": "HODA_NEXUS_GAME_CHANGER_PLUS150HEALTH_PLUS150POWER_TO_BLACK_FACTION",
     "effects": [
       {
         "groups": [],

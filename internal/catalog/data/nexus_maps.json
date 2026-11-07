@@ -1,8 +1,7 @@
 [
  {
   "id": "Danarius",
-  "name": "Порченая кровь",
-  "name_en": "Tainted Blood",
+  "name_key": "NEXUS_EVENT_DANARIUS_CHASE_TITLE_KEY",
   "kind": "chase",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -335,8 +334,7 @@
  },
  {
   "id": "ElvenMages",
-  "name": "Задание \"Эльфы-маги\"",
-  "name_en": "Elven Mages",
+  "name_key": "NEXUS_EVENT_ELVEN_MAGES_TITLE_KEY",
   "kind": "chase",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -595,8 +593,7 @@
  },
  {
   "id": "ElvenRogues",
-  "name": "Эльфы-разбойники",
-  "name_en": "Elven Rogues",
+  "name_key": "NEXUS_EVENT_ELVEN_ROGUES_TITLE_KEY",
   "kind": "chase",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -862,8 +859,7 @@
  },
  {
   "id": "EnemiesOfTevinter",
-  "name": "Враги Тевинтера",
-  "name_en": "Enemies of Tevinter",
+  "name_key": "NEXUS_EVENT_ENEMIES_OF_TEVINTER_TITLE_KEY",
   "kind": "chase",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_VenatoriGladiator",
@@ -1153,8 +1149,7 @@
  },
  {
   "id": "Maric",
-  "name": "Король Ферелдена",
-  "name_en": "King of Ferelden",
+  "name_key": "NEXUS_EVENT_KING_MARIC_CHASE_TITLE_KEY",
   "kind": "chase",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_KingMaric",
@@ -1483,8 +1478,7 @@
  },
  {
   "id": "MaskedMayhem",
-  "name": "Суматошный маскарад",
-  "name_en": "Masked Mayhem",
+  "name_key": "NEXUS_EVENT_MASKED_MAYHEM_TITLE_KEY",
   "kind": "chase",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -1836,8 +1830,7 @@
  },
  {
   "id": "SkyHorror",
-  "name": "Событие узла \"Кошмар небесный\"",
-  "name_en": "Sky Horror Nexus Event",
+  "name_key": "NEXUS_EVENT_BLACK_FRIDAY_TITLE_KEY",
   "kind": "chase",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_SkyHorror",
@@ -2103,8 +2096,7 @@
  },
  {
   "id": "Tallis",
-  "name": "Поход кунари",
-  "name_en": "Qunari Quest",
+  "name_key": "NEXUS_QUNARI_QUEST_NOVEMBER_13_TITLE_KEY",
   "kind": "chase",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_Tallis",
@@ -2508,8 +2500,7 @@
  },
  {
   "id": "WinterWardenland",
-  "name": "Узел: Зимняя Стражляндия",
-  "name_en": "Winter Wardenland",
+  "name_key": "NEXUS_EVENT_WINTER_WARDENLAND_TITLE_KEY",
   "kind": "chase",
   "subtitle": "Nexus_Seasonal_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -3026,8 +3017,7 @@
  },
  {
   "id": "WoodlandCritters",
-  "name": "Узел \"Природа\"",
-  "name_en": "Nature Nexus",
+  "name_key": "NEXUS_EVENT_WOODLAND_CRITTERS_TITLE_KEY",
   "kind": "chase",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -3406,8 +3396,7 @@
  },
  {
   "id": "WoodlandSpirits",
-  "name": "Лесные духи",
-  "name_en": "Woodland Spirits",
+  "name_key": "HODA_NEXUS_EVENT_WOODLAND_SPIRITS_TITLE",
   "kind": "chase",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -3727,8 +3716,7 @@
  },
  {
   "id": "ADreamMadeReality",
-  "name": "Сон, ставший явью",
-  "name_en": "A Dream Made Reality",
+  "name_key": "NEXUS_EVENT_DREAM_MADE_REALITY_TITLE_KEY",
   "kind": "boss",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -4047,8 +4035,7 @@
  },
  {
   "id": "BreachOpens",
-  "name": "Брешь",
-  "name_en": "The Breach Opens",
+  "name_key": "NEXUS_THE_BREACH_OPENS_NOVEMBER_20_TITLE_KEY",
   "kind": "boss",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -4320,8 +4307,7 @@
  },
  {
   "id": "BreachOpensAgain",
-  "name": "Брешь открывается вновь",
-  "name_en": "The Breach Opens Again",
+  "name_key": "HODA_NEXUS_EVENT_BREACH_OPENS_AGAIN_TITLE",
   "kind": "boss",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -4657,8 +4643,7 @@
  },
  {
   "id": "Halloween2015",
-  "name": "Событие: задание \"Хэллоуин\"",
-  "name_en": "Halloween Quest Event",
+  "name_key": "NEXUS_EVENT_HALLOWEEN_2015_BOSS_TITLE_KEY",
   "kind": "boss",
   "subtitle": "Nexus_Seasonal_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -4991,8 +4976,7 @@
  },
  {
   "id": "SeekersDuty",
-  "name": "Долг Искателя",
-  "name_en": "Seeker's Duty",
+  "name_key": "NEXUS_SEEKERS_DUTY_NOVEMBER_20_TITLE_KEY",
   "kind": "boss",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_HighSeekerAldren",
@@ -5179,8 +5163,7 @@
  },
  {
   "id": "UrnOfSacredAshes",
-  "name": "Урна Священного Праха",
-  "name_en": "The Urn of Sacred Ashes",
+  "name_key": "NEXUS_EVENT_URNOFSACREDASHES_BOSS_TITLE_KEY",
   "kind": "boss",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_Kolgrim",
@@ -5365,8 +5348,7 @@
  },
  {
   "id": "LastStraw",
-  "name": "Последняя капля",
-  "name_en": "The Last Straw...",
+  "name_key": "NEXUS_EVENT_LAST_STRAW_GAUNTLET_TITLE_KEY",
   "kind": "gauntlet",
   "subtitle": "Nexus_Gauntlet_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -5552,8 +5534,7 @@
  },
  {
   "id": "WitchWilds",
-  "name": "Ведьма из Диких земель",
-  "name_en": "The Witch of the Wilds",
+  "name_key": "NEXUS_EVENT_WITCH_OF_THE_WILDS_GAUNTLET_TITLE_KEY",
   "kind": "gauntlet",
   "subtitle": "Nexus_Gauntlet_Event_Loc_Key",
   "hub_image": "tex.Interstitial_DragonFlemeth",
@@ -5837,8 +5818,7 @@
  },
  {
   "id": "Thanksgiving2014",
-  "name": "Событие: Благодарственное задание",
-  "name_en": "Thanksgiving Quest Event",
+  "name_key": "NEXUS_EVENT_THANKSGIVING_TITLE_KEY",
   "kind": "raid",
   "subtitle": "Nexus_Raid_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -5926,8 +5906,7 @@
  },
  {
   "id": "AnvilVoid",
-  "name": "Наковальня Пустоты",
-  "name_en": "Anvil Of The Void",
+  "name_key": "NEXUS_EVENT_ANVIL_OF_THE_VOID_TITLE_KEY",
   "kind": "map",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -6338,8 +6317,7 @@
  },
  {
   "id": "BanishedPlane",
-  "name": "Забытая равнина",
-  "name_en": "The Banished Plane",
+  "name_key": "NEXUS_BANISHED_PLANE_TITLE_KEY",
   "kind": "map",
   "subtitle": "NEXUS_EVENT_TYPE_KEY_TITLE",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -6684,8 +6662,7 @@
  },
  {
   "id": "DoubleXP2015",
-  "name": "Событие \"Удвоенный опыт\"",
-  "name_en": "Double Exp Event",
+  "name_key": "NEXUS_EVENT_EXP_NUGS_TITLE_KEY",
   "kind": "map",
   "subtitle": "NEXUS_EVENT_TYPE_KEY_TITLE",
   "hub_image": "tex.NexusEvent_XP",
@@ -6727,8 +6704,7 @@
  },
  {
   "id": "GiantWisps2304",
-  "name": "Событие: задание \"Гигантские огоньки\"",
-  "name_en": "Giant Wisp Quest Event",
+  "name_key": "NEXUS_EVENT_GIANT_WISP_TITLE_KEY",
   "kind": "map",
   "subtitle": "NEXUS_EVENT_TYPE_KEY_TITLE",
   "hub_image": "tex.NexusEvent_Wisp",
@@ -6826,8 +6802,7 @@
  },
  {
   "id": "Giants2302",
-  "name": "Событие: задание \"Гиганты\"",
-  "name_en": "Giants Quest Event",
+  "name_key": "NEXUS_EVENT_GIANT_TITLE_KEY",
   "kind": "map",
   "subtitle": "NEXUS_EVENT_TYPE_KEY_TITLE",
   "hub_image": "tex.Interstitial_GiantWisps",
@@ -6891,8 +6866,7 @@
  },
  {
   "id": "PotionDrop2015",
-  "name": "Событие \"Зелья\"",
-  "name_en": "Potion Drop Event",
+  "name_key": "NEXUS_EVENT_POTION_DROP_TITLE_KEY",
   "kind": "map",
   "subtitle": "NEXUS_EVENT_TYPE_KEY_TITLE",
   "hub_image": "tex.NexusEvent_RevivePotionEvent",
@@ -6935,8 +6909,7 @@
  },
  {
   "id": "WesternApproachInquisition",
-  "name": "Западный предел: инквизиция поднимает голову",
-  "name_en": "Western Approach: Inquisition Rising",
+  "name_key": "NEXUS_EVENT_WESTERN_APPROACH_INQUISITION_RISING_TITLE_KEY",
   "kind": "map",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -7358,8 +7331,7 @@
  },
  {
   "id": "WesternApproachRedLyrium",
-  "name": "Западный предел: красным по белому",
-  "name_en": "Western Approach: Written in Red",
+  "name_key": "NEXUS_EVENT_WESTERN_APPROACH_WRITTEN_IN_RED_TITLE_KEY",
   "kind": "map",
   "subtitle": "Limited_Time_Event_Loc_Key",
   "hub_image": "tex.Interstitial_RedLyriumMeredith",
@@ -7781,8 +7753,7 @@
  },
  {
   "id": "PHnT",
-  "name": "Нечестивая защита",
-  "name_en": "Unholy Defense",
+  "name_key": "EVENT_NEXUS_PUZZLE_PHNT_EVENT_TITLE_KEY",
   "kind": "puzzle",
   "subtitle": "Nexus_Puzzle_Event_Loc_Key",
   "hub_image": "tex.Interstitial_GenericAnnouncement",
@@ -8036,8 +8007,7 @@
  },
  {
   "id": "DailyMonday",
-  "name": "Событие понедельника: \"красные\"",
-  "name_en": "Monday Event: Red Faction",
+  "name_key": "NEXUS_EVENT_MONDAY_RED_FACTION_DAILY_TITLE_KEY",
   "kind": "daily",
   "weekday": 1,
   "subtitle": "Nexus_Daily_Event_Loc_Key",
@@ -8271,8 +8241,7 @@
  },
  {
   "id": "DailyTuesday",
-  "name": "Событие вторника: \"синие\"",
-  "name_en": "Tuesday Event: Blue Faction",
+  "name_key": "NEXUS_EVENT_TUESDAY_BLUE_FACTION_DAILY_TITLE_KEY",
   "kind": "daily",
   "weekday": 2,
   "subtitle": "Nexus_Daily_Event_Loc_Key",
@@ -8506,8 +8475,7 @@
  },
  {
   "id": "DailyWednesday",
-  "name": "Событие среды: \"черные\"",
-  "name_en": "Wednesday Event: Black Faction",
+  "name_key": "NEXUS_EVENT_WEDNESDAY_BLACK_FACTION_DAILY_TITLE_KEY",
   "kind": "daily",
   "weekday": 3,
   "subtitle": "Nexus_Daily_Event_Loc_Key",
@@ -8741,8 +8709,7 @@
  },
  {
   "id": "DailyThursday",
-  "name": "Событие четверга: \"белые\"",
-  "name_en": "Thursday Event: White Faction",
+  "name_key": "NEXUS_EVENT_THURSDAY_WHITE_FACTION_DAILY_TITLE_KEY",
   "kind": "daily",
   "weekday": 4,
   "subtitle": "Nexus_Daily_Event_Loc_Key",
@@ -8976,8 +8943,7 @@
  },
  {
   "id": "DailyFriday",
-  "name": "Событие пятницы: для всех фракций",
-  "name_en": "Friday Event: Multi-faction",
+  "name_key": "NEXUS_EVENT_FRIDAY_MULTIFACTION_DAILY_TITLE_KEY",
   "kind": "daily",
   "weekday": 5,
   "subtitle": "Nexus_Daily_Event_Loc_Key",
@@ -9208,8 +9174,7 @@
  },
  {
   "id": "DailySaturday",
-  "name": "Субботнее событие: огоньки",
-  "name_en": "Saturday Event: Wisps",
+  "name_key": "NEXUS_EVENT_SATURDAY_WISP_DAILY_TITLE_KEY",
   "kind": "daily",
   "weekday": 6,
   "subtitle": "Nexus_Daily_Event_Loc_Key",
@@ -9442,8 +9407,7 @@
  },
  {
   "id": "DailySunday",
-  "name": "Воскр. событие: золото и опыт",
-  "name_en": "Sunday Event: Gold and XP",
+  "name_key": "NEXUS_EVENT_SUNDAY_GOLDXP_DAILY_TITLE_KEY",
   "kind": "daily",
   "weekday": 7,
   "subtitle": "Nexus_Daily_Event_Loc_Key",

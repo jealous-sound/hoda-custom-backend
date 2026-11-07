@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "balance_note_ru": "Каталог магазина сервер отдавал удалённо, и в дампе его нет. Названия паков взяты из локализации 5.4.4. Цены, виденные в записях, сохранены; все остальные цены, шансы, состав, расписание и описания заданы как локальный баланс. Лестница самоцветов восстановлена точно из строк локализации.",
+  "balance_note": "The server sent the store catalog remotely and the dump lacks it. Pack names come from the 5.4.4 localization. Prices seen in recordings are kept; every other price, odds, contents, schedule and description is local balance. The gem ladder is restored exactly from the localization strings.",
   "flash_days": 7,
   "vouchers": [
     {
@@ -103,7 +103,8 @@
     {
       "id": "tutorial_consume",
       "kind": "hero",
-      "loc_id": "TUTORIAL_CONSUME",
+      "name_key": "HODA_TUTORIAL_CONSUME_PACK_NAME",
+      "info_key": "HODA_TUTORIAL_CONSUME_PACK_INFO",
       "category": "UNITS",
       "order": 5,
       "header": "cache:tex.Store_HeaderBGGoldPack",
@@ -116,7 +117,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Для обучения",
+          "text_key": "ROSTER_FILTER_TUTORIAL",
           "rarity": 0
         }
       ],
@@ -142,14 +143,14 @@
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
       "gear_max_rarity": 3,
-      "name_ru": "Набор для обучения",
-      "tutorial_only": true,
-      "info_ru": "Бесплатная пара героев, чтобы научиться поглощению."
+      "tutorial_only": true
     },
     {
       "id": "recruit",
       "kind": "hero",
-      "loc_id": "ITEM_BRONZE_IDENTIFIER",
+      "name_key": "ITEM_BRONZE_IDENTIFIER_PACK_NAME",
+      "info_key": "ITEM_BRONZE_IDENTIFIER_PACK_INFO",
+      "description_key": "ITEM_BRONZE_IDENTIFIER_PACK_DESCRIPTION",
       "category": "UNITS",
       "order": 10,
       "header": "cache:tex.Store_HeaderBGBronzePack",
@@ -187,14 +188,14 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "recruit",
-      "info_ru": "Дает 1 героя и шанс на 1 руну. Как минимум обычный боец; есть шанс на необычного, редкого, эпического или легендарного."
+      "gear_max_rarity": 3
     },
     {
       "id": "soldier",
       "kind": "hero",
-      "loc_id": "ITEM_SILVER_IDENTIFIER",
+      "name_key": "ITEM_SILVER_IDENTIFIER_PACK_NAME",
+      "info_key": "ITEM_SILVER_IDENTIFIER_PACK_INFO",
+      "description_key": "ITEM_SILVER_IDENTIFIER_PACK_DESCRIPTION",
       "category": "UNITS",
       "order": 20,
       "header": "cache:tex.Store_HeaderBGSilverPack",
@@ -232,14 +233,14 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "soldier",
-      "info_ru": "Дает 1 героя или крупное существо и шанс на 1 руну. Как минимум необычный боец; есть шанс на редкого, эпического или легендарного."
+      "gear_max_rarity": 3
     },
     {
       "id": "champion",
       "kind": "hero",
-      "loc_id": "ITEM_GOLD_IDENTIFIER",
+      "name_key": "ITEM_GOLD_IDENTIFIER_PACK_NAME",
+      "info_key": "ITEM_GOLD_IDENTIFIER_PACK_INFO",
+      "description_key": "ITEM_GOLD_IDENTIFIER_PACK_DESCRIPTION",
       "category": "UNITS",
       "order": 30,
       "header": "cache:tex.Store_HeaderChampionPack",
@@ -257,7 +258,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Легендарный не позже 4-го",
+          "text_key": "HODA_STORE_BULLET_LEGENDARY_BY_FOURTH",
           "rarity": 5
         }
       ],
@@ -282,14 +283,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "champion",
-      "info_ru": "Дает 1 героя или крупное существо и 1 руну. Как минимум редкий боец; есть шанс на эпического или легендарного."
+      "gear_max_rarity": 3
     },
     {
       "id": "grand_champion",
       "kind": "hero",
-      "loc_id": "GRAND_CHAMPION",
+      "name_key": "HODA_GRAND_CHAMPION_PACK_NAME",
+      "info_key": "HODA_GRAND_CHAMPION_PACK_INFO",
       "category": "UNITS",
       "order": 40,
       "header": "cache:tex.Store_HeaderGrandChampionPack",
@@ -302,11 +302,11 @@
       ],
       "bullets": [
         {
-          "text_ru": "10 наборов по цене 9!",
+          "text_key": "gcp_rotating_text_3",
           "rarity": 0
         },
         {
-          "text_ru": "2 легендарных и 3 эпических гарантировано",
+          "text_key": "HODA_STORE_BULLET_GRAND_CHAMPION",
           "rarity": 5
         }
       ],
@@ -331,14 +331,13 @@
       "rune_count": 10,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Большой набор защитника",
-      "info_ru": "10 наборов защитника: 2 легендарных и 3 эпических героя гарантированы."
+      "gear_max_rarity": 3
     },
     {
       "id": "mercenary",
       "kind": "hero",
-      "loc_id": "MERCENARY",
+      "name_key": "HODA_MERCENARY_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_UNCOMMON",
       "category": "UNITS",
       "order": 50,
       "header": "cache:tex.Store_HeaderBGSilverPack",
@@ -351,7 +350,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 3
         }
       ],
@@ -377,14 +376,13 @@
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
       "gear_max_rarity": 3,
-      "header_tint": "#B070FF",
-      "name_ru": "Набор наемника",
-      "info_ru": "Дает героев: 1. Как минимум необычный боец."
+      "header_tint": "#B070FF"
     },
     {
       "id": "knight",
       "kind": "hero",
-      "loc_id": "KNIGHT",
+      "name_key": "KNIGHT_PACK_NAME",
+      "info_key": "KNIGHT_PACK_INFO",
       "category": "UNITS",
       "order": 60,
       "header": "cache:tex.Store_HeaderBGSilverPack",
@@ -397,7 +395,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 5
         }
       ],
@@ -422,14 +420,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Рыцарский набор",
-      "info_ru": "В наборе — как минимум редкий герой с шансом на эпического или легендарного, в числе которых Сэндал и Великая Чародейка Фиона. Также содержит одну необычную, редкую, эпическую или легендарную руну."
+      "gear_max_rarity": 3
     },
     {
       "id": "commander",
       "kind": "hero",
-      "loc_id": "COMMANDER",
+      "name_key": "HODA_COMMANDER_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 70,
       "header": "cache:tex.Store_HeaderBGGoldPack",
@@ -442,7 +439,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 5
         }
       ],
@@ -467,14 +464,13 @@
       "rune_count": 1,
       "gear_chance_pct": 20,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Набор командора",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "elite",
       "kind": "hero",
-      "loc_id": "ELITE",
+      "name_key": "HODA_ELITE_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_10_EPIC",
       "category": "UNITS",
       "order": 80,
       "header": "cache:tex.Store_HeaderBGSilverPack",
@@ -487,7 +483,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Гарантировано",
+          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
           "rarity": 5
         }
       ],
@@ -513,14 +509,13 @@
       "gear_chance_pct": 50,
       "gear_min_rarity": 3,
       "gear_max_rarity": 5,
-      "header_tint": "#B070FF",
-      "name_ru": "Элитный набор",
-      "info_ru": "Дает героев: 10. Как минимум эпический боец."
+      "header_tint": "#B070FF"
     },
     {
       "id": "iron",
       "kind": "hero",
-      "loc_id": "IRON",
+      "name_key": "IRON_PACK_NAME",
+      "info_key": "IRON_PACK_INFO",
       "category": "UNITS",
       "order": 90,
       "header": "cache:tex.Store_HeaderBGGoldPack",
@@ -534,7 +529,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Гарантировано",
+          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
           "rarity": 5
         }
       ],
@@ -559,14 +554,14 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Железный набор",
-      "info_ru": "Премиальный призовой набор. Гарантированный легендарный герой в одном из 6 наборов!"
+      "gear_max_rarity": 3
     },
     {
       "id": "bloodstone",
       "kind": "hero",
-      "loc_id": "BLOODSTONE",
+      "name_key": "BLOODSTONE_PACK_NAME",
+      "info_key": "BLOODSTONE_PACK_INFO",
+      "description_key": "BLOODSTONE_PACK_DESCRIPTION",
       "category": "UNITS",
       "order": 100,
       "header": "cache:tex.Store_HeaderBGGoldPack",
@@ -580,7 +575,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Гарантировано",
+          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
           "rarity": 5
         }
       ],
@@ -605,14 +600,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Кровавиковый набор",
-      "info_ru": "Потрясающий призовой набор. Как минимум однозвездочный легендарный герой с шансом получить вместо него двух- или трехзвездочного!"
+      "gear_max_rarity": 3
     },
     {
       "id": "lyrium_vein",
       "kind": "hero",
-      "loc_id": "LYRIUM_MINE",
+      "name_key": "HODA_LYRIUM_MINE_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 110,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -626,7 +620,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 5
         }
       ],
@@ -651,14 +645,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Лириумная жила",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "starter_conversion",
       "kind": "hero",
-      "loc_id": "MINNOW_CONVERSION_V2",
+      "name_key": "HODA_MINNOW_CONVERSION_V2_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_3_RARE",
       "category": "UNITS",
       "order": 120,
       "header": "cache:tex.Store_HeaderBGBronzePack",
@@ -671,7 +664,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Особое предложение!",
+          "text_key": "INTERSTITIAL_SQUAD_PACK_5_15_2014_TITLE",
           "rarity": 0
         }
       ],
@@ -696,14 +689,14 @@
       "rune_count": 3,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Стартовый набор",
-      "info_ru": "Дает героев: 3. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "starter_beasts",
       "kind": "hero",
-      "loc_id": "STARTER_PACK_BEASTS",
+      "name_key": "STARTER_PACK_BEASTS_PACK_NAME",
+      "info_key": "STARTER_PACK_BEASTS_PACK_INFO",
+      "description_key": "STARTER_PACK_BEASTS_PACK_DESCRIPTION",
       "category": "UNITS",
       "order": 130,
       "header": "cache:tex.Store_HeaderBGBronzePack",
@@ -714,12 +707,7 @@
           "price": 275
         }
       ],
-      "bullets": [
-        {
-          "text_ru": "Особое предложение!",
-          "rarity": 0
-        }
-      ],
+      "bullets": [],
       "schedule": null,
       "rotation": null,
       "opened_counter": 2,
@@ -745,14 +733,13 @@
       "fixed_heroes": [
         "UNIT_BARKSPAWN",
         "UNIT_VARTERRAL"
-      ],
-      "name_ru": "Стартовый набор",
-      "info_ru": "Спешите! Легендарный Моровой, эпический гигант вартеррал, три редких героя и пять легендарных рун. Скидка более 50 %!"
+      ]
     },
     {
       "id": "wisp",
       "kind": "hero",
-      "loc_id": "WISP",
+      "name_key": "WISP_PACK_NAME",
+      "info_key": "WISP_PACK_INFO",
       "category": "UNITS",
       "order": 140,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -765,7 +752,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Для обучения",
+          "text_key": "ROSTER_FILTER_TUTORIAL",
           "rarity": 0
         }
       ],
@@ -791,14 +778,13 @@
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
       "gear_max_rarity": 3,
-      "pool_tag": "WISP",
-      "name_ru": "Набор огоньков",
-      "info_ru": "10 огоньков (редких или лучше). Как минимум 1 эпический с шансом на легендарный."
+      "pool_tag": "WISP"
     },
     {
       "id": "divine_wisp",
       "kind": "hero",
-      "loc_id": "DIVINE_WISP",
+      "name_key": "DIVINE_WISP_PACK_NAME",
+      "info_key": "DIVINE_WISP_PACK_INFO",
       "category": "UNITS",
       "order": 150,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -811,7 +797,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Для обучения",
+          "text_key": "ROSTER_FILTER_TUTORIAL",
           "rarity": 4
         }
       ],
@@ -837,14 +823,14 @@
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
       "gear_max_rarity": 3,
-      "pool_tag": "WISP",
-      "name_ru": "Набор \"Огоньки Верховной жрицы\"",
-      "info_ru": "10 огоньков (редких или лучше), из них как минимум 2 эпических и 1 легендарный."
+      "pool_tag": "WISP"
     },
     {
       "id": "training",
       "kind": "hero",
-      "loc_id": "ITEM_CONSUME_IDENTIFIER",
+      "name_key": "ITEM_CONSUME_IDENTIFIER_PACK_NAME",
+      "info_key": "ITEM_CONSUME_IDENTIFIER_PACK_INFO",
+      "description_key": "ITEM_CONSUME_IDENTIFIER_PACK_DESCRIPTION",
       "category": "UNITS",
       "order": 160,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -857,7 +843,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Для обучения",
+          "text_key": "ROSTER_FILTER_TUTORIAL",
           "rarity": 0
         }
       ],
@@ -883,14 +869,14 @@
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
       "gear_max_rarity": 3,
-      "guaranteed_rare": 1,
-      "name_ru": "Учебный набор",
-      "info_ru": "Дает 1 редкого и 1 необычного героя, чтобы помочь освоить поглощение."
+      "guaranteed_rare": 1
     },
     {
       "id": "free_wisp",
       "kind": "hero",
-      "loc_id": "ITEM_FREE_WISP_PROMO",
+      "name_key": "ITEM_FREE_WISP_PROMO_PACK_NAME",
+      "info_key": "ITEM_FREE_WISP_PROMO_PACK_INFO",
+      "description_key": "ITEM_FREE_WISP_PROMO_PACK_DESCRIPTION",
       "category": "UNITS",
       "order": 170,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -903,7 +889,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Подарок",
+          "text_key": "HODA_STORE_BULLET_GIFT",
           "rarity": 0
         }
       ],
@@ -933,14 +919,13 @@
       "gear_min_rarity": 1,
       "gear_max_rarity": 3,
       "pool_tag": "WISP",
-      "unique_heroes": true,
-      "name_ru": "Бесплатные огоньки",
-      "info_ru": "Дает 4 уникальных редких огонька и 4 редкие руны."
+      "unique_heroes": true
     },
     {
       "id": "booster_blackwhite",
       "kind": "hero",
-      "loc_id": "HERO_BOOSTER_BLACKWHITE",
+      "name_key": "HODA_HERO_BOOSTER_BLACKWHITE_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 180,
       "header": "cache:tex.Store_HeaderBGBlueGreenPack",
@@ -953,7 +938,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
         }
       ],
@@ -978,14 +963,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Усилитель \"черных\" и \"белых\" героев",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "booster_redblue",
       "kind": "hero",
-      "loc_id": "HERO_BOOSTER_REDBLUE",
+      "name_key": "HODA_HERO_BOOSTER_REDBLUE_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 190,
       "header": "cache:tex.Store_HeaderBGBlueGreenPack",
@@ -998,7 +982,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
         }
       ],
@@ -1023,14 +1007,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Усилитель \"красных\" и \"синих\" героев",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "booster_giant",
       "kind": "hero",
-      "loc_id": "HERO_BOOSTER_GIANT",
+      "name_key": "HODA_HERO_BOOSTER_GIANT_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 200,
       "header": "cache:tex.Store_HeaderBGBlueGreenPack",
@@ -1043,7 +1026,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
         }
       ],
@@ -1068,14 +1051,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Усилитель героев-гигантов",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "booster_prestige",
       "kind": "hero",
-      "loc_id": "HERO_BOOSTER_PRESTIGE",
+      "name_key": "HODA_HERO_BOOSTER_PRESTIGE_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_EPIC",
       "category": "UNITS",
       "order": 210,
       "header": "cache:tex.Store_HeaderBGBlueGreenPack",
@@ -1088,7 +1070,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 5
         }
       ],
@@ -1113,14 +1095,14 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Усилитель престижных героев",
-      "info_ru": "Дает героев: 1. Как минимум эпический боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "goat",
       "kind": "hero",
-      "loc_id": "GOAT",
+      "name_key": "GOAT_PACK_NAME",
+      "info_key": "GOAT_PACK_INFO",
+      "description_key": "GOAT_PACK_DESCRIPTION",
       "category": "UNITS",
       "order": 300,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -1132,12 +1114,7 @@
           "price": 1
         }
       ],
-      "bullets": [
-        {
-          "text_ru": "Осторожно, козы!",
-          "rarity": 4
-        }
-      ],
+      "bullets": [],
       "schedule": {
         "start": "04-01",
         "end": "04-14"
@@ -1163,14 +1140,13 @@
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
       "gear_max_rarity": 3,
-      "pool_tag": "GOAT",
-      "name_ru": "Кознабор!",
-      "info_ru": "Есть шанс заполучить обычную, необычную, редкую, эпическую или легендарную КОЗУ!"
+      "pool_tag": "GOAT"
     },
     {
       "id": "nug",
       "kind": "hero",
-      "loc_id": "NUG",
+      "name_key": "HODA_NUG_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 310,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -1184,7 +1160,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Осторожно, наги!",
+          "text_key": "HODA_STORE_BULLET_NUGS",
           "rarity": 4
         }
       ],
@@ -1212,14 +1188,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Набор нагов!",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "dragon",
       "kind": "hero",
-      "loc_id": "DRAGON",
+      "name_key": "HODA_DRAGON_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 320,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -1233,7 +1208,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на дракона",
+          "text_key": "HODA_STORE_BULLET_DRAGON_CHANCE",
           "rarity": 4
         }
       ],
@@ -1261,14 +1236,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Набор драконов!",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "romance",
       "kind": "hero",
-      "loc_id": "ROMANCE",
+      "name_key": "HODA_ROMANCE_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 330,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -1282,7 +1256,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Отрада сердца",
+          "text_key": "HODA_STORE_BULLET_ROMANCE",
           "rarity": 4
         }
       ],
@@ -1310,14 +1284,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Романтический набор!",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "wintersend",
       "kind": "hero",
-      "loc_id": "WINTERSEND",
+      "name_key": "HODA_WINTERSEND_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 340,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -1331,7 +1304,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Украсьте залы",
+          "text_key": "HODA_STORE_BULLET_WINTERSEND",
           "rarity": 4
         }
       ],
@@ -1359,14 +1332,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Набор Венца зимы",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "harvest",
       "kind": "hero",
-      "loc_id": "HARVEST",
+      "name_key": "HODA_HARVEST_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 350,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -1380,7 +1352,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
         }
       ],
@@ -1408,14 +1380,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Набор урожая",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "anniversary",
       "kind": "hero",
-      "loc_id": "ANNIVERSARY",
+      "name_key": "HODA_ANNIVERSARY_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 360,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -1429,7 +1400,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
         }
       ],
@@ -1457,14 +1428,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Юбилейный набор",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "library",
       "kind": "hero",
-      "loc_id": "LIBRARY",
+      "name_key": "HODA_LIBRARY_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 370,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -1478,7 +1448,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
         }
       ],
@@ -1506,14 +1476,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Библиотечный набор",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "mac_tir",
       "kind": "hero",
-      "loc_id": "TEMP_MAC_TIR",
+      "name_key": "HODA_TEMP_MAC_TIR_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 380,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -1526,7 +1495,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 5
         }
       ],
@@ -1554,14 +1523,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Набор \"Мак-Тир\"",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "new_release",
       "kind": "hero",
-      "loc_id": "NEW_RELEASE",
+      "name_key": "HODA_NEW_RELEASE_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
       "category": "UNITS",
       "order": 390,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -1574,7 +1542,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 5
         }
       ],
@@ -1602,14 +1570,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3,
-      "name_ru": "Набор \"Лучшие новинки\"",
-      "info_ru": "Дает героев: 1. Как минимум редкий боец."
+      "gear_max_rarity": 3
     },
     {
       "id": "heroic",
       "kind": "hero",
-      "loc_id": "MTX_PACK_HEROIC",
+      "name_key": "MTX_PACK_HEROIC_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_5_RARE",
       "category": "FEATURED",
       "order": 400,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -1622,7 +1589,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Гарантировано",
+          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
           "rarity": 5
         }
       ],
@@ -1647,14 +1614,13 @@
       "rune_count": 5,
       "gear_chance_pct": 40,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 5,
-      "name_ru": "Героический набор",
-      "info_ru": "Дает героев: 5. Как минимум редкий боец."
+      "gear_max_rarity": 5
     },
     {
       "id": "legendary",
       "kind": "hero",
-      "loc_id": "MTX_PACK_LEGENDARY",
+      "name_key": "MTX_PACK_LEGENDARY_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_5_RARE",
       "category": "FEATURED",
       "order": 410,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -1667,7 +1633,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Гарантировано",
+          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
           "rarity": 5
         }
       ],
@@ -1692,14 +1658,13 @@
       "rune_count": 5,
       "gear_chance_pct": 40,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 5,
-      "name_ru": "Легендарный набор",
-      "info_ru": "Дает героев: 5. Как минимум редкий боец."
+      "gear_max_rarity": 5
     },
     {
       "id": "ultra",
       "kind": "hero",
-      "loc_id": "MTX_PACK_ULTRA",
+      "name_key": "MTX_PACK_ULTRA_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_5_EPIC",
       "category": "FEATURED",
       "order": 420,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -1712,7 +1677,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Гарантировано",
+          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
           "rarity": 5
         }
       ],
@@ -1737,14 +1702,13 @@
       "rune_count": 5,
       "gear_chance_pct": 40,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 5,
-      "name_ru": "Ультранабор",
-      "info_ru": "Дает героев: 5. Как минимум эпический боец."
+      "gear_max_rarity": 5
     },
     {
       "id": "ultimate",
       "kind": "hero",
-      "loc_id": "ITEM_ULTIMATE_IDENTIFIER_V2",
+      "name_key": "HODA_ITEM_ULTIMATE_IDENTIFIER_V2_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_10_EPIC",
       "category": "FEATURED",
       "order": 430,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -1757,7 +1721,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Гарантировано",
+          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
           "rarity": 5
         }
       ],
@@ -1782,14 +1746,13 @@
       "rune_count": 10,
       "gear_chance_pct": 40,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 5,
-      "name_ru": "Супернабор",
-      "info_ru": "Дает героев: 10. Как минимум эпический боец."
+      "gear_max_rarity": 5
     },
     {
       "id": "special",
       "kind": "hero",
-      "loc_id": "SPECIAL",
+      "name_key": "HODA_SPECIAL_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_3_RARE",
       "category": "FEATURED",
       "order": 440,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -1802,7 +1765,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Гарантировано",
+          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
           "rarity": 5
         }
       ],
@@ -1827,14 +1790,13 @@
       "rune_count": 3,
       "gear_chance_pct": 40,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 5,
-      "name_ru": "Особый набор",
-      "info_ru": "Дает героев: 3. Как минимум редкий боец."
+      "gear_max_rarity": 5
     },
     {
       "id": "flash",
       "kind": "hero",
-      "loc_id": "FLASH",
+      "name_key": "FLASH_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 500,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -1847,7 +1809,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -1875,14 +1837,13 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Эксклюзивный набор",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "flash_black_friday",
       "kind": "hero",
-      "loc_id": "FLASH_BLACK_FRIDAY",
+      "name_key": "HODA_FLASH_BLACK_FRIDAY_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 501,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -1895,7 +1856,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -1923,14 +1884,13 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Черная пятница",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "flash_dragon_hunt",
       "kind": "hero",
-      "loc_id": "FLASH_DRAGON_HUNT",
+      "name_key": "HODA_FLASH_DRAGON_HUNT_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 502,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -1943,7 +1903,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -1971,14 +1931,13 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Охота на дракона",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "flash_exclusively",
       "kind": "hero",
-      "loc_id": "FLASH_EXCLUSIVELY",
+      "name_key": "HODA_FLASH_EXCLUSIVELY_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 503,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -1991,7 +1950,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -2019,14 +1978,13 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Исключительно",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "flash_fine_dwarven_crafts",
       "kind": "hero",
-      "loc_id": "FLASH_FINE_DWARVEN_CRAFTS",
+      "name_key": "HODA_FLASH_FINE_DWARVEN_CRAFTS_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 504,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -2039,7 +1997,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -2067,14 +2025,13 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Искусная гномья работа",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "flash_fireworks",
       "kind": "hero",
-      "loc_id": "FLASH_FIREWORKS",
+      "name_key": "HODA_FLASH_FIREWORKS_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 505,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -2087,7 +2044,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -2115,14 +2072,13 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Фейерверк",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "flash_good_company",
       "kind": "hero",
-      "loc_id": "FLASH_GOOD_COMPANY",
+      "name_key": "HODA_FLASH_GOOD_COMPANY_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 506,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -2135,7 +2091,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -2163,14 +2119,13 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Хорошая компания",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "flash_star_struck",
       "kind": "hero",
-      "loc_id": "FLASH_STAR_STRUCK",
+      "name_key": "HODA_FLASH_STAR_STRUCK_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 507,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -2183,7 +2138,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -2211,14 +2166,13 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Звездная болезнь",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "flash_stocking_stuffers",
       "kind": "hero",
-      "loc_id": "FLASH_STOCKING_STUFFERS",
+      "name_key": "HODA_FLASH_STOCKING_STUFFERS_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 508,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -2231,7 +2185,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -2259,14 +2213,13 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Новогодние подарки",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "flash_university_supplies",
       "kind": "hero",
-      "loc_id": "FLASH_UNIVERSITY_SUPPLIES",
+      "name_key": "HODA_FLASH_UNIVERSITY_SUPPLIES_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 509,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -2279,7 +2232,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -2307,14 +2260,13 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Запасы университета",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "flash_valentines_gifts",
       "kind": "hero",
-      "loc_id": "FLASH_VALENTINES_GIFTS",
+      "name_key": "HODA_FLASH_VALENTINES_GIFTS_PACK_NAME",
+      "info_key": "HODA_STORE_HERO_PACK_INFO_2_RARE",
       "category": "FEATURED",
       "order": 510,
       "header": "cache:tex.Store_HeaderBGFeaturedPack",
@@ -2327,7 +2279,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Только на этой неделе!",
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
           "rarity": 4
         }
       ],
@@ -2355,14 +2307,14 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4,
-      "name_ru": "Дары святого Валентина",
-      "info_ru": "Дает героев: 2. Как минимум редкий боец."
+      "gear_max_rarity": 4
     },
     {
       "id": "speed_kills",
       "kind": "rune",
-      "loc_id": "SPEED_KILLS_RUNE",
+      "name_key": "SPEED_KILLS_RUNE_PACK_NAME",
+      "info_key": "SPEED_KILLS_RUNE_PACK_INFO",
+      "description_key": "SPEED_KILLS_RUNE_PACK_DESCRIPTION",
       "category": "ITEMS",
       "order": 610,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -2373,12 +2325,7 @@
           "price": 13
         }
       ],
-      "bullets": [
-        {
-          "text_ru": "Гарантирована руна скорости!",
-          "rarity": 0
-        }
-      ],
+      "bullets": [],
       "schedule": null,
       "rotation": null,
       "slots": [
@@ -2407,14 +2354,14 @@
           "min_rarity": 4,
           "max_rarity": 5
         }
-      ],
-      "name_ru": "Рунный набор \"Быстрота\"",
-      "info_ru": "Как минимум одна легендарная (а при удаче — сверхлегендарная) руна скорости. Также содержит еще две руны силы, здоровья или скорости, каждая из которых может быть эпической или легендарной. Ограничение — 15 в день."
+      ]
     },
     {
       "id": "ancient_lore",
       "kind": "rune",
-      "loc_id": "ANCIENT_LORE_RUNE",
+      "name_key": "ANCIENT_LORE_RUNE_PACK_NAME",
+      "info_key": "ANCIENT_LORE_RUNE_PACK_INFO",
+      "description_key": "ANCIENT_LORE_RUNE_PACK_DESCRIPTION",
       "category": "ITEMS",
       "order": 620,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -2425,12 +2372,7 @@
           "price": 13
         }
       ],
-      "bullets": [
-        {
-          "text_ru": "3 руны знаний",
-          "rarity": 0
-        }
-      ],
+      "bullets": [],
       "schedule": null,
       "rotation": null,
       "slots": [
@@ -2455,14 +2397,14 @@
           "min_rarity": 4,
           "max_rarity": 5
         }
-      ],
-      "name_ru": "Рунный набор \"Легенда\"",
-      "info_ru": "Как минимум одна легендарная (а при удаче — сверхлегендарная) руна знания. Также содержит еще две руны знания, каждая из которых может быть эпической или легендарной. Ограничение — 15 в день."
+      ]
     },
     {
       "id": "grab_bag",
       "kind": "rune",
-      "loc_id": "GRAB_BAG_RUNE",
+      "name_key": "GRAB_BAG_RUNE_PACK_NAME",
+      "info_key": "GRAB_BAG_RUNE_PACK_INFO",
+      "description_key": "GRAB_BAG_RUNE_PACK_DESCRIPTION",
       "category": "ITEMS",
       "order": 630,
       "header": "cache:tex.Store_HeaderBGGoldPack",
@@ -2473,12 +2415,7 @@
           "price": 10000
         }
       ],
-      "bullets": [
-        {
-          "text_ru": "3 редкие или лучше руны",
-          "rarity": 0
-        }
-      ],
+      "bullets": [],
       "schedule": null,
       "rotation": null,
       "slots": [
@@ -2509,14 +2446,14 @@
           "min_rarity": 3,
           "max_rarity": 5
         }
-      ],
-      "name_ru": "Рунный набор \"Ассорти\"",
-      "info_ru": "Три как минимум редкие руны, одна из которых — руна знания, а две другие — руны силы, здоровья, скорости или контроля. Ограничение — 25 в день."
+      ]
     },
     {
       "id": "legendary_runes",
       "kind": "rune",
-      "loc_id": "LEGENDARY_RUNE",
+      "name_key": "LEGENDARY_RUNE_PACK_NAME",
+      "info_key": "LEGENDARY_RUNE_PACK_INFO",
+      "description_key": "LEGENDARY_RUNE_PACK_DESCRIPTION",
       "category": "ITEMS",
       "order": 640,
       "header": "cache:tex.Store_HeaderChampionPack",
@@ -2527,12 +2464,7 @@
           "price": 120
         }
       ],
-      "bullets": [
-        {
-          "text_ru": "3 легендарные руны",
-          "rarity": 5
-        }
-      ],
+      "bullets": [],
       "schedule": null,
       "rotation": null,
       "slots": [
@@ -2551,14 +2483,13 @@
           "min_rarity": 5,
           "max_rarity": 5
         }
-      ],
-      "name_ru": "Набор легендарных рун",
-      "info_ru": "В этом наборе — 3 гарантированные легендарные руны."
+      ]
     },
     {
       "id": "prestige_runes",
       "kind": "rune",
-      "loc_id": "PRESTIGE_RUNE",
+      "name_key": "HODA_PRESTIGE_RUNE_PACK_NAME",
+      "info_key": "HODA_PRESTIGE_RUNE_PACK_INFO",
       "category": "ITEMS",
       "order": 650,
       "header": "cache:tex.Store_HeaderChampionPack",
@@ -2571,7 +2502,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "1 престижная руна",
+          "text_key": "HODA_STORE_BULLET_PRESTIGE_RUNE",
           "rarity": 5
         }
       ],
@@ -2583,14 +2514,13 @@
           "min_rarity": 7,
           "max_rarity": 7
         }
-      ],
-      "name_ru": "Набор престижных рун",
-      "info_ru": "Одна престижная руна для особой ячейки отряда."
+      ]
     },
     {
       "id": "peasant",
       "kind": "gear",
-      "loc_id": "PEASANT_GEAR",
+      "name_key": "HODA_PEASANT_GEAR_PACK_NAME",
+      "info_key": "HODA_STORE_GEAR_PACK_INFO_1",
       "category": "ITEMS",
       "order": 700,
       "header": "cache:tex.Store_HeaderBGBronzePack",
@@ -2603,7 +2533,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 2
         }
       ],
@@ -2612,14 +2542,13 @@
       "count": 1,
       "min_rarity": 1,
       "max_rarity": 2,
-      "tome_chance_pct": 0,
-      "name_ru": "Набор снаряжения крестьянина",
-      "info_ru": "1 предмет снаряжения."
+      "tome_chance_pct": 0
     },
     {
       "id": "novice",
       "kind": "gear",
-      "loc_id": "NOVICE_GEAR",
+      "name_key": "HODA_NOVICE_GEAR_PACK_NAME",
+      "info_key": "HODA_STORE_GEAR_PACK_INFO_1",
       "category": "ITEMS",
       "order": 710,
       "header": "cache:tex.Store_HeaderBGGreenPack",
@@ -2632,7 +2561,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 3
         }
       ],
@@ -2641,14 +2570,13 @@
       "count": 1,
       "min_rarity": 1,
       "max_rarity": 3,
-      "tome_chance_pct": 0,
-      "name_ru": "Набор снаряжения новичка",
-      "info_ru": "1 предмет снаряжения."
+      "tome_chance_pct": 0
     },
     {
       "id": "journeyman",
       "kind": "gear",
-      "loc_id": "JOURNEYMAN_GEAR",
+      "name_key": "HODA_JOURNEYMAN_GEAR_PACK_NAME",
+      "info_key": "HODA_STORE_GEAR_PACK_INFO_2",
       "category": "ITEMS",
       "order": 720,
       "header": "cache:tex.Store_HeaderChampionPack",
@@ -2661,7 +2589,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
         }
       ],
@@ -2670,14 +2598,13 @@
       "count": 2,
       "min_rarity": 2,
       "max_rarity": 3,
-      "tome_chance_pct": 2,
-      "name_ru": "Набор снаряжения Бродяги",
-      "info_ru": "2 предмета снаряжения."
+      "tome_chance_pct": 2
     },
     {
       "id": "merchant",
       "kind": "gear",
-      "loc_id": "MERCHANT_GEAR",
+      "name_key": "HODA_MERCHANT_GEAR_PACK_NAME",
+      "info_key": "HODA_STORE_GEAR_PACK_INFO_3",
       "category": "ITEMS",
       "order": 730,
       "header": "cache:tex.Store_HeaderChampionPack",
@@ -2690,7 +2617,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Шанс на",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
         }
       ],
@@ -2699,14 +2626,13 @@
       "count": 3,
       "min_rarity": 2,
       "max_rarity": 4,
-      "tome_chance_pct": 5,
-      "name_ru": "Набор снаряжения торговца",
-      "info_ru": "3 предмета снаряжения."
+      "tome_chance_pct": 5
     },
     {
       "id": "masterwork",
       "kind": "gear",
-      "loc_id": "MASTERWORK_GEAR",
+      "name_key": "HODA_MASTERWORK_GEAR_PACK_NAME",
+      "info_key": "HODA_STORE_GEAR_PACK_INFO_3",
       "category": "ITEMS",
       "order": 740,
       "header": "cache:tex.Store_HeaderChampionPack",
@@ -2719,7 +2645,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Гарантировано",
+          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
           "rarity": 5
         }
       ],
@@ -2728,14 +2654,13 @@
       "count": 3,
       "min_rarity": 3,
       "max_rarity": 5,
-      "tome_chance_pct": 10,
-      "name_ru": "Шедевральный набор снаряжения",
-      "info_ru": "3 предмета снаряжения."
+      "tome_chance_pct": 10
     },
     {
       "id": "armory",
       "kind": "gear",
-      "loc_id": "ARMORY_GEAR",
+      "name_key": "HODA_ARMORY_GEAR_PACK_NAME",
+      "info_key": "HODA_STORE_GEAR_PACK_INFO_5",
       "category": "ITEMS",
       "order": 750,
       "header": "cache:tex.Store_HeaderBGGoldPack",
@@ -2748,7 +2673,7 @@
       ],
       "bullets": [
         {
-          "text_ru": "Гарантировано",
+          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
           "rarity": 5
         }
       ],
@@ -2757,9 +2682,7 @@
       "count": 5,
       "min_rarity": 4,
       "max_rarity": 6,
-      "tome_chance_pct": 25,
-      "name_ru": "Набор \"Арсенал\"",
-      "info_ru": "5 предметов снаряжения."
+      "tome_chance_pct": 25
     }
   ]
 }
