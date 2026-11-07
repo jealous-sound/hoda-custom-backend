@@ -106,7 +106,8 @@ these fields keep the server's values:
 - `campaign`: completions and losses.
 - `missions`: `claimed` and `counters`; `progress` is rewritten from the server's own high-water marks.
 - `roster`: heroes the server has not granted are dropped, a hero the upload leaves out is put back (heroes leave
-  only through `consume`), and every hero keeps the server's tier, level, `xp`, `consume_xp` and `ascended` flag.
+  only through `consume` and `fortify`), and every hero keeps the server's tier, level, `xp`, `consume_xp`,
+  `ascended` flag and `fortify` slots (absent when none is filled).
 - `pvp`: trophies, best trophies, wins, losses, streaks, trophies won, defense results and timer, the trophy hold
   timers, the day's next-opponent count (`nexts_used`, `nexts_day`) and the battle history. The client keeps
   `trophies_seen` and its event display.
@@ -129,6 +130,8 @@ Everything that grants or spends goes through `POST /v1/players/{id}/actions`:
 | `battle` | `battle_id`, `won`, `crit_gold` | replays the started battle and pays the server's result: first win, mastery, challenge or grind rewards from `campaign_maps.json`; PvP gold and XP by the opponent's level, trophies, streaks and history, then due defenses, event banners per win and milestones once; Nexus escrow of gold, XP, potions and a unit roll |
 | `nexus_award` / `nexus_reset` | | pays the escrow and rolls the units / abandons the run |
 | `consume` | `target`, `seeds` | consumes seed heroes that are in no squad into the target: hero XP, consume XP and tier-ups from `consume_tables.json`; the seeds and their gear are gone |
+| `fortify` | `parent`, `slots: [{"index", "unit"}]` | sacrifices heroes that are in no squad into the parent's open fortify slots (the progression's fortify column below its consume level); the same hero combines into a higher tier; the sacrificed heroes and their gear are gone |
+| `remove_fortify` | `parent`, `index` (`-1` for every filled slot) | charges `remove_gem_cost` from `fortify_tables.json` per child and gives each back as a new level 1 hero, in slot order |
 | `pvp_defend` | | runs the simulated defenses due since the last check (at most three); the client sends it at startup |
 | `nexus_unlock` | `event` | spends the event's keys |
 | `mission_claim` | `mission` | once per mission; campaign, level and map stats are checked against the server's own state |
@@ -151,7 +154,7 @@ server has seen its stat reach the target, even if it later drops.
 
 The server decides every battle by replaying the client's deterministic simulation. `internal/battle` is a Go port of
 the client's `source/battle_sim.c` with the data it reads: hero stats by tier and level, consume crit chance,
-ascension, intrinsic passives, gear and rune effects, ability recipes (the built-in table comes from the client's
+ascension, fortify bonuses from `fortify_tables.json`, intrinsic passives, gear and rune effects, ability recipes (the built-in table comes from the client's
 `tests/golden/battle_recipes.json`), campaign and Nexus rosters, game changers and PvP opponents. Float math stays in
 float32 with every product rounded before it is added, so results do not depend on the CPU fusing multiply-adds.
 
@@ -165,7 +168,7 @@ Battle inputs in `battle_start` are the cells the client is about to simulate:
 
 | Field | |
 | --- | --- |
-| `squad` | `{"units": [{"slot", "instance_id", "id", "tier", "level", "consume_xp", "ascended", "gear": [5 ids]}], "runes": [def ids]}` |
+| `squad` | `{"units": [{"slot", "instance_id", "id", "tier", "level", "consume_xp", "ascended", "gear": [5 ids], "fortify": [{"slot", "id", "tier", "ascended"}]}], "runes": [def ids]}`; `fortify` only for a fortified hero |
 | `rune_ids` | the uuids of the squad's active runes, in slot order |
 | `enemy` | `{"units": [{"slot", "id", "tier", "level"}], "runes": [def ids]}` |
 | `changer` | the game changer the client applies, `{"effects": [{"groups", "units", "faction_mask", "health_pct", "power_pct"}]}`, or `null` |
@@ -199,7 +202,7 @@ its answer. A `battle` without `battle_id` (clients before this change) is refus
 
 The pack catalog, hero pool (with factions and per-tier level caps), runes, gear, tutorial rewards, campaign, Nexus,
 PvP rules, missions, new-player roster and the battle data (characters, custom heroes, intrinsic passives, ability
-recipes, consume tables, rosters and game changers) are embedded from `internal/catalog/data`, copied from the client
+recipes, consume and fortify tables, rosters and game changers) are embedded from `internal/catalog/data`, copied from the client
 by `scripts/sync-client-data.sh`; `go test` fails when the copies drift from a client checkout next to this one.
 
 ## Guilds

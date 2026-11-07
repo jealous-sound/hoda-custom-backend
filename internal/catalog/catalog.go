@@ -174,6 +174,7 @@ type Catalog struct {
 	Tutorial         TutorialRewards
 	GearSellGold     []int
 	GearPrestigeGems int
+	Fortify          FortifyRules
 	Battle           *battle.Data
 
 	packIndex    map[string]int
@@ -449,6 +450,9 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		}
 	}
 	if err := c.loadConsumeTables(read); err != nil {
+		return nil, err
+	}
+	if err := c.loadFortifyRules(read); err != nil {
 		return nil, err
 	}
 	if err := c.loadRules(read); err != nil {

@@ -18,6 +18,7 @@ const (
 	NexusRostersFile      = "nexus_rosters.json"
 	NexusGameChangersFile = "nexus_game_changers.json"
 	PvpRulesFile          = "pvp_rules.json"
+	FortifyFile           = "fortify_tables.json"
 )
 
 type Data struct {
@@ -29,6 +30,7 @@ type Data struct {
 	runes            []*runeDef
 	runesByID        map[string]*runeDef
 	consume          map[string]*consumeProfile
+	fortify          *fortifyTables
 	campaignRosters  map[rosterKey]Side
 	nexusRosters     map[rosterKey]Side
 	nexusChangers    map[string]*Changer
@@ -50,7 +52,8 @@ func Load(read func(name string) ([]byte, error)) (*Data, error) {
 		{GeneratedRecipesFile, func(b []byte) (err error) { d.generatedRecipes, err = loadGeneratedRecipes(b); return }},
 		{GearFile, func(b []byte) (err error) { d.gear, err = loadGear(b); return }},
 		{RunesFile, func(b []byte) (err error) { d.runes, d.runesByID, err = loadRunes(b); return }},
-		{ConsumeFile, func(b []byte) (err error) { d.consume, err = loadConsume(b); return }},
+		{FortifyFile, func(b []byte) (err error) { d.fortify, err = loadFortify(b); return }},
+		{ConsumeFile, func(b []byte) (err error) { d.consume, err = loadConsume(b, d.fortify.archetypes); return }},
 		{CampaignRostersFile, func(b []byte) (err error) { d.campaignRosters, err = loadRosters(b); return }},
 		{NexusRostersFile, func(b []byte) (err error) { d.nexusRosters, err = loadRosters(b); return }},
 		{NexusGameChangersFile, func(b []byte) (err error) { d.nexusChangers, err = loadNexusChangers(b); return }},

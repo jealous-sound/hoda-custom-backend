@@ -59,9 +59,14 @@ func (r *rosterWriter) hasRoom(count int) bool {
 }
 
 func (r *rosterWriter) add(hero catalog.Hero) int64 {
+	id, _ := r.addEntry(hero)
+	return id
+}
+
+func (r *rosterWriter) addEntry(hero catalog.Hero) (int64, map[string]any) {
 	id := r.nextID
 	r.nextID++
-	r.additions = append(r.additions, map[string]any{
+	entry := map[string]any{
 		"id":          hero.ID,
 		"instance_id": json.Number(strconv.FormatInt(id, 10)),
 		"tier":        hero.InitialTier,
@@ -69,8 +74,9 @@ func (r *rosterWriter) add(hero catalog.Hero) int64 {
 		"xp":          json.Number("0"),
 		"ascended":    false,
 		"consume_xp":  json.Number("0"),
-	})
-	return id
+	}
+	r.additions = append(r.additions, entry)
+	return id, entry
 }
 
 func (r *rosterWriter) store() {

@@ -8,14 +8,15 @@ import (
 )
 
 type Unit struct {
-	Slot       int      `json:"slot"`
-	InstanceID int64    `json:"instance_id,omitempty"`
-	ID         string   `json:"id"`
-	Tier       string   `json:"tier"`
-	Level      int      `json:"level"`
-	ConsumeXP  int      `json:"consume_xp,omitempty"`
-	Ascended   bool     `json:"ascended,omitempty"`
-	Gear       []string `json:"gear,omitempty"`
+	Slot       int            `json:"slot"`
+	InstanceID int64          `json:"instance_id,omitempty"`
+	ID         string         `json:"id"`
+	Tier       string         `json:"tier"`
+	Level      int            `json:"level"`
+	ConsumeXP  int            `json:"consume_xp,omitempty"`
+	Ascended   bool           `json:"ascended,omitempty"`
+	Gear       []string       `json:"gear,omitempty"`
+	Fortify    []FortifyChild `json:"fortify,omitempty"`
 }
 
 type Side struct {
@@ -63,26 +64,28 @@ func CritGoldFor(crits int) int {
 }
 
 type hero struct {
-	def        *character
-	rarity     rarity
-	tier       Tier
-	level      int
-	consumeXP  int
-	critChance int
-	stats      [tierCount]tierStats
-	gear       [gearSlotCapacity]*gearDef
-	recipe     *abilityRecipe
-	passives   []passiveEffect
+	def           *character
+	rarity        rarity
+	tier          Tier
+	level         int
+	consumeXP     int
+	critChance    int
+	stats         [tierCount]tierStats
+	gear          [gearSlotCapacity]*gearDef
+	recipe        *abilityRecipe
+	passives      []passiveEffect
+	fortifyPower  int
+	fortifyHealth int
 }
 
 func (h *hero) statPower() int {
 	st := &h.stats[h.tier]
-	return st.basePower + (h.level-1)*st.powerPerLevel
+	return st.basePower + (h.level-1)*st.powerPerLevel + h.fortifyPower
 }
 
 func (h *hero) statHealth() int {
 	st := &h.stats[h.tier]
-	return st.baseHealth + (h.level-1)*st.healthPerLevel
+	return st.baseHealth + (h.level-1)*st.healthPerLevel + h.fortifyHealth
 }
 
 type side struct {
@@ -119,6 +122,9 @@ func (d *Data) buildHero(u Unit, playerSide bool) (*hero, error) {
 	}
 	h.consumeXP = u.ConsumeXP
 	profile.normalize(h)
+	if err := d.fortifyHero(h, profile.archetype, u.Fortify); err != nil {
+		return nil, err
+	}
 	if len(u.Gear) > gearSlotCapacity {
 		return nil, fmt.Errorf("unit %s has %d gear slots", u.ID, len(u.Gear))
 	}

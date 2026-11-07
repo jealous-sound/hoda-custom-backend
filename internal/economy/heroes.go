@@ -107,12 +107,21 @@ func (h *hero) progressionKeyOfTier(tier int) int {
 	return noProgressionKey
 }
 
-func (h *hero) unlockedPromotion(consumeLevel int64) int {
+func (h *hero) unlockedTotal(consumeLevel int64, unlockAt func(key int) int) int {
 	total := 0
 	for key := 0; int64(key) < consumeLevel && key < len(h.profile().Progression); key++ {
-		total = max(total, h.profile().PromotionAt(key))
+		total = max(total, unlockAt(key))
 	}
 	return total
+}
+
+func (h *hero) unlockedPromotion(consumeLevel int64) int {
+	return h.unlockedTotal(consumeLevel, h.profile().PromotionAt)
+}
+
+func (h *hero) unlockedFortifySlots() int {
+	consumeLevel := levelForXP(h.profile().ConsumeTable, h.consumeXP)
+	return min(h.unlockedTotal(consumeLevel, h.profile().FortifySlotsAt), catalog.FortifySlotCount)
 }
 
 func (h *hero) reachableTier(wanted int) int {

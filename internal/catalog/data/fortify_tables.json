@@ -1,0 +1,304 @@
+{
+ "archetypes": {
+  "Giant": [
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   }
+  ],
+  "Mage": [
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   }
+  ],
+  "Rogue": [
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   }
+  ],
+  "Warrior": [
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   }
+  ],
+  "Wisp": [
+   {
+    "cap": 0.001,
+    "stat": "health"
+   },
+   {
+    "cap": 0.001,
+    "stat": "power"
+   },
+   {
+    "cap": 0.001,
+    "stat": "health"
+   },
+   {
+    "cap": 0.001,
+    "stat": "power"
+   },
+   {
+    "cap": 0.001,
+    "stat": "health"
+   },
+   {
+    "cap": 0.001,
+    "stat": "power"
+   },
+   {
+    "cap": 0.001,
+    "stat": "health"
+   },
+   {
+    "cap": 0.001,
+    "stat": "power"
+   },
+   {
+    "cap": 0.001,
+    "stat": "health"
+   },
+   {
+    "cap": 0.001,
+    "stat": "power"
+   }
+  ],
+  "default": [
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   },
+   {
+    "cap": 0.4,
+    "stat": "health"
+   },
+   {
+    "cap": 0.4,
+    "stat": "power"
+   }
+  ]
+ },
+ "faction_bonus": 0.125,
+ "rarity_tier_bonus": [
+  [
+   0.05,
+   0.06,
+   0.07,
+   0.08
+  ],
+  [
+   0.1,
+   0.11,
+   0.12,
+   0.13
+  ],
+  [
+   0.2,
+   0.22,
+   0.24,
+   0.27
+  ],
+  [
+   0.42,
+   0.45,
+   0.49,
+   0.53
+  ],
+  [
+   0.77,
+   0.83,
+   0.91,
+   1.0
+  ],
+  [
+   0.95,
+   1.03,
+   1.13,
+   1.24
+  ]
+ ],
+ "remove_gem_cost": [
+  5,
+  5,
+  5,
+  5,
+  15,
+  30
+ ],
+ "version": 1
+}
