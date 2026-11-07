@@ -32,6 +32,10 @@ type harness struct {
 }
 
 func newHarness(t *testing.T) *harness {
+	return newHarnessWith(t, Config{OpenUnregistered: true})
+}
+
+func newHarnessWith(t *testing.T, config Config) *harness {
 	dir := t.TempDir()
 	current := fixedNow
 	clock := func() time.Time { return current }
@@ -57,7 +61,8 @@ func newHarness(t *testing.T) *harness {
 	}
 	log := slog.New(slog.NewTextHandler(io.Discard, nil))
 	server := httptest.NewServer(
-		NewServer(accounts, store, session.NewRegistry(), shopCatalog, guilds, reports, clock, log).Handler(),
+		NewServer(accounts, store, session.NewRegistry(clock, 0), shopCatalog, guilds, reports, clock, log, config).
+			Handler(),
 	)
 	t.Cleanup(server.Close)
 	return &harness{t: t, now: &current, server: server, profiles: store, dir: dir}

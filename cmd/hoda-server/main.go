@@ -27,17 +27,20 @@ const cliDescription = "Backend for the Heroes of Dragon Age native client: sess
 const shutdownGrace = 5 * time.Second
 
 const (
-	defaultGuestIdle  = 14 * 24 * time.Hour
-	defaultPruneEvery = time.Hour
+	defaultGuestIdle   = 14 * 24 * time.Hour
+	defaultPruneEvery  = time.Hour
+	defaultSessionIdle = 24 * time.Hour
 )
 
 type options struct {
-	addr        string
-	dataDir     string
-	seedProfile string
-	seedPlayer  string
-	guestIdle   time.Duration
-	pruneEvery  time.Duration
+	addr         string
+	dataDir      string
+	seedProfile  string
+	seedPlayer   string
+	guestIdle    time.Duration
+	pruneEvery   time.Duration
+	sessionIdle  time.Duration
+	unregistered bool
 }
 
 func parseOptions() options {
@@ -53,6 +56,10 @@ func parseOptions() options {
 	flag.DurationVar(&o.guestIdle, "guest-idle", defaultGuestIdle,
 		"delete unnamed guests that never finished the tutorial after this long without a session; 0 keeps them")
 	flag.DurationVar(&o.pruneEvery, "prune-every", defaultPruneEvery, "how often to look for abandoned guests")
+	flag.DurationVar(&o.sessionIdle, "session-idle", defaultSessionIdle,
+		"unused session tokens expire after this long; 0 keeps them until restart")
+	flag.BoolVar(&o.unregistered, "open-unregistered", false,
+		"let player ids without an account, such as -seed-player, open sessions without a secret")
 	flag.Parse()
 	return o
 }
@@ -129,10 +136,12 @@ func run(o options, log *slog.Logger) error {
 	if err != nil {
 		return err
 	}
-	sessions := session.NewRegistry()
+	sessions := session.NewRegistry(time.Now, o.sessionIdle)
 	server := &http.Server{
-		Addr:              o.addr,
-		Handler:           api.NewServer(accounts, store, sessions, shopCatalog, guilds, reports, time.Now, log).Handler(),
+		Addr: o.addr,
+		Handler: api.NewServer(accounts, store, sessions, shopCatalog, guilds, reports, time.Now, log, api.Config{
+			OpenUnregistered: o.unregistered, Limits: api.DefaultLimits(),
+		}).Handler(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
