@@ -125,11 +125,11 @@ func TestOnslaughtCountsBannersOfMembersFromTheEventStart(t *testing.T) {
 	minimum := events.ForCycle(cycle).GuildMinimumBanners
 	banners := 0
 	for battle := 0; banners < minimum; battle++ {
-		result := h.battle("local", leader, revision, fmt.Sprintf("event-%d", battle), h.eventStart(9, 7))
+		result := h.eventBattle("local", leader, revision, fmt.Sprintf("event-%d", battle))
 		revision, banners = result.Revision, banners+result.Granted.Banners
 	}
-	allyResult := h.battle("ally", ally, 1, "event-100", h.eventStart(9, 7))
-	h.battle("late", late, 1, "event-200", h.eventStart(9, 7))
+	allyResult := h.eventBattle("ally", ally, 1, "event-100")
+	h.eventBattle("late", late, 1, "event-200")
 
 	standings := h.onslaught("local", leader, cycle)
 	want := banners + allyResult.Granted.Banners

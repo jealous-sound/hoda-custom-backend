@@ -96,6 +96,7 @@ type PvpRules struct {
 	Matchmaking struct {
 		WindowBelow   int `json:"window_below"`
 		WindowAbove   int `json:"window_above"`
+		DailyNexts    int `json:"daily_nexts"`
 		BotDailyDrift int `json:"bot_daily_drift"`
 		LevelSpread   int `json:"level_spread"`
 	} `json:"matchmaking"`

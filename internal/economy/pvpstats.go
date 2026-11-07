@@ -49,14 +49,14 @@ type pvpStats struct {
 	DefenseWins      int                           `json:"defense_wins"`
 	DefenseLosses    int                           `json:"defense_losses"`
 	DefenseCheckedAt int64                         `json:"defense_checked_at"`
+	NextsUsed        int                           `json:"nexts_used"`
+	NextsDay         int64                         `json:"nexts_day"`
 	HeldSince        [len(pvpHoldThresholds)]int64 `json:"held_since"`
 	History          []pvpBattle                   `json:"history"`
 }
 
 var pvpClientFieldDefaults = map[string]func() any{
 	"trophies_seen": func() any { return json.Number("0") },
-	"nexts_used":    func() any { return json.Number("0") },
-	"nexts_day":     func() any { return json.Number("0") },
 	"event": func() any {
 		return map[string]any{"cycle": json.Number("0"), "banners": json.Number("0"),
 			"milestones_paid": json.Number("0"), "buffed": false}

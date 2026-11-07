@@ -22,6 +22,7 @@ type BattleStartRequest struct {
 	Event           bool               `json:"event"`
 	Duel            string             `json:"duel"`
 	Opponent        PvpOpponentRequest `json:"opponent"`
+	Match           int64              `json:"match"`
 	Squad           battle.Side        `json:"squad"`
 	RuneIDs         []int64            `json:"rune_ids"`
 	Enemy           battle.Side        `json:"enemy"`
@@ -37,31 +38,33 @@ type BattleRequest struct {
 }
 
 type BattleResult struct {
-	Won         bool          `json:"won"`
-	Gold        int64         `json:"gold"`
-	Gems        int64         `json:"gems"`
-	XP          int64         `json:"xp"`
-	FirstWin    bool          `json:"first_win,omitempty"`
-	Mastered    bool          `json:"mastered,omitempty"`
-	Banners     int           `json:"banners,omitempty"`
-	Escrowed    bool          `json:"escrowed,omitempty"`
-	LevelsUp    int           `json:"levels_up,omitempty"`
-	Granted     Granted       `json:"granted"`
-	NodeWins    int64         `json:"node_wins,omitempty"`
-	RunStep     int64         `json:"run_step,omitempty"`
-	EventRank   int           `json:"event_rank,omitempty"`
-	Cycle       int64         `json:"event_cycle,omitempty"`
-	BattleID    int64         `json:"battle_id,omitempty"`
-	Seed        uint32        `json:"seed,omitempty"`
-	Crits       int           `json:"crits,omitempty"`
-	Settled     *BattleResult `json:"settled,omitempty"`
-	TrophyDelta int           `json:"trophy_delta,omitempty"`
+	Won         bool              `json:"won"`
+	Gold        int64             `json:"gold"`
+	Gems        int64             `json:"gems"`
+	XP          int64             `json:"xp"`
+	FirstWin    bool              `json:"first_win,omitempty"`
+	Mastered    bool              `json:"mastered,omitempty"`
+	Banners     int               `json:"banners,omitempty"`
+	Escrowed    bool              `json:"escrowed,omitempty"`
+	LevelsUp    int               `json:"levels_up,omitempty"`
+	Granted     Granted           `json:"granted"`
+	NodeWins    int64             `json:"node_wins,omitempty"`
+	RunStep     int64             `json:"run_step,omitempty"`
+	EventRank   int               `json:"event_rank,omitempty"`
+	Cycle       int64             `json:"event_cycle,omitempty"`
+	BattleID    int64             `json:"battle_id,omitempty"`
+	Seed        uint32            `json:"seed,omitempty"`
+	Crits       int               `json:"crits,omitempty"`
+	Settled     *BattleResult     `json:"settled,omitempty"`
+	TrophyDelta int               `json:"trophy_delta,omitempty"`
+	Match       *profile.PvpMatch `json:"match,omitempty"`
 }
 
 type battleStart struct {
 	pending profile.PendingBattle
 	enemy   battle.Side
 	changer *battle.Changer
+	matched bool
 }
 
 func (p *player) StartBattle(request BattleStartRequest) (BattleResult, error) {
@@ -104,6 +107,9 @@ func (p *player) StartBattle(request BattleStartRequest) (BattleResult, error) {
 	}
 	if err := p.spendForBattle(request, &start); err != nil {
 		return BattleResult{}, err
+	}
+	if start.matched {
+		p.useUpPvpMatch()
 	}
 	p.server.Battles++
 	start.pending.ID = p.server.Battles

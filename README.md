@@ -108,7 +108,8 @@ these fields keep the server's values:
 - `roster`: heroes the server has not granted are dropped, a hero the upload leaves out is put back (heroes leave
   only through `consume`), and every hero keeps the server's tier, level, `xp`, `consume_xp` and `ascended` flag.
 - `pvp`: trophies, best trophies, wins, losses, streaks, trophies won, defense results and timer, the trophy hold
-  timers and the battle history. The client keeps `trophies_seen`, its next-opponent count and its event display.
+  timers, the day's next-opponent count (`nexts_used`, `nexts_day`) and the battle history. The client keeps
+  `trophies_seen` and its event display.
 - `gear`: tomes, prestige and ascension flags; the inventory may move into hero slots but a gear id may not grow.
 - `runes`: unknown runes are dropped, `inventory_expire_at` and running activations are the server's, and a new
   activation may last at most the rune's duration.
@@ -122,7 +123,8 @@ Everything that grants or spends goes through `POST /v1/players/{id}/actions`:
 | `action` | Fields | |
 | --- | --- | --- |
 | `battle_start` | `mode: "campaign"`, `map`, `node`, battle inputs | checks the node is unlocked, spends its energy, issues the seed |
-| `battle_start` | `mode: "pvp"`, `opponent`, `event`, `duel` or `revenge_at`, battle inputs | spends 1 stamina; the opponent comes from the seed, the server's trophies and the match time (a duel from the member's stored squad, level and trophies, a revenge from a lost defense in the server's history) |
+| `pvp_match` | `event`, optional `bot`, `next` | matches a ladder or event opponent, or the chosen `bot`, from the server's roll, trophies, banners, level and clock; `next` spends one of the day's next opponents and rolls again; answers `match` |
+| `battle_start` | `mode: "pvp"`, `match`, `event`, or `duel` or `revenge_at`, battle inputs | spends 1 stamina; fights the server's current match and uses it up (a duel from the member's stored squad, level and trophies, a revenge from a lost defense in the server's history) |
 | `battle_start` | `mode: "nexus"`, `step`, `revive`, battle inputs | checks the step and runs left, spends energy (and a potion to revive) |
 | `battle` | `battle_id`, `won`, `crit_gold` | replays the started battle and pays the server's result: first win, mastery, challenge or grind rewards from `campaign_maps.json`; PvP gold and XP by the opponent's level, trophies, streaks and history, then due defenses, event banners per win and milestones once; Nexus escrow of gold, XP, potions and a unit roll |
 | `nexus_award` / `nexus_reset` | | pays the escrow and rolls the units / abandons the run |
@@ -167,17 +169,27 @@ Battle inputs in `battle_start` are the cells the client is about to simulate:
 | `rune_ids` | the uuids of the squad's active runes, in slot order |
 | `enemy` | `{"units": [{"slot", "id", "tier", "level"}], "runes": [def ids]}` |
 | `changer` | the game changer the client applies, `{"effects": [{"groups", "units", "faction_mask", "health_pct", "power_pct"}]}`, or `null` |
-| `opponent` | PvP only: `{"kind": "ladder" \| "event" \| "bot" \| "revenge", "seed", "bot", "banners", "now"}` |
+| `match` | PvP ladder, event and chosen-bot battles: the `id` of the match `pvp_match` answered |
+| `opponent` | PvP revenge only: `{"kind": "revenge", "seed"}`, the seed of the lost defense |
 | `revenge_at` | PvP revenge only: the time of the lost defense in the server's history |
 | `tutorial_outcome` | optional `"victory"` or `"defeat"`; only while the tutorial runs, on the first two maps |
 
 The server rebuilds the squad from its stored roster, gear and rune activations (runes must be activated and not
 expired) and the enemy from its own data: the campaign or Nexus roster and the event's game changer; the PvP opponent
-from the seed, the server's trophies, the player's level and a match time at most six hours old (event battles also
-take the client's banners or chosen bot); a revenge from the lost defense; or a duel member's current squad. A
-difference is refused as `squad_changed` or `opponent_changed` before anything is spent. The server then rolls a
+from the server's current match; a revenge from the lost defense; or a duel member's current squad. A difference, or a
+`match` that is not the current one (already fought, replaced, or an event match whose event has ended), is refused as
+`squad_changed` or `opponent_changed` before anything is spent. The server then rolls a
 random seed (or, for `tutorial_outcome`, searches forward from it for the scripted result, as the client does),
 stores the pending battle in the server state and answers `{"battle_id", "seed"}`.
+
+PvP opponents come only from `pvp_match`. The server keeps a random roll per player; the match seed is mixed from the
+roll, `event` and the chosen bot, and the opponent is derived as in the client from that seed, the server's trophies,
+the player's level and the server's clock (event matchmaking also from the banners the server counted this event). The
+answer is `{"match": {"id", "event", "chosen", "bot", "squad", "level", "trophies", "seed", "at"}}`, and the match is
+stored as the one `battle_start` may fight. The roll stands until a matched battle starts or `next` spends one of the
+`daily_nexts` (counted per UTC day; `counter_limit` when none are left; refused for a chosen bot), so leaving the
+battle screen, switching between ladder and event, or asking again keeps the seed, and so the opponent while the
+trophies, banners and day stay put.
 
 `battle` replays the pending battle. The server pays its own outcome and crit count; PvP event banners come from the
 derived opponent's trophy gain. If the client's `won` or `crit_gold` differ, the battle is still settled with the

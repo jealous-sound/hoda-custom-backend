@@ -9,6 +9,7 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
+	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
 
 const (
@@ -26,19 +27,44 @@ func guildSquad() battle.Side {
 	}}, Runes: []string{}}
 }
 
-func (h *harness) eventStart(level int, seed uint32) economy.BattleStartRequest {
+func (h *harness) matchedStart(player, token string, revision int64, id string, event bool, roll uint32) (
+	economy.BattleStartRequest, int64,
+) {
 	h.t.Helper()
+	*h.seed = roll
+	body := fmt.Sprintf(`{"request_id":"%s-match","action":"%s","event":%v}`, id, economy.ActionPvpMatch, event)
+	response, reply := h.do("POST", "/v1/players/"+player+"/actions", token, fmt.Sprint(revision), body)
+	expectStatus(h.t, response, reply, http.StatusOK)
+	var matched struct {
+		Revision int64 `json:"revision"`
+		Granted  struct {
+			Match *profile.PvpMatch `json:"match"`
+		} `json:"granted"`
+	}
+	if err := json.Unmarshal([]byte(reply), &matched); err != nil || matched.Granted.Match == nil {
+		h.t.Fatalf("match reply %s", reply)
+	}
+	match := matched.Granted.Match
 	data := h.catalog().Battle
-	now := h.now.Unix()
-	enemy, err := data.PvpRoster(data.PvpEventOpponent(level, 0, 0, now, seed))
+	enemy, err := data.PvpRoster(battle.PvpOpponent{
+		Bot: match.Bot, Squad: match.Squad, Level: match.Level, Trophies: match.Trophies, Seed: match.Seed,
+	})
 	if err != nil {
 		h.t.Fatal(err)
 	}
-	return economy.BattleStartRequest{
-		Mode: economy.BattlePvp, Event: true, Squad: guildSquad(), Enemy: enemy,
-		Changer:  data.PvpEventChanger(data.PvpEventCycle(now)),
-		Opponent: economy.PvpOpponentRequest{Kind: economy.OpponentEvent, Seed: seed},
+	request := economy.BattleStartRequest{
+		Mode: economy.BattlePvp, Event: event, Match: match.ID, Squad: guildSquad(), Enemy: enemy,
 	}
+	if event {
+		request.Changer = data.PvpEventChanger(data.PvpEventCycle(match.At))
+	}
+	return request, matched.Revision
+}
+
+func (h *harness) eventBattle(player, token string, revision int64, id string) revisioned {
+	h.t.Helper()
+	request, revision := h.matchedStart(player, token, revision, id, true, 7)
+	return h.battle(player, token, revision, id, request)
 }
 
 func (h *harness) catalog() *catalog.Catalog {
@@ -126,16 +152,8 @@ func (h *harness) battle(player, token string, revision int64, id string, reques
 func TestAMismatchedClaimIsRefusedButTheReplaySettles(t *testing.T) {
 	h := newHarness(t)
 	token := h.guildPlayer("local", "Hawke", 9, 10)
-	data := h.catalog().Battle
-	opponent := data.PvpLadderOpponent(9, 0, h.now.Unix()/battle.SecondsPerDay, 11)
-	enemy, err := data.PvpRoster(opponent)
-	if err != nil {
-		t.Fatal(err)
-	}
-	request := economy.BattleStartRequest{
-		Mode: economy.BattlePvp, Squad: h.storedSquad("local"), Enemy: enemy,
-		Opponent: economy.PvpOpponentRequest{Kind: economy.OpponentLadder, Seed: 11},
-	}
+	request, revision := h.matchedStart("local", token, 1, "mismatch", false, 12)
+	request.Squad = h.storedSquad("local")
 	seed, outcome := h.winningSeed(request)
 	*h.seed = seed
 	fields := map[string]any{}
@@ -143,7 +161,7 @@ func TestAMismatchedClaimIsRefusedButTheReplaySettles(t *testing.T) {
 	_ = json.Unmarshal(raw, &fields)
 	fields["request_id"], fields["action"] = "mismatch-start", economy.ActionBattleStart
 	raw, _ = json.Marshal(fields)
-	response, reply := h.do("POST", "/v1/players/local/actions", token, "1", string(raw))
+	response, reply := h.do("POST", "/v1/players/local/actions", token, fmt.Sprint(revision), string(raw))
 	expectStatus(t, response, reply, http.StatusOK)
 	var started struct {
 		Revision int64 `json:"revision"`

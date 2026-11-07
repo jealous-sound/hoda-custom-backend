@@ -84,30 +84,44 @@ func nexusStart(t *testing.T, step int) BattleStartRequest {
 	return BattleStartRequest{Mode: BattleNexus, Step: step, Squad: fixtureSquad(), Enemy: enemy, Changer: changer}
 }
 
-func pvpStart(t *testing.T, kind string, seed uint32, event bool) BattleStartRequest {
+func matchOpponent(t *testing.T, raw json.RawMessage, server *profile.ServerState, request PvpMatchRequest,
+	roll uint32,
+) (json.RawMessage, profile.PvpMatch) {
 	t.Helper()
-	return pvpStartAt(t, kind, seed, event, 0)
+	next, result, err := ActWith(mustCatalog(t), raw, server, ActionPvpMatch, encodeBody(t, request), ruleNow,
+		Env{Seeds: fixedSeed(roll)})
+	if err != nil {
+		t.Fatalf("pvp_match: %v", err)
+	}
+	if result.Match == nil || server.PvpMatch == nil || *server.PvpMatch != *result.Match {
+		t.Fatalf("match = %+v stored = %+v", result.Match, server.PvpMatch)
+	}
+	return next, *result.Match
 }
 
-func pvpStartAt(t *testing.T, kind string, seed uint32, event bool, trophies int) BattleStartRequest {
+func pvpStartFor(t *testing.T, match profile.PvpMatch) BattleStartRequest {
 	t.Helper()
 	c := mustCatalog(t)
-	request := BattleStartRequest{
-		Mode: BattlePvp, Event: event, Squad: fixtureSquad(), Opponent: PvpOpponentRequest{Kind: kind, Seed: seed},
-	}
-	var opponent battle.PvpOpponent
-	if event {
-		opponent = c.Battle.PvpEventOpponent(5, trophies, 0, ruleNow.Unix(), seed)
-		request.Changer = c.Battle.PvpEventChanger(c.Battle.PvpEventCycle(ruleNow.Unix()))
-	} else {
-		opponent = c.Battle.PvpLadderOpponent(5, trophies, ruleNow.Unix()/battle.SecondsPerDay, seed)
-	}
-	enemy, err := c.Battle.PvpRoster(opponent)
+	enemy, err := c.Battle.PvpRoster(battle.PvpOpponent{
+		Bot: match.Bot, Squad: match.Squad, Level: match.Level, Trophies: match.Trophies, Seed: match.Seed,
+	})
 	if err != nil {
 		t.Fatal(err)
 	}
-	request.Enemy = enemy
+	request := BattleStartRequest{
+		Mode: BattlePvp, Event: match.Event, Match: match.ID, Squad: fixtureSquad(), Enemy: enemy,
+	}
+	if match.Event {
+		request.Changer = c.Battle.PvpEventChanger(c.Battle.PvpEventCycle(match.At))
+	}
 	return request
+}
+
+func pvpMatched(t *testing.T, raw json.RawMessage, server *profile.ServerState, event bool, roll uint32,
+) BattleStartRequest {
+	t.Helper()
+	_, match := matchOpponent(t, raw, server, PvpMatchRequest{Event: event}, roll)
+	return pvpStartFor(t, match)
 }
 
 func seedFor(t *testing.T, request BattleStartRequest, won bool) (uint32, battle.Outcome) {
@@ -364,42 +378,149 @@ func TestTutorialBattlesGetTheScriptedOutcome(t *testing.T) {
 	}
 }
 
-func TestPvpBattleDerivesTheOpponentFromTheSeed(t *testing.T) {
+func TestPvpBattleFightsTheOpponentTheServerMatched(t *testing.T) {
 	c := mustCatalog(t)
-	doc, result, _ := fight(t, gameProfile(t, nil), &profile.ServerState{StoreRNG: 3}, pvpStart(t, OpponentLadder, 42, false), true)
-	level := pvpOpponentLevel(&c.Pvp, 5, 42)
-	if result.Gold < pvpGold(&c.Pvp, level, true) || number(t, doc, "account", "stamina") != 7 {
-		t.Errorf("result = %+v level %d", result, level)
+	raw := gameProfile(t, nil)
+	server := &profile.ServerState{StoreRNG: 3}
+	_, match := matchOpponent(t, raw, server, PvpMatchRequest{}, 42)
+	want := c.Battle.PvpLadderOpponent(5, 0, ruleNow.Unix()/battle.SecondsPerDay, pvpMatchSeed(42, false, -1))
+	if match.Bot != want.Bot || match.Squad != want.Squad || match.Level != want.Level ||
+		match.Trophies != want.Trophies || match.Seed != want.Seed || match.At != ruleNow.Unix() || match.Chosen {
+		t.Fatalf("match = %+v, want %+v", match, want)
 	}
+	request := pvpStartFor(t, match)
+	doc, result, _ := fight(t, raw, server, request, true)
+	if result.Gold < pvpGold(&c.Pvp, match.Level, true) || number(t, doc, "account", "stamina") != 7 {
+		t.Errorf("result = %+v level %d", result, match.Level)
+	}
+	if server.PvpMatch != nil || server.PvpRoll != 0 {
+		t.Errorf("a fought match is still offered: %+v roll %d", server.PvpMatch, server.PvpRoll)
+	}
+	if _, _, err := startBattle(t, raw, server, request, 1); refusalCode(err) != OpponentChanged {
+		t.Errorf("fighting a match twice: %v", err)
+	}
+
 	tired := gameProfile(t, func(doc map[string]any) { section(doc, "account")["stamina"] = 0 })
-	if _, _, err := startBattle(t, tired, &profile.ServerState{}, pvpStart(t, OpponentLadder, 42, false), 1); refusalCode(err) != CantAfford {
+	tiredServer := &profile.ServerState{}
+	if _, _, err := startBattle(t, tired, tiredServer, pvpMatched(t, tired, tiredServer, false, 42), 1); refusalCode(err) != CantAfford {
 		t.Errorf("no stamina: %v", err)
 	}
-	other := pvpStart(t, OpponentLadder, 43, false)
-	other.Opponent.Seed = 42
-	if _, _, err := startBattle(t, gameProfile(t, nil), &profile.ServerState{}, other, 1); refusalCode(err) != OpponentChanged {
-		t.Errorf("an opponent from another seed: %v", err)
+	unmatched := request
+	unmatched.Match = 0
+	if _, _, err := startBattle(t, raw, &profile.ServerState{}, unmatched, 1); refusalCode(err) != Unavailable {
+		t.Errorf("a battle without a match: %v", err)
+	}
+	stale := &profile.ServerState{}
+	request = pvpMatched(t, raw, stale, false, 42)
+	request.Match++
+	if _, _, err := startBattle(t, raw, stale, request, 1); refusalCode(err) != OpponentChanged {
+		t.Errorf("a match the server did not issue: %v", err)
+	}
+	request.Match--
+	request.Event = true
+	if _, _, err := startBattle(t, raw, stale, request, 1); refusalCode(err) != OpponentChanged {
+		t.Errorf("a ladder match fought as an event battle: %v", err)
 	}
 }
 
-func TestPvpOpponentsAreDerivedAtTheirMatchTime(t *testing.T) {
+func TestPvpMatchesStandUntilFoughtOrSkipped(t *testing.T) {
 	c := mustCatalog(t)
-	matched := ruleNow.Unix() - 5*60*60
-	opponent := c.Battle.PvpLadderOpponent(5, 0, matched/battle.SecondsPerDay, 42)
-	enemy, err := c.Battle.PvpRoster(opponent)
-	if err != nil {
-		t.Fatal(err)
+	raw := gameProfile(t, nil)
+	server := &profile.ServerState{}
+	_, first := matchOpponent(t, raw, server, PvpMatchRequest{}, 42)
+	matchOpponent(t, raw, server, PvpMatchRequest{Event: true}, 99)
+	_, again := matchOpponent(t, raw, server, PvpMatchRequest{}, 99)
+	if again.Seed != first.Seed || again.Squad != first.Squad || again.ID == first.ID {
+		t.Fatalf("re-entering re-rolled the opponent: %+v then %+v", first, again)
 	}
-	request := BattleStartRequest{
-		Mode: BattlePvp, Squad: fixtureSquad(), Enemy: enemy,
-		Opponent: PvpOpponentRequest{Kind: OpponentLadder, Seed: 42, Now: matched},
+	later := ruleNow.Add(5 * time.Hour)
+	if _, _, err := ActWith(c, raw, server, ActionBattleStart, encodeBody(t, pvpStartFor(t, again)), later,
+		Env{Seeds: fixedSeed(1)}); err != nil {
+		t.Errorf("a match fought five hours later: %v", err)
 	}
-	if _, _, err := startBattle(t, gameProfile(t, nil), &profile.ServerState{}, request, 1); err != nil {
-		t.Errorf("an opponent matched five hours ago: %v", err)
+
+	skipping := &profile.ServerState{}
+	_, kept := matchOpponent(t, raw, skipping, PvpMatchRequest{}, 42)
+	next, skipped := matchOpponent(t, raw, skipping, PvpMatchRequest{Next: true}, 99)
+	if skipped.Seed != pvpMatchSeed(99, false, -1) || skipped.Seed == kept.Seed {
+		t.Fatalf("next kept the opponent: %+v then %+v", kept, skipped)
 	}
-	request.Opponent.Now = ruleNow.Unix() - 7*60*60
-	if _, _, err := startBattle(t, gameProfile(t, nil), &profile.ServerState{}, request, 1); refusalCode(err) != OpponentChanged {
-		t.Errorf("an opponent matched seven hours ago: %v", err)
+	pvp := section(asMap(t, next), "pvp")
+	if pvp["nexts_used"].(float64) != 1 || pvp["nexts_day"].(float64) != float64(ruleNow.Unix()/secondsPerDay) {
+		t.Fatalf("next was not counted: %v", pvp)
+	}
+	for range c.Pvp.Matchmaking.DailyNexts - 1 {
+		next, _ = matchOpponent(t, next, skipping, PvpMatchRequest{Next: true}, 7)
+	}
+	if _, _, err := act(t, next, skipping, ActionPvpMatch, `{"next":true}`); refusalCode(err) != CounterLimit {
+		t.Errorf("a next past the daily limit: %v", err)
+	}
+	forged := asMap(t, next)
+	section(forged, "pvp")["nexts_used"] = 0
+	uploaded := reencode(t, merge(t, next, reencode(t, forged), skipping))
+	if _, _, err := act(t, uploaded, skipping, ActionPvpMatch, `{"next":true}`); refusalCode(err) != CounterLimit {
+		t.Errorf("an upload reset the nexts: %v", err)
+	}
+	tomorrow := ruleNow.Add(24 * time.Hour)
+	if _, _, err := ActWith(c, next, skipping, ActionPvpMatch, []byte(`{"next":true}`), tomorrow, Env{}); err != nil {
+		t.Errorf("a next on the next day: %v", err)
+	}
+}
+
+func TestPvpMatchRefusesNextForAChosenBotAndUnknownBots(t *testing.T) {
+	raw := gameProfile(t, nil)
+	if _, _, err := act(t, raw, &profile.ServerState{}, ActionPvpMatch, `{"bot":3,"next":true}`); refusalCode(err) != Unavailable {
+		t.Errorf("next for a chosen bot: %v", err)
+	}
+	if _, _, err := act(t, raw, &profile.ServerState{}, ActionPvpMatch, `{"bot":-1}`); refusalCode(err) != Unavailable {
+		t.Errorf("bot -1: %v", err)
+	}
+	bots := itoa(int64(mustCatalog(t).Battle.PvpBotCount()))
+	if _, _, err := act(t, raw, &profile.ServerState{}, ActionPvpMatch, `{"bot":`+bots+`}`); refusalCode(err) != Unavailable {
+		t.Errorf("a bot past the table: %v", err)
+	}
+}
+
+func TestPvpEventMatchmakingReadsTheServersBannersAndClock(t *testing.T) {
+	c := mustCatalog(t)
+	raw := gameProfile(t, nil)
+	cycle := c.Battle.PvpEventCycle(ruleNow.Unix())
+	server := &profile.ServerState{PvpEvent: profile.PvpEventState{Cycle: cycle, Banners: 400}}
+	_, match := matchOpponent(t, raw, server, PvpMatchRequest{Event: true}, 7)
+	want := c.Battle.PvpEventOpponent(5, 0, 400, ruleNow.Unix(), pvpMatchSeed(7, true, -1))
+	if match.Bot != want.Bot || match.Squad != want.Squad || match.Seed != want.Seed || !match.Event {
+		t.Fatalf("match = %+v, want %+v", match, want)
+	}
+	ended := ruleNow.Add(time.Duration(c.Pvp.Events.DurationSeconds) * time.Second)
+	if _, _, err := ActWith(c, raw, server, ActionBattleStart, encodeBody(t, pvpStartFor(t, match)), ended,
+		Env{Seeds: fixedSeed(1)}); refusalCode(err) != OpponentChanged {
+		t.Errorf("an event match fought after its event ended: %v", err)
+	}
+}
+
+func TestPvpChosenBotsKeepTheirTrophiesAndTheServersSeed(t *testing.T) {
+	c := mustCatalog(t)
+	raw, squad := strongerProfile(t)
+	day := ruleNow.Unix() / battle.SecondsPerDay
+	for _, event := range []bool{false, true} {
+		bot := c.Battle.PvpBotCount() - 1
+		server := &profile.ServerState{StoreRNG: 3}
+		_, match := matchOpponent(t, raw, server, PvpMatchRequest{Event: event, Bot: &bot}, 5)
+		want := c.Battle.PvpOpponentFromBot(bot, 5, 0, day, pvpMatchSeed(5, event, bot))
+		if !match.Chosen || match.Bot != bot || match.Seed != want.Seed || match.Squad != want.Squad ||
+			match.Trophies != want.Trophies {
+			t.Fatalf("event %v match = %+v, want %+v", event, match, want)
+		}
+		request := pvpStartFor(t, match)
+		request.Squad = squad
+		doc, result, _ := fight(t, raw, server, request, true)
+		entry := section(doc, "pvp")["history"].([]any)[0].(map[string]any)
+		if entry["bot"].(float64) != float64(bot) || entry["opponent_trophies"].(float64) != float64(want.Trophies) {
+			t.Errorf("event %v history = %v", event, entry)
+		}
+		if event && result.Banners != maxBannersPerWin(&c.Pvp.Events, 0)*pvpBannerPct(&c.Pvp, 0, want.Trophies)/100 {
+			t.Errorf("banners = %d against bot %d", result.Banners, bot)
+		}
 	}
 }
 
@@ -407,15 +528,18 @@ func TestPvpEventBannersComeFromTheServer(t *testing.T) {
 	c := mustCatalog(t)
 	server := &profile.ServerState{StoreRNG: 3}
 	raw, squad := strongerProfile(t)
-	request := pvpStart(t, OpponentEvent, 7, true)
+	_, match := matchOpponent(t, raw, server, PvpMatchRequest{Event: true}, 7)
+	request := pvpStartFor(t, match)
 	request.Squad = squad
 	_, result, _ := fight(t, raw, server, request, true)
-	opponent := c.Battle.PvpEventOpponent(5, 0, 0, ruleNow.Unix(), 7)
-	want := maxBannersPerWin(&c.Pvp.Events, 0) * pvpBannerPct(&c.Pvp, 0, opponent.Trophies) / 100
+	want := maxBannersPerWin(&c.Pvp.Events, 0) * pvpBannerPct(&c.Pvp, 0, match.Trophies) / 100
 	if want <= 0 || result.Banners != want || server.PvpEvent.Banners != want {
 		t.Fatalf("banners = %d, want %d", result.Banners, want)
 	}
-	_, lost, _ := fight(t, raw, &profile.ServerState{StoreRNG: 3}, request, false)
+	losing := &profile.ServerState{StoreRNG: 3}
+	request = pvpMatched(t, raw, losing, true, 7)
+	request.Squad = squad
+	_, lost, _ := fight(t, raw, losing, request, false)
 	if lost.Banners != c.Pvp.Events.LossBanners {
 		t.Errorf("loss banners = %d, want %d", lost.Banners, c.Pvp.Events.LossBanners)
 	}
@@ -425,7 +549,7 @@ func TestPvpEventClaimPaysOnceAfterTheEvent(t *testing.T) {
 	c := mustCatalog(t)
 	raw, squad := strongerProfile(t)
 	server := &profile.ServerState{StoreRNG: 3}
-	request := pvpStart(t, OpponentEvent, 7, true)
+	request := pvpMatched(t, raw, server, true, 7)
 	request.Squad = squad
 	fight(t, raw, server, request, true)
 	cycle := server.PvpEvent.Cycle

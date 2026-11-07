@@ -21,7 +21,6 @@ const (
 	tutorialSeedAttempts = 1024
 	tutorialCampaignMaps = 2
 	gearSlotsPerHero     = 5
-	maxMatchAgeSeconds   = 6 * 60 * 60
 )
 
 type SeedSource func() (uint32, error)
@@ -173,29 +172,11 @@ func (p *player) battleSquad(claimed battle.Side, runeIDs []int64) (battle.Side,
 }
 
 type PvpOpponentRequest struct {
-	Kind    string `json:"kind"`
-	Seed    uint32 `json:"seed"`
-	Bot     int    `json:"bot"`
-	Banners int    `json:"banners"`
-	Now     int64  `json:"now"`
+	Kind string `json:"kind"`
+	Seed uint32 `json:"seed"`
 }
 
-func (o PvpOpponentRequest) matchedAt(now int64) (int64, error) {
-	if o.Now == 0 {
-		return now, nil
-	}
-	if o.Now > now+maxMatchAgeSeconds || o.Now < now-maxMatchAgeSeconds {
-		return 0, refuse(OpponentChanged, "the opponent was matched too long ago")
-	}
-	return o.Now, nil
-}
-
-const (
-	OpponentLadder  = "ladder"
-	OpponentEvent   = "event"
-	OpponentBot     = "bot"
-	OpponentRevenge = "revenge"
-)
+const OpponentRevenge = "revenge"
 
 func (s *pvpStats) lostDefenseAt(at int64, seed uint32) *pvpBattle {
 	for i := range s.History {
@@ -260,32 +241,7 @@ func (p *player) pvpRival(request BattleStartRequest, stats *pvpStats) (
 		}
 		return rivalOf(opponent), enemy, nil, nil
 	}
-	matched, err := o.matchedAt(p.now.Unix())
-	if err != nil {
-		return pvpOpponent{}, battle.Side{}, nil, err
-	}
-	level, day := p.account.Level, matched/battle.SecondsPerDay
-	var opponent battle.PvpOpponent
-	switch {
-	case !request.Event:
-		opponent = data.PvpLadderOpponent(level, stats.Trophies, day, o.Seed)
-	case o.Kind == OpponentBot:
-		if o.Bot < 0 || o.Bot >= data.PvpBotCount() {
-			return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable, "no pvp bot %d", o.Bot)
-		}
-		opponent = data.PvpOpponentFromBot(o.Bot, level, stats.Trophies, day, o.Seed)
-	default:
-		opponent = data.PvpEventOpponent(level, stats.Trophies, o.Banners, matched, o.Seed)
-	}
-	enemy, err := data.PvpRoster(opponent)
-	if err != nil {
-		return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable, "%v", err)
-	}
-	var changer *battle.Changer
-	if request.Event {
-		changer = data.PvpEventChanger(data.PvpEventCycle(matched))
-	}
-	return rivalOf(opponent), enemy, changer, nil
+	return p.matchedRival(request)
 }
 
 func (p *player) duelEnemy(member string) (battle.Side, error) {
