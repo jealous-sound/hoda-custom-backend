@@ -50,6 +50,9 @@ func describeApplication(state *guild.State, reporter, applicantID string) (stri
 }
 
 func (s *Server) reportAbuse(w http.ResponseWriter, r *http.Request, player string) {
+	if !s.allow(w, s.limiters.reportsByPlayer, player) {
+		return
+	}
 	var request reportBody
 	if !readGuildBody(w, r, &request) {
 		return

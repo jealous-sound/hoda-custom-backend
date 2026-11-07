@@ -375,6 +375,9 @@ func (s *Server) guildMessages(w http.ResponseWriter, r *http.Request, player st
 	if !readGuildBody(w, r, &request) {
 		return
 	}
+	if request.Text != "" && !s.allow(w, s.limiters.chatByPlayer, player) {
+		return
+	}
 	p, ok := s.guildPlayer(w, player)
 	if !ok {
 		return

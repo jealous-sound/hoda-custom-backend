@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	MaxProfileBytes     = 8 << 20
+	MaxProfileBytes     = 1 << 20
 	MaxPlayerNameLength = 25
 )
 

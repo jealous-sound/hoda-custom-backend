@@ -22,23 +22,31 @@ import (
 const RevisionHeader = "X-Profile-Revision"
 
 type Server struct {
-	accounts *account.Store
-	profiles *profile.Store
-	sessions *session.Registry
-	catalog  *catalog.Catalog
-	guilds   *guild.Store
-	reports  *report.Log
-	now      func() time.Time
-	log      *slog.Logger
+	accounts         *account.Store
+	profiles         *profile.Store
+	sessions         *session.Registry
+	catalog          *catalog.Catalog
+	guilds           *guild.Store
+	reports          *report.Log
+	now              func() time.Time
+	log              *slog.Logger
+	openUnregistered bool
+	limiters         limiters
+}
+
+type Config struct {
+	OpenUnregistered bool
+	Limits           Limits
 }
 
 func NewServer(
 	accounts *account.Store, profiles *profile.Store, sessions *session.Registry, shopCatalog *catalog.Catalog,
-	guilds *guild.Store, reports *report.Log, now func() time.Time, log *slog.Logger,
+	guilds *guild.Store, reports *report.Log, now func() time.Time, log *slog.Logger, config Config,
 ) *Server {
 	return &Server{
 		accounts: accounts, profiles: profiles, sessions: sessions, catalog: shopCatalog, guilds: guilds,
-		reports: reports, now: now, log: log,
+		reports: reports, now: now, log: log, openUnregistered: config.OpenUnregistered,
+		limiters: newLimiters(config.Limits, now),
 	}
 }
 
@@ -81,7 +89,7 @@ func (s *Server) logged(next http.Handler) http.Handler {
 		started := time.Now()
 		next.ServeHTTP(recorder, r)
 		s.log.Info("request", "method", r.Method, "path", r.URL.Path, "status", recorder.status,
-			"duration", time.Since(started))
+			"duration", time.Since(started), "client", clientAddress(r))
 	})
 }
 
@@ -109,7 +117,10 @@ type createPlayerResponse struct {
 	ServerTime int64  `json:"server_time"`
 }
 
-func (s *Server) createPlayer(w http.ResponseWriter, _ *http.Request) {
+func (s *Server) createPlayer(w http.ResponseWriter, r *http.Request) {
+	if !s.allow(w, s.limiters.accountsByAddress, clientAddress(r)) || !s.allow(w, s.limiters.accountsTotal, "") {
+		return
+	}
 	credentials, err := s.accounts.CreateGuest()
 	if err != nil {
 		s.log.Error("create player", "error", err)
@@ -136,6 +147,9 @@ type sessionResponse struct {
 }
 
 func (s *Server) openSession(w http.ResponseWriter, r *http.Request) {
+	if !s.allow(w, s.limiters.sessionsByAddress, clientAddress(r)) {
+		return
+	}
 	var request sessionRequest
 	if err := json.NewDecoder(io.LimitReader(r.Body, 4096)).Decode(&request); err != nil {
 		writeError(w, http.StatusBadRequest, "body must be {\"player_id\": \"...\", \"secret\": \"...\"}")
@@ -152,6 +166,10 @@ func (s *Server) openSession(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	registered := err == nil
+	if !registered && !s.openUnregistered {
+		writeError(w, http.StatusNotFound, "no account for this player; create one with POST /v1/players")
+		return
+	}
 	if registered && !verified {
 		writeError(w, http.StatusUnauthorized, "wrong secret for player")
 		return
@@ -183,6 +201,9 @@ func (s *Server) authorized(next func(http.ResponseWriter, *http.Request, string
 		player := r.PathValue("player")
 		if player != sessionPlayer {
 			writeError(w, http.StatusForbidden, "session belongs to another player")
+			return
+		}
+		if !s.allow(w, s.limiters.requestsByPlayer, player) {
 			return
 		}
 		next(w, r, player)

@@ -39,7 +39,7 @@ else
     mkdir -p "$DATA_DIR"
     SEED_ARGS=()
     if [[ -n "$PLAYER_ID" ]]; then
-        SEED_ARGS=(-seed-player "$PLAYER_ID" -seed-profile "$CLIENT_DIR/player_save.dat")
+        SEED_ARGS=(-seed-player "$PLAYER_ID" -seed-profile "$CLIENT_DIR/player_save.dat" -open-unregistered)
     fi
     "$BACKEND_DIR/bin/hoda-server" \
         -addr "$ADDR" \

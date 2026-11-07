@@ -53,11 +53,21 @@ make format-check
 | `POST` | `/v1/players/{id}/refills` | `{"request_id", "kind": "energy" \| "stamina"}` → `{"revision", "profile", "granted"}` |
 | `POST` | `/v1/players/{id}/actions` | `{"request_id", "action", ...}` → `{"revision", "profile", "granted"}`; see [Economy](#economy) |
 
-A guest's session needs its secret (`401` otherwise); players created before accounts existed, like a seeded
-`local`, open without one. A write with a stale revision gets `409` and the current revision, so a client that started from an old copy
-cannot overwrite newer progress. Profiles are validated (object, `account`/`roster`/`squads` present, account
-counters non-negative, `account.name` if present is 1-25 letters, digits, spaces or `-`, as in 5.4.4) and stored as
-`runtime/players/<id>.json`. Accounts live in `runtime/accounts/<id>.json` with only a hash of the secret.
+A session needs a registered account and its secret: an unknown player gets `404` (the client then creates a new
+guest) and a wrong secret `401`. Only with `-open-unregistered`, which `scripts/play-local.sh` passes when it seeds a
+save for `HOD_PLAYER_ID`, do players without an account, like a seeded `local`, open without one. Session tokens
+expire after `-session-idle` (default `24h`) without use, and a player keeps at most 8; the client opens a new one
+on `401`. A write with a stale revision gets `409` and the current revision, so a client that started from an old copy
+cannot overwrite newer progress. Profiles are validated (at most 1 MiB, object, `account`/`roster`/`squads` present,
+account counters non-negative, `account.name` if present is 1-25 letters, digits, spaces or `-`, as in 5.4.4) and
+stored as `runtime/players/<id>.json`. Accounts live in `runtime/accounts/<id>.json` with only a hash of the secret.
+
+Requests are rate-limited (token buckets in `internal/api/limits.go`); a limited request gets `429` with
+`Retry-After`. New accounts: 10 per visitor address per hour and 360 per hour in all; sessions: 30 per address
+then one per 10 s; any player route: 60 then 10 per second per player; chat lines: 5 then one per 3 s; abuse
+reports: 5 per hour. The visitor address is the last `X-Forwarded-For` hop (else `X-Real-IP`, else the connection),
+replaced by `CF-Connecting-IP` only when that hop is a Cloudflare address, so the header cannot be spoofed by
+calling the origin directly. The request log records it as `client`.
 
 Guests that leave in the first minutes would pile up as empty accounts, so the server deletes a guest and its
 profile once it has gone `-guest-idle` (default `336h`, 14 days; `0` keeps everyone) without opening a session,

@@ -34,8 +34,9 @@ type world struct {
 }
 
 func newWorld(t *testing.T) *world {
-	w := &world{t: t, clock: created, sessions: session.NewRegistry()}
+	w := &world{t: t, clock: created}
 	now := func() time.Time { return w.clock }
+	w.sessions = session.NewRegistry(now, 0)
 	dir := t.TempDir()
 	var err error
 	if w.accounts, err = account.NewStore(dir, now); err != nil {
