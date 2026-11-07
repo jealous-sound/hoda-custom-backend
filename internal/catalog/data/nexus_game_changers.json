@@ -1,0 +1,344 @@
+[
+  {
+    "event": "Danarius",
+    "text_key": "game_changer_200pcthealth_to_circle",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Circle"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 200,
+        "power_pct": 0
+      }
+    ]
+  },
+  {
+    "event": "ElvenMages",
+    "text_key": "NEXUS_GAME_CHANGER_PLUS300HEALTH_AND_PLUS125POWER_TO_ELVENMAGES",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Mage",
+          "Elves"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 300,
+        "power_pct": 125
+      }
+    ]
+  },
+  {
+    "event": "Maric",
+    "text_key": "game_changer_200pctpower_to_qunari",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Qunari"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 0,
+        "power_pct": 200
+      }
+    ]
+  },
+  {
+    "event": "MaskedMayhem",
+    "text_key": "NEXUS_GAME_CHANGER_PLUS150HEALTH_PLUS150POWER_TO_MAGES",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Mage"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 150,
+        "power_pct": 150
+      }
+    ]
+  },
+  {
+    "event": "Tallis",
+    "text_key": "",
+    "text_ru": "Герои \"белой\" фракции получают 150 % здоровья и силы.",
+    "effects": [
+      {
+        "groups": [],
+        "factions": [
+          "White"
+        ],
+        "units": [],
+        "health_pct": 150,
+        "power_pct": 150
+      }
+    ]
+  },
+  {
+    "event": "WinterWardenland",
+    "text_key": "NEXUS_GAME_CHANGER_PLUS200POWER_TO_WARDENS",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Warden"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 0,
+        "power_pct": 200
+      }
+    ]
+  },
+  {
+    "event": "ADreamMadeReality",
+    "text_key": "NEXUS_GAME_CHANGER_PLUS250HEALTH_AND_PLUS350POWER_TO_QUNARI",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Qunari"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 250,
+        "power_pct": 350
+      }
+    ]
+  },
+  {
+    "event": "BreachOpens",
+    "text_key": "NEXUS_GAME_CHANGER_PLUS500PCT_POWER_TO_TEMPLARS_AND_400_Health_TO_SEEKERS_AND_PLUS250PCT_TO_INQUISITION",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Templar"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 0,
+        "power_pct": 500
+      },
+      {
+        "groups": [
+          "Seeker"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 400,
+        "power_pct": 0
+      },
+      {
+        "groups": [
+          "Inquisition"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 250,
+        "power_pct": 250
+      }
+    ]
+  },
+  {
+    "event": "SeekersDuty",
+    "text_key": "game_changer_125pctpower_and_125pcthealth_to_chantry",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Chantry"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 125,
+        "power_pct": 125
+      }
+    ]
+  },
+  {
+    "event": "UrnOfSacredAshes",
+    "text_key": "Nexus_game_changer_300_power_blue_faction",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [],
+        "factions": [
+          "Blue"
+        ],
+        "units": [],
+        "health_pct": 0,
+        "power_pct": 300
+      }
+    ]
+  },
+  {
+    "event": "LastStraw",
+    "text_key": "game_changer_300pctpower_to_mages",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Mage"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 0,
+        "power_pct": 300
+      }
+    ]
+  },
+  {
+    "event": "WitchWilds",
+    "text_key": "game_changer_125pctpower_and_200pcthealth_to_templar",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Templar"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 200,
+        "power_pct": 125
+      },
+      {
+        "groups": [],
+        "factions": [],
+        "units": [
+          "UNIT_GREYWARDENALISTAIR",
+          "UNIT_KINGALISTAIR"
+        ],
+        "health_pct": 0,
+        "power_pct": 75
+      }
+    ]
+  },
+  {
+    "event": "AnvilVoid",
+    "text_key": "NEXUS_GAME_CHANGER_PLUS300_HEALTH_POWER_TO_BEAST_DEMON",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Beast"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 300,
+        "power_pct": 300
+      },
+      {
+        "groups": [
+          "Demon"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 100,
+        "power_pct": 100
+      }
+    ]
+  },
+  {
+    "event": "WesternApproachInquisition",
+    "text_key": "game_changer_35pctpower_and_health_to_red_lyrium",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Red_Lyrium"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 35,
+        "power_pct": 35
+      }
+    ]
+  },
+  {
+    "event": "WesternApproachRedLyrium",
+    "text_key": "game_changer_35pctpower_and_health_to_inquisition",
+    "text_ru": "",
+    "effects": [
+      {
+        "groups": [
+          "Inquisition"
+        ],
+        "factions": [],
+        "units": [],
+        "health_pct": 35,
+        "power_pct": 35
+      }
+    ]
+  },
+  {
+    "event": "DailyMonday",
+    "text_key": "",
+    "text_ru": "Герои \"белой\" фракции получают 150 % здоровья и силы.",
+    "effects": [
+      {
+        "groups": [],
+        "factions": [
+          "White"
+        ],
+        "units": [],
+        "health_pct": 150,
+        "power_pct": 150
+      }
+    ]
+  },
+  {
+    "event": "DailyTuesday",
+    "text_key": "",
+    "text_ru": "Герои \"красной\" фракции получают 150 % здоровья и силы.",
+    "effects": [
+      {
+        "groups": [],
+        "factions": [
+          "Red"
+        ],
+        "units": [],
+        "health_pct": 150,
+        "power_pct": 150
+      }
+    ]
+  },
+  {
+    "event": "DailyWednesday",
+    "text_key": "",
+    "text_ru": "Герои \"синей\" фракции получают 150 % здоровья и силы.",
+    "effects": [
+      {
+        "groups": [],
+        "factions": [
+          "Blue"
+        ],
+        "units": [],
+        "health_pct": 150,
+        "power_pct": 150
+      }
+    ]
+  },
+  {
+    "event": "DailyThursday",
+    "text_key": "",
+    "text_ru": "Герои \"черной\" фракции получают 150 % здоровья и силы.",
+    "effects": [
+      {
+        "groups": [],
+        "factions": [
+          "Black"
+        ],
+        "units": [],
+        "health_pct": 150,
+        "power_pct": 150
+      }
+    ]
+  }
+]

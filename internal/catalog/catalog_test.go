@@ -81,13 +81,25 @@ func TestFlashPacksRotateOnePerPeriod(t *testing.T) {
 	}
 }
 
-func TestEmbeddedDataMatchesClientCheckout(t *testing.T) {
-	clientData := filepath.Join("..", "..", "..", "hoda-custom-client", "data")
-	if dir := os.Getenv("HOD_CLIENT_DIR"); dir != "" {
-		clientData = filepath.Join(dir, "data")
+var clientDataSources = map[string]string{
+	"characters.json":     filepath.Join("client-additional-data", "characters.json"),
+	"battle_recipes.json": filepath.Join("tests", "golden", "battle_recipes.json"),
+}
+
+func clientSource(name string) string {
+	if source, ok := clientDataSources[name]; ok {
+		return source
 	}
-	if _, err := os.Stat(clientData); err != nil {
-		t.Skipf("no client checkout at %s", clientData)
+	return filepath.Join("data", name)
+}
+
+func TestEmbeddedDataMatchesClientCheckout(t *testing.T) {
+	client := filepath.Join("..", "..", "..", "hoda-custom-client")
+	if dir := os.Getenv("HOD_CLIENT_DIR"); dir != "" {
+		client = dir
+	}
+	if _, err := os.Stat(filepath.Join(client, "data")); err != nil {
+		t.Skipf("no client checkout at %s", client)
 	}
 	entries, err := embedded.ReadDir("data")
 	if err != nil {
@@ -95,7 +107,7 @@ func TestEmbeddedDataMatchesClientCheckout(t *testing.T) {
 	}
 	for _, entry := range entries {
 		ours, _ := embedded.ReadFile("data/" + entry.Name())
-		theirs, err := os.ReadFile(filepath.Join(clientData, entry.Name()))
+		theirs, err := os.ReadFile(filepath.Join(client, clientSource(entry.Name())))
 		if err != nil {
 			t.Errorf("%s: %v", entry.Name(), err)
 			continue

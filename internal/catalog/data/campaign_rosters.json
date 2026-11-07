@@ -1,0 +1,4907 @@
+{
+ "version": 1,
+ "note": "Enemy rosters per story-campaign node. Original HoDA served these from EA servers (never client-side); reconstructed 2026-07 from archived sources + lore inference. authenticity: sourced = squad substantially evidenced (video/forum/spreadsheet), inferred = enemy types evidenced (node desc/wiki/lore) but exact squad composed, authored = pure fill. roster = 5 cells, index 4 = giant slot, cells may be null. Research artifacts: client-additional-data/campaign_research/",
+ "campaigns": [
+  {
+   "campaign": "PVE_MAP_01",
+   "chapter_en": "The First Blight",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "A Blight",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=HroUWwGXZ-g",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "I",
+       "level": 1,
+       "why": "footage t79-83: pale darkspawn archer (bow-variant Bolter model)"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "I",
+       "level": 1,
+       "why": "footage t42-79: bald falchion hurlock x2, front pad"
+      },
+      null,
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "I",
+       "level": 1,
+       "why": "second identical Grunt in same footage, front pad"
+      },
+      null
+     ],
+     "notes": "Launch-build (Dec 2013) Modojo footage shows the exact 3-unit squad: 2 Hurlock Grunts + 1 archer. Archer name is model-matched (bow variant of Hurlock Bolter per evidence brief). Tutorial text confirms darkspawn. Melee grunts on front slots 1/3, archer back slot 0. No giant. Levels authored at ~2 (tutorial opener; launch footage shows no enemy levels)."
+    },
+    {
+     "step": 2,
+     "name_en": "A False Victory",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=7pUj8aDpKXw",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "I",
+       "level": 1,
+       "why": "footage t17/t41-45: kettle-helm crossbowman x2 (matches t4 Bolter portrait)"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "I",
+       "level": 1,
+       "why": "footage: falchion grunt between the crossbowmen, front pad"
+      },
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "I",
+       "level": 1,
+       "why": "second identical crossbowman in same footage"
+      },
+      null,
+      null
+     ],
+     "notes": "Exact 3-unit squad from Modojo Quest-2 footage: 2 kettle-helm Bolters flanking 1 Grunt. 'Quick' round announcements corroborate Bolter speed. Bolters back slots 0/2, grunt front slot 1. Levels authored at 4 per +2-3/node ramp."
+    },
+    {
+     "step": 3,
+     "name_en": "A Revelation",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=LiDe9PNI5Sc",
+      "https://www.youtube.com/watch?v=ErNb-h7Y3HU",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "I",
+       "level": 2,
+       "why": "footage t27: kettle-helm crossbowman x2 on standard pads"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "I",
+       "level": 2,
+       "why": "footage: gaunt bone-white caster w/ red sash on ornate stone pad (special slot)"
+      },
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "I",
+       "level": 2,
+       "why": "second identical crossbowman in same footage"
+      },
+      null,
+      null
+     ],
+     "notes": "Exact 3-unit squad from Modojo Quest-3 footage (alt cut ErNb-h7Y3HU corroborates): 2 Bolters + 1 Emissary on the ornate white-stone 'special' pad. Emissary center slot 1, matching its filmed center position; +1 level marks the special-pad unit. Dumat is fought off-screen by Wardens (cta text) — no dragon in the battle."
+    },
+    {
+     "step": 4,
+     "name_en": "Battle of the Silent Plains",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=MskwjRpTTHc",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "I",
+       "level": 1,
+       "why": "footage t21/t47: kettle-helm crossbowman at right of enemy line"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "I",
+       "level": 1,
+       "why": "footage: falchion grunt x2 in the 4-enemy line"
+      },
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "I",
+       "level": 1,
+       "why": "footage: bulky quadrupedal genlock on ornate stone pad, 'Slow' claw attack t53"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "I",
+       "level": 1,
+       "why": "second identical Grunt in same footage"
+      },
+      null
+     ],
+     "notes": "Exact 4-unit squad from Modojo footage; the faction-bonus tutorial battle — all four Black faction (game text: 'black colored seals... entire squad gets a power bonus'), which holds for this roster. Genlock Brute is the mini-boss preview of node 5's alpha, +1 level on the special pad. All 4 units fit slots 0-3; no giant."
+    },
+    {
+     "step": 5,
+     "name_en": "The Cleansing",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=ai7gfcdQ1x4",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "I",
+       "level": 5,
+       "why": "footage t28/t36: staff-wielding emissary on stone pad directly behind boss"
+      },
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "I",
+       "level": 5,
+       "why": "BOSS — tutorial text on screen t28: 'the boss is a Genlock Brute... can stun multiple heroes'; gold pad"
+      },
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "I",
+       "level": 5,
+       "why": "footage t44: bow-archer variant, same model as node 1"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "I",
+       "level": 5,
+       "why": "footage t36: falchion grunt, fourth enemy"
+      },
+      null
+     ],
+     "notes": "Exact 4-unit boss squad from Modojo footage — the only Map-1 node where the game names an enemy on screen (Genlock Brute, the 'alpha' of the map goal). Boss front slot 1 on gold pad, Emissary back slot 0 behind it, per filmed layout. Levels retuned 2026-11-04 (map 1 nodes 1-5 at 1/1/2/1/5) so the 5.4.4 tutorial's scripted outcomes hold in battle_sim: the squad with Ashaad loses here, the squad with the tutorial Rare wins. The filmed player squad also LOSES here. Map 1 has no separate Challenge node (5 story nodes only). Grunt/Bolter tier-I cap is 15, Emissary/Brute 20 — all levels legal. Do NOT add Shriek/Ogre/Genlock Alpha as fill-ins: absent from all Map-1 footage."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_02",
+   "chapter_en": "Zathrian's Curse",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Sylvan Attack",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=bU_b8oFxKMw (AnthonyJoker HoDA #2, t=1092-1093s pre-battle detail panel 'Нападение сильванов': 'Сильван I' large slot lvl9 193/603, 'Эльф-разбойник I' lvl9 57/128, 'Эльф-разбойник I' lvl10 61/133 — both small labels legible on frame-grab)",
+      "client-additional-data/data_tables/campaign_map_nodes.json (node 1 cta_en 'Defeat the trespassing elves and their sylvan.')"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ELFBANDIT",
+       "tier": "I",
+       "level": 5,
+       "why": "panel label 'Эльф-разбойник I' (lvl 10 in footage) read on video"
+      },
+      {
+       "id": "UNIT_ELFBANDIT",
+       "tier": "I",
+       "level": 5,
+       "why": "second panel label also reads 'Эльф-разбойник I' (lvl 9 in footage) — legible on sharpened frame at t=1092.5, refuting the earlier Elven Mage guess"
+      },
+      null,
+      null,
+      {
+       "id": "UNIT_SYLVAN",
+       "tier": "I",
+       "level": 5,
+       "why": "panel label 'Сильван I', large slot"
+      }
+     ],
+     "notes": "3-unit squad exactly as shown in the detail panel (large Sylvan + 2 Elf Bandits) — easy opener kept sparse. Both elf labels were re-read from sharpened frame grabs: the second enemy is another 'Эльф-разбойник I', not a mage (previous UNIT_ELVENMAGE guess corrected). All ids verified in characters.json; UNIT_SYLVAN is the giant=true cell."
+    },
+    {
+     "step": 2,
+     "name_en": "Dalish Camp",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=bU_b8oFxKMw (AnthonyJoker HoDA #2, t=1370-1384s: board shows 2 Werewolf + 2 striped Wolf models, no enemy giant; Results screen vs 'Лагерь долийцев', MVP row 'Волк IV' — verified by frame-grab)",
+      "client-additional-data/data_tables/campaign_map_nodes.json (node 2 cta_en 'Defeat the werewolf and its Brecilian allies.')"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_WEREWOLF",
+       "tier": "I",
+       "level": 7,
+       "why": "grey werewolf model on board"
+      },
+      {
+       "id": "UNIT_WOLF",
+       "tier": "I",
+       "level": 7,
+       "why": "striped wolf model; Results MVP was Wolf"
+      },
+      {
+       "id": "UNIT_WEREWOLF",
+       "tier": "I",
+       "level": 7,
+       "why": "second werewolf model on board"
+      },
+      {
+       "id": "UNIT_WOLF",
+       "tier": "I",
+       "level": 7,
+       "why": "second striped wolf model"
+      },
+      null
+     ],
+     "notes": "4 smalls, no giant — matches the footage (no large enemy model on the board; the bear giant in frame was the player's). Levels +2 over node 1."
+    },
+    {
+     "step": 3,
+     "name_en": "Into the Forest",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=rZOYdOD9cxI (AnthonyJoker HoDA #3, t=252-274s: 'В лес' board, 3 werewolf models on small pads + large brown Bear in enemy giant slot behind the detail panel — verified by frame-grab; player's own bear on the left)",
+      "client-additional-data/data_tables/campaign_map_nodes.json (node 3 cta_en 'Defeat Witherfang's werewolf pack.')"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_WEREWOLF",
+       "tier": "I",
+       "level": 9,
+       "why": "werewolf model 1 of 3 on board"
+      },
+      {
+       "id": "UNIT_WEREWOLF",
+       "tier": "I",
+       "level": 9,
+       "why": "werewolf model 2"
+      },
+      {
+       "id": "UNIT_WEREWOLF",
+       "tier": "I",
+       "level": 9,
+       "why": "werewolf model 3"
+      },
+      {
+       "id": "UNIT_WOLF",
+       "tier": "I",
+       "level": 9,
+       "why": "theme fill — Witherfang's pack, 4th small not visible behind panel"
+      },
+      {
+       "id": "UNIT_BEAR",
+       "tier": "I",
+       "level": 9,
+       "why": "large brown Bear seen in enemy giant slot (also fighting on the enemy side at t=262)"
+      }
+     ],
+     "notes": "Footage confirmed 3 werewolves and the enemy Bear giant; the 4th small cell was not visible behind the detail panel so a Wolf fills it (pack-consistent, avoids a 4th identical werewolf)."
+    },
+    {
+     "step": 4,
+     "name_en": "Cursed Ruins",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cJ9SS0MEwHE (AnthonyJoker HoDA #4, t=210s: fully labelled 'Проклятые руины' panel — 'Медведь III' large 123/303, 'Оборотень I' 47/207, 'Оборотень II' 60/269, 'Восставший из мертвых IV' 177/440 — verified verbatim by frame-grab)",
+      "client-additional-data/data_tables/campaign_map_nodes.json (node 4 cta_en 'Defeat the werewolves.')"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_WEREWOLF",
+       "tier": "I",
+       "level": 11,
+       "why": "panel label 'Оборотень I'"
+      },
+      {
+       "id": "UNIT_WEREWOLF",
+       "tier": "I",
+       "level": 11,
+       "why": "panel label 'Оборотень II' (tier flattened to chapter tier I)"
+      },
+      {
+       "id": "UNIT_REVENANT",
+       "tier": "I",
+       "level": 11,
+       "why": "panel label 'Восставший из мертвых IV' = UNIT_REVENANT; undead fits ruins"
+      },
+      null,
+      {
+       "id": "UNIT_BEAR",
+       "tier": "I",
+       "level": 11,
+       "why": "panel label 'Медведь III', large slot"
+      }
+     ],
+     "notes": "The only fully-labelled squad on this map: exactly 4 enemies (Bear giant + 2 Werewolves + Revenant), so cell 3 stays null. Original mixed tiers (I/II/III/IV) are mastery-scaling artifacts; flattened to the chapter's tier I per our ramp. Revenant is Rare — evidenced, kept despite the Common/Uncommon guideline."
+    },
+    {
+     "step": 5,
+     "name_en": "Lady of the Forest",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cJ9SS0MEwHE (AnthonyJoker HoDA #4, t=366s 'Хозяйка Леса' board, t=780s Results MVP 'Хозяйка Леса III' — verified by frame-grab)",
+      "https://www.youtube.com/watch?v=lrnMaqXvEio (AnthonyJoker HoDA #7, t=741s board: pale Lady model + 2 dark werewolves + striped wolf, enemy giant pad empty — verified by frame-grab)",
+      "client-additional-data/data_tables/campaign_map_nodes.json (node 5 cta_en 'Defeat the Lady of the Forest.')",
+      "recon/wiki_challenges.wikitext (Map 2 themed pool includes Shadow Werewolf, Sylvan)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_LADYOFTHEFOREST",
+       "tier": "I",
+       "level": 15,
+       "why": "boss per Results MVP 'Хозяйка Леса III' + cta; Legendary evidenced despite early map"
+      },
+      {
+       "id": "UNIT_WEREWOLF",
+       "tier": "I",
+       "level": 14,
+       "why": "dark werewolf model on board"
+      },
+      {
+       "id": "UNIT_WOLF",
+       "tier": "I",
+       "level": 14,
+       "why": "striped wolf model on board"
+      },
+      {
+       "id": "UNIT_SHADOWWEREWOLF",
+       "tier": "I",
+       "level": 14,
+       "why": "second dark werewolf model on the ep7 board (t=741); Werewolf and Shadow Werewolf share the model, Shadow chosen from the Map-2 wiki themed pool for a Rare boss escort"
+      },
+      null
+     ],
+     "notes": "Boss node with 4 units and NO giant: boards in both episodes (ep4 t=366, ep7 t=741) show exactly Lady + 2 dark werewolves + striped wolf with the enemy giant pad empty, and no giant appears in the battle waves either — the previously composed Sylvan giant contradicted footage and was removed. The old \"'Бой -4' = full 5-unit squad\" inference was wrong: that number is the energy cost (node 4 fought at -2 with 4 enemies). Lady of the Forest is a non-giant Legendary in the catalog, so she sits in a regular cell as squad leader (+1 level over her escort). Cell 3's Shadow Werewolf is the one interpreted cell (model ambiguous with plain Werewolf)."
+    },
+    {
+     "step": 6,
+     "name_en": "Brecilian Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "recon/hoda_challenge_rewards.csv (row 2: 'Brecillian Challenge' / 'Map 2 - Zathrian's Curse', Enemy Description 'Level 73 Bear IV' — single-enemy squad; verified verbatim in the CSV)",
+      "client-additional-data/data_tables/campaign_map_nodes.json (node 6 desc_en 'A giant bear... squads with single heroes')"
+     ],
+     "roster": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "id": "UNIT_BEAR",
+       "tier": "II",
+       "level": 20,
+       "why": "evidenced lone giant Bear; tier II + max level = the challenge spike mirroring original 'Bear IV'"
+      }
+     ],
+     "notes": "Deliberately NOT a full squad: the drop-rate sheet's enemy description ('Level 73 Bear IV') and the node desc shipped in our own data both say this challenge is a single giant bear — the node's whole stun-mechanic gimmick depends on it. A previously cited YouTube timestamp (HoDA #4 t=170-260s) was removed on verification: that range is the Cursed Ruins battle (bear + werewolves), not the challenge grind. The +5-level spike over node 5 requires exceeding Common tier-I's max level 15, so the bear is promoted to tier II (level cap 20), which also echoes the original's high-promotion 'Bear IV'."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_03",
+   "chapter_en": "The Deep Roads",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Magisters Corrupted",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "client-additional-data/characters.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "I",
+       "level": 8,
+       "why": "desc: magisters return as first darkspawn; catalog's darkspawn mage"
+      },
+      {
+       "id": "UNIT_DARKSPAWNEMISSARY",
+       "tier": "I",
+       "level": 8,
+       "why": "second corrupted-magister mage; Apostate/Blight/Mage group"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "I",
+       "level": 8,
+       "why": "hurlocks are darkspawn bred from humans, the magisters' kind"
+      },
+      null,
+      null
+     ],
+     "notes": "Small 3-unit vanguard for the map opener ('The first darkspawn have appeared'). Two emissary mages carry the corrupted-magister story beat; a lone Hurlock Grunt is the first true darkspawn body. All Common/Uncommon at tier I, level 8 per the map-3 ramp."
+    },
+    {
+     "step": 2,
+     "name_en": "Dumat's Army",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "scratchpad/recon/wiki_quests.wikitext",
+      "client-additional-data/characters.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "I",
+       "level": 10,
+       "why": "cta: hold back the darkspawn horde"
+      },
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "I",
+       "level": 10,
+       "why": "horde ranged rank-and-file"
+      },
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "I",
+       "level": 10,
+       "why": "classic mixed hurlock/genlock First Blight horde"
+      },
+      {
+       "id": "UNIT_SHRIEK",
+       "tier": "I",
+       "level": 10,
+       "why": "horde scout; theme fill from Blight pool"
+      },
+      null
+     ],
+     "notes": "Dumat himself is slain in Map 1's quest text (wiki), so this is his rank-and-file horde: a 4-unit mixed hurlock/genlock press, no giant yet. Level 10, all Common/Uncommon tier I."
+    },
+    {
+     "step": 3,
+     "name_en": "Fall of the Dwarves",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "scratchpad/recon/hoda_challenge_rewards.csv",
+      "client-additional-data/characters.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "I",
+       "level": 12,
+       "why": "genlocks are the Deep Roads darkspawn overrunning the thaigs"
+      },
+      {
+       "id": "UNIT_GENLOCKASSASSIN",
+       "tier": "I",
+       "level": 12,
+       "why": "genlock warband variety"
+      },
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "I",
+       "level": 12,
+       "why": "second brute; kingdom-sacking shock troops"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "I",
+       "level": 12,
+       "why": "horde support; theme fill"
+      },
+      {
+       "id": "UNIT_OGRE",
+       "tier": "I",
+       "level": 12,
+       "why": "ogre muscle breaching dwarven gates; first giant of the map"
+      }
+     ],
+     "notes": "Genlock-led assault on the dwarven kingdoms (desc: darkspawn tear through the Deep Roads). First full squad and first giant slot of the map. Level 12, Common/Uncommon tier I."
+    },
+    {
+     "step": 4,
+     "name_en": "An Endless Blight",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "client-additional-data/characters.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "I",
+       "level": 14,
+       "why": "cta: kill as many darkspawn as possible — swarm theme"
+      },
+      {
+       "id": "UNIT_SHRIEK",
+       "tier": "I",
+       "level": 14,
+       "why": "quick swarm attacker"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "I",
+       "level": 14,
+       "why": "numberless darkspawn filler"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "I",
+       "level": 14,
+       "why": "Deep Roads blight vermin; variety vs pure darkspawn"
+      },
+      {
+       "id": "UNIT_GIANTCORRUPTEDSPIDER",
+       "tier": "I",
+       "level": 14,
+       "why": "swarm centerpiece giant; Blight/Beast group"
+      }
+     ],
+     "notes": "Fifty-year Blight swarm ('overwhelm them with their numbers'): fast, numerous darkspawn plus blight-corrupted Deep Roads spiders for variety. Level 14; Commons stay under their tier-I cap of 15."
+    },
+    {
+     "step": 5,
+     "name_en": "Sealing the Doors",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "scratchpad/recon/wiki_quests.wikitext",
+      "client-additional-data/characters.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_GENLOCKALPHA",
+       "tier": "I",
+       "level": 16,
+       "why": "alpha-grade closer, mirroring Map 1's darkspawn-alpha capstone"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "I",
+       "level": 16,
+       "why": "the map's advertised emissary unit"
+      },
+      {
+       "id": "UNIT_DARKSPAWNEMISSARY",
+       "tier": "I",
+       "level": 16,
+       "why": "SLOW specialty matches the map's slowing-darkspawn hint"
+      },
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "I",
+       "level": 16,
+       "why": "door-holding brute; theme fill"
+      },
+      {
+       "id": "UNIT_OGRE",
+       "tier": "I",
+       "level": 16,
+       "why": "giant pushing for the surface"
+      }
+     ],
+     "notes": "12-win final story node with no named boss (wiki: map goal is defeating the first darkspawn). Escalation via one Rare (Genlock Alpha) leading a full emissary-backed squad at level 16; rest stays Uncommon per the maps-1-4 rarity rule."
+    },
+    {
+     "step": 6,
+     "name_en": "Deep Roads Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "https://docs.google.com/spreadsheets/d/1f0mpB1yrGt-ctKgsmfdbDLlSr-A5VHvKuDwj7xpclEg",
+      "scratchpad/recon/hoda_challenge_rewards.csv",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "I",
+       "level": 19,
+       "why": "drop-log sheet: Lvl 19 Genlock Brute"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "I",
+       "level": 20,
+       "why": "drop-log sheet: Lvl 20 Hurlock Emissary"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "I",
+       "level": 20,
+       "why": "drop-log sheet: second Lvl 20 Hurlock Emissary"
+      },
+      null,
+      null
+     ],
+     "notes": "Exact battle squad from the community drop-log spreadsheet (298+ runs, tab 'Deep Roads (3)'): a 3-unit challenge squad — Lvl 19 Genlock Brute + 2x Lvl 20 Hurlock Emissary — kept at 3 units as sourced (wiki notes challenge squads run small). The source lists tier IV promotions; per our chapter ramp (maps 1-3 = tier I) they are emitted at tier I with the sourced levels preserved verbatim, legal under both units' tier-I max_level of 20. Level spike +3-4 over node 5 matches the challenge-node rule."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_04",
+   "chapter_en": "The Rise of the Carta",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Dust in the Wind",
+     "authenticity": "inferred",
+     "sources": [
+      "https://web.archive.org/web/20131224033804/http://forums.capitalgames.com:80/showthread.php/61546-8-man-squad-(w-stats)-advice-appreciated-Arlathan-Map-6",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CARTATHUG",
+       "tier": "II",
+       "level": 11,
+       "why": "forum farmer: easy fight vs red-faction Carta thugs"
+      },
+      {
+       "id": "UNIT_CARTATHUG",
+       "tier": "II",
+       "level": 11,
+       "why": "same evidence; all-thug intro squad"
+      },
+      {
+       "id": "UNIT_CARTATHUG",
+       "tier": "II",
+       "level": 11,
+       "why": "same evidence; all-thug intro squad"
+      },
+      null,
+      null
+     ],
+     "notes": "Easy XP/coin farm node per Dec-2013 forum account ('easy fight against red faction Carta thugs', explicitly distinguished from the challenge node). Desc = casteless Duster criminals. 3-unit squad keeps it the map's softest entry; squad size and levels authored."
+    },
+    {
+     "step": 2,
+     "name_en": "Duster's Revenge",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "scratchpad/recon/enemy_pool.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CARTATHUG",
+       "tier": "II",
+       "level": 13,
+       "why": "cta 'Carta bullies' = power-drain Thug unit"
+      },
+      {
+       "id": "UNIT_CARTATHUG",
+       "tier": "II",
+       "level": 13,
+       "why": "extortion crew; thug-dominant per desc"
+      },
+      {
+       "id": "UNIT_CARTAASSASSIN",
+       "tier": "II",
+       "level": 13,
+       "why": "theme fill from red Carta pool (Carta Assassin I-IV enemy rows)"
+      },
+      {
+       "id": "UNIT_CARTATHUG",
+       "tier": "II",
+       "level": 13,
+       "why": "extortion crew; thug-dominant per desc"
+      },
+      null
+     ],
+     "notes": "Desc: Carta extorting/intimidating Orzammar merchants during the Fifth Blight; 'bullies' maps to the Carta Thug unit. One Assassin added for spice from the evidenced red Dwarf/Outlaw/Rogue pool. Exact squad authored."
+    },
+    {
+     "step": 3,
+     "name_en": "Dust Town",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "scratchpad/recon/wiki_quests.wikitext"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CARTATHUG",
+       "tier": "II",
+       "level": 16,
+       "why": "cta names the unit: 'defeat the Carta thugs'"
+      },
+      {
+       "id": "UNIT_CARTAASSASSIN",
+       "tier": "II",
+       "level": 16,
+       "why": "hideout guards; theme fill from Carta pool"
+      },
+      {
+       "id": "UNIT_CARTASMUGGLER",
+       "tier": "II",
+       "level": 16,
+       "why": "Dust Town base runs the smuggling ring; theme fill"
+      },
+      {
+       "id": "UNIT_CARTATHUG",
+       "tier": "II",
+       "level": 16,
+       "why": "cta names the unit"
+      },
+      null
+     ],
+     "notes": "Infiltrating the Carta's hidden Dust Town base; in-game cta verbatim names 'Carta thugs' (wiki carries identical text). Mixed Carta squad from the evidenced pool; exact composition authored."
+    },
+    {
+     "step": 4,
+     "name_en": "Surfaced Carta",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "scratchpad/recon/enemy_pool.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CARTASMUGGLER",
+       "tier": "II",
+       "level": 18,
+       "why": "desc directly matches the Carta Smuggler unit"
+      },
+      {
+       "id": "UNIT_COTERIETHUG",
+       "tier": "II",
+       "level": 18,
+       "why": "surface human-lands fence; red Outlaw pool (Coterie Thug I-IV enemy rows)"
+      },
+      {
+       "id": "UNIT_CARTASMUGGLER",
+       "tier": "II",
+       "level": 18,
+       "why": "smuggling ring core unit"
+      },
+      {
+       "id": "UNIT_COTERIETHIEF",
+       "tier": "II",
+       "level": 18,
+       "why": "surface contraband handler; unit later sourced on this map's challenge"
+      },
+      {
+       "id": "UNIT_BRONTO",
+       "tier": "II",
+       "level": 18,
+       "why": "pack-beast hauling contraband; Bronto I-IV exist as giants in enemy pool"
+      }
+     ],
+     "notes": "Desc: surface-dwelling dwarves smuggling weapons/people/goods between Orzammar and human lands. Coterie units stand in for the human-lands partners (both are red Outlaw enemy-pool rows; Coterie Thief is also sourced on node 6). Bronto giant = dwarven caravan pack animal, the map's only giant; its presence here is authored."
+    },
+    {
+     "step": 5,
+     "name_en": "Rogue Carta",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://web.archive.org/web/20140309174933/http://forums.capitalgames.com:80/showthread.php/64372-Mastered-Last-Carta-Node-Without-Speed-Runes",
+      "scratchpad/recon/wiki_quests.wikitext"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CARTAASSASSIN",
+       "tier": "II",
+       "level": 20,
+       "why": "quick Carta units players had to slow (forum mastery account)"
+      },
+      {
+       "id": "UNIT_JARVIA",
+       "tier": "II",
+       "level": 21,
+       "why": "boss: the unnamed 'Carta leader'; lore leader of Dust Town (named in Carta Hideout event text)"
+      },
+      {
+       "id": "UNIT_CARTATHUG",
+       "tier": "II",
+       "level": 20,
+       "why": "forum: plural quick 'thugs' on the last Carta node"
+      },
+      {
+       "id": "UNIT_CARTASMUGGLER",
+       "tier": "II",
+       "level": 20,
+       "why": "quick Carta filler from evidenced pool"
+      },
+      null
+     ],
+     "notes": "Boss node: cta 'Defeat a Carta leader'. No source names the unit; Jarvia chosen over Beraht (she runs Dust Town during the Fifth Blight, the map's timeframe, and is pure Red Carta Rogue + Quick, matching forum accounts of an all-quick squad players countered with slow). Giant slot left empty deliberately — the forum mastery account describes multiple quick rogues, no giant."
+    },
+    {
+     "step": 6,
+     "name_en": "Dust Town Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "https://docs.google.com/spreadsheets/d/1f0mpB1yrGt-ctKgsmfdbDLlSr-A5VHvKuDwj7xpclEg",
+      "scratchpad/recon/hoda_challenge_rewards.csv",
+      "scratchpad/recon/wb_challenge_quest_drops.txt",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CARTAASSASSIN",
+       "tier": "III",
+       "level": 25,
+       "why": "drop-log: 'Level 43 Carta Assassin IV' in the actual battle"
+      },
+      {
+       "id": "UNIT_COTERIETHIEF",
+       "tier": "III",
+       "level": 25,
+       "why": "drop-log: 'Level 43 Coterie Thief IV'"
+      },
+      {
+       "id": "UNIT_CARTASMUGGLER",
+       "tier": "III",
+       "level": 25,
+       "why": "drop-log: 'Level 43 Carta Smuggler IV'"
+      },
+      {
+       "id": "UNIT_CARTATHUG",
+       "tier": "III",
+       "level": 25,
+       "why": "drop-log: 'Level 43 Carta Thug IV'; corroborated by themed drops + 'Rogues are Quick' hint"
+      },
+      null
+     ],
+     "notes": "Only node with a source-documented exact battle squad: 4 units, no giant (kept giant-less to match the source despite the full-squad rule). Original ran level 43 tier IV; rescaled to our map-4 ramp as tier III level 25 — the tier bump above the chapter's II is required because Common units cap at level 20 on tier II, and it mirrors the original's higher-tier challenge variants. All-Quick rogue squad matches the in-game hint 'Rogues are Quick!'."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_05",
+   "chapter_en": "The Highway",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Fall of Arlathan",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_05 step 1: 'Using blood magic, the Tevinter mages attempt to destroy the elven city' / 'Defend Arlathan from the Tevinter.')",
+      "scratchpad/recon/wiki_quests.wikitext (Map 5 section)",
+      "scratchpad/recon/enemy_pool.json (UNIT_TEVINTERSLAVER = the catalog's Tevinter Blood_Mage)",
+      "scratchpad/recon/wb_arlathan_map6.txt (forum: blue Tevinter squads, back-row mages)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "II",
+       "level": 14,
+       "why": "desc names Tevinter blood mages; Slaver is the catalog's Tevinter Blood_Mage (back row)"
+      },
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "II",
+       "level": 14,
+       "why": "front-line escort for the mage assault; basic Tevinter soldier"
+      },
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "II",
+       "level": 14,
+       "why": "Tevinter mage siege of Arlathan; map-5 pool unit (back row)"
+      },
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "II",
+       "level": 14,
+       "why": "desc says 'mages' plural — second blood mage anchors the sinking ritual"
+      },
+      null
+     ],
+     "notes": "4-unit opener, no giant. Elven Mage from the hint tags deliberately excluded — the player DEFENDS the elves here, so elves cannot be the enemy squad."
+    },
+    {
+     "step": 2,
+     "name_en": "Tevinter Expands",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_05 step 2: 'Push back the invading Tevinter.')",
+      "scratchpad/recon/wb_arlathan_map6.txt (thread 61546: blue Tevinter squads, back-row mages, high-HP fights)",
+      "scratchpad/recon/wiki_challenges.wikitext (Tevinter Arcane Warrior in map-5 Magic and Stone pool)",
+      "scratchpad/recon/enemy_pool.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "II",
+       "level": 16,
+       "why": "forum-evidenced back-row Tevinter mage"
+      },
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "II",
+       "level": 16,
+       "why": "invading Imperium rank-and-file, front row"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEMAGE",
+       "tier": "II",
+       "level": 16,
+       "why": "chapter-pool Tevinter mage, back row (variety vs node 1)"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEWARRIOR",
+       "tier": "II",
+       "level": 16,
+       "why": "map-5-pool front-line magic-warrior (Magic and Stone list)"
+      },
+      null
+     ],
+     "notes": "Standard 4-unit invasion squad matching the 'blue Tevinter squads with back-row mages' forum description of maps 5-6."
+    },
+    {
+     "step": 3,
+     "name_en": "The Alamarri",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_05 step 3: 'fight several campaigns against the Alamarri' / 'Defend the Alamarri.')",
+      "scratchpad/recon/enemy_pool.json (chapter Tevinter pool)",
+      "scratchpad/recon/wiki_quests.wikitext"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "II",
+       "level": 19,
+       "why": "Tevinter campaigns enslaved tribal captives; chapter-pool blood mage, back row"
+      },
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "II",
+       "level": 19,
+       "why": "military campaign infantry, front row"
+      },
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "II",
+       "level": 19,
+       "why": "evidenced candidate for this node's Tevinter forces, back row"
+      },
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "II",
+       "level": 19,
+       "why": "second front-liner — 'several campaigns' army pressure"
+      },
+      null
+     ],
+     "notes": "Player defends the Alamarri, so the squad is pure Tevinter military. Tevinter Laetan Mage was considered but only ships at tier IV in our catalog, so the Slaver fills the second mage slot instead."
+    },
+    {
+     "step": 4,
+     "name_en": "Building the Highway",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_05 step 4: 'Defeat the stationed Imperium workers.')",
+      "scratchpad/recon/wiki_challenges.wikitext (lines 96-115: Magic and Stone 'forces behind the construction' — Dwarven Warrior, Silent Sister, Tevinter Arcane Warrior, Tevinter Slaver, Inferno Golem, Stone Golem)",
+      "scratchpad/recon/wiki_quests.wikitext (line 69: 'the Imperial Highway was constructed of magic and stone')"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "II",
+       "level": 21,
+       "why": "slave-driver overseeing the work gangs; Magic and Stone construction-forces list"
+      },
+      {
+       "id": "UNIT_DWARVENWARRIOR",
+       "tier": "II",
+       "level": 21,
+       "why": "dwarven builder per Magic and Stone construction-forces flavor"
+      },
+      {
+       "id": "UNIT_SILENTSISTER",
+       "tier": "II",
+       "level": 21,
+       "why": "second dwarven construction unit from the same evidenced list"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEWARRIOR",
+       "tier": "II",
+       "level": 21,
+       "why": "stationed Imperium garrison, Magic and Stone list"
+      },
+      {
+       "id": "UNIT_INFERNOGOLEM",
+       "tier": "II",
+       "level": 21,
+       "why": "giant slot: golem labor from the Magic and Stone drop pool"
+      }
+     ],
+     "notes": "First giant of the map. Composition mirrors the 'Magic and Stone' construction-forces theme (dwarves + Tevinter overseers + golem); that challenge's drop list is theme evidence, not a verified battle squad — hence inferred."
+    },
+    {
+     "step": 5,
+     "name_en": "Civil War",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_05 step 5: 'Defeat the enchanter leading the Imperial platoon.')",
+      "scratchpad/recon/wiki_quests.wikitext (line 62: map goal 'Clear the map by defeating an Imperium slave boss.')",
+      "https://web.archive.org/web/20140118045922/http://forums.capitalgames.com:80/showthread.php/62567-Mastered-the-last-Node-of-Map-10 ('hardest one was the last node on the highway' — saved as recon/wb_map10_lastnode.txt)",
+      "scratchpad/recon/enemy_pool.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "II",
+       "level": 25,
+       "why": "BOSS: the unnamed enchanter / 'Imperium slave boss' — Slaver is the catalog's Tevinter slave-mage; +2 levels over platoon"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEWARRIOR",
+       "tier": "II",
+       "level": 23,
+       "why": "Imperial platoon front line"
+      },
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "II",
+       "level": 23,
+       "why": "platoon back-row mage support"
+      },
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "II",
+       "level": 23,
+       "why": "platoon rank-and-file, front row"
+      },
+      {
+       "id": "UNIT_GATEGUARDIAN",
+       "tier": "II",
+       "level": 23,
+       "why": "theme fill giant: Tevinter golem war machine, sells the veteran-attested 'hardest node of maps 1-10' difficulty"
+      }
+     ],
+     "notes": "Boss cell 0 flagged via the higher level (25 vs 23); mark is_boss on it if the battle format supports the flag. Danarius/Imperial Archon deliberately NOT used — they are challenge drop-pool legendaries, not evidenced as this boss, and legendaries would break the map-5 rarity ramp."
+    },
+    {
+     "step": 6,
+     "name_en": "Fereldan Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "scratchpad/recon/hoda_challenge_rewards.csv (line 33: enemy = 'Level 173 Fereldan Knight IV', single unit)",
+      "https://web.archive.org/web/20140106005243/http://forums.capitalgames.com:80/showthread.php/61652-Did-the-Fereldan-grind-node-just-get-harder (lone stunnable 'him' — saved as scratchpad/map5_61652.html)",
+      "https://web.archive.org/web/20140106003318/http://forums.capitalgames.com:80/showthread.php/61619-Questions-on-Ferelden-Knight-amp-Stun-characters (saved as scratchpad/map5_61619.html)",
+      "scratchpad/recon/wb_capforum_comprehensive_68692.txt (line 128: stun-farm target, Ferelden Challenge)"
+     ],
+     "roster": [
+      null,
+      {
+       "id": "UNIT_FERELDANKNIGHT",
+       "tier": "IV",
+       "level": 29,
+       "why": "triple-sourced lone enemy: 'Level 173 Fereldan Knight IV' — tier IV kept verbatim from the source as the challenge spike"
+      },
+      null,
+      null,
+      null
+     ],
+     "notes": "Deliberately a single-unit squad despite the 'challenge nodes full' guideline — the sourced squad is exactly one Fereldan Knight (in-game hint: squads of 1-2 heroes; drop log shows one Level 173 Knight IV; forum threads consistently say 'him'). Placed in front-row cell 1. Tier IV substitutes for the original's fixed oversized level (173) as the difficulty spike; level 29 = node-5 boss +4, within Uncommon tier-IV max_level 35. Normal speed, stun-vulnerable — preserves the classic stun-farm identity."
+    }
+   ],
+   "summary": "PVE_MAP_05 — The Highway (RU \"Тракт\"), story map 5 of 16, 6 nodes. Chapter enemy faction: Tevinter Imperium (Blue and White/Blue units; the Slaver boss line is White/Black), tier II, levels 14→25 with a sourced single-unit challenge spike at node 6."
+  },
+  {
+   "campaign": "PVE_MAP_06",
+   "chapter_en": "Arlathan",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Elvhenan",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_06 step 1)",
+      "https://web.archive.org/web/20131231174338/http://forums.capitalgames.com:80/showthread.php/61546-8-man-squad-(w-stats)-advice-appreciated-Arlathan-Map-6",
+      "scratchpad/recon/wb_arlathan_map6.txt"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERARCANEMAGE",
+       "tier": "II",
+       "level": 17,
+       "why": "player thread: back-row mages in first two nodes (drake counter)"
+      },
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "II",
+       "level": 17,
+       "why": "Tevinter frontline; desc: Imperium conquers Elvhenan"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEMAGE",
+       "tier": "II",
+       "level": 17,
+       "why": "'those mages in the back' is plural — second back-row mage"
+      },
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "II",
+       "level": 17,
+       "why": "theme fill; all-blue Tevinter squad per thread"
+      },
+      null
+     ],
+     "notes": "Opening node kept at 4 units, no giant (no large creature evidenced anywhere on this map's story nodes; the documented challenge squad is also giant-less). Enemy types sourced from P.Domi's Dec-2013 thread (blue squads, back-row mages, AoE); exact composition authored."
+    },
+    {
+     "step": 2,
+     "name_en": "Arlathan",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_06 step 2)",
+      "https://web.archive.org/web/20140113210532/http://forums.capitalgames.com:80/showthread.php/61992-Need-help-on-Map-6",
+      "https://web.archive.org/web/20131231174338/http://forums.capitalgames.com:80/showthread.php/61546-8-man-squad-(w-stats)-advice-appreciated-Arlathan-Map-6",
+      "scratchpad/recon/wb_map6_help.txt"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "II",
+       "level": 19,
+       "why": "thread 61992 names enemy TBMs (plural) on fight 2"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEWARRIOR",
+       "tier": "II",
+       "level": 19,
+       "why": "map-pool front guard for the city breach"
+      },
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "II",
+       "level": 19,
+       "why": "second TBM per plural; back-row mage pattern"
+      },
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "II",
+       "level": 19,
+       "why": "theme fill; desc: Tevinter breach Arlathan"
+      },
+      null
+     ],
+     "notes": "Node 2 was the wall in thread 61992 ('fight 2 is getting me every time'); stun-spam from multiple enemy Tevinter Battlemages is the evidenced mechanic, so both TBMs sit back row with a warrior screen. No giant evidenced; squad left giant-less like node 1."
+    },
+    {
+     "step": 3,
+     "name_en": "Arlathan Forest Edge",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_06 step 3)",
+      "Dragon Age canon: fall of Arlathan (Tevinter blood magic, demons, dragons)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "II",
+       "level": 22,
+       "why": "desc: 'all manner of magic'"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "II",
+       "level": 22,
+       "why": "desc names demons in the Imperium army"
+      },
+      {
+       "id": "UNIT_DRAKE",
+       "tier": "II",
+       "level": 22,
+       "why": "desc names dragons; catalog dragon-type regular"
+      },
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "II",
+       "level": 22,
+       "why": "Imperium war-march frontline"
+      },
+      {
+       "id": "UNIT_DRAGONTHRALL",
+       "tier": "II",
+       "level": 22,
+       "why": "desc: 'dragons at their behest' — enthralled dragon giant"
+      }
+     ],
+     "notes": "Only node whose desc explicitly widens the army beyond Tevinter humans (magic + demons + dragons), so it gets the map's beast/demon color: Rage Demon and Drake regulars plus the Dragon Thrall on the large pad. Exact squad authored from those desc-named types."
+    },
+    {
+     "step": 4,
+     "name_en": "Enslaved",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_06 step 4)",
+      "https://web.archive.org/web/20140113212657/http://forums.capitalgames.com/showthread.php/61969-Need-Help!-Team-Configuration-Stuck-on-Map-6",
+      "https://web.archive.org/web/20131229202648/http://forums.capitalgames.com:80/showthread.php/61747-Tevinter-Challenge-TBM-Drops",
+      "scratchpad/recon/enemy_pool.json",
+      "scratchpad/recon/wb_map6_stuck.txt"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "II",
+       "level": 24,
+       "why": "cta: 'Defeat the Imperium slavers' — game's only slaver unit, in this map's drop pool"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEWARRIOR",
+       "tier": "II",
+       "level": 24,
+       "why": "map pool (challenge drops name TAW here)"
+      },
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "II",
+       "level": 24,
+       "why": "slavers plural per cta"
+      },
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "II",
+       "level": 24,
+       "why": "theme fill; slave-raid escort"
+      },
+      {
+       "id": "UNIT_PRIDEDEMON",
+       "tier": "II",
+       "level": 24,
+       "why": "authored: magister-bound demon muscle (node 3 desc has demons at their behest)"
+      }
+     ],
+     "notes": "Thread 61969 confirms node 4 was a notorious difficulty spike but names no units, so this node goes to a full 5-cell squad with the map's first giant. Tevinter Slaver (Rare blood mage) is the unambiguous cta match; Pride Demon giant is the one authored liberty, justified by the chapter's demon-binding lore."
+    },
+    {
+     "step": 5,
+     "name_en": "Arlathan's End",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_06 step 5)",
+      "scratchpad/recon/wiki_quests.wikitext (Map 6: 'Clear the map by defeating an Imperium slave boss')",
+      "scratchpad/recon/enemy_pool.json (enemy-only 'Slave Master Danarius' variant)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DANARIUS",
+       "tier": "II",
+       "level": 27,
+       "why": "boss: unnamed 'Imperium slave boss'; catalog's slave-master magister (enemy pool ships a Slave Master Danarius variant)"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEWARRIOR",
+       "tier": "II",
+       "level": 26,
+       "why": "magister's arcane bodyguard; map pool"
+      },
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "II",
+       "level": 26,
+       "why": "desc: 'Tevinter mages command the earth to swallow Arlathan'"
+      },
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "II",
+       "level": 26,
+       "why": "slave-boss retinue continues node-4 slaver theme"
+      },
+      {
+       "id": "UNIT_GATEGUARDIAN",
+       "tier": "II",
+       "level": 26,
+       "why": "authored: the catalog's only era-plausible Tevinter-tagged giant for the final assault"
+      }
+     ],
+     "notes": "No source names the slave boss (server-side); Danarius is the authored pick — the game's slave-master magister, and the enemy pool literally contains an enemy-only 'Slave Master Danarius' row, making him the strongest data-driven candidate. Legendary boss anchors the full finale squad; Gate Guardian is the catalog's only era-plausible Tevinter-tagged giant (the other two, Archdemon Urthemiel and Gallows Guardian, are Legendary and anachronistic: Blight archdemon / Kirkwall red-lyrium golem)."
+    },
+    {
+     "step": 6,
+     "name_en": "Tevinter Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "https://docs.google.com/spreadsheets/d/1f0mpB1yrGt-ctKgsmfdbDLlSr-A5VHvKuDwj7xpclEg (HoDA Challenge Node Drop Rates — Map 6 enemy squad: L37 TAW IV, L37 TBM IV x2, L38 TAW IV)",
+      "scratchpad/recon/hoda_challenge_rewards.csv",
+      "https://web.archive.org/web/20140102145704/http://forums.capitalgames.com:80/showthread.php/61560-Tevinter-Challenge-help (4 units, all blue)",
+      "https://web.archive.org/web/20140105044502/http://forums.capitalgames.com:80/showthread.php/62041-Challenge-quest-map-7-halp (TBM in the front row)",
+      "https://web.archive.org/web/20140309141142/http://forums.capitalgames.com:80/showthread.php/62215-The-Almighty-Tevinter-Challenge",
+      "https://web.archive.org/web/20140104155931/http://forums.capitalgames.com:80/showthread.php/61931-help-to-beat-tevinter-challenge"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "III",
+       "level": 31,
+       "why": "sourced: L37 Tevinter Battlemage IV (drop-log sheet), back row"
+      },
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "III",
+       "level": 31,
+       "why": "sourced: second TBM, front row per thread 62041"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEWARRIOR",
+       "tier": "III",
+       "level": 31,
+       "why": "sourced: L37 Tevinter Arcane Warrior IV"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEWARRIOR",
+       "tier": "III",
+       "level": 32,
+       "why": "sourced: L38 TAW IV — the one-level-higher copy"
+      },
+      null
+     ],
+     "notes": "Fully documented original squad: exactly 4 all-Blue units, no large creature — 2x TBM IV L37 (one front row) + TAW IV L37 + TAW IV L38, corroborated by five independent 2013-14 threads. Original tier IV / L37-38 rescaled to our chapter-6 ramp as tier III (one promotion above the map's baseline II = the rarity spike) at L31/32 (+5 over node 5), preserving the +1-level asymmetry on the second Arcane Warrior."
+    }
+   ],
+   "summary": "PVE_MAP_06 \"Arlathan\" — map #6 of 16, 6 nodes; Tevinter Imperium (blue, mage-heavy) conquering the elven homeland, 975 Ancient Era; map goal: defeat an Imperium slave boss"
+  },
+  {
+   "campaign": "PVE_MAP_07",
+   "chapter_en": "The Circle Tower",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Uldred's Proposition",
+     "authenticity": "sourced",
+     "sources": [
+      "https://web.archive.org/web/20140106005349/http://forums.capitalgames.com:80/showthread.php/61934-What-s-my-best-option-for-team-layout-stuck-on-map-7",
+      "scratchpad/recon/wb_map7_stuck.txt",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      null,
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "II",
+       "level": 21,
+       "why": "forum: two one-shotting abominations in front row"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "II",
+       "level": 20,
+       "why": "forum: unnamed mage behind an abomination; demon-mage pick for 'demon minions' cta"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "II",
+       "level": 21,
+       "why": "forum: two one-shotting abominations in front row"
+      },
+      null
+     ],
+     "notes": "Exact 3-enemy shape from Dec-2013 thread: 2 Abominations front (slots 1/3) + 1 mage back (slot 2). Mage identity never named by players (they say 'the Mage', not 'DD', so not the mid-map Desire Demon) — Shade (Common, Demon+Mage) authored as the demon-minion mage. This was THE notorious early-game wall (RU 4pda st80: player couldn't clear map-7 node 1 until level 40); Abominations lead the level curve at 21. Verified: wb_map7_stuck.txt lines 78/97/129 support 2 one-shotting aboms + a Mage behind an Abom."
+    },
+    {
+     "step": 2,
+     "name_en": "Uldred's Turn",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Quests_(Heroes_of_Dragon_Age)",
+      "lore: DA:O Broken Circle (Uldred's blood mages become abominations)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "II",
+       "level": 22,
+       "why": "desc: demonic forces summoned through blood magic"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "II",
+       "level": 23,
+       "why": "cta 'Defeat the abominations'"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "II",
+       "level": 22,
+       "why": "cta 'Defeat the abominations'"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "II",
+       "level": 23,
+       "why": "cta 'Defeat the abominations'"
+      },
+      null
+     ],
+     "notes": "Uldred transforms; his blood-mage followers turn into abominations — abomination-heavy squad (3) plus one summoned Rage Demon in back. Exact composition authored around the evidenced type."
+    },
+    {
+     "step": 3,
+     "name_en": "Extreme Measures",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "scratchpad/recon/desc_enemy_hints.json",
+      "lore: DA:O Broken Circle first-floor encounters (Shades, Rage demons)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHADE",
+       "tier": "III",
+       "level": 24,
+       "why": "lore: Shades infest the sealed lower floors"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "II",
+       "level": 25,
+       "why": "lore: Rage demons on the first floor"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "III",
+       "level": 24,
+       "why": "lore: Shades infest the sealed lower floors"
+      },
+      {
+       "id": "UNIT_HUNGERDEMON",
+       "tier": "II",
+       "level": 25,
+       "why": "theme fill: lesser demon crossing the Veil"
+      },
+      null
+     ],
+     "notes": "Weakest evidence on the map (cta only says 'Begin cleansing the Circle Tower'; templars in the hints are lore-allies sealing the doors). Composed from Broken Circle first-floor bestiary. Shade is Common — tier II caps at level 20, so Shades are tier III (rarity escalation was HoDA's authentic difficulty knob) to sit on the level-24 curve. Aggregate squad power dips vs node 2 because Commons are stat-poor; level curve still ascends, matching the capped-Common-among-Rares pattern used across our later maps."
+    },
+    {
+     "step": 4,
+     "name_en": "A Tower Infested",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://web.archive.org/web/20140106005349/http://forums.capitalgames.com:80/showthread.php/61934-What-s-my-best-option-for-team-layout-stuck-on-map-7",
+      "https://4pda.to/forum/index.php?showtopic=552176 (scratchpad/recon/4pda_pages/st460.html)",
+      "lore: DA:O Broken Circle mid/upper floors (abominations, Arcane Horrors)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "II",
+       "level": 27,
+       "why": "forum+4pda: AoE-stun Desire Demon in the back row on a mid-map node"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "II",
+       "level": 27,
+       "why": "desc: forces of the possessed abomination"
+      },
+      {
+       "id": "UNIT_ARCANEHORROR",
+       "tier": "II",
+       "level": 26,
+       "why": "lore: Arcane Horrors on the infested upper floors"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "II",
+       "level": 27,
+       "why": "desc: forces of the possessed abomination"
+      },
+      null
+     ],
+     "notes": "The evidenced roaming detail — an AoE-stunning Desire Demon standing in the second/back row (Bealsey quote + RU 4pda st460: 'ДЖ, стоящих во втором ряду на 7 карте') — is pinned here as the best 'mid-map story node' fit ('A Tower Infested', cta 'Defeat the demons'). Back row = slot 0/2 per our formation convention. Arcane Horror is the map's first Epic."
+    },
+    {
+     "step": 5,
+     "name_en": "Pride's Demise",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Quests_(Heroes_of_Dragon_Age)",
+      "lore: DA:O Broken Circle finale (Uldred-as-Pride-Demon + 3 abominations in the Harrowing Chamber)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CIRCLESENIORENCHANTER",
+       "tier": "II",
+       "level": 29,
+       "why": "desc: captive mages being turned into abominations"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "II",
+       "level": 29,
+       "why": "lore: 3 abominations flank the Pride demon in the finale"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "II",
+       "level": 29,
+       "why": "lore: 3 abominations flank the Pride demon in the finale"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "II",
+       "level": 29,
+       "why": "lore: 3 abominations flank the Pride demon in the finale"
+      },
+      {
+       "id": "UNIT_PRIDEDEMON",
+       "tier": "II",
+       "level": 30,
+       "why": "boss per cta 'Defeat the Pride Demon' (giant slot)"
+      }
+     ],
+     "notes": "Boss node, full 5 cells. Pride Demon (Epic giant) is the cta-named boss — the demon that was once Uldred (catalog's Legendary UNIT_ULDRED deliberately not used; cta names the Pride Demon). The DA:O Harrowing Chamber fight is Uldred plus three abominations; the fourth cell is our addition — a turned Circle mage (Circle Senior Enchanter) per the desc's captive mages being converted, and that unit is verified present in this map's challenge drop pool (5.16%, hoda_challenge_rewards.csv)."
+    },
+    {
+     "step": 6,
+     "name_en": "Circle Tower Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "https://docs.google.com/spreadsheets/d/1f0mpB1yrGt-ctKgsmfdbDLlSr-A5VHvKuDwj7xpclEg",
+      "scratchpad/recon/hoda_challenge_rewards.csv (line 52)",
+      "https://web.archive.org/web/20140106005349/http://forums.capitalgames.com:80/showthread.php/61934-What-s-my-best-option-for-team-layout-stuck-on-map-7",
+      "scratchpad/recon/wb_capforum_comprehensive_68692.txt (line 332)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "IV",
+       "level": 34,
+       "why": "spreadsheet: Desire Demon IV L52; two 2014 reports: kill/stun the DD first"
+      },
+      {
+       "id": "UNIT_REVENANT",
+       "tier": "IV",
+       "level": 34,
+       "why": "spreadsheet: Revenant IV L52 (melee front)"
+      },
+      {
+       "id": "UNIT_SKELETONMAGE",
+       "tier": "IV",
+       "level": 30,
+       "why": "spreadsheet: Skeleton Mage IV L53"
+      },
+      {
+       "id": "UNIT_SKELETONARCHER",
+       "tier": "IV",
+       "level": 30,
+       "why": "spreadsheet: Skeleton Archer IV L52"
+      },
+      null
+     ],
+     "notes": "Actual original squad documented verbatim in the community drop-rate spreadsheet (Revenant IV L52, Desire Demon IV L52, Skeleton Mage IV L53, Skeleton Archer IV L52) — 4 units, no giant, so slot 4 stays null despite the 'challenge nodes full' guideline (source is primary). All four units keep the source's tier IV (matching our map-4/map-5 challenge convention of preserving source tiers); levels rescaled to our chapter-7 curve: Rares at IV level 34 (+4 spike over node 5's max 30, well within Rare IV cap 45), Commons clamped at their tier-IV max level 30 — the source's skeleton-mage-runs-hotter detail (53 vs 52) is lost to the clamp. Original L52-53 values preserved here for reference."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_08",
+   "chapter_en": "March on the Dales",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Apathy",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (cta: Defend Montsimmard from darkspawn)",
+      "https://web.archive.org/web/20140105084004/http://forums.capitalgames.com:80/showthread.php/62020-Finished-the-final-map-and-heres-a-few-tips-for-everyone (rk_ace: exactly 3 enemies, all Slow, 'battle tanks'; saved: recon/wb_finalmap_tips.html, quote verified)",
+      "client-additional-data/characters.json (Slow darkspawn candidate pool)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "III",
+       "level": 23,
+       "why": "Slow darkspawn 'battle tank' per Jan-2014 thread; desc names darkspawn"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "III",
+       "level": 23,
+       "why": "Slow darkspawn candidate from catalog cross-check; keeps all-Slow squad"
+      },
+      null,
+      null,
+      {
+       "id": "UNIT_OGRE",
+       "tier": "III",
+       "level": 23,
+       "why": "archetypal Slow darkspawn tank in the giant slot; completes the evidenced 3-enemy count"
+      }
+     ],
+     "notes": "Forum evidence fixes the shape (exactly 3 enemies, all Slow, very tanky, stun-vulnerable) but not the unit names; squad drawn from the only Slow low-rarity Blight units in the catalog. Second Blight assault on Montsimmard."
+    },
+    {
+     "step": 2,
+     "name_en": "Rage",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (cta: Defend Red Crossing from the elves)",
+      "scratchpad/recon/wb_challenge_quest_drops.txt (map-8 Dalish enemy/drop pool)",
+      "lore: Dragon Age canon, Elandrin incident / Exalted March of the Dales"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DALISHWARRIOR",
+       "tier": "III",
+       "level": 25,
+       "why": "desc: Dalish war party storms Red Crossing; map-8 pool unit"
+      },
+      {
+       "id": "UNIT_DALISHHUNTER",
+       "tier": "III",
+       "level": 25,
+       "why": "Dalish raider from map-8 challenge drop pool"
+      },
+      {
+       "id": "UNIT_DALISHWARRIOR",
+       "tier": "III",
+       "level": 25,
+       "why": "second front-line warrior for a full-scale attack feel"
+      },
+      {
+       "id": "UNIT_ELFBARD",
+       "tier": "III",
+       "level": 25,
+       "why": "map-8 pool support unit; theme fill"
+      },
+      null
+     ],
+     "notes": "Only type-level evidence (Dalish elves attack the town); martial all-elf squad, no giant. All ids verified in characters.json."
+    },
+    {
+     "step": 3,
+     "name_en": "Blame",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (cta: Defeat the elves of the Dales; desc: blood-magic accusations)",
+      "scratchpad/recon/wb_challenge_quest_drops.txt (pool: Dalish Mage / Elven Mage / Sylvans)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DALISHMAGE",
+       "tier": "III",
+       "level": 27,
+       "why": "node theme is the blood-magic accusation against Dalish mages"
+      },
+      {
+       "id": "UNIT_ELVENMAGE",
+       "tier": "III",
+       "level": 27,
+       "why": "map-8 pool mage; mage-heavy squad fits desc"
+      },
+      {
+       "id": "UNIT_DALISHMAGE",
+       "tier": "III",
+       "level": 27,
+       "why": "second accused mage; theme fill from pool"
+      },
+      null,
+      {
+       "id": "UNIT_SYLVAN",
+       "tier": "III",
+       "level": 27,
+       "why": "Dales-forest demon-tree underscores the dark-magic rumors; mid-map giant ramp toward node 5's Sylvan ally and the node-6 challenge Sylvan"
+      }
+     ],
+     "notes": "Type-level evidence only; mage-flavored squad. Verifier swap: the draft's Charred Sylvan (Rare giant) at any map-consistent tier/level (P+H ~3750-4480) out-statted every boss node including the sourced node-6 challenge Sylvan (hard-capped at 2491) -- and its only evidence was a challenge DROP list, which also contains reward-only units (Anders/Orsino), so it does not establish Charred Sylvan as an enemy. Plain Sylvan III/27 (P+H 2043) keeps the possessed-tree flavor and yields a clean Sylvan ramp 27 -> 30 -> 35 across nodes 3/5/6."
+    },
+    {
+     "step": 4,
+     "name_en": "Exalted March",
+     "authenticity": "sourced",
+     "sources": [
+      "https://web.archive.org/web/20140113212616/http://forums.capitalgames.com:80/showthread.php/61862-Dalish-node-help (Dec-2013 thread describing the actual battle: 2x Dalish Arcane Warrior + Elven Mages, 4 enemies ('never stuns 4 of them'), all Normal speed; saved: recon/map8/dalish_node_help_full.txt; title + thread id + quotes verified)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DALISHARCANEWARRIOR",
+       "tier": "III",
+       "level": 29,
+       "why": "thread: 'both dalish arcane warriors stunned'"
+      },
+      {
+       "id": "UNIT_DALISHARCANEWARRIOR",
+       "tier": "III",
+       "level": 29,
+       "why": "thread names exactly two arcane warriors"
+      },
+      {
+       "id": "UNIT_ELVENMAGE",
+       "tier": "III",
+       "level": 29,
+       "why": "thread: '...and Elven Mages' (plural)"
+      },
+      {
+       "id": "UNIT_ELVENMAGE",
+       "tier": "III",
+       "level": 29,
+       "why": "thread: 'it simply never stuns 4 of them' implies 4 enemies total"
+      },
+      null
+     ],
+     "notes": "Composition substantially reconstructed from a contemporaneous player thread about this exact node: 4 Normal-speed enemies, no giant. Both unit types are Normal speed in the catalog, matching 'all your enemy are normal speed'."
+    },
+    {
+     "step": 5,
+     "name_en": "Defeat",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=sO4Q8W06Tgo (Mio DK, Mar 2014, 'Map 8 Node 5 Mastering the map'; frames: scratchpad/map8_vid/; pre-battle frame re-verified: 'Defeat' header, Sylvan giant + 3 identical green-spear arcane warriors + 1 dark-robed unit)",
+      "client-additional-data/data_tables/campaign_map_nodes.json (cta: Defeat the elves and their Sylvan ally)",
+      "client-additional-data/character_vfx_map.json (dark-robed elf model match = unit.ef_mw_alliana_t4_pre = UNIT_ELVENMAGE; alternative UNIT_DALISHMAGE model is white-haired, ruled out)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DALISHARCANEWARRIOR",
+       "tier": "III",
+       "level": 31,
+       "why": "video: three identical arcane warriors; victory screen names 'Dalish Arcane Warrior IV'"
+      },
+      {
+       "id": "UNIT_DALISHARCANEWARRIOR",
+       "tier": "III",
+       "level": 31,
+       "why": "second of three seen in footage"
+      },
+      {
+       "id": "UNIT_DALISHARCANEWARRIOR",
+       "tier": "III",
+       "level": 31,
+       "why": "third of three seen in footage"
+      },
+      {
+       "id": "UNIT_ELVENMAGE",
+       "tier": "III",
+       "level": 30,
+       "why": "fifth enemy visually matched to Alliana/Elven Mage model; level capped at Uncommon tier III max"
+      },
+      {
+       "id": "UNIT_SYLVAN",
+       "tier": "III",
+       "level": 30,
+       "why": "giant slot Sylvan visible on pre-battle screen; cta names the Sylvan ally; Uncommon III cap 30"
+      }
+     ],
+     "notes": "Full squad recovered from March-2014 footage: Sylvan giant + 3x Dalish Arcane Warrior + 1 Elven Mage. Original footage showed tier-IV mastery-scaled variants; our ramp uses tier III with Uncommons at their level cap (30) and Rares at 31."
+    },
+    {
+     "step": 6,
+     "name_en": "Dalish Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "scratchpad/recon/hoda_challenge_rewards.csv (row verified: 'Dalish Challenge','Map 8 - March on the Dales',...,'Level 120 Sylvan I')",
+      "https://web.archive.org/web/20140101190447/http://forums.capitalgames.com:80/showthread.php/61315-Dalish-Challenge-Merrill (lone Slow row-hitting tree, stun-locked by Normal-speed squads; saved: recon/map8/dalish_challenge_merrill.txt, quotes verified)",
+      "https://web.archive.org/web/20140118045826/http://forums.capitalgames.com:80/showthread.php/62524-Just-curious-on-Dalish-challenge (saved: recon/map8/dalish_challenge_curious.txt)",
+      "https://web.archive.org/web/20140309175736/http://forums.capitalgames.com:80/showthread.php/64208-Farming-dalish-event-node-advice-needed (saved: recon/map8/dalish_farming.txt)"
+     ],
+     "roster": [
+      null,
+      null,
+      null,
+      null,
+      {
+       "id": "UNIT_SYLVAN",
+       "tier": "IV",
+       "level": 35,
+       "why": "spreadsheet + 3 threads: the challenge is a single massively over-leveled Sylvan (orig. Level 120 Sylvan I); tier IV level 35 is our system's max spike for this Uncommon"
+      }
+     ],
+     "notes": "Deliberately NOT a full squad: every source agrees the Dalish Challenge fields exactly one enemy, a lone Slow ATTACKROW Sylvan, and the node desc itself says single-target heroes beat 'squads with fewer heroes'. The original level 120 cannot be represented (Sylvan IV caps at 35), so the spike is encoded as the map's unique max tier + max level (IV/35 vs III/<=31 everywhere else). Raw stat supremacy over node 5's Rare arcane warriors is unattainable for an Uncommon unit and is a source-pinned constraint, not a ramp error."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_09",
+   "chapter_en": "Par Vollen",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Arrival",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (PVE_MAP_09 step 1 desc: Qunari land on the coast of Par Vollen)",
+      "scratchpad/recon/wiki_quests.wikitext (Map 9, 3 wins to master)",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops (Karashok in the Map 9 themed pool)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ASHAAD",
+       "tier": "III",
+       "level": 26,
+       "why": "map-wide Qunari archer, confirmed nodes 4-6; back row"
+      },
+      {
+       "id": "UNIT_KARASHOK",
+       "tier": "III",
+       "level": 26,
+       "why": "Antaam rank-and-file of the landing force; front row"
+      },
+      null,
+      {
+       "id": "UNIT_KARASHOK",
+       "tier": "III",
+       "level": 26,
+       "why": "fodder pair fits an easy arrival node; front row"
+      },
+      null
+     ],
+     "notes": "Desc names only the Qunari faction (beach landing at Par Vollen); no battle footage exists for this node. 3-unit easy opener drawn from the map's confirmed roster. Environment hint: coastal landing."
+    },
+    {
+     "step": 2,
+     "name_en": "Invasion",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (step 2 desc: warships land in Seheron and Rivain, First Qunari War begins)",
+      "scratchpad/recon/wb_challenge_quest_drops.txt (Tal-Vashoth Marauder in the official Map 9 drop pool)",
+      "scratchpad/recon/enemy_pool.json (Qunari-group enemy catalog)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ASHAAD",
+       "tier": "III",
+       "level": 28,
+       "why": "map-wide Qunari archer pool; back row"
+      },
+      {
+       "id": "UNIT_KARASHOK",
+       "tier": "III",
+       "level": 28,
+       "why": "Antaam infantry, map-wide fodder pool; front row"
+      },
+      {
+       "id": "UNIT_KARASHOK",
+       "tier": "III",
+       "level": 28,
+       "why": "second infantry, invasion-wave flavor; back row"
+      },
+      {
+       "id": "UNIT_TAL-VASHOTHMARAUDER",
+       "tier": "III",
+       "level": 28,
+       "why": "in Map 9 official drop pool; Tal-Vashoth arise on Seheron; front row"
+      },
+      null
+     ],
+     "notes": "Desc names only the Qunari faction (Seheron/Rivain warship assault). Squad composed from the confirmed map roster plus the drop-pool Marauder for variety. Environment hint: Seheron shore."
+    },
+    {
+     "step": 3,
+     "name_en": "Domination",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (step 3 desc: Qunari assault Minrathous; Tevinter is the victim, Qunari the enemy)",
+      "scratchpad/recon/desc_enemy_hints.json (map 9 step 3)",
+      "scratchpad/recon/wb_challenges_hoda_wikitext.txt (Tal-Vashoth Berserker in Map 9 themed pool)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ASHAAD",
+       "tier": "III",
+       "level": 30,
+       "why": "map-wide Qunari archer pool; back row"
+      },
+      {
+       "id": "UNIT_STEN",
+       "tier": "III",
+       "level": 31,
+       "why": "Antaam commander leads the Minrathous assault; confirmed on nodes 4-6; front row"
+      },
+      {
+       "id": "UNIT_TAL-VASHOTHBERSERKER",
+       "tier": "III",
+       "level": 31,
+       "why": "in Map 9 official drop pool, Rare heavy for the ramp; back row"
+      },
+      {
+       "id": "UNIT_KARASHOK",
+       "tier": "III",
+       "level": 30,
+       "why": "Antaam infantry fodder; front row"
+      },
+      null
+     ],
+     "notes": "Desc-only evidence (last stand at Minrathous; Qunari attackers). First Sten appearance ahead of his confirmed node 4-6 presence. Uncommons at their tier III level cap (30). Environment hint: Tevinter capital walls."
+    },
+    {
+     "step": 4,
+     "name_en": "Open War",
+     "authenticity": "sourced",
+     "sources": [
+      "https://web.archive.org/web/20140113082718/http://forums.capitalgames.com/showthread.php/62326-beat-qunari-challenge-wow",
+      "scratchpad/recon/wb_map9_qunari_62326.txt (node 4 account: 2 Stens, 2 Ashaads, one Sten back row, level 40+ era)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_STEN",
+       "tier": "III",
+       "level": 33,
+       "why": "forum: 'the exposed Sten in the back'; back row"
+      },
+      {
+       "id": "UNIT_STEN",
+       "tier": "III",
+       "level": 33,
+       "why": "forum: 'the 2 Stens', hits-all commander; front row"
+      },
+      {
+       "id": "UNIT_ASHAAD",
+       "tier": "IV",
+       "level": 32,
+       "why": "forum: 'neither of the Ashaads', fast ~1000 dmg archer; back row"
+      },
+      {
+       "id": "UNIT_ASHAAD",
+       "tier": "IV",
+       "level": 32,
+       "why": "forum: second Ashaad of the pair; front row"
+      },
+      null
+     ],
+     "notes": "Exact composition (2x Sten + 2x Ashaad, one Sten back) from a Jan-2014 player account of this fight. Forum-era levels (~40+) rescaled to our map-9 ramp; Ashaads promoted to tier IV because Uncommon tier III caps at level 30."
+    },
+    {
+     "step": 5,
+     "name_en": "Peace",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=k7w-PQVlXrc (Mio DK 'Map 9 Node 5 Mastering the map': pre-battle squads + both result screens)",
+      "scratchpad/vid/f9n5hi/f_040.png + f_060.png + scratchpad/vid/res2_mvp.png (2x Karashok front, Ashaad back; enemy MVP 'The Arishok IV' in battle 2)",
+      "scratchpad/recon/wb_map9_qunari_62326.txt (corroborates node-5 Ashaads)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ASHAAD",
+       "tier": "IV",
+       "level": 34,
+       "why": "video: back-row bow-armed Qunari archer; back row"
+      },
+      {
+       "id": "UNIT_KARASHOK",
+       "tier": "IV",
+       "level": 34,
+       "why": "video: red pack-shield warrior, front pad; front row"
+      },
+      {
+       "id": "UNIT_THEARISHOK",
+       "tier": "IV",
+       "level": 36,
+       "why": "video battle-2 enemy MVP 'The Arishok IV'; boss of the map's final story node; back row"
+      },
+      {
+       "id": "UNIT_KARASHOK",
+       "tier": "IV",
+       "level": 34,
+       "why": "video: second front-pad Karashok; front row"
+      },
+      null
+     ],
+     "notes": "Video-sourced. The node rotated two squad variants (4th unit = Sten IV, squad HP 20941, or The Arishok IV, HP 22604); the Arishok variant is used as the node's boss-flavor squad, matching its sourced tier-IV label. Arena: burning ruined stone town, 4 enemy pads, no giant."
+    },
+    {
+     "step": 6,
+     "name_en": "Qunari Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=xLK1yh_HNOE (Mio DK, in-game inspect overlay at 0:44 with all 4 enemy name/level/stat labels)",
+      "scratchpad/vid/gi_44.png (75|Sten IV 1110/2761, 75|Ashaad IV 1050/2346, 2x 76|Karashok IV 1733/6683)",
+      "scratchpad/recon/hoda_challenge_rewards.csv (community sheet, identical squad)",
+      "scratchpad/recon/wb_map9_qunari_64252.txt (Sten+Ashaad front, Karashoks back, single-hit)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_KARASHOK",
+       "tier": "IV",
+       "level": 35,
+       "why": "inspect: '76|Karashok IV' 6683 hp tank; back row; level capped at Uncommon IV max 35"
+      },
+      {
+       "id": "UNIT_STEN",
+       "tier": "IV",
+       "level": 40,
+       "why": "inspect: '75|Sten IV'; forum: front row; carries the challenge level spike"
+      },
+      {
+       "id": "UNIT_KARASHOK",
+       "tier": "IV",
+       "level": 35,
+       "why": "inspect: second '76|Karashok IV'; back row"
+      },
+      {
+       "id": "UNIT_ASHAAD",
+       "tier": "IV",
+       "level": 35,
+       "why": "inspect: '75|Ashaad IV', fast 1500+ hitter; front row; Uncommon IV level cap"
+      },
+      null
+     ],
+     "notes": "Fully recovered squad with exact original stats from an in-game inspect screenshot; tier IV matches the sourced labels. Original levels 75/76 rescaled to our ramp: Rare Sten takes the +5 spike (40), Uncommons sit at their tier IV cap (35). High-health single-target DPS-check squad, exactly 4 units, no giant. Drops include The Arishok (0.70%) and Isabela (0.03%). Arena: rocky dirt bluff with wooden spike barricades."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_10",
+   "chapter_en": "The Blackmarsh",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Dragon Sighting",
+     "authenticity": "inferred",
+     "sources": [
+      "https://web.archive.org/web/20140105084004/http://forums.capitalgames.com:80/showthread.php/62020-Finished-the-final-map-and-heres-a-few-tips-for-everyone",
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "pattern from video-verified nodes 2-5 (fqqFeVAfE6M, 6zrTlkaL6OM, XmZQBTHXw-4)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_WALKINGCORPSE",
+       "tier": "III",
+       "level": 27,
+       "why": "Blackmarsh ambient walking corpses (DA:O Awakening lore)"
+      },
+      {
+       "id": "UNIT_DEVOURINGSKELETON",
+       "tier": "III",
+       "level": 27,
+       "why": "2014 forum: map-wide self-healing skeletons"
+      },
+      {
+       "id": "UNIT_SKELETONARCHER",
+       "tier": "III",
+       "level": 25,
+       "why": "lore: skeleton archers raised near the dragon bones; verified map pool"
+      },
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "III",
+       "level": 27,
+       "why": "theme fill from map's verified undead/demon pool"
+      },
+      null
+     ],
+     "notes": "Only node with no direct squad footage. Composed strictly from the map's video-verified pool: 4 small undead, no giant, matching the map's escalation pattern (small undead at nodes 1-2, giants join at node 3). Despite the node name, the dragon (QotB) is only sighted here — she is fought at node 5. Level 24 keeps the Common Skeleton Archer inside its tier-III cap (25)."
+    },
+    {
+     "step": 2,
+     "name_en": "The Baroness",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=fqqFeVAfE6M",
+      ".claude/skills/hoda-reference/data/localization/Loc_RUS_RU.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DEVOURINGSKELETON",
+       "tier": "III",
+       "level": 29,
+       "why": "video info screen: Скелет-пожиратель IV x2"
+      },
+      {
+       "id": "UNIT_DEVOURINGSKELETON",
+       "tier": "III",
+       "level": 29,
+       "why": "video info screen: second Devouring Skeleton"
+      },
+      {
+       "id": "UNIT_REVENANT",
+       "tier": "III",
+       "level": 29,
+       "why": "video info screen: Восставший из мертвых IV x2"
+      },
+      {
+       "id": "UNIT_REVENANT",
+       "tier": "III",
+       "level": 30,
+       "why": "video showed the pair split one level apart (56/57)"
+      },
+      null
+     ],
+     "notes": "Exact 4-unit composition read off the 2016 RU client formation screen (Devouring Skeleton x2 + Revenant x2, no giant). Original showed tier-IV variants at lvl 56-57; re-tiered to our chapter-III / lvl-26-27 ramp (Uncommon tier-III caps at 30, so tier III holds here). No 'Baroness' unit exists in squads anywhere on this map — that unit only appears as a map 16 challenge enemy."
+    },
+    {
+     "step": 3,
+     "name_en": "Possible Victory",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=fqqFeVAfE6M"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_REVENANT",
+       "tier": "III",
+       "level": 31,
+       "why": "video info screen: Revenant IV"
+      },
+      {
+       "id": "UNIT_REVENANT",
+       "tier": "III",
+       "level": 31,
+       "why": "video info screen: Revenant III"
+      },
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "III",
+       "level": 31,
+       "why": "video info screen: Desire Demon II"
+      },
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "III",
+       "level": 32,
+       "why": "video info screen: Desire Demon III, one level higher"
+      },
+      {
+       "id": "UNIT_PRIDEDEMON",
+       "tier": "III",
+       "level": 32,
+       "why": "video info screen: Демон гордыни II in giant slot"
+      }
+     ],
+     "notes": "Full 5-slot squad (first giant of the map) read off the 2016 RU client at mastery 1/7 (lvl 31-32 there; our ramp lvl 28-29). Original mixed promotion tiers II-IV within the squad; normalized to chapter tier III (Rare/Epic tier-III caps easily hold these levels)."
+    },
+    {
+     "step": 4,
+     "name_en": "She's a Witch!",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=6zrTlkaL6OM"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_REVENANT",
+       "tier": "III",
+       "level": 33,
+       "why": "video info screen: Revenant IV"
+      },
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "III",
+       "level": 33,
+       "why": "video info screen: Desire Demon IV"
+      },
+      {
+       "id": "UNIT_SKELETONARCHER",
+       "tier": "IV",
+       "level": 30,
+       "why": "video info screen: Скелет-лучник IV (kept at tier IV: Common tier-III caps at 25, IV caps at exactly 30)"
+      },
+      null,
+      {
+       "id": "UNIT_PRIDEDEMON",
+       "tier": "III",
+       "level": 33,
+       "why": "video: Pride Demon IV giant = the Baroness/witch stand-in"
+      }
+     ],
+     "notes": "4-unit squad (giant + 3 small, one empty cell) confirmed twice in the same episode at mastery 3/10 and 7/10 — composition fixed, only levels scaled (59 → higher). The 'witch' of the title is the Baroness, represented by the Pride Demon giant per DA:O Awakening lore; no named witch unit appears. Skeleton Archer stays tier IV (as in the source) because Common promotion caps cannot reach the node level at tier III."
+    },
+    {
+     "step": 5,
+     "name_en": "Queen of the Blackmarsh",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=XmZQBTHXw-4",
+      "https://www.youtube.com/watch?v=nN_Re3ymnAE",
+      "https://web.archive.org/web/20140118045922/http://forums.capitalgames.com:80/showthread.php/62567-Mastered-the-last-Node-of-Map-10"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SKELETONARCHER",
+       "tier": "IV",
+       "level": 30,
+       "why": "2014 EN formation screen: Skeleton Archer IV lvl 147; tier IV per source, at its level cap"
+      },
+      {
+       "id": "UNIT_SKELETONMAGE",
+       "tier": "IV",
+       "level": 30,
+       "why": "2014 EN screen + 2016 RU result screen: Скелет-маг IV; tier IV per source, at its level cap"
+      },
+      null,
+      null,
+      {
+       "id": "UNIT_QUEENOFTHEBLACKMARSH",
+       "tier": "III",
+       "level": 35,
+       "why": "boss: spectral dragon in giant slot, both clients"
+      }
+     ],
+     "notes": "Boss node. Deliberately only 3 enemies (QotB giant + 2 skeletons) — rare cross-era double confirmation: identical composition in the 2014 EN client and 2016 RU client, so the two empty cells are authentic, not laziness. QotB behavior per 2014 forum: ~7k one-shot AoE unless stunned; her Legendary rarity carries the difficulty despite the small squad (largest health pool on the map). Both Common skeletons ride at their tier-IV cap (30); the Legendary boss carries the level lead at 32."
+    },
+    {
+     "step": 6,
+     "name_en": "Undead Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=xLK1yh_HNOE",
+      "https://docs.google.com/spreadsheets/d/1f0mpB1yrGt-ctKgsmfdbDLlSr-A5VHvKuDwj7xpclEg",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DEVOURINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "EN info screen + 2015 spreadsheet: Devouring Corpse IV x2"
+      },
+      {
+       "id": "UNIT_DEVOURINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "second Devouring Corpse, equal stats in both sources"
+      },
+      {
+       "id": "UNIT_DEVOURINGSKELETON",
+       "tier": "IV",
+       "level": 35,
+       "why": "EN info screen + spreadsheet: Devouring Skeleton IV x2"
+      },
+      {
+       "id": "UNIT_DEVOURINGSKELETON",
+       "tier": "IV",
+       "level": 35,
+       "why": "second Devouring Skeleton"
+      },
+      null
+     ],
+     "notes": "Challenge node, highest levels on the map. Composition double-sourced (2014 video lvl 136, 2015 community spreadsheet lvl 141-142 — levels scale with mastery, composition fixed): 4 power-draining devourers, no giant, per node text 'counter with Quick heroes / Speed runes'. Evidenced units are all Uncommon, so the spike is expressed as max-tier (IV, per sources) max-level (35 = Uncommon IV cap) devourers rather than rarity; drop pool (QotB/Pride Demon/Desire Demon/Abomination/Walking Corpse/Devouring Skeleton/Skeleton Mage) mirrors the map pool per official Kiv post (wayback-verified verbatim)."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_11",
+   "chapter_en": "Broken Circle",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Tears in the Veil",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~1:10 (Easy) / ~12:00 (Medium)",
+      "scratchpad/m11f5/g_0015.jpg",
+      "scratchpad/m11f5/g_0062.jpg"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "III",
+       "level": 32,
+       "why": "filmed label Rage Demon I"
+      },
+      {
+       "id": "UNIT_HUNGERDEMON",
+       "tier": "III",
+       "level": 32,
+       "why": "filmed label + post-battle enemy MVP"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "III",
+       "level": 32,
+       "why": "filmed label Rage Demon II"
+      },
+      null,
+      null
+     ],
+     "notes": "Exact 3-unit filmed squad (Rage Demon I, Rage Demon II, Hunger Demon I). Film tiers I/II normalized to chapter tier III per ramp rule. Dark Fade marsh environment."
+    },
+    {
+     "step": 2,
+     "name_en": "Fade Denizens",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~5:40 and ~6:40",
+      "scratchpad/m11f5/g_0069.jpg",
+      "scratchpad/m11f5/g_0081.jpg"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "III",
+       "level": 34,
+       "why": "filmed label + post-battle enemy MVP"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "filmed label Shade III"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "III",
+       "level": 34,
+       "why": "filmed label, second Rage Demon II"
+      },
+      null,
+      null
+     ],
+     "notes": "Exact 3-unit filmed squad: 2x Rage Demon II + Shade III at lvl 219 on Easy. Tier/level normalized to catalog caps: units promoted to tier IV where the ramp target exceeds the tier III max_level; Common/Uncommon cells pinned at their rarity cap (Shade 30, Enraged Spirit/Ogre/Darkspawn Emissary 35, Circle Apprentice 30, Rares 45) per player_starter conventions."
+    },
+    {
+     "step": 3,
+     "name_en": "Dreamlike Haze",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~7:15 and ~8:00",
+      "scratchpad/m11f5/g_0088.jpg",
+      "scratchpad/m11f5/g_0097.jpg"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ENRAGEDSPIRIT",
+       "tier": "IV",
+       "level": 35,
+       "why": "filmed label, back row as filmed"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "III",
+       "level": 37,
+       "why": "filmed label + enemy MVP, front row"
+      },
+      {
+       "id": "UNIT_ENRAGEDSPIRIT",
+       "tier": "IV",
+       "level": 35,
+       "why": "filmed label, second spectral swordsman"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "III",
+       "level": 37,
+       "why": "filmed label, front row"
+      },
+      null
+     ],
+     "notes": "Exact filmed 4-unit squad; filmed rows preserved (Enraged Spirits back = slots 0/2, Rage Demons front = slots 1/3). Burning stone courtyard environment. Tier/level normalized to catalog caps: units promoted to tier IV where the ramp target exceeds the tier III max_level; Common/Uncommon cells pinned at their rarity cap (Shade 30, Enraged Spirit/Ogre/Darkspawn Emissary 35, Circle Apprentice 30, Rares 45) per player_starter conventions."
+    },
+    {
+     "step": 4,
+     "name_en": "Sloth's Guardians",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~8:35 and ~9:20",
+      "scratchpad/m11f5/g_0104.jpg",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ENRAGEDSPIRIT",
+       "tier": "IV",
+       "level": 35,
+       "why": "filmed label Enraged Spirit II"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "III",
+       "level": 39,
+       "why": "filmed label Rage Demon II"
+      },
+      {
+       "id": "UNIT_HUNGERDEMON",
+       "tier": "III",
+       "level": 39,
+       "why": "filmed label Hunger Demon III"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "III",
+       "level": 40,
+       "why": "filmed label + enemy MVP, lvl 166 vs 165 in film"
+      },
+      null
+     ],
+     "notes": "Exact filmed 4-unit squad. Node desc names guardians Yevena and Vereveel (Desire Demons) but the filmed squad contains none - the Desire Demons appear on node 5 instead; kept film-faithful. Tier/level normalized to catalog caps: units promoted to tier IV where the ramp target exceeds the tier III max_level; Common/Uncommon cells pinned at their rarity cap (Shade 30, Enraged Spirit/Ogre/Darkspawn Emissary 35, Circle Apprentice 30, Rares 45) per player_starter conventions."
+    },
+    {
+     "step": 5,
+     "name_en": "Fading Lives",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~9:55 and ~10:40",
+      "scratchpad/m11f5/g_0120.jpg",
+      "scratchpad/m11f5/g_0129.jpg"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "IV",
+       "level": 41,
+       "why": "filmed label, back column as filmed (Yevena/Vereveel payoff)"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 41,
+       "why": "filmed label Rage Demon III, front"
+      },
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "IV",
+       "level": 42,
+       "why": "filmed label, second Desire Demon IV (lvl 130 vs 129)"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 41,
+       "why": "filmed label Rage Demon II, front"
+      },
+      null
+     ],
+     "notes": "Exact filmed 4-unit squad: 2x Desire Demon IV back column + 2 Rage Demons front. 12-victory mastery popup matches wiki. Tier/level normalized to catalog caps: units promoted to tier IV where the ramp target exceeds the tier III max_level; Common/Uncommon cells pinned at their rarity cap (Shade 30, Enraged Spirit/Ogre/Darkspawn Emissary 35, Circle Apprentice 30, Rares 45) per player_starter conventions."
+    },
+    {
+     "step": 6,
+     "name_en": "Mage's Nightmare",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~11:10 and ~12:25",
+      "scratchpad/m11f5/g_0135.jpg",
+      "scratchpad/m11f5/g_0150.jpg",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ENRAGEDSPIRIT",
+       "tier": "IV",
+       "level": 35,
+       "why": "filmed label Enraged Spirit II"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "filmed label Shade II"
+      },
+      {
+       "id": "UNIT_ENRAGEDSPIRIT",
+       "tier": "IV",
+       "level": 35,
+       "why": "filmed label Enraged Spirit III"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "filmed label + enemy MVP Shade I (lvl 182 vs 181)"
+      },
+      null
+     ],
+     "notes": "Exact filmed 4-unit squad. Desc names guardian Slavren (abomination) but no Abomination in the filmed squad - Abomination appears in node 7; kept film-faithful. Tier/level normalized to catalog caps: units promoted to tier IV where the ramp target exceeds the tier III max_level; Common/Uncommon cells pinned at their rarity cap (Shade 30, Enraged Spirit/Ogre/Darkspawn Emissary 35, Circle Apprentice 30, Rares 45) per player_starter conventions."
+    },
+    {
+     "step": 7,
+     "name_en": "Warden's Nightmare",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~13:05-14:00",
+      "scratchpad/m11f5/g_0159.jpg",
+      "scratchpad/m11f5/g_0169.jpg",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CIRCLEAPPRENTICE",
+       "tier": "IV",
+       "level": 30,
+       "why": "filmed label Circle Apprentice II"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label + enemy MVP Abomination IV (lvl 119 vs 118)"
+      },
+      {
+       "id": "UNIT_CIRCLEAPPRENTICE",
+       "tier": "IV",
+       "level": 30,
+       "why": "filmed label Circle Apprentice III"
+      },
+      {
+       "id": "UNIT_CIRCLESENIORENCHANTER",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label Circle Senior Enchanter II"
+      },
+      null
+     ],
+     "notes": "Exact filmed 4-unit squad: possessed Circle mages + abomination in the Tower library rotunda. Desc names ogre guardian Uthkiel the Crusher but the ogre appears on node 8; kept film-faithful. Tier/level normalized to catalog caps: units promoted to tier IV where the ramp target exceeds the tier III max_level; Common/Uncommon cells pinned at their rarity cap (Shade 30, Enraged Spirit/Ogre/Darkspawn Emissary 35, Circle Apprentice 30, Rares 45) per player_starter conventions."
+    },
+    {
+     "step": 8,
+     "name_en": "Deadly Sins",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~14:30 and ~15:10",
+      "scratchpad/m11f5/g_0175.jpg",
+      "scratchpad/m11f5/g_0183.jpg",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label + enemy MVP; Rhagos rage-demon theme per desc"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label, second Rage Demon III (lvl 72 vs 71)"
+      },
+      {
+       "id": "UNIT_GENLOCKALPHA",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label Genlock Alpha II (darkspawn nightmare flavor)"
+      },
+      {
+       "id": "UNIT_DARKSPAWNEMISSARY",
+       "tier": "IV",
+       "level": 35,
+       "why": "filmed label Darkspawn Emissary III"
+      },
+      {
+       "id": "UNIT_OGRE",
+       "tier": "IV",
+       "level": 35,
+       "why": "filmed label Ogre IV on giant pad (Uthkiel payoff)"
+      }
+     ],
+     "notes": "Exact filmed full 5-unit squad incl. giant. In-game header has the typo 'Deadlin Sins'; canonical name used. Guardian Rhagos (rage demon) per desc is represented by the two filmed Rage Demons. Tier/level normalized to catalog caps: units promoted to tier IV where the ramp target exceeds the tier III max_level; Common/Uncommon cells pinned at their rarity cap (Shade 30, Enraged Spirit/Ogre/Darkspawn Emissary 35, Circle Apprentice 30, Rares 45) per player_starter conventions."
+    },
+    {
+     "step": 9,
+     "name_en": "A Circle Complete",
+     "authenticity": "inferred",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~15:40 and ~16:20",
+      "scratchpad/m11f5/g_0189.jpg",
+      "scratchpad/m11f5/g_0197.jpg",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HUNGERDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label + enemy MVP Hunger Demon II"
+      },
+      {
+       "id": "UNIT_SLOTHDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "boss per node desc/CTA 'Defeat the Sloth Demon'"
+      },
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label Desire Demon III"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label Rage Demon IV"
+      },
+      {
+       "id": "UNIT_PRIDEDEMON",
+       "tier": "III",
+       "level": 52,
+       "why": "authored giant fill, classic DA:O Fade demon, boss-node weight"
+      }
+     ],
+     "notes": "Map boss node. Filmed Easy squad was 2x Hunger Demon II + Desire Demon III + Rage Demon IV with NO Sloth Demon unit and no giant; for our remake one Hunger Demon is swapped for UNIT_SLOTHDEMON (the node's named boss, exists in catalog) and Pride Demon fills the giant pad so the climax battle is full-strength. Hence 'inferred' despite 3 of 5 cells being film-sourced. Tier/level normalized to catalog caps: units promoted to tier IV where the ramp target exceeds the tier III max_level; Common/Uncommon cells pinned at their rarity cap (Shade 30, Enraged Spirit/Ogre/Darkspawn Emissary 35, Circle Apprentice 30, Rares 45) per player_starter conventions."
+    },
+    {
+     "step": 10,
+     "name_en": "Magical Dreams",
+     "authenticity": "sourced",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~17:05 and ~17:50",
+      "scratchpad/m11f5/g_0206.jpg",
+      "scratchpad/m11f5/g_0215.jpg"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "filmed label Shade IV"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label Abomination IV"
+      },
+      {
+       "id": "UNIT_ARCANEHORROR",
+       "tier": "IV",
+       "level": 53,
+       "why": "filmed label Arcane Horror IV"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label Rage Demon IV"
+      },
+      {
+       "id": "UNIT_OGRE",
+       "tier": "IV",
+       "level": 35,
+       "why": "filmed label Ogre IV on giant pad"
+      }
+     ],
+     "notes": "Exact filmed full 5-unit squad incl. giant; completing it showed 'New Map Unlocked!' (Map 12). Library rotunda environment. Tier/level normalized to catalog caps: units promoted to tier IV where the ramp target exceeds the tier III max_level; Common/Uncommon cells pinned at their rarity cap (Shade 30, Enraged Spirit/Ogre/Darkspawn Emissary 35, Circle Apprentice 30, Rares 45) per player_starter conventions."
+    },
+    {
+     "step": 11,
+     "name_en": "Fade Challenge",
+     "authenticity": "inferred",
+     "sources": [
+      "https://www.youtube.com/watch?v=cyyRg7SGWls @ ~18:40 and ~19:55",
+      "scratchpad/m11f5/g_0225.jpg",
+      "scratchpad/recon/hoda_challenge_rewards.csv",
+      "scratchpad/recon/wb_challenge_quest_drops.txt"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label + enemy MVP; corroborated by drop-rate sheet"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "filmed label + drop-rate sheet Lvl205 Rage Demon IV"
+      },
+      {
+       "id": "UNIT_ARCANEHORROR",
+       "tier": "IV",
+       "level": 58,
+       "why": "filmed label + sheet + desc 'chance at rewarding an Arcane Horror' (Epic spike)"
+      },
+      {
+       "id": "UNIT_ASHWRAITH",
+       "tier": "III",
+       "level": 58,
+       "why": "theme fill: Fade wraith, Epic, was in map-11 challenge drop pool until Aug 2014"
+      },
+      {
+       "id": "UNIT_GREATERRAGEDEMON",
+       "tier": "III",
+       "level": 59,
+       "why": "authored giant fill: Legendary rage-demon giant caps the Rhagos/rage theme spike"
+      }
+     ],
+     "notes": "Challenge spike node (+5 levels, Epic/Legendary mix). Filmed/spreadsheet-verified 3-unit core (Abomination IV, Arcane Horror IV, Rage Demon IV) is fully preserved in cells 0-2; cells 3-4 are theme fills to satisfy the full-squad challenge rule. Hint text: high-health heroes with Damage Reduction Runes. Tier/level normalized to catalog caps: units promoted to tier IV where the ramp target exceeds the tier III max_level; Common/Uncommon cells pinned at their rarity cap (Shade 30, Enraged Spirit/Ogre/Darkspawn Emissary 35, Circle Apprentice 30, Rares 45) per player_starter conventions. Authenticity downgraded to 'inferred': 2 of 5 cells are authored theme fills (same standard as node 9)."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_12",
+   "chapter_en": "Bartrand's Expedition",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Into the Darkness",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Quests_(Heroes_of_Dragon_Age)",
+      "https://dragonage.fandom.com/wiki/The_Deep_Roads_Expedition"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "IV",
+       "level": 30,
+       "why": "desc names darkspawn hordes"
+      },
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "IV",
+       "level": 30,
+       "why": "standard leftover-Blight darkspawn squad"
+      },
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "IV",
+       "level": 35,
+       "why": "genlocks evidenced by DA2 lore"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "IV",
+       "level": 35,
+       "why": "darkspawn caster, theme fill"
+      },
+      null
+     ],
+     "notes": "Opener vs leftover-Blight darkspawn blocking the passage; no giant on the entry node. Commons clamped to tier-IV cap 30, Uncommons 35 (nominal node level 35)."
+    },
+    {
+     "step": 2,
+     "name_en": "A Lost Sandal",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Sandal"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHRIEK",
+       "tier": "IV",
+       "level": 35,
+       "why": "ambushers in darkspawn-held tunnels per lore"
+      },
+      {
+       "id": "UNIT_SHRIEKALPHA",
+       "tier": "IV",
+       "level": 37,
+       "why": "pack leader, theme fill"
+      },
+      {
+       "id": "UNIT_GENLOCKASSASSIN",
+       "tier": "IV",
+       "level": 35,
+       "why": "tunnel stalker, theme fill"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "IV",
+       "level": 30,
+       "why": "darkspawn fodder en route to Sandal"
+      },
+      null
+     ],
+     "notes": "Search-for-Sandal node: stealthy shriek/assassin flavor for hunting through tunnels; Sandal himself is the rescue target, not fought. Nominal level 37; rarity caps clamp UC to 35 / C to 30."
+    },
+    {
+     "step": 3,
+     "name_en": "Spider Nest",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Quests_(Heroes_of_Dragon_Age)",
+      "client-additional-data/data_tables/units.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "desc: blight-corrupted giant spiders"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "nest swarm, desc-evidenced"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDERLING",
+       "tier": "IV",
+       "level": 39,
+       "why": "nest hatchling; one of only two non-giant spider units in the catalog"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "nest swarm, desc-evidenced"
+      },
+      {
+       "id": "UNIT_GIANTCORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 30,
+       "why": "nest matriarch; the game's only spider giant"
+      }
+     ],
+     "notes": "Spider-only squad from the catalog's Corrupted Spider family (regular x3 + Legendary hatchling + Common giant matriarch); duplicates authentic to HoDA squads. Nominal level 39; UC spiders clamp 35, Common giant clamps 30, Legendary spiderling runs at node level."
+    },
+    {
+     "step": 4,
+     "name_en": "Charging Ogre",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Ogre",
+      "client-additional-data/data_tables/units.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_GENLOCKALPHA",
+       "tier": "IV",
+       "level": 42,
+       "why": "darkspawn escort per lore"
+      },
+      {
+       "id": "UNIT_SHRIEKALPHA",
+       "tier": "IV",
+       "level": 42,
+       "why": "darkspawn escort, theme fill"
+      },
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "IV",
+       "level": 35,
+       "why": "darkspawn escort, theme fill"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "IV",
+       "level": 35,
+       "why": "darkspawn caster, theme fill"
+      },
+      {
+       "id": "UNIT_OGRE",
+       "tier": "IV",
+       "level": 35,
+       "why": "boss: desc/CTA name the Ogre charging after Sandal is found"
+      }
+     ],
+     "notes": "Boss node (boss=Ogre). UNIT_OGRE kept over Armored Ogre/Ogre Commander because the desc names a plain ogre; Uncommon cap clamps it to 35, escort alphas carry the level-42 difficulty."
+    },
+    {
+     "step": 5,
+     "name_en": "Primeval Thaig",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Primeval_Thaig"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "DA2 Primeval Thaig inhabitants: shades"
+      },
+      {
+       "id": "UNIT_PROFANE",
+       "tier": "IV",
+       "level": 44,
+       "why": "DA2 thaig profanes (hunger demons in dwarven husks); HoDA Epic"
+      },
+      {
+       "id": "UNIT_HUNGERDEMON",
+       "tier": "IV",
+       "level": 30,
+       "why": "variety swap for UNIT_SHADE (critic: filler concentration)"
+      },
+      {
+       "id": "UNIT_PROFANE",
+       "tier": "IV",
+       "level": 44,
+       "why": "profane pair, lore fill"
+      },
+      null
+     ],
+     "notes": "'The thaig is not uninhabited' — DA2's inhabitants are shades and profanes; both exist in our catalog. Nominal level 44; Common Shade clamps to 30."
+    },
+    {
+     "step": 6,
+     "name_en": "Tears in the Veil",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Veil"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "first demons through a thinned Veil"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "desc: spirits entering our world through the thinned Veil"
+      },
+      {
+       "id": "UNIT_SLOTHDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "classic Fade demon, spirit-incursion variety"
+      },
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "classic Fade demon, spirit-incursion variety"
+      },
+      null
+     ],
+     "notes": "Rage/Sloth/Desire demon trio embodies the spirits crossing the thinned Veil; Hunger Demon deliberately reserved for node 9 where the desc names it. Nominal level 46; Rare cap clamps demons to 45."
+    },
+    {
+     "step": 7,
+     "name_en": "A History Lesson",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Primeval_Thaig"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "thaig denizens per DA2 traversal"
+      },
+      {
+       "id": "UNIT_PROFANE",
+       "tier": "IV",
+       "level": 48,
+       "why": "profanes among the temples and idols, lore"
+      },
+      {
+       "id": "UNIT_ARCANEHORROR",
+       "tier": "IV",
+       "level": 48,
+       "why": "theme fill: ancient-ruin demon caster"
+      },
+      {
+       "id": "UNIT_ASHWRAITH",
+       "tier": "IV",
+       "level": 48,
+       "why": "theme fill: crypt wraith among dead-god idols"
+      },
+      null
+     ],
+     "notes": "Pure lore-text node (dwarven pantheon temples); squad continues the shade/profane traversal with epic ruin-flavored demons for variety at level 48."
+    },
+    {
+     "step": 8,
+     "name_en": "Betrayed!",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/The_Deep_Roads_Expedition"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_PROFANE",
+       "tier": "IV",
+       "level": 50,
+       "why": "vault guardians after Bartrand's betrayal, lore"
+      },
+      {
+       "id": "UNIT_ASHWRAITH",
+       "tier": "IV",
+       "level": 50,
+       "why": "sealed-vault wraith, theme fill"
+      },
+      {
+       "id": "UNIT_PROFANE",
+       "tier": "IV",
+       "level": 50,
+       "why": "profane pack, lore fill"
+      },
+      {
+       "id": "UNIT_ENRAGEDSPIRIT",
+       "tier": "IV",
+       "level": 30,
+       "why": "variety swap for UNIT_SHADE (critic: filler concentration)"
+      },
+      null
+     ],
+     "notes": "Bartrand flees with the idol and is NOT fought (his catalog units are later Red Lyrium content); the locked-in party fights the vault's shades/profanes. Nominal level 50."
+    },
+    {
+     "step": 9,
+     "name_en": "A Great Escape",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Quests_(Heroes_of_Dragon_Age)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HUNGERDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "desc names the hunger demon bargainer"
+      },
+      {
+       "id": "UNIT_PROFANE",
+       "tier": "IV",
+       "level": 53,
+       "why": "profanes animating the crypt, desc/lore"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "demon backup, theme fill"
+      },
+      {
+       "id": "UNIT_PROFANE",
+       "tier": "IV",
+       "level": 53,
+       "why": "profane pack, lore fill"
+      },
+      null
+     ],
+     "notes": "Hunger Demon explicitly named on this node (wiki-linked); refusing its bargain in DA2 means fighting it plus profanes. Nominal level 53; Rare demons clamp to 45."
+    },
+    {
+     "step": 10,
+     "name_en": "Ancient Rock Wraith",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Ancient_rock_wraith",
+      "https://dragonage.fandom.com/wiki/Challenges_(Heroes_of_Dragon_Age)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_PROFANE",
+       "tier": "IV",
+       "level": 55,
+       "why": "profane adds spawned during the DA2 boss fight"
+      },
+      {
+       "id": "UNIT_PROFANE",
+       "tier": "IV",
+       "level": 55,
+       "why": "profane adds, lore"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "crypt fodder, theme fill"
+      },
+      {
+       "id": "UNIT_PROFANE",
+       "tier": "IV",
+       "level": 55,
+       "why": "profane adds, lore"
+      },
+      {
+       "id": "UNIT_ANCIENTROCKWRAITH",
+       "tier": "IV",
+       "level": 55,
+       "why": "boss: desc/CTA name the Rock Wraith; exact catalog unit exists"
+      }
+     ],
+     "notes": "Boss node (boss=Ancient Rock Wraith, Epic giant, exact unit match). Full 5-cell squad; profane adds replicate the DA2 encounter mechanics."
+    },
+    {
+     "step": 11,
+     "name_en": "Ancient Thaig Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "https://docs.google.com/spreadsheets/d/1f0mpB1yrGt-ctKgsmfdbDLlSr-A5VHvKuDwj7xpclEg",
+      "scratchpad/recon/hoda_challenge_rewards.csv",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "sourced: Lvl161 Shade IV in documented squad"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "sourced: second Shade IV"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "sourced: third Shade IV"
+      },
+      null,
+      {
+       "id": "UNIT_INFERNOGOLEM",
+       "tier": "IV",
+       "level": 60,
+       "why": "sourced boss: Lvl161 Inferno Golem IV per community spreadsheet"
+      }
+     ],
+     "notes": "Only sourced squad on this map: community Challenge Node Drop Rates sheet documents Inferno Golem IV + 3x Shade IV (all Lvl 161 on live servers) — a 4-unit squad, so cell 3 stays null to mirror it. Levels rescaled to our economy (challenge spike 60); Common Shade clamps to its tier-IV cap 30, the Epic golem carries the spike. Drop pool (Shriek/Armored Ogre/Genlock Alpha/Ogre Commander/etc.) is rewards, not the fought squad."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_13",
+   "chapter_en": "Nevarra's Plight",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Toth Awakens",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Quests_(Heroes_of_Dragon_Age)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "IV",
+       "level": 30,
+       "why": "desc: darkspawn erupt in central Thedas"
+      },
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "IV",
+       "level": 30,
+       "why": "darkspawn vanguard fodder, theme fill"
+      },
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "IV",
+       "level": 34,
+       "why": "darkspawn pool, theme fill"
+      },
+      {
+       "id": "UNIT_GENLOCKASSASSIN",
+       "tier": "IV",
+       "level": 34,
+       "why": "darkspawn pool, theme fill"
+      },
+      null
+     ],
+     "notes": "Opening wave of the Third Blight arc: Common/Uncommon darkspawn fodder, no giant. Levels across the map are scaled to fit each unit's catalog tier-IV max_level (the original server used escalated variants like Lvl 405 that our catalog conventions cap away)."
+    },
+    {
+     "step": 2,
+     "name_en": "First of the Fallen",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "IV",
+       "level": 30,
+       "why": "desc: darkspawn swamp Tevinter/Orlesian cities"
+      },
+      {
+       "id": "UNIT_SHRIEK",
+       "tier": "IV",
+       "level": 35,
+       "why": "darkspawn pool, city-raider theme"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "IV",
+       "level": 35,
+       "why": "darkspawn caster, theme fill"
+      },
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "IV",
+       "level": 30,
+       "why": "darkspawn pool, theme fill"
+      },
+      {
+       "id": "UNIT_OGRE",
+       "tier": "IV",
+       "level": 35,
+       "why": "siege giant of a city-swarming horde"
+      }
+     ],
+     "notes": "Hurlock-heavy horde swarming Marnas Pell/Vyrantium and the Orlesian cities; first giant appears."
+    },
+    {
+     "step": 3,
+     "name_en": "Grey Warden Reinforcements",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "IV",
+       "level": 35,
+       "why": "desc: darkspawn pushed back by Wardens"
+      },
+      {
+       "id": "UNIT_GENLOCKASSASSIN",
+       "tier": "IV",
+       "level": 35,
+       "why": "darkspawn pool, theme fill"
+      },
+      {
+       "id": "UNIT_DARKSPAWNEMISSARY",
+       "tier": "IV",
+       "level": 35,
+       "why": "darkspawn caster, theme fill"
+      },
+      {
+       "id": "UNIT_GENLOCKALPHA",
+       "tier": "IV",
+       "level": 38,
+       "why": "Rare alpha leading the rearguard"
+      },
+      {
+       "id": "UNIT_GIANTCORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 30,
+       "why": "Blight-group giant, variety vs Ogre"
+      }
+     ],
+     "notes": "Genlock-flavored wave for variety against the hurlock wave of node 2."
+    },
+    {
+     "step": 4,
+     "name_en": "Suspicious Allies",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_BLIGHTEDWEREWOLF",
+       "tier": "IV",
+       "level": 35,
+       "why": "blighted beasts ravaging the Free Marches"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "Blight-group beast, countryside theme"
+      },
+      {
+       "id": "UNIT_SHRIEK",
+       "tier": "IV",
+       "level": 35,
+       "why": "darkspawn pool, theme fill"
+      },
+      {
+       "id": "UNIT_SHRIEKALPHA",
+       "tier": "IV",
+       "level": 40,
+       "why": "Rare escalation, late-Blight horde"
+      },
+      {
+       "id": "UNIT_ARMOREDOGRE",
+       "tier": "IV",
+       "level": 40,
+       "why": "Rare giant, difficulty ramp"
+      }
+     ],
+     "notes": "Blighted beasts + shrieks read as the horde ravaging Marcher countryside with no Orlesian/Tevinter aid coming."
+    },
+    {
+     "step": 5,
+     "name_en": "End of the Blight",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "client-additional-data/HoDA_character_info/UnitData.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "IV",
+       "level": 35,
+       "why": "archdemon's darkspawn escort"
+      },
+      {
+       "id": "UNIT_GENLOCKALPHA",
+       "tier": "IV",
+       "level": 42,
+       "why": "elite escort, theme fill"
+      },
+      {
+       "id": "UNIT_SHRIEKALPHA",
+       "tier": "IV",
+       "level": 42,
+       "why": "elite escort, theme fill"
+      },
+      {
+       "id": "UNIT_HURLOCKVANGUARD",
+       "tier": "IV",
+       "level": 42,
+       "why": "Legendary bodyguard for the boss node"
+      },
+      {
+       "id": "UNIT_ABYSSALHIGHDRAGON",
+       "tier": "IV",
+       "level": 44,
+       "why": "boss: Toth stand-in (fire dragon; no UNIT_TOTH in catalog)"
+      }
+     ],
+     "notes": "Boss node (one of the bloodiest battles in history, 3:25). No Toth unit exists in the 676-unit catalog; Abyssal High Dragon chosen as the fire-dragon stand-in, keeping UNIT_HIGHDRAGON free for its attested node-10 appearance. Boss level +2 over escort."
+    },
+    {
+     "step": 6,
+     "name_en": "Double Crossed",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "IV",
+       "level": 35,
+       "why": "cta names Tevinter invaders; map challenge drop"
+      },
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "IV",
+       "level": 44,
+       "why": "Tevinter pool; map challenge drop"
+      },
+      {
+       "id": "UNIT_CHEVALIER",
+       "tier": "IV",
+       "level": 44,
+       "why": "cta names Orlesian invaders"
+      },
+      {
+       "id": "UNIT_HARLEQUIN",
+       "tier": "IV",
+       "level": 44,
+       "why": "Orlesian pool; map challenge drop"
+      },
+      null
+     ],
+     "notes": "Mixed Tevinter+Orlesian ambush strike force mid-celebration; no giant — a surprise raid, not a siege."
+    },
+    {
+     "step": 7,
+     "name_en": "Nevarra Invaded",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CHEVALIER",
+       "tier": "IV",
+       "level": 44,
+       "why": "desc: Orlesians take Nevarra"
+      },
+      {
+       "id": "UNIT_HARLEQUIN",
+       "tier": "IV",
+       "level": 44,
+       "why": "Orlesian pool; map challenge drop"
+      },
+      {
+       "id": "UNIT_CHEVALIER",
+       "tier": "IV",
+       "level": 44,
+       "why": "duplicate — authentic HoDA squad pattern"
+      },
+      {
+       "id": "UNIT_HARLEQUIN",
+       "tier": "IV",
+       "level": 44,
+       "why": "duplicate — Orlesian pool is 2 soldier units"
+      },
+      {
+       "id": "UNIT_WYVERN",
+       "tier": "IV",
+       "level": 44,
+       "why": "Orlesian hunting wyvern as occupation giant"
+      }
+     ],
+     "notes": "Only two generic Orlesian soldier units exist (Chevalier, Harlequin) so the squad doubles them, matching HoDA's real duplicate-unit squads (e.g. the drop-log's 'Tevinter Battlemage IV x2'); wyvern = classic Orlesian nobility beast."
+    },
+    {
+     "step": 8,
+     "name_en": "Hunter Fell Invaded",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "scratchpad/recon/hoda_challenge_rewards.csv"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERWARRIOR",
+       "tier": "IV",
+       "level": 35,
+       "why": "desc: Tevinter take Hunter Fell; map challenge drop (at its tier-IV cap)"
+      },
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "IV",
+       "level": 44,
+       "why": "map's attested Tevinter caster (challenge squad)"
+      },
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "IV",
+       "level": 44,
+       "why": "map's attested Tevinter unit (challenge squad/drops)"
+      },
+      {
+       "id": "UNIT_TEVINTERLAETANMAGE",
+       "tier": "IV",
+       "level": 44,
+       "why": "Tevinter pool, theme fill"
+      },
+      {
+       "id": "UNIT_GATEGUARDIAN",
+       "tier": "IV",
+       "level": 44,
+       "why": "Tevinter golem giant storming the city"
+      }
+     ],
+     "notes": "Tevinter assault force; Gate Guardian is the Epic Tevinter-group giant. Node level 35 is the Uncommon tier-IV cap, keeping the drop-attested Tevinter Warrior legal this late in the map."
+    },
+    {
+     "step": 9,
+     "name_en": "Liberate Hunter Fell",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERARCANEWARRIOR",
+       "tier": "IV",
+       "level": 44,
+       "why": "Tevinter garrison elite"
+      },
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "IV",
+       "level": 44,
+       "why": "map's attested Tevinter caster"
+      },
+      {
+       "id": "UNIT_SLAVEFENRIS",
+       "tier": "IV",
+       "level": 44,
+       "why": "Rare Tevinter rogue — magister's slave bodyguard in the garrison (replaces Uncommon Tevinter Warrior, whose 35 cap can't reach this band)"
+      },
+      {
+       "id": "UNIT_TEVINTERARCANEMAGE",
+       "tier": "IV",
+       "level": 44,
+       "why": "Tevinter pool, variety vs node 8"
+      },
+      {
+       "id": "UNIT_GALLOWSGUARDIAN",
+       "tier": "IV",
+       "level": 44,
+       "why": "Tevinter statue-golem defending occupied walls"
+      }
+     ],
+     "notes": "The besieged Tevinter occupiers of Hunter Fell (3:49); Legendary giant marks the late-map siege difficulty. Slave Fenris adds a rogue to the all-mage/warrior garrison and is lore-consistent (a magister's slave fighting for Tevinter)."
+    },
+    {
+     "step": 10,
+     "name_en": "Making it Right",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://web.archive.org/web/20140907070122/http://forums.capitalgames.com:80/showthread.php/69049-need-squad-tips-for-map-13-node-10",
+      "https://web.archive.org/web/20140804130143/http://forums.capitalgames.com:80/showthread.php/69017-Need-help-mastering-map-13-amp-14"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CHEVALIER",
+       "tier": "IV",
+       "level": 44,
+       "why": "cta: take back Nevarra from the Orlesians"
+      },
+      {
+       "id": "UNIT_HARLEQUIN",
+       "tier": "IV",
+       "level": 44,
+       "why": "Orlesian pool; map challenge drop"
+      },
+      {
+       "id": "UNIT_ELITEHARLEQUIN",
+       "tier": "IV",
+       "level": 44,
+       "why": "Legendary escalation on the hard final story node"
+      },
+      {
+       "id": "UNIT_TEMPLARKNIGHT-CORPORAL",
+       "tier": "IV",
+       "level": 44,
+       "why": "Orlesian-group filler, occupation officer"
+      },
+      {
+       "id": "UNIT_HIGHDRAGON",
+       "tier": "IV",
+       "level": 44,
+       "why": "attested: 2014 forum player reports High Dragon mowing back row on map 13 node 10"
+      }
+     ],
+     "notes": "High Dragon anchor is player-attested (verified wayback capture of the July 2014 thread: 'High dragon is pretty much mowing my back row even with speed rune'); surrounding Orlesian squad composed. Caveat from evidence: if that poster counted the challenge diamond as node 10 the attestation could shift, but client loc numbering puts Making it Right at step 10."
+    },
+    {
+     "step": 11,
+     "name_en": "Nevarra Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "https://docs.google.com/spreadsheets/d/1f0mpB1yrGt-ctKgsmfdbDLlSr-A5VHvKuDwj7xpclEg",
+      "scratchpad/recon/hoda_challenge_rewards.csv",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_TEVINTERBATTLEMAGE",
+       "tier": "IV",
+       "level": 45,
+       "why": "sourced: drop-log lists Lvl405 Tevinter Battlemage IV, the 'stunning hero' of the node cta"
+      },
+      {
+       "id": "UNIT_TEVINTERSLAVER",
+       "tier": "IV",
+       "level": 45,
+       "why": "sourced: drop-log lists Lvl405 Tevinter Slaver IV, the drain hero"
+      },
+      null,
+      null,
+      null
+     ],
+     "notes": "Documented 2-hero challenge squad (community drop-log 'Enemy Description', verified in hoda_challenge_rewards.csv, corroborated by the node's own cta 'First handle the stunning hero, and then finish them both off'). Kept at exactly 2 units to match the source; level 45 is the Rare tier-IV max_level — the catalog-legal stand-in for the original Lvl 405 scaling, and the strongest level on the map."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_14",
+   "chapter_en": "Chateau Haine",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "An Invitation",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (cta: 'Fend off the hired assassins')",
+      "lore: DA2 Mark of the Assassin — assassins-for-hire at Duke Prosper's fete"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CROWASSASSIN",
+       "tier": "IV",
+       "level": 35,
+       "why": "cta names hired assassins; Crows are Thedas's assassins-for-hire"
+      },
+      {
+       "id": "UNIT_CULTISTASSASSIN",
+       "tier": "IV",
+       "level": 41,
+       "why": "second assassin flavor from the generic assassin pool"
+      },
+      {
+       "id": "UNIT_CROWASSASSIN",
+       "tier": "IV",
+       "level": 35,
+       "why": "assassin pair — hired squad"
+      },
+      {
+       "id": "UNIT_COTERIETHUG",
+       "tier": "IV",
+       "level": 30,
+       "why": "theme fill: Free Marches hired muscle (chateau is in the Vimmarks)"
+      },
+      null
+     ],
+     "notes": "No unit is literally named for the party assassins; squad composed from generic assassin/outlaw units. Giant slot empty — light opening node."
+    },
+    {
+     "step": 2,
+     "name_en": "Wyvern Hunt",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (cta: 'Search the hunting grounds for a wyvern')",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops (Wyvern is an official Map 14 drop)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_WOLF",
+       "tier": "IV",
+       "level": 30,
+       "why": "hunting-grounds wildlife fill"
+      },
+      {
+       "id": "UNIT_GHAST",
+       "tier": "IV",
+       "level": 30,
+       "why": "desc (node 3) says ghast warrens dot these grounds"
+      },
+      {
+       "id": "UNIT_WOLF",
+       "tier": "IV",
+       "level": 30,
+       "why": "wild pack fill"
+      },
+      null,
+      {
+       "id": "UNIT_WYVERN",
+       "tier": "IV",
+       "level": 43,
+       "why": "cta objective; UNIT_WYVERN is the map's documented drop"
+      }
+     ],
+     "notes": "Halla (Uncommon giant) is also a documented Map 14 drop — likely hunt wildlife — but the wyvern owns the giant slot per the cta; Halla left unused."
+    },
+    {
+     "step": 3,
+     "name_en": "Ghast Nests",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (cta: 'Kill the swarm of attacking Ghasts')",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops (Ghast Archer + Velghast documented Map 14 drops)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_GHAST",
+       "tier": "IV",
+       "level": 30,
+       "why": "desc: swarm of ghasts"
+      },
+      {
+       "id": "UNIT_GHAST",
+       "tier": "IV",
+       "level": 30,
+       "why": "swarm duplicate"
+      },
+      {
+       "id": "UNIT_VELGHAST",
+       "tier": "IV",
+       "level": 45,
+       "why": "Velghast is a documented Map 14 drop; larger warren variant"
+      },
+      {
+       "id": "UNIT_GHASTARCHER",
+       "tier": "IV",
+       "level": 45,
+       "why": "Ghast Archer added to Map 14 drops in Kiv's Sept-2014 revision"
+      },
+      null
+     ],
+     "notes": "Whole ghast family exists in catalog; warren swarm has no giant. Ghast Archer is Legendary in our catalog but directly drop-evidenced for this map."
+    },
+    {
+     "step": 4,
+     "name_en": "Almost Wyverns",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (desc: 'the drakes and dragons are distant cousins'; cta: 'Kill the dragons')",
+      "https://web.archive.org/web/20140804130143/http://forums.capitalgames.com/showthread.php/69017-Need-help-mastering-map-13-amp-14 (player confirms 'kill the dragons' objective)",
+      "https://dragonage.fandom.com/wiki/Challenges_(Heroes_of_Dragon_Age) (High Dragon is a Chateau Challenge drop)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DRAKE",
+       "tier": "IV",
+       "level": 45,
+       "why": "desc names drakes"
+      },
+      {
+       "id": "UNIT_DRAGONLING",
+       "tier": "IV",
+       "level": 48,
+       "why": "'dragons' filler from catalog dragon-kin"
+      },
+      {
+       "id": "UNIT_DRAKE",
+       "tier": "IV",
+       "level": 45,
+       "why": "drake pair per desc"
+      },
+      {
+       "id": "UNIT_DRAGONLING",
+       "tier": "IV",
+       "level": 48,
+       "why": "dragon brood fill"
+      },
+      {
+       "id": "UNIT_HIGHDRAGON",
+       "tier": "IV",
+       "level": 48,
+       "why": "cta 'kill the dragons'; High Dragon is a documented Chateau Challenge drop"
+      }
+     ],
+     "notes": "UNIT_RAREDRAKE from the evidence does not exist in our catalog; UNIT_DRAKE + UNIT_DRAGONLING used instead."
+    },
+    {
+     "step": 5,
+     "name_en": "The Hunt is On",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (desc: alpha wyvern; cta: 'Slay the wyvern and win the hunt!')",
+      "lore: Mark of the Assassin hunt climax vs the alpha wyvern"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DRAGONLING",
+       "tier": "IV",
+       "level": 50,
+       "why": "juvenile wyvern stand-in (no small wyvern unit exists)"
+      },
+      {
+       "id": "UNIT_DRAGONLING",
+       "tier": "IV",
+       "level": 50,
+       "why": "alpha's brood fill"
+      },
+      null,
+      null,
+      {
+       "id": "UNIT_WYVERN",
+       "tier": "IV",
+       "level": 45,
+       "why": "the alpha — no 'Alpha Wyvern' unit exists; UNIT_WYVERN at its Rare tier-IV level cap (45) per evidence"
+      }
+     ],
+     "notes": "Boss-style 3-unit giant-led squad, deliberately mirroring the map's one verbatim-recovered battle shape (node 11: giant + two flankers). Alpha rendered as UNIT_WYVERN at its rarity level cap (45); brood dragonlings carry the node's ramp level."
+    },
+    {
+     "step": 6,
+     "name_en": "Infiltration",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (cta: 'sneak past the Orlesian Guards')",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops (Chevalier is a documented Map 14 drop)",
+      "recon/wb_origins_gauntlet_nodes.txt (Chateau-themed pool includes Chevalier + Armored Bear)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CHEVALIER",
+       "tier": "IV",
+       "level": 52,
+       "why": "chevaliers ARE Orlais's elite guards; documented Map 14 drop"
+      },
+      {
+       "id": "UNIT_KIRKWALLGUARD",
+       "tier": "IV",
+       "level": 35,
+       "why": "theme fill: only generic guard unit; chateau garrison (Free Marches locale)"
+      },
+      {
+       "id": "UNIT_CHEVALIER",
+       "tier": "IV",
+       "level": 52,
+       "why": "guard pair per cta"
+      },
+      {
+       "id": "UNIT_KIRKWALLGUARD",
+       "tier": "IV",
+       "level": 35,
+       "why": "garrison fill"
+      },
+      {
+       "id": "UNIT_ARMOREDBEAR",
+       "tier": "IV",
+       "level": 52,
+       "why": "Armored Bear appears in the Chateau-themed Origins Gauntlet pool — duke's guard-beast"
+      }
+     ],
+     "notes": "No literal 'Orlesian Guard' unit exists; Chevalier is the evidenced stand-in, Kirkwall Guard the closest generic guard."
+    },
+    {
+     "step": 7,
+     "name_en": "Deep in the Dungeons",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (desc: traps 'awaken ancient golems')",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops (Stone Golem added to Map 14 drops, Sept-2014 revision)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_STONEGOLEM",
+       "tier": "IV",
+       "level": 54,
+       "why": "Stone Golem is a documented Map 14 drop; desc names ancient golems"
+      },
+      {
+       "id": "UNIT_STEELGOLEM",
+       "tier": "IV",
+       "level": 54,
+       "why": "heavier vault golem variant"
+      },
+      {
+       "id": "UNIT_STONEGOLEM",
+       "tier": "IV",
+       "level": 54,
+       "why": "golem pair per desc"
+      },
+      null,
+      {
+       "id": "UNIT_GATEGUARDIAN",
+       "tier": "IV",
+       "level": 54,
+       "why": "theme fill: giant construct guarding the fortress vaults"
+      }
+     ],
+     "notes": "Gate Guardian carries a Tevinter tag but is the best-named giant golem for a trap-fortress gauntlet; Inferno Golem rejected (Blight-themed)."
+    },
+    {
+     "step": 8,
+     "name_en": "Chasind Cahir",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (cta: 'Defeat the Chasind, Cahir'; desc: his 'pets' are crazed mages)",
+      "client-additional-data/HoDA_character_info/UnitData.json (UNIT_CAHIR exists, Legendary)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CAHIR",
+       "tier": "IV",
+       "level": 58,
+       "why": "boss named by desc/cta; actual HoDA unit"
+      },
+      {
+       "id": "UNIT_APOSTATEWANDERER",
+       "tier": "IV",
+       "level": 35,
+       "why": "desc: crazed mage 'pets'"
+      },
+      {
+       "id": "UNIT_ELFAPOSTATE",
+       "tier": "IV",
+       "level": 35,
+       "why": "crazed mage variety"
+      },
+      {
+       "id": "UNIT_APOSTATEWANDERER",
+       "tier": "IV",
+       "level": 35,
+       "why": "a group of mages per desc"
+      },
+      null
+     ],
+     "notes": "Boss node. Giant slot empty — Cahir's underground lair has no thematic giant; his squad is himself plus the broken mages."
+    },
+    {
+     "step": 9,
+     "name_en": "The Exchange",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (desc: 'a group of Tal-Vashoth led by a Saarebas'; cta: 'Stop the exchange')",
+      "https://dragonage.fandom.com/wiki/Quests_(Heroes_of_Dragon_Age) (map blurb names Salit as the Tal-Vashoth making the exchange)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SAAREBAS",
+       "tier": "IV",
+       "level": 60,
+       "why": "boss: desc says the group is led by a Saarebas"
+      },
+      {
+       "id": "UNIT_SALIT",
+       "tier": "IV",
+       "level": 58,
+       "why": "wiki blurb + MotA lore name Salit as the exchange leader; actual HoDA unit"
+      },
+      {
+       "id": "UNIT_TAL-VASHOTHMARAUDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "desc: group of Tal-Vashoth"
+      },
+      {
+       "id": "UNIT_TAL-VASHOTHBERSERKER",
+       "tier": "IV",
+       "level": 45,
+       "why": "Tal-Vashoth group fill"
+      },
+      null
+     ],
+     "notes": "Boss node. No Qunari giant exists in the catalog, so the giant slot stays empty; both named leaders (Saarebas, Salit) fielded together."
+    },
+    {
+     "step": 10,
+     "name_en": "Heart of the Many",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json (cta: 'Defeat Duke Prosper and Leopold')",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops (Duke Prosper is #1 in the official Map 14 drop list)",
+      "https://web.archive.org/web/20140804130143/http://forums.capitalgames.com/showthread.php/69017-Need-help-mastering-map-13-amp-14 (player confirms final objective)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DUKEPROSPER",
+       "tier": "IV",
+       "level": 63,
+       "why": "boss named in cta; actual HoDA unit and top Map 14 drop"
+      },
+      {
+       "id": "UNIT_CHEVALIER",
+       "tier": "IV",
+       "level": 61,
+       "why": "the duke's elite Orlesian guard; Map 14 drop"
+      },
+      {
+       "id": "UNIT_CHEVALIER",
+       "tier": "IV",
+       "level": 61,
+       "why": "guard pair"
+      },
+      {
+       "id": "UNIT_FREEMARCHER",
+       "tier": "IV",
+       "level": 45,
+       "why": "theme fill: chateau retainer (Vimmark/Free Marches locale)"
+      },
+      {
+       "id": "UNIT_LEOPOLD",
+       "tier": "IV",
+       "level": 63,
+       "why": "cta: 'and Leopold' — Prosper's pet wyvern, Legendary giant unit"
+      }
+     ],
+     "notes": "Full boss squad: both cta-named enemies plus the duke's guard. Cahir excluded — defeated at node 8."
+    },
+    {
+     "step": 11,
+     "name_en": "Chateau Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "https://docs.google.com/spreadsheets/d/1f0mpB1yrGt-ctKgsmfdbDLlSr-A5VHvKuDwj7xpclEg (recon/hoda_challenge_rewards.csv lines 133-136: 'Lvl272 Leopold IV, Lvl272 Drake IV, Lvl272 Drake IV')",
+      "client-additional-data/data_tables/campaign_map_nodes.json (hint: multi-target giants, bring stunners)"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DRAKE",
+       "tier": "IV",
+       "level": 45,
+       "why": "sourced: 'Lvl272 Drake IV' flanker in the recorded challenge squad"
+      },
+      {
+       "id": "UNIT_DRAKE",
+       "tier": "IV",
+       "level": 45,
+       "why": "sourced: second 'Lvl272 Drake IV'"
+      },
+      null,
+      null,
+      {
+       "id": "UNIT_LEOPOLD",
+       "tier": "IV",
+       "level": 68,
+       "why": "sourced: 'Lvl272 Leopold IV' — the challenge boss"
+      }
+     ],
+     "notes": "The one verbatim-recovered battle: authentic 3-unit squad (Leopold IV + 2x Drake IV), tier IV preserved from the source; source level 272 rescaled to our map-14 ramp spike — Leopold 68 (+5 over node 10), drakes capped at their Rare tier-IV max (45)."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_15",
+   "chapter_en": "Dalish Eluvian",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Brecilian Cave",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "lore: Dragon Age: Origins — Dalish Elf Origin"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_WOLF",
+       "tier": "IV",
+       "level": 30,
+       "why": "tainted forest beast at the cave mouth (origin lore)"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "origin lore: giant spiders infest the cave approach"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "spider pack fill"
+      },
+      {
+       "id": "UNIT_BLIGHTEDWEREWOLF",
+       "tier": "IV",
+       "level": 35,
+       "why": "blight-tainted beast per origin lore"
+      },
+      null
+     ],
+     "notes": "desc_en names Fereldan discoverers, but in the origin the three hunters flee and are not fought; the battle is the cave-mouth tainted wildlife. Lightest node of the map: 4 units, no giant. Levels capped at each unit's tier-IV max (Common 30 / Uncommon 35)."
+    },
+    {
+     "step": 2,
+     "name_en": "Ancient Ruins",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "lore: Dragon Age: Origins — Dalish Elf Origin",
+      "client-additional-data/data_tables/units.csv"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_WALKINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "origin ruin walking corpses"
+      },
+      {
+       "id": "UNIT_SKELETONARCHER",
+       "tier": "IV",
+       "level": 30,
+       "why": "origin ruin skeletons"
+      },
+      {
+       "id": "UNIT_SKELETONMAGE",
+       "tier": "IV",
+       "level": 30,
+       "why": "origin ruin skeletons"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "origin dungeon spider packs"
+      },
+      {
+       "id": "UNIT_GIANTCORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 30,
+       "why": "large spider of the ruin interior (origin lore)"
+      }
+     ],
+     "notes": "Arlathan-era ruin fought through animated dead plus spiders, per the Dalish Elf Origin dungeon. Levels rarity-capped."
+    },
+    {
+     "step": 3,
+     "name_en": "The Eluvian",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "client-additional-data/data_tables/units.csv",
+      "lore: Dragon Age: Origins — Dalish Elf Origin"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_BLIGHTEDWEREWOLF",
+       "tier": "IV",
+       "level": 35,
+       "why": "blighted beasts around the mirror chamber"
+      },
+      {
+       "id": "UNIT_DEVOURINGSKELETON",
+       "tier": "IV",
+       "level": 35,
+       "why": "ruin undead escort"
+      },
+      {
+       "id": "UNIT_SKELETONARCHER",
+       "tier": "IV",
+       "level": 30,
+       "why": "ruin undead escort"
+      },
+      {
+       "id": "UNIT_BLIGHTEDWEREWOLF",
+       "tier": "IV",
+       "level": 35,
+       "why": "blighted beast pack fill"
+      },
+      {
+       "id": "UNIT_BERESKARN",
+       "tier": "IV",
+       "level": 45,
+       "why": "BOSS — desc/cta: 'A bereskarn seems to be protecting a large mirror… Kill the bereskarn'"
+      }
+     ],
+     "notes": "Boss node. Bereskarn giant is explicitly named by the node text; escort composed from the origin dungeon's undead and blighted beasts. Bereskarn at its Rare tier-IV cap (45)."
+    },
+    {
+     "step": 4,
+     "name_en": "Tainted Mirror",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "client-additional-data/data_tables/units.csv",
+      "lore: Dragon Age: Origins — Dalish Elf Origin"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DEVOURINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "cta 'kill the blighted creatures' — ghoul-like tainted corpse (Tamlen's fate)"
+      },
+      {
+       "id": "UNIT_BLIGHTEDWEREWOLF",
+       "tier": "IV",
+       "level": 35,
+       "why": "Blight-tagged beast around the tainted eluvian"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "blighted cave fauna"
+      },
+      {
+       "id": "UNIT_DEVOURINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "tainted ghoul fill"
+      },
+      {
+       "id": "UNIT_BERESKARN",
+       "tier": "IV",
+       "level": 45,
+       "why": "blighted-beast giant recurs from node 3 — lore allows more than one tainted beast prowling the mirror chamber"
+      }
+     ],
+     "notes": "cta_en explicitly says 'Kill the blighted creatures'; everything Blight-tagged. Bereskarn recurs as a regular blight giant (no per-node evidence list exists for it — pure Blight-tag inference)."
+    },
+    {
+     "step": 5,
+     "name_en": "Keeper Marethari",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Quests_(Heroes_of_Dragon_Age)",
+      "https://dragonage.fandom.com/wiki/Challenges_(Heroes_of_Dragon_Age)",
+      "lore: Dragon Age II — Mirror Image",
+      "client-additional-data/data_tables/units.csv"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "DA2 varterral cave is spider-infested"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 35,
+       "why": "spider nest fill"
+      },
+      {
+       "id": "UNIT_CORRUPTEDSPIDERLING",
+       "tier": "IV",
+       "level": 56,
+       "why": "brood mini-boss of the varterral's nest — Corrupted Spiderling is listed as a Mirror Image (map 15) challenge drop on the wiki Challenges page"
+      },
+      {
+       "id": "UNIT_WALKINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "Sundermount corpses (DA2)"
+      },
+      {
+       "id": "UNIT_VARTERRAL",
+       "tier": "IV",
+       "level": 59,
+       "why": "BOSS — desc's 'ancient elven guardian' = Varterral per wiki Mirror Image entry ('Exterminate the Varterral of Sundermount'); unit also drops from this map"
+      }
+     ],
+     "notes": "Boss node. Varterral identification cross-confirmed by the wiki Quests page (Mirror Image challenge text) and the Eluvian(15) drop log. Shade fill replaced by the nest's Corrupted Spiderling so the guardian's node outweighs the preceding trash node."
+    },
+    {
+     "step": 6,
+     "name_en": "Climbing the Mountain",
+     "authenticity": "inferred",
+     "sources": [
+      "lore: Dragon Age II — Long Way Home",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "DA2 Long Way Home shade waves on the path"
+      },
+      {
+       "id": "UNIT_DEVOURINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "corpse waves on the ascent"
+      },
+      {
+       "id": "UNIT_WALKINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "corpse waves"
+      },
+      {
+       "id": "UNIT_ASHWRAITH",
+       "tier": "IV",
+       "level": 61,
+       "why": "ash wraiths stalk Sundermount's slopes in DA2 — elite of the shade waves, carries the node's level ramp (Common shades cap at 30)"
+      },
+      null
+     ],
+     "notes": "Node text only sets up the summit demon; squad is the DA2 mountain-path trash waves (corpses+shades) led by a lone ash wraith, no giant."
+    },
+    {
+     "step": 7,
+     "name_en": "Sundermount Foothills",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "client-additional-data/data_tables/units.csv",
+      "lore: Dragon Age II — Sundermount graveyard encounters"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DEVOURINGSKELETON",
+       "tier": "IV",
+       "level": 35,
+       "why": "desc: graveyard dead — 'decaying hand around their ankle'"
+      },
+      {
+       "id": "UNIT_REVENANT",
+       "tier": "IV",
+       "level": 45,
+       "why": "the DA2 Sundermount graveyard revenant — a possessed corpse that drags victims to it, matching the desc's grasping 'decaying hand'"
+      },
+      {
+       "id": "UNIT_ARCANEHORROR",
+       "tier": "IV",
+       "level": 60,
+       "why": "arcane horror rises from a mage's grave among the soldiers' dead (DA2 Sundermount undead spawns)"
+      },
+      {
+       "id": "UNIT_DEVOURINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "grave-risen corpse per desc"
+      },
+      null
+     ],
+     "notes": "desc_en explicitly evidences grave undead; catalog has no undead giant, so giant slot stays empty. Common skeleton fills (cap 30) upgraded to the graveyard's canonical DA2 elites (revenant, arcane horror) to keep the map's level ramp."
+    },
+    {
+     "step": 8,
+     "name_en": "Historic Battlegrounds",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "lore: Dragon Age II codex — Sundermount",
+      "scratchpad/recon/hoda_challenge_drop_rates.xlsx"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ARCANEHORROR",
+       "tier": "IV",
+       "level": 62,
+       "why": "summoned horror of the Tevinter/Arlathan battle; the map's demon-mage, present in the Eluvian challenge drop log (8/2004)"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "demons unleashed per DA2 Sundermount codex"
+      },
+      {
+       "id": "UNIT_HUNGERDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "ancient summonings, demon fill"
+      },
+      {
+       "id": "UNIT_SKELETONMAGE",
+       "tier": "IV",
+       "level": 30,
+       "why": "the dead of the old battle never rested (codex)"
+      },
+      {
+       "id": "UNIT_ANCIENTROCKWRAITH",
+       "tier": "IV",
+       "level": 62,
+       "why": "giant 'horror unleashed into the waking world' — theme fill"
+      }
+     ],
+     "notes": "desc legend evidences summoned horrors/demons. Rare demons at their tier-IV cap (45), Epics carry the node's level 59."
+    },
+    {
+     "step": 9,
+     "name_en": "Sundermount",
+     "authenticity": "inferred",
+     "sources": [
+      "lore: Dragon Age II — A New Path",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "shades guard the altar cave (DA2 A New Path)"
+      },
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "demonic power seething at the elven altar"
+      },
+      {
+       "id": "UNIT_ASHWRAITH",
+       "tier": "IV",
+       "level": 64,
+       "why": "evil seething in the summit cave — theme fill"
+      },
+      {
+       "id": "UNIT_ARCANEHORROR",
+       "tier": "IV",
+       "level": 48,
+       "why": "variety swap for UNIT_RAGEDEMON (critic: filler concentration)"
+      },
+      null
+     ],
+     "notes": "Altar-cave guardians per DA2; kept giant-less so the possessed-Marethari climax next node lands harder."
+    },
+    {
+     "step": 10,
+     "name_en": "The Tainted Mirror",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Quests_(Heroes_of_Dragon_Age)",
+      "client-additional-data/data_tables/units.csv",
+      "lore: Dragon Age II — A New Path"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_KEEPERMARETHARI",
+       "tier": "IV",
+       "level": 67,
+       "why": "BOSS — cta: 'Kill the demon possessing Marethari!'; exact Legendary unit, marquee drop of this map"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "IV",
+       "level": 45,
+       "why": "possession theme; also in the map's challenge drop pool"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "Audacity's demon minions; also in the map's challenge drop pool"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "shade adds — the canonical waves of the DA2 Audacity/Marethari fight"
+      },
+      {
+       "id": "UNIT_PRIDEDEMON",
+       "tier": "IV",
+       "level": 65,
+       "why": "Audacity is a pride demon (DA2, wiki links the node to Audacity) — its power made manifest"
+      }
+     ],
+     "notes": "Map climax: possessed Keeper Marethari (boss, regular cell — she is not a giant) backed by the demons her possession unleashes; Pride Demon giant anchors Audacity's canonical demon type. Arcane Horror escort moved to the challenge node whose drop log actually evidences it, keeping the climax below the challenge spike."
+    },
+    {
+     "step": 11,
+     "name_en": "Eluvian Challenge",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://web.archive.org/web/20141101000220/http://forums.capitalgames.com:80/showthread.php/70480-Challenge-Quest-Drops",
+      "https://dragonage.fandom.com/wiki/Challenges_(Heroes_of_Dragon_Age)",
+      "scratchpad/recon/hoda_challenge_drop_rates.xlsx"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_KEEPERMARETHARI",
+       "tier": "IV",
+       "level": 69,
+       "why": "the possessed Keeper returns through the mirror — Keeper Marethari is in the official challenge drop pool (Kiv post; 1/2004 logged, also on the wiki Challenges drop list)"
+      },
+      {
+       "id": "UNIT_ARCANEHORROR",
+       "tier": "IV",
+       "level": 65,
+       "why": "hint: 'Undead heroes generally hit single targets hard' — Arcane Horror is the map's undead that 'attacks and slows one enemy a lot', and it is in the challenge drop log (8/2004)"
+      },
+      {
+       "id": "UNIT_ABOMINATION",
+       "tier": "IV",
+       "level": 45,
+       "why": "official drop-pool mirror (281/2004)"
+      },
+      {
+       "id": "UNIT_RAGEDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "official drop-pool mirror (240/2004)"
+      },
+      {
+       "id": "UNIT_VARTERRAL",
+       "tier": "IV",
+       "level": 65,
+       "why": "in the official drop pool (10/2004); the map's guardian giant"
+      }
+     ],
+     "notes": "Challenge spike: every unit appears in the official Capital Games Eluvian(15) drop log (Kiv post + community spreadsheet); drop pools mirrored themes but are not observed squads. Revenant was dropped (catalog Revenant attacks a ROW, contradicting the single-target hint the cell claimed) and Walking Corpse (339/2004, kept in nodes 2/5/6) gave way to the pool's Legendary and Epic so the challenge is unambiguously the strongest node. Epics/Legendary carry the +5 spike (65/69); Rares sit at their tier-IV cap of 45."
+    }
+   ]
+  },
+  {
+   "campaign": "PVE_MAP_16",
+   "chapter_en": "Shadows of Blackmarsh",
+   "nodes": [
+    {
+     "step": 1,
+     "name_en": "Enter the Marsh",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Shadows_of_the_Blackmarsh"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_BLIGHTEDWEREWOLF",
+       "tier": "IV",
+       "level": 35,
+       "why": "Awakening entry beat: blighted werewolves in the marsh"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "IV",
+       "level": 30,
+       "why": "desc: darkspawn lingering after the Blight"
+      },
+      {
+       "id": "UNIT_HURLOCKBOLTER",
+       "tier": "IV",
+       "level": 30,
+       "why": "desc: darkspawn pool, ranged mix"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "IV",
+       "level": 35,
+       "why": "darkspawn pool, caster mix"
+      },
+      null
+     ],
+     "notes": "Entry node, 4 units, no giant. Level convention: rarity caps at tier IV are Common 30 / Uncommon 35 / Rare 45 / Epic 65 / Legendary 85 (per characters.json tiers); HoDA's authentic late-map knob was rarity escalation, which the mix reflects. Verifier pass smoothed per-node average level to be non-decreasing across the map. Applies to all nodes below."
+    },
+    {
+     "step": 2,
+     "name_en": "The First",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Shadows_of_the_Blackmarsh"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHRIEK",
+       "tier": "IV",
+       "level": 35,
+       "why": "lore: darkspawn encircle the Commander (ambush)"
+      },
+      {
+       "id": "UNIT_GENLOCKBRUTE",
+       "tier": "IV",
+       "level": 35,
+       "why": "CTA: kill the First's minions"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "IV",
+       "level": 35,
+       "why": "the First is an emissary; his retinue"
+      },
+      {
+       "id": "UNIT_HURLOCKGRUNT",
+       "tier": "IV",
+       "level": 30,
+       "why": "desc names darkspawn minions"
+      },
+      {
+       "id": "UNIT_RISENOGRE",
+       "tier": "IV",
+       "level": 35,
+       "why": "Risen Ogre: undead-darkspawn variant fits Fade-Blackmarsh (variety swap)"
+      }
+     ],
+     "notes": "The First himself escapes via the orb per lore, so he is not in this squad — his minions are."
+    },
+    {
+     "step": 3,
+     "name_en": "The Fade",
+     "authenticity": "inferred",
+     "sources": [
+      "https://dragonage.fandom.com/wiki/Shadows_of_the_Blackmarsh",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SHRIEK",
+       "tier": "IV",
+       "level": 31,
+       "why": "lore: abandoned darkspawn attack first; shrieks stalk the Blackmarsh"
+      },
+      {
+       "id": "UNIT_GENLOCKALPHA",
+       "tier": "IV",
+       "level": 45,
+       "why": "darkspawn left behind by the First"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "lore: several shades attack while exploring the Fade"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "lore: shade swarm (several)"
+      },
+      null
+     ],
+     "notes": "Mixed darkspawn-then-shades beat compressed into one squad; no giant evidenced in the Fade transition. Verifier: hurlock bolter (Common, capped 30) swapped for a shriek to keep the level ramp non-decreasing past node 2."
+    },
+    {
+     "step": 4,
+     "name_en": "Lost Damsel",
+     "authenticity": "inferred",
+     "sources": [
+      "https://dragonage.fandom.com/wiki/Shadows_of_the_Blackmarsh",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_SKELETONARCHER",
+       "tier": "IV",
+       "level": 30,
+       "why": "Maiden in Distress: undead skeleton ambush"
+      },
+      {
+       "id": "UNIT_REVENANT",
+       "tier": "IV",
+       "level": 38,
+       "why": "undead ambush elite; the Blackmarsh shrine revenant (Ser Alvard's sword)"
+      },
+      {
+       "id": "UNIT_DEVOURINGSKELETON",
+       "tier": "IV",
+       "level": 35,
+       "why": "undead ambush, bruiser mix"
+      },
+      {
+       "id": "UNIT_WALKINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "undead theme fill (docks graves)"
+      },
+      null
+     ],
+     "notes": "Node desc only sets the trap; the fight is the Awakening grave-side undead ambush. Verifier: skeleton mage (Common, capped 30) swapped for the Blackmarsh revenant to keep the level ramp non-decreasing."
+    },
+    {
+     "step": 5,
+     "name_en": "Enter the crypt.",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Shadows_of_the_Blackmarsh"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_HUNGERDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "boss per desc: woman reveals as Hunger Demon"
+      },
+      {
+       "id": "UNIT_DEVOURINGSKELETON",
+       "tier": "IV",
+       "level": 35,
+       "why": "desc: tombs pour out skeletons"
+      },
+      {
+       "id": "UNIT_DEVOURINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "desc: ...and zombies"
+      },
+      {
+       "id": "UNIT_SKELETONMAGE",
+       "tier": "IV",
+       "level": 30,
+       "why": "crypt undead swarm mix"
+      },
+      {
+       "id": "UNIT_GIANTCORRUPTEDSPIDER",
+       "tier": "IV",
+       "level": 30,
+       "why": "crypt vermin, theme fill giant"
+      }
+     ],
+     "notes": "Boss = Hunger Demon (regular slot, not giant). Shadowy Crypt 'filled with a large number of undead' per lore."
+    },
+    {
+     "step": 6,
+     "name_en": "Another World",
+     "authenticity": "inferred",
+     "sources": [
+      "https://dragonage.fandom.com/wiki/Shadows_of_the_Blackmarsh",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "lore: desire demons keep the veil tears open"
+      },
+      {
+       "id": "UNIT_SHADE",
+       "tier": "IV",
+       "level": 30,
+       "why": "lore: shades roam the Blackmarsh Undying"
+      },
+      {
+       "id": "UNIT_HUNGERDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "variety swap for UNIT_RAGEDEMON (critic: filler concentration)"
+      },
+      {
+       "id": "UNIT_ARCANEHORROR",
+       "tier": "IV",
+       "level": 57,
+       "why": "Fade-village demon caster, theme fill"
+      },
+      {
+       "id": "UNIT_SYLVAN",
+       "tier": "IV",
+       "level": 35,
+       "why": "possessed marsh flora, theme fill giant"
+      }
+     ],
+     "notes": "Exploration beat of the Fade replica village; demon pool per Tears in the Veil side content."
+    },
+    {
+     "step": 7,
+     "name_en": "Justice",
+     "authenticity": "inferred",
+     "sources": [
+      "https://dragonage.fandom.com/wiki/Shadows_of_the_Blackmarsh",
+      "client-additional-data/data_tables/campaign_map_nodes.json"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ASHWRAITH",
+       "tier": "IV",
+       "level": 55,
+       "why": "lore: Baroness exits escorted by two ash wraiths"
+      },
+      {
+       "id": "UNIT_ASHWRAITH",
+       "tier": "IV",
+       "level": 55,
+       "why": "second ash wraith per lore"
+      },
+      {
+       "id": "UNIT_REVENANT",
+       "tier": "IV",
+       "level": 45,
+       "why": "the estate doorman fought when siding with Justice"
+      },
+      {
+       "id": "UNIT_WALKINGCORPSE",
+       "tier": "IV",
+       "level": 35,
+       "why": "enthralled estate defender, theme fill"
+      },
+      null
+     ],
+     "notes": "You fight the estate's defenders while aiding Justice's siege; wraith pair is directly evidenced. Verifier: wraiths eased 59 -> 55 so node 8 clears this node without an outlier boss level."
+    },
+    {
+     "step": 8,
+     "name_en": "First and Last",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Shadows_of_the_Blackmarsh"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_THEFIRST",
+       "tier": "IV",
+       "level": 68,
+       "why": "boss per desc: the First attacks for his new master"
+      },
+      {
+       "id": "UNIT_HURLOCKEMISSARY",
+       "tier": "IV",
+       "level": 35,
+       "why": "lore: fought 'with some darkspawn'"
+      },
+      {
+       "id": "UNIT_SHRIEKALPHA",
+       "tier": "IV",
+       "level": 45,
+       "why": "darkspawn retinue, rarity-escalated"
+      },
+      {
+       "id": "UNIT_GENLOCKALPHA",
+       "tier": "IV",
+       "level": 45,
+       "why": "darkspawn retinue, rarity-escalated"
+      },
+      {
+       "id": "UNIT_ARMOREDOGRE",
+       "tier": "IV",
+       "level": 45,
+       "why": "courtyard brawl muscle, theme fill giant"
+      }
+     ],
+     "notes": "Boss The First (UNIT_THEFIRST, Legendary) in a regular slot; courtyard fight while Justice duels the Baroness. Verifier: The First 62 -> 68 (retinue is rarity-capped) to keep the ramp non-decreasing."
+    },
+    {
+     "step": 9,
+     "name_en": "Pleading Freedom",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Baroness",
+      "https://dragonage.fandom.com/wiki/Shadows_of_the_Blackmarsh"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_THEBARONESS",
+       "tier": "IV",
+       "level": 70,
+       "why": "boss per desc: Justice defeats The Baroness"
+      },
+      {
+       "id": "UNIT_PRIDEABOMINATION",
+       "tier": "IV",
+       "level": 45,
+       "why": "Baroness affiliation: abominations; map-16 drop pool"
+      },
+      {
+       "id": "UNIT_SLOTHABOMINATION",
+       "tier": "IV",
+       "level": 45,
+       "why": "Baroness affiliation: abominations; map-16 drop pool"
+      },
+      {
+       "id": "UNIT_ASHWRAITH",
+       "tier": "IV",
+       "level": 64,
+       "why": "her wraith bodyguard, evidenced at node 7"
+      },
+      null
+     ],
+     "notes": "Giant slot left empty — the courtyard duel has no large creature evidenced; abomination pair matches both her fandom affiliation and the Blackmarsh Challenge drop list. Verifier: Baroness 64 -> 70 so she outranks her lieutenant The First at node 8."
+    },
+    {
+     "step": 10,
+     "name_en": "The Baroness",
+     "authenticity": "inferred",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "https://dragonage.fandom.com/wiki/Shadows_of_the_Blackmarsh"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_ARCANEHORROR",
+       "tier": "IV",
+       "level": 65,
+       "why": "portal demon add, caster; rarity-escalated for the finale"
+      },
+      {
+       "id": "UNIT_ASHWRAITH",
+       "tier": "IV",
+       "level": 62,
+       "why": "her ash wraith guard (evidenced at node 7) fights to the last"
+      },
+      {
+       "id": "UNIT_DESIREDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "portal demon add"
+      },
+      {
+       "id": "UNIT_HUNGERDEMON",
+       "tier": "IV",
+       "level": 45,
+       "why": "portal demon add"
+      },
+      {
+       "id": "UNIT_PRIDEDEMON",
+       "tier": "IV",
+       "level": 65,
+       "why": "boss per desc: Pride Demon emerges from her body"
+      }
+     ],
+     "notes": "Boss Pride Demon fills the giant slot (catalog giant, Epic, level capped 65); adds mirror the Awakening portal-spawn mechanic. Verifier: Common shade and rarity-capped rage demon swapped for arcane horror + ash wraith so the penultimate node is stronger than node 9."
+    },
+    {
+     "step": 11,
+     "name_en": "Blackmarsh Challenge",
+     "authenticity": "sourced",
+     "sources": [
+      "client-additional-data/data_tables/campaign_map_nodes.json",
+      "scratchpad/recon/wiki_characters_leg1.wikitext",
+      "scratchpad/recon/wiki_challenges.wikitext",
+      "scratchpad/recon/wb_challenge_quest_drops.txt"
+     ],
+     "roster": [
+      {
+       "id": "UNIT_THEBARONESS",
+       "tier": "IV",
+       "level": 71,
+       "why": "client text: Baronesses (plural) attack a row and stun"
+      },
+      {
+       "id": "UNIT_THEBARONESS",
+       "tier": "IV",
+       "level": 71,
+       "why": "client text: plural Baronesses, priority targets"
+      },
+      {
+       "id": "UNIT_THEBARONESS",
+       "tier": "IV",
+       "level": 71,
+       "why": "filled to full squad; only Baronesses + Pride Demon named"
+      },
+      {
+       "id": "UNIT_THEBARONESS",
+       "tier": "IV",
+       "level": 71,
+       "why": "filled to full squad; her +50% demon-power buff stacks"
+      },
+      {
+       "id": "UNIT_PRIDEDEMON",
+       "tier": "IV",
+       "level": 65,
+       "why": "client text: the Pride Demon only attacks a single target"
+      }
+     ],
+     "notes": "Only battle with documented membership: >=2x The Baroness buffing 1x Pride Demon (+50% Power for Demons = the 'huge boost'). Exact Baroness count unstated; authored as 4 to make the challenge full and a spike (Pride Demon capped at its tier-IV max 65). Verified: node desc names plural Baronesses + Pride Demon; recon wiki lists both in the Blackmarsh Challenge drop pool."
+    }
+   ]
+  }
+ ]
+}
