@@ -45,6 +45,7 @@ make format-check
 | --- | --- | --- |
 | `GET` | `/healthz` | liveness |
 | `GET` | `/v1/time` | `{"server_time": <unix seconds>}` |
+| `GET` | `/v1/client` | `{"latest", "minimum", "download_url"}`; see [Client versions](#client-versions) |
 | `POST` | `/v1/players` | creates a guest → `201 {"player_id", "secret", "server_time"}` |
 | `POST` | `/v1/sessions` | `{"player_id", "secret"}` → `{"token", "player_id", "server_time"}` |
 | `GET` | `/v1/players/{id}/profile` | the save JSON; revision in `X-Profile-Revision`, 404 before the first save |
@@ -77,6 +78,27 @@ profile once it has gone `-guest-idle` (default `336h`, 14 days; `0` keeps every
 counted from its creation, if its profile has no `account.name` and `tutorial.complete` is false, or it never saved
 a profile. Profiles without a `tutorial` section predate the tutorial and are kept. The check runs on start and every
 `-prune-every` (default `1h`). Each session stamps `last_session_at` in the account file.
+
+## Client versions
+
+The client sends `User-Agent: HeroesOfDragonAge/<version>`, its `git describe --tags` output (`v0.5.0`,
+`v0.5.0-rc.1`, `v0.5.0-3-gabc1234`). `GET /v1/client` tells it the newest release and the oldest one the server still
+serves:
+
+```json
+{"latest": "v0.5.1", "minimum": "v0.5.0", "download_url": "https://hodareborn.com/#download"}
+```
+
+`latest` is the tag of the client repository's latest GitHub release (`-client-releases`), looked up on start and
+every `-client-releases-every` (default `15m`) with `If-None-Match`, so unchanged answers do not count against
+GitHub's rate limit; a failed lookup keeps the last tag. It is never lower than `minimum`, and empty while neither is
+known. `minimum` comes from `-min-client-version` (on Railway, the `HOD_MIN_CLIENT_VERSION` variable) and is empty by
+default. Raise it only for a release the server cannot serve older clients alongside, such as a change to the battle
+simulation or to an action's shape: from then on every other `/v1/` request from an older client gets `426 Upgrade
+Required` with the same three fields and an `error`, and the client blocks online play until the player downloads
+the new version. Release candidates sort before their release and `git describe` builds after it. A request without
+the client's `User-Agent`, or from a build without a version tag (`dev`, a bare commit hash), is never refused.
+`download_url` is `-client-download-url`, the website's download section by default.
 
 ## Store
 

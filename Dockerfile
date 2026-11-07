@@ -9,4 +9,4 @@ FROM alpine:3.20
 COPY --from=build /hoda-server /usr/local/bin/hoda-server
 ENV PORT=8787
 EXPOSE 8787
-CMD ["sh", "-c", "exec hoda-server -addr 0.0.0.0:${PORT} -data /data -trust-cf-connecting-ip"]
+CMD ["sh", "-c", "exec hoda-server -addr 0.0.0.0:${PORT} -data /data -trust-cf-connecting-ip -min-client-version \"${HOD_MIN_CLIENT_VERSION:-}\""]
