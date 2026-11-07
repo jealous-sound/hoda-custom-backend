@@ -27,8 +27,9 @@ backend then imports the client's `player_save.dat` as `local` on first start. S
 | `HOD_BACKEND_DATA` | `runtime` |
 | `HOD_PLAYER_ID` | unset (guest account from `account.dat`) |
 
-The client only talks to a backend when `HOD_BACKEND_URL` is set; without it the game keeps using
-`player_save.dat`.
+`HOD_BACKEND_URL` sends the client straight to that server. Without it, the client asks at startup whether to play
+locally, with `player_save.dat`, or online against the server baked into it, `https://api.hodareborn.com`: this
+service on Railway, behind the `api.hodareborn.com` custom domain.
 
 ## Commands
 
