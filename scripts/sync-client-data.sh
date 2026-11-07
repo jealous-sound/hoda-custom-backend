@@ -6,7 +6,7 @@ CLIENT_DIR="${HOD_CLIENT_DIR:-$BACKEND_DIR/../hoda-custom-client}"
 TARGET="$BACKEND_DIR/internal/catalog/data"
 FILES=(store_packs.json hero_pool.json runes.json gear.json tutorial_rewards.json campaign_maps.json nexus_maps.json pvp_rules.json missions.json new_player.json
     custom_heroes.json intrinsic_passives.json ability_recipes.json consume_tables.json campaign_rosters.json nexus_rosters.json
-    nexus_game_changers.json fortify_tables.json)
+    nexus_game_changers.json fortify_tables.json expeditions.json)
 BATTLE_TESTDATA="$BACKEND_DIR/internal/battle/testdata"
 
 if [[ ! -d "$CLIENT_DIR/data" ]]; then

@@ -8,6 +8,11 @@
    "initial_tier": "I",
    "name": "Elven Mage",
    "faction": "Blue",
+   "groups": [
+    "Apostate",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -24,6 +29,12 @@
    "initial_tier": "I",
    "name": "Red Iron Mage",
    "faction": "Red",
+   "groups": [
+    "Apostate",
+    "Human",
+    "Outlaw",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -40,6 +51,12 @@
    "initial_tier": "I",
    "name": "Redwater Raider",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -56,6 +73,12 @@
    "initial_tier": "I",
    "name": "Fereldan Knight",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -72,6 +95,11 @@
    "initial_tier": "I",
    "name": "Dwarven Warrior",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -88,6 +116,11 @@
    "initial_tier": "I",
    "name": "Apostate Wanderer",
    "faction": "Red",
+   "groups": [
+    "Apostate",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -104,6 +137,11 @@
    "initial_tier": "I",
    "name": "Kirkwall Guard",
    "faction": "White",
+   "groups": [
+    "Human",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -120,6 +158,13 @@
    "initial_tier": "I",
    "name": "Tevinter Slaver",
    "faction": "White/Black",
+   "groups": [
+    "Tevinter",
+    "Apostate",
+    "Blood_Mage",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -136,6 +181,12 @@
    "initial_tier": "I",
    "name": "Coterie Thug",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -152,6 +203,13 @@
    "initial_tier": "I",
    "name": "Cassandra Pentaghast",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Chantry",
+    "Seeker",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -168,6 +226,11 @@
    "initial_tier": "I",
    "name": "High Dragon",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Reavers",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -184,6 +247,11 @@
    "initial_tier": "I",
    "name": "Dalish Arcane Warrior",
    "faction": "Blue",
+   "groups": [
+    "Mage",
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -200,6 +268,10 @@
    "initial_tier": "I",
    "name": "Dalish Warrior",
    "faction": "Blue",
+   "groups": [
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -216,6 +288,11 @@
    "initial_tier": "I",
    "name": "Fereldan Infantry",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -232,6 +309,11 @@
    "initial_tier": "I",
    "name": "Dalish Mage",
    "faction": "Blue",
+   "groups": [
+    "Apostate",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -248,6 +330,11 @@
    "initial_tier": "I",
    "name": "Elf Apostate",
    "faction": "Red",
+   "groups": [
+    "Apostate",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -264,6 +351,12 @@
    "initial_tier": "I",
    "name": "Carta Thug",
    "faction": "Red",
+   "groups": [
+    "Dwarf",
+    "Carta",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -280,6 +373,11 @@
    "initial_tier": "I",
    "name": "Crow Assassin",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -296,6 +394,11 @@
    "initial_tier": "I",
    "name": "Silent Sister",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -312,6 +415,12 @@
    "initial_tier": "I",
    "name": "Carta Assassin",
    "faction": "Red",
+   "groups": [
+    "Dwarf",
+    "Carta",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -328,6 +437,12 @@
    "initial_tier": "I",
    "name": "Sharps Highwayman",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -344,6 +459,10 @@
    "initial_tier": "I",
    "name": "Hurlock Grunt",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -360,6 +479,11 @@
    "initial_tier": "I",
    "name": "Blackstone Irregular",
    "faction": "Red",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -376,6 +500,12 @@
    "initial_tier": "I",
    "name": "Carta Smuggler",
    "faction": "Red",
+   "groups": [
+    "Dwarf",
+    "Carta",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -392,6 +522,11 @@
    "initial_tier": "I",
    "name": "Tevinter Warrior",
    "faction": "Blue",
+   "groups": [
+    "Tevinter",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -408,6 +543,11 @@
    "initial_tier": "I",
    "name": "Tevinter Battlemage",
    "faction": "White/Blue",
+   "groups": [
+    "Tevinter",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -424,6 +564,12 @@
    "initial_tier": "I",
    "name": "Coterie Thief",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -440,6 +586,12 @@
    "initial_tier": "I",
    "name": "Ser Cauthrien",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -456,6 +608,13 @@
    "initial_tier": "I",
    "name": "Fenris",
    "faction": "White/Red",
+   "groups": [
+    "Tevinter",
+    "FreeMarches",
+    "Outlaw",
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -472,6 +631,12 @@
    "initial_tier": "I",
    "name": "The Arishok",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Triumvirate",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -488,6 +653,10 @@
    "initial_tier": "I",
    "name": "Dalish Hunter",
    "faction": "Blue",
+   "groups": [
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -504,6 +673,11 @@
    "initial_tier": "I",
    "name": "Elf Bandit",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -520,6 +694,11 @@
    "initial_tier": "I",
    "name": "Werewolf",
    "faction": "Blue",
+   "groups": [
+    "Werewolves",
+    "Beast",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -536,6 +715,10 @@
    "initial_tier": "I",
    "name": "Devouring Skeleton",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -552,6 +735,9 @@
    "initial_tier": "I",
    "name": "Pride Demon",
    "faction": "Large",
+   "groups": [
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -568,6 +754,11 @@
    "initial_tier": "I",
    "name": "Circle Senior Enchanter",
    "faction": "Blue",
+   "groups": [
+    "Human",
+    "Mage",
+    "Circle"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -584,6 +775,10 @@
    "initial_tier": "I",
    "name": "Abomination",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -600,6 +795,11 @@
    "initial_tier": "I",
    "name": "Yavana",
    "faction": "Red",
+   "groups": [
+    "Apostate",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -616,6 +816,13 @@
    "initial_tier": "I",
    "name": "Merrill",
    "faction": "Blue/Black",
+   "groups": [
+    "Apostate",
+    "Blood_Mage",
+    "FreeMarches",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -632,6 +839,10 @@
    "initial_tier": "I",
    "name": "Charred Sylvan",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -648,6 +859,12 @@
    "initial_tier": "I",
    "name": "Inferno Golem",
    "faction": "Large",
+   "groups": [
+    "Dwarf",
+    "Blight",
+    "Golem",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -664,6 +881,9 @@
    "initial_tier": "I",
    "name": "Ogre",
    "faction": "Large",
+   "groups": [
+    "Blight"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -680,6 +900,10 @@
    "initial_tier": "I",
    "name": "Desire Demon",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -696,6 +920,13 @@
    "initial_tier": "I",
    "name": "Tevinter Arcane Warrior",
    "faction": "White/Blue",
+   "groups": [
+    "Tevinter",
+    "Apostate",
+    "Human",
+    "Mage",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -712,6 +943,12 @@
    "initial_tier": "I",
    "name": "Grey Warden Mage",
    "faction": "White/Blue",
+   "groups": [
+    "Apostate",
+    "Human",
+    "Warden",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -728,6 +965,11 @@
    "initial_tier": "I",
    "name": "Grey Warden Rogue",
    "faction": "White/Black",
+   "groups": [
+    "Human",
+    "Rogue",
+    "Warden"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -744,6 +986,10 @@
    "initial_tier": "I",
    "name": "Hurlock Bolter",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -760,6 +1006,11 @@
    "initial_tier": "I",
    "name": "Darkspawn Emissary",
    "faction": "Black",
+   "groups": [
+    "Apostate",
+    "Blight",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -776,6 +1027,10 @@
    "initial_tier": "I",
    "name": "Skeleton Archer",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -792,6 +1047,10 @@
    "initial_tier": "I",
    "name": "Skeleton Mage",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -808,6 +1067,10 @@
    "initial_tier": "I",
    "name": "Genlock Brute",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -824,6 +1087,11 @@
    "initial_tier": "I",
    "name": "Tal-Vashoth Berserker",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -840,6 +1108,10 @@
    "initial_tier": "I",
    "name": "Sten",
    "faction": "Red",
+   "groups": [
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -856,6 +1128,11 @@
    "initial_tier": "I",
    "name": "Harlequin",
    "faction": "White",
+   "groups": [
+    "Human",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -872,6 +1149,12 @@
    "initial_tier": "I",
    "name": "Duncan",
    "faction": "White/Black",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Rogue",
+    "Warden"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -888,6 +1171,13 @@
    "initial_tier": "I",
    "name": "Varric Tethras",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Dwarf",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -904,6 +1194,13 @@
    "initial_tier": "I",
    "name": "Sebastian Vael",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Chantry",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -920,6 +1217,11 @@
    "initial_tier": "I",
    "name": "Gate Guardian",
    "faction": "Large",
+   "groups": [
+    "Tevinter",
+    "Golem",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -936,6 +1238,10 @@
    "initial_tier": "I",
    "name": "Ashaad",
    "faction": "Red",
+   "groups": [
+    "Qunari",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -952,6 +1258,10 @@
    "initial_tier": "I",
    "name": "Karashok",
    "faction": "Red",
+   "groups": [
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -968,6 +1278,11 @@
    "initial_tier": "I",
    "name": "Tal-Vashoth Marauder",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -984,6 +1299,12 @@
    "initial_tier": "I",
    "name": "Templar Assassin",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Human",
+    "Chantry",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1000,6 +1321,12 @@
    "initial_tier": "I",
    "name": "Templar Recruit",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Human",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1016,6 +1343,12 @@
    "initial_tier": "I",
    "name": "Templar Archer",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Human",
+    "Chantry",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1032,6 +1365,11 @@
    "initial_tier": "I",
    "name": "Circle Apprentice",
    "faction": "Blue",
+   "groups": [
+    "Human",
+    "Mage",
+    "Circle"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1048,6 +1386,10 @@
    "initial_tier": "I",
    "name": "Revenant",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1064,6 +1406,12 @@
    "initial_tier": "I",
    "name": "Blighted Werewolf",
    "faction": "Black",
+   "groups": [
+    "Werewolves",
+    "Blight",
+    "Beast",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1080,6 +1428,10 @@
    "initial_tier": "I",
    "name": "Devouring Corpse",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1096,6 +1448,11 @@
    "initial_tier": "I",
    "name": "Legionnaire Scout",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Rogue",
+    "LegionOfTheDead"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1112,6 +1469,11 @@
    "initial_tier": "I",
    "name": "Legionnaire Warrior",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Warrior",
+    "LegionOfTheDead"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1128,6 +1490,11 @@
    "initial_tier": "I",
    "name": "Fereldan Ash Warrior",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1144,6 +1511,10 @@
    "initial_tier": "I",
    "name": "Spirit of Valor",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1160,6 +1531,10 @@
    "initial_tier": "I",
    "name": "Enraged Spirit",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1176,6 +1551,10 @@
    "initial_tier": "I",
    "name": "Drake",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Dragon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1192,6 +1571,11 @@
    "initial_tier": "I",
    "name": "Dragon Thrall",
    "faction": "Large",
+   "groups": [
+    "Blight",
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -1208,6 +1592,10 @@
    "initial_tier": "I",
    "name": "Wyvern",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -1224,6 +1612,10 @@
    "initial_tier": "I",
    "name": "Corrupted Spider",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1240,6 +1632,10 @@
    "initial_tier": "I",
    "name": "Mabari",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1256,6 +1652,9 @@
    "initial_tier": "I",
    "name": "Bear",
    "faction": "Large",
+   "groups": [
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -1272,6 +1671,10 @@
    "initial_tier": "I",
    "name": "Nug",
    "faction": "Red",
+   "groups": [
+    "Nug",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1288,6 +1691,11 @@
    "initial_tier": "I",
    "name": "Isabela",
    "faction": "White/Red",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1304,6 +1712,14 @@
    "initial_tier": "I",
    "name": "Sister Nightingale",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Ferelden",
+    "Human",
+    "Chantry",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1320,6 +1736,14 @@
    "initial_tier": "I",
    "name": "Grey Warden Carver",
    "faction": "White/Black",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1336,6 +1760,15 @@
    "initial_tier": "I",
    "name": "Grey Warden Bethany",
    "faction": "Blue/Black",
+   "groups": [
+    "Apostate",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Warden",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1352,6 +1785,12 @@
    "initial_tier": "I",
    "name": "Stroud",
    "faction": "White/Black",
+   "groups": [
+    "Human",
+    "Orlesian",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1368,6 +1807,15 @@
    "initial_tier": "I",
    "name": "Templar Carver",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Chantry",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1384,6 +1832,14 @@
    "initial_tier": "I",
    "name": "Grey Warden Alistair",
    "faction": "White/Black",
+   "groups": [
+    "Templar",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1400,6 +1856,14 @@
    "initial_tier": "I",
    "name": "The Architect",
    "faction": "Blue/Black",
+   "groups": [
+    "Tevinter",
+    "Apostate",
+    "Blood_Mage",
+    "Nobility",
+    "Blight",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1416,6 +1880,13 @@
    "initial_tier": "I",
    "name": "First Enchanter Orsino",
    "faction": "Blue",
+   "groups": [
+    "Blood_Mage",
+    "FreeMarches",
+    "Mage",
+    "Circle",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1432,6 +1903,12 @@
    "initial_tier": "I",
    "name": "Anders",
    "faction": "Red",
+   "groups": [
+    "Apostate",
+    "Human",
+    "FreeMarches",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1448,6 +1925,14 @@
    "initial_tier": "I",
    "name": "Circle Mage Bethany",
    "faction": "Blue",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Mage",
+    "Circle"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1464,6 +1949,14 @@
    "initial_tier": "I",
    "name": "Vengeance Anders",
    "faction": "Blue/Black",
+   "groups": [
+    "Apostate",
+    "Spirit",
+    "Human",
+    "FreeMarches",
+    "Warden",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1480,6 +1973,12 @@
    "initial_tier": "I",
    "name": "Morrigan",
    "faction": "Red",
+   "groups": [
+    "Apostate",
+    "Inquisition",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1496,6 +1995,11 @@
    "initial_tier": "I",
    "name": "Grey Warden Oghren",
    "faction": "White/Black",
+   "groups": [
+    "Dwarf",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1512,6 +2016,11 @@
    "initial_tier": "I",
    "name": "Flemeth",
    "faction": "Red",
+   "groups": [
+    "Apostate",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1528,6 +2037,12 @@
    "initial_tier": "I",
    "name": "Grand Enchanter Fiona",
    "faction": "White/Blue",
+   "groups": [
+    "Orlesian",
+    "Circle",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1544,6 +2059,11 @@
    "initial_tier": "I",
    "name": "Queen of the Blackmarsh",
    "faction": "Large",
+   "groups": [
+    "Spirit",
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -1560,6 +2080,10 @@
    "initial_tier": "I",
    "name": "Forest Spirit",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1576,6 +2100,13 @@
    "initial_tier": "I",
    "name": "Aveline Vallen",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1592,6 +2123,9 @@
    "initial_tier": "I",
    "name": "Wolf",
    "faction": "Red",
+   "groups": [
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1608,6 +2142,10 @@
    "initial_tier": "I",
    "name": "Sylvan",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -1624,6 +2162,10 @@
    "initial_tier": "I",
    "name": "Genlock Alpha",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1640,6 +2182,10 @@
    "initial_tier": "I",
    "name": "Walking Corpse",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1656,6 +2202,10 @@
    "initial_tier": "I",
    "name": "Genlock Assassin",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1672,6 +2222,11 @@
    "initial_tier": "I",
    "name": "Hurlock Emissary",
    "faction": "Black",
+   "groups": [
+    "Apostate",
+    "Blight",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1688,6 +2243,11 @@
    "initial_tier": "I",
    "name": "Grey Warden Warrior",
    "faction": "White/Black",
+   "groups": [
+    "Human",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1704,6 +2264,10 @@
    "initial_tier": "I",
    "name": "Ghast",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1720,6 +2284,10 @@
    "initial_tier": "I",
    "name": "Velghast",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1736,6 +2304,10 @@
    "initial_tier": "I",
    "name": "Elf Bard",
    "faction": "Blue",
+   "groups": [
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1752,6 +2324,11 @@
    "initial_tier": "I",
    "name": "Shadow Werewolf",
    "faction": "Red/Black",
+   "groups": [
+    "Werewolves",
+    "Beast",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1768,6 +2345,12 @@
    "initial_tier": "I",
    "name": "Blighted Shadow Wolf",
    "faction": "Red/Black",
+   "groups": [
+    "Werewolves",
+    "Blight",
+    "Beast",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1784,6 +2367,11 @@
    "initial_tier": "I",
    "name": "Rabid Werewolf",
    "faction": "Red/Blue",
+   "groups": [
+    "Werewolves",
+    "Beast",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1800,6 +2388,11 @@
    "initial_tier": "I",
    "name": "Werewolf Alpha",
    "faction": "Red/Blue",
+   "groups": [
+    "Werewolves",
+    "Beast",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1816,6 +2409,10 @@
    "initial_tier": "I",
    "name": "Giant Corrupted Spider",
    "faction": "Large",
+   "groups": [
+    "Blight",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -1832,6 +2429,11 @@
    "initial_tier": "IV",
    "name": "Dark Revenant",
    "faction": "Black",
+   "groups": [
+    "Exclusive",
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1845,6 +2447,10 @@
    "initial_tier": "I",
    "name": "Ogre Commander",
    "faction": "Large",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -1861,6 +2467,14 @@
    "initial_tier": "I",
    "name": "Corypheus",
    "faction": "Black",
+   "groups": [
+    "Tevinter",
+    "Apostate",
+    "Blood_Mage",
+    "Nobility",
+    "Blight",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1877,6 +2491,9 @@
    "initial_tier": "I",
    "name": "Armored Ogre",
    "faction": "Large",
+   "groups": [
+    "Blight"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -1893,6 +2510,10 @@
    "initial_tier": "I",
    "name": "Shriek Alpha",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1909,6 +2530,10 @@
    "initial_tier": "I",
    "name": "Bereskarn",
    "faction": "Large",
+   "groups": [
+    "Blight",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -1925,6 +2550,10 @@
    "initial_tier": "I",
    "name": "Shriek",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1941,6 +2570,15 @@
    "initial_tier": "I",
    "name": "Harvester Orsino",
    "faction": "Large",
+   "groups": [
+    "Blood_Mage",
+    "FreeMarches",
+    "Golem",
+    "Demon",
+    "Circle",
+    "Mage",
+    "Elves"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -1957,6 +2595,10 @@
    "initial_tier": "I",
    "name": "Arcane Horror",
    "faction": "Blue/Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1973,6 +2615,10 @@
    "initial_tier": "I",
    "name": "Hunger Demon",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -1989,6 +2635,10 @@
    "initial_tier": "I",
    "name": "Sloth Demon",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2005,6 +2655,10 @@
    "initial_tier": "I",
    "name": "Rage Demon",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2021,6 +2675,10 @@
    "initial_tier": "I",
    "name": "Shade",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2037,6 +2695,11 @@
    "initial_tier": "I",
    "name": "Wintersend Dragon",
    "faction": "Large",
+   "groups": [
+    "Exclusive",
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -2053,6 +2716,10 @@
    "initial_tier": "I",
    "name": "Wintersend Rock Wraith",
    "faction": "Large",
+   "groups": [
+    "Exclusive",
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -2069,6 +2736,15 @@
    "initial_tier": "I",
    "name": "King Alistair",
    "faction": "White/Black",
+   "groups": [
+    "Templar",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warden",
+    "Reavers",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2085,6 +2761,10 @@
    "initial_tier": "I",
    "name": "Sandal",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2101,6 +2781,12 @@
    "initial_tier": "I",
    "name": "Anora Mac Tir",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2117,6 +2803,12 @@
    "initial_tier": "I",
    "name": "King Cailan",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2133,6 +2825,11 @@
    "initial_tier": "I",
    "name": "Sten of the Beresaad",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2149,6 +2846,14 @@
    "initial_tier": "I",
    "name": "Templar Recruit Alistair",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2165,6 +2870,13 @@
    "initial_tier": "I",
    "name": "Lay Sister Leliana",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Chantry",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2181,6 +2893,10 @@
    "initial_tier": "I",
    "name": "Wintersend Halla",
    "faction": "Large",
+   "groups": [
+    "Exclusive",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -2197,6 +2913,13 @@
    "initial_tier": "I",
    "name": "Knight-Commander Greagoir",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Ferelden",
+    "Human",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2213,6 +2936,11 @@
    "initial_tier": "I",
    "name": "Wintersend Nug",
    "faction": "Red",
+   "groups": [
+    "Nug",
+    "Ferelden",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2229,6 +2957,12 @@
    "initial_tier": "I",
    "name": "Chasind Wilder",
    "faction": "Red",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2245,6 +2979,9 @@
    "initial_tier": "I",
    "name": "Halla",
    "faction": "Large",
+   "groups": [
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -2261,6 +2998,12 @@
    "initial_tier": "I",
    "name": "Chasind Scout",
    "faction": "Red",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2277,6 +3020,12 @@
    "initial_tier": "I",
    "name": "Wynne",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Human",
+    "Mage",
+    "Circle"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2293,6 +3042,13 @@
    "initial_tier": "I",
    "name": "Guard Captain Aveline",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2309,6 +3065,12 @@
    "initial_tier": "I",
    "name": "Velanna",
    "faction": "Blue",
+   "groups": [
+    "Apostate",
+    "Outlaw",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2325,6 +3087,11 @@
    "initial_tier": "I",
    "name": "Zevran",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2341,6 +3108,9 @@
    "initial_tier": "I",
    "name": "The Old One",
    "faction": "Large",
+   "groups": [
+    "Spirit"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -2357,6 +3127,12 @@
    "initial_tier": "I",
    "name": "Sigrun",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Carta",
+    "Rogue",
+    "LegionOfTheDead"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2373,6 +3149,12 @@
    "initial_tier": "I",
    "name": "Leliana",
    "faction": "White",
+   "groups": [
+    "Human",
+    "Chantry",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2389,6 +3171,10 @@
    "initial_tier": "I",
    "name": "Oghren",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2405,6 +3191,12 @@
    "initial_tier": "I",
    "name": "Zathrian",
    "faction": "Blue",
+   "groups": [
+    "Apostate",
+    "Blood_Mage",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2421,6 +3213,12 @@
    "initial_tier": "I",
    "name": "Branka",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Nobility",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2437,6 +3235,10 @@
    "initial_tier": "I",
    "name": "Ash Wraith",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2453,6 +3255,12 @@
    "initial_tier": "I",
    "name": "Fereldan Bann",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2469,6 +3277,12 @@
    "initial_tier": "I",
    "name": "Fereldan Arl",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2485,6 +3299,12 @@
    "initial_tier": "I",
    "name": "Fereldan Teyrn",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2501,6 +3321,12 @@
    "initial_tier": "IV",
    "name": "Tevinter Laetan Mage",
    "faction": "White/Blue",
+   "groups": [
+    "Tevinter",
+    "Exclusive",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2514,6 +3340,12 @@
    "initial_tier": "I",
    "name": "Slave Fenris",
    "faction": "Red/Blue",
+   "groups": [
+    "Tevinter",
+    "Outlaw",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2530,6 +3362,14 @@
    "initial_tier": "I",
    "name": "Red Lyrium Meredith",
    "faction": "Red/Black",
+   "groups": [
+    "Templar",
+    "Red_Lyrium",
+    "Human",
+    "FreeMarches",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2546,6 +3386,9 @@
    "initial_tier": "I",
    "name": "Hybris",
    "faction": "Large",
+   "groups": [
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -2562,6 +3405,13 @@
    "initial_tier": "I",
    "name": "Loghain Mac Tir",
    "faction": "White/Red",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2578,6 +3428,10 @@
    "initial_tier": "I",
    "name": "Caress",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2594,6 +3448,13 @@
    "initial_tier": "I",
    "name": "Knight-Comm. Meredith",
    "faction": "White/Red",
+   "groups": [
+    "Templar",
+    "Human",
+    "FreeMarches",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2610,6 +3471,9 @@
    "initial_tier": "I",
    "name": "Ancient Rock Wraith",
    "faction": "Large",
+   "groups": [
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -2626,6 +3490,11 @@
    "initial_tier": "I",
    "name": "Shadow Warrior",
    "faction": "Red/Blue",
+   "groups": [
+    "Exclusive",
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2642,6 +3511,13 @@
    "initial_tier": "I",
    "name": "Reanimated Leandra",
    "faction": "Black",
+   "groups": [
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2658,6 +3534,11 @@
    "initial_tier": "I",
    "name": "Pride Abomination",
    "faction": "Black",
+   "groups": [
+    "Exclusive",
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2674,6 +3555,10 @@
    "initial_tier": "I",
    "name": "Sloth Abomination",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2690,6 +3575,13 @@
    "initial_tier": "I",
    "name": "Bartrand Tethras",
    "faction": "Red",
+   "groups": [
+    "Red_Lyrium",
+    "Dwarf",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2706,6 +3598,11 @@
    "initial_tier": "I",
    "name": "Tevinter Arcane Mage",
    "faction": "White/Blue",
+   "groups": [
+    "Tevinter",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2722,6 +3619,10 @@
    "initial_tier": "I",
    "name": "Shah Wyrd",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2738,6 +3639,13 @@
    "initial_tier": "I",
    "name": "Barkspawn",
    "faction": "White/Red",
+   "groups": [
+    "Pets",
+    "Ferelden",
+    "Beast",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2754,6 +3662,10 @@
    "initial_tier": "I",
    "name": "Ancient Darkspawn",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2770,6 +3682,13 @@
    "initial_tier": "I",
    "name": "Schmooples",
    "faction": "Red/Blue",
+   "groups": [
+    "Nug",
+    "Pets",
+    "Chantry",
+    "Beast",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2786,6 +3705,10 @@
    "initial_tier": "I",
    "name": "Fluffy",
    "faction": "White/Blue",
+   "groups": [
+    "Nug",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2802,6 +3725,10 @@
    "initial_tier": "I",
    "name": "Spike",
    "faction": "Red/Black",
+   "groups": [
+    "Nug",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2818,6 +3745,11 @@
    "initial_tier": "I",
    "name": "Corrupted Nug",
    "faction": "Black",
+   "groups": [
+    "Nug",
+    "Blight",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2834,6 +3766,12 @@
    "initial_tier": "I",
    "name": "Noble Nug",
    "faction": "Red",
+   "groups": [
+    "Nug",
+    "Ferelden",
+    "Nobility",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2850,6 +3788,12 @@
    "initial_tier": "I",
    "name": "Mage Nug",
    "faction": "Blue",
+   "groups": [
+    "Nug",
+    "Beast",
+    "Mage",
+    "Circle"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2866,6 +3810,13 @@
    "initial_tier": "I",
    "name": "Leopold",
    "faction": "Large",
+   "groups": [
+    "Pets",
+    "Nobility",
+    "Beast",
+    "Orlesian",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -2882,6 +3833,11 @@
    "initial_tier": "I",
    "name": "Keeper Marethari",
    "faction": "Red/Blue",
+   "groups": [
+    "Apostate",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2898,6 +3854,11 @@
    "initial_tier": "I",
    "name": "Chasind General",
    "faction": "White/Red",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2914,6 +3875,11 @@
    "initial_tier": "I",
    "name": "Salit",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2930,6 +3896,12 @@
    "initial_tier": "I",
    "name": "Athenril",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "FreeMarches",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2946,6 +3918,11 @@
    "initial_tier": "I",
    "name": "Varterral",
    "faction": "Large",
+   "groups": [
+    "Golem",
+    "Beast",
+    "Elves"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -2962,6 +3939,11 @@
    "initial_tier": "I",
    "name": "Freemarcher",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2978,6 +3960,10 @@
    "initial_tier": "I",
    "name": "Arlathan General",
    "faction": "Blue",
+   "groups": [
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -2994,6 +3980,9 @@
    "initial_tier": "I",
    "name": "Armored Bear",
    "faction": "Large",
+   "groups": [
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -3010,6 +3999,11 @@
    "initial_tier": "I",
    "name": "Saarebas",
    "faction": "Red/Blue",
+   "groups": [
+    "Apostate",
+    "Qunari",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3026,6 +4020,13 @@
    "initial_tier": "I",
    "name": "Duke Prosper",
    "faction": "White/Red",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Outlaw",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3042,6 +4043,12 @@
    "initial_tier": "I",
    "name": "Brogan Dace",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Nobility",
+    "Reavers",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3058,6 +4065,10 @@
    "initial_tier": "I",
    "name": "Ariane",
    "faction": "Red/Blue",
+   "groups": [
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3074,6 +4085,11 @@
    "initial_tier": "I",
    "name": "King Endrin Aeducan",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Dwarf",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3090,6 +4106,11 @@
    "initial_tier": "IV",
    "name": "Common White Wisp",
    "faction": "White",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3103,6 +4124,11 @@
    "initial_tier": "IV",
    "name": "Uncommon White Wisp",
    "faction": "White",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3116,6 +4142,11 @@
    "initial_tier": "IV",
    "name": "Rare White Wisp",
    "faction": "White",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3129,6 +4160,11 @@
    "initial_tier": "IV",
    "name": "Epic White Wisp",
    "faction": "White",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3142,6 +4178,11 @@
    "initial_tier": "IV",
    "name": "Legendary White Wisp",
    "faction": "White",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3155,6 +4196,11 @@
    "initial_tier": "IV",
    "name": "Common Red Wisp",
    "faction": "Red",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3168,6 +4214,11 @@
    "initial_tier": "IV",
    "name": "Uncommon Red Wisp",
    "faction": "Red",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3181,6 +4232,11 @@
    "initial_tier": "IV",
    "name": "Rare Red Wisp",
    "faction": "Red",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3194,6 +4250,11 @@
    "initial_tier": "IV",
    "name": "Epic Red Wisp",
    "faction": "Red",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3207,6 +4268,11 @@
    "initial_tier": "IV",
    "name": "Legendary Red Wisp",
    "faction": "Red",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3220,6 +4286,11 @@
    "initial_tier": "IV",
    "name": "Common Black Wisp",
    "faction": "Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3233,6 +4304,11 @@
    "initial_tier": "IV",
    "name": "Uncommon Black Wisp",
    "faction": "Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3246,6 +4322,11 @@
    "initial_tier": "IV",
    "name": "Rare Black Wisp",
    "faction": "Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3259,6 +4340,11 @@
    "initial_tier": "IV",
    "name": "Epic Black Wisp",
    "faction": "Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3272,6 +4358,11 @@
    "initial_tier": "IV",
    "name": "Legendary Black Wisp",
    "faction": "Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3285,6 +4376,11 @@
    "initial_tier": "IV",
    "name": "Common Blue Wisp",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3298,6 +4394,11 @@
    "initial_tier": "IV",
    "name": "Uncommon Blue Wisp",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3311,6 +4412,11 @@
    "initial_tier": "IV",
    "name": "Rare Blue Wisp",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3324,6 +4430,11 @@
    "initial_tier": "IV",
    "name": "Epic Blue Wisp",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3337,6 +4448,11 @@
    "initial_tier": "IV",
    "name": "Legendary Blue Wisp",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3350,6 +4466,11 @@
    "initial_tier": "I",
    "name": "Diamond Shale",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3366,6 +4487,11 @@
    "initial_tier": "I",
    "name": "Ruby Shale",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3382,6 +4508,11 @@
    "initial_tier": "I",
    "name": "Stone Golem",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3398,6 +4529,12 @@
    "initial_tier": "I",
    "name": "Apostate Jowan",
    "faction": "Red/Black",
+   "groups": [
+    "Apostate",
+    "Blood_Mage",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3414,6 +4551,14 @@
    "initial_tier": "I",
    "name": "The Baroness",
    "faction": "Black",
+   "groups": [
+    "Apostate",
+    "Blood_Mage",
+    "Nobility",
+    "Human",
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3430,6 +4575,14 @@
    "initial_tier": "I",
    "name": "Connor Guerrin",
    "faction": "Black",
+   "groups": [
+    "Apostate",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3446,6 +4599,14 @@
    "initial_tier": "I",
    "name": "Nathaniel Howe",
    "faction": "White/Black",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Rogue",
+    "Warden"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3462,6 +4623,10 @@
    "initial_tier": "I",
    "name": "The First",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3478,6 +4643,12 @@
    "initial_tier": "I",
    "name": "Dragon Flemeth",
    "faction": "Large",
+   "groups": [
+    "Apostate",
+    "Beast",
+    "Mage",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -3494,6 +4665,12 @@
    "initial_tier": "I",
    "name": "Chevalier",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Orlesian",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3510,6 +4687,10 @@
    "initial_tier": "I",
    "name": "Ghast Archer",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3526,6 +4707,10 @@
    "initial_tier": "I",
    "name": "Ghast Brute",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3542,6 +4727,10 @@
    "initial_tier": "I",
    "name": "The Withered",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3558,6 +4747,10 @@
    "initial_tier": "I",
    "name": "The Herald",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3574,6 +4767,12 @@
    "initial_tier": "I",
    "name": "Tallis",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3590,6 +4789,11 @@
    "initial_tier": "I",
    "name": "Ben-Hassrath",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3606,6 +4810,11 @@
    "initial_tier": "I",
    "name": "Justice",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3622,6 +4831,10 @@
    "initial_tier": "I",
    "name": "The Grand Oak",
    "faction": "Large",
+   "groups": [
+    "Spirit",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -3638,6 +4851,12 @@
    "initial_tier": "I",
    "name": "Byron",
    "faction": "White",
+   "groups": [
+    "Human",
+    "Chantry",
+    "Seeker",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3654,6 +4873,13 @@
    "initial_tier": "I",
    "name": "Knight-Captain Cullen",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Ferelden",
+    "Human",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3670,6 +4896,10 @@
    "initial_tier": "I",
    "name": "Bronto",
    "faction": "Large",
+   "groups": [
+    "Dwarf",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -3686,6 +4916,11 @@
    "initial_tier": "I",
    "name": "Dalish Solis Warrior",
    "faction": "Blue",
+   "groups": [
+    "Exclusive",
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3702,6 +4937,10 @@
    "initial_tier": "I",
    "name": "Corrupted Spider Queen",
    "faction": "Large",
+   "groups": [
+    "Blight",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -3718,6 +4957,12 @@
    "initial_tier": "I",
    "name": "Paragon Caridin",
    "faction": "Large",
+   "groups": [
+    "Dwarf",
+    "Nobility",
+    "Golem",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -3734,6 +4979,11 @@
    "initial_tier": "I",
    "name": "Steel Golem",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3750,6 +5000,14 @@
    "initial_tier": "I",
    "name": "Uldred",
    "faction": "Blue/Black",
+   "groups": [
+    "Blood_Mage",
+    "Ferelden",
+    "Human",
+    "Demon",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3766,6 +5024,12 @@
    "initial_tier": "I",
    "name": "Caladrius",
    "faction": "White/Black",
+   "groups": [
+    "Tevinter",
+    "Blood_Mage",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3782,6 +5046,12 @@
    "initial_tier": "I",
    "name": "King Maric",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3798,6 +5068,11 @@
    "initial_tier": "I",
    "name": "Prince Bhelen Aeducan",
    "faction": "White/Red",
+   "groups": [
+    "Nobility",
+    "Dwarf",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3814,6 +5089,11 @@
    "initial_tier": "I",
    "name": "Broodmother",
    "faction": "Large",
+   "groups": [
+    "Dwarf",
+    "Blight",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -3830,6 +5110,13 @@
    "initial_tier": "I",
    "name": "Snug the Bronto",
    "faction": "Large",
+   "groups": [
+    "Pets",
+    "Nobility",
+    "Dwarf",
+    "Beast",
+    "Rogue"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -3846,6 +5133,11 @@
    "initial_tier": "I",
    "name": "Witherfang",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Werewolves",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3862,6 +5154,10 @@
    "initial_tier": "I",
    "name": "Velghast Chieftain",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3878,6 +5174,10 @@
    "initial_tier": "I",
    "name": "Ghast Leader",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3894,6 +5194,10 @@
    "initial_tier": "I",
    "name": "Corrupted Spiderling",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3910,6 +5214,12 @@
    "initial_tier": "I",
    "name": "Swiftrunner",
    "faction": "Red/Blue",
+   "groups": [
+    "Werewolves",
+    "Human",
+    "Beast",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3926,6 +5236,11 @@
    "initial_tier": "I",
    "name": "Dalish Lunar Warrior",
    "faction": "Blue",
+   "groups": [
+    "Exclusive",
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3942,6 +5257,12 @@
    "initial_tier": "I",
    "name": "Guardian of the Urn",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Nobility",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3958,6 +5279,12 @@
    "initial_tier": "I",
    "name": "Warden Commander Duncan",
    "faction": "White/Black",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Rogue",
+    "Warden"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3974,6 +5301,12 @@
    "initial_tier": "I",
    "name": "Grey Warden Genevieve",
    "faction": "White/Black",
+   "groups": [
+    "Human",
+    "Orlesian",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -3990,6 +5323,11 @@
    "initial_tier": "I",
    "name": "Lord Pyral Harrowmont",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Dwarf",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4006,6 +5344,12 @@
    "initial_tier": "I",
    "name": "Alamarri Warlord",
    "faction": "Red",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4022,6 +5366,11 @@
    "initial_tier": "I",
    "name": "Risen Ogre",
    "faction": "Large",
+   "groups": [
+    "Blight",
+    "Demon",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -4038,6 +5387,12 @@
    "initial_tier": "I",
    "name": "Arl Eamon Guerrin",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4054,6 +5409,13 @@
    "initial_tier": "I",
    "name": "Prince Sebastian Vael",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Chantry",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4070,6 +5432,13 @@
    "initial_tier": "I",
    "name": "Kolgrim",
    "faction": "Red/Black",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Outlaw",
+    "Warrior",
+    "Reavers"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4086,6 +5455,14 @@
    "initial_tier": "I",
    "name": "Eirik",
    "faction": "Red/Black",
+   "groups": [
+    "Apostate",
+    "Ferelden",
+    "Human",
+    "Outlaw",
+    "Mage",
+    "Reavers"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4102,6 +5479,14 @@
    "initial_tier": "I",
    "name": "Cultist Reaver",
    "faction": "Red/Black",
+   "groups": [
+    "Exclusive",
+    "Ferelden",
+    "Human",
+    "Outlaw",
+    "Warrior",
+    "Reavers"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4118,6 +5503,14 @@
    "initial_tier": "I",
    "name": "Cultist Assassin",
    "faction": "Red/Black",
+   "groups": [
+    "Exclusive",
+    "Ferelden",
+    "Human",
+    "Outlaw",
+    "Rogue",
+    "Reavers"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4134,6 +5527,14 @@
    "initial_tier": "I",
    "name": "Cultist Overseer",
    "faction": "Red/Black",
+   "groups": [
+    "Exclusive",
+    "Ferelden",
+    "Human",
+    "Outlaw",
+    "Mage",
+    "Reavers"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4150,6 +5551,15 @@
    "initial_tier": "I",
    "name": "Cultist Mage",
    "faction": "Red/Black",
+   "groups": [
+    "Exclusive",
+    "Blood_Mage",
+    "Ferelden",
+    "Human",
+    "Outlaw",
+    "Mage",
+    "Reavers"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4166,6 +5576,13 @@
    "initial_tier": "I",
    "name": "Lyrium Fenris",
    "faction": "White/Red",
+   "groups": [
+    "Tevinter",
+    "FreeMarches",
+    "Outlaw",
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4182,6 +5599,13 @@
    "initial_tier": "I",
    "name": "Danarius",
    "faction": "White/Black",
+   "groups": [
+    "Tevinter",
+    "Blood_Mage",
+    "Nobility",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4198,6 +5622,12 @@
    "initial_tier": "I",
    "name": "Slave Statue",
    "faction": "White/Black",
+   "groups": [
+    "Exclusive",
+    "Red_Lyrium",
+    "FreeMarches",
+    "Golem"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4214,6 +5644,13 @@
    "initial_tier": "I",
    "name": "Mhairi",
    "faction": "White/Black",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4230,6 +5667,9 @@
    "initial_tier": "I",
    "name": "Rift Wraith",
    "faction": "Black",
+   "groups": [
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4246,6 +5686,9 @@
    "initial_tier": "I",
    "name": "Terror",
    "faction": "Large",
+   "groups": [
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -4262,6 +5705,12 @@
    "initial_tier": "I",
    "name": "High Seeker Aldren",
    "faction": "White",
+   "groups": [
+    "Human",
+    "Chantry",
+    "Seeker",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4278,6 +5727,14 @@
    "initial_tier": "I",
    "name": "Seeker Cassandra",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Nobility",
+    "Human",
+    "Chantry",
+    "Seeker",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4294,6 +5751,13 @@
    "initial_tier": "I",
    "name": "Sten, the Arishok",
    "faction": "White/Red",
+   "groups": [
+    "Nobility",
+    "Outlaw",
+    "Qunari",
+    "Triumvirate",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4310,6 +5774,11 @@
    "initial_tier": "I",
    "name": "Captain Isabela",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4326,6 +5795,13 @@
    "initial_tier": "I",
    "name": "Sera",
    "faction": "Red",
+   "groups": [
+    "Ferelden",
+    "Inquisition",
+    "Outlaw",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4342,6 +5818,11 @@
    "initial_tier": "I",
    "name": "Ser Pounce-A-Lot",
    "faction": "Red/Blue",
+   "groups": [
+    "Pets",
+    "Beast",
+    "Warden"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4358,6 +5839,11 @@
    "initial_tier": "I",
    "name": "Crow Zevran",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4374,6 +5860,13 @@
    "initial_tier": "I",
    "name": "Sophia Dryden",
    "faction": "White/Black",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Demon",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4390,6 +5883,12 @@
    "initial_tier": "I",
    "name": "Neria",
    "faction": "Blue",
+   "groups": [
+    "Apostate",
+    "Inquisition",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4406,6 +5905,10 @@
    "initial_tier": "I",
    "name": "Gaxkang the Unbound",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4422,6 +5925,10 @@
    "initial_tier": "I",
    "name": "Sky Horror",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4438,6 +5945,12 @@
    "initial_tier": "I",
    "name": "Grey Warden Velanna",
    "faction": "Blue/Black",
+   "groups": [
+    "Apostate",
+    "Warden",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4454,6 +5967,13 @@
    "initial_tier": "I",
    "name": "Grey Warden Sigrun",
    "faction": "White/Black",
+   "groups": [
+    "Dwarf",
+    "Carta",
+    "Warden",
+    "Rogue",
+    "LegionOfTheDead"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4470,6 +5990,14 @@
    "initial_tier": "I",
    "name": "Vivienne",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "FreeMarches",
+    "Orlesian",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4486,6 +6014,11 @@
    "initial_tier": "I",
    "name": "Elite Harlequin",
    "faction": "White",
+   "groups": [
+    "Human",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4502,6 +6035,12 @@
    "initial_tier": "I",
    "name": "Red Nugly Sweater",
    "faction": "Red",
+   "groups": [
+    "Exclusive",
+    "Nug",
+    "Outlaw",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4518,6 +6057,12 @@
    "initial_tier": "I",
    "name": "Blue Nugly Sweater",
    "faction": "Blue",
+   "groups": [
+    "Exclusive",
+    "Nug",
+    "Spirit",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4534,6 +6079,12 @@
    "initial_tier": "I",
    "name": "Black Nugly Sweater",
    "faction": "Black",
+   "groups": [
+    "Exclusive",
+    "Nug",
+    "Blight",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4550,6 +6101,12 @@
    "initial_tier": "I",
    "name": "White Nugly Sweater",
    "faction": "White",
+   "groups": [
+    "Exclusive",
+    "Nug",
+    "Ferelden",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4566,6 +6123,9 @@
    "initial_tier": "I",
    "name": "Silver Halla",
    "faction": "Large",
+   "groups": [
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -4582,6 +6142,9 @@
    "initial_tier": "I",
    "name": "Phoenix",
    "faction": "Large",
+   "groups": [
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -4598,6 +6161,10 @@
    "initial_tier": "I",
    "name": "Tusket",
    "faction": "Red",
+   "groups": [
+    "Nug",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4614,6 +6181,9 @@
    "initial_tier": "I",
    "name": "Fennec",
    "faction": "Red",
+   "groups": [
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4630,6 +6200,10 @@
    "initial_tier": "I",
    "name": "Spirit of Hope",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4646,6 +6220,13 @@
    "initial_tier": "I",
    "name": "Felix",
    "faction": "Blue/Black",
+   "groups": [
+    "Tevinter",
+    "Nobility",
+    "Human",
+    "Blight",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4662,6 +6243,12 @@
    "initial_tier": "I",
    "name": "Maevaris",
    "faction": "White/Blue",
+   "groups": [
+    "Tevinter",
+    "Nobility",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4678,6 +6265,13 @@
    "initial_tier": "I",
    "name": "Aurelian Titus",
    "faction": "White/Black",
+   "groups": [
+    "Tevinter",
+    "Blood_Mage",
+    "Nobility",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4694,6 +6288,13 @@
    "initial_tier": "I",
    "name": "Imperial Archon",
    "faction": "White/Black",
+   "groups": [
+    "Tevinter",
+    "Blood_Mage",
+    "Nobility",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4710,6 +6311,11 @@
    "initial_tier": "I",
    "name": "Magister Pavus",
    "faction": "White",
+   "groups": [
+    "Tevinter",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4726,6 +6332,12 @@
    "initial_tier": "I",
    "name": "Solas",
    "faction": "White/Blue",
+   "groups": [
+    "Apostate",
+    "Inquisition",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4742,6 +6354,13 @@
    "initial_tier": "I",
    "name": "Dorian",
    "faction": "White/Blue",
+   "groups": [
+    "Tevinter",
+    "Inquisition",
+    "Human",
+    "Mage",
+    "Circle"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4758,6 +6377,13 @@
    "initial_tier": "I",
    "name": "Gereon Alexius",
    "faction": "White/Black",
+   "groups": [
+    "Tevinter",
+    "Venatori",
+    "Nobility",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4774,6 +6400,13 @@
    "initial_tier": "I",
    "name": "Advisor Cullen",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Ferelden",
+    "Inquisition",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4790,6 +6423,13 @@
    "initial_tier": "I",
    "name": "Cillian",
    "faction": "White/Blue",
+   "groups": [
+    "Apostate",
+    "Inquisition",
+    "Warrior",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4806,6 +6446,10 @@
    "initial_tier": "I",
    "name": "Abelas",
    "faction": "Blue",
+   "groups": [
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4822,6 +6466,10 @@
    "initial_tier": "I",
    "name": "Sentinel Spellbinder",
    "faction": "Blue",
+   "groups": [
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4838,6 +6486,10 @@
    "initial_tier": "I",
    "name": "Sentinel Shadow",
    "faction": "Blue",
+   "groups": [
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4854,6 +6506,10 @@
    "initial_tier": "I",
    "name": "Sentinel Archer",
    "faction": "Blue",
+   "groups": [
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4870,6 +6526,12 @@
    "initial_tier": "I",
    "name": "Thornton",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "FreeMarches",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4886,6 +6548,11 @@
    "initial_tier": "I",
    "name": "Rasaan",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4902,6 +6569,13 @@
    "initial_tier": "I",
    "name": "Behemoth",
    "faction": "Large",
+   "groups": [
+    "Red_Lyrium",
+    "Templar",
+    "Human",
+    "Beast",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -4918,6 +6592,12 @@
    "initial_tier": "I",
    "name": "Empress Celene",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4934,6 +6614,12 @@
    "initial_tier": "I",
    "name": "Briala",
    "faction": "White/Red",
+   "groups": [
+    "Nobility",
+    "Orlesian",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4950,6 +6636,12 @@
    "initial_tier": "I",
    "name": "Josephine",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Nobility",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4966,6 +6658,13 @@
    "initial_tier": "I",
    "name": "Assassin Florianne",
    "faction": "Red/Black",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Outlaw",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4982,6 +6681,12 @@
    "initial_tier": "I",
    "name": "Florianne",
    "faction": "White/Red",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -4998,6 +6703,13 @@
    "initial_tier": "I",
    "name": "Warden Commander Clarel",
    "faction": "Blue/Black",
+   "groups": [
+    "Blood_Mage",
+    "Human",
+    "Orlesian",
+    "Warden",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5014,6 +6726,14 @@
    "initial_tier": "I",
    "name": "Lord Erimond",
    "faction": "Blue/Black",
+   "groups": [
+    "Tevinter",
+    "Blood_Mage",
+    "Venatori",
+    "Nobility",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5030,6 +6750,15 @@
    "initial_tier": "I",
    "name": "Blackwall",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Orlesian",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5046,6 +6775,12 @@
    "initial_tier": "I",
    "name": "Ser Stroud",
    "faction": "White/Black",
+   "groups": [
+    "Human",
+    "Orlesian",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5062,6 +6797,12 @@
    "initial_tier": "I",
    "name": "Maddox",
    "faction": "Blue",
+   "groups": [
+    "Human",
+    "FreeMarches",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5078,6 +6819,12 @@
    "initial_tier": "I",
    "name": "Templar Samson",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Human",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5094,6 +6841,11 @@
    "initial_tier": "I",
    "name": "Chocolate Nug",
    "faction": "Black",
+   "groups": [
+    "Exclusive",
+    "Nug",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5110,6 +6862,10 @@
    "initial_tier": "I",
    "name": "Avvar Goat Legendary",
    "faction": "Red",
+   "groups": [
+    "Avvar",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5126,6 +6882,11 @@
    "initial_tier": "I",
    "name": "Avvar Goat Epic",
    "faction": "Red",
+   "groups": [
+    "Exclusive",
+    "Avvar",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5142,6 +6903,11 @@
    "initial_tier": "I",
    "name": "Avvar Goat Rare",
    "faction": "Red",
+   "groups": [
+    "Exclusive",
+    "Avvar",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5158,6 +6924,11 @@
    "initial_tier": "I",
    "name": "Avvar Goat Uncommon",
    "faction": "Red",
+   "groups": [
+    "Exclusive",
+    "Avvar",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5174,6 +6945,11 @@
    "initial_tier": "I",
    "name": "Avvar Goat Common",
    "faction": "Red",
+   "groups": [
+    "Exclusive",
+    "Avvar",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5190,6 +6966,11 @@
    "initial_tier": "IV",
    "name": "Legendary Giant Wisp",
    "faction": "Large",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5203,6 +6984,11 @@
    "initial_tier": "IV",
    "name": "Epic Giant Wisp",
    "faction": "Large",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5216,6 +7002,11 @@
    "initial_tier": "IV",
    "name": "Rare Giant Wisp",
    "faction": "Large",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5229,6 +7020,11 @@
    "initial_tier": "IV",
    "name": "Uncommon Giant Wisp",
    "faction": "Large",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5242,6 +7038,11 @@
    "initial_tier": "IV",
    "name": "Common Giant Wisp",
    "faction": "Large",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5255,6 +7056,13 @@
    "initial_tier": "I",
    "name": "Red Lyrium Samson",
    "faction": "Red/Black",
+   "groups": [
+    "Red_Lyrium",
+    "Templar",
+    "Human",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5271,6 +7079,13 @@
    "initial_tier": "I",
    "name": "Samson",
    "faction": "Red/Black",
+   "groups": [
+    "Red_Lyrium",
+    "Templar",
+    "Human",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5287,6 +7102,12 @@
    "initial_tier": "I",
    "name": "Red Templar Archer",
    "faction": "Red/Black",
+   "groups": [
+    "Red_Lyrium",
+    "Templar",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5303,6 +7124,11 @@
    "initial_tier": "I",
    "name": "Noble Spirit of Justinia",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5319,6 +7145,11 @@
    "initial_tier": "I",
    "name": "Spirit of Justinia",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5335,6 +7166,10 @@
    "initial_tier": "I",
    "name": "Noble Spirit of Hope",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5351,6 +7186,12 @@
    "initial_tier": "I",
    "name": "Cole",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Inquisition",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5367,6 +7208,9 @@
    "initial_tier": "I",
    "name": "Nightmare Aspect",
    "faction": "Large",
+   "groups": [
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5383,6 +7227,11 @@
    "initial_tier": "I",
    "name": "Fereldan Frostback",
    "faction": "Large",
+   "groups": [
+    "Ferelden",
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5399,6 +7248,14 @@
    "initial_tier": "I",
    "name": "Iron Bull",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Outlaw",
+    "Bulls_Chargers",
+    "Qunari",
+    "Reavers",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5415,6 +7272,9 @@
    "initial_tier": "I",
    "name": "Giant",
    "faction": "Large",
+   "groups": [
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5431,6 +7291,10 @@
    "initial_tier": "I",
    "name": "Red Lyrium Giant",
    "faction": "Large",
+   "groups": [
+    "Red_Lyrium",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5447,6 +7311,12 @@
    "initial_tier": "I",
    "name": "Horror",
    "faction": "Red/Black",
+   "groups": [
+    "Red_Lyrium",
+    "Templar",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5463,6 +7333,13 @@
    "initial_tier": "I",
    "name": "Rion",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "FreeMarches",
+    "Mage",
+    "Circle"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5479,6 +7356,9 @@
    "initial_tier": "I",
    "name": "Despair Demon",
    "faction": "Black",
+   "groups": [
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5495,6 +7375,13 @@
    "initial_tier": "I",
    "name": "Advisor Morrigan",
    "faction": "Red/Blue",
+   "groups": [
+    "Apostate",
+    "Inquisition",
+    "Human",
+    "Orlesian",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5511,6 +7398,12 @@
    "initial_tier": "I",
    "name": "Snowy Wyvern",
    "faction": "Large",
+   "groups": [
+    "Nobility",
+    "Beast",
+    "Orlesian",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5527,6 +7420,11 @@
    "initial_tier": "I",
    "name": "Vinsomer",
    "faction": "Large",
+   "groups": [
+    "Ferelden",
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5543,6 +7441,12 @@
    "initial_tier": "I",
    "name": "Katari",
    "faction": "Red",
+   "groups": [
+    "Inquisition",
+    "Outlaw",
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5559,6 +7463,11 @@
    "initial_tier": "I",
    "name": "Beresaad Warrior",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5575,6 +7484,16 @@
    "initial_tier": "I",
    "name": "The Elder One",
    "faction": "Black",
+   "groups": [
+    "Tevinter",
+    "Apostate",
+    "Red_Lyrium",
+    "Blood_Mage",
+    "Venatori",
+    "Nobility",
+    "Blight",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5591,6 +7510,12 @@
    "initial_tier": "I",
    "name": "Calpernia",
    "faction": "Blue/Black",
+   "groups": [
+    "Tevinter",
+    "Venatori",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5607,6 +7532,13 @@
    "initial_tier": "I",
    "name": "Gurd Harofsen",
    "faction": "Red",
+   "groups": [
+    "Jaws_of_Hakkon",
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5623,6 +7555,12 @@
    "initial_tier": "I",
    "name": "Thane Svarah Sun-Hair",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5639,6 +7577,12 @@
    "initial_tier": "I",
    "name": "Avvar Barbarian",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5655,6 +7599,11 @@
    "initial_tier": "I",
    "name": "Dagna",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Dwarf",
+    "Circle"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5671,6 +7620,11 @@
    "initial_tier": "I",
    "name": "Scout Harding",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Dwarf",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5687,6 +7641,11 @@
    "initial_tier": "I",
    "name": "Amethyst Shale",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5703,6 +7662,11 @@
    "initial_tier": "I",
    "name": "Sandy Howler",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Orlesian",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5719,6 +7683,13 @@
    "initial_tier": "I",
    "name": "Sky Watcher",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5735,6 +7706,10 @@
    "initial_tier": "I",
    "name": "Lord Woolsley",
    "faction": "Red/Black",
+   "groups": [
+    "Beast",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5751,6 +7726,13 @@
    "initial_tier": "I",
    "name": "The Last Inquisitor",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Chantry",
+    "Seeker",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5767,6 +7749,13 @@
    "initial_tier": "I",
    "name": "Professor Bram Kenric",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Chantry"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5783,6 +7772,11 @@
    "initial_tier": "I",
    "name": "The Mother",
    "faction": "Large",
+   "groups": [
+    "Blight",
+    "Beast",
+    "Mage"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5799,6 +7793,11 @@
    "initial_tier": "I",
    "name": "The Lost",
    "faction": "Blue/Black",
+   "groups": [
+    "Apostate",
+    "Blight",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5815,6 +7814,10 @@
    "initial_tier": "I",
    "name": "The Seeker",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5831,6 +7834,14 @@
    "initial_tier": "I",
    "name": "Krem",
    "faction": "White/Red",
+   "groups": [
+    "Tevinter",
+    "Inquisition",
+    "Human",
+    "Outlaw",
+    "Bulls_Chargers",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5847,6 +7858,12 @@
    "initial_tier": "I",
    "name": "Dalish",
    "faction": "Red/Blue",
+   "groups": [
+    "Inquisition",
+    "Bulls_Chargers",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5863,6 +7880,12 @@
    "initial_tier": "I",
    "name": "Gatt",
    "faction": "Red",
+   "groups": [
+    "Bulls_Chargers",
+    "Qunari",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5879,6 +7902,13 @@
    "initial_tier": "I",
    "name": "Hissrad",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Bulls_Chargers",
+    "Qunari",
+    "Reavers",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5895,6 +7925,10 @@
    "initial_tier": "I",
    "name": "Greater Mistral",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5911,6 +7945,12 @@
    "initial_tier": "I",
    "name": "Tamar",
    "faction": "Red",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Warrior",
+    "Reavers"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5927,6 +7967,11 @@
    "initial_tier": "I",
    "name": "Apostate Solas",
    "faction": "Red/Blue",
+   "groups": [
+    "Apostate",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5943,6 +7988,10 @@
    "initial_tier": "I",
    "name": "Golden Halla",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Elves"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -5959,6 +8008,10 @@
    "initial_tier": "I",
    "name": "Bianca",
    "faction": "White/Red",
+   "groups": [
+    "Dwarf",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5975,6 +8028,12 @@
    "initial_tier": "I",
    "name": "Korbin",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Dwarf",
+    "Warrior",
+    "LegionOfTheDead"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -5991,6 +8050,11 @@
    "initial_tier": "I",
    "name": "Emerald Shale",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6007,6 +8071,11 @@
    "initial_tier": "I",
    "name": "Ketojan",
    "faction": "Red/Blue",
+   "groups": [
+    "Apostate",
+    "Qunari",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6023,6 +8092,11 @@
    "initial_tier": "I",
    "name": "Arvaarad",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6039,6 +8113,14 @@
    "initial_tier": "I",
    "name": "Dragon Morrigan",
    "faction": "Large",
+   "groups": [
+    "Apostate",
+    "Inquisition",
+    "Beast",
+    "Orlesian",
+    "Mage",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -6055,6 +8137,9 @@
    "initial_tier": "I",
    "name": "Great Bear",
    "faction": "Large",
+   "groups": [
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -6071,6 +8156,11 @@
    "initial_tier": "I",
    "name": "Hall",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6087,6 +8177,13 @@
    "initial_tier": "I",
    "name": "Riordan",
    "faction": "White/Black",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Orlesian",
+    "Warden",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6103,6 +8200,13 @@
    "initial_tier": "I",
    "name": "First Enchanter Irving",
    "faction": "Blue",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Chantry",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6119,6 +8223,13 @@
    "initial_tier": "I",
    "name": "Arl Rendon Howe",
    "faction": "White/Red",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6135,6 +8246,14 @@
    "initial_tier": "I",
    "name": "Knight-Commander Delrin Barris",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6151,6 +8270,15 @@
    "initial_tier": "I",
    "name": "Ser Belinda Darrow",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Inquisition",
+    "Nobility",
+    "Human",
+    "Chantry",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6167,6 +8295,12 @@
    "initial_tier": "I",
    "name": "Gaspard de Chalons",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Orlesian",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6183,6 +8317,12 @@
    "initial_tier": "I",
    "name": "Marshal Proulx",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Orlesian",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6199,6 +8339,13 @@
    "initial_tier": "I",
    "name": "Michel de Chevin",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Orlesian",
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6215,6 +8362,10 @@
    "initial_tier": "I",
    "name": "Northern Hunter",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -6231,6 +8382,12 @@
    "initial_tier": "I",
    "name": "Arigena",
    "faction": "White/Red",
+   "groups": [
+    "Nobility",
+    "Qunari",
+    "Rogue",
+    "Triumvirate"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6247,6 +8404,12 @@
    "initial_tier": "I",
    "name": "Jarvia",
    "faction": "Red",
+   "groups": [
+    "Dwarf",
+    "Carta",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6263,6 +8426,12 @@
    "initial_tier": "I",
    "name": "Beraht",
    "faction": "Red",
+   "groups": [
+    "Dwarf",
+    "Carta",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6279,6 +8448,14 @@
    "initial_tier": "I",
    "name": "Dragon of the Elder One",
    "faction": "Large",
+   "groups": [
+    "Pets",
+    "Red_Lyrium",
+    "Venatori",
+    "Blight",
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -6295,6 +8472,12 @@
    "initial_tier": "I",
    "name": "Macrinus",
    "faction": "Blue/Black",
+   "groups": [
+    "Tevinter",
+    "Venatori",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6311,6 +8494,13 @@
    "initial_tier": "I",
    "name": "Crassius Servis",
    "faction": "Blue/Black",
+   "groups": [
+    "Tevinter",
+    "Inquisition",
+    "Venatori",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6327,6 +8517,13 @@
    "initial_tier": "I",
    "name": "Necromancer Dorian",
    "faction": "White/Black",
+   "groups": [
+    "Tevinter",
+    "Inquisition",
+    "Human",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6343,6 +8540,11 @@
    "initial_tier": "I",
    "name": "Sidony",
    "faction": "Blue/Black",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6359,6 +8561,13 @@
    "initial_tier": "I",
    "name": "Hakkon Wintersbreath",
    "faction": "Large",
+   "groups": [
+    "Spirit",
+    "Jaws_of_Hakkon",
+    "Avvar",
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -6375,6 +8584,13 @@
    "initial_tier": "I",
    "name": "Hakkonite Archer",
    "faction": "Red",
+   "groups": [
+    "Jaws_of_Hakkon",
+    "Human",
+    "Avvar",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6391,6 +8607,13 @@
    "initial_tier": "I",
    "name": "Hakkonite Defender",
    "faction": "Red",
+   "groups": [
+    "Jaws_of_Hakkon",
+    "Human",
+    "Avvar",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6407,6 +8630,14 @@
    "initial_tier": "I",
    "name": "Advisor Leliana",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Ferelden",
+    "Human",
+    "Chantry",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6423,6 +8654,11 @@
    "initial_tier": "I",
    "name": "Chantry Warrior",
    "faction": "White",
+   "groups": [
+    "Human",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6439,6 +8675,14 @@
    "initial_tier": "I",
    "name": "Lambert van Reeves",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Human",
+    "Chantry",
+    "Seeker",
+    "Orlesian",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6455,6 +8699,12 @@
    "initial_tier": "I",
    "name": "Lucius Corin",
    "faction": "White/Red",
+   "groups": [
+    "Templar",
+    "Human",
+    "Seeker",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6471,6 +8721,10 @@
    "initial_tier": "I",
    "name": "Highland Ravager",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -6487,6 +8741,10 @@
    "initial_tier": "I",
    "name": "Loyal Betyar, Dragonslayer",
    "faction": "Red",
+   "groups": [
+    "Pets",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6503,6 +8761,10 @@
    "initial_tier": "I",
    "name": "Sha-Brytol Revered Defender",
    "faction": "Red/Black",
+   "groups": [
+    "Dwarf",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6519,6 +8781,12 @@
    "initial_tier": "I",
    "name": "Ariqun",
    "faction": "White/Red",
+   "groups": [
+    "Nobility",
+    "Qunari",
+    "Triumvirate",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6535,6 +8803,11 @@
    "initial_tier": "I",
    "name": "Tamassran",
    "faction": "White/Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6551,6 +8824,10 @@
    "initial_tier": "I",
    "name": "Snoufleur",
    "faction": "White/Red",
+   "groups": [
+    "Beast",
+    "Orlesian"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6567,6 +8844,15 @@
    "initial_tier": "I",
    "name": "Santa Blackwall",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Orlesian",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6583,6 +8869,13 @@
    "initial_tier": "I",
    "name": "Elfie Sera",
    "faction": "White/Red",
+   "groups": [
+    "Ferelden",
+    "Inquisition",
+    "Outlaw",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6599,6 +8892,15 @@
    "initial_tier": "I",
    "name": "Divine Vivienne",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Chantry",
+    "FreeMarches",
+    "Orlesian",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6615,6 +8917,13 @@
    "initial_tier": "I",
    "name": "Templar Knight-Corporal",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Human",
+    "Chantry",
+    "Orlesian",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6631,6 +8940,10 @@
    "initial_tier": "I",
    "name": "The Messenger",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6647,6 +8960,12 @@
    "initial_tier": "I",
    "name": "Archdemon Urthemiel",
    "faction": "Large",
+   "groups": [
+    "Tevinter",
+    "Blight",
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -6663,6 +8982,11 @@
    "initial_tier": "I",
    "name": "Argent",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6679,6 +9003,12 @@
    "initial_tier": "I",
    "name": "Luka",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Dwarf",
+    "Carta",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6695,6 +9025,11 @@
    "initial_tier": "I",
    "name": "Ataashi",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Qunari",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -6711,6 +9046,11 @@
    "initial_tier": "I",
    "name": "Viddasala",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6727,6 +9067,12 @@
    "initial_tier": "I",
    "name": "Movran the Under",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6743,6 +9089,12 @@
    "initial_tier": "I",
    "name": "Hand of Korth",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6759,6 +9111,13 @@
    "initial_tier": "I",
    "name": "Artificer Varric",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Dwarf",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6775,6 +9134,11 @@
    "initial_tier": "I",
    "name": "Pala",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Dwarf",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6791,6 +9155,12 @@
    "initial_tier": "I",
    "name": "Abyssal High Dragon",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Orlesian",
+    "Reavers",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -6807,6 +9177,12 @@
    "initial_tier": "I",
    "name": "Professor Frederic",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Orlesian",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6823,6 +9199,12 @@
    "initial_tier": "I",
    "name": "Regalyan D'Marcall",
    "faction": "Blue",
+   "groups": [
+    "Human",
+    "Orlesian",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6839,6 +9221,13 @@
    "initial_tier": "I",
    "name": "Young Cassandra",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Chantry",
+    "Seeker",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6855,6 +9244,11 @@
    "initial_tier": "IV",
    "name": "Rare White Blue Wisp",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6868,6 +9262,11 @@
    "initial_tier": "IV",
    "name": "Epic White Blue Wisp",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6881,6 +9280,11 @@
    "initial_tier": "IV",
    "name": "Legendary White Blue Wisp",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6894,6 +9298,11 @@
    "initial_tier": "IV",
    "name": "Rare Blue Red Wisp",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6907,6 +9316,11 @@
    "initial_tier": "IV",
    "name": "Epic Blue Red Wisp",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6920,6 +9334,11 @@
    "initial_tier": "IV",
    "name": "Legendary Blue Red Wisp",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6933,6 +9352,11 @@
    "initial_tier": "IV",
    "name": "Rare Blue Black Wisp",
    "faction": "Blue/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6946,6 +9370,11 @@
    "initial_tier": "IV",
    "name": "Epic Blue Black Wisp",
    "faction": "Blue/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6959,6 +9388,11 @@
    "initial_tier": "IV",
    "name": "Legendary Blue Black Wisp",
    "faction": "Blue/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6972,6 +9406,11 @@
    "initial_tier": "IV",
    "name": "Rare White Red Wisp",
    "faction": "White/Red",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6985,6 +9424,11 @@
    "initial_tier": "IV",
    "name": "Epic White Red Wisp",
    "faction": "White/Red",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -6998,6 +9442,11 @@
    "initial_tier": "IV",
    "name": "Legendary White Red Wisp",
    "faction": "White/Red",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7011,6 +9460,11 @@
    "initial_tier": "IV",
    "name": "Rare White Black Wisp",
    "faction": "White/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7024,6 +9478,11 @@
    "initial_tier": "IV",
    "name": "Epic White Black Wisp",
    "faction": "White/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7037,6 +9496,11 @@
    "initial_tier": "IV",
    "name": "Legendary White Black Wisp",
    "faction": "White/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7050,6 +9514,11 @@
    "initial_tier": "IV",
    "name": "Rare Red Black Wisp",
    "faction": "Red/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7063,6 +9532,11 @@
    "initial_tier": "IV",
    "name": "Epic Red Black Wisp",
    "faction": "Red/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7076,6 +9550,11 @@
    "initial_tier": "IV",
    "name": "Legendary Red Black Wisp",
    "faction": "Red/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7089,6 +9568,11 @@
    "initial_tier": "IV",
    "name": "Mythic Red Wisp",
    "faction": "Red",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7102,6 +9586,11 @@
    "initial_tier": "IV",
    "name": "Mythic Blue Wisp",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7115,6 +9604,11 @@
    "initial_tier": "IV",
    "name": "Mythic Black Wisp",
    "faction": "Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7128,6 +9622,11 @@
    "initial_tier": "IV",
    "name": "Mythic White Wisp",
    "faction": "White",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7141,6 +9640,11 @@
    "initial_tier": "I",
    "name": "Saarath",
    "faction": "Large",
+   "groups": [
+    "Apostate",
+    "Qunari",
+    "Mage"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -7157,6 +9661,12 @@
    "initial_tier": "I",
    "name": "Qunari Shock Trooper",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Reavers",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7173,6 +9683,12 @@
    "initial_tier": "I",
    "name": "Gordian",
    "faction": "White/Blue",
+   "groups": [
+    "Venatori",
+    "Human",
+    "Orlesian",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7189,6 +9705,11 @@
    "initial_tier": "I",
    "name": "Maliphant",
    "faction": "White",
+   "groups": [
+    "Human",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7205,6 +9726,12 @@
    "initial_tier": "I",
    "name": "Spirit of Cole",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Inquisition",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7221,6 +9748,10 @@
    "initial_tier": "I",
    "name": "Spirit of Faith",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7237,6 +9768,12 @@
    "initial_tier": "I",
    "name": "Nuggalope",
    "faction": "Large",
+   "groups": [
+    "Nug",
+    "Inquisition",
+    "Beast",
+    "Orlesian"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -7253,6 +9790,12 @@
    "initial_tier": "I",
    "name": "Guardsman Donnic",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7269,6 +9812,11 @@
    "initial_tier": "I",
    "name": "Jerrik Dace",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Dwarf",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7285,6 +9833,11 @@
    "initial_tier": "I",
    "name": "Amber Shale",
    "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7301,6 +9854,12 @@
    "initial_tier": "I",
    "name": "Venatori Gladiator",
    "faction": "Red/Black",
+   "groups": [
+    "Tevinter",
+    "Venatori",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7317,6 +9876,11 @@
    "initial_tier": "I",
    "name": "Erasthenes",
    "faction": "Blue/Black",
+   "groups": [
+    "Tevinter",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7333,6 +9897,13 @@
    "initial_tier": "I",
    "name": "Red Jenny Sera",
    "faction": "White/Red",
+   "groups": [
+    "Ferelden",
+    "Inquisition",
+    "Outlaw",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7349,6 +9920,14 @@
    "initial_tier": "I",
    "name": "Plaideweave Vivienne",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "FreeMarches",
+    "Orlesian",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7365,6 +9944,13 @@
    "initial_tier": "I",
    "name": "Plaideweave Dorian",
    "faction": "White/Blue",
+   "groups": [
+    "Tevinter",
+    "Inquisition",
+    "Human",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7381,6 +9967,11 @@
    "initial_tier": "I",
    "name": "Ser Jory",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7397,6 +9988,12 @@
    "initial_tier": "I",
    "name": "Daveth",
    "faction": "Black",
+   "groups": [
+    "Ferelden",
+    "Blight",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7413,6 +10010,11 @@
    "initial_tier": "I",
    "name": "Renn",
    "faction": "White/Red",
+   "groups": [
+    "Dwarf",
+    "Warrior",
+    "LegionOfTheDead"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7429,6 +10031,11 @@
    "initial_tier": "I",
    "name": "Nug King",
    "faction": "White/Red",
+   "groups": [
+    "Nug",
+    "Nobility",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7445,6 +10052,12 @@
    "initial_tier": "I",
    "name": "Grey Warden Knight",
    "faction": "Large",
+   "groups": [
+    "Human",
+    "Beast",
+    "Warden",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -7461,6 +10074,13 @@
    "initial_tier": "I",
    "name": "Grey Warden Fiona",
    "faction": "Blue/Black",
+   "groups": [
+    "Orlesian",
+    "Warden",
+    "Circle",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7477,6 +10097,11 @@
    "initial_tier": "I",
    "name": "Cretahl",
    "faction": "Large",
+   "groups": [
+    "Pets",
+    "Dwarf",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -7493,6 +10118,10 @@
    "initial_tier": "I",
    "name": "Sha-Brytol Earthshaker",
    "faction": "Red/Black",
+   "groups": [
+    "Dwarf",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7509,6 +10138,13 @@
    "initial_tier": "I",
    "name": "Commander Duhaime",
    "faction": "Red/Black",
+   "groups": [
+    "Red_Lyrium",
+    "Venatori",
+    "Human",
+    "Orlesian",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7525,6 +10161,12 @@
    "initial_tier": "I",
    "name": "Venatori Marksman",
    "faction": "Red/Black",
+   "groups": [
+    "Tevinter",
+    "Venatori",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7541,6 +10183,10 @@
    "initial_tier": "I",
    "name": "Fen'Harel",
    "faction": "White/Blue",
+   "groups": [
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7557,6 +10203,11 @@
    "initial_tier": "I",
    "name": "Maryden",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7573,6 +10224,10 @@
    "initial_tier": "I",
    "name": "Golden Nug",
    "faction": "Red",
+   "groups": [
+    "Nug",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7589,6 +10244,10 @@
    "initial_tier": "I",
    "name": "Snowball",
    "faction": "Large",
+   "groups": [
+    "Blight",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -7605,6 +10264,11 @@
    "initial_tier": "I",
    "name": "Cahir",
    "faction": "Red",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7621,6 +10285,10 @@
    "initial_tier": "I",
    "name": "Dragonling",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Dragon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7637,6 +10305,14 @@
    "initial_tier": "I",
    "name": "Divine Leliana",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Ferelden",
+    "Human",
+    "Chantry",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7653,6 +10329,12 @@
    "initial_tier": "I",
    "name": "Marjolaine",
    "faction": "White/Red",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7669,6 +10351,12 @@
    "initial_tier": "I",
    "name": "Red Templar Shadow",
    "faction": "Red/Black",
+   "groups": [
+    "Red_Lyrium",
+    "Templar",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7685,6 +10373,12 @@
    "initial_tier": "I",
    "name": "Red Templar Guard",
    "faction": "Red/Black",
+   "groups": [
+    "Red_Lyrium",
+    "Templar",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7701,6 +10395,15 @@
    "initial_tier": "I",
    "name": "Knight-Enchanter Vivienne",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Chantry",
+    "FreeMarches",
+    "Orlesian",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7717,6 +10420,12 @@
    "initial_tier": "I",
    "name": "Knight-Enchanter Helaine",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Chantry",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7733,6 +10442,10 @@
    "initial_tier": "I",
    "name": "Shaper Valta",
    "faction": "White/Red",
+   "groups": [
+    "Dwarf",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7749,6 +10462,10 @@
    "initial_tier": "I",
    "name": "Sha-Brytol Bolter",
    "faction": "Red/Black",
+   "groups": [
+    "Dwarf",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7765,6 +10482,12 @@
    "initial_tier": "I",
    "name": "Paragon Branka",
    "faction": "White/Red",
+   "groups": [
+    "Dwarf",
+    "Nobility",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7781,6 +10504,10 @@
    "initial_tier": "I",
    "name": "Deepstalker Matriarch",
    "faction": "White/Red",
+   "groups": [
+    "Nobility",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7797,6 +10524,11 @@
    "initial_tier": "I",
    "name": "Gamordan Stormrider",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Orlesian",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -7813,6 +10545,11 @@
    "initial_tier": "I",
    "name": "Dworkin Glavonak",
    "faction": "White/Red",
+   "groups": [
+    "Dwarf",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7829,6 +10566,14 @@
    "initial_tier": "I",
    "name": "Battlemaster Garrett Hawke",
    "faction": "White/Red",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7845,6 +10590,14 @@
    "initial_tier": "I",
    "name": "Battlemaster Marian Hawke",
    "faction": "White/Red",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7861,6 +10614,14 @@
    "initial_tier": "I",
    "name": "Red Lyrium Iron Bull",
    "faction": "Red/Black",
+   "groups": [
+    "Red_Lyrium",
+    "Outlaw",
+    "Bulls_Chargers",
+    "Qunari",
+    "Reavers",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7877,6 +10638,12 @@
    "initial_tier": "I",
    "name": "Noble King Cailan",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7893,6 +10660,12 @@
    "initial_tier": "I",
    "name": "ZITHER!",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Orlesian",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7909,6 +10682,11 @@
    "initial_tier": "I",
    "name": "Lily",
    "faction": "White/Red",
+   "groups": [
+    "Human",
+    "Chantry",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7925,6 +10703,12 @@
    "initial_tier": "I",
    "name": "Duke Cyril",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Orlesian",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7941,6 +10725,14 @@
    "initial_tier": "I",
    "name": "Divine Cassandra",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Nobility",
+    "Human",
+    "Chantry",
+    "Seeker",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7957,6 +10749,12 @@
    "initial_tier": "I",
    "name": "Brother Genitivi",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7973,6 +10771,12 @@
    "initial_tier": "I",
    "name": "Blighted Oghren",
    "faction": "White/Black",
+   "groups": [
+    "Dwarf",
+    "Blight",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -7989,6 +10793,12 @@
    "initial_tier": "I",
    "name": "Larius",
    "faction": "White/Black",
+   "groups": [
+    "Human",
+    "Blight",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8005,6 +10815,12 @@
    "initial_tier": "I",
    "name": "Titan Heart Guardian",
    "faction": "Large",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Beast",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8021,6 +10837,10 @@
    "initial_tier": "I",
    "name": "Sha-Brytol Stalker",
    "faction": "Red/Black",
+   "groups": [
+    "Dwarf",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8037,6 +10857,13 @@
    "initial_tier": "I",
    "name": "Viscount Varric",
    "faction": "White/Red",
+   "groups": [
+    "Nobility",
+    "Dwarf",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8053,6 +10880,11 @@
    "initial_tier": "I",
    "name": "Piotin Aeducan",
    "faction": "White/Red",
+   "groups": [
+    "Nobility",
+    "Dwarf",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8069,6 +10901,10 @@
    "initial_tier": "I",
    "name": "Hunter Shade Dracolisk",
    "faction": "Black",
+   "groups": [
+    "Exclusive",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8085,6 +10921,10 @@
    "initial_tier": "I",
    "name": "Sharp-tail Dracolisk",
    "faction": "Red",
+   "groups": [
+    "Exclusive",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8101,6 +10941,10 @@
    "initial_tier": "I",
    "name": "Primal-Trained Longma",
    "faction": "Blue",
+   "groups": [
+    "Exclusive",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8117,6 +10961,10 @@
    "initial_tier": "I",
    "name": "Mountain Dracolisk",
    "faction": "White",
+   "groups": [
+    "Exclusive",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8133,6 +10981,12 @@
    "initial_tier": "I",
    "name": "Imshael",
    "faction": "Blue/Black",
+   "groups": [
+    "Apostate",
+    "Human",
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8149,6 +11003,9 @@
    "initial_tier": "I",
    "name": "Librarian",
    "faction": "Black",
+   "groups": [
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8165,6 +11022,15 @@
    "initial_tier": "I",
    "name": "Arcane Garrett Hawke",
    "faction": "White/Blue",
+   "groups": [
+    "Apostate",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Outlaw",
+    "FreeMarches",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8181,6 +11047,15 @@
    "initial_tier": "I",
    "name": "Arcane Marian Hawke",
    "faction": "White/Blue",
+   "groups": [
+    "Apostate",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Outlaw",
+    "FreeMarches",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8197,6 +11072,15 @@
    "initial_tier": "I",
    "name": "Red Lyrium Blackwall",
    "faction": "Red/Black",
+   "groups": [
+    "Red_Lyrium",
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Orlesian",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8213,6 +11097,10 @@
    "initial_tier": "I",
    "name": "Alpha Goat",
    "faction": "Large",
+   "groups": [
+    "Avvar",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8229,6 +11117,13 @@
    "initial_tier": "I",
    "name": "Magister Dorian",
    "faction": "White/Blue",
+   "groups": [
+    "Tevinter",
+    "Nobility",
+    "Human",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8245,6 +11140,12 @@
    "initial_tier": "I",
    "name": "Venatori Zealot",
    "faction": "Red/Black",
+   "groups": [
+    "Tevinter",
+    "Venatori",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8261,6 +11162,11 @@
    "initial_tier": "I",
    "name": "Kaltenzahn",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Reavers",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8277,6 +11183,12 @@
    "initial_tier": "I",
    "name": "Ser Wesley Vallen",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Ferelden",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8293,6 +11205,12 @@
    "initial_tier": "I",
    "name": "Blighted Zevran",
    "faction": "Red/Black",
+   "groups": [
+    "Blight",
+    "Outlaw",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8309,6 +11227,10 @@
    "initial_tier": "I",
    "name": "Druffalo",
    "faction": "Large",
+   "groups": [
+    "Ferelden",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8325,6 +11247,14 @@
    "initial_tier": "I",
    "name": "Grey Warden Loghain",
    "faction": "White/Black",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Outlaw",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8341,6 +11271,10 @@
    "initial_tier": "I",
    "name": "Greater Frostback Elk",
    "faction": "Large",
+   "groups": [
+    "Avvar",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8357,6 +11291,10 @@
    "initial_tier": "I",
    "name": "Nightmare",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8373,6 +11311,10 @@
    "initial_tier": "I",
    "name": "Gibbering Horror",
    "faction": "Black",
+   "groups": [
+    "Beast",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8389,6 +11331,14 @@
    "initial_tier": "I",
    "name": "Saboteur Garrett Hawke",
    "faction": "White/Red",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8405,6 +11355,14 @@
    "initial_tier": "I",
    "name": "Saboteur Marian Hawke",
    "faction": "White/Red",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8421,6 +11379,12 @@
    "initial_tier": "I",
    "name": "The Augur",
    "faction": "Red/Blue",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8437,6 +11401,14 @@
    "initial_tier": "I",
    "name": "Sigrid Guldsdotten",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Inquisition",
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8453,6 +11425,11 @@
    "initial_tier": "IV",
    "name": "Mythic Giant Wisp",
    "faction": "Large",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8466,6 +11443,13 @@
    "initial_tier": "I",
    "name": "Fairbanks",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Nobility",
+    "Human",
+    "Orlesian",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8482,6 +11466,12 @@
    "initial_tier": "I",
    "name": "The Dowager",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8498,6 +11488,13 @@
    "initial_tier": "I",
    "name": "Thom Rainier",
    "faction": "White/Black",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Orlesian",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8514,6 +11511,11 @@
    "initial_tier": "I",
    "name": "Hivernal",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Orlesian",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8530,6 +11532,10 @@
    "initial_tier": "I",
    "name": "Ice Giant",
    "faction": "Large",
+   "groups": [
+    "Avvar",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8546,6 +11552,13 @@
    "initial_tier": "I",
    "name": "Grand Enchanter Vivienne",
    "faction": "White/Blue",
+   "groups": [
+    "Human",
+    "FreeMarches",
+    "Orlesian",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8562,6 +11575,9 @@
    "initial_tier": "I",
    "name": "August Ram",
    "faction": "White",
+   "groups": [
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8578,6 +11594,13 @@
    "initial_tier": "I",
    "name": "Wintersend Cullen",
    "faction": "White",
+   "groups": [
+    "Templar",
+    "Ferelden",
+    "Inquisition",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8594,6 +11617,9 @@
    "initial_tier": "I",
    "name": "Reindeer Mabari",
    "faction": "White",
+   "groups": [
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8610,6 +11636,11 @@
    "initial_tier": "I",
    "name": "Guardian of Mythal",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Dragon",
+    "Elves"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8626,6 +11657,10 @@
    "initial_tier": "I",
    "name": "Ghost of the Spire",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8642,6 +11677,11 @@
    "initial_tier": "I",
    "name": "Charter",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8658,6 +11698,11 @@
    "initial_tier": "I",
    "name": "Ritts",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8674,6 +11719,10 @@
    "initial_tier": "I",
    "name": "Envy Demon",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8690,6 +11739,10 @@
    "initial_tier": "I",
    "name": "Xebenkeck",
    "faction": "Blue/Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8706,6 +11759,11 @@
    "initial_tier": "I",
    "name": "Naishe",
    "faction": "Red",
+   "groups": [
+    "Outlaw",
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8722,6 +11780,13 @@
    "initial_tier": "I",
    "name": "Dragon Malvernis",
    "faction": "Large",
+   "groups": [
+    "Apostate",
+    "Spirit",
+    "Beast",
+    "Mage",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8738,6 +11803,12 @@
    "initial_tier": "I",
    "name": "Malvernis",
    "faction": "Blue/Black",
+   "groups": [
+    "Apostate",
+    "Human",
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8754,6 +11825,10 @@
    "initial_tier": "I",
    "name": "Forge Master",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8770,6 +11845,12 @@
    "initial_tier": "I",
    "name": "Arl Teagan Guerrin",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8786,6 +11867,12 @@
    "initial_tier": "I",
    "name": "Mother Giselle",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Chantry",
+    "Orlesian"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8802,6 +11889,11 @@
    "initial_tier": "I",
    "name": "Divine Guard",
    "faction": "White",
+   "groups": [
+    "Human",
+    "Chantry",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8818,6 +11910,11 @@
    "initial_tier": "I",
    "name": "Spirit of Shartan",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8834,6 +11931,12 @@
    "initial_tier": "I",
    "name": "Marius",
    "faction": "White/Red",
+   "groups": [
+    "Tevinter",
+    "Inquisition",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8850,6 +11953,12 @@
    "initial_tier": "I",
    "name": "Tessa Forsythia",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Nobility",
+    "Human",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8866,6 +11975,9 @@
    "initial_tier": "I",
    "name": "Gurn",
    "faction": "Large",
+   "groups": [
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -8882,6 +11994,11 @@
    "initial_tier": "IV",
    "name": "Mythic Red Black Wisp",
    "faction": "Red/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8895,6 +12012,11 @@
    "initial_tier": "IV",
    "name": "Mythic White Black Wisp",
    "faction": "White/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8908,6 +12030,11 @@
    "initial_tier": "IV",
    "name": "Mythic White Red Wisp",
    "faction": "White/Red",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8921,6 +12048,11 @@
    "initial_tier": "IV",
    "name": "Mythic Blue Black Wisp",
    "faction": "Blue/Black",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8934,6 +12066,11 @@
    "initial_tier": "IV",
    "name": "Mythic Blue Red Wisp",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8947,6 +12084,11 @@
    "initial_tier": "IV",
    "name": "Mythic White Blue Wisp",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8960,6 +12102,12 @@
    "initial_tier": "I",
    "name": "Qunari Defender",
    "faction": "Red",
+   "groups": [
+    "Exclusive",
+    "Outlaw",
+    "Qunari",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8976,6 +12124,11 @@
    "initial_tier": "I",
    "name": "Red Lyrium Nug",
    "faction": "Red/Black",
+   "groups": [
+    "Nug",
+    "Red_Lyrium",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -8992,6 +12145,10 @@
    "initial_tier": "I",
    "name": "Fade-Touched Lurker",
    "faction": "Red/Blue",
+   "groups": [
+    "Exclusive",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9008,6 +12165,13 @@
    "initial_tier": "I",
    "name": "Rhys",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Ferelden",
+    "Human",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9024,6 +12188,14 @@
    "initial_tier": "I",
    "name": "Evangeline",
    "faction": "White/Red",
+   "groups": [
+    "Templar",
+    "Spirit",
+    "Inquisition",
+    "Human",
+    "Orlesian",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9040,6 +12212,12 @@
    "initial_tier": "I",
    "name": "Storvacker",
    "faction": "Large",
+   "groups": [
+    "Pets",
+    "Inquisition",
+    "Avvar",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -9056,6 +12234,12 @@
    "initial_tier": "I",
    "name": "Hissera",
    "faction": "Red/Blue",
+   "groups": [
+    "Apostate",
+    "Inquisition",
+    "Qunari",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9072,6 +12256,11 @@
    "initial_tier": "I",
    "name": "Spirit Champion",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Warrior",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9088,6 +12277,11 @@
    "initial_tier": "I",
    "name": "Ser Aaron Hawthorne",
    "faction": "White/Red",
+   "groups": [
+    "Ferelden",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9104,6 +12298,10 @@
    "initial_tier": "I",
    "name": "Vaea",
    "faction": "White",
+   "groups": [
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9120,6 +12318,11 @@
    "initial_tier": "I",
    "name": "Janeka",
    "faction": "Blue/Black",
+   "groups": [
+    "Human",
+    "Warden",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9136,6 +12339,9 @@
    "initial_tier": "I",
    "name": "Grey Warden Banner",
    "faction": "White/Black",
+   "groups": [
+    "Warden"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9152,6 +12358,13 @@
    "initial_tier": "I",
    "name": "Maferath",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Human",
+    "Avvar",
+    "Outlaw",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9168,6 +12381,13 @@
    "initial_tier": "I",
    "name": "Revenant Gurd",
    "faction": "Red/Black",
+   "groups": [
+    "Jaws_of_Hakkon",
+    "Outlaw",
+    "Avvar",
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9184,6 +12404,13 @@
    "initial_tier": "I",
    "name": "Hakkonite Spellbinder",
    "faction": "Red/Blue",
+   "groups": [
+    "Jaws_of_Hakkon",
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9200,6 +12427,14 @@
    "initial_tier": "I",
    "name": "Bethany Hawke",
    "faction": "White/Blue",
+   "groups": [
+    "Apostate",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9216,6 +12451,13 @@
    "initial_tier": "I",
    "name": "Inquisitor Ameridan",
    "faction": "White/Blue",
+   "groups": [
+    "Inquisition",
+    "Chantry",
+    "Seeker",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9232,6 +12474,12 @@
    "initial_tier": "I",
    "name": "Archon Radonis",
    "faction": "Blue/Black",
+   "groups": [
+    "Tevinter",
+    "Nobility",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9248,6 +12496,9 @@
    "initial_tier": "I",
    "name": "Tevinter Banner",
    "faction": "Blue/Black",
+   "groups": [
+    "Tevinter"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9264,6 +12515,11 @@
    "initial_tier": "I",
    "name": "Shianni",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9280,6 +12536,9 @@
    "initial_tier": "I",
    "name": "Lurker",
    "faction": "Red",
+   "groups": [
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9296,6 +12555,14 @@
    "initial_tier": "I",
    "name": "Lady Seeker Cassandra",
    "faction": "White",
+   "groups": [
+    "Inquisition",
+    "Nobility",
+    "Human",
+    "Chantry",
+    "Seeker",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9312,6 +12579,13 @@
    "initial_tier": "I",
    "name": "Carver Hawke",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9328,6 +12602,9 @@
    "initial_tier": "I",
    "name": "Templar Banner",
    "faction": "White",
+   "groups": [
+    "Templar"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9344,6 +12621,11 @@
    "initial_tier": "I",
    "name": "Kitty",
    "faction": "Black",
+   "groups": [
+    "Pets",
+    "Beast",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9360,6 +12642,11 @@
    "initial_tier": "I",
    "name": "Xenon the Antiquarian",
    "faction": "White/Black",
+   "groups": [
+    "Nobility",
+    "Human",
+    "FreeMarches"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9376,6 +12663,10 @@
    "initial_tier": "I",
    "name": "Invisible Nug",
    "faction": "White/Red",
+   "groups": [
+    "Nug",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9392,6 +12683,13 @@
    "initial_tier": "I",
    "name": "Avernus",
    "faction": "Blue/Black",
+   "groups": [
+    "Blood_Mage",
+    "Ferelden",
+    "Human",
+    "Warden",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9408,6 +12706,11 @@
    "initial_tier": "I",
    "name": "Great Dragon",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Reavers",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -9424,6 +12727,11 @@
    "initial_tier": "I",
    "name": "Beast of Tellari Swamps",
    "faction": "Red",
+   "groups": [
+    "Apostate",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9440,6 +12748,10 @@
    "initial_tier": "I",
    "name": "The Dark Theurge",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9456,6 +12768,11 @@
    "initial_tier": "I",
    "name": "Possessed Ogre Commander",
    "faction": "Large",
+   "groups": [
+    "Blight",
+    "Demon",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -9472,6 +12789,11 @@
    "initial_tier": "I",
    "name": "Blighted Fennec",
    "faction": "Red/Black",
+   "groups": [
+    "Exclusive",
+    "Blight",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9488,6 +12810,13 @@
    "initial_tier": "I",
    "name": "King Calenhad",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Reavers",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9504,6 +12833,9 @@
    "initial_tier": "I",
    "name": "Ferelden Banner",
    "faction": "White",
+   "groups": [
+    "Ferelden"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9520,6 +12852,13 @@
    "initial_tier": "I",
    "name": "Red Lyrium Bartrand",
    "faction": "Red/Black",
+   "groups": [
+    "Red_Lyrium",
+    "Dwarf",
+    "FreeMarches",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9536,6 +12875,11 @@
    "initial_tier": "I",
    "name": "Garahel",
    "faction": "White/Black",
+   "groups": [
+    "Warden",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9552,6 +12896,12 @@
    "initial_tier": "I",
    "name": "Isseya",
    "faction": "Blue/Black",
+   "groups": [
+    "Blood_Mage",
+    "Warden",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9568,6 +12918,12 @@
    "initial_tier": "I",
    "name": "Wild Sylvan",
    "faction": "Large",
+   "groups": [
+    "Exclusive",
+    "Beast",
+    "Demon",
+    "Elves"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -9584,6 +12940,12 @@
    "initial_tier": "I",
    "name": "Keeper Zathrian",
    "faction": "Red/Blue",
+   "groups": [
+    "Apostate",
+    "Blood_Mage",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9600,6 +12962,11 @@
    "initial_tier": "I",
    "name": "The Highest One",
    "faction": "Blue/Black",
+   "groups": [
+    "Demon",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9616,6 +12983,9 @@
    "initial_tier": "I",
    "name": "Dalish Banner",
    "faction": "Red/Blue",
+   "groups": [
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9632,6 +13002,10 @@
    "initial_tier": "I",
    "name": "Greater Mistral Dragonling",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Dragon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9648,6 +13022,10 @@
    "initial_tier": "I",
    "name": "Chauncey",
    "faction": "White/Red",
+   "groups": [
+    "Pets",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9664,6 +13042,13 @@
    "initial_tier": "I",
    "name": "Shapeshifter Morrigan",
    "faction": "Red",
+   "groups": [
+    "Exclusive",
+    "Apostate",
+    "Human",
+    "Beast",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "I",
    "tier_levels": {
@@ -9677,6 +13062,11 @@
    "initial_tier": "I",
    "name": "Avvar War Nug",
    "faction": "Large",
+   "groups": [
+    "Nug",
+    "Avvar",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -9693,6 +13083,11 @@
    "initial_tier": "I",
    "name": "Emerald Graves Nug",
    "faction": "White/Red",
+   "groups": [
+    "Exclusive",
+    "Nug",
+    "Beast"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9709,6 +13104,13 @@
    "initial_tier": "I",
    "name": "Knight-Captain Denam",
    "faction": "White/Red",
+   "groups": [
+    "Templar",
+    "Red_Lyrium",
+    "Ferelden",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9725,6 +13127,14 @@
    "initial_tier": "I",
    "name": "Warden-Commander Sophia",
    "faction": "White/Black",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Outlaw",
+    "Warden",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9741,6 +13151,9 @@
    "initial_tier": "I",
    "name": "Par Vollen Banner",
    "faction": "Red",
+   "groups": [
+    "Qunari"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9757,6 +13170,12 @@
    "initial_tier": "I",
    "name": "Sky Cultist",
    "faction": "Red/Black",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9773,6 +13192,11 @@
    "initial_tier": "I",
    "name": "Vinsomer Dragonling",
    "faction": "Red",
+   "groups": [
+    "Ferelden",
+    "Beast",
+    "Dragon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9789,6 +13213,10 @@
    "initial_tier": "I",
    "name": "Torpor",
    "faction": "Black",
+   "groups": [
+    "Demon",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9805,6 +13233,10 @@
    "initial_tier": "I",
    "name": "Wryme",
    "faction": "Large",
+   "groups": [
+    "Demon",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -9821,6 +13253,11 @@
    "initial_tier": "I",
    "name": "Spirit Spellbinder",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9837,6 +13274,10 @@
    "initial_tier": "I",
    "name": "Archivist",
    "faction": "Blue",
+   "groups": [
+    "Spirit",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9853,6 +13294,12 @@
    "initial_tier": "I",
    "name": "Phantasmal Warrior",
    "faction": "Red/Black",
+   "groups": [
+    "Exclusive",
+    "Dwarf",
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9869,6 +13316,11 @@
    "initial_tier": "I",
    "name": "Kaltenzahn Dragonling",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Reavers",
+    "Dragon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9885,6 +13337,12 @@
    "initial_tier": "I",
    "name": "Asha'Bellanar",
    "faction": "Red/Blue",
+   "groups": [
+    "Exclusive",
+    "Apostate",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9901,6 +13359,11 @@
    "initial_tier": "IV",
    "name": "Mythic Prestige Wisp",
    "faction": "All",
+   "groups": [
+    "Spirit",
+    "Wisp",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9914,6 +13377,10 @@
    "initial_tier": "I",
    "name": "Stonejaw",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -9930,6 +13397,12 @@
    "initial_tier": "I",
    "name": "Leandra Amell",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9946,6 +13419,11 @@
    "initial_tier": "I",
    "name": "Gamordan Stormrider Dragonling",
    "faction": "Red",
+   "groups": [
+    "Beast",
+    "Orlesian",
+    "Dragon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9962,6 +13440,12 @@
    "initial_tier": "I",
    "name": "Shadow Nug",
    "faction": "Red/Black",
+   "groups": [
+    "Exclusive",
+    "Nug",
+    "Beast",
+    "Demon"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9978,6 +13462,12 @@
    "initial_tier": "I",
    "name": "Queen of the Eastern Seas",
    "faction": "White/Red",
+   "groups": [
+    "Inquisition",
+    "Human",
+    "Outlaw",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -9994,6 +13484,11 @@
    "initial_tier": "I",
    "name": "Spirit Archer",
    "faction": "Red/Blue",
+   "groups": [
+    "Spirit",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10010,6 +13505,11 @@
    "initial_tier": "I",
    "name": "Phantasmal Shadow",
    "faction": "Red/Black",
+   "groups": [
+    "Dwarf",
+    "Demon",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10026,6 +13526,10 @@
    "initial_tier": "I",
    "name": "Hunterhorn Shrike",
    "faction": "Large",
+   "groups": [
+    "Beast",
+    "Dragon"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -10042,6 +13546,14 @@
    "initial_tier": "I",
    "name": "Sunshine",
    "faction": "White/Red",
+   "groups": [
+    "Apostate",
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10058,6 +13570,14 @@
    "initial_tier": "I",
    "name": "Tempest Sera",
    "faction": "White/Red",
+   "groups": [
+    "Exclusive",
+    "Ferelden",
+    "Inquisition",
+    "Outlaw",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "I",
    "tier_levels": {
@@ -10071,6 +13591,12 @@
    "initial_tier": "I",
    "name": "Duke Remache de Lydes",
    "faction": "White",
+   "groups": [
+    "Nobility",
+    "Human",
+    "Orlesian",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10087,6 +13613,9 @@
    "initial_tier": "I",
    "name": "Orlesian Banner",
    "faction": "White",
+   "groups": [
+    "Orlesian"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10103,6 +13632,10 @@
    "initial_tier": "I",
    "name": "Wild Hart",
    "faction": "Large",
+   "groups": [
+    "Inquisition",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -10119,6 +13652,13 @@
    "initial_tier": "I",
    "name": "Keeper Deshanna",
    "faction": "Red/Blue",
+   "groups": [
+    "Exclusive",
+    "Apostate",
+    "FreeMarches",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10135,6 +13675,13 @@
    "initial_tier": "I",
    "name": "Duke Antoine of Wycome",
    "faction": "White/Black",
+   "groups": [
+    "Venatori",
+    "Nobility",
+    "Human",
+    "FreeMarches",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10151,6 +13698,10 @@
    "initial_tier": "I",
    "name": "Hurlock Vanguard",
    "faction": "Black",
+   "groups": [
+    "Blight",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10167,6 +13718,13 @@
    "initial_tier": "I",
    "name": "Lady of the Forest",
    "faction": "Red/Blue",
+   "groups": [
+    "Exclusive",
+    "Spirit",
+    "Werewolves",
+    "Beast",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10183,6 +13741,13 @@
    "initial_tier": "I",
    "name": "Gatekeeper",
    "faction": "Red/Blue",
+   "groups": [
+    "Exclusive",
+    "Werewolves",
+    "Human",
+    "Beast",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10199,6 +13764,13 @@
    "initial_tier": "I",
    "name": "Cassian",
    "faction": "Red/Blue",
+   "groups": [
+    "Exclusive",
+    "Werewolves",
+    "Human",
+    "Beast",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10215,6 +13787,12 @@
    "initial_tier": "I",
    "name": "Bulfa",
    "faction": "Red/Blue",
+   "groups": [
+    "Exclusive",
+    "Werewolves",
+    "Beast",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10231,6 +13809,13 @@
    "initial_tier": "I",
    "name": "Danyla",
    "faction": "Red/Blue",
+   "groups": [
+    "Exclusive",
+    "Werewolves",
+    "Beast",
+    "Rogue",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10247,6 +13832,12 @@
    "initial_tier": "I",
    "name": "Profane",
    "faction": "Red/Black",
+   "groups": [
+    "Exclusive",
+    "Dwarf",
+    "Demon",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10263,6 +13854,11 @@
    "initial_tier": "I",
    "name": "Runic Golem",
    "faction": "White/Blue",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10279,6 +13875,11 @@
    "initial_tier": "I",
    "name": "Dailan",
    "faction": "White/Blue",
+   "groups": [
+    "Spirit",
+    "Dwarf",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10295,6 +13896,12 @@
    "initial_tier": "I",
    "name": "Tranquil Maddox",
    "faction": "Red/Blue",
+   "groups": [
+    "Red_Lyrium",
+    "Human",
+    "FreeMarches",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10311,6 +13918,11 @@
    "initial_tier": "I",
    "name": "The Formless One",
    "faction": "Blue/Black",
+   "groups": [
+    "Exclusive",
+    "Demon",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10327,6 +13939,11 @@
    "initial_tier": "I",
    "name": "Blighted Halla",
    "faction": "Large",
+   "groups": [
+    "Exclusive",
+    "Blight",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -10343,6 +13960,13 @@
    "initial_tier": "I",
    "name": "Wintersend Nuggalope",
    "faction": "Large",
+   "groups": [
+    "Exclusive",
+    "Nug",
+    "Ferelden",
+    "Inquisition",
+    "Beast"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -10359,6 +13983,13 @@
    "initial_tier": "I",
    "name": "Sundermount Varterral",
    "faction": "Large",
+   "groups": [
+    "Exclusive",
+    "Golem",
+    "Beast",
+    "Warrior",
+    "Elves"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -10375,6 +14006,13 @@
    "initial_tier": "I",
    "name": "Gallows Guardian",
    "faction": "Large",
+   "groups": [
+    "Tevinter",
+    "Red_Lyrium",
+    "FreeMarches",
+    "Golem",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -10391,6 +14029,11 @@
    "initial_tier": "I",
    "name": "Lanaya",
    "faction": "Red/Blue",
+   "groups": [
+    "Apostate",
+    "Mage",
+    "Elves"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10407,6 +14050,14 @@
    "initial_tier": "I",
    "name": "The Mad Hermit",
    "faction": "Red/Black",
+   "groups": [
+    "Exclusive",
+    "Apostate",
+    "Blood_Mage",
+    "Ferelden",
+    "Human",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10423,6 +14074,11 @@
    "initial_tier": "I",
    "name": "Greater Rage Demon",
    "faction": "Large",
+   "groups": [
+    "Exclusive",
+    "Demon",
+    "Rogue"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -10439,6 +14095,11 @@
    "initial_tier": "I",
    "name": "Ogre Alpha",
    "faction": "Large",
+   "groups": [
+    "Exclusive",
+    "Blight",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -10455,6 +14116,15 @@
    "initial_tier": "I",
    "name": "Wintersend Vivienne",
    "faction": "White/Blue",
+   "groups": [
+    "Exclusive",
+    "Inquisition",
+    "Human",
+    "FreeMarches",
+    "Orlesian",
+    "Circle",
+    "Mage"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10471,6 +14141,12 @@
    "initial_tier": "I",
    "name": "Wintersend Harlequin",
    "faction": "White/Red",
+   "groups": [
+    "Exclusive",
+    "Human",
+    "Orlesian",
+    "Rogue"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10487,6 +14163,12 @@
    "initial_tier": "I",
    "name": "Autumn",
    "faction": "White/Red",
+   "groups": [
+    "Pets",
+    "Ferelden",
+    "Beast",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10503,6 +14185,12 @@
    "initial_tier": "I",
    "name": "Thaddeus Gigantus Crumbum",
    "faction": "Large",
+   "groups": [
+    "Pets",
+    "FreeMarches",
+    "Golem",
+    "Warrior"
+   ],
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
@@ -10519,6 +14207,12 @@
    "initial_tier": "I",
    "name": "Hero of River Dane",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
@@ -10535,6 +14229,12 @@
    "initial_tier": "I",
    "name": "Queen Anora Theirin",
    "faction": "White",
+   "groups": [
+    "Ferelden",
+    "Nobility",
+    "Human",
+    "Warrior"
+   ],
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {

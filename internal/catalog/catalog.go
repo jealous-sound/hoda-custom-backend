@@ -126,6 +126,7 @@ type Hero struct {
 	InitialTier string
 	Name        string
 	Factions    Faction
+	Groups      []string
 	Giant       bool
 	MaxTier     int
 	Tiers       [TierCount]HeroTier
@@ -175,6 +176,7 @@ type Catalog struct {
 	GearSellGold     []int
 	GearPrestigeGems int
 	Fortify          FortifyRules
+	Expeditions      ExpeditionRules
 	Battle           *battle.Data
 
 	packIndex    map[string]int
@@ -316,6 +318,7 @@ type rawHeroPool struct {
 		InitialTier string         `json:"initial_tier"`
 		Name        string         `json:"name"`
 		Faction     string         `json:"faction"`
+		Groups      []string       `json:"groups"`
 		Giant       bool           `json:"giant"`
 		MaxTier     string         `json:"max_tier"`
 		TierLevels  map[string]int `json:"tier_levels"`
@@ -388,7 +391,8 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		}
 		hero := Hero{
 			ID: raw.ID, Rarity: ParseRarity(raw.Rarity), Obtainable: raw.Obtainable, InitialTier: raw.InitialTier,
-			Name: raw.Name, Factions: parseFactions(raw.Faction), Giant: raw.Giant, MaxTier: maxTier,
+			Name: raw.Name, Factions: parseFactions(raw.Faction), Groups: raw.Groups, Giant: raw.Giant,
+			MaxTier: maxTier,
 		}
 		for name, level := range raw.TierLevels {
 			tier, ok := TierIndex(name)
@@ -456,6 +460,9 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		return nil, err
 	}
 	if err := c.loadRules(read); err != nil {
+		return nil, err
+	}
+	if err := c.loadExpeditions(read); err != nil {
 		return nil, err
 	}
 	battleData, err := battle.Load(read)

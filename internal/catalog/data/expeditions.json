@@ -1,0 +1,180 @@
+{
+ "version": 1,
+ "slot_levels": [3, 8, 15, 25, 40],
+ "great_success_pct": 50,
+ "expeditions": [
+  {
+   "id": "lothering",
+   "name_key": "HODA_EXPEDITION_LOTHERING_NAME",
+   "description_key": "HODA_EXPEDITION_LOTHERING_DESCRIPTION",
+   "art": "gui/expeditions/lothering.png",
+   "level": 3,
+   "minutes": 15,
+   "party": 1,
+   "requirements": [],
+   "bonus": {"group": "Ferelden", "count": 1},
+   "gold": [120, 180],
+   "gems": [0, 0],
+   "hero_xp": 40,
+   "drops": [
+    {"kind": "gear", "chance": 15, "min_rarity": 1, "max_rarity": 1}
+   ]
+  },
+  {
+   "id": "storm_coast",
+   "name_key": "HODA_EXPEDITION_STORM_COAST_NAME",
+   "description_key": "HODA_EXPEDITION_STORM_COAST_DESCRIPTION",
+   "art": "gui/expeditions/storm_coast.png",
+   "level": 3,
+   "minutes": 60,
+   "party": 2,
+   "requirements": [],
+   "bonus": {"group": "Outlaw", "count": 1},
+   "gold": [400, 600],
+   "gems": [0, 1],
+   "hero_xp": 80,
+   "drops": [
+    {"kind": "gear", "chance": 40, "min_rarity": 1, "max_rarity": 2}
+   ]
+  },
+  {
+   "id": "hinterlands",
+   "name_key": "HODA_EXPEDITION_HINTERLANDS_NAME",
+   "description_key": "HODA_EXPEDITION_HINTERLANDS_DESCRIPTION",
+   "art": "gui/expeditions/hinterlands.png",
+   "level": 5,
+   "minutes": 120,
+   "party": 2,
+   "requirements": [],
+   "bonus": {"group": "Elves", "count": 1},
+   "gold": [500, 700],
+   "gems": [1, 2],
+   "hero_xp": 120,
+   "drops": [
+    {"kind": "rune", "chance": 60, "min_rarity": 1, "max_rarity": 2}
+   ]
+  },
+  {
+   "id": "deep_roads",
+   "name_key": "HODA_EXPEDITION_DEEP_ROADS_NAME",
+   "description_key": "HODA_EXPEDITION_DEEP_ROADS_DESCRIPTION",
+   "art": "gui/expeditions/deep_roads.png",
+   "level": 8,
+   "minutes": 240,
+   "party": 3,
+   "requirements": [],
+   "bonus": {"group": "Dwarf", "count": 1},
+   "gold": [900, 1300],
+   "gems": [2, 4],
+   "hero_xp": 200,
+   "drops": [
+    {"kind": "gear", "chance": 60, "min_rarity": 1, "max_rarity": 3}
+   ]
+  },
+  {
+   "id": "fade_rift",
+   "name_key": "HODA_EXPEDITION_FADE_RIFT_NAME",
+   "description_key": "HODA_EXPEDITION_FADE_RIFT_DESCRIPTION",
+   "art": "gui/expeditions/fade_rift.png",
+   "level": 10,
+   "minutes": 240,
+   "party": 3,
+   "requirements": [{"rarity": "Rare", "count": 1}],
+   "bonus": {"group": "Mage", "count": 2},
+   "gold": [300, 500],
+   "gems": [3, 5],
+   "hero_xp": 200,
+   "drops": [
+    {"kind": "rune", "chance": 80, "min_rarity": 2, "max_rarity": 3}
+   ]
+  },
+  {
+   "id": "orlais",
+   "name_key": "HODA_EXPEDITION_ORLAIS_NAME",
+   "description_key": "HODA_EXPEDITION_ORLAIS_DESCRIPTION",
+   "art": "gui/expeditions/orlais.png",
+   "level": 12,
+   "minutes": 480,
+   "party": 3,
+   "requirements": [{"rarity": "Rare", "count": 2}],
+   "bonus": {"group": "Nobility", "count": 1},
+   "gold": [2500, 3500],
+   "gems": [3, 6],
+   "hero_xp": 300,
+   "drops": [
+    {"kind": "gear", "chance": 50, "min_rarity": 2, "max_rarity": 3}
+   ]
+  },
+  {
+   "id": "western_approach",
+   "name_key": "HODA_EXPEDITION_WESTERN_APPROACH_NAME",
+   "description_key": "HODA_EXPEDITION_WESTERN_APPROACH_DESCRIPTION",
+   "art": "gui/expeditions/western_approach.png",
+   "level": 15,
+   "minutes": 480,
+   "party": 4,
+   "requirements": [{"rarity": "Epic", "count": 1}],
+   "bonus": {"giant": true, "count": 1},
+   "gold": [1500, 2000],
+   "gems": [2, 4],
+   "hero_xp": 300,
+   "drops": [
+    {"kind": "hero", "chance": 100, "weights": {"Rare": 75, "Epic": 25}}
+   ]
+  },
+  {
+   "id": "emprise_du_lion",
+   "name_key": "HODA_EXPEDITION_EMPRISE_DU_LION_NAME",
+   "description_key": "HODA_EXPEDITION_EMPRISE_DU_LION_DESCRIPTION",
+   "art": "gui/expeditions/emprise_du_lion.png",
+   "level": 20,
+   "minutes": 720,
+   "party": 4,
+   "requirements": [{"rarity": "Epic", "count": 1}],
+   "bonus": {"group": "Inquisition", "count": 1},
+   "gold": [2000, 3000],
+   "gems": [8, 12],
+   "hero_xp": 450,
+   "drops": [
+    {"kind": "gear", "chance": 70, "min_rarity": 2, "max_rarity": 4},
+    {"kind": "rune", "chance": 50, "min_rarity": 3, "max_rarity": 4}
+   ]
+  },
+  {
+   "id": "arbor_wilds",
+   "name_key": "HODA_EXPEDITION_ARBOR_WILDS_NAME",
+   "description_key": "HODA_EXPEDITION_ARBOR_WILDS_DESCRIPTION",
+   "art": "gui/expeditions/arbor_wilds.png",
+   "level": 25,
+   "minutes": 720,
+   "party": 5,
+   "requirements": [{"rarity": "Epic", "count": 2}],
+   "bonus": {"group": "Spirit", "count": 1},
+   "gold": [4000, 6000],
+   "gems": [6, 10],
+   "hero_xp": 500,
+   "drops": [
+    {"kind": "rune", "chance": 100, "min_rarity": 3, "max_rarity": 4},
+    {"kind": "gear", "chance": 50, "min_rarity": 3, "max_rarity": 4}
+   ]
+  },
+  {
+   "id": "tevinter",
+   "name_key": "HODA_EXPEDITION_TEVINTER_NAME",
+   "description_key": "HODA_EXPEDITION_TEVINTER_DESCRIPTION",
+   "art": "gui/expeditions/tevinter.png",
+   "level": 30,
+   "minutes": 1200,
+   "party": 5,
+   "requirements": [{"rarity": "Legendary", "count": 1}],
+   "bonus": {"group": "Tevinter", "count": 1},
+   "gold": [3000, 4000],
+   "gems": [15, 25],
+   "hero_xp": 800,
+   "drops": [
+    {"kind": "hero", "chance": 100, "weights": {"Epic": 85, "Legendary": 15}},
+    {"kind": "gear", "chance": 50, "min_rarity": 3, "max_rarity": 5}
+   ]
+  }
+ ]
+}

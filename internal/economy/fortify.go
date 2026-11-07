@@ -123,6 +123,13 @@ func (p *player) FortifyHero(request FortifyRequest) (BattleResult, error) {
 	if parent == nil {
 		return BattleResult{}, refuse(Unavailable, "no hero %d", request.Parent)
 	}
+	units := []int64{request.Parent}
+	for _, slot := range request.Slots {
+		units = append(units, slot.Unit)
+	}
+	if err := refuseAway(p.doc, units...); err != nil {
+		return BattleResult{}, err
+	}
 	unlocked := parent.unlockedFortifySlots()
 	slots := readFortify(p.catalog, parent.entry)
 	var chosen [catalog.FortifySlotCount]bool
@@ -166,6 +173,9 @@ func (p *player) RemoveFortify(request RemoveFortifyRequest) (BattleResult, erro
 	parent := r.find(request.Parent)
 	if parent == nil {
 		return BattleResult{}, refuse(Unavailable, "no hero %d", request.Parent)
+	}
+	if err := refuseAway(p.doc, request.Parent); err != nil {
+		return BattleResult{}, err
 	}
 	if request.Index == nil ||
 		(*request.Index != removeEveryFortifySlot && (*request.Index < 0 || *request.Index >= catalog.FortifySlotCount)) {

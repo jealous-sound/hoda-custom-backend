@@ -29,6 +29,10 @@ const (
 	ActionPvpMatch       = "pvp_match"
 	ActionFortify        = "fortify"
 	ActionRemoveFortify  = "remove_fortify"
+
+	ActionExpeditionStart  = "expedition_start"
+	ActionExpeditionClaim  = "expedition_claim"
+	ActionExpeditionRecall = "expedition_recall"
 )
 
 func decodeInto[T any](body []byte, run func(T) (BattleResult, error)) (BattleResult, error) {
@@ -85,6 +89,12 @@ func (p *player) dispatch(action string, body []byte) (BattleResult, error) {
 		return decodeInto(body, p.FortifyHero)
 	case ActionRemoveFortify:
 		return decodeInto(body, p.RemoveFortify)
+	case ActionExpeditionStart:
+		return decodeInto(body, p.StartExpedition)
+	case ActionExpeditionClaim:
+		return decodeInto(body, p.ClaimExpeditions)
+	case ActionExpeditionRecall:
+		return decodeInto(body, p.RecallExpedition)
 	}
 	return BattleResult{}, &BadRequest{Message: fmt.Sprintf("no action %q", action)}
 }

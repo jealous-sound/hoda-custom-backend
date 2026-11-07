@@ -354,6 +354,9 @@ func (p *player) ConsumeHeroes(request ConsumeRequest) (BattleResult, error) {
 	if target == nil {
 		return BattleResult{}, refuse(Unavailable, "no hero %d", request.Target)
 	}
+	if err := refuseAway(p.doc, append([]int64{request.Target}, request.Seeds...)...); err != nil {
+		return BattleResult{}, err
+	}
 	seeds := make([]*hero, 0, len(request.Seeds))
 	combined := int64(0)
 	for index, instance := range request.Seeds {

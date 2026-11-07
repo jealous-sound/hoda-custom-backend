@@ -140,6 +140,9 @@ func (p *player) battleSquad(claimed battle.Side, runeIDs []int64) (battle.Side,
 	squad := battle.Side{Units: []battle.Unit{}, Runes: []string{}}
 	seen := map[int64]bool{}
 	for _, unit := range claimed.Units {
+		if err := refuseAway(p.doc, unit.InstanceID); err != nil {
+			return battle.Side{}, err
+		}
 		hero, ok := heroes[unit.InstanceID]
 		if !ok || unit.InstanceID <= 0 || seen[unit.InstanceID] {
 			return battle.Side{}, refuse(SquadChanged, "hero %d is not in the roster", unit.InstanceID)
