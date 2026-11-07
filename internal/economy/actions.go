@@ -22,6 +22,8 @@ const (
 	ActionRunePrestige   = "rune_prestige"
 	ActionRuneCraft      = "rune_craft"
 	ActionTutorialReward = "tutorial_reward"
+	ActionConsume        = "consume"
+	ActionPvpDefend      = "pvp_defend"
 )
 
 func decodeInto[T any](body []byte, run func(T) (BattleResult, error)) (BattleResult, error) {
@@ -66,18 +68,28 @@ func (p *player) dispatch(action string, body []byte) (BattleResult, error) {
 		return decodeInto(body, p.CraftRunes)
 	case ActionTutorialReward:
 		return decodeInto(body, p.ClaimTutorialReward)
+	case ActionConsume:
+		return decodeInto(body, p.ConsumeHeroes)
+	case ActionPvpDefend:
+		return p.DefendPvp()
 	}
 	return BattleResult{}, &BadRequest{Message: fmt.Sprintf("no action %q", action)}
 }
 
+type DuelMatch struct {
+	Name     string
+	Level    int
+	Trophies int
+}
+
 type Duels interface {
-	DuelLevel(memberID string) (int, error)
+	DuelOpponent(memberID string) (DuelMatch, error)
 }
 
 type noDuels struct{}
 
-func (noDuels) DuelLevel(memberID string) (int, error) {
-	return 0, refuse(Unavailable, "no guild to duel %q in", memberID)
+func (noDuels) DuelOpponent(memberID string) (DuelMatch, error) {
+	return DuelMatch{}, refuse(Unavailable, "no guild to duel %q in", memberID)
 }
 
 func Act(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, action string, body []byte,

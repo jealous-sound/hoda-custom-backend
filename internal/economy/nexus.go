@@ -156,6 +156,9 @@ func (p *player) nexusBattle(request BattleRequest) (BattleResult, error) {
 		}
 	}
 	p.account.awardBattleXP(result.XP)
+	if err := p.awardSquadXP(result.XP); err != nil {
+		return BattleResult{}, err
+	}
 	if current < last {
 		current++
 		n.run.setInt("current_node_step", int64(current))

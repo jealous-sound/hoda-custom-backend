@@ -169,23 +169,10 @@ func (p *player) payMilestones(result *BattleResult) error {
 	return nil
 }
 
-func (p *player) pvpOpponent(request BattleRequest) (int, error) {
-	if request.Duel == "" {
-		return pvpOpponentLevel(&p.catalog.Pvp, p.account.Level, request.Seed), nil
-	}
-	if request.Event {
-		return 0, refuse(Unavailable, "a duel is not an event battle")
-	}
-	level, err := p.duels.DuelLevel(request.Duel)
-	if err != nil {
-		return 0, err
-	}
-	return min(max(level, 1), pvpMaxLevel), nil
-}
-
 func (p *player) pvpBattle(request BattleRequest) (BattleResult, error) {
 	rules := &p.catalog.Pvp
-	opponent, err := p.pvpOpponent(request)
+	stats := readPvpStats(p.doc)
+	opponent, err := p.pvpOpponent(request, &stats)
 	if err != nil {
 		return BattleResult{}, err
 	}
@@ -193,7 +180,7 @@ func (p *player) pvpBattle(request BattleRequest) (BattleResult, error) {
 		return BattleResult{}, err
 	}
 	result := BattleResult{}
-	gold := pvpGold(rules, opponent, request.Won)
+	gold := pvpGold(rules, opponent.level, request.Won)
 	if request.Event {
 		p.syncPvpEvent()
 		state := &p.server.PvpEvent
@@ -204,6 +191,11 @@ func (p *player) pvpBattle(request BattleRequest) (BattleResult, error) {
 		state.Banners += earned
 		result.Banners = earned
 		result.Cycle = state.Cycle
+		p.count(statEventBanners, int64(earned))
+		if request.Buffed && !state.Buffed {
+			state.Buffed = true
+			p.count(statEventBuffedSquads, 1)
+		}
 		milestones := BattleResult{}
 		if err := p.payMilestones(&milestones); err != nil {
 			return BattleResult{}, err
@@ -212,7 +204,12 @@ func (p *player) pvpBattle(request BattleRequest) (BattleResult, error) {
 		result.Gems = milestones.Gems
 		result.EventRank = pvpEventRank(rules, state.Banners, state.Cycle, p.now.Unix()%rules.Events.DurationSeconds)
 	}
-	xp := pvpXP(rules, opponent, request.Won)
+	result.TrophyDelta = p.recordAttack(&stats, opponent, request.Won, request.Event, result.Banners)
+	p.simulateDefense(&stats)
+	if err := stats.write(p.doc); err != nil {
+		return BattleResult{}, err
+	}
+	xp := pvpXP(rules, opponent.level, request.Won)
 	return result, p.payBattle(&result, gold, xp, request.CritGold, request.Won)
 }
 

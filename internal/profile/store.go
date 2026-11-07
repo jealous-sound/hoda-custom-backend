@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"maps"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -39,12 +40,15 @@ type ServerState struct {
 	TutorialRewards []string         `json:"tutorial_rewards,omitempty"`
 	PvpEvent        PvpEventState    `json:"pvp_event"`
 	PvpResults      []PvpEventResult `json:"pvp_results,omitempty"`
+	MissionProgress map[string]int64 `json:"mission_progress,omitempty"`
+	BattleDay       int64            `json:"battle_day,omitempty"`
 }
 
 type PvpEventState struct {
 	Cycle          int64 `json:"cycle"`
 	Banners        int   `json:"banners"`
 	MilestonesPaid int   `json:"milestones_paid"`
+	Buffed         bool  `json:"buffed,omitempty"`
 }
 
 type PvpEventResult struct {
@@ -58,6 +62,7 @@ func (s ServerState) Clone() ServerState {
 	s.RecentActions = append([]ActionReceipt(nil), s.RecentActions...)
 	s.TutorialRewards = append([]string(nil), s.TutorialRewards...)
 	s.PvpResults = append([]PvpEventResult(nil), s.PvpResults...)
+	s.MissionProgress = maps.Clone(s.MissionProgress)
 	return s
 }
 

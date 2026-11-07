@@ -163,8 +163,8 @@ func (s *Server) playerAction(w http.ResponseWriter, r *http.Request, player str
 		if err := json.Unmarshal(body, &request); err != nil || request.Action == "" {
 			return nil, errors.New(`body must be {"request_id", "action", ...}`)
 		}
+		duels := guildDuels{server: s, player: player, trophies: s.duelTrophies(body)}
 		return func(record *profile.Record) (any, error) {
-			duels := guildDuels{server: s, player: player}
 			next, result, err := economy.ActWithDuels(s.catalog, record.Profile, &record.Server, request.Action, body,
 				s.now(), duels)
 			if err != nil {
