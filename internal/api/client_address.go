@@ -66,10 +66,15 @@ func edgeAddress(r *http.Request) string {
 	return remoteHost(r.RemoteAddr)
 }
 
-func clientAddress(r *http.Request) string {
+func clientAddress(r *http.Request, trustCloudflareHeader bool) string {
 	edge := edgeAddress(r)
-	if visitor := strings.TrimSpace(r.Header.Get(cloudflareClientHeader)); visitor != "" && fromCloudflare(edge) {
+	visitor := strings.TrimSpace(r.Header.Get(cloudflareClientHeader))
+	if visitor != "" && (trustCloudflareHeader || fromCloudflare(edge)) {
 		return visitor
 	}
 	return edge
+}
+
+func (s *Server) visitor(r *http.Request) string {
+	return clientAddress(r, s.trustCloudflareHeader)
 }
