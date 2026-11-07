@@ -52,11 +52,11 @@ type Outcome struct {
 
 const CritGoldPerCrit = 10
 
-func (o Outcome) CritGold() int {
-	if o.Crits > math.MaxInt32/CritGoldPerCrit {
+func CritGoldFor(crits int) int {
+	if crits > math.MaxInt32/CritGoldPerCrit {
 		return math.MaxInt32
 	}
-	return o.Crits * CritGoldPerCrit
+	return crits * CritGoldPerCrit
 }
 
 type hero struct {

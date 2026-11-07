@@ -32,11 +32,13 @@ type Server struct {
 	log              *slog.Logger
 	openUnregistered bool
 	limiters         limiters
+	battleSeeds      economy.SeedSource
 }
 
 type Config struct {
 	OpenUnregistered bool
 	Limits           Limits
+	BattleSeeds      economy.SeedSource
 }
 
 func NewServer(
@@ -46,7 +48,7 @@ func NewServer(
 	return &Server{
 		accounts: accounts, profiles: profiles, sessions: sessions, catalog: shopCatalog, guilds: guilds,
 		reports: reports, now: now, log: log, openUnregistered: config.OpenUnregistered,
-		limiters: newLimiters(config.Limits, now),
+		limiters: newLimiters(config.Limits, now), battleSeeds: config.BattleSeeds,
 	}
 }
 

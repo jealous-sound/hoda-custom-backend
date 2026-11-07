@@ -26,6 +26,7 @@ const validProfile = `{"version":1,"account":{"level":3,"experience":10,"energy"
 type harness struct {
 	t        *testing.T
 	now      *time.Time
+	seed     *uint32
 	server   *httptest.Server
 	profiles *profile.Store
 	dir      string
@@ -60,12 +61,14 @@ func newHarnessWith(t *testing.T, config Config) *harness {
 		t.Fatal(err)
 	}
 	log := slog.New(slog.NewTextHandler(io.Discard, nil))
+	seed := uint32(1)
+	config.BattleSeeds = func() (uint32, error) { return seed, nil }
 	server := httptest.NewServer(
 		NewServer(accounts, store, session.NewRegistry(clock, 0), shopCatalog, guilds, reports, clock, log, config).
 			Handler(),
 	)
 	t.Cleanup(server.Close)
-	return &harness{t: t, now: &current, server: server, profiles: store, dir: dir}
+	return &harness{t: t, now: &current, seed: &seed, server: server, profiles: store, dir: dir}
 }
 
 func (h *harness) do(method, path, token, ifMatch, body string) (*http.Response, string) {

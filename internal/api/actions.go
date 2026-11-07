@@ -64,6 +64,13 @@ func (s *Server) runAction(w http.ResponseWriter, r *http.Request, player string
 	record, err := s.profiles.Transact(player, func(record *profile.Record) error {
 		if receipt, seen := record.Server.Receipt(envelope.RequestID); seen {
 			granted = receipt.Response
+			if receipt.Status == http.StatusUnprocessableEntity {
+				refusal = &economy.Refusal{}
+				var stored refusalResponse
+				if err := json.Unmarshal(receipt.Response, &stored); err == nil {
+					refusal.Code, refusal.Message = economy.RefusalCode(stored.Code), stored.Error
+				}
+			}
 			return profile.ErrNoChange
 		}
 		if record.Revision != expected {
@@ -71,6 +78,17 @@ func (s *Server) runAction(w http.ResponseWriter, r *http.Request, player string
 			return profile.ErrNoChange
 		}
 		result, err := apply(record)
+		if economy.CommittedRefusal(err) {
+			errors.As(err, &refusal)
+			response, err := json.Marshal(refusalResponse{Error: refusal.Message, Code: string(refusal.Code)})
+			if err != nil {
+				return err
+			}
+			record.Server.Remember(profile.ActionReceipt{
+				RequestID: envelope.RequestID, Status: http.StatusUnprocessableEntity, Response: response,
+			})
+			return nil
+		}
 		if errors.As(err, &refusal) || errors.As(err, &badRequest) {
 			return profile.ErrNoChange
 		}
@@ -98,6 +116,9 @@ func (s *Server) runAction(w http.ResponseWriter, r *http.Request, player string
 		writeRevision(w, record.Revision)
 		writeError(w, http.StatusConflict, "profile was changed since revision "+strconv.FormatInt(expected, 10))
 	case refusal != nil:
+		if refusal.Code == economy.OutcomeMismatch {
+			s.log.Warn("battle outcome mismatch", "player", player, "request", envelope.RequestID)
+		}
 		writeRevision(w, record.Revision)
 		writeJSON(w, http.StatusUnprocessableEntity, refusalResponse{
 			Error: refusal.Message, Code: string(refusal.Code), Revision: record.Revision, Profile: record.Profile,
@@ -155,6 +176,7 @@ func (s *Server) refill(w http.ResponseWriter, r *http.Request, player string) {
 
 type genericActionBody struct {
 	Action string `json:"action"`
+	Duel   string `json:"duel"`
 }
 
 func (s *Server) playerAction(w http.ResponseWriter, r *http.Request, player string) {
@@ -163,20 +185,33 @@ func (s *Server) playerAction(w http.ResponseWriter, r *http.Request, player str
 		if err := json.Unmarshal(body, &request); err != nil || request.Action == "" {
 			return nil, errors.New(`body must be {"request_id", "action", ...}`)
 		}
+		duels := guildDuels{server: s, player: player}
+		if request.Action == economy.ActionBattleStart && request.Duel != "" {
+			duels.opponent, duels.opponentErr = s.fetchDuelOpponent(player, request.Duel)
+		}
 		return func(record *profile.Record) (any, error) {
-			duels := guildDuels{server: s, player: player}
-			next, result, err := economy.ActWithDuels(s.catalog, record.Profile, &record.Server, request.Action, body,
-				s.now(), duels)
-			if err != nil {
+			next, result, err := economy.ActWith(s.catalog, record.Profile, &record.Server, request.Action, body,
+				s.now(), economy.Env{Duels: duels, Seeds: s.battleSeeds})
+			if err != nil && !economy.CommittedRefusal(err) {
 				return nil, err
 			}
 			record.Profile = next
-			if request.Action == economy.ActionBattle {
-				if err := s.creditOnslaught(record, player, result); err != nil {
-					return nil, err
+			if request.Action == economy.ActionBattle || request.Action == economy.ActionBattleStart {
+				if creditErr := s.creditBattle(record, player, result); creditErr != nil {
+					return nil, creditErr
 				}
 			}
-			return result, nil
+			return result, err
 		}, nil
 	})
+}
+
+func (s *Server) creditBattle(record *profile.Record, player string, result economy.BattleResult) error {
+	if err := s.creditOnslaught(record, player, result); err != nil {
+		return err
+	}
+	if result.Settled != nil {
+		return s.creditOnslaught(record, player, *result.Settled)
+	}
+	return nil
 }

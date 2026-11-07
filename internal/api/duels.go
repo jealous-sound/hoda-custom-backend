@@ -11,8 +11,10 @@ import (
 )
 
 type guildDuels struct {
-	server *Server
-	player string
+	server      *Server
+	player      string
+	opponent    *economy.DuelOpponent
+	opponentErr error
 }
 
 func (s *Server) duelMember(player, member string) (guild.Member, error) {
@@ -43,6 +45,31 @@ func (d guildDuels) DuelLevel(member string) (int, error) {
 		return 0, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
 	}
 	return opponent.Level, nil
+}
+
+func (d guildDuels) DuelOpponent(member string) (economy.DuelOpponent, error) {
+	if d.opponentErr != nil {
+		return economy.DuelOpponent{}, d.opponentErr
+	}
+	if d.opponent == nil || d.opponent.ID != member {
+		return economy.DuelOpponent{}, &economy.Refusal{Code: economy.Unavailable, Message: "no duel opponent loaded"}
+	}
+	return *d.opponent, nil
+}
+
+func (s *Server) fetchDuelOpponent(player, member string) (*economy.DuelOpponent, error) {
+	if _, err := s.duelMember(player, member); err != nil {
+		return nil, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
+	}
+	record, err := s.profiles.Get(member)
+	if err != nil {
+		return nil, &economy.Refusal{Code: economy.Unavailable, Message: "the member has no profile"}
+	}
+	opponent, err := economy.DuelOpponentFrom(member, record.Profile, s.now())
+	if err != nil {
+		return nil, err
+	}
+	return &opponent, nil
 }
 
 func (s *Server) duelOpponent(w http.ResponseWriter, r *http.Request, player string) {

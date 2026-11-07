@@ -69,6 +69,7 @@ type NexusNode struct {
 }
 
 type NexusDifficulty struct {
+	ID         string
 	EnergyCost int
 	PotionCost int
 	Nodes      []NexusNode
@@ -115,6 +116,7 @@ type PvpEvents struct {
 	WinBannersPeakBonus       int               `json:"win_banners_peak_bonus"`
 	WinBannersStepsToPeak     int               `json:"win_banners_steps_to_peak"`
 	WinBannersDeclineSlowdown int               `json:"win_banners_decline_slowdown"`
+	WinBannersFloorPct        int               `json:"win_banners_floor_pct"`
 	LossBanners               int               `json:"loss_banners"`
 	TopBotBanners             int64             `json:"top_bot_banners"`
 	LadderBanners             int               `json:"ladder_banners"`
@@ -220,8 +222,9 @@ type rawNexusEvent struct {
 	UnlockKey    int    `json:"unlock_key"`
 	UnlockKeyQty int    `json:"unlock_key_qty"`
 	Difficulties []struct {
-		EnergyCost int `json:"energy_cost"`
-		PotionCost int `json:"potion_cost"`
+		ID         string `json:"id"`
+		EnergyCost int    `json:"energy_cost"`
+		PotionCost int    `json:"potion_cost"`
 		Nodes      []struct {
 			Gold         int   `json:"gold"`
 			XP           int   `json:"xp"`
@@ -411,7 +414,9 @@ func (c *Catalog) parseNexus(events []rawNexusEvent) error {
 			return fmt.Errorf("nexus %s has %d difficulties", raw.ID, len(raw.Difficulties))
 		}
 		for _, rawDifficulty := range raw.Difficulties {
-			difficulty := NexusDifficulty{EnergyCost: rawDifficulty.EnergyCost, PotionCost: rawDifficulty.PotionCost}
+			difficulty := NexusDifficulty{
+				ID: rawDifficulty.ID, EnergyCost: rawDifficulty.EnergyCost, PotionCost: rawDifficulty.PotionCost,
+			}
 			if len(rawDifficulty.Nodes) == 0 || len(rawDifficulty.Nodes) > NexusMaxNodes {
 				return fmt.Errorf("nexus %s has a difficulty with %d nodes", raw.ID, len(rawDifficulty.Nodes))
 			}

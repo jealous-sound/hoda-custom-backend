@@ -9,6 +9,8 @@ import (
 	"regexp"
 	"sync"
 	"time"
+
+	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 )
 
 var (
@@ -39,6 +41,23 @@ type ServerState struct {
 	TutorialRewards []string         `json:"tutorial_rewards,omitempty"`
 	PvpEvent        PvpEventState    `json:"pvp_event"`
 	PvpResults      []PvpEventResult `json:"pvp_results,omitempty"`
+	Battles         int64            `json:"battles,omitempty"`
+	Battle          *PendingBattle   `json:"battle,omitempty"`
+}
+
+type PendingBattle struct {
+	ID            int64         `json:"id"`
+	Mode          string        `json:"mode"`
+	Map           int           `json:"map,omitempty"`
+	Node          int           `json:"node,omitempty"`
+	Event         int           `json:"event,omitempty"`
+	Difficulty    int           `json:"difficulty,omitempty"`
+	Step          int           `json:"step,omitempty"`
+	PvpEvent      bool          `json:"pvp_event,omitempty"`
+	OpponentLevel int           `json:"opponent_level,omitempty"`
+	BannerPct     int           `json:"banner_pct,omitempty"`
+	StartedAt     int64         `json:"started_at"`
+	Replay        battle.Replay `json:"replay"`
 }
 
 type PvpEventState struct {
@@ -58,6 +77,10 @@ func (s ServerState) Clone() ServerState {
 	s.RecentActions = append([]ActionReceipt(nil), s.RecentActions...)
 	s.TutorialRewards = append([]string(nil), s.TutorialRewards...)
 	s.PvpResults = append([]PvpEventResult(nil), s.PvpResults...)
+	if s.Battle != nil {
+		pending := *s.Battle
+		s.Battle = &pending
+	}
 	return s
 }
 

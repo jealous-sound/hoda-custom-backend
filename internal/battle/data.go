@@ -196,6 +196,11 @@ func (d *Data) NexusChanger(event string) *Changer {
 	return d.nexusChangers[event]
 }
 
+func (d *Data) Knows(id string) bool {
+	_, ok := d.characters[id]
+	return ok
+}
+
 func (d *Data) RuneKnown(id string) bool {
 	_, ok := d.runesByID[id]
 	return ok

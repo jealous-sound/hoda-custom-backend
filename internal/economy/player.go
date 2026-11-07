@@ -31,6 +31,7 @@ type player struct {
 	rng     rng
 	granted Granted
 	duels   Duels
+	seeds   SeedSource
 }
 
 func openPlayer(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, now time.Time) (*player, error) {
@@ -46,7 +47,7 @@ func openPlayer(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerS
 		return nil, err
 	}
 	p := &player{
-		catalog: c, doc: doc, account: a, server: server, now: now, duels: noDuels{},
+		catalog: c, doc: doc, account: a, server: server, now: now, duels: noDuels{}, seeds: RandomSeeds,
 		granted: Granted{Heroes: []GrantedHero{}, Runes: []string{}, Gear: []string{}},
 	}
 	p.rng.state = server.StoreRNG
@@ -121,8 +122,8 @@ func (p *player) maybeAwardVoucherForWin() error {
 	return p.addVoucher(index, 1)
 }
 
-func creditedCritGold(critGold int) int64 {
-	return int64(min(max(critGold, 0), maxCreditedCrits*critGoldPerCrit))
+func creditedCritGold(crits int) int64 {
+	return int64(min(max(crits, 0), maxCreditedCrits) * critGoldPerCrit)
 }
 
 func applyPct(value int64, pct int) int64 {
