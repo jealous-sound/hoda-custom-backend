@@ -360,6 +360,27 @@ func TestPvpBattleDerivesTheOpponentFromTheSeed(t *testing.T) {
 	}
 }
 
+func TestPvpOpponentsAreDerivedAtTheirMatchTime(t *testing.T) {
+	c := mustCatalog(t)
+	matched := ruleNow.Unix() - 5*60*60
+	opponent := c.Battle.PvpLadderOpponent(5, 0, matched/battle.SecondsPerDay, 42)
+	enemy, err := c.Battle.PvpRoster(opponent)
+	if err != nil {
+		t.Fatal(err)
+	}
+	request := BattleStartRequest{
+		Mode: BattlePvp, Squad: fixtureSquad(), Enemy: enemy,
+		Opponent: PvpOpponentRequest{Kind: OpponentLadder, Seed: 42, Now: matched},
+	}
+	if _, _, err := startBattle(t, gameProfile(t, nil), &profile.ServerState{}, request, 1); err != nil {
+		t.Errorf("an opponent matched five hours ago: %v", err)
+	}
+	request.Opponent.Now = ruleNow.Unix() - 7*60*60
+	if _, _, err := startBattle(t, gameProfile(t, nil), &profile.ServerState{}, request, 1); refusalCode(err) != OpponentChanged {
+		t.Errorf("an opponent matched seven hours ago: %v", err)
+	}
+}
+
 func TestPvpEventBannersComeFromTheServer(t *testing.T) {
 	c := mustCatalog(t)
 	server := &profile.ServerState{StoreRNG: 3}

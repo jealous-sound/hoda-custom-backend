@@ -21,6 +21,7 @@ const (
 	tutorialSeedAttempts = 1024
 	tutorialCampaignMaps = 2
 	gearSlotsPerHero     = 5
+	maxMatchAgeSeconds   = 6 * 60 * 60
 )
 
 type SeedSource func() (uint32, error)
@@ -179,6 +180,17 @@ type PvpOpponentRequest struct {
 	Level    int    `json:"level"`
 	Trophies int    `json:"trophies"`
 	Banners  int    `json:"banners"`
+	Now      int64  `json:"now"`
+}
+
+func (o PvpOpponentRequest) matchedAt(now int64) (int64, error) {
+	if o.Now == 0 {
+		return now, nil
+	}
+	if o.Now > now+maxMatchAgeSeconds || o.Now < now-maxMatchAgeSeconds {
+		return 0, refuse(OpponentChanged, "the opponent was matched too long ago")
+	}
+	return o.Now, nil
 }
 
 const (
@@ -192,17 +204,22 @@ const (
 func (p *player) pvpEnemy(request BattleStartRequest) (battle.Side, *battle.Changer, battle.PvpOpponent, error) {
 	data := p.catalog.Battle
 	o := request.Opponent
-	level := p.account.Level
-	day := p.now.Unix() / battle.SecondsPerDay
-	var opponent battle.PvpOpponent
-	switch {
-	case request.Duel != "":
+	if request.Duel != "" {
 		enemy, err := p.duelEnemy(request.Duel)
 		return enemy, nil, battle.PvpOpponent{}, err
+	}
+	level := p.account.Level
+	matched, err := o.matchedAt(p.now.Unix())
+	if err != nil {
+		return battle.Side{}, nil, battle.PvpOpponent{}, err
+	}
+	day := matched / battle.SecondsPerDay
+	var opponent battle.PvpOpponent
+	switch {
 	case o.Kind == OpponentLadder && !request.Event:
 		opponent = data.PvpLadderOpponent(level, o.Trophies, day, o.Seed)
 	case o.Kind == OpponentEvent && request.Event:
-		opponent = data.PvpEventOpponent(level, o.Trophies, o.Banners, p.now.Unix(), o.Seed)
+		opponent = data.PvpEventOpponent(level, o.Trophies, o.Banners, matched, o.Seed)
 	case o.Kind == OpponentBot && request.Event:
 		if o.Bot < 0 || o.Bot >= data.PvpBotCount() {
 			return battle.Side{}, nil, opponent, refuse(Unavailable, "no pvp bot %d", o.Bot)
@@ -223,7 +240,7 @@ func (p *player) pvpEnemy(request BattleStartRequest) (battle.Side, *battle.Chan
 	}
 	var changer *battle.Changer
 	if request.Event {
-		changer = data.PvpEventChanger(data.PvpEventCycle(p.now.Unix()))
+		changer = data.PvpEventChanger(data.PvpEventCycle(matched))
 	}
 	return enemy, changer, opponent, nil
 }
