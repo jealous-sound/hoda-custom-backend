@@ -46,6 +46,21 @@ type ServerState struct {
 	BattleDay       int64            `json:"battle_day,omitempty"`
 	Battles         int64            `json:"battles,omitempty"`
 	Battle          *PendingBattle   `json:"battle,omitempty"`
+	PvpRoll         uint32           `json:"pvp_roll,omitempty"`
+	PvpMatches      int64            `json:"pvp_matches,omitempty"`
+	PvpMatch        *PvpMatch        `json:"pvp_match,omitempty"`
+}
+
+type PvpMatch struct {
+	ID       int64  `json:"id"`
+	Event    bool   `json:"event"`
+	Chosen   bool   `json:"chosen"`
+	Bot      int    `json:"bot"`
+	Squad    int    `json:"squad"`
+	Level    int    `json:"level"`
+	Trophies int    `json:"trophies"`
+	Seed     uint32 `json:"seed"`
+	At       int64  `json:"at"`
 }
 
 type PendingBattle struct {
@@ -94,6 +109,10 @@ func (s ServerState) Clone() ServerState {
 	if s.Battle != nil {
 		pending := *s.Battle
 		s.Battle = &pending
+	}
+	if s.PvpMatch != nil {
+		match := *s.PvpMatch
+		s.PvpMatch = &match
 	}
 	return s
 }

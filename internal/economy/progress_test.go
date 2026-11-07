@@ -242,7 +242,7 @@ func TestPvpBattleKeepsTheRecordOnTheServer(t *testing.T) {
 	c := mustCatalog(t)
 	raw := gameProfile(t, nil)
 	server := &profile.ServerState{StoreRNG: 3}
-	won, result, _ := fight(t, raw, server, pvpStartAt(t, OpponentLadder, 42, false, 0), true)
+	won, result, _ := fight(t, raw, server, pvpMatched(t, raw, server, false, 42), true)
 	pvp := section(won, "pvp")
 	gained := pvp["trophies"].(float64)
 	if gained < float64(c.Pvp.Trophies.MinGain) || gained > float64(c.Pvp.Trophies.MaxGain) ||
@@ -251,10 +251,10 @@ func TestPvpBattleKeepsTheRecordOnTheServer(t *testing.T) {
 		t.Errorf("after a win pvp = %v result = %+v", pvp, result)
 	}
 	entry := pvp["history"].([]any)[0].(map[string]any)
-	if entry["trophy_delta"].(float64) != gained || entry["won"] != true || entry["seed"].(float64) != 42 {
+	if entry["trophy_delta"].(float64) != gained || entry["won"] != true || entry["seed"].(float64) != float64(pvpMatchSeed(42, false, -1)) {
 		t.Errorf("history = %v", entry)
 	}
-	loss := pvpStartAt(t, OpponentLadder, 43, false, int(gained))
+	loss := pvpMatched(t, reencode(t, won), server, false, 43)
 	loss.Squad = squadOf(t, won)
 	lost, _, _ := fight(t, reencode(t, won), server, loss, false)
 	pvp = section(lost, "pvp")
@@ -262,7 +262,7 @@ func TestPvpBattleKeepsTheRecordOnTheServer(t *testing.T) {
 		pvp["trophies"].(float64) >= gained || len(pvp["history"].([]any)) != 2 {
 		t.Errorf("after a loss pvp = %v", pvp)
 	}
-	event := pvpStartAt(t, OpponentEvent, 44, true, int(pvp["trophies"].(float64)))
+	event := pvpMatched(t, reencode(t, lost), server, true, 44)
 	event.Squad = squadOf(t, lost)
 	afterEvent, _, _ := fight(t, reencode(t, lost), server, event, true)
 	if section(afterEvent, "pvp")["trophies"] != pvp["trophies"] || section(afterEvent, "pvp")["wins"].(float64) != 2 {

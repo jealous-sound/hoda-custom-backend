@@ -196,7 +196,8 @@ func (p *player) startPvp(request BattleStartRequest) (battleStart, error) {
 	if request.Event {
 		pending.BannerPct = pvpBannerPct(&p.catalog.Pvp, stats.Trophies, rival.trophies)
 	}
-	return battleStart{pending: pending, enemy: enemy, changer: changer}, nil
+	matched := request.Duel == "" && request.RevengeAt == 0
+	return battleStart{pending: pending, enemy: enemy, changer: changer, matched: matched}, nil
 }
 
 func (p *player) settlePvp(pending profile.PendingBattle, outcome battle.Outcome) (BattleResult, error) {
