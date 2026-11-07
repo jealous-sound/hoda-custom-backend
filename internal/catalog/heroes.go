@@ -15,6 +15,7 @@ const (
 	dualFactionSeparator    = "/"
 	progressionUnlockKinds  = 3
 	promotionUnlock         = 0
+	fortifyUnlock           = 1
 	minimumExtendedRowCount = 2
 )
 
@@ -65,11 +66,19 @@ type ConsumeProfile struct {
 	Worth        [TierCount]float32
 }
 
-func (p *ConsumeProfile) PromotionAt(key int) int {
+func (p *ConsumeProfile) unlockAt(key, kind int) int {
 	if key < 0 || key >= len(p.Progression) {
 		return 0
 	}
-	return p.Progression[key][promotionUnlock]
+	return p.Progression[key][kind]
+}
+
+func (p *ConsumeProfile) PromotionAt(key int) int {
+	return p.unlockAt(key, promotionUnlock)
+}
+
+func (p *ConsumeProfile) FortifySlotsAt(key int) int {
+	return p.unlockAt(key, fortifyUnlock)
 }
 
 type rawConsumeTables struct {

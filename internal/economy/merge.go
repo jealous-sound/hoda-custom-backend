@@ -22,7 +22,7 @@ var serverOwnedSections = map[string][]string{
 	"missions": {"claimed", "counters"},
 }
 
-var serverOwnedHeroFields = []string{"tier", "level", "xp", "consume_xp", "ascended"}
+var serverOwnedHeroFields = []string{"tier", "level", "xp", "consume_xp", "ascended", fortifyField}
 
 var serverOwnedRunFields = []string{
 	"committed", "reset", "current_node_step", "escrow_gold", "escrow_xp", "escrow_potions", "escrow_units", "nodes",
@@ -172,7 +172,11 @@ func keepRoster(c *catalog.Catalog, next, stored document) map[int64]bool {
 			}
 			seen[id] = true
 			for _, field := range serverOwnedHeroFields {
-				object[field] = hero[field]
+				if value, stored := hero[field]; stored {
+					object[field] = value
+				} else {
+					delete(object, field)
+				}
 			}
 			kept = append(kept, object)
 		}

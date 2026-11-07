@@ -19,6 +19,7 @@ type consumeProfile struct {
 	levelTable   []int
 	consumeTable []int
 	progression  [][3]int
+	archetype    *fortifyArchetype
 }
 
 func extendXPTable(table []int, rows int) []int {
@@ -32,7 +33,7 @@ func extendXPTable(table []int, rows int) []int {
 	return table
 }
 
-func loadConsume(data []byte) (map[string]*consumeProfile, error) {
+func loadConsume(data []byte, archetypes map[string]*fortifyArchetype) (map[string]*consumeProfile, error) {
 	var root struct {
 		XPTables     map[string][]int   `json:"xp_tables"`
 		Progressions map[string][][]int `json:"progressions"`
@@ -40,6 +41,7 @@ func loadConsume(data []byte) (map[string]*consumeProfile, error) {
 			LevelTable   string `json:"level_table"`
 			ConsumeTable string `json:"consume_table"`
 			Progression  string `json:"progression"`
+			Archetype    string `json:"archetype"`
 		} `json:"characters"`
 	}
 	if err := json.Unmarshal(data, &root); err != nil {
@@ -64,10 +66,13 @@ func loadConsume(data []byte) (map[string]*consumeProfile, error) {
 		levels, levelsOK := root.XPTables[raw.LevelTable]
 		consume, consumeOK := root.XPTables[raw.ConsumeTable]
 		progression, progressionOK := progressions[raw.Progression]
-		if !levelsOK || !consumeOK || !progressionOK {
+		archetype, archetypeOK := archetypes[raw.Archetype]
+		if !levelsOK || !consumeOK || !progressionOK || !archetypeOK {
 			return nil, fmt.Errorf("consume tables: %s names a missing table", id)
 		}
-		profiles[id] = &consumeProfile{levelTable: levels, consumeTable: consume, progression: progression}
+		profiles[id] = &consumeProfile{
+			levelTable: levels, consumeTable: consume, progression: progression, archetype: archetype,
+		}
 	}
 	return profiles, nil
 }

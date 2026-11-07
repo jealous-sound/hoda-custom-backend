@@ -38,12 +38,13 @@ func RandomSeeds() (uint32, error) {
 }
 
 type storedHero struct {
-	ID         string `json:"id"`
-	InstanceID int64  `json:"instance_id"`
-	Tier       string `json:"tier"`
-	Level      int    `json:"level"`
-	ConsumeXP  int    `json:"consume_xp"`
-	Ascended   bool   `json:"ascended"`
+	ID         string                `json:"id"`
+	InstanceID int64                 `json:"instance_id"`
+	Tier       string                `json:"tier"`
+	Level      int                   `json:"level"`
+	ConsumeXP  int                   `json:"consume_xp"`
+	Ascended   bool                  `json:"ascended"`
+	Fortify    []battle.FortifyChild `json:"fortify"`
 }
 
 type storedGear struct {
@@ -90,8 +91,13 @@ func bySlot(units []battle.Unit) []battle.Unit {
 func canonicalSide(side battle.Side) battle.Side {
 	canonical := battle.Side{Units: bySlot(side.Units), Runes: append([]string{}, side.Runes...)}
 	for i := range canonical.Units {
-		if canonical.Units[i].Gear != nil {
-			canonical.Units[i].Gear = append([]string{}, canonical.Units[i].Gear...)
+		unit := &canonical.Units[i]
+		if unit.Gear != nil {
+			unit.Gear = append([]string{}, unit.Gear...)
+		}
+		if unit.Fortify != nil {
+			unit.Fortify = append([]battle.FortifyChild{}, unit.Fortify...)
+			sort.SliceStable(unit.Fortify, func(a, b int) bool { return unit.Fortify[a].Slot < unit.Fortify[b].Slot })
 		}
 	}
 	return canonical
@@ -145,6 +151,7 @@ func (p *player) battleSquad(claimed battle.Side, runeIDs []int64) (battle.Side,
 		squad.Units = append(squad.Units, battle.Unit{
 			Slot: unit.Slot, InstanceID: hero.InstanceID, ID: hero.ID, Tier: hero.Tier, Level: hero.Level,
 			ConsumeXP: hero.ConsumeXP, Ascended: hero.Ascended || loadout.Ascended, Gear: slots,
+			Fortify: hero.Fortify,
 		})
 	}
 	used := map[int64]bool{}
