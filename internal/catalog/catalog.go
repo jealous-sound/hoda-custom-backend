@@ -5,6 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"strings"
+
+	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 )
 
 //go:embed data/*.json
@@ -172,6 +174,7 @@ type Catalog struct {
 	Tutorial         TutorialRewards
 	GearSellGold     []int
 	GearPrestigeGems int
+	Battle           *battle.Data
 
 	packIndex    map[string]int
 	missionIndex map[string]int
@@ -451,6 +454,11 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 	if err := c.loadRules(read); err != nil {
 		return nil, err
 	}
+	battleData, err := battle.Load(read)
+	if err != nil {
+		return nil, err
+	}
+	c.Battle = battleData
 	return c, nil
 }
 

@@ -10,7 +10,9 @@ import (
 
 func guildProfile(name string, level, gold int) string {
 	return fmt.Sprintf(`{"version":9,"account":{"name":%q,"level":%d,"experience":10,"energy":5,"energy_max":30,`+
-		`"stamina":8,"stamina_max":8,"gold":%d,"gems":7},"roster":{},"squads":[]}`, name, level, gold)
+		`"stamina":8,"stamina_max":8,"gold":%d,"gems":7},"roster":{"starters":[],"additions":[{"id":%q,`+
+		`"instance_id":%d,"tier":%q,"level":%d}]},"squads":[]}`, name, level, gold, guildHeroID, guildHeroInstance,
+		guildHeroTier, guildHeroLevel)
 }
 
 func (h *harness) guildPlayer(id, name string, level, gold int) string {

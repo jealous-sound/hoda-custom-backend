@@ -12,16 +12,16 @@ import (
 )
 
 type guildDuels struct {
-	server   *Server
-	player   string
-	trophies map[string]int
+	server    *Server
+	player    string
+	opponents map[string]economy.DuelOpponent
 }
 
 type duelBody struct {
 	Duel string `json:"duel"`
 }
 
-func (s *Server) duelTrophies(body []byte) map[string]int {
+func (s *Server) duelOpponents(body []byte) map[string]economy.DuelOpponent {
 	var request duelBody
 	if err := json.Unmarshal(body, &request); err != nil || request.Duel == "" {
 		return nil
@@ -34,7 +34,7 @@ func (s *Server) duelTrophies(body []byte) map[string]int {
 	if err != nil {
 		return nil
 	}
-	return map[string]int{request.Duel: opponent.Trophies}
+	return map[string]economy.DuelOpponent{request.Duel: opponent}
 }
 
 func (s *Server) duelMember(player, member string) (guild.Member, error) {
@@ -64,7 +64,18 @@ func (d guildDuels) DuelOpponent(member string) (economy.DuelMatch, error) {
 	if err != nil {
 		return economy.DuelMatch{}, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
 	}
-	return economy.DuelMatch{Name: opponent.Name, Level: opponent.Level, Trophies: d.trophies[member]}, nil
+	return economy.DuelMatch{Name: opponent.Name, Level: opponent.Level, Trophies: d.opponents[member].Trophies}, nil
+}
+
+func (d guildDuels) DuelSquad(member string) (economy.DuelOpponent, error) {
+	if _, err := d.server.duelMember(d.player, member); err != nil {
+		return economy.DuelOpponent{}, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
+	}
+	opponent, ok := d.opponents[member]
+	if !ok {
+		return economy.DuelOpponent{}, &economy.Refusal{Code: economy.Unavailable, Message: "the member has no profile"}
+	}
+	return opponent, nil
 }
 
 func (s *Server) duelOpponent(w http.ResponseWriter, r *http.Request, player string) {

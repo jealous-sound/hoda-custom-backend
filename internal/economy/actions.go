@@ -2,6 +2,7 @@ package economy
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"time"
 
@@ -11,6 +12,7 @@ import (
 
 const (
 	ActionBattle         = "battle"
+	ActionBattleStart    = "battle_start"
 	ActionNexusAward     = "nexus_award"
 	ActionNexusReset     = "nexus_reset"
 	ActionNexusUnlock    = "nexus_unlock"
@@ -44,8 +46,10 @@ func (b *BadRequest) Error() string {
 
 func (p *player) dispatch(action string, body []byte) (BattleResult, error) {
 	switch action {
+	case ActionBattleStart:
+		return decodeInto(body, p.StartBattle)
 	case ActionBattle:
-		return decodeInto(body, p.Battle)
+		return decodeInto(body, p.FinishBattle)
 	case ActionNexusAward:
 		return p.AwardNexusRun()
 	case ActionNexusReset:
@@ -84,6 +88,7 @@ type DuelMatch struct {
 
 type Duels interface {
 	DuelOpponent(memberID string) (DuelMatch, error)
+	DuelSquad(memberID string) (DuelOpponent, error)
 }
 
 type noDuels struct{}
@@ -92,27 +97,46 @@ func (noDuels) DuelOpponent(memberID string) (DuelMatch, error) {
 	return DuelMatch{}, refuse(Unavailable, "no guild to duel %q in", memberID)
 }
 
+func (noDuels) DuelSquad(memberID string) (DuelOpponent, error) {
+	return DuelOpponent{}, refuse(Unavailable, "no guild to duel %q in", memberID)
+}
+
+type Env struct {
+	Duels Duels
+	Seeds SeedSource
+}
+
 func Act(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, action string, body []byte,
 	now time.Time,
 ) (json.RawMessage, BattleResult, error) {
-	return ActWithDuels(c, raw, server, action, body, now, noDuels{})
+	return ActWith(c, raw, server, action, body, now, Env{})
 }
 
-func ActWithDuels(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, action string, body []byte,
-	now time.Time, duels Duels,
+func CommittedRefusal(err error) bool {
+	var refusal *Refusal
+	return errors.As(err, &refusal) && refusal.Committed
+}
+
+func ActWith(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, action string, body []byte,
+	now time.Time, env Env,
 ) (json.RawMessage, BattleResult, error) {
 	p, err := openPlayer(c, raw, server, now)
 	if err != nil {
 		return nil, BattleResult{}, err
 	}
-	p.duels = duels
+	if env.Duels != nil {
+		p.duels = env.Duels
+	}
+	if env.Seeds != nil {
+		p.seeds = env.Seeds
+	}
 	result, err := p.dispatch(action, body)
-	if err != nil {
+	if err != nil && !CommittedRefusal(err) {
 		return nil, BattleResult{}, err
 	}
-	encoded, err := p.close()
-	if err != nil {
-		return nil, BattleResult{}, err
+	encoded, closeErr := p.close()
+	if closeErr != nil {
+		return nil, BattleResult{}, closeErr
 	}
-	return encoded, result, nil
+	return encoded, result, err
 }

@@ -315,7 +315,11 @@ func (p *player) awardSquadXP(xp int64) error {
 	if err != nil {
 		return err
 	}
-	for _, instance := range currentSquad(p.doc) {
+	fighters := p.fighters
+	if fighters == nil {
+		fighters = currentSquad(p.doc)
+	}
+	for _, instance := range fighters {
 		if h := r.find(instance); h != nil {
 			h.awardXP(xp)
 			h.store()

@@ -10,6 +10,8 @@ import (
 	"regexp"
 	"sync"
 	"time"
+
+	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 )
 
 var (
@@ -42,6 +44,32 @@ type ServerState struct {
 	PvpResults      []PvpEventResult `json:"pvp_results,omitempty"`
 	MissionProgress map[string]int64 `json:"mission_progress,omitempty"`
 	BattleDay       int64            `json:"battle_day,omitempty"`
+	Battles         int64            `json:"battles,omitempty"`
+	Battle          *PendingBattle   `json:"battle,omitempty"`
+}
+
+type PendingBattle struct {
+	ID         int64         `json:"id"`
+	Mode       string        `json:"mode"`
+	Map        int           `json:"map,omitempty"`
+	Node       int           `json:"node,omitempty"`
+	Event      int           `json:"event,omitempty"`
+	Difficulty int           `json:"difficulty,omitempty"`
+	Step       int           `json:"step,omitempty"`
+	PvpEvent   bool          `json:"pvp_event,omitempty"`
+	Opponent   PendingRival  `json:"opponent,omitempty"`
+	BannerPct  int           `json:"banner_pct,omitempty"`
+	StartedAt  int64         `json:"started_at"`
+	Replay     battle.Replay `json:"replay"`
+}
+
+type PendingRival struct {
+	Bot      int    `json:"bot,omitempty"`
+	Squad    int    `json:"squad,omitempty"`
+	Level    int    `json:"level,omitempty"`
+	Trophies int    `json:"trophies,omitempty"`
+	Seed     uint32 `json:"seed,omitempty"`
+	Name     string `json:"name,omitempty"`
 }
 
 type PvpEventState struct {
@@ -63,6 +91,10 @@ func (s ServerState) Clone() ServerState {
 	s.TutorialRewards = append([]string(nil), s.TutorialRewards...)
 	s.PvpResults = append([]PvpEventResult(nil), s.PvpResults...)
 	s.MissionProgress = maps.Clone(s.MissionProgress)
+	if s.Battle != nil {
+		pending := *s.Battle
+		s.Battle = &pending
+	}
 	return s
 }
 

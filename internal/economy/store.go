@@ -38,8 +38,9 @@ const (
 )
 
 type Refusal struct {
-	Code    RefusalCode
-	Message string
+	Code      RefusalCode
+	Message   string
+	Committed bool
 }
 
 func (r *Refusal) Error() string {

@@ -5,6 +5,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
 
@@ -71,20 +72,21 @@ func TestUploadCannotDropAHeroOutsideAConsume(t *testing.T) {
 	}
 }
 
-func TestBattleGrantsHeroXPToTheCurrentSquad(t *testing.T) {
+func TestBattleGrantsHeroXPToTheSquadThatFought(t *testing.T) {
 	c := mustCatalog(t)
 	raw := gameProfile(t, func(doc map[string]any) {
-		withSquad(1)(doc)
+		withSquad(1, 2)(doc)
 		section(doc, "roster")["additions"].([]any)[0].(map[string]any)["xp"] = 75
 	})
-	doc, _ := mustAct(t, raw, &profile.ServerState{StoreRNG: 3}, ActionBattle,
-		`{"mode":"campaign","map":0,"node":0,"won":true}`)
+	request := campaignStart(t, 0, 0)
+	request.Squad.Units = request.Squad.Units[:1]
+	doc, _, _ := fight(t, raw, &profile.ServerState{StoreRNG: 3}, request, true)
 	fought := rosterHero(t, doc, 1)
 	if fought["xp"].(float64) != float64(75+c.Campaign[0].Nodes[0].XP) || fought["level"].(float64) != 4 {
 		t.Errorf("squad hero = %v", fought)
 	}
 	if benched := rosterHero(t, doc, 2); benched["xp"].(float64) != 0 || benched["level"].(float64) != 1 {
-		t.Errorf("benched hero gained XP: %v", benched)
+		t.Errorf("a hero in the squad who did not fight gained XP: %v", benched)
 	}
 }
 
@@ -174,22 +176,25 @@ func TestClaimedMissionsStayCompleteForTheClient(t *testing.T) {
 	}
 }
 
-func TestBattleFactsCountOncePerBattle(t *testing.T) {
-	raw := gameProfile(t, nil)
+func TestBattleFactsComeFromTheReplay(t *testing.T) {
 	server := &profile.ServerState{StoreRNG: 3}
-	doc, _ := mustAct(t, raw, server, ActionBattle,
-		`{"mode":"campaign","map":0,"node":0,"won":true,"crit_gold":99999,"damage":4000,"faction_hit":true}`)
-	counters := section(doc, "missions", "counters")
-	if counters[statCrits].(float64) != maxCreditedCrits || counters[statBattleDamage].(float64) != 4000 ||
-		counters[statFactionHits].(float64) != 1 || counters[statBattleDays].(float64) != 1 ||
-		counters[statGoldEarned].(float64) <= 0 {
-		t.Errorf("counters = %v", counters)
+	doc, _, outcome := fight(t, gameProfile(t, nil), server, campaignStart(t, 0, 0), true)
+	counter := func(name string) float64 {
+		value, _ := section(doc, "missions", "counters")[name].(float64)
+		return value
 	}
-	doc, _ = mustAct(t, reencode(t, doc), server, ActionBattle,
-		`{"mode":"campaign","map":0,"node":0,"won":true,"damage":100}`)
-	counters = section(doc, "missions", "counters")
-	if counters[statBattleDamage].(float64) != 4000 || counters[statBattleDays].(float64) != 1 {
-		t.Errorf("a second battle the same day = %v", counters)
+	wantFaction := 0.0
+	if outcome.FactionHit {
+		wantFaction = 1
+	}
+	if outcome.Damage <= 0 || counter(statCrits) != float64(min(outcome.Crits, maxCreditedCrits)) ||
+		counter(statBattleDamage) != float64(outcome.Damage) || counter(statFactionHits) != wantFaction ||
+		counter(statBattleDays) != 1 || counter(statGoldEarned) <= 0 {
+		t.Errorf("counters = %v outcome = %+v", section(doc, "missions", "counters"), outcome)
+	}
+	doc, _, second := fight(t, reencode(t, doc), server, campaignStart(t, 0, 0), false)
+	if counter(statBattleDamage) != float64(max(outcome.Damage, second.Damage)) || counter(statBattleDays) != 1 {
+		t.Errorf("a second battle the same day = %v", section(doc, "missions", "counters"))
 	}
 }
 
@@ -225,8 +230,10 @@ func TestUploadCannotForgeTrophiesOrPvpRecord(t *testing.T) {
 			t.Errorf("claimed %s on a forged pvp record: %v", mission, err)
 		}
 	}
-	if _, _, err := act(t, reencode(t, doc), server, ActionBattle,
-		`{"mode":"pvp","seed":1,"won":true,"revenge_at":1}`); refusalCode(err) != Unavailable {
+	revenge := BattleStartRequest{
+		Mode: BattlePvp, RevengeAt: 1, Squad: fixtureSquad(), Opponent: PvpOpponentRequest{Kind: OpponentRevenge, Seed: 1},
+	}
+	if _, _, err := startBattle(t, reencode(t, doc), server, revenge, 1); refusalCode(err) != Unavailable {
 		t.Errorf("revenged a defense the server never ran: %v", err)
 	}
 }
@@ -235,7 +242,7 @@ func TestPvpBattleKeepsTheRecordOnTheServer(t *testing.T) {
 	c := mustCatalog(t)
 	raw := gameProfile(t, nil)
 	server := &profile.ServerState{StoreRNG: 3}
-	won, result := mustAct(t, raw, server, ActionBattle, `{"mode":"pvp","seed":42,"bot":999,"won":true}`)
+	won, result, _ := fight(t, raw, server, pvpStartAt(t, OpponentLadder, 42, false, 0), true)
 	pvp := section(won, "pvp")
 	gained := pvp["trophies"].(float64)
 	if gained < float64(c.Pvp.Trophies.MinGain) || gained > float64(c.Pvp.Trophies.MaxGain) ||
@@ -247,30 +254,55 @@ func TestPvpBattleKeepsTheRecordOnTheServer(t *testing.T) {
 	if entry["trophy_delta"].(float64) != gained || entry["won"] != true || entry["seed"].(float64) != 42 {
 		t.Errorf("history = %v", entry)
 	}
-	lost, _ := mustAct(t, reencode(t, won), server, ActionBattle, `{"mode":"pvp","seed":43,"won":false}`)
+	loss := pvpStartAt(t, OpponentLadder, 43, false, int(gained))
+	loss.Squad = squadOf(t, won)
+	lost, _, _ := fight(t, reencode(t, won), server, loss, false)
 	pvp = section(lost, "pvp")
 	if pvp["losses"].(float64) != 1 || pvp["win_streak"].(float64) != 0 || pvp["best_win_streak"].(float64) != 1 ||
 		pvp["trophies"].(float64) >= gained || len(pvp["history"].([]any)) != 2 {
 		t.Errorf("after a loss pvp = %v", pvp)
 	}
-	event, _ := mustAct(t, reencode(t, lost), server, ActionBattle, `{"mode":"pvp","seed":44,"won":true,"event":true,"banners":30}`)
-	if section(event, "pvp")["trophies"] != pvp["trophies"] || section(event, "pvp")["wins"].(float64) != 2 {
-		t.Errorf("an event battle moved trophies: %v", section(event, "pvp"))
+	event := pvpStartAt(t, OpponentEvent, 44, true, int(pvp["trophies"].(float64)))
+	event.Squad = squadOf(t, lost)
+	afterEvent, _, _ := fight(t, reencode(t, lost), server, event, true)
+	if section(afterEvent, "pvp")["trophies"] != pvp["trophies"] || section(afterEvent, "pvp")["wins"].(float64) != 2 {
+		t.Errorf("an event battle moved trophies: %v", section(afterEvent, "pvp"))
 	}
 }
 
-type fixedDuels DuelMatch
+type fixedDuels struct {
+	match DuelMatch
+	squad DuelOpponent
+}
 
 func (d fixedDuels) DuelOpponent(string) (DuelMatch, error) {
-	return DuelMatch(d), nil
+	return d.match, nil
+}
+
+func (d fixedDuels) DuelSquad(string) (DuelOpponent, error) {
+	return d.squad, nil
 }
 
 func TestDuelTrophiesComeFromTheServer(t *testing.T) {
 	c := mustCatalog(t)
-	raw := gameProfile(t, nil)
-	next, _, err := ActWithDuels(c, raw, &profile.ServerState{StoreRNG: 3}, ActionBattle,
-		[]byte(`{"mode":"pvp","seed":5,"won":true,"duel":"rival"}`), ruleNow,
-		fixedDuels{Name: "Rival", Level: 7, Trophies: 900})
+	duels := fixedDuels{
+		match: DuelMatch{Name: "Rival", Level: 7, Trophies: 900},
+		squad: DuelOpponent{ID: "rival", Units: []DuelUnit{{Slot: 0, ID: "UNIT_HURLOCKGRUNT", Tier: "I", Level: 1}}},
+	}
+	request := BattleStartRequest{
+		Mode: BattlePvp, Duel: "rival", Squad: fixtureSquad(), Opponent: PvpOpponentRequest{Seed: 5},
+		Enemy: battle.Side{Units: []battle.Unit{{Slot: 0, ID: "UNIT_HURLOCKGRUNT", Tier: "I", Level: 1}},
+			Runes: []string{}},
+	}
+	seed, outcome := seedFor(t, request, true)
+	server := &profile.ServerState{StoreRNG: 3}
+	started, start, err := ActWith(c, gameProfile(t, nil), server, ActionBattleStart, encodeBody(t, request), ruleNow,
+		Env{Duels: duels, Seeds: fixedSeed(seed)})
+	if err != nil {
+		t.Fatal(err)
+	}
+	claim := BattleRequest{BattleID: start.BattleID, Won: true, CritGold: battle.CritGoldFor(outcome.Crits)}
+	next, _, err := finishBattle(t, started, server, claim)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -311,14 +343,31 @@ func TestDefensesAndRevengeRunOnTheServer(t *testing.T) {
 	if lost == nil {
 		t.Fatalf("no lost defense to revenge in %v", history)
 	}
-	body := `{"mode":"pvp","won":true,"seed":` + itoa(int64(lost["seed"].(float64))) +
-		`,"revenge_at":` + itoa(int64(lost["at"].(float64))) + `}`
-	revenged, _ := mustAct(t, reencode(t, doc), server, ActionBattle, body)
+	opponent := battle.PvpOpponent{
+		Bot: int(lost["bot"].(float64)), Squad: int(lost["squad"].(float64)), Level: int(lost["level"].(float64)),
+		Seed: uint32(lost["seed"].(float64)),
+	}
+	enemy, err := c.Battle.PvpRoster(opponent)
+	if err != nil {
+		t.Fatal(err)
+	}
+	_, squad := strongerProfile(t)
+	revenge := BattleStartRequest{
+		Mode: BattlePvp, RevengeAt: int64(lost["at"].(float64)), Squad: squad, Enemy: enemy,
+		Opponent: PvpOpponentRequest{Kind: OpponentRevenge, Seed: opponent.Seed},
+	}
+	withHeroes := reencode(t, doc)
+	stronger := asMap(t, withHeroes)
+	for _, hero := range section(stronger, "roster")["additions"].([]any) {
+		hero.(map[string]any)["tier"], hero.(map[string]any)["level"] = "IV", 30
+	}
+	section(stronger, "account")["energy"] = 99
+	revenged, _, _ := fight(t, reencode(t, stronger), server, revenge, true)
 	attack := section(revenged, "pvp")["history"].([]any)[0].(map[string]any)
 	if attack["opponent_trophies"] != lost["opponent_trophies"] || attack["level"] != lost["level"] {
 		t.Errorf("revenge fought %v instead of %v", attack, lost)
 	}
-	if _, _, err := act(t, reencode(t, revenged), server, ActionBattle, body); refusalCode(err) != Unavailable {
+	if _, _, err := startBattle(t, reencode(t, revenged), server, revenge, 1); refusalCode(err) != Unavailable {
 		t.Errorf("revenged twice: %v", err)
 	}
 }

@@ -33,12 +33,14 @@ type Server struct {
 	openUnregistered      bool
 	trustCloudflareHeader bool
 	limiters              limiters
+	battleSeeds           economy.SeedSource
 }
 
 type Config struct {
 	OpenUnregistered      bool
 	TrustCloudflareHeader bool
 	Limits                Limits
+	BattleSeeds           economy.SeedSource
 }
 
 func NewServer(
@@ -49,7 +51,7 @@ func NewServer(
 		accounts: accounts, profiles: profiles, sessions: sessions, catalog: shopCatalog, guilds: guilds,
 		reports: reports, now: now, log: log, openUnregistered: config.OpenUnregistered,
 		trustCloudflareHeader: config.TrustCloudflareHeader,
-		limiters:              newLimiters(config.Limits, now),
+		limiters:              newLimiters(config.Limits, now), battleSeeds: config.BattleSeeds,
 	}
 }
 

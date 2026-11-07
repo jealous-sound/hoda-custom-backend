@@ -1,0 +1,126 @@
+{
+ "version": 1,
+ "characters": [
+  {
+   "id": "UNIT_VEILWARDEN",
+   "based_on": "UNIT_SOLAS",
+   "name": "Veilwarden Ithriel",
+   "name_ru": "Страж Завесы Итриэль",
+   "icon": {
+    "I": "tex.em_mw_veilwarden_t1_pt",
+    "II": "tex.em_mw_veilwarden_t2_pt",
+    "III": "tex.em_mw_veilwarden_t3_pt",
+    "IV": "tex.em_mw_veilwarden_t4_pt"
+   },
+   "rarity": "Legendary",
+   "stars": 3,
+   "role": "Attack",
+   "giant": false,
+   "speed": "Normal",
+   "faction": "White/Blue",
+   "faction_id": 10,
+   "groups": [
+    "Apostate",
+    "Inquisition",
+    "Mage",
+    "Elves"
+   ],
+   "groups_en": [
+    "Apostates",
+    "Inquisition",
+    "Mages",
+    "Elves"
+   ],
+   "groups_ru": [
+    "Отступники",
+    "Инквизиция",
+    "Маги",
+    "Эльфы"
+   ],
+   "faction_en": "White, Blue",
+   "faction_ru": "белая, синяя",
+   "specialties": [
+    "ATTACKALL",
+    "CURSEPOWER",
+    "CURSEHEALTH",
+    "POWERGAIN"
+   ],
+   "gear_slots": 4,
+   "has_prestige_slot": true,
+   "obtainable": true,
+   "ability": {
+    "key": "ABILITY_DAMAGE_ALL_CURSEPOWER_AND_CURSEHEALTH",
+    "text": "Attacks all enemies and curses them, negating and preventing health and power gain for one turn.",
+    "text_ru": "Атакует всех врагов и накладывает на них проклятие, отнимая приращенные силу и здоровье, а также возможность приращивать их в течение одного хода.",
+    "target": "All",
+    "mechanics": [
+     "ATTACK",
+     "CURSE_POWER",
+     "CURSE_HEALTH"
+    ]
+   },
+   "equipped_rune": "aura_plus25healthpowercurseresist_to_spiritsdemonsinquisitionbluefaction_and_healthpower50_on_ally_death",
+   "equipped_rune_text": "<color=green>+25% Health, Power and curse resist for Spirits, Demons, Inquisition and blue faction (stacking). Gains 50% Health and Power when allies die.</color>",
+   "equipped_rune_text_ru": "<color=green>+25 % здоровья, силы и сопротивления проклятиям для духов, демонов, Инквизиции и синей фракции (суммируется). Получает по 50 % здоровья и силы при смерти союзников.</color>",
+   "target_weight": "",
+   "target_weight_text": "",
+   "target_weight_text_ru": "",
+   "models": {
+    "I": "unit.em_mw_veilwarden_t1_pre",
+    "II": "unit.em_mw_veilwarden_t2_pre",
+    "III": "unit.em_mw_veilwarden_t3_pre",
+    "IV": "unit.em_mw_veilwarden_t4_pre"
+   },
+   "vfx": [
+    "fx_imp_Solas"
+   ],
+   "tiers": {
+    "I": {
+     "base_power": 517,
+     "max_power": 1438,
+     "base_health": 2659,
+     "max_health": 7285,
+     "max_level": 80,
+     "power_per_level": 12,
+     "health_per_level": 59,
+     "max_fortify_power": 4012,
+     "max_fortify_health": 20328
+    },
+    "II": {
+     "base_power": 620,
+     "max_power": 1689,
+     "base_health": 3191,
+     "max_health": 8755,
+     "max_level": 85,
+     "power_per_level": 13,
+     "health_per_level": 66,
+     "max_fortify_power": 4712,
+     "max_fortify_health": 24427
+    },
+    "III": {
+     "base_power": 726,
+     "max_power": 1953,
+     "base_health": 3733,
+     "max_health": 10312,
+     "max_level": 90,
+     "power_per_level": 14,
+     "health_per_level": 74,
+     "max_fortify_power": 5448,
+     "max_fortify_health": 28771
+    },
+    "IV": {
+     "base_power": 784,
+     "max_power": 2279,
+     "base_health": 4221,
+     "max_health": 11711,
+     "max_level": 95,
+     "power_per_level": 16,
+     "health_per_level": 80,
+     "max_fortify_power": 6360,
+     "max_fortify_health": 32674
+    }
+   },
+   "max_tier": "IV"
+  }
+ ]
+}

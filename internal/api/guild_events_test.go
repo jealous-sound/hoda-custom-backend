@@ -10,7 +10,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
+	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
 )
 
 const createOpenGuild = `{"request_id":"create-guild-1","name":"Champions","description":"Kirkwall",` +
@@ -101,11 +103,6 @@ func (h *harness) onslaught(player, token string, cycle int64) onslaughtResult {
 	return result
 }
 
-func eventBattle(id int) string {
-	return fmt.Sprintf(`{"request_id":"event-battle-%d","action":"battle","mode":"pvp","seed":7,"won":true,`+
-		`"event":true,"banners":%d}`, id, 1000)
-}
-
 func TestOnslaughtCountsBannersOfMembersFromTheEventStart(t *testing.T) {
 	h := newHarness(t)
 	shop, err := catalog.Default()
@@ -128,11 +125,11 @@ func TestOnslaughtCountsBannersOfMembersFromTheEventStart(t *testing.T) {
 	minimum := events.ForCycle(cycle).GuildMinimumBanners
 	banners := 0
 	for battle := 0; banners < minimum; battle++ {
-		result := h.act("local", leader, revision, eventBattle(battle))
+		result := h.battle("local", leader, revision, fmt.Sprintf("event-%d", battle), h.eventStart(9, 7))
 		revision, banners = result.Revision, banners+result.Granted.Banners
 	}
-	allyResult := h.act("ally", ally, 1, eventBattle(100))
-	h.act("late", late, 1, eventBattle(200))
+	allyResult := h.battle("ally", ally, 1, "event-100", h.eventStart(9, 7))
+	h.battle("late", late, 1, "event-200", h.eventStart(9, 7))
 
 	standings := h.onslaught("local", leader, cycle)
 	want := banners + allyResult.Granted.Banners
@@ -231,21 +228,42 @@ func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
 		t.Fatal(err)
 	}
 	rewards := shop.Pvp.Rewards
-	duel := h.act("local", leader, 2,
-		`{"request_id":"duel-battle-1","action":"battle","mode":"pvp","seed":7,"won":true,"duel":"ally"}`)
-	if want := int64(rewards.WinGoldBase + rewards.WinGoldPerLevel*14); duel.Granted.Gold != want {
-		t.Fatalf("duel gold = %d, want %d", duel.Granted.Gold, want)
+	duelStart := economy.BattleStartRequest{
+		Mode: economy.BattlePvp, Duel: "ally", Squad: guildSquad(),
+		Enemy: battle.Side{Units: []battle.Unit{{Slot: 0, ID: "UNIT_VIVIENNE", Tier: "II", Level: 9}},
+			Runes: []string{"rune-power-1"}},
+	}
+	duel := h.battle("local", leader, 2, "duel-battle-1", duelStart)
+	if want := int64(rewards.WinGoldBase + rewards.WinGoldPerLevel*14); duel.Granted.Gold < want {
+		t.Fatalf("duel gold = %d, want at least %d", duel.Granted.Gold, want)
 	}
 	trophies := shop.Pvp.Trophies
 	if want := trophies.BaseGain + 120/trophies.PointsPerStep; duel.Granted.TrophyDelta != want {
 		t.Fatalf("duel against 120 trophies gained %d, want %d", duel.Granted.TrophyDelta, want)
 	}
-	response, body = h.do("POST", "/v1/players/local/actions", leader, fmt.Sprint(duel.Revision),
-		`{"request_id":"duel-battle-2","action":"battle","mode":"pvp","seed":7,"won":true,"duel":"ally","event":true}`)
+	eventDuel := `{"request_id":"duel-battle-2","action":"battle_start","mode":"pvp","duel":"ally","event":true}`
+	response, body = h.do("POST", "/v1/players/local/actions", leader, fmt.Sprint(duel.Revision), eventDuel)
 	expectStatus(t, response, body, http.StatusUnprocessableEntity)
-	response, body = h.do("POST", "/v1/players/stranger/actions", stranger, "1",
-		`{"request_id":"duel-battle-3","action":"battle","mode":"pvp","seed":7,"won":true,"duel":"ally"}`)
+	strangerDuel, _ := json.Marshal(map[string]any{
+		"request_id": "duel-battle-3", "action": "battle_start", "mode": "pvp", "duel": "ally", "squad": guildSquad(),
+		"enemy": duelStart.Enemy,
+	})
+	response, body = h.do("POST", "/v1/players/stranger/actions", stranger, "1", string(strangerDuel))
 	expectStatus(t, response, body, http.StatusUnprocessableEntity)
+	changed := duelStart
+	changed.Squad = h.storedSquad("local")
+	changed.Enemy = battle.Side{Units: []battle.Unit{{Slot: 0, ID: "UNIT_VIVIENNE", Tier: "I", Level: 1}},
+		Runes: []string{}}
+	changedBody, _ := json.Marshal(changed)
+	var fields map[string]any
+	_ = json.Unmarshal(changedBody, &fields)
+	fields["request_id"], fields["action"] = "duel-battle-4", economy.ActionBattleStart
+	changedBody, _ = json.Marshal(fields)
+	response, body = h.do("POST", "/v1/players/local/actions", leader, fmt.Sprint(duel.Revision), string(changedBody))
+	expectStatus(t, response, body, http.StatusUnprocessableEntity)
+	if !strings.Contains(body, `"code":"opponent_changed"`) {
+		t.Fatalf("a weaker duel opponent was accepted: %s", body)
+	}
 }
 
 func (h *harness) guilds(t *testing.T, player, token string) {

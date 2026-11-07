@@ -3,7 +3,9 @@ package economy
 import (
 	"encoding/json"
 
+	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
+	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
 
 type nexusState struct {
@@ -86,60 +88,101 @@ func (p *player) activeDifficulty(n *nexusState) (int, *catalog.NexusEvent, *cat
 	return eventIndex, event, &event.Difficulties[difficultyIndex], nil
 }
 
-func (p *player) nexusBattle(request BattleRequest) (BattleResult, error) {
-	n, err := p.loadNexus()
-	if err != nil {
-		return BattleResult{}, err
-	}
+func (p *player) nexusStep(n *nexusState, request BattleStartRequest) (int, *catalog.NexusEvent,
+	*catalog.NexusDifficulty, error,
+) {
 	eventIndex, event, difficulty, err := p.activeDifficulty(n)
 	if err != nil {
-		return BattleResult{}, err
+		return 0, nil, nil, err
 	}
-	if request.Revive {
-		potions := n.int(n.section, "potions")
-		if potions < 1 {
-			return BattleResult{}, refuse(CantAfford, "a revive needs a potion")
-		}
-		n.section.setInt("potions", potions-1)
-		n.run["reset"] = false
+	if request.Revive && n.int(n.section, "potions") < 1 {
+		return 0, nil, nil, refuse(CantAfford, "a revive needs a potion")
 	}
-	if n.run.boolField("reset") {
-		return BattleResult{}, refuse(Unavailable, "the nexus run needs a revive")
+	if n.run.boolField("reset") && !request.Revive {
+		return 0, nil, nil, refuse(Unavailable, "the nexus run needs a revive")
 	}
 	step := request.Step
 	current := int(n.int(n.run, "current_node_step"))
 	last := len(difficulty.Nodes)
 	if step < 1 || step > last || step != current || (step == last && n.int(n.nodes[step-1], "wins") > 0) {
-		return BattleResult{}, refuse(Unavailable, "nexus step %d is not the next battle", step)
+		return 0, nil, nil, refuse(Unavailable, "nexus step %d is not the next battle", step)
 	}
-	committed := n.run.boolField("committed")
 	remaining := n.arrayValues("remaining_runs", catalog.NexusMaxEvents)
-	if !committed && event.MaxRuns > 0 && remaining[eventIndex] <= 0 {
-		return BattleResult{}, refuse(Unavailable, "no nexus runs left for %s", event.ID)
+	if !n.run.boolField("committed") && event.MaxRuns > 0 && remaining[eventIndex] <= 0 {
+		return 0, nil, nil, refuse(Unavailable, "no nexus runs left for %s", event.ID)
+	}
+	return eventIndex, event, difficulty, nil
+}
+
+func (p *player) startNexus(request BattleStartRequest) (battleStart, error) {
+	n, err := p.loadNexus()
+	if err != nil {
+		return battleStart{}, err
+	}
+	eventIndex, event, difficulty, err := p.nexusStep(n, request)
+	if err != nil {
+		return battleStart{}, err
+	}
+	enemy, changer, err := nexusEnemy(p.catalog, event, difficulty, request.Step)
+	if err != nil {
+		return battleStart{}, err
+	}
+	pending := profile.PendingBattle{
+		Event: eventIndex, Difficulty: int(n.int(n.run, "difficulty_index")), Step: request.Step,
+	}
+	return battleStart{pending: pending, enemy: enemy, changer: changer}, nil
+}
+
+func (p *player) commitNexusStep(request BattleStartRequest, start *battleStart) error {
+	n, err := p.loadNexus()
+	if err != nil {
+		return err
+	}
+	eventIndex, event, difficulty, err := p.nexusStep(n, request)
+	if err != nil {
+		return err
+	}
+	if request.Revive {
+		n.section.setInt("potions", n.int(n.section, "potions")-1)
+		n.run["reset"] = false
 	}
 	if err := p.account.spendEnergy(int64(difficulty.EnergyCost)); err != nil {
-		return BattleResult{}, err
+		return err
 	}
-	if !committed {
+	if !n.run.boolField("committed") {
 		n.run["committed"] = true
+		remaining := n.arrayValues("remaining_runs", catalog.NexusMaxEvents)
 		if event.MaxRuns > 0 && remaining[eventIndex] > 0 {
 			remaining[eventIndex]--
 			n.events["remaining_runs"] = numberArray(remaining)
 		}
 	}
-	progress := n.nodes[step-1]
-	result := BattleResult{Escrowed: true}
-	if !request.Won {
-		progress.setInt("losses", saturatingAdd(n.int(progress, "losses"), 1))
-		n.run["reset"] = difficulty.PotionCost > 0
-		result.RunStep = int64(current)
+	return nil
+}
+
+func (p *player) settleNexus(pending profile.PendingBattle, outcome battle.Outcome) (BattleResult, error) {
+	n, err := p.loadNexus()
+	if err != nil {
+		return BattleResult{}, err
+	}
+	eventIndex, _, difficulty, err := p.activeDifficulty(n)
+	current := int(n.int(n.run, "current_node_step"))
+	result := BattleResult{Escrowed: true, RunStep: int64(current)}
+	if err != nil || eventIndex != pending.Event || int(n.int(n.run, "difficulty_index")) != pending.Difficulty ||
+		current != pending.Step || pending.Step < 1 || pending.Step > len(difficulty.Nodes) {
 		return result, nil
 	}
-	node := difficulty.Nodes[step-1]
+	progress := n.nodes[pending.Step-1]
+	if !outcome.Won {
+		progress.setInt("losses", saturatingAdd(n.int(progress, "losses"), 1))
+		n.run["reset"] = difficulty.PotionCost > 0
+		return result, nil
+	}
+	node := difficulty.Nodes[pending.Step-1]
 	progress.setInt("wins", saturatingAdd(n.int(progress, "wins"), 1))
 	result.NodeWins = n.int(progress, "wins")
 	goldPct, xpPct := p.runeBonus()
-	result.Gold = applyPct(saturatingAdd(int64(max(node.Gold, 0)), creditedCritGold(request.CritGold)), goldPct)
+	result.Gold = applyPct(saturatingAdd(int64(max(node.Gold, 0)), creditedCritGold(outcome.Crits)), goldPct)
 	result.XP = applyPct(int64(max(node.XP, 0)), xpPct)
 	if err := p.maybeAwardVoucherForWin(); err != nil {
 		return BattleResult{}, err
@@ -159,7 +202,7 @@ func (p *player) nexusBattle(request BattleRequest) (BattleResult, error) {
 	if err := p.awardSquadXP(result.XP); err != nil {
 		return BattleResult{}, err
 	}
-	if current < last {
+	if current < len(difficulty.Nodes) {
 		current++
 		n.run.setInt("current_node_step", int64(current))
 	}

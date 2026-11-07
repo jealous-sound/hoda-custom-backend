@@ -91,7 +91,8 @@ in place of its own, and `granted`: the heroes with their instance ids, runes, g
 - Both actions need `If-Match` with the current revision (`409` otherwise). A repeated `request_id` replays the
   first answer without charging again, so a client can retry after a dropped reply.
 - Refusals are `422 {"error", "code", "revision", "profile"}` with `code` one of `cant_afford`, `inventory_full`, `unavailable`,
-  `counter_limit`, `offer_changed`, `already_full`, `bad_profile`.
+  `counter_limit`, `offer_changed`, `already_full`, `bad_profile`, and for battles `squad_changed`, `opponent_changed`,
+  `outcome_mismatch`.
 - Tutorial packs from `tutorial_rewards.json` are scripted once per player and only while the tutorial runs.
 
 ## Economy
@@ -120,9 +121,10 @@ Everything that grants or spends goes through `POST /v1/players/{id}/actions`:
 
 | `action` | Fields | |
 | --- | --- | --- |
-| `battle` | `mode: "campaign"`, `map`, `node`, `won`, `crit_gold` | spends the node's energy, pays first win, mastery, challenge or grind rewards from `campaign_maps.json` |
-| `battle` | `mode: "pvp"`, `seed`, `bot`, `won`, `crit_gold`, `event`, `banners`, `duel` or `revenge_at` | spends 1 stamina; the opponent comes from the seed, the server's trophies and the day (a duel from the member's stored level and trophies, a revenge from a lost defense in the server's history); trophies, streaks and history are updated, then due defenses run; event banners are capped per win and milestones paid once |
-| `battle` | `mode: "nexus"`, `step`, `won`, `crit_gold`, `revive` | spends energy (and a potion to revive), escrows gold, XP, potions and a unit roll |
+| `battle_start` | `mode: "campaign"`, `map`, `node`, battle inputs | checks the node is unlocked, spends its energy, issues the seed |
+| `battle_start` | `mode: "pvp"`, `opponent`, `event`, `duel` or `revenge_at`, battle inputs | spends 1 stamina; the opponent comes from the seed, the server's trophies and the match time (a duel from the member's stored squad, level and trophies, a revenge from a lost defense in the server's history) |
+| `battle_start` | `mode: "nexus"`, `step`, `revive`, battle inputs | checks the step and runs left, spends energy (and a potion to revive) |
+| `battle` | `battle_id`, `won`, `crit_gold` | replays the started battle and pays the server's result: first win, mastery, challenge or grind rewards from `campaign_maps.json`; PvP gold and XP by the opponent's level, trophies, streaks and history, then due defenses, event banners per win and milestones once; Nexus escrow of gold, XP, potions and a unit roll |
 | `nexus_award` / `nexus_reset` | | pays the escrow and rolls the units / abandons the run |
 | `consume` | `target`, `seeds` | consumes seed heroes that are in no squad into the target: hero XP, consume XP and tier-ups from `consume_tables.json`; the seeds and their gear are gone |
 | `pvp_defend` | | runs the simulated defenses due since the last check (at most three); the client sends it at startup |
@@ -134,20 +136,59 @@ Everything that grants or spends goes through `POST /v1/players/{id}/actions`:
 | `tutorial_reward` | `reward: "giant" \| "gem_pack" \| "parting_gift"` | once each |
 
 Rune gold and XP bonuses come from the active runes of `current_squad`, and every battle's XP also goes to each hero
-in that squad, up to the hero's level cap for its tier (five more once ascended). Crit gold is credited up to 100
-crits. The client still reports who won; the deterministic battle simulation is not replayed here yet.
+that fought, up to the hero's level cap for its tier (five more once ascended). Crit gold is credited up to 100 crits.
 
 Missions are counted on the server. Campaign, level, hero, collection, squad and PvP stats are read from the
 server's own state; the other counters grow only from actions: summons from purchases, gold from everything but
 mission rewards, consumes and combines from `consume`, rune activations from uploads, challenge attempts, crits,
-battle days (UTC) and event banners from battles. A battle also reports its biggest `damage`, a `faction_hit` and,
-in an event, whether the squad was `buffed`; like `won`, these are trusted until battles are replayed. A mission
-is claimable once the server has seen its stat reach the target, even if it later drops.
+battle days (UTC) and event banners from battles. A battle's biggest damage, whether it landed a faction hit and,
+in an event, whether the whole squad was buffed come from the server's replay. A mission is claimable once the
+server has seen its stat reach the target, even if it later drops.
 
-The pack catalog, hero pool (with factions and per-tier level caps), consume tables, runes, gear, tutorial rewards,
-campaign, Nexus, PvP rules, missions and new-player roster are embedded from `internal/catalog/data`, copied
-from the client's `data/` by `scripts/sync-client-data.sh`; `go test` fails when the copies drift from a client
-checkout next to this one.
+## Battle replay
+
+The server decides every battle by replaying the client's deterministic simulation. `internal/battle` is a Go port of
+the client's `source/battle_sim.c` with the data it reads: hero stats by tier and level, consume crit chance,
+ascension, intrinsic passives, gear and rune effects, ability recipes (the built-in table comes from the client's
+`tests/golden/battle_recipes.json`), campaign and Nexus rosters, game changers and PvP opponents. Float math stays in
+float32 with every product rounded before it is added, so results do not depend on the CPU fusing multiply-adds.
+
+Golden tests in `internal/battle` replay `testdata/battle_replays.json`, battles the C simulation recorded (every hero
+at least twice, all modes, gear, runes and game changers), and require the same outcome, crit count, damage, faction
+hit, squad buff and SHA-256 of the whole action timeline, plus the same campaign and Nexus rosters, game changers and
+PvP opponents. The client regenerates the corpus with `make golden`; `scripts/sync-client-data.sh` copies it with the
+data, and `go test` fails when either drifts from a client checkout next to this one.
+
+Battle inputs in `battle_start` are the cells the client is about to simulate:
+
+| Field | |
+| --- | --- |
+| `squad` | `{"units": [{"slot", "instance_id", "id", "tier", "level", "consume_xp", "ascended", "gear": [5 ids]}], "runes": [def ids]}` |
+| `rune_ids` | the uuids of the squad's active runes, in slot order |
+| `enemy` | `{"units": [{"slot", "id", "tier", "level"}], "runes": [def ids]}` |
+| `changer` | the game changer the client applies, `{"effects": [{"groups", "units", "faction_mask", "health_pct", "power_pct"}]}`, or `null` |
+| `opponent` | PvP only: `{"kind": "ladder" \| "event" \| "bot" \| "revenge", "seed", "bot", "banners", "now"}` |
+| `revenge_at` | PvP revenge only: the time of the lost defense in the server's history |
+| `tutorial_outcome` | optional `"victory"` or `"defeat"`; only while the tutorial runs, on the first two maps |
+
+The server rebuilds the squad from its stored roster, gear and rune activations (runes must be activated and not
+expired) and the enemy from its own data: the campaign or Nexus roster and the event's game changer; the PvP opponent
+from the seed, the server's trophies, the player's level and a match time at most six hours old (event battles also
+take the client's banners or chosen bot); a revenge from the lost defense; or a duel member's current squad. A
+difference is refused as `squad_changed` or `opponent_changed` before anything is spent. The server then rolls a
+random seed (or, for `tutorial_outcome`, searches forward from it for the scripted result, as the client does),
+stores the pending battle in the server state and answers `{"battle_id", "seed"}`.
+
+`battle` replays the pending battle. The server pays its own outcome and crit count; PvP event banners come from the
+derived opponent's trophy gain. If the client's `won` or `crit_gold` differ, the battle is still settled with the
+replayed result and the answer is `422 outcome_mismatch` with the new profile, so a false win pays nothing and a hidden
+loss still counts. A battle that is never finished settles the same way at the next `battle_start`, under `settled` in
+its answer. A `battle` without `battle_id` (clients before this change) is refused as `unavailable`.
+
+The pack catalog, hero pool (with factions and per-tier level caps), runes, gear, tutorial rewards, campaign, Nexus,
+PvP rules, missions, new-player roster and the battle data (characters, custom heroes, intrinsic passives, ability
+recipes, consume tables, rosters and game changers) are embedded from `internal/catalog/data`, copied from the client
+by `scripts/sync-client-data.sh`; `go test` fails when the copies drift from a client checkout next to this one.
 
 ## Guilds
 

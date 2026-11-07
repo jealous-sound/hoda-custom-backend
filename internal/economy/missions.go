@@ -6,6 +6,7 @@ import (
 	"slices"
 	"time"
 
+	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
@@ -101,12 +102,12 @@ func (p *player) count(stat string, amount int64) {
 	p.counters.add(stat, amount)
 }
 
-func (p *player) recordBattleFacts(request BattleRequest) {
-	p.count(statCrits, creditedCritGold(request.CritGold)/critGoldPerCrit)
-	if request.Damage > 0 {
-		p.counters.raise(statBattleDamage, min(request.Damage, math.MaxInt32))
+func (p *player) recordBattleFacts(outcome battle.Outcome) {
+	p.count(statCrits, int64(min(max(outcome.Crits, 0), maxCreditedCrits)))
+	if outcome.Damage > 0 {
+		p.counters.raise(statBattleDamage, min(outcome.Damage, math.MaxInt32))
 	}
-	if request.FactionHit {
+	if outcome.FactionHit {
 		p.count(statFactionHits, 1)
 	}
 	if day := pvpDay(p.now.Unix()); day != p.server.BattleDay {

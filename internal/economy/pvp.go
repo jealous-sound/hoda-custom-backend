@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"time"
 
+	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
@@ -169,30 +170,56 @@ func (p *player) payMilestones(result *BattleResult) error {
 	return nil
 }
 
-func (p *player) pvpBattle(request BattleRequest) (BattleResult, error) {
+func pvpBannerPct(rules *catalog.PvpRules, trophies, opponentTrophies int) int {
+	span := rules.Trophies.MaxGain - rules.Trophies.MinGain
+	floor := rules.Events.WinBannersFloorPct
+	if span <= 0 {
+		return floor
+	}
+	gain := trophyGain(rules, trophies, opponentTrophies)
+	return floor + (percent-floor)*(gain-rules.Trophies.MinGain)/span
+}
+
+func (p *player) startPvp(request BattleStartRequest) (battleStart, error) {
+	stats := readPvpStats(p.doc)
+	rival, enemy, changer, err := p.pvpRival(request, &stats)
+	if err != nil {
+		return battleStart{}, err
+	}
+	if err := stats.write(p.doc); err != nil {
+		return battleStart{}, err
+	}
+	pending := profile.PendingBattle{PvpEvent: request.Event, Opponent: profile.PendingRival{
+		Bot: rival.bot, Squad: rival.squad, Level: rival.level, Trophies: rival.trophies, Seed: rival.seed,
+		Name: rival.name,
+	}}
+	if request.Event {
+		pending.BannerPct = pvpBannerPct(&p.catalog.Pvp, stats.Trophies, rival.trophies)
+	}
+	return battleStart{pending: pending, enemy: enemy, changer: changer}, nil
+}
+
+func (p *player) settlePvp(pending profile.PendingBattle, outcome battle.Outcome) (BattleResult, error) {
 	rules := &p.catalog.Pvp
 	stats := readPvpStats(p.doc)
-	opponent, err := p.pvpOpponent(request, &stats)
-	if err != nil {
-		return BattleResult{}, err
-	}
-	if err := p.account.spendStamina(pvpStaminaCost); err != nil {
-		return BattleResult{}, err
+	rival := pvpOpponent{
+		bot: pending.Opponent.Bot, squad: pending.Opponent.Squad, level: pending.Opponent.Level,
+		trophies: pending.Opponent.Trophies, seed: pending.Opponent.Seed, name: pending.Opponent.Name,
 	}
 	result := BattleResult{}
-	gold := pvpGold(rules, opponent.level, request.Won)
-	if request.Event {
+	gold := pvpGold(rules, rival.level, outcome.Won)
+	if pending.PvpEvent {
 		p.syncPvpEvent()
 		state := &p.server.PvpEvent
 		earned := rules.Events.LossBanners
-		if request.Won {
-			earned = min(max(request.Banners, 0), maxBannersPerWin(&rules.Events, state.Banners))
+		if outcome.Won {
+			earned = maxBannersPerWin(&rules.Events, state.Banners) * pending.BannerPct / percent
 		}
 		state.Banners += earned
 		result.Banners = earned
 		result.Cycle = state.Cycle
 		p.count(statEventBanners, int64(earned))
-		if request.Buffed && !state.Buffed {
+		if outcome.SquadBuffed && !state.Buffed {
 			state.Buffed = true
 			p.count(statEventBuffedSquads, 1)
 		}
@@ -204,13 +231,13 @@ func (p *player) pvpBattle(request BattleRequest) (BattleResult, error) {
 		result.Gems = milestones.Gems
 		result.EventRank = pvpEventRank(rules, state.Banners, state.Cycle, p.now.Unix()%rules.Events.DurationSeconds)
 	}
-	result.TrophyDelta = p.recordAttack(&stats, opponent, request.Won, request.Event, result.Banners)
+	result.TrophyDelta = p.recordAttack(&stats, rival, outcome.Won, pending.PvpEvent, result.Banners)
 	p.simulateDefense(&stats)
 	if err := stats.write(p.doc); err != nil {
 		return BattleResult{}, err
 	}
-	xp := pvpXP(rules, opponent.level, request.Won)
-	return result, p.payBattle(&result, gold, xp, request.CritGold, request.Won)
+	xp := pvpXP(rules, rival.level, outcome.Won)
+	return result, p.payBattle(&result, gold, xp, outcome.Crits, outcome.Won)
 }
 
 func ClaimGuildAward(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, reward catalog.PvpReward,
