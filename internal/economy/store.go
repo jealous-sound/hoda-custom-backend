@@ -105,6 +105,9 @@ func Purchase(
 	if err := p.run(request); err != nil {
 		return nil, Granted{}, err
 	}
+	if err := syncMissions(c, doc, server, now); err != nil {
+		return nil, Granted{}, err
+	}
 	encoded, err := doc.encode()
 	if err != nil {
 		return nil, Granted{}, err

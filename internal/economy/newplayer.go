@@ -3,6 +3,7 @@ package economy
 import (
 	"encoding/json"
 	"slices"
+	"strconv"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 )
@@ -81,7 +82,7 @@ func newPlayerEconomy(c *catalog.Catalog, upload document) document {
 			"completions": zeroGrid(catalog.CampaignMaxMaps, catalog.CampaignMaxNodes),
 			"node_losses": zeros(catalog.CampaignMaxMaps * catalog.CampaignMaxNodes),
 		},
-		"missions": map[string]any{"claimed": []any{}},
+		"missions": map[string]any{"claimed": []any{}, "counters": map[string]any{}},
 		"roster":   map[string]any(starterRoster(c, upload)),
 		"gear":     map[string]any{"inventory": map[string]any{}, "heroes": []any{}, "tomes": json.Number("0")},
 		"runes":    map[string]any(starterRuneSet(upload)),
@@ -107,7 +108,12 @@ func starterRoster(c *catalog.Catalog, upload document) document {
 				continue
 			}
 			allowed = slices.Delete(allowed, at, at+1)
-			kept = append(kept, map[string]any{"id": name, "instance_id": object["instance_id"], "ascended": false})
+			hero, _ := c.Hero(name)
+			kept = append(kept, map[string]any{
+				"id": name, "instance_id": object["instance_id"], "tier": hero.InitialTier,
+				"level": json.Number(strconv.Itoa(newHeroLevel)), "xp": json.Number("0"), "consume_xp": json.Number("0"),
+				"ascended": false,
+			})
 			next = max(next, id+1)
 		}
 	}

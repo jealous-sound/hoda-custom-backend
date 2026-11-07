@@ -71,8 +71,32 @@ func (h *harness) winningSeed(request economy.BattleStartRequest) (uint32, battl
 	return 0, battle.Outcome{}
 }
 
+func (h *harness) storedSquad(player string) battle.Side {
+	h.t.Helper()
+	record, err := h.profiles.Get(player)
+	if err != nil {
+		h.t.Fatal(err)
+	}
+	var stored struct {
+		Roster struct {
+			Additions []battle.Unit `json:"additions"`
+		} `json:"roster"`
+	}
+	if err := json.Unmarshal(record.Profile, &stored); err != nil {
+		h.t.Fatal(err)
+	}
+	squad := guildSquad()
+	for _, hero := range stored.Roster.Additions {
+		if hero.InstanceID == squad.Units[0].InstanceID {
+			squad.Units[0].Tier, squad.Units[0].Level, squad.Units[0].ConsumeXP = hero.Tier, hero.Level, hero.ConsumeXP
+		}
+	}
+	return squad
+}
+
 func (h *harness) battle(player, token string, revision int64, id string, request economy.BattleStartRequest) revisioned {
 	h.t.Helper()
+	request.Squad = h.storedSquad(player)
 	seed, outcome := h.winningSeed(request)
 	*h.seed = seed
 	body := map[string]any{"request_id": id + "-start", "action": economy.ActionBattleStart}
@@ -109,7 +133,7 @@ func TestAMismatchedClaimIsRefusedButTheReplaySettles(t *testing.T) {
 		t.Fatal(err)
 	}
 	request := economy.BattleStartRequest{
-		Mode: economy.BattlePvp, Squad: guildSquad(), Enemy: enemy,
+		Mode: economy.BattlePvp, Squad: h.storedSquad("local"), Enemy: enemy,
 		Opponent: economy.PvpOpponentRequest{Kind: economy.OpponentLadder, Seed: 11},
 	}
 	seed, outcome := h.winningSeed(request)

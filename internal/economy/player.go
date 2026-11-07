@@ -23,15 +23,17 @@ const (
 )
 
 type player struct {
-	catalog *catalog.Catalog
-	doc     document
-	account *account
-	server  *profile.ServerState
-	now     time.Time
-	rng     rng
-	granted Granted
-	duels   Duels
-	seeds   SeedSource
+	catalog  *catalog.Catalog
+	doc      document
+	account  *account
+	server   *profile.ServerState
+	now      time.Time
+	rng      rng
+	granted  Granted
+	duels    Duels
+	counters missionCounters
+	seeds    SeedSource
+	fighters []int64
 }
 
 func openPlayer(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, now time.Time) (*player, error) {
@@ -63,6 +65,9 @@ func openPlayer(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerS
 
 func (p *player) close() (json.RawMessage, error) {
 	p.account.store()
+	if err := p.syncMissions(); err != nil {
+		return nil, err
+	}
 	encoded, err := p.doc.encode()
 	if err != nil {
 		return nil, err
@@ -74,6 +79,7 @@ func (p *player) close() (json.RawMessage, error) {
 
 func (p *player) addGold(amount int64) {
 	p.account.Gold = saturatingAdd(p.account.Gold, amount)
+	p.count(statGoldEarned, amount)
 }
 
 func (p *player) addGems(amount int64) {

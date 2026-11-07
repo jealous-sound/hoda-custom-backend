@@ -1,6 +1,7 @@
 package api
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"net/http"
@@ -11,10 +12,29 @@ import (
 )
 
 type guildDuels struct {
-	server      *Server
-	player      string
-	opponent    *economy.DuelOpponent
-	opponentErr error
+	server    *Server
+	player    string
+	opponents map[string]economy.DuelOpponent
+}
+
+type duelBody struct {
+	Duel string `json:"duel"`
+}
+
+func (s *Server) duelOpponents(body []byte) map[string]economy.DuelOpponent {
+	var request duelBody
+	if err := json.Unmarshal(body, &request); err != nil || request.Duel == "" {
+		return nil
+	}
+	record, err := s.profiles.Get(request.Duel)
+	if err != nil {
+		return nil
+	}
+	opponent, err := economy.DuelOpponentFrom(request.Duel, record.Profile, s.now())
+	if err != nil {
+		return nil
+	}
+	return map[string]economy.DuelOpponent{request.Duel: opponent}
 }
 
 func (s *Server) duelMember(player, member string) (guild.Member, error) {
@@ -39,37 +59,23 @@ func refusalFor(code guild.Code, message string) error {
 	return &guild.Refusal{Code: code, Message: message}
 }
 
-func (d guildDuels) DuelLevel(member string) (int, error) {
+func (d guildDuels) DuelOpponent(member string) (economy.DuelMatch, error) {
 	opponent, err := d.server.duelMember(d.player, member)
 	if err != nil {
-		return 0, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
+		return economy.DuelMatch{}, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
 	}
-	return opponent.Level, nil
+	return economy.DuelMatch{Name: opponent.Name, Level: opponent.Level, Trophies: d.opponents[member].Trophies}, nil
 }
 
-func (d guildDuels) DuelOpponent(member string) (economy.DuelOpponent, error) {
-	if d.opponentErr != nil {
-		return economy.DuelOpponent{}, d.opponentErr
+func (d guildDuels) DuelSquad(member string) (economy.DuelOpponent, error) {
+	if _, err := d.server.duelMember(d.player, member); err != nil {
+		return economy.DuelOpponent{}, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
 	}
-	if d.opponent == nil || d.opponent.ID != member {
-		return economy.DuelOpponent{}, &economy.Refusal{Code: economy.Unavailable, Message: "no duel opponent loaded"}
+	opponent, ok := d.opponents[member]
+	if !ok {
+		return economy.DuelOpponent{}, &economy.Refusal{Code: economy.Unavailable, Message: "the member has no profile"}
 	}
-	return *d.opponent, nil
-}
-
-func (s *Server) fetchDuelOpponent(player, member string) (*economy.DuelOpponent, error) {
-	if _, err := s.duelMember(player, member); err != nil {
-		return nil, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
-	}
-	record, err := s.profiles.Get(member)
-	if err != nil {
-		return nil, &economy.Refusal{Code: economy.Unavailable, Message: "the member has no profile"}
-	}
-	opponent, err := economy.DuelOpponentFrom(member, record.Profile, s.now())
-	if err != nil {
-		return nil, err
-	}
-	return &opponent, nil
+	return opponent, nil
 }
 
 func (s *Server) duelOpponent(w http.ResponseWriter, r *http.Request, player string) {

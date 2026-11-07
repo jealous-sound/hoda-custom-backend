@@ -27,6 +27,7 @@ type BattleStartRequest struct {
 	Enemy           battle.Side        `json:"enemy"`
 	Changer         *battle.Changer    `json:"changer"`
 	TutorialOutcome string             `json:"tutorial_outcome"`
+	RevengeAt       int64              `json:"revenge_at"`
 }
 
 type BattleRequest struct {
@@ -36,24 +37,25 @@ type BattleRequest struct {
 }
 
 type BattleResult struct {
-	Won       bool          `json:"won"`
-	Gold      int64         `json:"gold"`
-	Gems      int64         `json:"gems"`
-	XP        int64         `json:"xp"`
-	FirstWin  bool          `json:"first_win,omitempty"`
-	Mastered  bool          `json:"mastered,omitempty"`
-	Banners   int           `json:"banners,omitempty"`
-	Escrowed  bool          `json:"escrowed,omitempty"`
-	LevelsUp  int           `json:"levels_up,omitempty"`
-	Granted   Granted       `json:"granted"`
-	NodeWins  int64         `json:"node_wins,omitempty"`
-	RunStep   int64         `json:"run_step,omitempty"`
-	EventRank int           `json:"event_rank,omitempty"`
-	Cycle     int64         `json:"event_cycle,omitempty"`
-	BattleID  int64         `json:"battle_id,omitempty"`
-	Seed      uint32        `json:"seed,omitempty"`
-	Crits     int           `json:"crits,omitempty"`
-	Settled   *BattleResult `json:"settled,omitempty"`
+	Won         bool          `json:"won"`
+	Gold        int64         `json:"gold"`
+	Gems        int64         `json:"gems"`
+	XP          int64         `json:"xp"`
+	FirstWin    bool          `json:"first_win,omitempty"`
+	Mastered    bool          `json:"mastered,omitempty"`
+	Banners     int           `json:"banners,omitempty"`
+	Escrowed    bool          `json:"escrowed,omitempty"`
+	LevelsUp    int           `json:"levels_up,omitempty"`
+	Granted     Granted       `json:"granted"`
+	NodeWins    int64         `json:"node_wins,omitempty"`
+	RunStep     int64         `json:"run_step,omitempty"`
+	EventRank   int           `json:"event_rank,omitempty"`
+	Cycle       int64         `json:"event_cycle,omitempty"`
+	BattleID    int64         `json:"battle_id,omitempty"`
+	Seed        uint32        `json:"seed,omitempty"`
+	Crits       int           `json:"crits,omitempty"`
+	Settled     *BattleResult `json:"settled,omitempty"`
+	TrophyDelta int           `json:"trophy_delta,omitempty"`
 }
 
 type battleStart struct {
@@ -71,11 +73,8 @@ func (p *player) StartBattle(request BattleStartRequest) (BattleResult, error) {
 		}
 		result.Settled = &settled
 	}
-	squad, err := p.battleSquad(request.Squad, request.RuneIDs)
-	if err != nil {
-		return BattleResult{}, err
-	}
 	var start battleStart
+	var err error
 	switch request.Mode {
 	case BattleCampaign:
 		start, err = p.startCampaign(request)
@@ -86,6 +85,10 @@ func (p *player) StartBattle(request BattleStartRequest) (BattleResult, error) {
 	default:
 		return BattleResult{}, refuse(Unavailable, "no battle mode %q", request.Mode)
 	}
+	if err != nil {
+		return BattleResult{}, err
+	}
+	squad, err := p.battleSquad(request.Squad, request.RuneIDs)
 	if err != nil {
 		return BattleResult{}, err
 	}
@@ -152,6 +155,10 @@ func (p *player) FinishBattle(request BattleRequest) (BattleResult, error) {
 func (p *player) settlePending() (BattleResult, error) {
 	pending := *p.server.Battle
 	p.server.Battle = nil
+	p.fighters = nil
+	for _, unit := range pending.Replay.Player.Units {
+		p.fighters = append(p.fighters, unit.InstanceID)
+	}
 	levelBefore := p.account.Level
 	outcome, err := p.catalog.Battle.Run(pending.Replay)
 	if err != nil {
@@ -169,6 +176,7 @@ func (p *player) settlePending() (BattleResult, error) {
 	if err != nil {
 		return BattleResult{}, err
 	}
+	p.recordBattleFacts(outcome)
 	result.Won = outcome.Won
 	result.Crits = outcome.Crits
 	result.BattleID = pending.ID
@@ -191,7 +199,7 @@ func (p *player) payBattle(result *BattleResult, gold, xp int64, crits int, won 
 	p.addGold(gold)
 	p.addGems(result.Gems)
 	p.account.awardBattleXP(xp)
-	return nil
+	return p.awardSquadXP(xp)
 }
 
 type campaignProgress struct {
@@ -304,6 +312,9 @@ func (p *player) settleCampaign(pending profile.PendingBattle, outcome battle.Ou
 		return BattleResult{}, err
 	}
 	node := maps[pending.Map].Nodes[pending.Node]
+	if node.Grind {
+		p.count(statChallenges, 1)
+	}
 	lossIndex := pending.Map*catalog.CampaignMaxNodes + pending.Node
 	result := BattleResult{}
 	if !outcome.Won {

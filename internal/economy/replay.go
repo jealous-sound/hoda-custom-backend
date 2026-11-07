@@ -173,14 +173,11 @@ func (p *player) battleSquad(claimed battle.Side, runeIDs []int64) (battle.Side,
 }
 
 type PvpOpponentRequest struct {
-	Kind     string `json:"kind"`
-	Seed     uint32 `json:"seed"`
-	Bot      int    `json:"bot"`
-	Squad    int    `json:"squad"`
-	Level    int    `json:"level"`
-	Trophies int    `json:"trophies"`
-	Banners  int    `json:"banners"`
-	Now      int64  `json:"now"`
+	Kind    string `json:"kind"`
+	Seed    uint32 `json:"seed"`
+	Bot     int    `json:"bot"`
+	Banners int    `json:"banners"`
+	Now     int64  `json:"now"`
 }
 
 func (o PvpOpponentRequest) matchedAt(now int64) (int64, error) {
@@ -198,55 +195,101 @@ const (
 	OpponentEvent   = "event"
 	OpponentBot     = "bot"
 	OpponentRevenge = "revenge"
-	OpponentDuel    = "duel"
 )
 
-func (p *player) pvpEnemy(request BattleStartRequest) (battle.Side, *battle.Changer, battle.PvpOpponent, error) {
+func (s *pvpStats) lostDefenseAt(at int64, seed uint32) *pvpBattle {
+	for i := range s.History {
+		entry := &s.History[i]
+		if entry.Defense && !entry.Won && !entry.Revenged && entry.At == at && entry.Seed == nonZeroSeed(seed) {
+			return entry
+		}
+	}
+	return nil
+}
+
+func rivalOf(opponent battle.PvpOpponent) pvpOpponent {
+	return pvpOpponent{
+		bot: opponent.Bot, squad: opponent.Squad, level: opponent.Level, trophies: opponent.Trophies,
+		seed: opponent.Seed,
+	}
+}
+
+func (p *player) pvpRival(request BattleStartRequest, stats *pvpStats) (
+	pvpOpponent, battle.Side, *battle.Changer, error,
+) {
+	exclusive := 0
+	for _, chosen := range []bool{request.Event, request.Duel != "", request.RevengeAt != 0} {
+		if chosen {
+			exclusive++
+		}
+	}
+	if exclusive > 1 {
+		return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable, "a battle is one of an event battle, a duel or a revenge")
+	}
 	data := p.catalog.Battle
 	o := request.Opponent
-	if request.Duel != "" {
+	switch {
+	case request.Duel != "":
+		match, err := p.duels.DuelOpponent(request.Duel)
+		if err != nil {
+			return pvpOpponent{}, battle.Side{}, nil, err
+		}
 		enemy, err := p.duelEnemy(request.Duel)
-		return enemy, nil, battle.PvpOpponent{}, err
+		if err != nil {
+			return pvpOpponent{}, battle.Side{}, nil, err
+		}
+		rival := pvpOpponent{
+			level: min(max(match.Level, 1), pvpMaxLevel), trophies: max(match.Trophies, 0),
+			seed: nonZeroSeed(o.Seed), name: match.Name,
+		}
+		return rival, enemy, nil, nil
+	case request.RevengeAt != 0:
+		target := stats.lostDefenseAt(request.RevengeAt, o.Seed)
+		if target == nil {
+			return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable, "no lost defense at %d to revenge",
+				request.RevengeAt)
+		}
+		target.Revenged = true
+		opponent := battle.PvpOpponent{
+			Bot: target.Bot, Squad: target.Squad, Level: min(max(target.Level, 1), pvpMaxLevel),
+			Trophies: target.OpponentTrophies, Seed: target.Seed,
+		}
+		enemy, err := data.PvpRoster(opponent)
+		if err != nil {
+			return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable, "%v", err)
+		}
+		return rivalOf(opponent), enemy, nil, nil
 	}
-	level := p.account.Level
 	matched, err := o.matchedAt(p.now.Unix())
 	if err != nil {
-		return battle.Side{}, nil, battle.PvpOpponent{}, err
+		return pvpOpponent{}, battle.Side{}, nil, err
 	}
-	day := matched / battle.SecondsPerDay
+	level, day := p.account.Level, matched/battle.SecondsPerDay
 	var opponent battle.PvpOpponent
 	switch {
-	case o.Kind == OpponentLadder && !request.Event:
-		opponent = data.PvpLadderOpponent(level, o.Trophies, day, o.Seed)
-	case o.Kind == OpponentEvent && request.Event:
-		opponent = data.PvpEventOpponent(level, o.Trophies, o.Banners, matched, o.Seed)
-	case o.Kind == OpponentBot && request.Event:
+	case !request.Event:
+		opponent = data.PvpLadderOpponent(level, stats.Trophies, day, o.Seed)
+	case o.Kind == OpponentBot:
 		if o.Bot < 0 || o.Bot >= data.PvpBotCount() {
-			return battle.Side{}, nil, opponent, refuse(Unavailable, "no pvp bot %d", o.Bot)
+			return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable, "no pvp bot %d", o.Bot)
 		}
-		opponent = data.PvpOpponentFromBot(o.Bot, level, o.Trophies, day, o.Seed)
-	case o.Kind == OpponentRevenge && !request.Event:
-		if o.Bot < 0 || o.Bot >= data.PvpBotCount() || o.Squad < 0 || o.Squad >= data.PvpSquadCount() ||
-			o.Level < 1 || o.Level > battle.PvpMaxLevel {
-			return battle.Side{}, nil, opponent, refuse(Unavailable, "no revenge against %d/%d", o.Bot, o.Squad)
-		}
-		opponent = battle.PvpOpponent{Bot: o.Bot, Squad: o.Squad, Level: o.Level, Seed: o.Seed}
+		opponent = data.PvpOpponentFromBot(o.Bot, level, stats.Trophies, day, o.Seed)
 	default:
-		return battle.Side{}, nil, opponent, refuse(Unavailable, "no pvp opponent of kind %q", o.Kind)
+		opponent = data.PvpEventOpponent(level, stats.Trophies, o.Banners, matched, o.Seed)
 	}
 	enemy, err := data.PvpRoster(opponent)
 	if err != nil {
-		return battle.Side{}, nil, opponent, refuse(Unavailable, "%v", err)
+		return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable, "%v", err)
 	}
 	var changer *battle.Changer
 	if request.Event {
 		changer = data.PvpEventChanger(data.PvpEventCycle(matched))
 	}
-	return enemy, changer, opponent, nil
+	return rivalOf(opponent), enemy, changer, nil
 }
 
 func (p *player) duelEnemy(member string) (battle.Side, error) {
-	duel, err := p.duels.DuelOpponent(member)
+	duel, err := p.duels.DuelSquad(member)
 	if err != nil {
 		return battle.Side{}, err
 	}

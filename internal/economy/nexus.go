@@ -199,6 +199,9 @@ func (p *player) settleNexus(pending profile.PendingBattle, outcome battle.Outco
 		}
 	}
 	p.account.awardBattleXP(result.XP)
+	if err := p.awardSquadXP(result.XP); err != nil {
+		return BattleResult{}, err
+	}
 	if current < len(difficulty.Nodes) {
 		current++
 		n.run.setInt("current_node_step", int64(current))

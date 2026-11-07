@@ -43,11 +43,14 @@ type Replay struct {
 }
 
 type Outcome struct {
-	Won      bool   `json:"won"`
-	Crits    int    `json:"crits"`
-	Rounds   int    `json:"rounds"`
-	Actions  int    `json:"actions"`
-	Timeline string `json:"timeline"`
+	Won         bool   `json:"won"`
+	Crits       int    `json:"crits"`
+	Rounds      int    `json:"rounds"`
+	Actions     int    `json:"actions"`
+	Timeline    string `json:"timeline"`
+	Damage      int64  `json:"damage"`
+	FactionHit  bool   `json:"faction_hit"`
+	SquadBuffed bool   `json:"squad_buffed"`
 }
 
 const CritGoldPerCrit = 10
@@ -170,10 +173,49 @@ func (d *Data) Run(r Replay) (Outcome, error) {
 	if err := s.run(player, enemy, r.Changer, r.Seed); err != nil {
 		return Outcome{}, err
 	}
+	damage, factionHit := s.playerDamage()
 	return Outcome{
 		Won: s.playerWon, Crits: s.critSwings(0), Rounds: s.rounds, Actions: len(s.actions),
-		Timeline: s.digest(),
+		Timeline: s.digest(), Damage: damage, FactionHit: factionHit, SquadBuffed: s.squadBuffed(),
 	}, nil
+}
+
+func (s *sim) playerDamage() (int64, bool) {
+	var damage int64
+	factionHit := false
+	for i := range s.actions {
+		a := &s.actions[i]
+		if a.Actor < 0 || a.Actor/SlotCount != 0 {
+			continue
+		}
+		for _, t := range a.Targets {
+			if t.Unit/SlotCount == 0 {
+				continue
+			}
+			if dealt := t.HealthDelta + t.HealthFactionDelta; dealt < 0 {
+				damage -= int64(dealt)
+			}
+			if t.HealthFactionDelta < 0 {
+				factionHit = true
+			}
+		}
+	}
+	return damage, factionHit
+}
+
+func (s *sim) squadBuffed() bool {
+	any := false
+	for slot := range SlotCount {
+		u := s.unitAt(0, slot)
+		if !u.present {
+			continue
+		}
+		if !u.gameChangerApplied {
+			return false
+		}
+		any = true
+	}
+	return any
 }
 
 func (s *sim) swingContinues(index, actor int) bool {

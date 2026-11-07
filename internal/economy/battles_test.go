@@ -20,6 +20,23 @@ func fixtureSquad() battle.Side {
 	}, Runes: []string{}}
 }
 
+func squadOf(t *testing.T, doc map[string]any) battle.Side {
+	t.Helper()
+	squad := fixtureSquad()
+	for i := range squad.Units {
+		unit := &squad.Units[i]
+		for _, entry := range section(doc, "roster")["additions"].([]any) {
+			hero := entry.(map[string]any)
+			if int64(hero["instance_id"].(float64)) == unit.InstanceID {
+				unit.Tier, unit.Level = hero["tier"].(string), int(hero["level"].(float64))
+				consume, _ := hero["consume_xp"].(float64)
+				unit.ConsumeXP = int(consume)
+			}
+		}
+	}
+	return squad
+}
+
 func squadFor(request BattleStartRequest, won bool) BattleStartRequest {
 	if !won {
 		request.Squad.Units = request.Squad.Units[:1]
@@ -69,16 +86,21 @@ func nexusStart(t *testing.T, step int) BattleStartRequest {
 
 func pvpStart(t *testing.T, kind string, seed uint32, event bool) BattleStartRequest {
 	t.Helper()
+	return pvpStartAt(t, kind, seed, event, 0)
+}
+
+func pvpStartAt(t *testing.T, kind string, seed uint32, event bool, trophies int) BattleStartRequest {
+	t.Helper()
 	c := mustCatalog(t)
 	request := BattleStartRequest{
 		Mode: BattlePvp, Event: event, Squad: fixtureSquad(), Opponent: PvpOpponentRequest{Kind: kind, Seed: seed},
 	}
 	var opponent battle.PvpOpponent
 	if event {
-		opponent = c.Battle.PvpEventOpponent(5, 0, 0, ruleNow.Unix(), seed)
+		opponent = c.Battle.PvpEventOpponent(5, trophies, 0, ruleNow.Unix(), seed)
 		request.Changer = c.Battle.PvpEventChanger(c.Battle.PvpEventCycle(ruleNow.Unix()))
 	} else {
-		opponent = c.Battle.PvpLadderOpponent(5, 0, ruleNow.Unix()/battle.SecondsPerDay, seed)
+		opponent = c.Battle.PvpLadderOpponent(5, trophies, ruleNow.Unix()/battle.SecondsPerDay, seed)
 	}
 	enemy, err := c.Battle.PvpRoster(opponent)
 	if err != nil {

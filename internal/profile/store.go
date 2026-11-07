@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"maps"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -41,29 +42,41 @@ type ServerState struct {
 	TutorialRewards []string         `json:"tutorial_rewards,omitempty"`
 	PvpEvent        PvpEventState    `json:"pvp_event"`
 	PvpResults      []PvpEventResult `json:"pvp_results,omitempty"`
+	MissionProgress map[string]int64 `json:"mission_progress,omitempty"`
+	BattleDay       int64            `json:"battle_day,omitempty"`
 	Battles         int64            `json:"battles,omitempty"`
 	Battle          *PendingBattle   `json:"battle,omitempty"`
 }
 
 type PendingBattle struct {
-	ID            int64         `json:"id"`
-	Mode          string        `json:"mode"`
-	Map           int           `json:"map,omitempty"`
-	Node          int           `json:"node,omitempty"`
-	Event         int           `json:"event,omitempty"`
-	Difficulty    int           `json:"difficulty,omitempty"`
-	Step          int           `json:"step,omitempty"`
-	PvpEvent      bool          `json:"pvp_event,omitempty"`
-	OpponentLevel int           `json:"opponent_level,omitempty"`
-	BannerPct     int           `json:"banner_pct,omitempty"`
-	StartedAt     int64         `json:"started_at"`
-	Replay        battle.Replay `json:"replay"`
+	ID         int64         `json:"id"`
+	Mode       string        `json:"mode"`
+	Map        int           `json:"map,omitempty"`
+	Node       int           `json:"node,omitempty"`
+	Event      int           `json:"event,omitempty"`
+	Difficulty int           `json:"difficulty,omitempty"`
+	Step       int           `json:"step,omitempty"`
+	PvpEvent   bool          `json:"pvp_event,omitempty"`
+	Opponent   PendingRival  `json:"opponent,omitempty"`
+	BannerPct  int           `json:"banner_pct,omitempty"`
+	StartedAt  int64         `json:"started_at"`
+	Replay     battle.Replay `json:"replay"`
+}
+
+type PendingRival struct {
+	Bot      int    `json:"bot,omitempty"`
+	Squad    int    `json:"squad,omitempty"`
+	Level    int    `json:"level,omitempty"`
+	Trophies int    `json:"trophies,omitempty"`
+	Seed     uint32 `json:"seed,omitempty"`
+	Name     string `json:"name,omitempty"`
 }
 
 type PvpEventState struct {
 	Cycle          int64 `json:"cycle"`
 	Banners        int   `json:"banners"`
 	MilestonesPaid int   `json:"milestones_paid"`
+	Buffed         bool  `json:"buffed,omitempty"`
 }
 
 type PvpEventResult struct {
@@ -77,6 +90,7 @@ func (s ServerState) Clone() ServerState {
 	s.RecentActions = append([]ActionReceipt(nil), s.RecentActions...)
 	s.TutorialRewards = append([]string(nil), s.TutorialRewards...)
 	s.PvpResults = append([]PvpEventResult(nil), s.PvpResults...)
+	s.MissionProgress = maps.Clone(s.MissionProgress)
 	if s.Battle != nil {
 		pending := *s.Battle
 		s.Battle = &pending

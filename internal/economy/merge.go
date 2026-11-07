@@ -19,8 +19,10 @@ var serverOwnedSections = map[string][]string{
 	"store":    {"opened_total", "opened_by_pack", "champion_since_legendary", "vouchers"},
 	"nexus":    {"potions", "potion_max", "keys", "events"},
 	"campaign": {"completions", "node_losses"},
-	"missions": {"claimed"},
+	"missions": {"claimed", "counters"},
 }
+
+var serverOwnedHeroFields = []string{"tier", "level", "xp", "consume_xp", "ascended"}
 
 var serverOwnedRunFields = []string{
 	"committed", "reset", "current_node_step", "escrow_gold", "escrow_xp", "escrow_potions", "escrow_units", "nodes",
@@ -52,9 +54,19 @@ func MergeUpload(c *catalog.Catalog, current profile.Record, server *profile.Ser
 		keepFields(next, stored, name, fields)
 	}
 	keepNexusRun(next, stored)
-	keepRoster(next, stored)
-	keepGear(c, next, stored)
-	keepRunes(c, next, stored, now)
+	restored := keepRoster(c, next, stored)
+	keepGear(c, next, stored, restored)
+	if activations := keepRunes(c, next, stored, now); activations > 0 {
+		if err := addMissionCounter(next, statRunesUsed, activations); err != nil {
+			return nil, err
+		}
+	}
+	if err := keepPvp(next, stored); err != nil {
+		return nil, err
+	}
+	if err := syncMissions(c, next, server, now); err != nil {
+		return nil, err
+	}
 	return next.encode()
 }
 
@@ -99,15 +111,26 @@ func keepNexusRun(next, stored document) {
 	}
 }
 
-type ownedHero struct {
-	id       string
-	ascended bool
+type storedRoster struct {
+	heroes map[int64]map[string]any
+	order  []int64
 }
 
-func storedHeroes(stored document) map[int64]ownedHero {
-	owned := map[int64]ownedHero{}
+func pinnedHero(c *catalog.Catalog, entry map[string]any) map[string]any {
+	pinned := map[string]any{}
+	for name, value := range entry {
+		pinned[name] = value
+	}
+	if h, known := readHero(c, pinned); known {
+		h.store()
+	}
+	return pinned
+}
+
+func storedHeroes(c *catalog.Catalog, stored document) storedRoster {
+	owned := storedRoster{heroes: map[int64]map[string]any{}}
 	roster, _ := stored.optionalSection("roster")
-	for _, list := range []string{"starters", "additions"} {
+	for _, list := range rosterLists {
 		entries, _ := roster.array(list)
 		for _, entry := range entries {
 			object, ok := entry.(map[string]any)
@@ -115,27 +138,26 @@ func storedHeroes(stored document) map[int64]ownedHero {
 				continue
 			}
 			id, err := numberValue(object["instance_id"], "instance_id")
-			if err != nil {
+			if err != nil || owned.heroes[id] != nil {
 				continue
 			}
-			name, _ := object["id"].(string)
-			ascended, _ := object["ascended"].(bool)
-			owned[id] = ownedHero{id: name, ascended: ascended}
+			owned.heroes[id] = pinnedHero(c, object)
+			owned.order = append(owned.order, id)
 		}
 	}
 	return owned
 }
 
-func keepRoster(next, stored document) {
-	owned := storedHeroes(stored)
-	storedRoster, _ := stored.optionalSection("roster")
+func keepRoster(c *catalog.Catalog, next, stored document) map[int64]bool {
+	owned := storedHeroes(c, stored)
+	storedSection, _ := stored.optionalSection("roster")
 	roster, err := next.section("roster")
 	if err != nil {
 		roster = document{}
 		next["roster"] = map[string]any(roster)
 	}
 	seen := map[int64]bool{}
-	for _, list := range []string{"starters", "additions"} {
+	for _, list := range rosterLists {
 		entries, _ := roster.array(list)
 		kept := []any{}
 		for _, entry := range entries {
@@ -144,25 +166,35 @@ func keepRoster(next, stored document) {
 				continue
 			}
 			id, err := numberValue(object["instance_id"], "instance_id")
-			hero, known := owned[id]
-			if err != nil || !known || seen[id] || object["id"] != hero.id {
+			hero, known := owned.heroes[id]
+			if err != nil || !known || seen[id] || object["id"] != hero["id"] {
 				continue
 			}
 			seen[id] = true
-			object["ascended"] = hero.ascended
+			for _, field := range serverOwnedHeroFields {
+				object[field] = hero[field]
+			}
 			kept = append(kept, object)
 		}
 		roster[list] = kept
 	}
-	if value, ok := storedRoster["next_instance_id"]; ok {
+	restored := map[int64]bool{}
+	for _, id := range owned.order {
+		if !seen[id] {
+			roster["additions"] = append(roster["additions"].([]any), owned.heroes[id])
+			restored[id] = true
+		}
+	}
+	if value, ok := storedSection["next_instance_id"]; ok {
 		roster["next_instance_id"] = value
 	}
 	roster.setInt("starter_count", int64(len(roster["starters"].([]any))))
+	return restored
 }
 
-func rosterInstances(doc document) map[int64]bool {
+func rosterInstances(c *catalog.Catalog, doc document) map[int64]bool {
 	instances := map[int64]bool{}
-	for id := range storedHeroes(doc) {
+	for _, id := range storedHeroes(c, doc).order {
 		instances[id] = true
 	}
 	return instances
@@ -220,14 +252,38 @@ func gearHeroFlags(gear document) map[int64]gearHero {
 	return flags
 }
 
-func keepGear(c *catalog.Catalog, next, stored document) {
+func restoreGearOf(gear, storedGear document, restored map[int64]bool) {
+	heroes, _ := gear.array("heroes")
+	present := map[int64]bool{}
+	for _, entry := range heroes {
+		object, _ := entry.(map[string]any)
+		if id, err := numberValue(object["instance_id"], "instance_id"); err == nil {
+			present[id] = true
+		}
+	}
+	storedEntries, _ := storedGear.array("heroes")
+	for _, entry := range storedEntries {
+		object, _ := entry.(map[string]any)
+		id, err := numberValue(object["instance_id"], "instance_id")
+		if err == nil && restored[id] && !present[id] {
+			heroes = append(heroes, object)
+			present[id] = true
+		}
+	}
+	gear["heroes"] = heroes
+}
+
+func keepGear(c *catalog.Catalog, next, stored document, restored map[int64]bool) {
 	storedGear, _ := stored.optionalSection("gear")
 	gear, err := next.section("gear")
 	if err != nil {
 		gear = document{}
 		next["gear"] = map[string]any(gear)
 	}
-	instances := rosterInstances(next)
+	if len(restored) > 0 {
+		restoreGearOf(gear, storedGear, restored)
+	}
+	instances := rosterInstances(c, next)
 	allowed := gearTotals(storedGear, nil)
 	uploaded := gearTotals(gear, instances)
 	forged := false
@@ -288,7 +344,7 @@ type ownedRune struct {
 	maxActivationExpiry int64
 }
 
-func keepRunes(c *catalog.Catalog, next, stored document, now time.Time) {
+func keepRunes(c *catalog.Catalog, next, stored document, now time.Time) int64 {
 	storedRunes, _ := stored.optionalSection("runes")
 	runes, err := next.section("runes")
 	if err != nil {
@@ -320,6 +376,7 @@ func keepRunes(c *catalog.Catalog, next, stored document, now time.Time) {
 	items, _ := runes.array("items")
 	kept := []any{}
 	seen := map[int64]bool{}
+	activations := int64(0)
 	for _, entry := range items {
 		object, ok := entry.(map[string]any)
 		if !ok {
@@ -340,6 +397,9 @@ func keepRunes(c *catalog.Catalog, next, stored document, now time.Time) {
 			object["expire_at"] = json.Number("0")
 		case expiry > rune.maxActivationExpiry:
 			object["expire_at"] = numberArray([]int64{rune.maxActivationExpiry})[0]
+			activations++
+		case expiry > 0:
+			activations++
 		}
 		kept = append(kept, object)
 	}
@@ -358,6 +418,7 @@ func keepRunes(c *catalog.Catalog, next, stored document, now time.Time) {
 		runes["next_uuid"] = value
 	}
 	keepPrestigeSquads(runes, storedRunes)
+	return activations
 }
 
 func keepPrestigeSquads(runes, storedRunes document) {

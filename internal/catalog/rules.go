@@ -94,8 +94,25 @@ type PvpRules struct {
 		MaxLoss       int `json:"max_loss"`
 	} `json:"trophies"`
 	Matchmaking struct {
-		LevelSpread int `json:"level_spread"`
+		WindowBelow   int `json:"window_below"`
+		WindowAbove   int `json:"window_above"`
+		BotDailyDrift int `json:"bot_daily_drift"`
+		LevelSpread   int `json:"level_spread"`
 	} `json:"matchmaking"`
+	Squads struct {
+		RatingBase            int64 `json:"rating_base"`
+		RatingPerLevel        int64 `json:"rating_per_level"`
+		RatingPerLevelSquared int64 `json:"rating_per_level_squared"`
+		RatingMaxShiftPct     int   `json:"rating_max_shift_pct"`
+		TrophiesPerShiftPct   int   `json:"trophies_per_shift_pct"`
+		Candidates            int   `json:"candidates"`
+	} `json:"squads"`
+	Defense struct {
+		AttackIntervalSeconds int64 `json:"attack_interval_seconds"`
+		MaxAttacksPerLogin    int64 `json:"max_attacks_per_login"`
+		WinPct                int   `json:"win_pct"`
+		LossSharePct          int   `json:"loss_share_pct"`
+	} `json:"defense"`
 	Rewards struct {
 		WinGoldBase     int `json:"win_gold_base"`
 		WinGoldPerLevel int `json:"win_gold_per_level"`
@@ -106,8 +123,12 @@ type PvpRules struct {
 	} `json:"rewards"`
 	Events PvpEvents `json:"events"`
 	Bots   []struct {
-		Trophies int `json:"trophies"`
+		Name     string `json:"name"`
+		Trophies int    `json:"trophies"`
 	} `json:"bots"`
+	SquadPool []struct {
+		Rating int `json:"rating"`
+	} `json:"squad_pool"`
 }
 
 type PvpEvents struct {
@@ -181,12 +202,15 @@ func (d *PvpEventDetails) GuildReward(rank int) (PvpReward, bool) {
 }
 
 type Mission struct {
-	ID     string `json:"id"`
-	Stat   string `json:"stat"`
-	Target int64  `json:"target"`
-	Gold   int    `json:"gold"`
-	Gems   int    `json:"gems"`
-	Map    int    `json:"map"`
+	ID       string `json:"id"`
+	Stat     string `json:"stat"`
+	Target   int64  `json:"target"`
+	Gold     int    `json:"gold"`
+	Gems     int    `json:"gems"`
+	Map      int    `json:"map"`
+	Rarity   Rarity `json:"rarity"`
+	HeroTier int    `json:"hero_tier"`
+	Faction  int    `json:"faction"`
 }
 
 type TutorialRewards struct {
@@ -435,7 +459,9 @@ func (c *Catalog) parseNexus(events []rawNexusEvent) error {
 
 func (c *Catalog) checkPvp() error {
 	events := c.Pvp.Events
-	if len(c.Pvp.Bots) == 0 || len(events.Catalog) == 0 || events.DurationSeconds <= 0 ||
+	if len(c.Pvp.Bots) == 0 || len(c.Pvp.SquadPool) == 0 || c.Pvp.Squads.Candidates <= 0 ||
+		c.Pvp.Squads.TrophiesPerShiftPct <= 0 || c.Pvp.Defense.AttackIntervalSeconds <= 0 ||
+		len(events.Catalog) == 0 || events.DurationSeconds <= 0 ||
 		events.WinBannersStepsToPeak <= 0 || events.WinBannersDeclineSlowdown <= 0 || events.LadderBanners <= 0 ||
 		c.Pvp.Trophies.PointsPerStep <= 0 || c.Pvp.Trophies.MaxGain <= c.Pvp.Trophies.MinGain {
 		return fmt.Errorf("pvp_rules.json is incomplete")

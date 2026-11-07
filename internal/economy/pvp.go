@@ -170,66 +170,59 @@ func (p *player) payMilestones(result *BattleResult) error {
 	return nil
 }
 
-func (p *player) pvpOpponentLevel(request BattleStartRequest) (int, error) {
-	if request.Duel == "" {
-		return pvpOpponentLevel(&p.catalog.Pvp, p.account.Level, request.Opponent.Seed), nil
-	}
-	if request.Event {
-		return 0, refuse(Unavailable, "a duel is not an event battle")
-	}
-	level, err := p.duels.DuelLevel(request.Duel)
-	if err != nil {
-		return 0, err
-	}
-	return min(max(level, 1), pvpMaxLevel), nil
-}
-
-func pvpTrophyGain(rules *catalog.PvpRules, trophies, opponentTrophies int) int {
-	t := &rules.Trophies
-	gain := t.BaseGain + (opponentTrophies-trophies)/max(t.PointsPerStep, 1)
-	return min(max(gain, t.MinGain), t.MaxGain)
-}
-
 func pvpBannerPct(rules *catalog.PvpRules, trophies, opponentTrophies int) int {
 	span := rules.Trophies.MaxGain - rules.Trophies.MinGain
 	floor := rules.Events.WinBannersFloorPct
 	if span <= 0 {
 		return floor
 	}
-	gain := pvpTrophyGain(rules, trophies, opponentTrophies)
-	return floor + (100-floor)*(gain-rules.Trophies.MinGain)/span
+	gain := trophyGain(rules, trophies, opponentTrophies)
+	return floor + (percent-floor)*(gain-rules.Trophies.MinGain)/span
 }
 
 func (p *player) startPvp(request BattleStartRequest) (battleStart, error) {
-	level, err := p.pvpOpponentLevel(request)
+	stats := readPvpStats(p.doc)
+	rival, enemy, changer, err := p.pvpRival(request, &stats)
 	if err != nil {
 		return battleStart{}, err
 	}
-	enemy, changer, opponent, err := p.pvpEnemy(request)
-	if err != nil {
+	if err := stats.write(p.doc); err != nil {
 		return battleStart{}, err
 	}
-	pending := profile.PendingBattle{PvpEvent: request.Event, OpponentLevel: level}
+	pending := profile.PendingBattle{PvpEvent: request.Event, Opponent: profile.PendingRival{
+		Bot: rival.bot, Squad: rival.squad, Level: rival.level, Trophies: rival.trophies, Seed: rival.seed,
+		Name: rival.name,
+	}}
 	if request.Event {
-		pending.BannerPct = pvpBannerPct(&p.catalog.Pvp, request.Opponent.Trophies, opponent.Trophies)
+		pending.BannerPct = pvpBannerPct(&p.catalog.Pvp, stats.Trophies, rival.trophies)
 	}
 	return battleStart{pending: pending, enemy: enemy, changer: changer}, nil
 }
 
 func (p *player) settlePvp(pending profile.PendingBattle, outcome battle.Outcome) (BattleResult, error) {
 	rules := &p.catalog.Pvp
+	stats := readPvpStats(p.doc)
+	rival := pvpOpponent{
+		bot: pending.Opponent.Bot, squad: pending.Opponent.Squad, level: pending.Opponent.Level,
+		trophies: pending.Opponent.Trophies, seed: pending.Opponent.Seed, name: pending.Opponent.Name,
+	}
 	result := BattleResult{}
-	gold := pvpGold(rules, pending.OpponentLevel, outcome.Won)
+	gold := pvpGold(rules, rival.level, outcome.Won)
 	if pending.PvpEvent {
 		p.syncPvpEvent()
 		state := &p.server.PvpEvent
 		earned := rules.Events.LossBanners
 		if outcome.Won {
-			earned = maxBannersPerWin(&rules.Events, state.Banners) * pending.BannerPct / 100
+			earned = maxBannersPerWin(&rules.Events, state.Banners) * pending.BannerPct / percent
 		}
 		state.Banners += earned
 		result.Banners = earned
 		result.Cycle = state.Cycle
+		p.count(statEventBanners, int64(earned))
+		if outcome.SquadBuffed && !state.Buffed {
+			state.Buffed = true
+			p.count(statEventBuffedSquads, 1)
+		}
 		milestones := BattleResult{}
 		if err := p.payMilestones(&milestones); err != nil {
 			return BattleResult{}, err
@@ -238,7 +231,12 @@ func (p *player) settlePvp(pending profile.PendingBattle, outcome battle.Outcome
 		result.Gems = milestones.Gems
 		result.EventRank = pvpEventRank(rules, state.Banners, state.Cycle, p.now.Unix()%rules.Events.DurationSeconds)
 	}
-	xp := pvpXP(rules, pending.OpponentLevel, outcome.Won)
+	result.TrophyDelta = p.recordAttack(&stats, rival, outcome.Won, pending.PvpEvent, result.Banners)
+	p.simulateDefense(&stats)
+	if err := stats.write(p.doc); err != nil {
+		return BattleResult{}, err
+	}
+	xp := pvpXP(rules, rival.level, outcome.Won)
 	return result, p.payBattle(&result, gold, xp, outcome.Crits, outcome.Won)
 }
 

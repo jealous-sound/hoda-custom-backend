@@ -157,7 +157,8 @@ func TestUploadCannotMintCurrencyHeroesRunesOrGear(t *testing.T) {
 		t.Errorf("account = %v nexus potions = %v", doc["account"], section(doc, "nexus")["potions"])
 	}
 	additions := section(doc, "roster")["additions"].([]any)
-	if len(additions) != 1 || additions[0].(map[string]any)["id"] != "UNIT_ARIQUN" {
+	if len(additions) != 2 || additions[0].(map[string]any)["id"] != "UNIT_ARIQUN" ||
+		additions[0].(map[string]any)["tier"] != "I" || additions[1].(map[string]any)["id"] != "UNIT_ELVENMAGE" {
 		t.Errorf("roster additions = %v", additions)
 	}
 	if items := section(doc, "runes")["items"].([]any); len(items) != 3 {
@@ -176,10 +177,7 @@ func TestUploadKeepsHonestClientChanges(t *testing.T) {
 	stored := profile.Record{Profile: gameProfile(t, nil), Revision: 1}
 	activation := ruleNow.Add(5 * time.Minute).Unix()
 	honest := gameProfile(t, func(doc map[string]any) {
-		roster := section(doc, "roster")
-		hero := roster["additions"].([]any)[0].(map[string]any)
-		hero["level"] = 9
-		roster["additions"] = []any{hero}
+		doc["squads"] = []any{[]any{2, nil, nil, nil, nil}}
 		section(doc, "gear", "inventory")["templar_longsword"] = 1
 		section(doc, "gear")["heroes"] = []any{map[string]any{"instance_id": 1, "ascended": false,
 			"prestige_unlocked": false, "slots": []any{"templar_longsword", "", ""}}}
@@ -194,12 +192,14 @@ func TestUploadKeepsHonestClientChanges(t *testing.T) {
 		t.Fatal(err)
 	}
 	doc := asMap(t, merged)
-	additions := section(doc, "roster")["additions"].([]any)
-	if len(additions) != 1 || additions[0].(map[string]any)["level"].(float64) != 9 {
-		t.Errorf("roster = %v", additions)
+	if squads := doc["squads"].([]any); squads[0].([]any)[0].(float64) != 2 {
+		t.Errorf("squads = %v", squads)
 	}
 	if number(t, doc, "gear", "inventory", "templar_longsword") != 1 {
 		t.Errorf("equipping gear was undone: %v", doc["gear"])
+	}
+	if number(t, doc, "missions", "counters", statRunesUsed) != 2 {
+		t.Errorf("rune activations were not counted: %v", section(doc, "missions")["counters"])
 	}
 	items := section(doc, "runes")["items"].([]any)
 	if items[0].(map[string]any)["expire_at"].(float64) != float64(activation) {
@@ -342,7 +342,7 @@ func TestTutorialRewardsAreGivenOnce(t *testing.T) {
 	}
 }
 
-func TestLocalSaleOrCraftUploadedFirstStillReachesItsAction(t *testing.T) {
+func TestLocalSaleCraftOrConsumeUploadedFirstStillReachesItsAction(t *testing.T) {
 	c := mustCatalog(t)
 	stored := profile.Record{Profile: gameProfile(t, func(doc map[string]any) {
 		section(doc, "gear")["heroes"] = []any{map[string]any{"instance_id": 2, "ascended": false,
@@ -369,6 +369,17 @@ func TestLocalSaleOrCraftUploadedFirstStillReachesItsAction(t *testing.T) {
 	if items := section(doc, "runes")["items"].([]any); len(items) != 3 {
 		t.Errorf("the idle runes to craft were not kept for the craft action: %v", items)
 	}
+	if additions := section(doc, "roster")["additions"].([]any); len(additions) != 2 {
+		t.Errorf("the hero to consume was not kept for the consume action: %v", additions)
+	}
 	_, _ = mustAct(t, merged, &server, ActionGearSell, `{"gear":"templar_longsword"}`)
 	_, _ = mustAct(t, merged, &server, ActionRuneCraft, `{"pairs":[[1,2]]}`)
+	consumed, _ := mustAct(t, merged, &server, ActionConsume, `{"target":1,"seeds":[2]}`)
+	if additions := section(consumed, "roster")["additions"].([]any); len(additions) != 1 {
+		t.Errorf("roster after consuming = %v", additions)
+	}
+	if heroes := section(consumed, "gear")["heroes"].([]any); len(heroes) != 0 ||
+		number(t, consumed, "gear", "inventory", "templar_longsword") != 2 {
+		t.Errorf("the consumed hero's sword came back: %v", consumed["gear"])
+	}
 }

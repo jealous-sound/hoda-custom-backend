@@ -34,10 +34,11 @@ type revisioned struct {
 		} `json:"account"`
 	} `json:"profile"`
 	Granted struct {
-		Gold      int64 `json:"gold"`
-		Gems      int64 `json:"gems"`
-		Banners   int   `json:"banners"`
-		EventRank int   `json:"event_rank"`
+		Gold        int64 `json:"gold"`
+		Gems        int64 `json:"gems"`
+		Banners     int   `json:"banners"`
+		EventRank   int   `json:"event_rank"`
+		TrophyDelta int   `json:"trophy_delta"`
 	} `json:"granted"`
 }
 
@@ -236,6 +237,10 @@ func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
 	if want := int64(rewards.WinGoldBase + rewards.WinGoldPerLevel*14); duel.Granted.Gold < want {
 		t.Fatalf("duel gold = %d, want at least %d", duel.Granted.Gold, want)
 	}
+	trophies := shop.Pvp.Trophies
+	if want := trophies.BaseGain + 120/trophies.PointsPerStep; duel.Granted.TrophyDelta != want {
+		t.Fatalf("duel against 120 trophies gained %d, want %d", duel.Granted.TrophyDelta, want)
+	}
 	eventDuel := `{"request_id":"duel-battle-2","action":"battle_start","mode":"pvp","duel":"ally","event":true}`
 	response, body = h.do("POST", "/v1/players/local/actions", leader, fmt.Sprint(duel.Revision), eventDuel)
 	expectStatus(t, response, body, http.StatusUnprocessableEntity)
@@ -246,6 +251,7 @@ func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
 	response, body = h.do("POST", "/v1/players/stranger/actions", stranger, "1", string(strangerDuel))
 	expectStatus(t, response, body, http.StatusUnprocessableEntity)
 	changed := duelStart
+	changed.Squad = h.storedSquad("local")
 	changed.Enemy = battle.Side{Units: []battle.Unit{{Slot: 0, ID: "UNIT_VIVIENNE", Tier: "I", Level: 1}},
 		Runes: []string{}}
 	changedBody, _ := json.Marshal(changed)

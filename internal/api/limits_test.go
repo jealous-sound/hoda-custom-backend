@@ -189,8 +189,43 @@ func TestClientAddressTrustsCloudflareOnlyFromItsEdge(t *testing.T) {
 		for name, value := range c.headers {
 			request.Header.Set(name, value)
 		}
-		if got := clientAddress(request); got != c.want {
+		if got := clientAddress(request, false); got != c.want {
 			t.Errorf("%s: client address %q, want %q", c.name, got, c.want)
 		}
 	}
+}
+
+func TestTrustedCloudflareHeaderWinsBehindAnotherEdge(t *testing.T) {
+	request := httptest.NewRequest("GET", "/", nil)
+	request.Header.Set(forwardedForHeader, "198.51.100.9, "+cloudflareEdge+", 152.233.43.34")
+	request.Header.Set(cloudflareClientHeader, "198.51.100.9")
+	if got := clientAddress(request, false); got != "152.233.43.34" {
+		t.Fatalf("untrusted: client address %q, want the edge hop", got)
+	}
+	if got := clientAddress(request, true); got != "198.51.100.9" {
+		t.Fatalf("trusted: client address %q, want the Cloudflare visitor", got)
+	}
+	request.Header.Del(cloudflareClientHeader)
+	if got := clientAddress(request, true); got != "152.233.43.34" {
+		t.Fatalf("trusted without the header: client address %q, want the edge hop", got)
+	}
+}
+
+func TestTrustedCloudflareHeaderSeparatesVisitorsBehindOneEdge(t *testing.T) {
+	h := newHarnessWith(t, Config{
+		TrustCloudflareHeader: true,
+		Limits:                Limits{AccountsPerAddress: ratelimit.Rule{Burst: 1, Every: time.Hour}},
+	})
+	behindRailway := func(visitor string) map[string]string {
+		return map[string]string{
+			forwardedForHeader:     visitor + ", " + cloudflareEdge + ", 152.233.43.34",
+			cloudflareClientHeader: visitor,
+		}
+	}
+	response, body := h.doFrom("POST", "/v1/players", "", "", behindRailway("198.51.100.1"))
+	expectStatus(t, response, body, http.StatusCreated)
+	response, body = h.doFrom("POST", "/v1/players", "", "", behindRailway("198.51.100.2"))
+	expectStatus(t, response, body, http.StatusCreated)
+	response, body = h.doFrom("POST", "/v1/players", "", "", behindRailway("198.51.100.1"))
+	expectTooMany(t, response, body)
 }
