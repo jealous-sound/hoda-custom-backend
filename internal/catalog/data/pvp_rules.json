@@ -7554,6 +7554,32 @@
    ]
   },
   {
+   "rating": 4358,
+   "cells": [
+    {
+     "id": "UNIT_FORESTSPIRIT",
+     "tier": "I",
+     "level": 15
+    },
+    {
+     "id": "UNIT_WEREWOLF",
+     "tier": "I",
+     "level": 14
+    },
+    {
+     "id": "UNIT_WOLF",
+     "tier": "I",
+     "level": 14
+    },
+    {
+     "id": "UNIT_SHADOWWEREWOLF",
+     "tier": "I",
+     "level": 14
+    },
+    null
+   ]
+  },
+  {
    "rating": 4599,
    "cells": [
     {
@@ -8303,32 +8329,6 @@
      "tier": "II",
      "level": 12
     }
-   ]
-  },
-  {
-   "rating": 7720,
-   "cells": [
-    {
-     "id": "UNIT_LADYOFTHEFOREST",
-     "tier": "I",
-     "level": 15
-    },
-    {
-     "id": "UNIT_WEREWOLF",
-     "tier": "I",
-     "level": 14
-    },
-    {
-     "id": "UNIT_WOLF",
-     "tier": "I",
-     "level": 14
-    },
-    {
-     "id": "UNIT_SHADOWWEREWOLF",
-     "tier": "I",
-     "level": 14
-    },
-    null
    ]
   },
   {
