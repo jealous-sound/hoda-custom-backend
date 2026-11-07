@@ -10,179 +10,15 @@
   30000
  ],
  "prestige_slot_gem_cost": 100,
- "strings": [
-  {
-   "key": "GEAR_EQUIP_EMPTY_CONFIRM",
-   "text": "Вы собираетесь надеть это снаряжение. После этого его нельзя будет снять — только заменить другим. Уверены?"
-  },
-  {
-   "key": "GEAR_EQUIP_FILLED_CONFIRM",
-   "text": "Вы собираетесь надеть это снаряжение. Будет уничтожен следующий уже используемый предмет: {0}"
-  },
-  {
-   "key": "GEAR_EQUIP_FAIL_CATEGORY_LIMIT_CONFIRM",
-   "text": "Это снаряжение нельзя надеть на этого героя. См. ограничения на использование."
-  },
-  {
-   "key": "GEAR_EQUIP_FAIL_DUPLICATE_CONFIRM",
-   "text": "На героя нельзя надевать одинаковые вещи."
-  },
-  {
-   "key": "GEAR_EQUIP_FAIL_DEFENDER_CONFIRM",
-   "text": "Это снаряжение нельзя надеть на этого героя, потому что у героя может быть только одна способность с поглощением урона."
-  },
-  {
-   "key": "GEAR_EQUIP_FAIL_INVALID_PRESTIGE_GEAR",
-   "text": "В престижную ячейку для снаряжения можно поместить только легендарное или мифическое снаряжение."
-  },
-  {
-   "key": "GEAR_SELL_BUTTON_TEXT",
-   "text": "Продать"
-  },
-  {
-   "key": "GEAR_EQUIP_BUTTON_TEXT",
-   "text": "Снарядить"
-  },
-  {
-   "key": "GEAR_SELL_MAIN_CONFIRM",
-   "text": "Вы собираетесь продать этот предмет. Уверены?"
-  },
-  {
-   "key": "GEAR_SELL_RECEIVE_CONFIRM",
-   "text": "Вы получите:"
-  },
-  {
-   "key": "GEAR_PRESTIGE_MESSAGE",
-   "text": "Сделайте своего героя престижным, чтобы получить дополнительную ячейку для легендарного или мифического снаряжения. Чтобы открыть ячейку для героя, необходимо оплатить ее стоимость самоцветами. Хотите разблокировать ячейку?"
-  },
-  {
-   "key": "GEAR_PRESTIGE_UNLOCK",
-   "text": "Разблокировать"
-  },
-  {
-   "key": "GEAR_EMPTY_INVENTORY_MESSAGE",
-   "text": "У вас нет снаряжения. Наборы снаряжения можно купить в магазине!"
-  },
-  {
-   "key": "GEAR_FILTER_ALL_TITLE",
-   "text": "Все снаряжение"
-  },
-  {
-   "key": "GEAR_FILTER_EQUIPPABLE_TITLE",
-   "text": "Надеваемое"
-  },
-  {
-   "key": "GEAR_NO_LIMITATIONS",
-   "text": "Все герои"
-  },
-  {
-   "key": "GEAR_LIMITED_TITLE",
-   "text": "<color=grey>Ограничения: </color>"
-  },
-  {
-   "key": "GEAR_REVEAL_WINDOW_TITLE",
-   "text": "Снаряжение"
-  },
-  {
-   "key": "GEAR_SELECT_HERO_HELP",
-   "text": "Выберите ячейку снаряжения (+) героя, чтобы надеть."
-  },
-  {
-   "key": "GEAR_INVENTORY_FOOTER_TEXT",
-   "text": "Подробности: нажмите на снаряжение"
-  },
-  {
-   "key": "GEAR_RARITY_COMMON",
-   "text": "<color=#d6b48f>Обычный предмет</color>"
-  },
-  {
-   "key": "GEAR_RARITY_UNCOMMON",
-   "text": "<color=#f2f2f2>Необычный предмет</color>"
-  },
-  {
-   "key": "GEAR_RARITY_RARE",
-   "text": "<color=#ffd633>Редкий предмет</color>"
-  },
-  {
-   "key": "GEAR_RARITY_EPIC",
-   "text": "<color=#ff751a>Эпический предмет</color>"
-  },
-  {
-   "key": "GEAR_RARITY_LEGENDARY",
-   "text": "<color=#33cc33>Легендарный предмет</color>"
-  },
-  {
-   "key": "GEAR_RARITY_MYTHIC",
-   "text": "<color=#FF00FF>Мифический предмет</color>"
-  },
-  {
-   "key": "GEAR_SHOW_PREVIOUS",
-   "text": "Предыдущие {0}"
-  },
-  {
-   "key": "GEAR_SHOW_NEXT",
-   "text": "Следующие {0}"
-  },
-  {
-   "key": "EVO_TOME_SLOT_LOCKED_MESSAGE",
-   "text": "Заполните все ячейки снаряжения, чтобы открыть том вознесения."
-  },
-  {
-   "key": "EVO_TOME_REQUIRED_MESSAGE",
-   "text": "Нужен том вознесения. Его можно купить в магазине."
-  },
-  {
-   "key": "EVO_TOME_USE_CONFIRM",
-   "text": "Использовать том вознесения, чтобы повысить героя до мифической редкости?"
-  },
-  {
-   "key": "EVO_TOME_EXPLAIN_DESC",
-   "text": "Мифические герои получают <color=#ffa500ff>+5 к макс. уровню</color> и <color=#ffa500ff>доп. ячейку снаряжения</color>!"
-  },
-  {
-   "key": "EVO_TOME_COUNT",
-   "text": "Томов: {0}"
-  },
-  {
-   "key": "TOME_POPUP_TITLE",
-   "text": "Том вознесения"
-  },
-  {
-   "key": "RARITY_MYTHIC",
-   "text": "Мифический"
-  },
-  {
-   "key": "ROSTER_FILTER_COMMON",
-   "text": "Обычные"
-  },
-  {
-   "key": "ROSTER_FILTER_UNCOMMON",
-   "text": "Необычные"
-  },
-  {
-   "key": "ROSTER_FILTER_RARE",
-   "text": "Редкие"
-  },
-  {
-   "key": "ROSTER_FILTER_EPIC",
-   "text": "Эпические"
-  },
-  {
-   "key": "ROSTER_FILTER_LEGENDARY",
-   "text": "Легендарные"
-  },
-  {
-   "key": "ROSTER_FILTER_MYTHIC",
-   "text": "Мифические"
-  }
- ],
  "unparsed": [],
  "items": [
   {
    "id": "aeducans_hammer",
-   "title_ru": "Молот Эдукана",
-   "description_ru": "Наследие совершенного Эдукана, передаваемое из поколения в поколение.",
-   "aura_ru": "<color=green>+10 % дополнительного урона. +20 % здоровья и +10 % сопротивления урону для гномов. +10 % шанса на двойной урон для союзников. Если использует Эдукан: +15 % сопротивления урону.</color>",
+   "title_key": "HODA_AEDUCANS_HAMMER_GEAR_TITLE",
+   "description_key": "HODA_AEDUCANS_HAMMER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_AEDUCANS_HAMMER_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_AeducansHammer.png",
    "categories": [
@@ -259,9 +95,13 @@
   },
   {
    "id": "alamarri_warstaff",
-   "title_ru": "Боевой посох аламарри",
-   "description_ru": "Столь искусно выполненным оружием одинаково удобно парировать удары и выбивать из противников дух.",
-   "aura_ru": "<color=green>+4 % шанса на двойной урон.</color> <color=green>+10 % дополнительного урона против синей фракции.</color> <color=green>Если использует вождь аламарри: +20 % сопротивления урону против белой фракции.</color>",
+   "title_key": "HODA_ALAMARRI_WARSTAFF_GEAR_TITLE",
+   "description_key": "HODA_ALAMARRI_WARSTAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS10_BONUS_DAMAGE_VS_BLUE_FACTION_DESC",
+    "HODA_GEAR_DMG_RESIST_PCT_20_VS_WHITE_FACTION_ALAMARRI_WARLORD_EQUIP_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_AlamarriWarstaff.png",
    "categories": [
@@ -316,9 +156,12 @@
   },
   {
    "id": "alchemical_concoction",
-   "title_ru": "Алхимический отвар",
-   "description_ru": "Основным ингредиентом этого таинственного и редчайшего эликсира служит кровь Серых стражей, зараженная моровой скверной.",
-   "aura_ru": "<color=red>-5 % здоровья (своего).</color> <color=green>+20 % дополнительного урона против черной фракции.</color>",
+   "title_key": "HODA_ALCHEMICAL_CONCOCTION_GEAR_TITLE",
+   "description_key": "HODA_ALCHEMICAL_CONCOCTION_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_MINUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS20_BONUS_DAMAGE_VS_BLACK_FACTION_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_AlchemicalConcoction.png",
    "categories": [
@@ -354,9 +197,12 @@
   },
   {
    "id": "antique_warden_crossbow",
-   "title_ru": "Старинный арбалет Стражей",
-   "description_ru": "Для своих лет арбалет просто в отличном состоянии. Сразу видно, что страж-разведчик, которому принадлежало это оружие, хорошо о нем заботился.",
-   "aura_ru": "<color=green>+8 % силы.</color> <color=green>+5 % дополнительного урона против моровых героев.</color>",
+   "title_key": "HODA_ANTIQUE_WARDEN_CROSSBOW_GEAR_TITLE",
+   "description_key": "HODA_ANTIQUE_WARDEN_CROSSBOW_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS8_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_VS_BLIGHT_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_AntiqueWardenCrossbow.png",
    "categories": [],
@@ -387,9 +233,11 @@
   },
   {
    "id": "apprentice_coat",
-   "title_ru": "Куртка ученика",
-   "description_ru": "Эта куртка прочнее мантии и обеспечивает лучшую защиту. Пригодится ученику, который стремится стать боевым магом.",
-   "aura_ru": "<color=green>+5 % сопротивления урону.</color>",
+   "title_key": "HODA_APPRENTICE_COAT_GEAR_TITLE",
+   "description_key": "HODA_APPRENTICE_COAT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_DAMAGE_RESIST_PERSONAL_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_ApprenticeCoat.png",
    "categories": [
@@ -412,9 +260,12 @@
   },
   {
    "id": "ardent_blossom",
-   "title_ru": "Ярый цвет",
-   "description_ru": "Потери в защите с лихвой окупит грозная сила лириума, которым начинен этот травяной шлем.",
-   "aura_ru": "<color=green>+11 % шанса на двойной урон.</color> <color=red>-4 % здоровья (своего).</color>",
+   "title_key": "HODA_ARDENT_BLOSSOM_GEAR_TITLE",
+   "description_key": "HODA_ARDENT_BLOSSOM_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS11_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_MINUS4_HEALTH_PERSONAL_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_ArdentBlossom.png",
    "categories": [
@@ -456,9 +307,15 @@
   },
   {
    "id": "arlathan_focusing_crystal",
-   "title_ru": "Арлатанский кристалл концентрации",
-   "description_ru": "Золотой янтарь помогает сосредоточиться с помощью древней техники, известной только эльфам Арлатана.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=green>+8 % шанса на двойной урон.</color> <color=green>+15 % сопротивления проклятию силы для эльфов.</color> <color=green>При попадании получите + 7 % сопротивления урону.</color> <color=green>Восприимчивость: игнорирует скрытность.</color>",
+   "title_key": "HODA_ARLATHAN_FOCUSING_CRYSTAL_GEAR_TITLE",
+   "description_key": "HODA_ARLATHAN_FOCUSING_CRYSTAL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS8_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS15CURSEPOWERRESIST_TO_ELVES_DESC",
+    "HODA_GEAR_DAMRESGAIN_SELF_7_ON_SELF_HIT_DESC",
+    "HODA_GEAR_PERCEPTIVE_SELF_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_ArlathanFocusingCrystal.png",
    "categories": [
@@ -515,9 +372,12 @@
   },
   {
    "id": "armada_captains_knife",
-   "title_ru": "Нож капитана Армады",
-   "description_ru": "Этот клинок, оставшийся от пиратов Недремлющего моря, все еще пахнет солью и кишками.",
-   "aura_ru": "<color=green>+6 % силы при попадании по герою.</color> <color=green>Снаряжение Изабеллы: +12 % дополнительного урона против воинов.</color>",
+   "title_key": "HODA_ARMADA_CAPTAINS_KNIFE_GEAR_TITLE",
+   "description_key": "HODA_ARMADA_CAPTAINS_KNIFE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS6_POWER_SELF_ON_SELF_HIT_DESC",
+    "HODA_GEAR_PLUS12_BONUS_DAMAGE_VS_WARRIOR_ISABELA_ONLY_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_ArmadaCaptainsKnife.png",
    "categories": [
@@ -567,9 +427,13 @@
   },
   {
    "id": "arms_of_the_champion",
-   "title_ru": "Наручи Защитника",
-   "description_ru": "Важная часть Накидки Защитника. Только хитрейшие из хитрых могут носить эту накидку.",
-   "aura_ru": "<color=green>+5 % шанса на двойной урон.</color> <color=orange>Гораздо чаще атакует быстрых героев.</color> <color=green>Если использует разбойник: +5 % силы.</color>",
+   "title_key": "HODA_ARMS_OF_THE_CHAMPION_GEAR_TITLE",
+   "description_key": "HODA_ARMS_OF_THE_CHAMPION_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_QUICK_TARGETING_DESC",
+    "HODA_GEAR_PLUS5_POWER_ROGUES_PERSONAL_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_ArmsOfTheChampion.png",
    "categories": [
@@ -624,9 +488,14 @@
   },
   {
    "id": "asaarash_chanfron",
-   "title_ru": "Асаарашский намордник",
-   "description_ru": "Защита для морды позволяет ездовому животному сохранять концентрацию в пылу битвы.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=green>+8 % шанса на двойной урон.</color> <color=green>+5 % дополнительного урона для союзников.</color> <color=green>+10 % сопротивления оглушению для союзников.</color>",
+   "title_key": "HODA_ASAARASH_CHANFRON_GEAR_TITLE",
+   "description_key": "HODA_ASAARASH_CHANFRON_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS8_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS5PCT_BONUS_DAMAGE_FOR_ALLIES_DESC",
+    "HODA_GEAR_PLUS10_STUN_RESIST_ALLIES_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_AsaarashChanfron.png",
    "categories": [
@@ -670,9 +539,13 @@
   },
   {
    "id": "asaarash_criniere",
-   "title_ru": "Асаарашский грива",
-   "description_ru": "Дополняет пейтрал и шанфрон, защищая шею животного.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=green>Нанося удар, вытягивает 3 % силы из врагов.</color> <color=green>+25 % здоровья для союзников-кунари.</color>",
+   "title_key": "HODA_ASAARASH_CRINIERE_GEAR_TITLE",
+   "description_key": "HODA_ASAARASH_CRINIERE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_ENEMY_POWER_DRAIN_WHEN_SELF_ATTACKED_3_DESC",
+    "HODA_AURA_PLUS25HEALTH_TO_QUNARI"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_AsaarashCriniere.png",
    "categories": [
@@ -715,9 +588,11 @@
   },
   {
    "id": "asaarash_flanchard",
-   "title_ru": "Флан Асаараша",
-   "description_ru": "Обеспечивает дополнительную защиту для боков животного.",
-   "aura_ru": "<color=green>+15 % сопротивления всем эффектам. +25 % силы для союзников-кунари.</color>",
+   "title_key": "HODA_ASAARASH_FLANCHARD_GEAR_TITLE",
+   "description_key": "HODA_ASAARASH_FLANCHARD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_ASAARASH_FLANCHARD_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_AsaarashFlanchard.png",
    "categories": [
@@ -781,9 +656,13 @@
   },
   {
    "id": "asaarash_peytral",
-   "title_ru": "Асаарашский пейтраль",
-   "description_ru": "Пейтраль помогает защитить грудь лошади и значительно увеличивает ее выживаемость во время набега.",
-   "aura_ru": "<color=green>+5 % здоровья.</color> <color=green>+5 % сопротивления урону.</color> <color=green>+5 % сопротивления оглушению.</color>",
+   "title_key": "HODA_ASAARASH_PEYTRAL_GEAR_TITLE",
+   "description_key": "HODA_ASAARASH_PEYTRAL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_STUN_RESIST_SELF_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_AsaarashPeytral.png",
    "categories": [
@@ -820,9 +699,13 @@
   },
   {
    "id": "asaarash_saddle",
-   "title_ru": "Асаарашское седло",
-   "description_ru": "Практичное, но не очень красивое седло для продолжительных сражений.",
-   "aura_ru": "<color=green>+15 % сопротивления урону.</color> <color=green>+5 % к силе союзников.</color> <color=green>+10 % снижения вытягивания силы у союзников.</color>",
+   "title_key": "HODA_ASAARASH_SADDLE_GEAR_TITLE",
+   "description_key": "HODA_ASAARASH_SADDLE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DMG_RESIST_PCT_15_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_POWER_ALLIES_DESC",
+    "HODA_GEAR_PLUS10_POWER_DRAIN_RESIST_ALLIES_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_AsaarashSaddle.png",
    "categories": [
@@ -859,9 +742,13 @@
   },
   {
    "id": "assassins_recurve",
-   "title_ru": "Изгиб убийцы",
-   "description_ru": "Создано с учетом требований великой герцогини Флорианны де Шалон.",
-   "aura_ru": "<color=green>+12 % силы.</color> <color=green>Когда враг получает урон, наносит 3 % от нанесенного урона всем врагам.</color> <color=green>Если использует Флорианна: \"Восприимчивость: игнорирует скрытность\".</color>",
+   "title_key": "HODA_ASSASSINS_RECURVE_GEAR_TITLE",
+   "description_key": "HODA_ASSASSINS_RECURVE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS12_POWER_PERSONAL_DESC",
+    "HODA_GEAR_EXPLODE_ENEMIES_3_ON_ENEMY_HIT_DESC",
+    "HODA_GEAR_PERCEPTIVE_SELF_FLORIANNE_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_AssassinsRecurve.png",
    "categories": [
@@ -908,9 +795,11 @@
   },
   {
    "id": "augurs_witchstaff",
-   "title_ru": "Посох авгура",
-   "description_ru": "Посох авгура оплота Каменный Медведь. Стук костей помогает снискать благосклонность духов.",
-   "aura_ru": "<color=green>+4 % здоровья. +6 % сопротивления проклятиям для союзников, для авваров и духов - вдвое больше.</color>",
+   "title_key": "HODA_AUGURS_WITCHSTAFF_GEAR_TITLE",
+   "description_key": "HODA_AUGURS_WITCHSTAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_AUGURS_WITCHSTAFF_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_AugursWitchstaff.png",
    "categories": [
@@ -985,9 +874,13 @@
   },
   {
    "id": "axe_of_the_dragon_hunter",
-   "title_ru": "Топор драконоборца",
-   "description_ru": "Когда-то он принадлежал знаменитому драконоборцу Нефраму Пентагасту, но был утерян в веке Стали.",
-   "aura_ru": "<color=green>+15 % шанса на двойной урон.</color> <color=green>При атаке наносит 30 % нанесенного урона вражеским драконам.</color> <color=green>Дает +5 % дополнительного урона при получении удара.</color>",
+   "title_key": "HODA_AXE_OF_THE_DRAGON_HUNTER_GEAR_TITLE",
+   "description_key": "HODA_AXE_OF_THE_DRAGON_HUNTER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_CRIT_CHANCE_15_PERSONAL_DESC",
+    "HODA_GEAR_EXPLODE_DRAGONS_30_ON_ENEMY_HIT_DESC",
+    "HODA_GEAR_BONUSDMG_SELF_SELFHIT_PLUS5_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_AxeOfTheDragonHunter.png",
    "categories": [
@@ -1030,9 +923,12 @@
   },
   {
    "id": "barbarian_lord_maul",
-   "title_ru": "Молот варвара-лорда",
-   "description_ru": "На удивление действенная каменюка на палке.",
-   "aura_ru": "<color=green>Получает +20 % силы после гибели врага.</color> <color=green>Приращивает 15 % здоровья при смерти союзника.</color>",
+   "title_key": "HODA_BARBARIAN_LORD_MAUL_GEAR_TITLE",
+   "description_key": "HODA_BARBARIAN_LORD_MAUL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS20_POWER_SELF_ON_ENEMY_DEATH_DESC",
+    "HODA_GEAR_HEALTH_ON_ALLY_DEATH_15_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_BarbarianLordMaul.png",
    "categories": [
@@ -1062,9 +958,12 @@
   },
   {
    "id": "belt_of_the_architect",
-   "title_ru": "Пояс Архитектора",
-   "description_ru": "Скорее всего, Архитектор снял этот пояс с какого-то злополучного мага.",
-   "aura_ru": "<color=green>+15 % к силе.</color> <color=green>+15 % сопротивления урону для моровых героев.</color>",
+   "title_key": "HODA_BELT_OF_THE_ARCHITECT_GEAR_TITLE",
+   "description_key": "HODA_BELT_OF_THE_ARCHITECT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS15_POWER_PERSONAL_DESC",
+    "HODA_GEAR_DMG_RESIST_PCT_15_TO_BLIGHT_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_BeltOfTheArchitect.png",
    "categories": [
@@ -1104,9 +1003,11 @@
   },
   {
    "id": "bianca",
-   "title_ru": "Бьянка",
-   "description_ru": "Знаменитый арбалет Варрика Тетраса, изготовленный инженером Хартии. Золотые руки ее тезки сделали ее образцом совершенства.",
-   "aura_ru": "<color=green>+15 % к шансу на двойной урон. После смерти союзника остальные союзники получают +7 % дополнительного урона.</color> <color=red>-25 % сопротивления проклятиям.</color> <color=green>Если использует Варрик: Скрытность: атакует, не вызывая эффектов, возникающих при попадании.</color>",
+   "title_key": "HODA_BIANCA_GEAR_TITLE",
+   "description_key": "HODA_BIANCA_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_BIANCA_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_Bianca.png",
    "categories": [
@@ -1175,9 +1076,11 @@
   },
   {
    "id": "blackmetal_torque",
-   "title_ru": "Крученый ошейник из черного металла",
-   "description_ru": "В металле этого украшения есть примеси лириума, и, застегнувшись на чьей-либо шее, оно наделяет носителя значительной силой.",
-   "aura_ru": "<color=green>+8 % силы. +10 % сопротивления урону. Если используют собаки: +15 % здоровья и +10 % шансу на двойной урон.</color>",
+   "title_key": "HODA_BLACKMETAL_TORQUE_GEAR_TITLE",
+   "description_key": "HODA_BLACKMETAL_TORQUE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_BLACKMETAL_TORQUE_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_BlackmetalTorque.png",
    "categories": [
@@ -1241,9 +1144,14 @@
   },
   {
    "id": "blade_of_tuhna_allied",
-   "title_ru": "Клинок Тюны — союз",
-   "description_ru": "Этот кинжал, созданный из красного лириума, вытягивает жизнь из всех, кто находится рядом.",
-   "aura_ru": "<color=green>+20 % дополнительного урона.</color> <color=green>Лечит на +7 % при попадании по врагу.</color> <color=red>-20 % здоровья (своего).</color> <color=green>Если используют краснолириумные герои: +20 % к здоровью.</color>",
+   "title_key": "HODA_BLADE_OF_TUHNA_ALLIED_GEAR_TITLE",
+   "description_key": "HODA_BLADE_OF_TUHNA_ALLIED_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_BONUSDMG_SELF_PLUS20_DESC",
+    "HODA_GEAR_HEALTH_SELF_ALLYATK_PLUS7_DESC",
+    "HODA_GEAR_HEALTH_SELF_MINUS20_DESC",
+    "HODA_GEAR_HEALTH_SELF_REDLYRIUM_PLUS20_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_BladeOfTuhnaAllied.png",
    "categories": [
@@ -1293,9 +1201,12 @@
   },
   {
    "id": "blood_dragon_greaves",
-   "title_ru": "Наголенники Кровавого дракона",
-   "description_ru": "Тяжелая стальная броня, защищающая обладателя от ослабляющих эффектов.",
-   "aura_ru": "<color=green>+5 % здоровья.</color> <color=green>+4 % сопротивления вытягиванию силы.</color>",
+   "title_key": "HODA_BLOOD_DRAGON_GREAVES_GEAR_TITLE",
+   "description_key": "HODA_BLOOD_DRAGON_GREAVES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS4_POWER_DRAIN_RESIST_SELF_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_BloodDragonGreaves.png",
    "categories": [
@@ -1325,9 +1236,12 @@
   },
   {
    "id": "bloodline",
-   "title_ru": "Наследие",
-   "description_ru": "Малкольм Хоук знал, что в его крови — дар Тени. Этот дар он передал дочери Бетани.",
-   "aura_ru": "<color=green>+12 % силы.</color> <color=green>+3 % шанса на двойной урон.</color>",
+   "title_key": "HODA_BLOODLINE_GEAR_TITLE",
+   "description_key": "HODA_BLOODLINE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS12_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS3_CRIT_CHANCE_SELF_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_Bloodline.png",
    "categories": [
@@ -1357,9 +1271,13 @@
   },
   {
    "id": "book_of_the_lady",
-   "title_ru": "Книга Госпожи",
-   "description_ru": "Фолиант, найденный на священном авварском алтаре, призванный защищать святую землю.",
-   "aura_ru": "<color=green>+7 % сопротивления урону.</color> <color=green>+5 % силы.</color> <color=green>Если использует аввар: +5 % сопротивления оглушению.</color>",
+   "title_key": "HODA_BOOK_OF_THE_LADY_GEAR_TITLE",
+   "description_key": "HODA_BOOK_OF_THE_LADY_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_STUN_RESIST_SELF_AVVAR_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_BookoftheLady.png",
    "categories": [],
@@ -1397,9 +1315,11 @@
   },
   {
    "id": "boots_of_faith",
-   "title_ru": "Сапоги веры",
-   "description_ru": "Крепкие сапоги — символ веры в Андрасте и Создателя, защищающий истинно верующих.",
-   "aura_ru": "<color=green>+10 % силы и здоровья. +5 % шанса на двойной урон для союзников.</color> <color=orange>Чаще атакует самого медленного врага.</color>",
+   "title_key": "HODA_BOOTS_OF_FAITH_GEAR_TITLE",
+   "description_key": "HODA_BOOTS_OF_FAITH_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_BOOTS_OF_FAITH_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_BootsofFaith.png",
    "categories": [
@@ -1447,9 +1367,15 @@
   },
   {
    "id": "boots_of_the_river_dane",
-   "title_ru": "Сапоги реки Дейн",
-   "description_ru": "Трофейная броня, снятая с орлесианского командира после победы в битве у реки Дейн.",
-   "aura_ru": "<color=green>+10 % сопротивления урону.</color> <color=green>+5 % здоровья для ферелденцев.</color> <color=green>+10 % сопротивления вытягиванию силы.</color> <color=green>При получении удара дает +5 % к сопр. проклятию силы.</color> <color=green>Если использует Логэйн: +5 % к шансу на двойной урон.</color>",
+   "title_key": "HODA_BOOTS_OF_THE_RIVER_DANE_GEAR_TITLE",
+   "description_key": "HODA_ARMOR_OF_THE_RIVER_DANE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_HEALTH_FERELDEN_PLUS5_DESC",
+    "HODA_GEAR_PLUS10_POWER_DRAIN_RESIST_SELF_DESC",
+    "HODA_GEAR_CURSEPOWERRESIST_SELF_SELFHIT_PLUS5_DESC",
+    "HODA_GEAR_CRIT_CHANCE_SELF_LOGHAIN_EQUIP_PLUS5_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_BootsOfTheRiverDane.png",
    "categories": [
@@ -1520,9 +1446,11 @@
   },
   {
    "id": "bow_of_cleansing_fire",
-   "title_ru": "Лук очищающего пламени",
-   "description_ru": "Стреляет огненными стрелами, прожигающими самую крепкую защиту.",
-   "aura_ru": "<color=green>+4 % дополнительного урона против заступников и целителей.</color>",
+   "title_key": "HODA_BOW_OF_CLEANSING_FIRE_GEAR_TITLE",
+   "description_key": "HODA_BOW_OF_CLEANSING_FIRE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_BONUS_DAMAGE_VS_DEFENDERS_HEALERS_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_BowOfCleansingFire.png",
    "categories": [
@@ -1555,9 +1483,12 @@
   },
   {
    "id": "bow_of_the_beresaad",
-   "title_ru": "Лук Бересаада",
-   "description_ru": "Стрелы этого лука несут в себе силу учения Кун и способны пробивать доспехи.",
-   "aura_ru": "<Color=green>+4 % к силе разбойников.</color> <color=green>+2 % урона против воинов.</color>",
+   "title_key": "HODA_BOW_OF_THE_BERESAAD_GEAR_TITLE",
+   "description_key": "HODA_BOW_OF_THE_BERESAAD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_POWER_ROGUES_DESC",
+    "HODA_GEAR_PLUS2PCT_POWER_VS_WARRIORS_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_BowoftheBeresaad.png",
    "categories": [
@@ -1603,9 +1534,13 @@
   },
   {
    "id": "bow_of_the_righteous",
-   "title_ru": "Лук праведных",
-   "description_ru": "Да низвергнет праведность недостойных.",
-   "aura_ru": "<color=green>+10 % силы.</color> <color=green>Нанося удар, вытягивает 2 % силы из врагов.</color> <color=red>-25 % сопротивления оглушению</color>.",
+   "title_key": "HODA_BOW_OF_THE_RIGHTEOUS_GEAR_TITLE",
+   "description_key": "HODA_BOW_OF_THE_RIGHTEOUS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_POWER_PERSONAL_DESC",
+    "HODA_GEAR_ENEMY_POWER_DRAIN_WHEN_SELF_ATTACKED_2_DESC",
+    "HODA_GEAR_MINUS25_STUN_RESIST_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_BowOfTheRighteous.png",
    "categories": [
@@ -1646,9 +1581,12 @@
   },
   {
    "id": "broken_griffon_helm",
-   "title_ru": "Сломанный шлем с грифоном",
-   "description_ru": "Этот шлем — реликвия былых времен, когда Серые Стражи управляли могучими грифонами.",
-   "aura_ru": "<color=green>+15 % сопротивления урону против врагов, нападающих с фланга.</color> <color=green>+10 % сопротивления вытягиванию силы.</color>",
+   "title_key": "HODA_BROKEN_GRIFFON_HELM_GEAR_TITLE",
+   "description_key": "HODA_BROKEN_GRIFFON_HELM_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS15_DAMAGE_RESIST_SELF_VS_FLANKERS_DESC",
+    "HODA_GEAR_PLUS10_POWER_DRAIN_RESIST_SELF_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_BrokenGriffonHelm.png",
    "categories": [],
@@ -1679,9 +1617,11 @@
   },
   {
    "id": "brute_hammer",
-   "title_ru": "Зверский молот",
-   "description_ru": "Ломает кости на раз-два.",
-   "aura_ru": "<color=green>+3 % силы.</color>",
+   "title_key": "HODA_BRUTE_HAMMER_GEAR_TITLE",
+   "description_key": "HODA_BRUTE_HAMMER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_POWER_PERSONAL_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_BruteHammer.png",
    "categories": [
@@ -1704,9 +1644,14 @@
   },
   {
    "id": "bulls_edge",
-   "title_ru": "Лезвие Быка",
-   "description_ru": "Этот отлично сбалансированный увесистый большой топор — любимое оружие Железного Быка.",
-   "aura_ru": "<color=green>+7 % дополнительного урона.</color> <color=green>+3 % шанса на двойной урон.</color> <color=green>При смерти врага все враги получают 5 % от нанесенного урона.</color> <color=green>Снаряжение Железного Быка: +10 % сопротивления урону.</color>",
+   "title_key": "HODA_BULLS_EDGE_GEAR_TITLE",
+   "description_key": "HODA_BULLS_EDGE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS3_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_EXPLODE_ALL_5_DESC",
+    "HODA_GEAR_PLUS10_DAMAGE_RESIST_PERSONAL_IRONBULL_ONLY"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_BullsEdge.png",
    "categories": [
@@ -1760,9 +1705,12 @@
   },
   {
    "id": "captains_plate",
-   "title_ru": "Капитанские латы",
-   "description_ru": "Латный доспех, выдаваемый тем, кто дослужился до капитана стражи.",
-   "aura_ru": "<color=green>+6 % здоровья.</color> <color=green>+7 % сопротивления замедлению для союзников.</color>",
+   "title_key": "HODA_CAPTAINS_PLATE_GEAR_TITLE",
+   "description_key": "HODA_CAPTAINS_PLATE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS6_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS7_SLOW_RESIST_ALLIES_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_CaptainsPlate.png",
    "categories": [
@@ -1796,9 +1744,11 @@
   },
   {
    "id": "certainty",
-   "title_ru": "Достоверность",
-   "description_ru": "В этом мече соединились глубочайшая скверна и непоколебимая вера в правоту совершаемых поступков.",
-   "aura_ru": "<color=red>-10 % сопротивления всем эффектам (у себя).</color> <color=green>+15 % силы. +7 % урона против демонов. Если использует Мередит/Самсон: + 5 % сопротивления урону, если союзники получают удар.</color>",
+   "title_key": "HODA_CERTAINTY_GEAR_TITLE",
+   "description_key": "HODA_CERTAINTY_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_CERTAINTY_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_Certainty.png",
    "categories": [
@@ -1909,9 +1859,13 @@
   },
   {
    "id": "chantry_robe",
-   "title_ru": "Церковное одеяние",
-   "description_ru": "Эта мантия наделяет посвященных Церкви жизненной силой Создателя.",
-   "aura_ru": "<color=green>+4 % здоровья союзникам.</color> <color=green>Превращает 2 % полученного урона в здоровье для союзников.</color> <color=green>Если использует Лелиана: Скрытность: атакует, не вызывая эффектов, возникающих при попадании.</color>",
+   "title_key": "HODA_CHANTRY_ROBE_GEAR_TITLE",
+   "description_key": "HODA_CHANTRY_ROBE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_HEALTH_ALLIES_DESC",
+    "HODA_GEAR_PLUS2_HEALTH_ALLIES_ON_SELF_HIT_BM_DESC",
+    "HODA_GEAR_STEALTH_SELF_LELIANA_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_ChantryRobe.png",
    "categories": [
@@ -1966,9 +1920,12 @@
   },
   {
    "id": "chantry_shield",
-   "title_ru": "Церковный щит",
-   "description_ru": "На этом щите красуется символ Церкви, укрепляющий веру.",
-   "aura_ru": "<color=green>+7 % сопротивления урону.</color> <color=green>+10 % сопротивления оглушению.</color>",
+   "title_key": "HODA_CHANTRY_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_CHANTRY_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS10_STUN_RESIST_SELF_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_ChantryShield.png",
    "categories": [
@@ -2002,9 +1959,15 @@
   },
   {
    "id": "chestpiece_of_the_river_dane",
-   "title_ru": "Нагрудник реки Дейн",
-   "description_ru": "Трофейная броня, снятая с орлесианского командира после победы в битве у реки Дейн.",
-   "aura_ru": "<color=green>+10 % силы.</color> <color=green>+5 % силы для ферелденцев.</color> <color=green>+10 % сопротивления оглушению.</color> <color=green>При получении удара дает +25 % здоровья.</color> <color=green>Если использует Логэйн: +15 % к сопр. урону.</color>",
+   "title_key": "HODA_CHESTPIECE_OF_THE_RIVER_DANE_GEAR_TITLE",
+   "description_key": "HODA_ARMOR_OF_THE_RIVER_DANE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_POWER_PERSONAL_DESC",
+    "HODA_GEAR_POWER_FERELDEN_PLUS5_DESC",
+    "HODA_GEAR_PLUS10_STUN_RESIST_SELF_DESC",
+    "HODA_GEAR_HEALTH_GAIN_WHEN_SELF_HIT_25_DESC",
+    "HODA_GEAR_DMGRES_SELF_LOGHAIN_EQUIP_PLUS15_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_ChestpieceOfTheRiverDane.png",
    "categories": [
@@ -2075,9 +2038,12 @@
   },
   {
    "id": "chestplate_of_the_fortress",
-   "title_ru": "Нагрудник крепости",
-   "description_ru": "Этот нагрудник воин Хоук снял с бездыханного тела Корифея. Есть чем похвастать, по меньшей мере.",
-   "aura_ru": "<color=red>Снижает шансы врага зайти с фланга.</color> <color=green>+50 % сопротивления урону против врагов, нападающих с фланга.</color>",
+   "title_key": "HODA_CHESTPLATE_OF_THE_FORTRESS_GEAR_TITLE",
+   "description_key": "HODA_CHESTPLATE_OF_THE_FORTRESS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_ENEMY_NEG_FLANK_24950_DESC",
+    "HODA_GEAR_PLUS50_DAMAGE_RESIST_SELF_VS_FLANKERS_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_ChestplateOfTheFortress.png",
    "categories": [
@@ -2113,9 +2079,13 @@
   },
   {
    "id": "chevaliers_cutlass",
-   "title_ru": "Сабля шевалье",
-   "description_ru": "Излюбленный меч орлеасианских шевалье.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=red>Снижает шансы врага зайти с фланга.</color> <color=green>Снаряжение атакующего с фланга: +5 % дополнительного урона.</color>",
+   "title_key": "HODA_CHEVALIERS_CUTLASS_GEAR_TITLE",
+   "description_key": "HODA_CHEVALIERS_CUTLASS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_ENEMY_NEG_FLANK_24950_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_FOR_FLANKERS_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_ChevaliersCutlass.png",
    "categories": [
@@ -2162,9 +2132,13 @@
   },
   {
    "id": "circle_mage_staff",
-   "title_ru": "Посох мага Круга",
-   "description_ru": "Посох, насыщенный магией, — орудие для искушенных.",
-   "aura_ru": "<color=green>+3 % дополнительного урона.</color> <color=green>+5 % здоровья.</color> <color=green>Снаряжение Круга: +5 % сопротивления урону.</color>",
+   "title_key": "HODA_CIRCLE_MAGE_STAFF_GEAR_TITLE",
+   "description_key": "HODA_CIRCLE_MAGE_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_RESIST_PERSONAL_CIRCLE_ONLY_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_CircleMageStaff.png",
    "categories": [
@@ -2207,9 +2181,14 @@
   },
   {
    "id": "cobra_crown",
-   "title_ru": "Корона кобры",
-   "description_ru": "Эта древняя корона наполнена силой древних архонтов.",
-   "aura_ru": "<color=green>+5 % здоровья.</color> <color=green>+8 % сопротивления вытягиванию силы.</color> <color=green>Если использует тевинтерец: +5 % силы.</color> <color=green>Снаряжение Архонта: +4 % сопротивления урону.</color>",
+   "title_key": "HODA_COBRA_CROWN_GEAR_TITLE",
+   "description_key": "HODA_COBRA_CROWN_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS8_POWER_DRAIN_RESIST_SELF_DESC",
+    "HODA_GEAR_PLUS5_POWER_TEVINTER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS4_DAMAGE_RESIST_PERSONAL_ARCHON_ONLY_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_CobraCrown.png",
    "categories": [
@@ -2269,9 +2248,12 @@
   },
   {
    "id": "coles_hat",
-   "title_ru": "Шляпа Коула",
-   "description_ru": "Вряд ли вы успеете увидеть глаза Коула под полями этой шляпы, прежде чем он ударит вам по самому слабому месту.",
-   "aura_ru": "<color=green>+4 % сопротивления урону для духов.</color> <color=green>Если использует Коул: +4 % шанса на двойной урон.</color>",
+   "title_key": "HODA_COLES_HAT_GEAR_TITLE",
+   "description_key": "HODA_COLES_HAT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_DAMAGE_RESIST_SPIRITS_DESC",
+    "HODA_GEAR_PLUS4_CRIT_CHANCE_SELF_COLE_ONLY_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_ColesHat.png",
    "categories": [
@@ -2317,9 +2299,12 @@
   },
   {
    "id": "courtier_fan",
-   "title_ru": "Веер льстецов",
-   "description_ru": "Эти веера, которыми овладели величайшие мастера Большой игры, то манят, то пугают.",
-   "aura_ru": "<color=green>Превращает 5 % полученного союзниками урона в силу.</color> <color=green>Возвращает противнику 5 % полученного урона.</color>",
+   "title_key": "HODA_COURTIER_FAN_GEAR_TITLE",
+   "description_key": "HODA_COURTIER_FAN_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_POWER_GAIN_WHEN_ALLY_HIT_5_VAL_FROM_DAM_DESC",
+    "HODA_GEAR_RETALIATE_ALL_ON_SELF_HIT_5_VAL_FROM_DAM_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_CourtierFan.png",
    "categories": [
@@ -2349,9 +2334,13 @@
   },
   {
    "id": "crow_dagger",
-   "title_ru": "Кинжал Ворона",
-   "description_ru": "Антиванский клинок, созданный легендарными убийцами из Воронов. Скорее всего.",
-   "aura_ru": "<color=green>+7 % шанса на двойной урон.</color> <color=green>+7 % дополнительного урона.</color> <color=green>Если использует Зевран: атакует, не вызывая эффектов, возникающих при попадании.</color>",
+   "title_key": "HODA_CROW_DAGGER_GEAR_TITLE",
+   "description_key": "HODA_CROW_DAGGER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS7_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_STEALTH_SELF_ZEVRAN_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_CrowDagger.png",
    "categories": [
@@ -2402,9 +2391,11 @@
   },
   {
    "id": "crow_shield",
-   "title_ru": "Щит Воронов",
-   "description_ru": "Легкий деревянный баклер, украшенный эмблемой Антиванских Воронов, тедасских элитных наемных убийц.",
-   "aura_ru": "<color=green>+12 % сопротивления замедлению.</color>",
+   "title_key": "HODA_CROW_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_CROW_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS12_SLOW_RESIST_SELF_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_CrowShield.png",
    "categories": [
@@ -2427,9 +2418,15 @@
   },
   {
    "id": "cuirass_of_the_winds",
-   "title_ru": "Кираса ветров",
-   "description_ru": "Создана ривейнским провидцем. Красива и жестока, словно шторм.",
-   "aura_ru": "<color=green>+10 % шанса на двойной урон.</color> <color=green>+5 % дополнительного урона.</color> <color=green>+15 % сопротивления урону.</color> <color=green>+15 % сопротивления замедлению.</color> <color=red>-25 % сопротивления оглушению</color>.",
+   "title_key": "HODA_CUIRASS_OF_THE_WINDS_GEAR_TITLE",
+   "description_key": "HODA_CUIRASS_OF_THE_WINDS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_DMG_RESIST_PCT_15_PERSONAL_DESC",
+    "HODA_GEAR_PLUS15_SLOW_RESIST_SELF_DESC",
+    "HODA_GEAR_MINUS25_STUN_RESIST_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_CuirassOfTheWinds.png",
    "categories": [
@@ -2484,9 +2481,12 @@
   },
   {
    "id": "cutpurse_slicer",
-   "title_ru": "Воровской ножик",
-   "description_ru": "Быстрый и точный.",
-   "aura_ru": "<color=green>+3 % шанса на двойной урон.</color> <color=green>+4 % сопротивления замедлению.</color>",
+   "title_key": "HODA_CUTPURSE_SLICER_GEAR_TITLE",
+   "description_key": "HODA_CUTPURSE_SLICER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS4_SLOW_RESIST_SELF_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_CutpurseSlicer.png",
    "categories": [
@@ -2516,9 +2516,12 @@
   },
   {
    "id": "dalish_ring",
-   "title_ru": "Долийское кольцо",
-   "description_ru": "Долийское народное кольцо, символизирующее их связь с жизнью и смертью.",
-   "aura_ru": "<color=green>Союзники получают 5 % здоровья при смерти врага.</color> <color=green>+2 % здоровья для союзников-эльфов.</color>",
+   "title_key": "HODA_DALISH_RING_GEAR_TITLE",
+   "description_key": "HODA_DALISH_RING_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_HEALTH_ALLIES_ON_ENEMY_DEATH_DESC",
+    "HODA_GEAR_PLUS2_HEALTH_ELVES_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_DalishRing.png",
    "categories": [
@@ -2562,9 +2565,11 @@
   },
   {
    "id": "dalish_robes",
-   "title_ru": "Долийское одеяние",
-   "description_ru": "Превосходное качество этого одеяния восхитит любого. Мастерство ощущается в каждом стежке.",
-   "aura_ru": "<color=green>При попадании получите + 7 % сопротивления урону.</color>",
+   "title_key": "HODA_DALISH_ROBES_GEAR_TITLE",
+   "description_key": "HODA_DALISH_ROBES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DAMRESGAIN_SELF_7_ON_SELF_HIT_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_DalishRobes.png",
    "categories": [],
@@ -2582,9 +2587,12 @@
   },
   {
    "id": "dalish_staff",
-   "title_ru": "Долийский посох",
-   "description_ru": "Эти посохи можно заметить в руках многих долийцев. Они на удивление прочны — возможно, потому что являются символом обещания, данного этим народом.",
-   "aura_ru": "<color=green>+5 % силы.</color> <color=green>+5 % сопротивления урону для эльфов.</color>",
+   "title_key": "HODA_DALISH_STAFF_GEAR_TITLE",
+   "description_key": "HODA_DALISH_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_POWER_PERSONAL_DESC",
+    "HODA_GEAR_DMG_RESIST_PCT_5_TO_ELVES_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_DalishStaff.png",
    "categories": [
@@ -2620,9 +2628,12 @@
   },
   {
    "id": "dawn_ring",
-   "title_ru": "Кольцо восхода",
-   "description_ru": "Первое из двух колец, символизирующих соглашение между гномами и тевинтерцами. Теплое на ощупь.",
-   "aura_ru": "<color=green>+3 % здоровья.</color> <color=green>Получив удар, лечит на 7 %.</color>",
+   "title_key": "HODA_DAWN_RING_GEAR_TITLE",
+   "description_key": "HODA_DAWN_RING_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_AURA_HEALTH_GAIN_WHEN_SELF_HIT_7_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_DawnRing.png",
    "categories": [],
@@ -2647,9 +2658,12 @@
   },
   {
    "id": "defender_coat",
-   "title_ru": "Куртка заступника",
-   "description_ru": "Укрепленная кольчуга, закаляющая тело и душу.",
-   "aura_ru": "<color=green>+3 % здоровья.</color> <color=green>Приращивает 2 % здоровья при попадании по союзнику.</color>",
+   "title_key": "HODA_DEFENDER_COAT_GEAR_TITLE",
+   "description_key": "HODA_DEFENDER_COAT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS2_HEALTH_SELF_ON_ALLY_HIT_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_DefenderCoat.png",
    "categories": [],
@@ -2674,9 +2688,12 @@
   },
   {
    "id": "demons_advocate",
-   "title_ru": "Адвокат демона",
-   "description_ru": "Иногда из этого молота исходят голоса, почти неразличимые для человеческого уха.",
-   "aura_ru": "<color=green>+5 % силы.</color> <color=green>Получает +20 % силы после гибели врага.</color>",
+   "title_key": "HODA_DEMONS_ADVOCATE_GEAR_TITLE",
+   "description_key": "HODA_DEMONS_ADVOCATE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS20_POWER_SELF_ON_ENEMY_DEATH_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_DemonsAdvocate.png",
    "categories": [
@@ -2706,9 +2723,11 @@
   },
   {
    "id": "diplomatic_missives",
-   "title_ru": "Дипломатические письма",
-   "description_ru": "Страницы дипломатических документов хранят много секретов, которые могут быть опаснее любого оружия.",
-   "aura_ru": "<color=green>+10 % силы и сопр. вытягиванию силы для союзников. Если использует Жозефина: при получении удара дает +10 % сопротивления урону.</color> <color=red>-10 % силы у врагов.</color>",
+   "title_key": "HODA_DIPLOMATIC_MISSIVES_GEAR_TITLE",
+   "description_key": "HODA_DIPLOMATIC_MISSIVES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DIPLOMATIC_MISSIVES_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_DiplomaticMissives.png",
    "categories": [
@@ -2758,9 +2777,13 @@
   },
   {
    "id": "dirthamens_wisdom",
-   "title_ru": "Мудрость Диртамена",
-   "description_ru": "Каким-то чудом этот щит уцелел после тысячелетнего пребывания в храме Диртамена — вероятно, благодаря покровительству самого бога тайн.",
-   "aura_ru": "<color=green>+5 % здоровья.</color> <color=green>+15 % сопротивления замедлению.</color> <color=green>Получив удар, лечит на 10 %.</color>",
+   "title_key": "HODA_DIRTHAMENS_WISDOM_GEAR_TITLE",
+   "description_key": "HODA_DIRTHAMENS_WISDOM_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS15_SLOW_RESIST_SELF_DESC",
+    "HODA_GEAR_AURA_HEALTH_GAIN_WHEN_SELF_HIT_10_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_DirthamensWisdom.png",
    "categories": [
@@ -2797,9 +2820,12 @@
   },
   {
    "id": "dragons_testament",
-   "title_ru": "Драконий завет",
-   "description_ru": "Редкое издание, посвященное боевой тактике драконов, автор неизвестен. Приписывается Фредерику де Серо.",
-   "aura_ru": "<color=green>+6 % к силе союзников-драконов</color>. <color=green>При смерти этого героя союзники получают 10 % силы.</color>",
+   "title_key": "HODA_DRAGONS_TESTAMENT_GEAR_TITLE",
+   "description_key": "HODA_DRAGONS_TESTAMENT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS6_POWER_DRAGONS_DESC",
+    "HODA_GEAR_POWERGAIN_ALLIES_10_ON_SELF_DEATH_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_DragonsTestament.png",
    "categories": [],
@@ -2830,9 +2856,12 @@
   },
   {
    "id": "dreamweaver_staff",
-   "title_ru": "Посох ткача снов",
-   "description_ru": "Этот посох мага полыхает ярким пламенем. \"Посох мой в тумане светит, искры гаснут на лету...\"",
-   "aura_ru": "<color=green>+5 % шанса на двойной урон.</color> <color=green>+10 % сопротивления проклятию здоровья для союзников.</color>",
+   "title_key": "HODA_DREAMWEAVER_STAFF_GEAR_TITLE",
+   "description_key": "HODA_DREAMWEAVER_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS10_CURSE_HEALTH_RESIST_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_DreamweaverStaff.png",
    "categories": [
@@ -2862,9 +2891,12 @@
   },
   {
    "id": "dusk_ring",
-   "title_ru": "Кольцо заката",
-   "description_ru": "Это холодное на ощупь тяжелое кольцо создано гномами из безупречного аметиста.",
-   "aura_ru": "<color=green>+4 % силы.</color> <color=green>Приращивает 2 % силы при попадании по союзнику.</color>",
+   "title_key": "HODA_DUSK_RING_GEAR_TITLE",
+   "description_key": "HODA_DUSK_RING_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS2_POWER_SELF_ON_ALLY_HIT_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_DuskRing.png",
    "categories": [],
@@ -2889,9 +2921,11 @@
   },
   {
    "id": "duster_battleaxe",
-   "title_ru": "Боевой топор пылеглота",
-   "description_ru": "Изготовлен из переработанных мечей, булав и... метлы?",
-   "aura_ru": "<color=green>+10 % силы. +5 % дополнительного урона для гномов. +15 % сопротивления проклятиям для гномов.</color>",
+   "title_key": "HODA_DUSTER_BATTLEAXE_GEAR_TITLE",
+   "description_key": "HODA_DUSTER_BATTLEAXE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DUSTER_BATTLEAXE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_DusterBattleaxe.png",
    "categories": [
@@ -2953,9 +2987,12 @@
   },
   {
    "id": "duster_greaves",
-   "title_ru": "Поножи пылеглота",
-   "description_ru": "Изготовлены из чего-то, напоминающего кожу. От этих поножей сильно несет плесенью.",
-   "aura_ru": "<color=green>+5 % здоровья.</color> <color=green>+10 % сопротивления оглушению для гномов.</color>",
+   "title_key": "HODA_DUSTER_GREAVES_GEAR_TITLE",
+   "description_key": "HODA_DUSTER_GREAVES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS10_STUNRESIST_TO_DWARF_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_DusterGreaves.png",
    "categories": [
@@ -2991,9 +3028,12 @@
   },
   {
    "id": "duster_leather_armor",
-   "title_ru": "Кожаная броня пылеглота",
-   "description_ru": "Изготовлена из чего-то, напоминающего кожу. Это что еще такое? Ботинок?",
-   "aura_ru": "<color=green>+10 % здоровья для союзников.</color> <color=green>+10 % сопротивления урону для гномов.</color>",
+   "title_key": "HODA_DUSTER_LEATHER_ARMOR_GEAR_TITLE",
+   "description_key": "HODA_DUSTER_LEATHER_ARMOR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_HEALTH_ALLIES_PLUS10_DESC",
+    "HODA_GEAR_DMG_RESIST_PCT_10_TO_DWARF_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_DusterLeatherArmor.png",
    "categories": [
@@ -3029,9 +3069,13 @@
   },
   {
    "id": "duster_leather_gauntlets",
-   "title_ru": "Кожаные перчатки пылеглота",
-   "description_ru": "Изготовлена из чего-то, напоминающего кожу. А перчатки частично состоят из дамской сумочки.",
-   "aura_ru": "<color=green>+5 % здоровья для союзников.</color> <color=green>+5 % силы для гномов.</color> <color=green>+10 % сопротивления замедлению для гномов.</color>",
+   "title_key": "HODA_DUSTER_LEATHER_GAUNTLETS_GEAR_TITLE",
+   "description_key": "HODA_DUSTER_LEATHER_GAUNTLETS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5HEALTH_DESC",
+    "HODA_GEAR_PLUS5POWER_TO_DWARF_DESC",
+    "HODA_GEAR_SLOW_RESIST_10_TO_DWARVES_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_DusterLeatherGauntlets.png",
    "categories": [
@@ -3080,9 +3124,12 @@
   },
   {
    "id": "duster_leather_pauldron",
-   "title_ru": "Кожаный наплечник пылеглота",
-   "description_ru": "Изготовлены из чего-то, напоминающего кожу. Это шипы или старые зубы?",
-   "aura_ru": "<color=green>+5 % здоровья.</color> <color=green>+10 % сопротивления вытягиванию силы для гномов.</color>",
+   "title_key": "HODA_DUSTER_LEATHER_PAULDRON_GEAR_TITLE",
+   "description_key": "HODA_DUSTER_LEATHER_PAULDRON_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_POWER_DRAIN_RESIST_10_TO_DWARVES_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_DusterLeatherPauldron.png",
    "categories": [
@@ -3118,9 +3165,11 @@
   },
   {
    "id": "dworkins_high_explosives",
-   "title_ru": "Взрывчатка Дворкина",
-   "description_ru": "Не особо безопасная взрывчатка Чокнутого Дворкина.",
-   "aura_ru": "<color=green>Когда враг получает урон, наносит 6 % от нанесенного урона всем врагам и 2 % союзникам.</color>",
+   "title_key": "HODA_DWORKINS_HIGH_EXPLOSIVES_GEAR_TITLE",
+   "description_key": "HODA_DWORKINS_HIGH_EXPLOSIVES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DWORKINS_HIGH_EXPLOSIVES_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_DworkinsHighExplosives.png",
    "categories": [
@@ -3162,9 +3211,11 @@
   },
   {
    "id": "dworkins_safe_explosives",
-   "title_ru": "Безопасная взрывчатка Дворкина",
-   "description_ru": "Самая \"безопасная\" взрывчатка Чокнутого Дворкина.",
-   "aura_ru": "<color=green>Когда враг получает урон, наносит 3 % от нанесенного урона всем врагам и 1 % союзникам.</color>",
+   "title_key": "HODA_DWORKINS_SAFE_EXPLOSIVES_GEAR_TITLE",
+   "description_key": "HODA_DWORKINS_SAFE_EXPLOSIVES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DWORKINS_SAFE_EXPLOSIVES_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_DworkinsSafeExplosives.png",
    "categories": [
@@ -3206,9 +3257,11 @@
   },
   {
    "id": "earnest_reprisal_staff",
-   "title_ru": "Вспыльчивая кара",
-   "description_ru": "Проклятый посох из темного магазина.",
-   "aura_ru": "<color=green>+8 % дополнительного урона против белой фракции.</color>",
+   "title_key": "HODA_EARNEST_REPRISAL_GEAR_TITLE",
+   "description_key": "HODA_EARNEST_REPRISAL_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS8_BONUS_DAMAGE_VS_WHITE_FACTION_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_EarnestReprisal.png",
    "categories": [
@@ -3241,9 +3294,12 @@
   },
   {
    "id": "elgarnan_enaste",
-   "title_ru": "Эльгарнан энасте",
-   "description_ru": "Лук Эльгарнана, эльфийского Отца Всего. В его стрелах — разрушительная мощь самого солнца.",
-   "aura_ru": "<color=green>+8 % силы.</color> <color=green>+12 % сопротивления оглушению для союзников.</color>",
+   "title_key": "HODA_ELGARNAN_ENASTE_GEAR_TITLE",
+   "description_key": "HODA_ELGARNAN_ENASTE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS8_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS12_STUN_RESIST_ALLIES_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_ElgarnanEnaste.png",
    "categories": [
@@ -3277,9 +3333,12 @@
   },
   {
    "id": "elusive_icebow",
-   "title_ru": "Непостижимый ледолук",
-   "description_ru": "Леденящая рукоять этого лука наделяет владельца невероятной силой.",
-   "aura_ru": "<color=green>+5 % силы.</color> <color=green>+2 % шанса на двойной урон.</color>",
+   "title_key": "HODA_ELUSIVE_ICEBOW_GEAR_TITLE",
+   "description_key": "HODA_ELUSIVE_ICEBOW_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS2_CRIT_CHANCE_SELF_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_ElusiveIcebow.png",
    "categories": [
@@ -3309,9 +3368,13 @@
   },
   {
    "id": "elven_plate_armor",
-   "title_ru": "Эльфийские латы",
-   "description_ru": "Эльфы умеют придавать вещам форму. Прочные жилы под этими латами уводят атаки в сторону от тела.",
-   "aura_ru": "<color=green>+5 % здоровья.</color> <color=green>+2 % сопротивления урону.</color> <color=green>+8 % дополнительного урона против героев, приращивающих силу.</color>",
+   "title_key": "HODA_ELVEN_PLATE_ARMOR_GEAR_TITLE",
+   "description_key": "HODA_ELVEN_PLATE_ARMOR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS2_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS8PCT_POWER_VS_POWER_GAINERS_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_ElvenPlateArmor.png",
    "categories": [
@@ -3354,9 +3417,11 @@
   },
   {
    "id": "emblazoned_kirkwall_shield",
-   "title_ru": "Травленый киркволлский щит",
-   "description_ru": "Щит прославленного киркволлского стражника. Те, кто его держит, укрыты от злых сил.",
-   "aura_ru": "<color=green>Союзники выдерживают первые 2000 ед. урона за удар. +10 % к сопротивлению всем эффектам для Вольной Марки.</color>",
+   "title_key": "HODA_EMBLAZONED_KIRKWALL_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_EMBLAZONED_KIRKWALL_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_EMBLAZONED_KIRKWALL_SHIELD_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_EmblazonedKirkwallShield.png",
    "categories": [],
@@ -3439,9 +3504,13 @@
   },
   {
    "id": "enchanted_silver_armor",
-   "title_ru": "Зачарованная серебряная броня",
-   "description_ru": "Говорят, эту броню, зачарованную магами Круга для короля Каленхада, не могут пробить ни стрелы, ни мечи.",
-   "aura_ru": "<color=green>+1000 сопротивления урону за попадание.</color> <color=green>+10 % сопротивления урону.</color> <color=green>Если использует кто-то из Тейринов: +15 % здоровья.</color>",
+   "title_key": "HODA_ENCHANTED_SILVER_ARMOR_GEAR_TITLE",
+   "description_key": "HODA_ENCHANTED_SILVER_ARMOR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS1000_RAW_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS10_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_AURA_PLUS15HEALTH_THEIRIN_ONLY_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_EnchantedSilverArmor.png",
    "categories": [
@@ -3484,9 +3553,12 @@
   },
   {
    "id": "enchanter_fire_staff",
-   "title_ru": "Огненный посох чародея",
-   "description_ru": "Огонь очищает и исцеляет — но может и сжечь дотла.",
-   "aura_ru": "<color=green>+5 % дополнительного урона.</color> <color=green>При получении удара добавляет 3 % к здоровью союзников.</color>",
+   "title_key": "HODA_ENCHANTER_FIRE_STAFF_GEAR_TITLE",
+   "description_key": "HODA_ENCHANTER_FIRE_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS3_HEALTH_ALLIES_ON_SELF_HIT_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_EnchanterFireStaff.png",
    "categories": [
@@ -3516,9 +3588,11 @@
   },
   {
    "id": "expensive_dog_treats",
-   "title_ru": "Дорогие собачьи лакомства",
-   "description_ru": "Редкая награда. Эти лакомства предназначены для самых разборчивых питомцев.",
-   "aura_ru": "<color=green>+5 % силы. +3 % здоровья для существ. Если используют Каллен и ездовой мабари: +10 % сопротивления оглушению и замедлению.</color>",
+   "title_key": "HODA_EXPENSIVE_DOG_TREATS_GEAR_TITLE",
+   "description_key": "HODA_EXPENSIVE_DOG_TREATS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_EXPENSIVE_DOG_TREAT_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_ExpensiveDogTreats.png",
    "categories": [
@@ -3608,9 +3682,13 @@
   },
   {
    "id": "fade_touched_lurker_scales",
-   "title_ru": "Тронутая Тенью чешуя везделаза",
-   "description_ru": "Застать врага врасплох — важнейший навык выживания на задворках Тедаса. Эта чешуя везделаза помогает лиходею подкрасться незамеченным.",
-   "aura_ru": "<color=green>Скрытность: атакует, не вызывая эффектов, возникающих при попадании.</color> <color=red>-15 % силе (своего).</color> <color=red>-10 % здоровья (своего).</color>",
+   "title_key": "HODA_FADE_TOUCHED_LURKER_SCALES_GEAR_TITLE",
+   "description_key": "HODA_FADE_TOUCHED_LURKER_SCALES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_STEALTH_PERSONAL_DESC",
+    "HODA_GEAR_POWER_SELF_MINUS15_DESC",
+    "HODA_GEAR_MINUS10_HEALTH_PERSONAL_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_FadeTouchedLurkerScales.png",
    "categories": [
@@ -3651,9 +3729,11 @@
   },
   {
    "id": "fade_touched_silverite",
-   "title_ru": "Тронутый Тенью сильверит",
-   "description_ru": "Сильверит защищает хозяина при атаках, накапливая невосприимчивость с каждым ударом.",
-   "aura_ru": "<color=green>Подвергнувшись атаке, получает 5 % сопротивления урону. После смерти союзника получает +20 % здоровья и силы.</color>",
+   "title_key": "HODA_FADE_TOUCHED_SILVERITE_GEAR_TITLE",
+   "description_key": "HODA_FADE_TOUCHED_SILVERITE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_FADE_TOUCHED_SILVERITE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_FadeTouchedSilverite.png",
    "categories": [
@@ -3690,9 +3770,12 @@
   },
   {
    "id": "fade_wall",
-   "title_ru": "Теневая стена",
-   "description_ru": "Этот щит заряжен магией, из-за которой его владелец страдает от ощущения нереальности происходящего.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=green>+5 % сопротивления урону.</color>",
+   "title_key": "HODA_FADE_WALL_GEAR_TITLE",
+   "description_key": "HODA_FADE_WALL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_RESIST_PERSONAL_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_FadeWall.png",
    "categories": [
@@ -3722,9 +3805,11 @@
   },
   {
    "id": "fadesbane",
-   "title_ru": "Бич Тени",
-   "description_ru": "Благословенный клинок от искушенных в охоте за магами храмовников.",
-   "aura_ru": "<color=green>+10 % дополнительного урона против синей фракции. Если использует храмовник: дополнительно +5 %.</color>",
+   "title_key": "HODA_FADESBANE_GEAR_TITLE",
+   "description_key": "HODA_FADESBANE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_FADESBANE_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_Fadesbane.png",
    "categories": [],
@@ -3767,9 +3852,12 @@
   },
   {
    "id": "feral_wolf_charm",
-   "title_ru": "Талисман дикого волка",
-   "description_ru": "Хасинды-охот. предп. подоб. талис., кот. зачар. лун. ноч. ведьм. в самом серд. Дик. земель Коркари.",
-   "aura_ru": "<color=green>+10 % здоровья для союзников.</color> <color=green>Лечит союзников на 5% при попадании по врагу.</color>",
+   "title_key": "HODA_FERAL_WOLF_CHARM_GEAR_TITLE",
+   "description_key": "HODA_FERAL_WOLF_CHARM_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_HEALTH_ALLIES_PLUS10_DESC",
+    "HODA_GEAR_HEALTH_GAIN_ALL_WHEN_ENEMY_HIT_5_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_FeralWolfCharm.png",
    "categories": [],
@@ -3794,9 +3882,15 @@
   },
   {
    "id": "fereldan_claymore",
-   "title_ru": "Ферелденский клеймор",
-   "description_ru": "Выкован по заказу Логэйна Мак-Тира для его дочери Аноры в честь ее помолвки с Кайланом Тейрином.",
-   "aura_ru": "<color=green>+10 % силы.</color> <color=orange>Чаще атакует самого сильного врага.</color> <color=red>-5 % здоровья (своего).</color> <color=green>Если используют ферелденцы: +3 % доп. урона.</color> <color=green>Если использует Анора: \"Восприимчивость: игнорирует скрытность\".</color>",
+   "title_key": "HODA_FERELDAN_CLAYMORE_GEAR_TITLE",
+   "description_key": "HODA_FERELDAN_CLAYMORE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_POWER_PERSONAL_DESC",
+    "HODA_GEAR_BRAVE_TARGETING_SELF_DESC",
+    "HODA_GEAR_MINUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_BONUSDMG_SELF_FERELDEN_EQUIP_PLUS3_DESC",
+    "HODA_GEAR_PERCEPTIVE_SELF_ANORA_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_FereldanClaymore.png",
    "categories": [
@@ -3863,9 +3957,12 @@
   },
   {
    "id": "fereldan_soldier_helmet",
-   "title_ru": "Ферелденский солдатский шлем",
-   "description_ru": "Стальной шлем, призванный повысить жизнеспособность владельца и его сосредоточенность в бою.",
-   "aura_ru": "<color=green>+3 % здоровья.</color> <color=green>+1 % сопротивления урону.</color>",
+   "title_key": "HODA_FERELDAN_SOLDIER_HELMET_GEAR_TITLE",
+   "description_key": "HODA_FERELDAN_SOLDIER_HELMET_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS1_DAMAGE_RESIST_PERSONAL_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_FereldanSoldierHelmet.png",
    "categories": [
@@ -3899,9 +3996,14 @@
   },
   {
    "id": "first_enchanters_robes",
-   "title_ru": "Одеяние первого чародея",
-   "description_ru": "Одеяние первого чародея неожиданно не так богато украшено. От этой робы веет стойким запахом серы.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=green>+3 % дополнительного урона для Круга.</color> <color=green>Снаряжение Круга: +5 % сопротивления урону.</color> <color=green>При получении удара дает союзникам 10 % сопротивления урону.</color>",
+   "title_key": "HODA_FIRST_ENCHANTERS_ROBES_GEAR_TITLE",
+   "description_key": "HODA_FIRST_ENCHANTERS_ROBES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_BONUSDMG_CIRCLE_PLUS3_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_RESIST_PERSONAL_CIRCLE_ONLY_DESC",
+    "HODA_GEAR_ALLY_GAIN_DAMAGE_RESIST_WHEN_SELF_ATTACKED_10_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_FirstEnchantersRobes.png",
    "categories": [
@@ -3957,9 +4059,14 @@
   },
   {
    "id": "flask_of_flame",
-   "title_ru": "Бутыль с пламенем",
-   "description_ru": "Разбитая в бою, эта бутыль вызывает бурю из языков пламени, яростно рвущихся в атаку.",
-   "aura_ru": "<color=green>+5 % дополнительного урона.</color> <color=green>Дает +5 % дополнительного урона при атаке.</color> <color=green>При получении удара дает +15 % здоровья.</color> <color=red>-25 % сопротивления оглушению</color>.",
+   "title_key": "HODA_FLASK_OF_FLAME_GEAR_TITLE",
+   "description_key": "HODA_FLASK_OF_FLAME_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_SELF_GAIN_BONUS_DAMAGE_WHEN_ATTACKING_5_DESC",
+    "HODA_GEAR_HEALTH_GAIN_WHEN_SELF_HIT_15_DESC",
+    "HODA_GEAR_MINUS25_STUN_RESIST_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_FlaskOfFlame.png",
    "categories": [
@@ -4003,9 +4110,13 @@
   },
   {
    "id": "flask_of_frost",
-   "title_ru": "Бутыль с холодом",
-   "description_ru": "Эта бутыль покрывает вас ледяной кожей, значительно повышающей вашу защиту.",
-   "aura_ru": "<color=green>+15 % здоровья.</color> <color=green>+15 % сопротивления урону.</color> <color=green>Если использует Сэра: при получении удара дает +15 % сопротивления урону.</color>",
+   "title_key": "HODA_FLASK_OF_FROST_GEAR_TITLE",
+   "description_key": "HODA_FLASK_OF_FROST_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_HEALTH_SELF_PLUS15_DESC",
+    "HODA_GEAR_DMG_RESIST_PCT_15_PERSONAL_DESC",
+    "HODA_GEAR_DMGRESIST_SERA_SELFHIT_PLUS15_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_FlaskOfFrost.png",
    "categories": [
@@ -4072,9 +4183,15 @@
   },
   {
    "id": "flask_of_lightning",
-   "title_ru": "Бутыль с электричеством",
-   "description_ru": "Разбитая в бою, эта бутыль вызывает бурю молний, дающую повышенные рефлексы и скорость.",
-   "aura_ru": "<color=green>+10 % шанса на двойной урон.</color> <color=green>При получении удара дает +10 % сопротивления урону.</color> <color=green>При атаке дает +10 % сопр. замедлению.</color> <color=green>Если использует Сэра: \"Восприимчивость: игнорирует скрытность\".</color> <color=red>-25 % сопротивления замедлению.</color>",
+   "title_key": "HODA_FLASK_OF_LIGHTNING_GEAR_TITLE",
+   "description_key": "HODA_FLASK_OF_LIGHTNING_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_DMGRESIST_SELF_SELFHIT_PLUS10_DESC",
+    "HODA_GEAR_SLOWRESIST_SELF_SELFATTACK_PLUS10_DESC",
+    "HODA_GEAR_PERCEPTIVE_SELF_SERA_DESC",
+    "HODA_GEAR_MINUS25_SLOW_RESIST_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_FlaskOfLightning.png",
    "categories": [
@@ -4155,9 +4272,11 @@
   },
   {
    "id": "flawless_fire_crystal",
-   "title_ru": "Безупречный огненный кристалл",
-   "description_ru": "Идеальный кристалл огня без единого изъяна.",
-   "aura_ru": "<color=green>+25 % силы и здоровья для союзников при смерти союзника.</color> <color=red>-35 % сопротивления проклятиям.</color> <color=green>Если использует Шейла: +10 % шанса на двойной урон.</color>",
+   "title_key": "HODA_FLAWLESS_FIRE_CRYSTAL_GEAR_TITLE",
+   "description_key": "HODA_FLAWLESS_FIRE_CRYSTAL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_FLAWLESS_FIRE_CRYSTAL_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_FlawlessFireCrystal.png",
    "categories": [
@@ -4230,9 +4349,11 @@
   },
   {
    "id": "flawless_ice_crystal",
-   "title_ru": "Безупречный ледяной кристалл",
-   "description_ru": "Идеальный кристалл льда без единого изъяна.",
-   "aura_ru": "<color=green>+10 % сопротивления вытягиванию силы для гномов и големов (суммируется). Если использует Шейла: +10 % силы.</color>",
+   "title_key": "HODA_FLAWLESS_ICE_CRYSTAL_GEAR_TITLE",
+   "description_key": "HODA_FLAWLESS_ICE_CRYSTAL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_FLAWLESS_ICE_CRYSTAL_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_FlawlessIceCrystal.png",
    "categories": [
@@ -4295,9 +4416,11 @@
   },
   {
    "id": "flawless_lightning_crystal",
-   "title_ru": "Безупречный электрический кристалл",
-   "description_ru": "Идеальный кристалл электричества без единого изъяна.",
-   "aura_ru": "<color=green>+15 % сопротивления проклятиям для гномов и големов (суммируется). Если использует Шейла: +10 % сопротивления урону.</color>",
+   "title_key": "HODA_FLAWLESS_LIGHTNING_CRYSTAL_GEAR_TITLE",
+   "description_key": "HODA_FLAWLESS_LIGHTNING_CRYSTAL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_FLAWLESS_LIGHTNING_CRYSTAL_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_FlawlessLightningCrystal.png",
    "categories": [
@@ -4378,9 +4501,11 @@
   },
   {
    "id": "flawless_nature_crystal",
-   "title_ru": "Безупречный природный кристалл",
-   "description_ru": "Идеальный кристалл природы без единого изъяна.",
-   "aura_ru": "<color=green>+10 % сопротивления замедлению для гномов и големов (суммируется). Если использует Шейла: +10 % здоровья.</color>",
+   "title_key": "HODA_FLAWLESS_NATURE_CRYSTAL_GEAR_TITLE",
+   "description_key": "HODA_FLAWLESS_NATURE_CRYSTAL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_FLAWLESS_NATURE_CRYSTAL_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_FlawlessNatureCrystal.png",
    "categories": [
@@ -4443,9 +4568,11 @@
   },
   {
    "id": "flawless_spirit_crystal",
-   "title_ru": "Безупречный духовный кристалл",
-   "description_ru": "Идеальный кристалл духов без единого изъяна.",
-   "aura_ru": "<color=green>+15 % сопротивления оглушению для гномов и големов (суммируется). Если использует Шейла: +5 % доп. урона.</color>",
+   "title_key": "HODA_FLAWLESS_SPIRIT_CRYSTAL_GEAR_TITLE",
+   "description_key": "HODA_FLAWLESS_SPIRIT_CRYSTAL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_FLAWLESS_SPIRIT_CRYSTAL_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_FlawlessSpiritCrystal.png",
    "categories": [
@@ -4508,9 +4635,11 @@
   },
   {
    "id": "flemeths_grimoire",
-   "title_ru": "Гримуар Флемет",
-   "description_ru": "Книга стара, но о ней явно хорошо заботились. Переплет выполнен из кожи неизвестного происхождения.",
-   "aura_ru": "<color=green>+8 % сопротивления урону. +8 % силы для союзников-отступников. Если использует ведьма Диких земель: +2500 сопротивления урону за удар.</color>",
+   "title_key": "HODA_FLEMETHS_GRIMOIRE_GEAR_TITLE",
+   "description_key": "HODA_FLEMETHS_GRIMOIRE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_FLEMETHS_GRIMOIRE_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_FlemethsGrimoire.png",
    "categories": [
@@ -4553,9 +4682,12 @@
   },
   {
    "id": "forge_masters_hammer",
-   "title_ru": "Молот Мастера Горна",
-   "description_ru": "Самое мощное оружие порождений тьмы генлок — хозяин наковальни приберег для себя.",
-   "aura_ru": "<color=green>+5 % силы.</color> <color=red>-5 % силы для врагов.</color>",
+   "title_key": "HODA_FORGE_MASTERS_HAMMER_GEAR_TITLE",
+   "description_key": "HODA_FORGE_MASTERS_HAMMER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_POWER_PERSONAL_DESC",
+    "HODA_GEAR_MINUS5_POWER_ENEMIES_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_ForgeMastersHammer.png",
    "categories": [
@@ -4589,9 +4721,11 @@
   },
   {
    "id": "gamordan_stormrider_scale",
-   "title_ru": "Чешуйка гаморданского бурегона",
-   "description_ru": "Выдрана из шкуры убитого гаморданского бурегона. При прикосновении вызывает покалывание.",
-   "aura_ru": "<color=green>+10 % сопротивления урону для существ.</color> <color=red>-25 % сопротивления оглушению.</color> <color=green>Если использует дракон: +15 % сопротивления всем эффектам.</color>",
+   "title_key": "HODA_GAMORDAN_STORMRIDER_SCALE_GEAR_TITLE",
+   "description_key": "HODA_GAMORDAN_STORMRIDER_SCALE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_GAMORDAN_STORMRIDER_SCALE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_GamordanStormriderScale.png",
    "categories": [
@@ -4692,9 +4826,13 @@
   },
   {
    "id": "garahels_helm",
-   "title_ru": "Шлем Гараэла",
-   "description_ru": "Этот зачарованный шлем, потерянный в последней битве с Андоралом, содержит в себе дух былого хозяина.",
-   "aura_ru": "<color=green>Получив удар, лечит союзников на 10 %.</color> <color=green>+5 % к силе союзников.</color> <color=green>Снаряжение Гараэла: +10 % дополнительного урона.</color>",
+   "title_key": "HODA_GARAHELS_HELM_GEAR_TITLE",
+   "description_key": "HODA_GARAHELS_HELM_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_ALLIES_ON_SELF_HIT_DESC",
+    "HODA_GEAR_PLUS5_POWER_ALLIES_DESC",
+    "HODA_GEAR_PLUS10_DAMAGE_FOR_GARAHEL_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_GarahelsHelm.png",
    "categories": [
@@ -4737,9 +4875,11 @@
   },
   {
    "id": "gauntlets_of_the_nug",
-   "title_ru": "Нажьи перчатки",
-   "description_ru": "Каким-то удивительным образом эти перчатки подлаживаются под размер владельца.",
-   "aura_ru": "<color=green>+5 % сопротивления урону. +3 % сопротивления проклятиям.</color>",
+   "title_key": "HODA_GAUNTLETS_OF_THE_NUG_GEAR_TITLE",
+   "description_key": "HODA_GAUNTLETS_OF_THE_NUG_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GAUNTLETS_OF_THE_NUG_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_GauntletsOfTheNug.png",
    "categories": [
@@ -4776,9 +4916,12 @@
   },
   {
    "id": "gauntlets_of_the_skies",
-   "title_ru": "Перчатки Небес",
-   "description_ru": "Эти перчатки осенила своим благословением сама Хозяйка Небес.",
-   "aura_ru": "<color=green>+7 % силы.</color> <color=green>При смерти врага наносит всем врагам 2 % от нанесенного урона.</color>",
+   "title_key": "HODA_GAUNTLETS_OF_THE_SKIES_GEAR_TITLE",
+   "description_key": "HODA_GAUNTLETS_OF_THE_SKIES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_POWER_PERSONAL_DESC",
+    "HODA_GEAR_EXPLODE_ALL_2_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_GauntletsOfTheSkies.png",
    "categories": [
@@ -4808,9 +4951,13 @@
   },
   {
    "id": "gift_of_the_talons",
-   "title_ru": "Подарок Когтей",
-   "description_ru": "Этот кинжал, выдаваемый только \"когтям\" Антиванских Воронов, является как признаком статуса владельца, так и контрактом.",
-   "aura_ru": "<color=orange>Чаще атакует заднюю шеренгу.</color> <color=green>+5 % шанса на двойной урон.</color> <color=green>+10 % дополнительного урона против знати.</color>",
+   "title_key": "HODA_GIFT_OF_THE_TALONS_GEAR_TITLE",
+   "description_key": "HODA_GIFT_OF_THE_TALONS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_FLANK_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS10_DAMAGE_PERSONAL_VS_NOBILITY_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_GiftoftheTalons.png",
    "categories": [
@@ -4853,9 +5000,11 @@
   },
   {
    "id": "girdle_of_the_skies",
-   "title_ru": "Пояс Небес",
-   "description_ru": "На этом поясе лежит благословение Хозяйки Небес, которое защищает владельца от дикой магии.",
-   "aura_ru": "<color=green>+10 % сопротивления проклятиям. Превращает 10 % полученного урона в здоровье и силу.</color>",
+   "title_key": "HODA_GIRDLE_OF_THE_SKIES_GEAR_TITLE",
+   "description_key": "HODA_GIRDLE_OF_THE_SKIES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_GIRDLE_OF_THE_SKIES_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_GirdleoftheSkies.png",
    "categories": [
@@ -4899,9 +5048,11 @@
   },
   {
    "id": "glandivalis",
-   "title_ru": "Гландивалис",
-   "description_ru": "Меч Освободителя, напитанный светом самой Андрасте.",
-   "aura_ru": "<color=green>+15 % здоровья. Союзники-эльфы получают +10 % дополнительного урона и сопротивления урону против Стражей.</color> <color=red>-10 % сопротивления оглушению.</color>",
+   "title_key": "HODA_GLANDIVALIS_GEAR_TITLE",
+   "description_key": "HODA_GLANDIVALIS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_GLANDIVALIS_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_Glandivalis.png",
    "categories": [
@@ -4973,9 +5124,15 @@
   },
   {
    "id": "gloves_of_the_river_dane",
-   "title_ru": "Перчатки реки Дейн",
-   "description_ru": "Трофейная броня, снятая с орлесианского командира после победы в битве у реки Дейн.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=green>+5 % к шансу на двойной урон для ферелденцев.</color> <color=green>+10 % сопротивления замедлению.</color> <color=green>Приращивает 5 % силы, получив удар.</color> <color=green>Если использует Логэйн: +5 % доп. урона.</color>",
+   "title_key": "HODA_GLOVES_OF_THE_RIVER_DANE_GEAR_TITLE",
+   "description_key": "HODA_ARMOR_OF_THE_RIVER_DANE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_CRIT_CHANCE_FERELDEN_PLUS5_DESC",
+    "HODA_GEAR_PLUS10_SLOW_RESIST_SELF_DESC",
+    "HODA_GEAR_PLUS5_POWER_SELF_ON_SELF_HIT_DESC",
+    "HODA_GEAR_BONUSDMG_SELF_LOGHAIN_EQUIP_PLUS5_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_GlovesOfTheRiverDane.png",
    "categories": [
@@ -5046,9 +5203,12 @@
   },
   {
    "id": "grand_enchanters_staff",
-   "title_ru": "Посох Великого Чародея",
-   "description_ru": "Обладатель этого посоха получает таящиеся в нем знания, раскрывающие невероятные тайны самой жизни.",
-   "aura_ru": "<color=green>+7 % силы.</color> <color=green>Приращивает 5 % здоровья при попадании по союзнику.</color>",
+   "title_key": "HODA_GRAND_ENCHANTERS_STAFF_GEAR_TITLE",
+   "description_key": "HODA_GRAND_ENCHANTERS_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_HEALTH_SELF_ON_ALLY_HIT_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_GrandEnchantersStaff.png",
    "categories": [
@@ -5078,9 +5238,12 @@
   },
   {
    "id": "great_dragon_staff",
-   "title_ru": "Посох Высшей Драконицы",
-   "description_ru": "Кровь, заключенная в этом посохе, при должной тренировке покорится его владельцу, отдавая свою магию.",
-   "aura_ru": "<color=green>+3 % дополнительного урона.</color> <color=green>+10 % к силе союзников-отступников.</color>",
+   "title_key": "HODA_GREAT_DRAGON_STAFF_GEAR_TITLE",
+   "description_key": "HODA_GREAT_DRAGON_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS10_POWER_APOSTATES_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_GreatDragonStaff.png",
    "categories": [
@@ -5116,9 +5279,11 @@
   },
   {
    "id": "greater_mistral_scale",
-   "title_ru": "Чешуйка большого мистраля",
-   "description_ru": "Выдрана из шкуры убитого большого мистраля. От нее веет холодом.",
-   "aura_ru": "<color=green>+10 % шанс на двойной урон для существ.</color> <color=red>-25 % сопротивления вытягиванию силы.</color> <color=green>Если использует дракон: «Восприимчивость»: игнорирует скрытность.</color>",
+   "title_key": "HODA_GREATER_MISTRAL_SCALE_GEAR_TITLE",
+   "description_key": "HODA_GREATER_MISTRAL_SCALE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_GREATER_MISTRAL_SCALE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_GreaterMistralScale.png",
    "categories": [
@@ -5167,9 +5332,12 @@
   },
   {
    "id": "greaves_of_the_beresaad",
-   "title_ru": "Поножи Бересаада",
-   "description_ru": "Стандартная защита ног для воинов-кунари из Бересаада.",
-   "aura_ru": "<color=green>Получив удар, вытягивает 5 % силы из врагов.</color> <color=red>-5 % силы для врагов.</color>",
+   "title_key": "HODA_GREAVES_OF_THE_BERESAAD_GEAR_TITLE",
+   "description_key": "HODA_GREAVES_OF_THE_BERESAAD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_5DRAIN_ALL_ENEMIES_ON_SELF_HIT_DESC",
+    "HODA_GEAR_MINUS5_POWER_ENEMIES_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_GreavesOfTheBeresaad.png",
    "categories": [
@@ -5203,9 +5371,12 @@
   },
   {
    "id": "greaves_of_the_lady",
-   "title_ru": "Поножи Хозяйки",
-   "description_ru": "Хозяйка Небес даровала этим поножам быстроту ветра.",
-   "aura_ru": "<color=green>+10 % сопротивления замедлению для союзников.</color> <color=green>+4 % здоровья союзникам.</color>",
+   "title_key": "HODA_GREAVES_OF_THE_LADY_GEAR_TITLE",
+   "description_key": "HODA_GREAVES_OF_THE_LADY_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_SLOW_RESIST_ALLIES_DESC",
+    "HODA_GEAR_PLUS4_HEALTH_ALLIES_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_GreavesOfTheLady.png",
    "categories": [
@@ -5235,9 +5406,13 @@
   },
   {
    "id": "griffon_plate",
-   "title_ru": "Латы грифона",
-   "description_ru": "Нагрудник, найденный у крепости Адамант, напоминает броню Стражей былых времен.",
-   "aura_ru": "<color=green>+15 % сопротивления урону для Стражей.</color> <color=green>+25 % Заступнику.</color> <color=green>Приращивает 10 % здоровья при попадании по союзнику.</color>",
+   "title_key": "HODA_GRIFFON_PLATE_GEAR_TITLE",
+   "description_key": "HODA_GRIFFON_PLATE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DMG_RESIST_PCT_15_TO_WARDENS_DESC",
+    "HODA_GEAR_DEFENDER_25_DESC",
+    "HODA_GEAR_PLUS10_HEALTH_SELF_ON_ALLY_HIT_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_GriffonPlate.png",
    "categories": [
@@ -5280,9 +5455,11 @@
   },
   {
    "id": "griffonrider_leathers",
-   "title_ru": "Доспех наездника на грифоне",
-   "description_ru": "Стражи надевали эти особые доспехи, помогавшие держаться на спинах могучих грифонов.",
-   "aura_ru": "<color=green>+7 % дополнительного урона. После смерти любого персонажа союзники получают 15 % силы и здоровья. После смерти врага все враги получают 2 % от нанесенного урона.</color>",
+   "title_key": "HODA_GRIFFONRIDER_LEATHERS_GEAR_TITLE",
+   "description_key": "HODA_GRIFFONRIDER_LEATHERS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_GRIFFONRIDER_LEATHERS_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_GriffonriderLeathers.png",
    "categories": [
@@ -5340,9 +5517,13 @@
   },
   {
    "id": "grimoire_of_the_frozen_wastes",
-   "title_ru": "Гримуар Мерзлых Пустошей",
-   "description_ru": "На этих стр. расск. сотни сур. ист. о том, как варвары Мерзлых Пустошей выжив. на своей лед. родине.",
-   "aura_ru": "<color=green>+10 % сопротивления урону.</color> <color=green>+7 % сопротивления замедлению для союзников.</color> <color=green>+25 % сопротивления оглушению.</color>",
+   "title_key": "HODA_GRIMOIRE_OF_THE_FROZEN_WASTES_GEAR_TITLE",
+   "description_key": "HODA_GRIMOIRE_OF_THE_FROZEN_WASTES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS7_SLOW_RESIST_ALLIES_DESC",
+    "HODA_GEAR_PERSONAL_STUN_RESIST_25_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_GrimoireOfTheFrozenWastes.png",
    "categories": [
@@ -5379,9 +5560,11 @@
   },
   {
    "id": "hakkons_wisdom",
-   "title_ru": "Мудрость Гаккона",
-   "description_ru": "Этот посох выдается самым истовым авгурам самим Гакконом.",
-   "aura_ru": "<color=green>Восприимчивость: игнорирует скрытность. +10 % дополнительного урона. При смерти врага дает +8 % здоровья.</color> <color=red>-25 % сопротивления проклятиям для врагов.</color>",
+   "title_key": "HODA_HAKKONS_WISDOM_GEAR_TITLE",
+   "description_key": "HODA_HAKKONS_WISDOM_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_HAKKONS_WISDOM_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_HakkonsWisdom.png",
    "categories": [
@@ -5436,9 +5619,14 @@
   },
   {
    "id": "hakkons_wrath",
-   "title_ru": "Гнев Гаккона",
-   "description_ru": "Владелец этого лука обрушивает на врагов ярость зимы в пронзающих ледяных осколках.",
-   "aura_ru": "<color=green>+8 % дополнительного урона.</color> <color=green>+5 % к шансу на двойной урон для союзников.</color> <color=green>Восстанавливает 15 % здоровья при смерти врага.</color> <color=red>-25 % сопротивления оглушению</color>.",
+   "title_key": "HODA_HAKKONS_WRATH_GEAR_TITLE",
+   "description_key": "HODA_HAKKONS_WRATH_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS8_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_ALLIES_DESC",
+    "HODA_GEAR_HEALTH_ON_ENEMY_DEATH_15_DESC",
+    "HODA_GEAR_MINUS25_STUN_RESIST_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_HakkonsWrath.png",
    "categories": [
@@ -5486,9 +5674,11 @@
   },
   {
    "id": "hardened_gurn_hide",
-   "title_ru": "Отвердевшая шкура гурна",
-   "description_ru": "Охотники-дилетанты побаиваются гурна из-за его практически непробиваемой шкуры.",
-   "aura_ru": "<color=green>+7 % здоровья.</color>",
+   "title_key": "HODA_HARDENED_GURN_HIDE_GEAR_TITLE",
+   "description_key": "HODA_HARDENED_GURN_HIDE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_HEALTH_PERSONAL_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_HardenedGurnHide.png",
    "categories": [],
@@ -5506,9 +5696,12 @@
   },
   {
    "id": "hauberk_of_the_lady",
-   "title_ru": "Латы Хозяйки",
-   "description_ru": "Хозяйка Небес благословила эти латы, которые защищают владельца от ударов по важным органам.",
-   "aura_ru": "<color=green>+10 % сопротивления урону.</color> <color=green>Превращает 4 % урона, полученного врагами, в силу для союзника.</color>",
+   "title_key": "HODA_HAUBERK_OF_THE_LADY_GEAR_TITLE",
+   "description_key": "HODA_HAUBERK_OF_THE_LADY_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_POWER_GAIN_ALL_WHEN_ENEMY_HIT_4_SELF_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_HauberkOfTheLady.png",
    "categories": [
@@ -5538,9 +5731,12 @@
   },
   {
    "id": "heartwood_shield",
-   "title_ru": "Щит из ядровика",
-   "description_ru": "Старец не отдаст свою древесину кому попало. За щит из дерева леса Вендинг кому-то явно пришлось пролить кровь.",
-   "aura_ru": "<color=green>При атаке поглощает 15 % урона по площади, полученного союзниками.</color> <color=green>+400 сопротивления урону за попадание.</color>",
+   "title_key": "HODA_HEARTWOOD_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_HEARTWOOD_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DEFENDER_15_DESC",
+    "HODA_GEAR_PLUS400_RAW_DAMAGE_RESIST_PERSONAL_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_HeartwoodShield.png",
    "categories": [],
@@ -5565,9 +5761,13 @@
   },
   {
    "id": "helm_of_justice",
-   "title_ru": "Шлем Справедливости",
-   "description_ru": "Справедливость одолеет скверну и укрепит дух для борьбы с нечестивцами.",
-   "aura_ru": "<color=green>Возвращает врагам 10 % полученного урона.</color> <color=green>Дает +5 % дополнительного урона при атаке.</color> <color=green>При попадании получите + 7 % сопротивления урону.</color>",
+   "title_key": "HODA_HELM_OF_JUSTICE_GEAR_TITLE",
+   "description_key": "HODA_HELM_OF_JUSTICE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_RETALIATE_10_ON_SELF_HIT_VAL_FROM_DAM_DESC",
+    "HODA_GEAR_SELF_GAIN_BONUS_DAMAGE_WHEN_ATTACKING_5_DESC",
+    "HODA_GEAR_DAMRESGAIN_SELF_7_ON_SELF_HIT_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_HelmOfJustice.png",
    "categories": [
@@ -5608,9 +5808,14 @@
   },
   {
    "id": "helm_of_the_dragon_hunter",
-   "title_ru": "Шлем драконоборца",
-   "description_ru": "Неся на себе древний символ Инквизиции, этот шлем предоставляет защиту от самых свирепых чудищ.",
-   "aura_ru": "<color=green>+15 % сопротивления урону.</color> <color=green>Получив удар, лечит на 10 %.</color> <color=green>+8 % дополнительного урона.</color> <color=green>+15 % сопротивления проклятию силы.</color>",
+   "title_key": "HODA_HELM_OF_THE_DRAGON_HUNTER_GEAR_TITLE",
+   "description_key": "HODA_HELM_OF_THE_DRAGON_HUNTER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DMG_RESIST_PCT_15_PERSONAL_DESC",
+    "HODA_GEAR_AURA_HEALTH_GAIN_WHEN_SELF_HIT_10_DESC",
+    "HODA_GEAR_PLUS8_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_CURSE_POWER_RESIST_15_SELF_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_HelmOfTheDragonHunter.png",
    "categories": [
@@ -5662,9 +5867,13 @@
   },
   {
    "id": "helm_of_the_mountain_father",
-   "title_ru": "Шлем Отца Гор",
-   "description_ru": "Вырезанный из козьих рогов шлем дарует защиту Корта Отца Гор его последователям.",
-   "aura_ru": "<color=green>+10 % сопротивления оглушению для союзников.</color> <color=green>+10 % сопротивления урону для авваров.</color> <color=green>Если использует аввар: превращает 4 % нанесенного этим персонажем урона в здоровье для авваров.</color>",
+   "title_key": "HODA_HELM_OF_THE_MOUNTAIN_FATHER_GEAR_TITLE",
+   "description_key": "HODA_HELM_OF_THE_MOUNTAIN_FATHER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_STUN_RESIST_ALLIES_DESC",
+    "HODA_GEAR_DMGRESIST_AVVAR_PLUS10_DESC",
+    "HODA_GEAR_HEALTH_AVVAR_SELFATK_CONVERT4_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_HelmOfTheMountainFather.png",
    "categories": [
@@ -5723,9 +5932,12 @@
   },
   {
    "id": "helm_of_the_skies",
-   "title_ru": "Шлем Небес",
-   "description_ru": "Этот шлем защищает последователей Хозяйки Небес от воздействия на разум.",
-   "aura_ru": "<color=green>+10 % снижения вытягивания силы у союзников.</color> <color=green>Нанося удар, вытягивает 2 % силы из врагов.</color>",
+   "title_key": "HODA_HELM_OF_THE_SKIES_GEAR_TITLE",
+   "description_key": "HODA_HELM_OF_THE_SKIES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_POWER_DRAIN_RESIST_ALLIES_DESC",
+    "HODA_GEAR_ENEMY_POWER_DRAIN_WHEN_SELF_ATTACKED_2_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_HelmOfTheSkies.png",
    "categories": [
@@ -5755,9 +5967,13 @@
   },
   {
    "id": "hisseras_mask",
-   "title_ru": "Маска Хиссеры",
-   "description_ru": "Даже у саирабаза силы не бесконечны.",
-   "aura_ru": "<color=red>-3 % здоровья (своего).</color> <color=green>+10 % силы.</color> <color=green>+15 % сопротивления вытягиванию силы.</color>",
+   "title_key": "HODA_HISSERAS_MASK_GEAR_TITLE",
+   "description_key": "HODA_HISSERAS_MASK_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_MINUS3_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS10_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS15_POWER_DRAIN_RESIST_SELF_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_HisserasMask.png",
    "categories": [
@@ -5794,9 +6010,13 @@
   },
   {
    "id": "ice_giants_tusk",
-   "title_ru": "Клык ледяного гиганта",
-   "description_ru": "Этот клык холоден на ощупь: в нем все еще бьется ледяная сила былого хозяина.",
-   "aura_ru": "<color=green>+10 % дополнительного урона против быстрых героев.</color> <color=orange>Чаще атакует врагов с самым низким процентом здоровья.</color> <color=green>Если использует ледяной гигант: +10 % здоровья.</color>",
+   "title_key": "HODA_ICE_GIANTS_TUSK_GEAR_TITLE",
+   "description_key": "HODA_ICE_GIANTS_TUSK_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10PCT_POWER_VS_QUICK_DESC",
+    "HODA_GEAR_WOUNDED_TARGETING_DESC",
+    "HODA_GEAR_PLUS10_HEALTH_ICE_GIANT_ONLY_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_IceGiantsTusk.png",
    "categories": [],
@@ -5840,9 +6060,12 @@
   },
   {
    "id": "inquisition_longsword",
-   "title_ru": "Длинный меч Инквизиции",
-   "description_ru": "Обычный меч, выкованный из усиленной стали.",
-   "aura_ru": "<color=green>+6 % силы.</color> <color=green>Если используется Инквизицией: +4 % шанса на двойной урон.</color>",
+   "title_key": "HODA_INQUISITION_LONGSWORD_GEAR_TITLE",
+   "description_key": "HODA_INQUISITION_LONGSWORD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS6_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS4_CRIT_CHANCE_INQUISITION_ONLY_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_InquisitionLongsword.png",
    "categories": [
@@ -5878,9 +6101,12 @@
   },
   {
    "id": "inquisition_shield",
-   "title_ru": "Щит Инквизиции",
-   "description_ru": "Гербовый щит солдата Инквизиции.",
-   "aura_ru": "<color=green>+2 % здоровья.</color> <color=green>+2 % сопротивления урону для союзников Инквизиции.</color>",
+   "title_key": "HODA_INQUISITION_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_INQUISITION_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS2_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS2_DAMAGE_RESIST_INQUISITION_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_InquisitionShield.png",
    "categories": [
@@ -5920,9 +6146,12 @@
   },
   {
    "id": "inquisition_staff",
-   "title_ru": "Посох Инквизиции",
-   "description_ru": "Стандартный посох, который используют маги, служащие в рядах Инквизиции.",
-   "aura_ru": "<color=green>+5 % дополнительного урона.</color> <color=green>+5 % дополнительного урона для союзников Инквизиции.</color>",
+   "title_key": "HODA_INQUISITION_STAFF_GEAR_TITLE",
+   "description_key": "HODA_INQUISITION_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS5PCT_BONUS_DAMAGE_FOR_INQUISITION_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_InquisitionStaff.png",
    "categories": [
@@ -5958,9 +6187,12 @@
   },
   {
    "id": "inquisition_warmage_pauldron",
-   "title_ru": "Наплечник боевых магов Инквизиции",
-   "description_ru": "Обычный наплечник для магов, вступивших в ряды Инквизиции.",
-   "aura_ru": "<color=green>+4 % силы.</color> <color=green>+3 % сопротивления урону.</color>",
+   "title_key": "HODA_INQUISITION_WARMAGE_PAULDRON_GEAR_TITLE",
+   "description_key": "HODA_INQUISITION_WARMAGE_PAULDRON_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS3_DAMAGE_RESIST_PERSONAL_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_InquisitionWarmagePauldron.png",
    "categories": [
@@ -5994,9 +6226,13 @@
   },
   {
    "id": "isanas_song",
-   "title_ru": "Песнь Исаны",
-   "description_ru": "При касании слышна тихая задумчивая мелодия, будто посох вспоминает о далеком или забытом месте.",
-   "aura_ru": "<color=green>+7 % шанса на двойной урон.</color> <color=green>При атаке наносит +5 % нанесенного урона всем врагам.</color> <color=green>Если использует моровой герой: \"Восприимчивость: игнорирует скрытность\".</color>",
+   "title_key": "HODA_ISANAS_SONG_GEAR_TITLE",
+   "description_key": "HODA_ISANAS_SONG_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_EXPLODE_ALL_SELFATK_CONVERT5_DESC",
+    "HODA_GEAR_PERCEPTIVE_SELF_BLIGHTED_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_IsanasSong.png",
    "categories": [
@@ -6039,9 +6275,13 @@
   },
   {
    "id": "jar_of_bees",
-   "title_ru": "Банка с пчелами",
-   "description_ru": "В банку как-то поместили улей пчел, которых можно выпустить на ничего не подозревающих вредителей.",
-   "aura_ru": "<color=green>Когда враг получает урон, наносит 3 % от нанесенного урона всем врагам.</color> <color=red>-25 % сопротивления оглушению</color>. <color=red>-50 % сопротивления замедлению.</color>",
+   "title_key": "HODA_JAR_OF_BEES_GEAR_TITLE",
+   "description_key": "HODA_JAR_OF_BEES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_EXPLODE_ENEMIES_3_ON_ENEMY_HIT_DESC",
+    "HODA_GEAR_MINUS25_STUN_RESIST_DESC",
+    "HODA_GEAR_MINUS50SLOWRESIST_TO_ENEMIES_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_JarOfBees.png",
    "categories": [
@@ -6090,9 +6330,11 @@
   },
   {
    "id": "joining_chalice",
-   "title_ru": "Чаша Союза",
-   "description_ru": "Присоединяйтесь к нам, братья и сестры. Присоединяйтесь к нам в тени, где мы стоим бдительны.",
-   "aura_ru": "<color=green>+20 % силы и +25 % сопротивления проклятиям для Стражей.</color> <color=red>-20 % здоровья (своего).</color>",
+   "title_key": "HODA_JOINING_CHALICE_GEAR_TITLE",
+   "description_key": "HODA_JOINING_CHALICE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_JOINING_CHALICE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_JoiningChalice.png",
    "categories": [
@@ -6154,9 +6396,13 @@
   },
   {
    "id": "kaddis_of_the_lady",
-   "title_ru": "Каддис Хозяйки",
-   "description_ru": "Благословения Хозяйки Небес достаточно, чтобы эта боевая раскраска защищала носителя, как броня.",
-   "aura_ru": "<color=green>+12 % сопротивления оглушению для союзников.</color> <color=green>+15 % сопротивления замедлению.</color> <color=green>Возвращает противнику 5 % полученного урона.</color>",
+   "title_key": "HODA_KADDIS_OF_THE_LADY_GEAR_TITLE",
+   "description_key": "HODA_KADDIS_OF_THE_LADY_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS12_STUN_RESIST_ALLIES_DESC",
+    "HODA_GEAR_PLUS15_SLOW_RESIST_SELF_DESC",
+    "HODA_GEAR_RETALIATE_ALL_ON_SELF_HIT_5_VAL_FROM_DAM_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_KaddisOfTheLady.png",
    "categories": [
@@ -6197,9 +6443,11 @@
   },
   {
    "id": "kaddis_of_the_mountainfather",
-   "title_ru": "Каддис Отца Гор",
-   "description_ru": "Древний эскиз, который использовали воины пепла для вызова авварского бога Корта.",
-   "aura_ru": "<color=green>+5 % сопротивления всем эффектам и урону.</color>",
+   "title_key": "HODA_KADDIS_OF_THE_MOUNTAINFATHER_GEAR_TITLE",
+   "description_key": "HODA_KADDIS_OF_THE_MOUNTAINFATHER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_KADDIS_OF_THE_MOUNTAINFATHER_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_KaddisOfTheMountainFather.png",
    "categories": [
@@ -6257,9 +6505,11 @@
   },
   {
    "id": "kaltenzahn_scale",
-   "title_ru": "Чешуйка кальтенцана",
-   "description_ru": "Выдрана из шкуры убитого кальтенцана. При прикосновении кажется, что она сделана изо льда.",
-   "aura_ru": "<color=green>+25 % сопротивления проклятиям для существ. Существа невосприимчивы к первым 2500 ед. урона. Если использует дракон: повышенная инициатива для атаки.</color>",
+   "title_key": "HODA_KALTENZAHN_SCALE_GEAR_TITLE",
+   "description_key": "HODA_KALTENZAHN_SCALE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_KALTENZAHN_SCALE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_KaltenzahnScale.png",
    "categories": [
@@ -6331,9 +6581,13 @@
   },
   {
    "id": "keen_elfsnake_vitaar",
-   "title_ru": "Едкий витаар из эльфийской змеи",
-   "description_ru": "Кунари создали эту странную краску для лица из яда, который смертелен для неподготовленных.",
-   "aura_ru": "<color=green>+5 % шанса на двойной урон.</color> <color=green>+7 % дополнительного урона.</color> <color=green>При использовании ускользающими героями атакует, не вызывая эффектов, возникающих при попадании.</color>",
+   "title_key": "HODA_KEEN_ELFSNAKE_VITAAR_GEAR_TITLE",
+   "description_key": "HODA_KEEN_ELFSNAKE_VITAAR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS7_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_STEALTH_SELF_ELUSIVE_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_KeenElfsnakeVitaar.png",
    "categories": [
@@ -6376,9 +6630,11 @@
   },
   {
    "id": "keepsake_locket",
-   "title_ru": "Памятный медальон",
-   "description_ru": "Медальон с портретом родственника. Хранить рядом с сердцем.",
-   "aura_ru": "<color=green>+5 % сопротивления проклятию здоровья и силы. Если использует кто-то из семьи Хоук: +6 % сопротивления урону.</color>",
+   "title_key": "HODA_KEEPSAKE_LOCKET_GEAR_TITLE",
+   "description_key": "HODA_KEEPSAKE_LOCKET_GEAR_DESC",
+   "aura_keys": [
+    "HODA_KEEPSAKE_LOCKET_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_KeepsakeLocket.png",
    "categories": [],
@@ -6444,9 +6700,13 @@
   },
   {
    "id": "kittys_collar",
-   "title_ru": "Ошейник Китти",
-   "description_ru": "Тот, кто носит этот амулет, связывает себя весьма сомнительным договором — знает он о том или нет.",
-   "aura_ru": "<color=red>-10 % здоровья (своего).</color> <color=green>При смерти лечит союзников на 60 %.</color> <color=green>Если использует кошка: +10 % силы при смерти союзника.</color>",
+   "title_key": "HODA_KITTYS_COLLAR_GEAR_TITLE",
+   "description_key": "HODA_KITTYS_COLLAR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_MINUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS60_HEALTH_ALLIES_ON_SELF_DEATH_DESC",
+    "HODA_GEAR_POWER_SELF_ON_ALLY_DEATH_10_CAT_PERSONAL_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_KittysCollar.png",
    "categories": [],
@@ -6478,9 +6738,13 @@
   },
   {
    "id": "legion_hammer",
-   "title_ru": "Молот Легиона",
-   "description_ru": "Тяжелая булава, которую легионеры используют в своей бесконечной войне с Мором.",
-   "aura_ru": "<color=green>+10 % дополнительного урона против моровых героев.</color> <color=green>+10 % силы для Легиона мертвых.</color> <color=orange>Чаще атакует моровых героев.</color>",
+   "title_key": "HODA_LEGION_HAMMER_GEAR_TITLE",
+   "description_key": "HODA_LEGION_HAMMER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_BONUS_DAMAGE_VS_BLIGHT_DESC",
+    "HODA_GEAR_PLUS10_POWER_LEGION_DESC",
+    "HODA_GEAR_HATRED_BLIGHTED_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_LegionHammer.png",
    "categories": [
@@ -6535,9 +6799,13 @@
   },
   {
    "id": "legionnaire_helmet",
-   "title_ru": "Шлем легионера",
-   "description_ru": "Тяжелый шлем, созданный для Легиона мертвых.",
-   "aura_ru": "<color=green>+10 % сопротивления оглушению.</color> <color=green>+8 % сопротивления урону.</color> <color=green>Снаряжение Легиона мертвых: +4 % дополнительного урона.</color>",
+   "title_key": "HODA_LEGIONNAIRE_HELMET_GEAR_TITLE",
+   "description_key": "HODA_LEGIONNAIRE_HELMET_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_STUN_RESIST_SELF_DESC",
+    "HODA_GEAR_PLUS8_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS4PCT_BONUS_DAMAGE_LEGION_ONLY_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_LegionnaireHelmet.png",
    "categories": [
@@ -6580,9 +6848,11 @@
   },
   {
    "id": "legionnaire_plate",
-   "title_ru": "Латы легионера",
-   "description_ru": "Хорошо подогнанная, но неброская броня — типичное для Легиона мертвых противоречие.",
-   "aura_ru": "<color=green>+12 % здоровья, +8 % сопротивления оглушению и урону. Если использует Легион мертвых: +3 % сопротивления урону за каждый полученный удар.</color>",
+   "title_key": "HODA_LEGIONNAIRE_PLATE_GEAR_TITLE",
+   "description_key": "HODA_LEGIONNAIRE_PLATE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_LEGIONNAIRE_PLATE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_LegionnairePlate.png",
    "categories": [
@@ -6636,9 +6906,14 @@
   },
   {
    "id": "legionnaire_scout_dagger",
-   "title_ru": "Кинжал разведчицы из Легиона",
-   "description_ru": "Наши тайны умрут вместе с нами.",
-   "aura_ru": "<color=green>Скрытность: атакует, не вызывая эффектов, возникающих при попадании.</color> <color=red>При смерти союзники теряют 20 % здоровья.</color> <color=red>-15 % здоровья (своего).</color> <color=red>Когда враг получает урон, наносит 2 % от нанесенного урона всем союзникам.</color>",
+   "title_key": "HODA_LEGIONNAIRE_SCOUT_DAGGER_GEAR_TITLE",
+   "description_key": "HODA_LEGIONNAIRE_SCOUT_DAGGER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_STEALTH_PERSONAL_DESC",
+    "HODA_GEAR_20DAMAGE_ALLIES_ON_SELF_DEATH_DESC",
+    "HODA_GEAR_MINUS15_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_EXPLODE_ALLIES_2_ON_ENEMY_HIT_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_LegionnaireScoutDagger.png",
    "categories": [
@@ -6682,9 +6957,13 @@
   },
   {
    "id": "lineage",
-   "title_ru": "Наследие",
-   "description_ru": "Нужна немалая сноровка, чтобы управиться с этим затейливо украшенным молотом на поле боя.",
-   "aura_ru": "<color=green>+8 % силы.</color> <color=green>+4 % шанса на двойной урон.</color> <color=green>Если использует Карвер Хоук: +4 % шанса на двойной урон.</color>",
+   "title_key": "HODA_LINEAGE_GEAR_TITLE",
+   "description_key": "HODA_LINEAGE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS8_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS4_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS4_CRIT_CHANCE_SELF_CARVERHAWKE_ONLY_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_Lineage.png",
    "categories": [
@@ -6727,9 +7006,11 @@
   },
   {
    "id": "litany_of_adralla",
-   "title_ru": "Литания Адраллы",
-   "description_ru": "Этот найденный на теле Ниалла пергамент серьезно воздействует на демонов.",
-   "aura_ru": "<color=green>+25 % доп. урона против демонов и магов крови для союзников. +15 % сопр. проклятию для союзников.</color>",
+   "title_key": "HODA_LITANY_OF_ADRALLA_GEAR_TITLE",
+   "description_key": "HODA_LITANY_OF_ADRALLA_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_LITANY_OF_ADRALLA_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_LitanyOfAdralla.png",
    "categories": [
@@ -6780,9 +7061,14 @@
   },
   {
    "id": "loose_ends",
-   "title_ru": "Нерешенные проблемы",
-   "description_ru": "Эффективное средство к достижению цели, которое обеспечивает решение всех задач.",
-   "aura_ru": "<color=green>+25 % сопротивления оглушению.</color> <color=green>+10 % шанса на двойной урон.</color> <color=green>+5 % дополнительного урона.</color> <color=red>-25 % сопротивления замедлению.</color>",
+   "title_key": "HODA_LOOSE_ENDS_GEAR_TITLE",
+   "description_key": "HODA_LOOSE_ENDS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PERSONAL_STUN_RESIST_25_DESC",
+    "HODA_GEAR_PLUS10_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_MINUS25_SLOW_RESIST_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_LooseEnds.png",
    "categories": [
@@ -6830,9 +7116,11 @@
   },
   {
    "id": "lotherings_lament",
-   "title_ru": "Плач по Лотерингу",
-   "description_ru": "Последние слова тех, кто остался.",
-   "aura_ru": "<color=green>Дает 3 % силы при смерти союзника.</color>",
+   "title_key": "HODA_LOTHERINGS_LAMENT_GEAR_TITLE",
+   "description_key": "HODA_LOTHERINGS_LAMENT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_POWER_SELF_ON_ALLY_DEATH_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_LotheringsLament.png",
    "categories": [],
@@ -6850,9 +7138,11 @@
   },
   {
    "id": "lyrium_kit",
-   "title_ru": "Лириумный набор",
-   "description_ru": "Источник храмовничьей способности блокировать магию. Соблюдать дневную дозу.",
-   "aura_ru": "<color=green>Восприимчивость: игнорирует скрытность. +10 % сопротивления урону против магов и демонов, вдвое больше против магов крови.</color> <color=red>-15 % силы для магов и демонов.</color>",
+   "title_key": "HODA_LYRIUM_KIT_GEAR_TITLE",
+   "description_key": "HODA_LYRIUM_KIT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_LYRIUM_KIT_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_LyriumKit.png",
    "categories": [
@@ -6922,9 +7212,12 @@
   },
   {
    "id": "lyrium_reinforced_longbow",
-   "title_ru": "Усиленный лириумом длинный лук",
-   "description_ru": "Этот лук инкрустирован чистым лириумом, который придает особую мощь выпущенным из него стрелам.",
-   "aura_ru": "<color=green>+5 % дополнительного урона.</color> <color=green>При смерти врага наносит всем врагам 2 % от нанесенного урона.</color>",
+   "title_key": "HODA_LYRIUM_REINFORCED_LONGBOW_GEAR_TITLE",
+   "description_key": "HODA_LYRIUM_REINFORCED_LONGBOW_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_EXPLODE_ALL_2_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_LyriumReinforcedLongbow.png",
    "categories": [
@@ -6954,9 +7247,12 @@
   },
   {
    "id": "maferaths_maul",
-   "title_ru": "Молот Маферата",
-   "description_ru": "Каменный молот Предателя, символ нечестивой власти.",
-   "aura_ru": "<color=green>+5 % дополнительного урона для изгоев.</color> <color=green>+7 % дополнительного урона для союзников против Церкви и тевинтерцев.</color>",
+   "title_key": "HODA_MAFERATHS_MAUL_GEAR_TITLE",
+   "description_key": "HODA_MAFERATHS_MAUL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5PCT_BONUS_DAMAGE_FOR_OUTLAWS_DESC",
+    "HODA_GEAR_PLUS7PCT_BONUS_DAMAGE_VS_CHANTRY_TEVINTER_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_MaferathsMaul.png",
    "categories": [
@@ -7006,9 +7302,11 @@
   },
   {
    "id": "magekiller",
-   "title_ru": "Убийца магов",
-   "description_ru": "Излюбленное оружие знаменитого магоубийцы. Этот клинок остановил не одно черное сердце.",
-   "aura_ru": "<color=green>+10 % дополнительного урона против магов и вдвое больше против магов крови.</color>",
+   "title_key": "HODA_MAGEKILLER_GEAR_TITLE",
+   "description_key": "HODA_MAGEKILLER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_MAGEKILLER_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_Magekiller.png",
    "categories": [
@@ -7054,9 +7352,12 @@
   },
   {
    "id": "mantle_of_the_hold_beast",
-   "title_ru": "Покров зверя оплота",
-   "description_ru": "Могучие звери оплота, как и любые воины оплота, тоже должны быть облачены в доспехи.",
-   "aura_ru": "<color=green>+10 % сопротивления урону для союзников.</color> <color=green>+5 % дополнительного урона.</color>",
+   "title_key": "HODA_MANTLE_OF_THE_HOLD_BEAST_GEAR_TITLE",
+   "description_key": "HODA_MANTLE_OF_THE_HOLD_BEAST_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DMG_RESIST_PCT_10_DESC",
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_MantleOfTheHoldBeast.png",
    "categories": [
@@ -7086,9 +7387,14 @@
   },
   {
    "id": "march_of_the_everlasting",
-   "title_ru": "Вечный поход",
-   "description_ru": "Выкован в Арлатане, перекован в Тевинтере, зачарован в Орлее и послужил шевалье в Священных походах.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=green>+8 % силы.</color> <color=green>+5 % сопротивления урону для союзников.</color> <color=green>При атаке наносит +5 % нанесенного урона всем врагам.</color>",
+   "title_key": "HODA_MARCH_OF_THE_EVERLASTING_GEAR_TITLE",
+   "description_key": "HODA_MARCH_OF_THE_EVERLASTING_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS8_POWER_PERSONAL_DESC",
+    "HODA_GEAR_DMGRESIST_ALLIES_PLUS5_DESC",
+    "HODA_GEAR_EXPLODE_ALL_SELFATK_CONVERT5_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_MarchOfTheEverlasting.png",
    "categories": [
@@ -7132,9 +7438,12 @@
   },
   {
    "id": "masterwork_witch_staff",
-   "title_ru": "Великолепный ведьминский посох",
-   "description_ru": "Посох увенчан человеческим черепом, зажатым в дубовых \"когтях\".",
-   "aura_ru": "<color=green>+4 % силы.</color> <color=green>Дает 4 % силы при смерти союзника.</color>",
+   "title_key": "HODA_MASTERWORK_WITCH_STAFF_GEAR_TITLE",
+   "description_key": "HODA_MASTERWORK_WITCH_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS4_POWER_SELF_ON_ALLY_DEATH_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_MasterworkWitchStaff.png",
    "categories": [
@@ -7164,9 +7473,12 @@
   },
   {
    "id": "maul_of_tacitus",
-   "title_ru": "Молот Тацита",
-   "description_ru": "Молот Тацита Валерия, заляпанный и пропитанный кровью неверных.",
-   "aura_ru": "<color=green>+7 % силы.</color> <color=red>-8 % сопротивления оглушению для врагов.</color>",
+   "title_key": "HODA_MAUL_OF_TACITUS_GEAR_TITLE",
+   "description_key": "HODA_MAUL_OF_TACITUS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_POWER_PERSONAL_DESC",
+    "HODA_GEAR_MINUS8_STUN_RESIST_ENEMIES_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_MaulOfTacitus.png",
    "categories": [
@@ -7200,9 +7512,12 @@
   },
   {
    "id": "maul_of_the_dragon",
-   "title_ru": "Молот с драконом",
-   "description_ru": "Огромный молот из когтя высшей драконицы, раздирающий даже самую крепкую плоть.",
-   "aura_ru": "<color=orange>Чаще атакует крупных существ.</color> <color=green>+25 % дополнительного урона против крупных существ.</color>",
+   "title_key": "HODA_MAUL_OF_THE_DRAGON_GEAR_TITLE",
+   "description_key": "HODA_MAUL_OF_THE_DRAGON_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_HATRED_LARGE_CREATURES_DESC",
+    "HODA_GEAR_PLUS25_PCT_POWER_VS_LARGE_CREATURES_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_MaulOfTheDragon.png",
    "categories": [
@@ -7248,9 +7563,11 @@
   },
   {
    "id": "mercys_crest",
-   "title_ru": "Герб милосердия",
-   "description_ru": "Этот сектантский амулет укрепляет дух при кровопролитиях.",
-   "aura_ru": "<color=green>Превращает 4 % полученного врагами урона в силу.</color>",
+   "title_key": "HODA_MERCYS_CREST_GEAR_TITLE",
+   "description_key": "HODA_MERCYS_CREST_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_POWER_SELF_ENEMYHIT_CONVERT4_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_MercysCrest.png",
    "categories": [
@@ -7273,9 +7590,11 @@
   },
   {
    "id": "merediths_key",
-   "title_ru": "Ключ Мередит",
-   "description_ru": "Где-то в недрах Киркволла лежит шкатулка Мередит со взятками, и в ключе от нее — больше силы, чем в любом оружии.",
-   "aura_ru": "<color=green>Превращает 4 % урона, полученного врагами, в силу для союзника.</color>",
+   "title_key": "HODA_MEREDITHS_KEY_GEAR_TITLE",
+   "description_key": "HODA_MEREDITHS_KEY_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_POWER_GAIN_ALL_WHEN_ENEMY_HIT_4_SELF_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_MeredithsKey.png",
    "categories": [
@@ -7298,9 +7617,13 @@
   },
   {
    "id": "mortalitasi_cowl",
-   "title_ru": "Капюшон морталитаси",
-   "description_ru": "Он напитан магией секретного неварранского ордена морталитаси.",
-   "aura_ru": "<color=green>+10 % сопротивления проклятию силы для союзников.</color> <color=green>+15 % к силе.</color> <color=green>При смерти врага все враги получают 5 % от нанесенного урона.</color>",
+   "title_key": "HODA_MORTALITASI_COWL_GEAR_TITLE",
+   "description_key": "HODA_MORTALITASI_COWL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_CURSE_POWER_RESIST_DESC",
+    "HODA_GEAR_PLUS15_POWER_PERSONAL_DESC",
+    "HODA_GEAR_EXPLODE_ALL_5_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_MortalitasiCowl.png",
    "categories": [
@@ -7337,9 +7660,12 @@
   },
   {
    "id": "mortalitasi_staff",
-   "title_ru": "Посох морталитаси",
-   "description_ru": "На посохе виднеются символы, примерно переводящиеся как \"Всегда вперед, всегда навстречу смерти\".",
-   "aura_ru": "<color=green>При получении удара дает +15 % здоровья.</color> <color=green>Возвращает противнику 5 % полученного урона.</color>",
+   "title_key": "HODA_MORTALITASI_STAFF_GEAR_TITLE",
+   "description_key": "HODA_MORTALITASI_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_HEALTH_GAIN_WHEN_SELF_HIT_15_DESC",
+    "HODA_GEAR_RETALIATE_ALL_ON_SELF_HIT_5_VAL_FROM_DAM_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_MortalitasiStaff.png",
    "categories": [
@@ -7369,9 +7695,13 @@
   },
   {
    "id": "mythals_blessing",
-   "title_ru": "Благословение Митал",
-   "description_ru": "Когда щит не просто щит? Когда на нем золотом выведен символ богини мести.",
-   "aura_ru": "<color=green>+3 % шанса на двойной урон.</color> <color=green>Получив удар, приращивает 5 % здоровья.</color> <color=green>Если использует эльф: +6 % здоровья.</color>",
+   "title_key": "HODA_MYTHALS_BLESSING_GEAR_TITLE",
+   "description_key": "HODA_MYTHALS_BLESSING_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_HEALTHGAIN_SELF_5_ON_SELF_HIT_DESC",
+    "HODA_GEAR_PLUS6_HEALTH_SELF_ELVES_ONLY_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_MythalsBlessing.png",
    "categories": [],
@@ -7409,9 +7739,12 @@
   },
   {
    "id": "mythals_judgment",
-   "title_ru": "Правосудие Митал",
-   "description_ru": "Этот посох — воплощение правосудия. Эльгарнан подарил его Митал для защиты и отмщения своего народа.",
-   "aura_ru": "<color=green>+10 % силы.</color> <color=green>Возвращает врагам 10 % полученного урона.</color>",
+   "title_key": "HODA_MYTHALS_JUDGMENT_GEAR_TITLE",
+   "description_key": "HODA_MYTHALS_JUDGMENT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_POWER_PERSONAL_DESC",
+    "HODA_GEAR_RETALIATE_10_ON_SELF_HIT_VAL_FROM_DAM_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_MythalsJudgment.png",
    "categories": [
@@ -7445,9 +7778,14 @@
   },
   {
    "id": "oath_breaker",
-   "title_ru": "Клятвопреступник",
-   "description_ru": "Когда клятва самому себе оказывается превыше клятвы другому, одну из этих клятв приходится нарушить.",
-   "aura_ru": "<color=green>+15 % к силе.</color> <color=green>Получив удар, лечит 20 %.</color> <color=green>+20 % сопротивления урону против тевинтерцев.</color> <color=green>Если использует Фенрис: +25 % дополнительного урона.</color>",
+   "title_key": "HODA_OATHBREAKER_GEAR_TITLE",
+   "description_key": "HODA_OATHBREAKER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS15_POWER_PERSONAL_DESC",
+    "HODA_GEAR_HEALTH_GAIN_WHEN_SELF_HIT_20_DESC",
+    "HODA_GEAR_DMG_RESIST_PCT_20_VS_TEVINTER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS25PCT_POWER_PERSONAL_FENRIS_ONLY_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_OathBreaker.png",
    "categories": [
@@ -7511,9 +7849,14 @@
   },
   {
    "id": "of_things_not_lost",
-   "title_ru": "О том, что не утеряно",
-   "description_ru": "Записки ферелденского беженца. Доказательство того, что кое-что никто у нас не отнимет.",
-   "aura_ru": "<color=red>-5 % здоровья (своего).</color> <color=green>+3 % дополнительного урона.</color> <color=green>+5 % шанса на двойной урон.</color> <color=red>-8 % сопротивления вытягиванию силы для врагов.</color>",
+   "title_key": "HODA_OF_THINGS_NOT_LOST_GEAR_TITLE",
+   "description_key": "HODA_OF_THINGS_NOT_LOST_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_MINUS5_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS3_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_MINUS8_POWER_DRAIN_RESIST_ENEMIES_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_OfThingsNotLost.png",
    "categories": [],
@@ -7552,9 +7895,11 @@
   },
   {
    "id": "orb_of_destruction",
-   "title_ru": "Сфера разрушения",
-   "description_ru": "Такая сила — и в ваших руках! Лишь эльфы способны распорядиться подобной вещью разумно.",
-   "aura_ru": "<color=green>+4 % силы для союзников. +7 % дополнительного урона для союзников черной фракции и демонов, а также против них (суммируется).</color>",
+   "title_key": "HODA_ORB_OF_DESTRUCTION_GEAR_TITLE",
+   "description_key": "HODA_ORB_OF_DESTRUCTION_GEAR_DESC",
+   "aura_keys": [
+    "HODA_ORB_OF_DESTRUCTION_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_OrbOfDestruction.png",
    "categories": [
@@ -7617,9 +7962,11 @@
   },
   {
    "id": "orb_of_fenharel",
-   "title_ru": "Сфера Фен’Харела",
-   "description_ru": "Об этом древнем артефакте неизвестно практически ничего. От источает безграничную чистую силу.",
-   "aura_ru": "<color=green>+35 % здоровья для эльфов. +25 % сопр. всему для синей фракции. Если использует Фен’Харел: при получении удара возвращает 10 % полученного урона врагам из черной фракции.</color>",
+   "title_key": "HODA_ORB_OF_FENHAREL_GEAR_TITLE",
+   "description_key": "HODA_ORB_OF_FENHAREL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_ORB_OF_FENHAREL_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_OrbOfFenHarel.png",
    "categories": [
@@ -7749,9 +8096,11 @@
   },
   {
    "id": "orlesian_hennin",
-   "title_ru": "Орлесианский атур",
-   "description_ru": "Последний писк высокой моды Орлея создан Вивьен для своей личной коллекции.",
-   "aura_ru": "<color=green>+10 % сопротивления оглушению, замедлению и вытягиванию силы. Если использует Вивьен: +25 % силы и +20 % сопротивления проклятиям.</color>",
+   "title_key": "HODA_ORLESIAN_HENNIN_GEAR_TITLE",
+   "description_key": "HODA_ORLESIAN_HENNIN_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_ORLESIAN_HENNIN_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_OrlesianHennin.png",
    "categories": [
@@ -7887,9 +8236,12 @@
   },
   {
    "id": "orlesian_mask",
-   "title_ru": "Орлесианская маска",
-   "description_ru": "Эта маска, которая стоит дороже, чем большинство доспехов, — истинный символ класса.",
-   "aura_ru": "<color=green>+6 % здоровья.</color> <color=green>+15 % сопротивления замедлению.</color>",
+   "title_key": "HODA_ORLESIAN_MASK_GEAR_TITLE",
+   "description_key": "HODA_ORLESIAN_MASK_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS6_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS15_SLOW_RESIST_SELF_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_OrlesianMask.png",
    "categories": [
@@ -7923,9 +8275,13 @@
   },
   {
    "id": "pauldron_of_the_arishok",
-   "title_ru": "Наплечник аришока",
-   "description_ru": "Плетеный кожаный кунарийский наплечник.",
-   "aura_ru": "<color=green>+7 % сопротивления оглушению.</color> <color=green>+9 % сопротивления замедлению.</color> <color=green>Экипировка аришока: +3 % сопротивления вытягиванию силы.</color>",
+   "title_key": "HODA_PAULDRON_OF_THE_ARISHOK_GEAR_TITLE",
+   "description_key": "HODA_PAULDRON_OF_THE_ARISHOK_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_STUN_RESIST_SELF_DESC",
+    "HODA_GEAR_PLUS9_SLOW_RESIST_SELF_DESC",
+    "HODA_GEAR_PLUS3_POWER_DRAIN_RESIST_SELF_ARISHOK_ONLY_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_PauldronOfTheArishok.png",
    "categories": [
@@ -7972,9 +8328,12 @@
   },
   {
    "id": "phoenix_tail_feather",
-   "title_ru": "Перо из хвоста феникса",
-   "description_ru": "Неповрежденное перо из хвоста взрослого феникса.",
-   "aura_ru": "<color=green>+5 % к шансу на двойной урон для союзников.</color> <color=green>Выдерживает 1000 единиц урона, нанесенного драконами.</color>",
+   "title_key": "HODA_PHOENIX_TAIL_FEATHER_GEAR_TITLE",
+   "description_key": "HODA_PHOENIX_TAIL_FEATHER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_ALLIES_DESC",
+    "HODA_GEAR_PLUS1000_RAW_DAMAGE_RESIST_VS_DRAGONS_PERSONAL_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_PhoenixTailFeather.png",
    "categories": [],
@@ -8005,9 +8364,12 @@
   },
   {
    "id": "prowler_mail",
-   "title_ru": "Мародерская кольчуга",
-   "description_ru": "Легкий и бесшумный, этот доспех идеален для любителей прятаться.",
-   "aura_ru": "<color=green>+4 % здоровья.</color> <color=red>-3 % шанса на двойной урон для врагов.</color>",
+   "title_key": "HODA_PROWLER_MAIL_GEAR_TITLE",
+   "description_key": "HODA_PROWLER_MAIL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_MINUS3_CRIT_CHANCE_ENEMIES_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_ProwlerMail.png",
    "categories": [
@@ -8037,9 +8399,13 @@
   },
   {
    "id": "puzzle_ring",
-   "title_ru": "Кольцо-загадка",
-   "description_ru": "Сместив слои этого кольца, по слухам принадлежавшего Черному Лису, можно активировать его магию.",
-   "aura_ru": "<color=green>+9 % шанса на двойной урон.</color> <color=red>Снижает шансы врага зайти с фланга.</color> <color=green>Если использует Селина: атакует, не вызывая эффектов, возникающих при попадании.</color>",
+   "title_key": "HODA_PUZZLE_RING_GEAR_TITLE",
+   "description_key": "HODA_PUZZLE_RING_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS9_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_ENEMY_NEG_FLANK_24950_DESC",
+    "HODA_GEAR_STEALTH_SELF_CELENE_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_PuzzleRing.png",
    "categories": [
@@ -8086,9 +8452,12 @@
   },
   {
    "id": "qunari_helmet",
-   "title_ru": "Кунарийский шлем",
-   "description_ru": "Шлем арваарада, защищающий кунари от магов, отбившихся от рук.",
-   "aura_ru": "<color=green>+3 % сопротивления урону.</color> <color=green>Экипировка Арваарада: +3 % здоровья.</color>",
+   "title_key": "HODA_QUNARI_HELMET_GEAR_TITLE",
+   "description_key": "HODA_QUNARI_HELMET_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS3_HEALTH_SELF_ARVAARAD_ONLY_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_QunariHelmet.png",
    "categories": [
@@ -8124,9 +8493,12 @@
   },
   {
    "id": "qunari_tower_shield",
-   "title_ru": "Кунарийский осадный щит",
-   "description_ru": "Крупный щит кунарийской работы с клеймом, подтверждающим: он не треснет. А вот им треснуть кого-нибудь — милое дело.",
-   "aura_ru": "<color=green>+3 % здоровья.</color> <color=green>+3 % силы при попадании.</color>",
+   "title_key": "HODA_QUNARI_TOWER_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_QUNARI_TOWER_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS3_POWER_SELF_ON_SELF_HIT_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_QunariTowerShield.png",
    "categories": [
@@ -8156,9 +8528,13 @@
   },
   {
    "id": "qunari_waraxe",
-   "title_ru": "Боевой топор кунари",
-   "description_ru": "Одноручная секира, выкованная кунари во время бесконечной войны с Тевинтером.",
-   "aura_ru": "<color=green>Чаще атакует тевинтерцев.</color> <color=green>+10 % сопротивления вытягиванию силы для кунари.</color> <color=green>Когда союзник получает удар, союзники получают 5 % здоровья.</color>",
+   "title_key": "HODA_QUNARI_WARAXE_GEAR_TITLE",
+   "description_key": "HODA_QUNARI_WARAXE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_HATRED_TEVINTER_DESC",
+    "HODA_GEAR_PLUS10_POWER_DRAIN_RESIST_QUNARI_DESC",
+    "HODA_GEAR_HEAL5_ALLIES_WHEN_ALLY_HIT_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_QunariWaraxe.png",
    "categories": [
@@ -8207,9 +8583,12 @@
   },
   {
    "id": "rebound_dagger",
-   "title_ru": "Кинжал отпора",
-   "description_ru": "Кинжал с крючком для потрошения уязвимых врагов.",
-   "aura_ru": "<color=green>+4 % шанса на двойной урон.</color> <color=orange>Чаще атакует врагов с самым низким процентом здоровья.</color>",
+   "title_key": "HODA_REBOUND_DAGGER_GEAR_TITLE",
+   "description_key": "HODA_REBOUND_DAGGER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_WOUNDED_TARGETING_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_ReboundDagger.png",
    "categories": [
@@ -8239,9 +8618,13 @@
   },
   {
    "id": "red_iron_maul",
-   "title_ru": "Молот Кровавых Клинков",
-   "description_ru": "Двуручное оружие ближнего боя, пользующееся популярностью среди наемников Кровавых Клинков.",
-   "aura_ru": "<color=green>+5 % дополнительного урона для союзников.</color> <color=red>-2 % шанса на двойной урон для себя.</color> <color=red>-10 % сопротивления оглушению для врагов.</color>",
+   "title_key": "HODA_RED_IRON_MAUL_GEAR_TITLE",
+   "description_key": "HODA_RED_IRON_MAUL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5PCT_BONUS_DAMAGE_FOR_ALLIES_DESC",
+    "HODA_GEAR_MIUNUS_CRIT_CHANCE_2_SELF_DESC",
+    "HODA_GEAR_MINUS10_STUN_RESIST_ENEMIES_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_RedIronMaul.png",
    "categories": [],
@@ -8273,9 +8656,12 @@
   },
   {
    "id": "red_jenny_backbiter",
-   "title_ru": "Спинокол друзей Рыжей Дженни",
-   "description_ru": "Созданный друзьями Рыжей Дженни для друзей Рыжей Дженни, он дает силу простым людям.",
-   "aura_ru": "<color=green>+10 % шанса на двойной урон.</color> <color=green>+50 % силы для обычных и необычных союзников.</color>",
+   "title_key": "HODA_RED_JENNY_BACKBITER_GEAR_TITLE",
+   "description_key": "HODA_RED_JENNY_BACKBITER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_POWER_COMMON_UNCOMMON_PLUS50_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_RedJennyBackbiter.png",
    "categories": [],
@@ -8310,9 +8696,14 @@
   },
   {
    "id": "red_lyrium_idol",
-   "title_ru": "Идол из красного лириума",
-   "description_ru": "Этот идол, созданный гномами из Первозданного тейга, был утерян многие тысячелетия.",
-   "aura_ru": "<color=green>Скрытность: атакует, не вызывая эффектов, возникающих при попадании.</color> <color=green>+10 % к здоровью для краснолириумных союзников.</color>. <color=red>-10 % силе (своего).</color> <color=red>Когда враг получает урон, наносит 2 % от нанесенного урона всем союзникам.</color>",
+   "title_key": "HODA_RED_LYRIUM_IDOL_GEAR_TITLE",
+   "description_key": "HODA_RED_LYRIUM_IDOL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_STEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS10_HEALTH_RED_LYRIUM_DESC",
+    "HODA_GEAR_MINUS10_POWER_PERSONAL_DESC",
+    "HODA_GEAR_EXPLODE_ALLIES_2_ON_ENEMY_HIT_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_RedLyriumIdol.png",
    "categories": [
@@ -8366,9 +8757,11 @@
   },
   {
    "id": "redcliffe_shield",
-   "title_ru": "Щит Редклифа",
-   "description_ru": "Этот гербовый щит стоит на защите замка Редклиф, Герринов и всего Ферелдена.",
-   "aura_ru": "<color=green>+6 % здоровья. +6 % сопротивления оглушению для союзников-ферелденцев. Если использует кто-то из рода Герринов: +5 % силы.</color>",
+   "title_key": "HODA_REDCLIFFE_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_REDCLIFFE_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_REDCLIFFE_SHIELD_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_RedcliffeShield.png",
    "categories": [
@@ -8425,9 +8818,12 @@
   },
   {
    "id": "remarkable_emerald",
-   "title_ru": "Великолепный изумруд",
-   "description_ru": "Красивый зеленоватый камень хорошей огранки. Отличный подарок и блестящее усиление.",
-   "aura_ru": "<color=green>+6 % к здоровью для союзников-гномов.</color>. <color=green>Нанося удар, вытягивает 2 % силы из врагов.</color>",
+   "title_key": "HODA_REMARKABLE_EMERALD_GEAR_TITLE",
+   "description_key": "HODA_REMARKABLE_EMERALD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS6_HEALTH_DWARVES_DESC",
+    "HODA_GEAR_ENEMY_POWER_DRAIN_WHEN_SELF_ATTACKED_2_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_RemarkableEmerald.png",
    "categories": [],
@@ -8458,9 +8854,12 @@
   },
   {
    "id": "retribution_elixir",
-   "title_ru": "Эликсир возмездия",
-   "description_ru": "Опасный эликсир, который принимают лишь тогда, когда бой принимает нежелательный оборот.",
-   "aura_ru": "<color=green>Дает 4 % силы при смерти союзника.</color> <color=green>+3 % силы для союзников-магов.</color>",
+   "title_key": "HODA_RETRIBUTION_ELIXIR_GEAR_TITLE",
+   "description_key": "HODA_RETRIBUTION_ELIXIR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_POWER_SELF_ON_ALLY_DEATH_DESC",
+    "HODA_GEAR_PLUS3_POWER_MAGES_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_RetributionElixir.png",
    "categories": [],
@@ -8491,9 +8890,12 @@
   },
   {
    "id": "revered_defender_maul",
-   "title_ru": "Молот почтительного защитника",
-   "description_ru": "Огромный молот защитника ша-бритолов. Зазубрины помогают одновременно дробить и раздирать.",
-   "aura_ru": "<color=green>Приращивает 5 % силы, получив удар.</color> <color=green>+7 % дополнительного урона против красной фракции.</color>",
+   "title_key": "HODA_REVERED_DEFENDER_MAUL_GEAR_TITLE",
+   "description_key": "HODA_REVERED_DEFENDER_MAUL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_POWER_SELF_ON_SELF_HIT_DESC",
+    "HODA_GEAR_PLUS7_BONUS_DAMAGE_VS_RED_FACTION_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_ReveredDefenderMaul.png",
    "categories": [
@@ -8533,9 +8935,14 @@
   },
   {
    "id": "ring_of_doubt",
-   "title_ru": "Кольцо сомнения",
-   "description_ru": "Чтобы спастись от договорного брака, молодой магистр зачаровал свое свадебное кольцо невидимостью.",
-   "aura_ru": "<color=green>Скрытность: атакует, не вызывая эффектов, возникающих при попадании.</color> <color=green>Снаряжение атакующего с фланга: +5 % дополнительного урона.</color> <color=red>-10 % силе (своего).</color> <color=red>-15 % здоровья (своего).</color>",
+   "title_key": "HODA_RING_OF_DOUBT_GEAR_TITLE",
+   "description_key": "HODA_RING_OF_DOUBT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_STEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_FOR_FLANKERS_DESC",
+    "HODA_GEAR_MINUS10_POWER_PERSONAL_DESC",
+    "HODA_GEAR_MINUS15_HEALTH_PERSONAL_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_RingOfDoubt.png",
    "categories": [
@@ -8589,9 +8996,11 @@
   },
   {
    "id": "ring_of_resilience",
-   "title_ru": "Кольцо стойкости",
-   "description_ru": "При учащении сердцебиения владельца усиляется и таинственное мерцание кольца.",
-   "aura_ru": "<color=green>+5 % к сопротивлению оглушению, замедлению и вытягиванию силы для союзников.</color>",
+   "title_key": "HODA_RING_OF_RESILIENCE_GEAR_TITLE",
+   "description_key": "HODA_RING_OF_RESILIENCE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_RING_OF_RESILIENCE_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_RingOfResilience.png",
    "categories": [
@@ -8632,9 +9041,12 @@
   },
   {
    "id": "ritual_breaker",
-   "title_ru": "Ритуальный дробитель",
-   "description_ru": "Эта украшенная булава почти столь же прекрасна, как звук ломающихся при ее ударе костей.",
-   "aura_ru": "<color=green>+7 % силы.</color> <color=green>+3 % сопротивления урону для союзников.</color>",
+   "title_key": "HODA_RITUAL_BREAKER_GEAR_TITLE",
+   "description_key": "HODA_RITUAL_BREAKER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS3_DAMAGE_RESIST_ALLIES_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_RitualBreaker.png",
    "categories": [
@@ -8668,9 +9080,11 @@
   },
   {
    "id": "robes_of_the_architect",
-   "title_ru": "Мантия Архитектора",
-   "description_ru": "На фоне примитивной брони других порождений тьмы мантия Архитектора кажется практически цивильной.",
-   "aura_ru": "<color=green>+15 % сопротивления всем эффектам для моровых героев. Получив удар, лечит на 15 % и дает 5 % силы.</color>",
+   "title_key": "HODA_ROBES_OF_THE_ARCHITECT_GEAR_TITLE",
+   "description_key": "HODA_ROBES_OF_THE_ARCHITECT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_ROBES_OF_THE_ARCHITECT_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_RobesOfTheArchitect.png",
    "categories": [
@@ -8769,9 +9183,13 @@
   },
   {
    "id": "ruby_ring",
-   "title_ru": "Рубиновое кольцо",
-   "description_ru": "Принадлежавшее императрице Селине кольцо магически воспламеняет любое оружие.",
-   "aura_ru": "<color=green>+7 % шанса на двойной урон.</color> <color=green>+5 % дополнительного урона для союзников.</color> <color=green>+5 % сопротивления урону для союзников-орлесианцев.</color>",
+   "title_key": "HODA_RUBY_RING_GEAR_TITLE",
+   "description_key": "HODA_RUBY_RING_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS5PCT_BONUS_DAMAGE_FOR_ALLIES_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_RESIST_ORLESIAN_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_RubyRing.png",
    "categories": [
@@ -8826,9 +9244,13 @@
   },
   {
    "id": "saarebas_restraints",
-   "title_ru": "Оковы саирабаза",
-   "description_ru": "Крепкие оковы защищают саирабазов от самих себя и от других.",
-   "aura_ru": "<color=red>-10 % сопротивления оглушению (своего).</color> <color=green>Превращает 3 % полученного урона в силу.</color> <color=green>Если использует Саирабаз: невосприимчивость к проклятиям силы.</color>",
+   "title_key": "HODA_SAAREBAS_RESTRAINTS_GEAR_TITLE",
+   "description_key": "HODA_SAAREBAS_RESTRAINTS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_MINUS10STUNRESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS3_POWER_SELF_BLOOD_MAGE_ABILITY_DESC",
+    "HODA_GEAR_CURSEPOWERIMMUNE_SELF_SAAREBAS_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_SaarebasRestraints.png",
    "categories": [
@@ -8875,9 +9297,12 @@
   },
   {
    "id": "sacrificial_dagger",
-   "title_ru": "Жертвенный кинжал",
-   "description_ru": "Оружие из вулканического золота проходит сквозь любые преграды как сквозь масло. Духовный урон этого кинжала только усугубляет ситуацию.",
-   "aura_ru": "<color=green>Приращивает 3 % здоровья при попадании по союзнику.</color> <color=green>Снаряжение духа: +3 % дополнительного урона.</color>",
+   "title_key": "HODA_SACRIFICIAL_DAGGER_GEAR_TITLE",
+   "description_key": "HODA_SACRIFICIAL_DAGGER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_HEALTH_SELF_ON_ALLY_HIT_DESC",
+    "HODA_GEAR_PLUS3_DAMAGE_FOR_SPIRITS_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_SacrificialDagger.png",
    "categories": [],
@@ -8908,9 +9333,12 @@
   },
   {
    "id": "sad_weapon",
-   "title_ru": "Печальное оружие",
-   "description_ru": "Известно также как покореженная булава Марка. Значительная доля силы этого оружия кроется в унижении от удара бананом по лицу",
-   "aura_ru": "<color=green>Излечивает на 5 % при смерти врага.</color> <color=green>Снаряжение атакующего с фланга: +5 % дополнительного урона.</color>",
+   "title_key": "HODA_SAD_WEAPON_GEAR_TITLE",
+   "description_key": "HODA_SAD_WEAPON_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_HEALTH_SELF_ON_ENEMY_DEATH_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_FOR_FLANKERS_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_SadWeapon.png",
    "categories": [],
@@ -8941,9 +9369,11 @@
   },
   {
    "id": "savage_thorn",
-   "title_ru": "Шип дикаря",
-   "description_ru": "Грубый клинок впивается в плоть врага так, чтобы тот как следует все прочувствовал.",
-   "aura_ru": "<color=green>+9 % шанса на двойной урон.</color>",
+   "title_key": "HODA_SAVAGE_THORN_GEAR_TITLE",
+   "description_key": "HODA_SAVAGE_THORN_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS9_CRIT_CHANCE_SELF_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_SavageThorn.png",
    "categories": [
@@ -8966,9 +9396,12 @@
   },
   {
    "id": "scout_armor",
-   "title_ru": "Доспех разведчика",
-   "description_ru": "Глянцевый, гибкий, убийственный. Прямо как Сэра.",
-   "aura_ru": "<color=green>Получив удар, приращивает 4 % силы.</color> <color=green>Снаряжение Сэры: +10 % дополнительного урона против мифических героев.</color>",
+   "title_key": "HODA_SCOUT_ARMOR_GEAR_TITLE",
+   "description_key": "HODA_SCOUT_ARMOR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_POWER_SELF_ON_SELF_HIT_DESC",
+    "HODA_GEAR_PLUS10PCT_DAMAGE_VS_MYTHIC_FOR_SERA_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_ScoutArmor.png",
    "categories": [
@@ -9034,9 +9467,12 @@
   },
   {
    "id": "scout_coat_arms",
-   "title_ru": "Рукава для куртки разведчика",
-   "description_ru": "Улучшение для брони разведчиков-патрульных.",
-   "aura_ru": "<color=green>+5 % шанса на двойной урон.</color> <color=green>+15 % сопротивления урону против разбойников и магов.</color>",
+   "title_key": "HODA_SCOUT_COAT_ARMS_GEAR_TITLE",
+   "description_key": "HODA_SCOUT_COAT_ARMS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS15_DAMAGE_RESIST_SELF_VS_ROGUES_MAGES_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_ScoutCoatArms.png",
    "categories": [],
@@ -9071,9 +9507,12 @@
   },
   {
    "id": "scout_hat",
-   "title_ru": "Шляпа разведчика",
-   "description_ru": "Шлем из отвержденной кожи, достаточно легкий, чтобы не стеснять движений в бою.",
-   "aura_ru": "<color=green>+8 % сопротивления оглушению.</color> <color=green>+3 % силы для союзников-разбойников.</color>",
+   "title_key": "HODA_SCOUT_HAT_GEAR_TITLE",
+   "description_key": "HODA_SCOUT_HAT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS8_STUN_RESIST_SELF_DESC",
+    "HODA_GEAR_PLUS3_POWER_ROGUES_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_ScoutHat.png",
    "categories": [],
@@ -9104,9 +9543,13 @@
   },
   {
    "id": "scout_quiver",
-   "title_ru": "Колчан разведчика",
-   "description_ru": "И почему эту штуку называют \"колчан\"? Может, потому что делает врагов колченогими.",
-   "aura_ru": "<color=green>+4 % шанса на двойной урон.</color> <color=green>Если использует разведчица Хардинг: атакует, не вызывая эффектов, возникающих при попадании.</color> <color=red>-10 % сопротивления оглушению для врагов.</color>",
+   "title_key": "HODA_SCOUT_QUIVER_GEAR_TITLE",
+   "description_key": "HODA_SCOUT_QUIVER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_STEALTH_SELF_SCOUTHARDING_DESC",
+    "HODA_GEAR_MINUS10_STUN_RESIST_ENEMIES_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_ScoutQuiver.png",
    "categories": [
@@ -9149,9 +9592,11 @@
   },
   {
    "id": "seer_staff",
-   "title_ru": "Посох провидца",
-   "description_ru": "Энергия этого посоха подпитывается мучениями врагов.",
-   "aura_ru": "<color=green>Приращивает 2 % силы при попадании по союзнику.</color>",
+   "title_key": "HODA_SEER_STAFF_GEAR_TITLE",
+   "description_key": "HODA_SEER_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS2_POWER_SELF_ON_ALLY_HIT_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_SeerStaff.png",
    "categories": [
@@ -9174,9 +9619,11 @@
   },
   {
    "id": "senior_wardens_staff",
-   "title_ru": "Посох Старшего Стража",
-   "description_ru": "Лишь тем, кто вскарабкался по ступеням иерархии Серых Стражей, хватает силы совладать с дьявольской мощью этого посоха — да и то едва.",
-   "aura_ru": "<color=green>+6 % силы для белой и черной фракции (суммируется). Если использует Джанека: +5 % здоровья.</color>",
+   "title_key": "HODA_SENIOR_WARDENS_STAFF_GEAR_TITLE",
+   "description_key": "HODA_SENIOR_WARDENS_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_SENIOR_WARDENS_STAFF_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_SeniorWardensStaff.png",
    "categories": [
@@ -9223,9 +9670,13 @@
   },
   {
    "id": "sentinel_gauntlets",
-   "title_ru": "Перчатки часового",
-   "description_ru": "Перчатки из особого набора брони, отличающего эльфа-часового.",
-   "aura_ru": "<color=green>+10 % дополнительного урона.</color> <color=green>+10 % сопротивления урону.</color> <color=green>Если использует эльф: +5 % шанса на двойной урон.</color>",
+   "title_key": "HODA_SENTINEL_GAUNTLETS_GEAR_TITLE",
+   "description_key": "HODA_SENTINEL_GAUNTLETS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS10_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_CRIT_CHANCE_5_ELVES_ONLY_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_SentinelGauntlets.png",
    "categories": [
@@ -9272,9 +9723,13 @@
   },
   {
    "id": "sentinel_greaves",
-   "title_ru": "Поножи часового",
-   "description_ru": "Поножи из особого набора брони, отличающего эльфа-часового.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=green>+10 % сопротивления урону.</color> <color=green>Если использует эльф: +15 % сопротивления вытягиванию силы.</color>",
+   "title_key": "HODA_SENTINEL_GREAVES_GEAR_TITLE",
+   "description_key": "HODA_SENTINEL_GREAVES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS10_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_POWER_DRAIN_RESIST_15_ELVES_ONLY_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_SentinelGreaves.png",
    "categories": [
@@ -9321,9 +9776,13 @@
   },
   {
    "id": "sentinel_plate_pauldron",
-   "title_ru": "Латный наплечник часового",
-   "description_ru": "Наплечник из особого набора брони, отличающего эльфа-часового.",
-   "aura_ru": "<color=green>+10 % силы.</color> <color=green>+10 % сопротивления урону.</color> <color=red>-10 % сопротивления оглушению для врагов.</color>",
+   "title_key": "HODA_SENTINEL_PLATE_PAULDRON_GEAR_TITLE",
+   "description_key": "HODA_SENTINEL_PLATE_PAULDRON_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS10_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_MINUS10_STUN_RESIST_ENEMIES_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_SentinelPlatePauldron.png",
    "categories": [
@@ -9364,9 +9823,12 @@
   },
   {
    "id": "sentinel_staff",
-   "title_ru": "Посох часового",
-   "description_ru": "Этот хрустальный посох помогает владельцу лучше чувствовать мир живых и мир Тени.",
-   "aura_ru": "<color=green>Приращивает 7 % здоровья при смерти союзника.</color> <color=green>+5 % сопротивления урону против синей фракции.</color>",
+   "title_key": "HODA_SENTINEL_STAFF_GEAR_TITLE",
+   "description_key": "HODA_SENTINEL_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_HEALTH_SELF_ON_ALLY_DEATH_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_RESIST_SELF_VS_BLUE_FACTION_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_SentinelStaff.png",
    "categories": [
@@ -9402,9 +9864,13 @@
   },
   {
    "id": "ser_alvards_sword",
-   "title_ru": "Меч сера Алварда",
-   "description_ru": "Долгие десятилетия этот клинок прозябал на Черных болотах, отчего приобрел специфический запах, причем весьма неприятный.",
-   "aura_ru": "<color=green>+4 % силы.</color> <color=green>+2 % дополнительного урона.</color> <color=green>+3 % шанса на двойной урон.</color>",
+   "title_key": "HODA_SER_ALVARDS_SWORD_GEAR_TITLE",
+   "description_key": "HODA_SER_ALVARDS_SWORD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS2_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS3_CRIT_CHANCE_SELF_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_SerAlvardsSword.png",
    "categories": [
@@ -9441,9 +9907,11 @@
   },
   {
    "id": "seras_raisin_cookies",
-   "title_ru": "Сэрино печенье с изюмом",
-   "description_ru": "Сэра не любит печенье с изюмом. И готова растерзать тех, кто любит, едва учуяв его аромат.",
-   "aura_ru": "<color=green>+5 % дополнительного урона и более частые атаки против героев, приращивающих силу (любящих печенье).</color>",
+   "title_key": "HODA_SERAS_RAISIN_COOKIES_GEAR_TITLE",
+   "description_key": "HODA_SERAS_RAISIN_COOKIES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_SERAS_RAISIN_COOKIES_RUNE_LOC_OVERRIDE"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_SerasRaisinCookies.png",
    "categories": [],
@@ -9480,9 +9948,11 @@
   },
   {
    "id": "serum_of_ambition",
-   "title_ru": "Сыворотка честолюбия",
-   "description_ru": "Летучая смесь, улучшающая способности тех, кто слаб телом, но тверд в убеждениях.",
-   "aura_ru": "<color=green>+35 % здоровья и силы для эпических союзников.</color>",
+   "title_key": "HODA_SERUM_OF_AMBITION_GEAR_TITLE",
+   "description_key": "HODA_SERUM_OF_AMBITION_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_SERUM_OF_AMBITION_RUNE_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_SerumOfAmbition.png",
    "categories": [],
@@ -9519,9 +9989,13 @@
   },
   {
    "id": "shield_of_le_marque",
-   "title_ru": "Щит Лемарков",
-   "description_ru": "Герб рода Лемарк, к которому принадлежит предводитель беженцев Фэрбенкс. \"На благословенных крыльях — к солнцу!\".",
-   "aura_ru": "<color=green>+6 % здоровья.</color> <color=green>+6 % сопротивления оглушению для союзников-орлесианцев.</color> <color=green>Если использует Фэрбенкс: +5 % силы.</color>",
+   "title_key": "HODA_SHIELD_OF_LE_MARQUE_GEAR_TITLE",
+   "description_key": "HODA_SHIELD_OF_LE_MARQUE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS6_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS6_STUN_RESIST_ORLESIAN_DESC",
+    "HODA_GEAR_PLUS5_POWER_FAIRBANKS_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_ShieldofLemarque.png",
    "categories": [
@@ -9574,9 +10048,13 @@
   },
   {
    "id": "sidereal_staff",
-   "title_ru": "Звездный посох",
-   "description_ru": "Посох Аврелиана Тита, магистра империи Тевинтер. Его волокна прямо-таки сочатся магией крови.",
-   "aura_ru": "<color=green>+5 % силы.</color> <color=green>Дает +10 % дополнительного урона при атаке.</color> <color=green>Если использует Аврелиан Тит: превращает 15 % полученного урона в силу.</color>",
+   "title_key": "HODA_SIDEREAL_STAFF_GEAR_TITLE",
+   "description_key": "HODA_SIDEREAL_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_POWER_PERSONAL_DESC",
+    "HODA_GEAR_BONUSDMG_SELF_SELFATTACK_PLUS10_DESC",
+    "HODA_GEAR_POWER_AURELIANTITUS_CONVERT15_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_SiderealStaff.png",
    "categories": [
@@ -9619,9 +10097,11 @@
   },
   {
    "id": "skywatchers_cleaver",
-   "title_ru": "Колун глядящего в небо",
-   "description_ru": "Церемониальный тяжелый меч глядящего в небо, отрубает конечности одним ударом.",
-   "aura_ru": "<color=orange>Чаще атакует самого сильного врага.</color>",
+   "title_key": "HODA_SKYWATCHERS_CLEAVER_GEAR_TITLE",
+   "description_key": "HODA_SKYWATCHERS_CLEAVER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_BRAVE_TARGETING_SELF_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_SkywatchersCleaver.png",
    "categories": [
@@ -9652,9 +10132,12 @@
   },
   {
    "id": "smugglers_dagger",
-   "title_ru": "Кинжал контрабандиста",
-   "description_ru": "Легко скрываемое и быстро разящее лезвие — любимое оружие тех, кого не слишком любят в свете.",
-   "aura_ru": "<color=green>+3 % шанса на двойной урон.</color> <color=green>+5 % дополнительного урона.</color>",
+   "title_key": "HODA_SMUGGLERS_DAGGER_GEAR_TITLE",
+   "description_key": "HODA_SMUGGLERS_DAGGER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_SmugglersDagger.png",
    "categories": [
@@ -9684,9 +10167,11 @@
   },
   {
    "id": "soldiers_plate",
-   "title_ru": "Солдатские латы",
-   "description_ru": "Этот недорогой, но надежный нагрудник будет служить вам верой и правдой.",
-   "aura_ru": "<color=green>+5 % сопротивления урону.</color>",
+   "title_key": "HODA_SOLDIERS_PLATE_GEAR_TITLE",
+   "description_key": "HODA_SOLDIERS_PLATE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_DAMAGE_RESIST_PERSONAL_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_SoldiersPlate.png",
    "categories": [
@@ -9709,9 +10194,12 @@
   },
   {
    "id": "soothers_sapphire",
-   "title_ru": "Успокоительный сапфир",
-   "description_ru": "Этот колдовской камень источает утешающую энергию, давая покой тем, кто его ищет.",
-   "aura_ru": "<color=green>+4 % силы для союзников.</color> <color=green>+5 % силы для союзников-целителей.</color>",
+   "title_key": "HODA_SOOTHERS_SAPPHIRE_GEAR_TITLE",
+   "description_key": "HODA_SOOTHERS_SAPPHIRE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_POWER_ALLIES_DESC",
+    "HODA_GEAR_PLUS5_POWER_HEALERS_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_SoothersSapphire.png",
    "categories": [
@@ -9747,9 +10235,12 @@
   },
   {
    "id": "soulwrecker_staff",
-   "title_ru": "Посох душегуба",
-   "description_ru": "Переполненный яростной энергией, этот посох начинает искриться, стоит только взять его в руки.",
-   "aura_ru": "<color=green>Получив удар, приращивает 2 % силы.</color> <color=green>+8 % шанса на двойной урон.</color>",
+   "title_key": "HODA_SOULWRECKER_STAFF_GEAR_TITLE",
+   "description_key": "HODA_SOULWRECKER_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS2_POWER_SELF_ON_SELF_HIT_DESC",
+    "HODA_GEAR_PLUS8_CRIT_CHANCE_SELF_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_SoulwreckerStaff.png",
    "categories": [
@@ -9779,9 +10270,11 @@
   },
   {
    "id": "spear_thrower",
-   "title_ru": "Копьемет",
-   "description_ru": "Этот жуткий лук пробивает практически любую броню, кроме самой толстой. Такую силу ему дает древесина сильвана.",
-   "aura_ru": "<color=green>+5 % дополнительного урона против всех, кроме духов. +3 % шанса на двойной урон.</color>",
+   "title_key": "HODA_SPEAR_THROWER_GEAR_TITLE",
+   "description_key": "HODA_SPEAR_THROWER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_SPEAR_THROWER_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_Spearthrower.png",
    "categories": [],
@@ -9799,9 +10292,11 @@
   },
   {
    "id": "spectral_scale",
-   "title_ru": "Призрачная чешуйка",
-   "description_ru": "Выдрана из шкуры призрачного дракона. Кажется, будто она нематериальна, будто ее не существует.",
-   "aura_ru": "<color=green>Союзники получают 35 % здоровья и силы при смерти союзника.</color> <color=red>-25 % сопротивления замедлению.</color> <color=green>Если использует дракон: +8 % шанса на двойной урон.</color>",
+   "title_key": "HODA_SPECTRAL_SCALE_GEAR_TITLE",
+   "description_key": "HODA_SPECTRAL_SCALE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_SPECTRAL_SCALE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_SpectralScale.png",
    "categories": [
@@ -9851,9 +10346,13 @@
   },
   {
    "id": "spirit_maul",
-   "title_ru": "Молот Духов",
-   "description_ru": "На этом молоте лежат чары Перекрестка, которые связывают его владельца с Ужасным Волком.",
-   "aura_ru": "<color=green>+10 % снижения вытягивания силы у союзников.</color> <color=green>+10 % дополнительного урона.</color> <color=green>+15 % сопротивления урону для Фен'Харела.</color>",
+   "title_key": "HODA_SPIRIT_MAUL_GEAR_TITLE",
+   "description_key": "HODA_SPIRIT_MAUL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_POWER_DRAIN_RESIST_ALLIES_DESC",
+    "HODA_GEAR_PLUS10_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS15_DAMAGE_RESIST_FENHAREL_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_SpiritMaul.png",
    "categories": [
@@ -9900,9 +10399,14 @@
   },
   {
    "id": "staff_of_aidahn_allied",
-   "title_ru": "Посох Айдана — союз",
-   "description_ru": "Этот посох, созданный из красного лириума, вытягивает жизнь из всех, кто находится рядом.",
-   "aura_ru": "<color=green>+20 % дополнительного урона.</color> <color=green>Лечит на +7 % при попадании по врагу.</color> <color=red>-20 % здоровья (своего).</color> <color=green>Если используют краснолириумные герои: +20 % к здоровью.</color>",
+   "title_key": "HODA_STAFF_OF_AIDAHN_ALLIED_GEAR_TITLE",
+   "description_key": "HODA_STAFF_OF_AIDAHN_ALLIED_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_BONUSDMG_SELF_PLUS20_DESC",
+    "HODA_GEAR_HEALTH_SELF_ALLYATK_PLUS7_DESC",
+    "HODA_GEAR_HEALTH_SELF_MINUS20_DESC",
+    "HODA_GEAR_HEALTH_SELF_REDLYRIUM_PLUS20_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_StaffOfAidahnAllied.png",
    "categories": [
@@ -9952,9 +10456,12 @@
   },
   {
    "id": "staff_of_corruption",
-   "title_ru": "Посох распада",
-   "description_ru": "Раз нас зовут зараженными — будем этой заразой.",
-   "aura_ru": "<color=red>-3 % силы для врагов.</color> <color=green>Лечит союзников на 2 % при попадании по врагу.</color>",
+   "title_key": "HODA_STAFF_OF_CORRUPTION_GEAR_TITLE",
+   "description_key": "HODA_STAFF_OF_CORRUPTION_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_MINUS3_POWER_ENEMIES_DESC",
+    "HODA_GEAR_AURA_HEALTH_GAIN_ALL_WHEN_ENEMY_HIT_2_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_StaffOfCorruption.png",
    "categories": [
@@ -9984,9 +10491,13 @@
   },
   {
    "id": "staff_of_faith",
-   "title_ru": "Посох веры",
-   "description_ru": "Охраняемый верой. Возносимый верой. Укрепленный верой.",
-   "aura_ru": "<color=green>+1000 сопротивления урону за попадание.</color> <color=green>+3 % дополнительного урона для союзников.</color> <color=green>+10 % шанса на двойной урон.</color>",
+   "title_key": "HODA_STAFF_OF_FAITH_GEAR_TITLE",
+   "description_key": "HODA_STAFF_OF_FAITH_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS1000_RAW_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS3PCT_BONUS_DAMAGE_FOR_ALLIES_DESC",
+    "HODA_GEAR_PLUS10_CRIT_CHANCE_SELF_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_StaffOfFaith.png",
    "categories": [
@@ -10027,9 +10538,12 @@
   },
   {
    "id": "staff_of_shadows",
-   "title_ru": "Посох теней",
-   "description_ru": "Темный посох с вырезанным на нем человеческим черепом.",
-   "aura_ru": "<color=green>+3 % дополнительного урона.</color> <color=green>Нанося удар, вытягивает 2 % силы из врагов.</color>",
+   "title_key": "HODA_STAFF_OF_SHADOWS_GEAR_TITLE",
+   "description_key": "HODA_STAFF_OF_SHADOWS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_ENEMY_POWER_DRAIN_WHEN_SELF_ATTACKED_2_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_StaffOfShadows.png",
    "categories": [
@@ -10059,9 +10573,13 @@
   },
   {
    "id": "stonehammer_plate",
-   "title_ru": "Латы Каменного Молота",
-   "description_ru": "Этот доспех, изготовленный по указу короля Эндрина, был подарен победителю Великого Испытания.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=green>+5 % дополнительного урона.</color> <color=green>+3 % сопротивления урону для союзников.</color>",
+   "title_key": "HODA_STONEHAMMER_PLATE_GEAR_TITLE",
+   "description_key": "HODA_STONEHAMMER_PLATE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS3_DAMAGE_RESIST_ALLIES_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_StonehammerPlate.png",
    "categories": [
@@ -10098,9 +10616,13 @@
   },
   {
    "id": "strouds_targe",
-   "title_ru": "Круглый щит Страуда",
-   "description_ru": "Укрепленный щит Серого Стража сера Страуда. Усиливает великолепие его славных усов.",
-   "aura_ru": "<color=green>+7 % здоровья.</color> <color=green>+2 % сопротивления урону для союзников.</color> <color=green>Экипировка Страуда: дополнительно +5 % здоровья.</color>",
+   "title_key": "HODA_STROUDS_TARGE_GEAR_TITLE",
+   "description_key": "HODA_STROUDS_TARGE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS2_DAMAGE_RESIST_ALLIES_DESC",
+    "HODA_GEAR_PLUS5_HEALTH_SELF_STROUD_ONLY_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_StroudsTarge.png",
    "categories": [],
@@ -10142,9 +10664,12 @@
   },
   {
    "id": "studded_leather_pauldron",
-   "title_ru": "Клепаный кожаный наплечник",
-   "description_ru": "Укрепленный кожаный наплечник надежно защищает владельца, при этом не сковывая его движений.",
-   "aura_ru": "<color=green>+3 % здоровья.</color> <color=green>+2 % сопротивления урону для союзников разбойников.</color>",
+   "title_key": "HODA_STUDDED_LEATHER_PAULDRON_GEAR_TITLE",
+   "description_key": "HODA_STUDDED_LEATHER_PAULDRON_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS2_DAMAGE_RESIST_ROGUE_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_StuddedLeatherPauldron.png",
    "categories": [],
@@ -10175,9 +10700,12 @@
   },
   {
    "id": "stuffed_mabari",
-   "title_ru": "Плюшевый мабари",
-   "description_ru": "Более преданного спутника не найти!",
-   "aura_ru": "<color=green>+3 % здоровья для союзников из белой фракции.</color> <color=green>Если использует существо: +5 % силы.</color>",
+   "title_key": "HODA_STUFFED_MABARI_GEAR_TITLE",
+   "description_key": "HODA_STUFFED_MABARI_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_HEALTH_WHITE_FACTION_DESC",
+    "HODA_GEAR_PLUS5_POWER_CREATURES_PERSONAL_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_StuffedMabari.png",
    "categories": [],
@@ -10214,9 +10742,12 @@
   },
   {
    "id": "swiftrunners_shield",
-   "title_ru": "Щит Бегуна",
-   "description_ru": "Когда-то на этом щите был герб, но он давно потускнел.",
-   "aura_ru": "<color=green>+10 % сопротивления урону.</color> <color=green>+6 % сопротивления проклятию здоровья для союзников.</color>",
+   "title_key": "HODA_SWIFTRUNNERS_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_SWIFTRUNNERS_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS6_CURSE_HEALTH_RESIST_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_SwiftrunnersShield.png",
    "categories": [
@@ -10258,9 +10789,14 @@
   },
   {
    "id": "sword_of_charris_allied",
-   "title_ru": "Меч Чарриса — союз",
-   "description_ru": "Этот меч, созданный из красного лириума, вытягивает жизнь из всех, кто находится рядом.",
-   "aura_ru": "<color=green>+20 % дополнительного урона.</color> <color=green>Лечит на +7 % при попадании по врагу.</color> <color=red>-20 % здоровья (своего).</color> <color=green>Если используют краснолириумные герои: +20 % к здоровью.</color>",
+   "title_key": "HODA_SWORD_OF_CHARRIS_ALLIED_GEAR_TITLE",
+   "description_key": "HODA_SWORD_OF_CHARRIS_ALLIED_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_BONUSDMG_SELF_PLUS20_DESC",
+    "HODA_GEAR_HEALTH_SELF_ALLYATK_PLUS7_DESC",
+    "HODA_GEAR_HEALTH_SELF_MINUS20_DESC",
+    "HODA_GEAR_HEALTH_SELF_REDLYRIUM_PLUS20_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_SwordOfCharrisAllied.png",
    "categories": [
@@ -10310,9 +10846,13 @@
   },
   {
    "id": "talon_of_the_skies",
-   "title_ru": "Коготь Небес",
-   "description_ru": "Хозяйка Небес милостива: прежде чем рассечь тело врага, ее клинок дает жертве право на ошибку.",
-   "aura_ru": "<color=green>+12 % силы.</color> <color=green>+5 % к шансу на двойной урон для союзников.</color> <color=red>-10 % сопротивления замедлению для врагов.</color>",
+   "title_key": "HODA_TALON_OF_THE_SKIES_GEAR_TITLE",
+   "description_key": "HODA_TALON_OF_THE_SKIES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS12_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_ALLIES_DESC",
+    "HODA_GEAR_MINUS10_SLOWRESIST_ENEMIES_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_TalonOfTheSkies.png",
    "categories": [
@@ -10349,9 +10889,11 @@
   },
   {
    "id": "templar_breastplate",
-   "title_ru": "Нагрудник храмовника",
-   "description_ru": "Обычная броня ордена храмовников.",
-   "aura_ru": "<color=green>+10 % сопротивления проклятию, оглушению, замедлению, вытягиванию силы для союзников.</color>",
+   "title_key": "HODA_TEMPLAR_BREASTPLATE_GEAR_TITLE",
+   "description_key": "HODA_TEMPLAR_BREASTPLATE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_TEMPLAR_BREASTPLATE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_TemplarBreastplate.png",
    "categories": [
@@ -10414,9 +10956,12 @@
   },
   {
    "id": "templar_commander_pauldron",
-   "title_ru": "Храмовничий командирский наплечник",
-   "description_ru": "Ниспадающая сталь. Облегчает тяжесть ответственности за отряд.",
-   "aura_ru": "<color=green>+4 % здоровья.</color> <color=green>+1 % сопротивления урону для союзников.</color>",
+   "title_key": "HODA_TEMPLAR_COMMANDER_PAULDRON_GEAR_TITLE",
+   "description_key": "HODA_TEMPLAR_COMMANDER_PAULDRON_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS1_DAMAGE_RESIST_ALLIES_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_TemplarCommanderPauldron.png",
    "categories": [
@@ -10446,9 +10991,12 @@
   },
   {
    "id": "templar_helmet",
-   "title_ru": "Шлем храмовника",
-   "description_ru": "Обычный шлем ордена храмовников.",
-   "aura_ru": "<color=green>+5 % дополнительного урона.</color> <color=green>+5 % сопротивления урону.</color>",
+   "title_key": "HODA_TEMPLAR_HELMET_GEAR_TITLE",
+   "description_key": "HODA_TEMPLAR_HELMET_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_RESIST_PERSONAL_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_TemplarHelmet.png",
    "categories": [
@@ -10490,9 +11038,13 @@
   },
   {
    "id": "templar_longsword",
-   "title_ru": "Длинный меч храмовника",
-   "description_ru": "Качественный стандартный длинный меч ордена храмовников.",
-   "aura_ru": "<color=green>+5 % силы.</color> <color=green>+3 % шанса на двойной урон.</color> <color=green>+5 % дополнительного урона против магов.</color>",
+   "title_key": "HODA_TEMPLAR_LONGSWORD_GEAR_TITLE",
+   "description_key": "HODA_TEMPLAR_LONGSWORD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS3_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS5PCT_POWER_VS_MAGES_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_TemplarLongsword.png",
    "categories": [
@@ -10547,9 +11099,12 @@
   },
   {
    "id": "templar_shield",
-   "title_ru": "Храмовничий щит",
-   "description_ru": "Типовой щит рыцарей из ордена храмовников.",
-   "aura_ru": "<color=green>+2 % к шансу на двойной урон для союзников.</color> <color=green>+10 % защитника.</color>",
+   "title_key": "HODA_TEMPLAR_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_TEMPLAR_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS2_CRIT_CHANCE_ALLIES_DESC",
+    "HODA_GEAR_DEFENDER_10_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_TemplarShield.png",
    "categories": [],
@@ -10574,9 +11129,11 @@
   },
   {
    "id": "the_ancestors_greaves",
-   "title_ru": "Наголенники предков",
-   "description_ru": "Древние доспехи, напоминающие о тех славных временах, когда войны выигрывались за счет блестящей стратегии.",
-   "aura_ru": "<color=orange>Чаще атакует заднюю шеренгу.</color>",
+   "title_key": "HODA_THE_ANCESTORS_GREAVES_GEAR_TITLE",
+   "description_key": "HODA_THE_ANCESTORS_GREAVES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_FLANK_PERSONAL_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_TheAncestorsGreaves.png",
    "categories": [
@@ -10603,9 +11160,13 @@
   },
   {
    "id": "the_bind_that_guides",
-   "title_ru": "Перевязь, что направляет",
-   "description_ru": "Как бы небрежно ни был завязан этот пояс, через несколько шагов он крепко обертывается вокруг талии.",
-   "aura_ru": "<color=green>+7 % шанса на двойной урон.</color> <color=green>При получении удара дает +25 % здоровья.</color> <color=green>Не дает себя оглушить.</color>",
+   "title_key": "HODA_THE_BIND_THAT_GUIDES_GEAR_TITLE",
+   "description_key": "HODA_THE_BIND_THAT_GUIDES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_HEALTH_GAIN_WHEN_SELF_HIT_25_DESC",
+    "HODA_GEAR_PERSONAL_STUN_IMMUNE_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_TheBindThatGuides.png",
    "categories": [
@@ -10650,9 +11211,11 @@
   },
   {
    "id": "the_black_foxs_jerkin",
-   "title_ru": "Куртка Черного Лиса",
-   "description_ru": "Последняя история о Черном Лисе гласит, что он лишился этой куртки, когда пытался найти Арлатан.",
-   "aura_ru": "<color=green>+10 % сопротивления всем эффектам. +6 % шанса на двойной урон.</color> <color=orange>Повышенная инициатива для атаки.</color>",
+   "title_key": "HODA_THE_BLACK_FOXS_JERKIN_GEAR_TITLE",
+   "description_key": "HODA_THE_BLACK_FOXS_JERKIN_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_THE_BLACK_FOXS_JERKIN_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_TheBlackFoxsJerkin.png",
    "categories": [
@@ -10721,9 +11284,11 @@
   },
   {
    "id": "the_divine_armor",
-   "title_ru": "Доспех Верховной жрицы",
-   "description_ru": "Этот сияющий доспех был изготовлен специально для главы Церкви.",
-   "aura_ru": "<color=green>+10 % к сопротивлению всем эффектам для союзников. +10 % сопротивления урону. Если использует Кассандра: +10 % к исцелению при получении удара.</color>",
+   "title_key": "HODA_THE_DIVINE_ARMOR_GEAR_TITLE",
+   "description_key": "HODA_THE_DIVINE_ARMOR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_THE_DIVINE_ARMOR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_TheDivineArmor.png",
    "categories": [],
@@ -10805,9 +11370,11 @@
   },
   {
    "id": "the_divine_boots",
-   "title_ru": "Сапоги Верховной жрицы",
-   "description_ru": "Этот сияющий доспех был изготовлен специально для главы Церкви.",
-   "aura_ru": "<color=green>+15 % здоровья, вытягивания силы и сопротивления урону для Церкви. Невосприимчивость к замедлению для Верховных жриц.</color>",
+   "title_key": "HODA_THE_DIVINE_BOOTS_GEAR_TITLE",
+   "description_key": "HODA_THE_DIVINE_ARMOR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_THE_DIVINE_BOOTS_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_TheDivineBoots.png",
    "categories": [
@@ -10887,9 +11454,11 @@
   },
   {
    "id": "the_divine_helmet",
-   "title_ru": "Шлем Верховной жрицы",
-   "description_ru": "Этот сияющий доспех был изготовлен специально для главы Церкви.",
-   "aura_ru": "<color=green>Когда атакует союзник, союзники получают +8 % здоровья и +2 % дополнительного урона. Если используется Верховной жрицей, Восприимчивость игнорирует скрытность.</color>",
+   "title_key": "HODA_THE_DIVINE_HELMET_GEAR_TITLE",
+   "description_key": "HODA_THE_DIVINE_ARMOR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_THE_DIVINE_HELMET_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_TheDivineHelmet.png",
    "categories": [
@@ -10944,9 +11513,12 @@
   },
   {
    "id": "the_elders_grimoire",
-   "title_ru": "Гримуар Старшего",
-   "description_ru": "Проклятый гримуар Старшего с секретами красного лириума и прочих демонических ритуалов.",
-   "aura_ru": "<color=green>+7 % силы для краснолириумных союзников.</color> <color=green>+3 % силы для черных союзников.</color>",
+   "title_key": "HODA_THE_ELDERS_GRIMOIRE_GEAR_TITLE",
+   "description_key": "HODA_THE_ELDERS_GRIMOIRE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_POWER_RED_LYRIUM_DESC",
+    "HODA_GEAR_PLUS3_POWER_BLACK_FACTION_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_TheEldersGrimoire.png",
    "categories": [
@@ -10992,9 +11564,13 @@
   },
   {
    "id": "the_eye_that_weeps",
-   "title_ru": "Глаз, что льет слезы",
-   "description_ru": "Капельки влаги медленно образуются на гранях этого самоцвета, сколько бы его ни вытирали досуха.",
-   "aura_ru": "<color=green>+10 % дополнительного урона.</color> <color=green>При смерти союзников возвращает врагам 10 % полученного урона.</color> <color=green>Не дает вытянуть у себя силу.</color>",
+   "title_key": "HODA_THE_EYE_THAT_WEEPS_GEAR_TITLE",
+   "description_key": "HODA_THE_EYE_THAT_WEEPS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_RETALIATE_ENEMY_ALLYDEATH_CONVERT10_DESC",
+    "HODA_GEAR_POWER_DRAIN_IMMUNE_PERSONAL_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_TheEyeThatWeeps.png",
    "categories": [
@@ -11039,9 +11615,11 @@
   },
   {
    "id": "the_golden_princes_helm",
-   "title_ru": "Шлем Золотого принца",
-   "description_ru": "Юную императрицу Селину очаровывали истории Золотого принца, носившего лишь одну корону — свой шлем.",
-   "aura_ru": "<color=green>Получив удар, вытягивает 5 % силы из врагов. +12 % сопротивления замедлению для орлесианцев.</color> <color=red>-10 % сопротивления оглушению и замедлению.</color>",
+   "title_key": "HODA_THE_GOLDEN_PRINCES_HELM_GEAR_TITLE",
+   "description_key": "HODA_THE_GOLDEN_PRINCES_HELM_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_GOLDEN_PRINCES_HELM_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_GoldenPrincesHelm.png",
    "categories": [
@@ -11091,9 +11669,12 @@
   },
   {
    "id": "the_golden_princes_pauldron",
-   "title_ru": "Наплечник Золотого принца",
-   "description_ru": "Наплечник к одеянию Золотого принца. Орлесианский лев берет на себя главный удар.",
-   "aura_ru": "<color=green>Получив удар, лечит союзников на 7 %.</color> <color=green>+12 % сопротивления оглушению для союзников-орлесианцев.</color>",
+   "title_key": "HODA_THE_GOLDEN_PRINCES_PAULDRON_GEAR_TITLE",
+   "description_key": "HODA_THE_GOLDEN_PRINCES_PAULDRON_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS7_HEALTH_ALLIES_ON_SELF_HIT_DESC",
+    "HODA_GEAR_PLUS12_STUN_RESIST_ORLESIAN_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_TheGoldenPrincesPauldron.png",
    "categories": [
@@ -11129,9 +11710,12 @@
   },
   {
    "id": "the_golden_princes_raiment",
-   "title_ru": "Одеяние Золотого принца",
-   "description_ru": "Разукрашенные доспехи Эмиля Девро по прозвищу Золотой принц, покорившего сердца орлесианского простонародья.",
-   "aura_ru": "<color=green>+25 % Заступнику.</color> <color=green>+5 % сопротивления урону для союзников-орлесианцев.</color>",
+   "title_key": "HODA_THE_GOLDEN_PRINCES_RAIMENT_GEAR_TITLE",
+   "description_key": "HODA_THE_GOLDEN_PRINCES_RAIMENT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DEFENDER_25_DESC",
+    "HODA_GEAR_PLUS5_DAMAGE_RESIST_ORLESIAN_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_TheGoldenPrincesRaiment.png",
    "categories": [
@@ -11167,9 +11751,13 @@
   },
   {
    "id": "the_hand_that_cuts",
-   "title_ru": "Рука, что ранит",
-   "description_ru": "Если надеть кольцо на палец, оно становится теплым и начинает пульсировать в такт сердцу носителя.",
-   "aura_ru": "<color=green>+9 % шанса на двойной урон.</color> <color=green>Союзники выдерживают первые 2000 ед. урона.</color> <color=red>-15 % силы для изгоев и краснолириумных героев.</color>",
+   "title_key": "HODA_THE_HAND_THAT_CUTS_GEAR_TITLE",
+   "description_key": "HODA_THE_HAND_THAT_CUTS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS9_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_DMG_RESIST_2000_DESC",
+    "HODA_GEAR_POWER_OUTLAW_RED_LYRIUM_MINUS15_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_TheHandThatCuts.png",
    "categories": [
@@ -11220,9 +11808,12 @@
   },
   {
    "id": "the_ladys_wrath",
-   "title_ru": "Гнев Хозяйки",
-   "description_ru": "Каждый взмах этого молота наполняет владельца силой Хозяйки Небес.",
-   "aura_ru": "<color=green>Дает +5 % дополнительного урона при атаке.</color> <color=green>Превращает 2 % полученного урона в здоровье для союзников.</color>",
+   "title_key": "HODA_THE_LADYS_WRATH_GEAR_TITLE",
+   "description_key": "HODA_THE_LADYS_WRATH_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_SELF_GAIN_BONUS_DAMAGE_WHEN_ATTACKING_5_DESC",
+    "HODA_GEAR_PLUS2_HEALTH_ALLIES_ON_SELF_HIT_BM_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_TheLadysWrath.png",
    "categories": [
@@ -11252,9 +11843,15 @@
   },
   {
    "id": "the_skin_that_stalks",
-   "title_ru": "Броня, что шаги приглушает",
-   "description_ru": "Кожа этой брони источает слабое живое тепло. Она тяжелее, чем кажется.",
-   "aura_ru": "<color=green>+10 % силы.</color> <color=green>+10 % шанса на двойной урон.</color> <color=green>+1000 сопротивления урону за попадание.</color> <color=green>+20 % здоровья.</color> <color=green>+20 % сопротивления замедлению для союзников.</color>",
+   "title_key": "HODA_THE_SKIN_THAT_STALKS_GEAR_TITLE",
+   "description_key": "HODA_THE_SKIN_THAT_STALKS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS10_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_PLUS1000_RAW_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS20_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS20_SLOW_RESIST_ALLIES_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_TheSkinThatStalks.png",
    "categories": [
@@ -11313,9 +11910,13 @@
   },
   {
    "id": "tome_of_arcane_technique",
-   "title_ru": "Фолиант магических техник",
-   "description_ru": "Данный фолиант был исследован Имперской Церковью и подробно анализирует Тень.",
-   "aura_ru": "<color=green>+10 % силы.</color> <color=green>+15 % сопротивления проклятию силы.</color> <color=green>+8 % сопротивления урону.</color>",
+   "title_key": "HODA_TOME_OF_ARCANE_TECHNIQUE_GEAR_TITLE",
+   "description_key": "HODA_TOME_OF_ARCANE_TECHNIQUE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_POWER_PERSONAL_DESC",
+    "HODA_GEAR_CURSE_POWER_RESIST_15_SELF_DESC",
+    "HODA_GEAR_PLUS8_DAMAGE_RESIST_PERSONAL_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_TomeOfArcaneTechnique.png",
    "categories": [
@@ -11352,9 +11953,11 @@
   },
   {
    "id": "tome_of_koslun",
-   "title_ru": "Том Кослуна",
-   "description_ru": "Священные письмена кунари, написанные ашкаари Кослуном, основателем Кун.",
-   "aura_ru": "<color=green>Восприимчивость: игнорирует скрытность. +10 % дополнительного урона. +10 % сопротивления урону и всем эффектам для кунари.</color>",
+   "title_key": "HODA_TOME_OF_KOSLUN_GEAR_TITLE",
+   "description_key": "HODA_TOME_OF_KOSLUN_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_TOME_OF_KOSLUN_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_TomeOfKoslun.png",
    "categories": [
@@ -11462,9 +12065,13 @@
   },
   {
    "id": "tome_of_physical_technique",
-   "title_ru": "Фолиант физических техник",
-   "description_ru": "Данную рукопись авторства истинного мастера редко увидишь за пределами самых престижных организаций.",
-   "aura_ru": "<color=green>+8 % здоровья.</color> <color=green>+12 % силы.</color> <color=green>+5 % шанса на двойной урон.</color>",
+   "title_key": "HODA_TOME_OF_PHYSICAL_TECHNIQUE_GEAR_TITLE",
+   "description_key": "HODA_TOME_OF_PHYSICAL_TECHNIQUE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS8_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS12_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_SELF_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_TomeOfPhysicalTechnique.png",
    "categories": [
@@ -11505,9 +12112,12 @@
   },
   {
    "id": "tome_of_rifts",
-   "title_ru": "Книга о разрывах",
-   "description_ru": "Этот текст учит посвященных вытягивать энергию из Тени и перемещаться в ней.",
-   "aura_ru": "<color=green>+10 % здоровья.</color> <color=green>+6 % силы.</color>",
+   "title_key": "HODA_TOME_OF_RIFTS_GEAR_TITLE",
+   "description_key": "HODA_TOME_OF_RIFTS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS6_POWER_PERSONAL_DESC"
+   ],
    "rarity": 6,
    "icon": "gui/gear/tex.Ico_Gear_TomeOfRifts.png",
    "categories": [],
@@ -11532,9 +12142,11 @@
   },
   {
    "id": "tome_of_skill_and_sundry",
-   "title_ru": "Книга о навыках и разном",
-   "description_ru": "Масш. труд ран. ферелденцев, кот. пытается объед. мн. дисциплины в одной теории псих. способностей.",
-   "aura_ru": "При получении удара дает +5 % сопротивления всем эффектам и урону.",
+   "title_key": "HODA_TOME_OF_SKILL_AND_SUNDRY_GEAR_TITLE",
+   "description_key": "HODA_TOME_OF_SKILL_AND_SUNDRY_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_TOME_OF_SKILL_AND_SUNDRY_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_TomeOfSkillAndSundry.png",
    "categories": [
@@ -11596,9 +12208,13 @@
   },
   {
    "id": "tome_of_the_mortal_vessel",
-   "title_ru": "Книга о смертном сосуде",
-   "description_ru": "Страх перед магией крови поставил крест на научных вскрытиях, но труды по анатомии удалось сберечь.",
-   "aura_ru": "<color=green>+8 % здоровья.</color> <color=green>+5 % силы.</color> <color=green>+3 % шанса на двойной урон.</color>",
+   "title_key": "HODA_TOME_OF_THE_MORTAL_VESSEL_GEAR_TITLE",
+   "description_key": "HODA_TOME_OF_THE_MORTAL_VESSEL_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS8_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS3_CRIT_CHANCE_SELF_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_TomeoftheMortalVessel.png",
    "categories": [
@@ -11643,9 +12259,11 @@
   },
   {
    "id": "vanguard_armor",
-   "title_ru": "Доспех авангарда",
-   "description_ru": "Для тех, кто в первых рядах.",
-   "aura_ru": "<color=green>+2 % сопротивления урону для союзников.</color>",
+   "title_key": "HODA_VANGUARD_ARMOR_GEAR_TITLE",
+   "description_key": "HODA_VANGUARD_ARMOR_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS2_DAMAGE_RESIST_ALLIES_DESC"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_VanguardArmor.png",
    "categories": [
@@ -11668,9 +12286,12 @@
   },
   {
    "id": "venatori_bow",
-   "title_ru": "Лук венатори",
-   "description_ru": "На этот лук наложено опасное взрывное заклинание, с которым пущенные стрелы наносят разрывной урон.",
-   "aura_ru": "<color=green>+5 % к шансу на двойной урон для союзников.</color> <color=green>При смерти врага все враги получают 5 % от нанесенного урона.</color>",
+   "title_key": "HODA_VENATORI_BOW_GEAR_TITLE",
+   "description_key": "HODA_VENATORI_BOW_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_CRIT_CHANCE_ALLIES_DESC",
+    "HODA_GEAR_EXPLODE_ALL_5_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_VenatoriBow.png",
    "categories": [
@@ -11700,9 +12321,12 @@
   },
   {
    "id": "venatori_greaves",
-   "title_ru": "Поножи венатори",
-   "description_ru": "В эти поножи, выдаваемые солдатам венатори, вплетены цепи, ранее использованные для рабов.",
-   "aura_ru": "<color=green>+10 % сопротивления оглушению.</color> <color=green>Приращивает 10 % силы при смерти союзника.</color>",
+   "title_key": "HODA_VENATORI_GREAVES_GEAR_TITLE",
+   "description_key": "HODA_VENATORI_GREAVES_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS10_STUN_RESIST_SELF_DESC",
+    "HODA_GEAR_PLUS10_POWER_SELF_ON_ALLY_DEATH_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_VenatoriGreaves.png",
    "categories": [
@@ -11732,9 +12356,11 @@
   },
   {
    "id": "venatori_helmet",
-   "title_ru": "Шлем венатори",
-   "description_ru": "Закрытый шлем солдата-венатори.",
-   "aura_ru": "<color=green>+3 % здоровья и сопротивления оглушению для венатори.</color>",
+   "title_key": "HODA_VENATORI_HELMET_GEAR_TITLE",
+   "description_key": "HODA_VENATORI_HELMET_GEAR_DESC",
+   "aura_keys": [
+    "HODA_VENATORI_HELMET_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_VenatoriHelmet.png",
    "categories": [
@@ -11780,9 +12406,11 @@
   },
   {
    "id": "venatori_staff_blade",
-   "title_ru": "Посох-клинок венатори",
-   "description_ru": "Это орудие фанатиков-венатори помогает им сеять хаос среди врагов.",
-   "aura_ru": "<color=green>+5 % силы и здоровья.</color> <color=red>-10 % силы и сопротивления оглушению и замедлению у врагов.</color>",
+   "title_key": "HODA_VENATORI_STAFF_BLADE_GEAR_TITLE",
+   "description_key": "HODA_VENATORI_STAFF_BLADE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_VENATORI_STAFF_BLADE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_VenatoriStaffBlade.png",
    "categories": [
@@ -11837,9 +12465,13 @@
   },
   {
    "id": "venatori_tower_shield",
-   "title_ru": "Осадный щит венатори",
-   "description_ru": "Этот щит, заряженный защитными заклинаниями, заслоняет своего носителя от всего.",
-   "aura_ru": "<color=green>Союзники выдерживают первые 1500 ед. урона.</color> <color=green>При атаке поглощает 15 % урона по площади, полученного союзниками.</color> <color=green>+15 % сопротивления проклятию силы.</color>",
+   "title_key": "HODA_VENATORI_TOWER_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_VENATORI_TOWER_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_DMG_RESIST_1500_DESC",
+    "HODA_GEAR_DEFENDER_15_DESC",
+    "HODA_GEAR_CURSE_POWER_RESIST_15_SELF_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_VenatoriTowerShield.png",
    "categories": [
@@ -11876,9 +12508,14 @@
   },
   {
    "id": "vestments_of_the_archmage",
-   "title_ru": "Одеяние архимага",
-   "description_ru": "Его носят маги, достигшие звания архимага — одного из высших и самых значительных в Круге.",
-   "aura_ru": "<color=green>+5 % силы.</color> <color=green>+10 % сопротивления урону.</color> <color=green>+12 % сопротивления оглушению для союзников.</color> <color=green>Если использует Винн: \"Восприимчивость: игнорирует скрытность\".</color>",
+   "title_key": "HODA_VESTMENTS_OF_THE_ARCHMAGE_GEAR_TITLE",
+   "description_key": "HODA_VESTMENTS_OF_THE_ARCHMAGE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS10_DAMAGE_RESIST_PERSONAL_DESC",
+    "HODA_GEAR_PLUS12_STUN_RESIST_ALLIES_DESC",
+    "HODA_GEAR_PERCEPTIVE_SELF_WYNNE_DESC"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_VestmentsOfTheArchmage.png",
    "categories": [
@@ -11928,9 +12565,12 @@
   },
   {
    "id": "vestments_of_the_dragon_hunter",
-   "title_ru": "Одеяния драконоборца",
-   "description_ru": "Эти легкие доспехи, найденные рядом с бездыханным телом восставшего Гурда, выдаются только самым грозным драконоборцам.",
-   "aura_ru": "<color=green>+8 % силы.</color> <color=green>Нанося удар, вытягивает 2 % силы из врагов.</color>",
+   "title_key": "HODA_VESTMENTS_OF_THE_DRAGON_HUNTER_GEAR_TITLE",
+   "description_key": "HODA_VESTMENTS_OF_THE_DRAGON_HUNTER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS8_POWER_PERSONAL_DESC",
+    "HODA_GEAR_ENEMY_POWER_DRAIN_WHEN_SELF_ATTACKED_2_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_VestmentsOfTheDragonHunter.png",
    "categories": [
@@ -11960,9 +12600,11 @@
   },
   {
    "id": "vial_of_dragons_blood",
-   "title_ru": "Фиал крови дракона",
-   "description_ru": "Крови дракона можно найти самое разное применение, но в основном ее ценят за магические свойства. Тот, кто выпьет ее, получит невероятную силу... если выживет.",
-   "aura_ru": "<color=green>Превращает 5 % урона, полученного врагами, в здоровье для союзника.</color>",
+   "title_key": "HODA_VIAL_OF_DRAGONS_BLOOD_GEAR_TITLE",
+   "description_key": "HODA_VIAL_OF_DRAGONS_BLOOD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_HEALTH_GAIN_ALL_WHEN_ENEMY_HIT_5_SELF_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_VialOfDragonsBlood.png",
    "categories": [
@@ -11985,9 +12627,11 @@
   },
   {
    "id": "vigilance",
-   "title_ru": "Бдительность",
-   "description_ru": "Легендарное оружие создается лишь раз в столетие. Этот меч из костей древнего дракона лучится силой.",
-   "aura_ru": "<color=green>+10 % силы, здоровья и сопротивления всем эффектам. +5 % дополнительного урона.</color>",
+   "title_key": "HODA_VIGILANCE_GEAR_TITLE",
+   "description_key": "HODA_VIGILANCE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_VIGILANCE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_Vigilance.png",
    "categories": [
@@ -12059,9 +12703,11 @@
   },
   {
    "id": "vinsomer_scale",
-   "title_ru": "Чешуйка винсомера",
-   "description_ru": "Выдрана из шкуры убитого винсомера. Искрится от электричества.",
-   "aura_ru": "<color=green>Когда союзники атакуют, дает союзникам 4 % силы.</color> <color=red>-25 % сопротивления проклятиям. Снижает шансы врага зайти с фланга.</color> <color=green>Если использует дракон: +25 % здоровья.</color>",
+   "title_key": "HODA_VINSOMER_SCALE_GEAR_TITLE",
+   "description_key": "HODA_VINSOMER_SCALE_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_VINSOMER_SCALE_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 2,
    "icon": "gui/gear/tex.Ico_Gear_VinsomerScale.png",
    "categories": [
@@ -12118,9 +12764,11 @@
   },
   {
    "id": "virtuosity",
-   "title_ru": "Виртуозность",
-   "description_ru": "Магия этой лютни заметна любому, но лишь один человек способен использовать ее в полную силу.",
-   "aura_ru": "<color=green>+10 % сопротивления проклятиям для союзников. Если использует Цитра: +20 % здоровья, силы и сопротивления урону.</color>",
+   "title_key": "HODA_VIRTUOSITY_GEAR_TITLE",
+   "description_key": "HODA_VIRTUOSITY_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_VIRTUOSITY_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_Virtuosity.png",
    "categories": [
@@ -12189,9 +12837,11 @@
   },
   {
    "id": "vitaar_of_the_dragon_hunter",
-   "title_ru": "Витаар драконоборца",
-   "description_ru": "Эта краска для лица делается из смертельного яда, которая дает кунари дополнительную силу.",
-   "aura_ru": "<color=green>+15 % силы и шанса на двойной урон.</color>",
+   "title_key": "HODA_VITAAR_OF_THE_DRAGON_HUNTER_GEAR_TITLE",
+   "description_key": "HODA_VITAAR_OF_THE_DRAGON_HUNTER_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_VITAAR_OF_THE_DRAGON_HUNTER_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_VitaarOfTheDragonHunter.png",
    "categories": [
@@ -12221,9 +12871,12 @@
   },
   {
    "id": "voracity",
-   "title_ru": "Ненасытность",
-   "description_ru": "Этот посох шепотом призывает своего обладателя пролить еще больше крови, чтобы утолить свою жажду.",
-   "aura_ru": "<color=green>+6 % силы.</color> <color=green>+4 % силы для союзных магов крови.</color>",
+   "title_key": "HODA_VORACITY_GEAR_TITLE",
+   "description_key": "HODA_VORACITY_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS6_POWER_PERSONAL_DESC",
+    "HODA_GEAR_PLUS4_POWER_BLOODMAGES_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_Voracity.png",
    "categories": [
@@ -12259,9 +12912,11 @@
   },
   {
    "id": "walking_death",
-   "title_ru": "Ходячая смерть",
-   "description_ru": "Метки морталитаси ни с чем не спутаешь. Как этот кинжал попал в Эмприз-дю-Лион — не знает никто, а вот его остроту познали многие.",
-   "aura_ru": "<color=green>+10 % дополнительного урона против красной, черной фракции и заступников (суммируется).</color>",
+   "title_key": "HODA_WALKING_DEATH_GEAR_TITLE",
+   "description_key": "HODA_WALKING_DEATH_GEAR_DESC",
+   "aura_keys": [
+    "HODA_WALKING_DEATH_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_WalkingDeath.png",
    "categories": [
@@ -12303,9 +12958,12 @@
   },
   {
    "id": "warden_helmet",
-   "title_ru": "Шлем Стража",
-   "description_ru": "Крылатый шлем Серых Стражей.",
-   "aura_ru": "<color=green>+3 % здоровья.</color> <color=green>+5 % сопротивления оглушению.</color>",
+   "title_key": "HODA_WARDEN_HELMET_GEAR_TITLE",
+   "description_key": "HODA_WARDEN_HELMET_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS3_HEALTH_PERSONAL_DESC",
+    "HODA_GEAR_PLUS5_STUN_RESIST_SELF_DESC"
+   ],
    "rarity": 1,
    "icon": "gui/gear/tex.Ico_Gear_WardenHelmet.png",
    "categories": [
@@ -12343,9 +13001,12 @@
   },
   {
    "id": "warden_tower_shield",
-   "title_ru": "Осадный щит Серых Стражей",
-   "description_ru": "Тяжелый щит Стража-Командора. Знак Серых Стражей отражает самые яростные атаки.",
-   "aura_ru": "<color=green>+4 % к здоровью для союзников-стражей.</color>. <color=green>+9 % сопротивления урону против крупных существ.</color>",
+   "title_key": "HODA_WARDEN_TOWER_SHIELD_GEAR_TITLE",
+   "description_key": "HODA_WARDEN_TOWER_SHIELD_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS4_HEALTH_WARDEN_DESC",
+    "HODA_GEAR_PLUS9_DAMAGE_RESIST_SELF_VS_LARGE_CREATURES_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_WardenTowerShield.png",
    "categories": [
@@ -12387,9 +13048,11 @@
   },
   {
    "id": "warm_orb",
-   "title_ru": "Теплый шар",
-   "description_ru": "Эта безвредная на первый взгляд безделушка гудит от силы и отзывается только на кровь.",
-   "aura_ru": "<color=green>Превращает 2 % полученного союзниками урона в здоровье.</color>",
+   "title_key": "HODA_WARM_ORB_GEAR_TITLE",
+   "description_key": "HODA_WARM_ORB_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS2_HEALTH_ALLY_BLOOD_MAGE_ABILITY_SELF_DESC"
+   ],
    "rarity": 4,
    "icon": "gui/gear/tex.Ico_Gear_WarmOrb.png",
    "categories": [],
@@ -12407,9 +13070,11 @@
   },
   {
    "id": "wedge_of_destiny",
-   "title_ru": "Ломоть судьбы",
-   "description_ru": "Этот порочный гибрид драконьей чешуи и острого чеддера куда действенней, чем кажется на вид. Боится огня (разве что вам захотелось фондю).",
-   "aura_ru": "<color=green>Превращает 4 % полученного урона в здоровье. Сопротивляется первым 300 ед. урона за удар (слишком толстый слой сыра приходится пробивать).</color>",
+   "title_key": "HODA_WEDGE_OF_DESTINY_GEAR_TITLE",
+   "description_key": "HODA_WEDGE_OF_DESTINY_GEAR_DESC",
+   "aura_keys": [
+    "HODA_WEDGE_OF_DESTINY_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_WedgeOfDestiny.png",
    "categories": [],
@@ -12434,9 +13099,11 @@
   },
   {
    "id": "wilhelms_staff",
-   "title_ru": "Посох Вильгельма",
-   "description_ru": "Некогда этим оружием владел герой восстания Ферелдена. Несмотря на возраст, его сила не угасла.",
-   "aura_ru": "<color=green>+5 % дополнительного урона. +5 % сопротивления проклятиям.</color>",
+   "title_key": "HODA_WILHELMS_STAFF_GEAR_TITLE",
+   "description_key": "HODA_WILHELMS_STAFF_GEAR_DESC",
+   "aura_keys": [
+    "HODA_WILHELMS_STAFF_GEAR_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 3,
    "icon": "gui/gear/tex.Ico_Gear_WilhelmsStaff.png",
    "categories": [
@@ -12473,9 +13140,11 @@
   },
   {
    "id": "winterweight",
-   "title_ru": "Бремя зимы",
-   "description_ru": "Сокровище Глубинных троп, охраняемое драконом и наделенное защитными чарами.",
-   "aura_ru": "<color=green>+15 % к урону и сопротивлению всем эффектам. Защитник - +15 %.</color>",
+   "title_key": "HODA_WINTERWEIGHT_GEAR_TITLE",
+   "description_key": "HODA_WINTERWEIGHT_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_WINTERWEIGHT_AURA_LOC_OVERRIDE"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_WinterWeight.png",
    "categories": [
@@ -12540,9 +13209,14 @@
   },
   {
    "id": "yavanalis",
-   "title_ru": "Яваналис",
-   "description_ru": "Посох \"Бледного демона\" — долийского хранителя, известного своими жестокими атаками на орлесианцев.",
-   "aura_ru": "<color=green>+5 % дополнительного урона.</color> <color=green>+7 % к лечению союзников при смерти врага.</color> <color=green>+10 % шанса на двойной урон.</color> <color=red>-20 % сопротивления замедлению для орлесианцев.</color>",
+   "title_key": "HODA_YAVANALIS_GEAR_TITLE",
+   "description_key": "HODA_YAVANALIS_GEAR_DESC",
+   "aura_keys": [
+    "HODA_GEAR_PLUS5_BONUS_DAMAGE_SELF_DESC",
+    "HODA_GEAR_HEALTH_ON_ENEMY_DEATH_7_ALLIES_DESC",
+    "HODA_GEAR_PLUS10_CRIT_CHANCE_SELF_DESC",
+    "HODA_GEAR_MINUS20_SLOW_RESIST_TO_ORLESIAN_DESC"
+   ],
    "rarity": 5,
    "icon": "gui/gear/tex.Ico_Gear_Yavanalis.png",
    "categories": [

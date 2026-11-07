@@ -106,7 +106,6 @@
         "kind": "gear",
         "id": "templar_longsword",
         "count": 1,
-        "name": "Длинный меч храмовника",
         "icon": ""
        }
       ]
@@ -120,7 +119,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICGIANTWISP",
         "count": 1,
-        "name": "Мифический гигантский огонек",
         "icon": "tex.c_wisp_mythic_large_pt"
        }
       ]
@@ -134,7 +132,6 @@
         "kind": "tome",
         "id": "tome",
         "count": 1,
-        "name": "Том вознесения",
         "icon": ""
        }
       ]
@@ -151,28 +148,24 @@
         "kind": "unit",
         "id": "UNIT_ARIQUN",
         "count": 1,
-        "name": "Арикун",
         "icon": "tex.qm_dw_ariqun_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_LEANDRAAMELL",
         "count": 1,
-        "name": "Лиандра Амелл",
         "icon": "tex.hf_nc_leandraamell_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_FAIRBANKS",
         "count": 1,
-        "name": "Фэрбенкс",
         "icon": "tex.hm_sw_fairbanks_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SEEKERCASSANDRA",
         "count": 1,
-        "name": "Искательница Кассандра",
         "icon": "tex.hf_sw_seekercassandra_t1_pt"
        }
       ]
@@ -187,28 +180,24 @@
         "kind": "unit",
         "id": "UNIT_LEANDRAAMELL",
         "count": 1,
-        "name": "Лиандра Амелл",
         "icon": "tex.hf_nc_leandraamell_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_FAIRBANKS",
         "count": 1,
-        "name": "Фэрбенкс",
         "icon": "tex.hm_sw_fairbanks_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SEEKERCASSANDRA",
         "count": 1,
-        "name": "Искательница Кассандра",
         "icon": "tex.hf_sw_seekercassandra_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CHAUNCEY",
         "count": 1,
-        "name": "Чонси",
         "icon": "tex.c_chauncey_t1_pt"
        }
       ]
@@ -223,28 +212,24 @@
         "kind": "unit",
         "id": "UNIT_FAIRBANKS",
         "count": 1,
-        "name": "Фэрбенкс",
         "icon": "tex.hm_sw_fairbanks_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SEEKERCASSANDRA",
         "count": 1,
-        "name": "Искательница Кассандра",
         "icon": "tex.hf_sw_seekercassandra_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CHAUNCEY",
         "count": 1,
-        "name": "Чонси",
         "icon": "tex.c_chauncey_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WITHERFANG",
         "count": 1,
-        "name": "Бешеный Клык",
         "icon": "tex.c_witherfang_t1_pt"
        }
       ]
@@ -259,28 +244,24 @@
         "kind": "unit",
         "id": "UNIT_SEEKERCASSANDRA",
         "count": 1,
-        "name": "Искательница Кассандра",
         "icon": "tex.hf_sw_seekercassandra_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CHAUNCEY",
         "count": 1,
-        "name": "Чонси",
         "icon": "tex.c_chauncey_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WITHERFANG",
         "count": 1,
-        "name": "Бешеный Клык",
         "icon": "tex.c_witherfang_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CORYPHEUS",
         "count": 1,
-        "name": "Корифей",
         "icon": "tex.c_corypheus_t1_pt"
        }
       ]
@@ -295,28 +276,24 @@
         "kind": "unit",
         "id": "UNIT_CHAUNCEY",
         "count": 1,
-        "name": "Чонси",
         "icon": "tex.c_chauncey_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WITHERFANG",
         "count": 1,
-        "name": "Бешеный Клык",
         "icon": "tex.c_witherfang_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CORYPHEUS",
         "count": 1,
-        "name": "Корифей",
         "icon": "tex.c_corypheus_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -332,21 +309,18 @@
         "kind": "unit",
         "id": "UNIT_WITHERFANG",
         "count": 1,
-        "name": "Бешеный Клык",
         "icon": "tex.c_witherfang_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CORYPHEUS",
         "count": 1,
-        "name": "Корифей",
         "icon": "tex.c_corypheus_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -362,14 +336,12 @@
         "kind": "unit",
         "id": "UNIT_CORYPHEUS",
         "count": 1,
-        "name": "Корифей",
         "icon": "tex.c_corypheus_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -377,7 +349,6 @@
         "kind": "unit",
         "id": "UNIT_MAGISTERPAVUS",
         "count": 1,
-        "name": "Магистр Павус",
         "icon": "tex.hm_mw_magisterpavus_t1_pt"
        }
       ]
@@ -392,7 +363,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -400,14 +370,12 @@
         "kind": "unit",
         "id": "UNIT_MAGISTERPAVUS",
         "count": 1,
-        "name": "Магистр Павус",
         "icon": "tex.hm_mw_magisterpavus_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CASSANDRAPENTAGHAST",
         "count": 1,
-        "name": "Кассандра Пентагаст",
         "icon": "tex.hf_tw_cassandra_t1_pt"
        }
       ]
@@ -422,7 +390,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -430,21 +397,18 @@
         "kind": "unit",
         "id": "UNIT_MAGISTERPAVUS",
         "count": 1,
-        "name": "Магистр Павус",
         "icon": "tex.hm_mw_magisterpavus_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CASSANDRAPENTAGHAST",
         "count": 1,
-        "name": "Кассандра Пентагаст",
         "icon": "tex.hf_tw_cassandra_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CHANTRYWARRIOR",
         "count": 1,
-        "name": "Воин Церкви",
         "icon": "tex.hm_sw_chantrywarrior_t1_pt"
        }
       ]
@@ -459,28 +423,24 @@
         "kind": "unit",
         "id": "UNIT_MAGISTERPAVUS",
         "count": 1,
-        "name": "Магистр Павус",
         "icon": "tex.hm_mw_magisterpavus_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CASSANDRAPENTAGHAST",
         "count": 1,
-        "name": "Кассандра Пентагаст",
         "icon": "tex.hf_tw_cassandra_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CHANTRYWARRIOR",
         "count": 1,
-        "name": "Воин Церкви",
         "icon": "tex.hm_sw_chantrywarrior_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -495,28 +455,24 @@
         "kind": "unit",
         "id": "UNIT_CASSANDRAPENTAGHAST",
         "count": 1,
-        "name": "Кассандра Пентагаст",
         "icon": "tex.hf_tw_cassandra_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_CHANTRYWARRIOR",
         "count": 1,
-        "name": "Воин Церкви",
         "icon": "tex.hm_sw_chantrywarrior_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -531,28 +487,24 @@
         "kind": "unit",
         "id": "UNIT_CHANTRYWARRIOR",
         "count": 1,
-        "name": "Воин Церкви",
         "icon": "tex.hm_sw_chantrywarrior_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -610,7 +562,6 @@
         "kind": "gear",
         "id": "flemeths_grimoire",
         "count": 1,
-        "name": "Гримуар Флемет",
         "icon": ""
        }
       ]
@@ -624,7 +575,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICGIANTWISP",
         "count": 1,
-        "name": "Мифический гигантский огонек",
         "icon": "tex.c_wisp_mythic_large_pt"
        }
       ]
@@ -638,7 +588,6 @@
         "kind": "tome",
         "id": "tome",
         "count": 1,
-        "name": "Том вознесения",
         "icon": ""
        }
       ]
@@ -655,28 +604,24 @@
         "kind": "unit",
         "id": "UNIT_NIGHTMARE",
         "count": 1,
-        "name": "Кошмар",
         "icon": "tex.c_nightmare_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEHIGHESTONE",
         "count": 1,
-        "name": "Высший",
         "icon": "tex.c_thehighestone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GAXKANGTHEUNBOUND",
         "count": 1,
-        "name": "Гаксканг Свободный",
         "icon": "tex.c_gaxkang_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_STORVACKER",
         "count": 1,
-        "name": "Сторваккер",
         "icon": "tex.c_storvacker_t1_pt"
        }
       ]
@@ -691,28 +636,24 @@
         "kind": "unit",
         "id": "UNIT_THEHIGHESTONE",
         "count": 1,
-        "name": "Высший",
         "icon": "tex.c_thehighestone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GAXKANGTHEUNBOUND",
         "count": 1,
-        "name": "Гаксканг Свободный",
         "icon": "tex.c_gaxkang_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_STORVACKER",
         "count": 1,
-        "name": "Сторваккер",
         "icon": "tex.c_storvacker_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        }
       ]
@@ -727,28 +668,24 @@
         "kind": "unit",
         "id": "UNIT_GAXKANGTHEUNBOUND",
         "count": 1,
-        "name": "Гаксканг Свободный",
         "icon": "tex.c_gaxkang_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_STORVACKER",
         "count": 1,
-        "name": "Сторваккер",
         "icon": "tex.c_storvacker_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SPIRITOFJUSTINIA",
         "count": 1,
-        "name": "Дух Джустинии",
         "icon": "tex.hf_mw_spiritofjustinia_t1_pt"
        }
       ]
@@ -763,28 +700,24 @@
         "kind": "unit",
         "id": "UNIT_STORVACKER",
         "count": 1,
-        "name": "Сторваккер",
         "icon": "tex.c_storvacker_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SPIRITOFJUSTINIA",
         "count": 1,
-        "name": "Дух Джустинии",
         "icon": "tex.hf_mw_spiritofjustinia_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GIBBERINGHORROR",
         "count": 1,
-        "name": "Бормочущий ужас",
         "icon": "tex.c_gibberinghorror_t1_pt"
        }
       ]
@@ -799,28 +732,24 @@
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SPIRITOFJUSTINIA",
         "count": 1,
-        "name": "Дух Джустинии",
         "icon": "tex.hf_mw_spiritofjustinia_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GIBBERINGHORROR",
         "count": 1,
-        "name": "Бормочущий ужас",
         "icon": "tex.c_gibberinghorror_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_KNIGHT-CAPTAINCULLEN",
         "count": 1,
-        "name": "Рыцарь-капитан Каллен",
         "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
        }
       ]
@@ -835,28 +764,24 @@
         "kind": "unit",
         "id": "UNIT_SPIRITOFJUSTINIA",
         "count": 1,
-        "name": "Дух Джустинии",
         "icon": "tex.hf_mw_spiritofjustinia_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GIBBERINGHORROR",
         "count": 1,
-        "name": "Бормочущий ужас",
         "icon": "tex.c_gibberinghorror_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_KNIGHT-CAPTAINCULLEN",
         "count": 1,
-        "name": "Рыцарь-капитан Каллен",
         "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -872,21 +797,18 @@
         "kind": "unit",
         "id": "UNIT_GIBBERINGHORROR",
         "count": 1,
-        "name": "Бормочущий ужас",
         "icon": "tex.c_gibberinghorror_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_KNIGHT-CAPTAINCULLEN",
         "count": 1,
-        "name": "Рыцарь-капитан Каллен",
         "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -902,14 +824,12 @@
         "kind": "unit",
         "id": "UNIT_KNIGHT-CAPTAINCULLEN",
         "count": 1,
-        "name": "Рыцарь-капитан Каллен",
         "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -925,7 +845,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 4,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -941,7 +860,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -949,7 +867,6 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -964,7 +881,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -972,14 +888,12 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -994,7 +908,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -1002,21 +915,18 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -1074,7 +984,6 @@
         "kind": "gear",
         "id": "scout_coat_arms",
         "count": 1,
-        "name": "Рукава для куртки разведчика",
         "icon": ""
        }
       ]
@@ -1088,7 +997,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICBLUEWISP",
         "count": 1,
-        "name": "Мифический синий огонек",
         "icon": "tex.c_wisp_mythic_blue_pt"
        }
       ]
@@ -1102,7 +1010,6 @@
         "kind": "tome",
         "id": "tome",
         "count": 1,
-        "name": "Том вознесения",
         "icon": ""
        }
       ]
@@ -1119,28 +1026,24 @@
         "kind": "unit",
         "id": "UNIT_KNIGHT-ENCHANTERVIVIENNE",
         "count": 1,
-        "name": "Рыцарь-чародей Вивьен",
         "icon": "tex.hf_dw_knightenchantervivienne_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_HIVERNAL",
         "count": 1,
-        "name": "Хивернал",
         "icon": "tex.c_hivernal_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ZITHER",
         "count": 1,
-        "name": "ЦИТРА",
         "icon": "tex.hm_bd_zither_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_REDLYRIUMBLACKWALL",
         "count": 1,
-        "name": "Красный Блэкволл",
         "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
        }
       ]
@@ -1155,28 +1058,24 @@
         "kind": "unit",
         "id": "UNIT_HIVERNAL",
         "count": 1,
-        "name": "Хивернал",
         "icon": "tex.c_hivernal_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ZITHER",
         "count": 1,
-        "name": "ЦИТРА",
         "icon": "tex.hm_bd_zither_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_REDLYRIUMBLACKWALL",
         "count": 1,
-        "name": "Красный Блэкволл",
         "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERCLAREL",
         "count": 1,
-        "name": "Страж-Командор Кларель",
         "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
        }
       ]
@@ -1191,28 +1090,24 @@
         "kind": "unit",
         "id": "UNIT_ZITHER",
         "count": 1,
-        "name": "ЦИТРА",
         "icon": "tex.hm_bd_zither_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_REDLYRIUMBLACKWALL",
         "count": 1,
-        "name": "Красный Блэкволл",
         "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERCLAREL",
         "count": 1,
-        "name": "Страж-Командор Кларель",
         "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGGALOPE",
         "count": 1,
-        "name": "Наголопа",
         "icon": "tex.c_nuggalope_t1_pt"
        }
       ]
@@ -1227,28 +1122,24 @@
         "kind": "unit",
         "id": "UNIT_REDLYRIUMBLACKWALL",
         "count": 1,
-        "name": "Красный Блэкволл",
         "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERCLAREL",
         "count": 1,
-        "name": "Страж-Командор Кларель",
         "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGGALOPE",
         "count": 1,
-        "name": "Наголопа",
         "icon": "tex.c_nuggalope_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_MICHELDECHEVIN",
         "count": 1,
-        "name": "Мишель де Шевен",
         "icon": "tex.hm_sw_micheldechevin_t1_pt"
        }
       ]
@@ -1263,28 +1154,24 @@
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERCLAREL",
         "count": 1,
-        "name": "Страж-Командор Кларель",
         "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGGALOPE",
         "count": 1,
-        "name": "Наголопа",
         "icon": "tex.c_nuggalope_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_MICHELDECHEVIN",
         "count": 1,
-        "name": "Мишель де Шевен",
         "icon": "tex.hm_sw_micheldechevin_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        }
       ]
@@ -1299,28 +1186,24 @@
         "kind": "unit",
         "id": "UNIT_NUGGALOPE",
         "count": 1,
-        "name": "Наголопа",
         "icon": "tex.c_nuggalope_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_MICHELDECHEVIN",
         "count": 1,
-        "name": "Мишель де Шевен",
         "icon": "tex.hm_sw_micheldechevin_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SERSTROUD",
         "count": 1,
-        "name": "Сэр Страуд",
         "icon": "tex.hm_sw_serstroud_t1_pt"
        }
       ]
@@ -1335,28 +1218,24 @@
         "kind": "unit",
         "id": "UNIT_MICHELDECHEVIN",
         "count": 1,
-        "name": "Мишель де Шевен",
         "icon": "tex.hm_sw_micheldechevin_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SERSTROUD",
         "count": 1,
-        "name": "Сэр Страуд",
         "icon": "tex.hm_sw_serstroud_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DUKEPROSPER",
         "count": 1,
-        "name": "Герцог Проспер",
         "icon": "tex.hm_cb_dukeprosper_t1_pt"
        }
       ]
@@ -1371,28 +1250,24 @@
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SERSTROUD",
         "count": 1,
-        "name": "Сэр Страуд",
         "icon": "tex.hm_sw_serstroud_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DUKEPROSPER",
         "count": 1,
-        "name": "Герцог Проспер",
         "icon": "tex.hm_cb_dukeprosper_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -1408,21 +1283,18 @@
         "kind": "unit",
         "id": "UNIT_SERSTROUD",
         "count": 1,
-        "name": "Сэр Страуд",
         "icon": "tex.hm_sw_serstroud_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DUKEPROSPER",
         "count": 1,
-        "name": "Герцог Проспер",
         "icon": "tex.hm_cb_dukeprosper_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -1438,14 +1310,12 @@
         "kind": "unit",
         "id": "UNIT_DUKEPROSPER",
         "count": 1,
-        "name": "Герцог Проспер",
         "icon": "tex.hm_cb_dukeprosper_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -1453,7 +1323,6 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -1468,7 +1337,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -1476,14 +1344,12 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -1498,7 +1364,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -1506,21 +1371,18 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -1578,7 +1440,6 @@
         "kind": "gear",
         "id": "broken_griffon_helm",
         "count": 1,
-        "name": "Сломанный шлем с грифоном",
         "icon": ""
        }
       ]
@@ -1592,7 +1453,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICREDWISP",
         "count": 1,
-        "name": "Мифический красный огонек",
         "icon": "tex.c_wisp_mythic_red_pt"
        }
       ]
@@ -1606,7 +1466,6 @@
         "kind": "tome",
         "id": "tome",
         "count": 1,
-        "name": "Том вознесения",
         "icon": ""
        }
       ]
@@ -1623,28 +1482,24 @@
         "kind": "unit",
         "id": "UNIT_ARCHDEMONURTHEMIEL",
         "count": 1,
-        "name": "Архидемон Уртемиэль",
         "icon": "tex.c_archdemonurthemiel_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_KINGALISTAIR",
         "count": 1,
-        "name": "Король Алистер",
         "icon": "tex.hm_sw_alistairking_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GREYWARDENLOGHAIN",
         "count": 1,
-        "name": "Серый Страж Логэйн",
         "icon": "tex.hm_sw_greywardenloghain_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_RIORDAN",
         "count": 1,
-        "name": "Риордан",
         "icon": "tex.hm_tw_riordan_t1_pt"
        }
       ]
@@ -1659,28 +1514,24 @@
         "kind": "unit",
         "id": "UNIT_KINGALISTAIR",
         "count": 1,
-        "name": "Король Алистер",
         "icon": "tex.hm_sw_alistairking_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GREYWARDENLOGHAIN",
         "count": 1,
-        "name": "Серый Страж Логэйн",
         "icon": "tex.hm_sw_greywardenloghain_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_RIORDAN",
         "count": 1,
-        "name": "Риордан",
         "icon": "tex.hm_tw_riordan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERDUNCAN",
         "count": 1,
-        "name": "Страж-Командор Дункан",
         "icon": "tex.hm_dw_wardencommanderduncan_t1_pt"
        }
       ]
@@ -1695,28 +1546,24 @@
         "kind": "unit",
         "id": "UNIT_GREYWARDENLOGHAIN",
         "count": 1,
-        "name": "Серый Страж Логэйн",
         "icon": "tex.hm_sw_greywardenloghain_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_RIORDAN",
         "count": 1,
-        "name": "Риордан",
         "icon": "tex.hm_tw_riordan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERDUNCAN",
         "count": 1,
-        "name": "Страж-Командор Дункан",
         "icon": "tex.hm_dw_wardencommanderduncan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SERJORY",
         "count": 1,
-        "name": "Сэр Джори",
         "icon": "tex.hm_sw_serjory_t1_pt"
        }
       ]
@@ -1731,28 +1578,24 @@
         "kind": "unit",
         "id": "UNIT_RIORDAN",
         "count": 1,
-        "name": "Риордан",
         "icon": "tex.hm_tw_riordan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERDUNCAN",
         "count": 1,
-        "name": "Страж-Командор Дункан",
         "icon": "tex.hm_dw_wardencommanderduncan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SERJORY",
         "count": 1,
-        "name": "Сэр Джори",
         "icon": "tex.hm_sw_serjory_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SHIANNI",
         "count": 1,
-        "name": "Шианни",
         "icon": "tex.ef_bw_shianni_t1_pt"
        }
       ]
@@ -1767,28 +1610,24 @@
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERDUNCAN",
         "count": 1,
-        "name": "Страж-Командор Дункан",
         "icon": "tex.hm_dw_wardencommanderduncan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SERJORY",
         "count": 1,
-        "name": "Сэр Джори",
         "icon": "tex.hm_sw_serjory_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SHIANNI",
         "count": 1,
-        "name": "Шианни",
         "icon": "tex.ef_bw_shianni_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WYNNE",
         "count": 1,
-        "name": "Винн",
         "icon": "tex.hf_mw_wynne_t1_pt"
        }
       ]
@@ -1803,28 +1642,24 @@
         "kind": "unit",
         "id": "UNIT_SERJORY",
         "count": 1,
-        "name": "Сэр Джори",
         "icon": "tex.hm_sw_serjory_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SHIANNI",
         "count": 1,
-        "name": "Шианни",
         "icon": "tex.ef_bw_shianni_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WYNNE",
         "count": 1,
-        "name": "Винн",
         "icon": "tex.hf_mw_wynne_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -1840,21 +1675,18 @@
         "kind": "unit",
         "id": "UNIT_SHIANNI",
         "count": 1,
-        "name": "Шианни",
         "icon": "tex.ef_bw_shianni_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WYNNE",
         "count": 1,
-        "name": "Винн",
         "icon": "tex.hf_mw_wynne_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -1870,14 +1702,12 @@
         "kind": "unit",
         "id": "UNIT_WYNNE",
         "count": 1,
-        "name": "Винн",
         "icon": "tex.hf_mw_wynne_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -1885,7 +1715,6 @@
         "kind": "unit",
         "id": "UNIT_LELIANA",
         "count": 1,
-        "name": "Лелиана",
         "icon": "tex.hf_bw_leliana_t1_pt"
        }
       ]
@@ -1900,7 +1729,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -1908,14 +1736,12 @@
         "kind": "unit",
         "id": "UNIT_LELIANA",
         "count": 1,
-        "name": "Лелиана",
         "icon": "tex.hf_bw_leliana_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ZEVRAN",
         "count": 1,
-        "name": "Зевран",
         "icon": "tex.em_dw_zevran_t1_pt"
        }
       ]
@@ -1930,7 +1756,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -1938,21 +1763,18 @@
         "kind": "unit",
         "id": "UNIT_LELIANA",
         "count": 1,
-        "name": "Лелиана",
         "icon": "tex.hf_bw_leliana_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ZEVRAN",
         "count": 1,
-        "name": "Зевран",
         "icon": "tex.em_dw_zevran_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -1967,28 +1789,24 @@
         "kind": "unit",
         "id": "UNIT_LELIANA",
         "count": 1,
-        "name": "Лелиана",
         "icon": "tex.hf_bw_leliana_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ZEVRAN",
         "count": 1,
-        "name": "Зевран",
         "icon": "tex.em_dw_zevran_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -2003,28 +1821,24 @@
         "kind": "unit",
         "id": "UNIT_ZEVRAN",
         "count": 1,
-        "name": "Зевран",
         "icon": "tex.em_dw_zevran_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -2081,7 +1895,6 @@
         "kind": "gear",
         "id": "qunari_tower_shield",
         "count": 1,
-        "name": "Кунарийский осадный щит",
         "icon": ""
        }
       ]
@@ -2095,7 +1908,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICBLACKWISP",
         "count": 1,
-        "name": "Мифический черный огонек",
         "icon": "tex.c_wisp_mythic_black_pt"
        }
       ]
@@ -2109,7 +1921,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 1,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -2127,28 +1938,24 @@
         "kind": "unit",
         "id": "UNIT_BATTLEMASTERGARRETTHAWKE",
         "count": 1,
-        "name": "Военачальник Гаретт Хоук",
         "icon": "tex.hm_tw_battlemastergarretthawke_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_KREM",
         "count": 1,
-        "name": "Крэм",
         "icon": "tex.hm_mw_krem_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_HYBRIS",
         "count": 1,
-        "name": "Гибрис",
         "icon": "tex.c_fadebeast_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_BARKSPAWN",
         "count": 1,
-        "name": "Моровой Клык",
         "icon": "tex.c_barkspawn_t1_pt"
        }
       ]
@@ -2163,28 +1970,24 @@
         "kind": "unit",
         "id": "UNIT_KREM",
         "count": 1,
-        "name": "Крэм",
         "icon": "tex.hm_mw_krem_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_HYBRIS",
         "count": 1,
-        "name": "Гибрис",
         "icon": "tex.c_fadebeast_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_BARKSPAWN",
         "count": 1,
-        "name": "Моровой Клык",
         "icon": "tex.c_barkspawn_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEMESSENGER",
         "count": 1,
-        "name": "Посланец",
         "icon": "tex.hm_sw_messenger_t1_pt"
        }
       ]
@@ -2199,28 +2002,24 @@
         "kind": "unit",
         "id": "UNIT_HYBRIS",
         "count": 1,
-        "name": "Гибрис",
         "icon": "tex.c_fadebeast_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_BARKSPAWN",
         "count": 1,
-        "name": "Моровой Клык",
         "icon": "tex.c_barkspawn_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEMESSENGER",
         "count": 1,
-        "name": "Посланец",
         "icon": "tex.hm_sw_messenger_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SHAHWYRD",
         "count": 1,
-        "name": "Ша Вирд",
         "icon": "tex.c_shahwyrd_t1_pt"
        }
       ]
@@ -2235,28 +2034,24 @@
         "kind": "unit",
         "id": "UNIT_BARKSPAWN",
         "count": 1,
-        "name": "Моровой Клык",
         "icon": "tex.c_barkspawn_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEMESSENGER",
         "count": 1,
-        "name": "Посланец",
         "icon": "tex.hm_sw_messenger_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SHAHWYRD",
         "count": 1,
-        "name": "Ша Вирд",
         "icon": "tex.c_shahwyrd_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        }
       ]
@@ -2271,28 +2066,24 @@
         "kind": "unit",
         "id": "UNIT_THEMESSENGER",
         "count": 1,
-        "name": "Посланец",
         "icon": "tex.hm_sw_messenger_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SHAHWYRD",
         "count": 1,
-        "name": "Ша Вирд",
         "icon": "tex.c_shahwyrd_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PALA",
         "count": 1,
-        "name": "Пала",
         "icon": "tex.df_dw_pala_t1_pt"
        }
       ]
@@ -2307,28 +2098,24 @@
         "kind": "unit",
         "id": "UNIT_SHAHWYRD",
         "count": 1,
-        "name": "Ша Вирд",
         "icon": "tex.c_shahwyrd_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PALA",
         "count": 1,
-        "name": "Пала",
         "icon": "tex.df_dw_pala_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -2344,21 +2131,18 @@
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PALA",
         "count": 1,
-        "name": "Пала",
         "icon": "tex.df_dw_pala_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -2374,14 +2158,12 @@
         "kind": "unit",
         "id": "UNIT_PALA",
         "count": 1,
-        "name": "Пала",
         "icon": "tex.df_dw_pala_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -2397,7 +2179,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 4,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -2413,7 +2194,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -2421,7 +2201,6 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -2436,7 +2215,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -2444,14 +2222,12 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -2466,7 +2242,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -2474,21 +2249,18 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -2555,7 +2327,6 @@
         "kind": "gear",
         "id": "asaarash_saddle",
         "count": 1,
-        "name": "Асаарашское седло",
         "icon": ""
        }
       ]
@@ -2569,7 +2340,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICBLACKWISP",
         "count": 1,
-        "name": "Мифический черный огонек",
         "icon": "tex.c_wisp_mythic_black_pt"
        }
       ]
@@ -2583,7 +2353,6 @@
         "kind": "tome",
         "id": "tome",
         "count": 1,
-        "name": "Том вознесения",
         "icon": ""
        }
       ]
@@ -2600,28 +2369,24 @@
         "kind": "unit",
         "id": "UNIT_WILDHART",
         "count": 1,
-        "name": "Дикий олень",
         "icon": "tex.c_wildhart_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNUGTHEBRONTO",
         "count": 1,
-        "name": "Бронто Снаг",
         "icon": "tex.c_snugthebronto_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGKING",
         "count": 1,
-        "name": "Нажий король",
         "icon": "tex.c_nugking_t1_pt"
        }
       ]
@@ -2636,28 +2401,24 @@
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNUGTHEBRONTO",
         "count": 1,
-        "name": "Бронто Снаг",
         "icon": "tex.c_snugthebronto_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGKING",
         "count": 1,
-        "name": "Нажий король",
         "icon": "tex.c_nugking_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTARCHER",
         "count": 1,
-        "name": "Упырь-лучник",
         "icon": "tex.c_legendaryghastarcher_t1_pt"
        }
       ]
@@ -2672,28 +2433,24 @@
         "kind": "unit",
         "id": "UNIT_SNUGTHEBRONTO",
         "count": 1,
-        "name": "Бронто Снаг",
         "icon": "tex.c_snugthebronto_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGKING",
         "count": 1,
-        "name": "Нажий король",
         "icon": "tex.c_nugking_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTARCHER",
         "count": 1,
-        "name": "Упырь-лучник",
         "icon": "tex.c_legendaryghastarcher_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTBRUTE",
         "count": 1,
-        "name": "Упырь-бестия",
         "icon": "tex.c_legendaryghastbrute_t1_pt"
        }
       ]
@@ -2708,28 +2465,24 @@
         "kind": "unit",
         "id": "UNIT_NUGKING",
         "count": 1,
-        "name": "Нажий король",
         "icon": "tex.c_nugking_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTARCHER",
         "count": 1,
-        "name": "Упырь-лучник",
         "icon": "tex.c_legendaryghastarcher_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTBRUTE",
         "count": 1,
-        "name": "Упырь-бестия",
         "icon": "tex.c_legendaryghastbrute_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -2745,21 +2498,18 @@
         "kind": "unit",
         "id": "UNIT_GHASTARCHER",
         "count": 1,
-        "name": "Упырь-лучник",
         "icon": "tex.c_legendaryghastarcher_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTBRUTE",
         "count": 1,
-        "name": "Упырь-бестия",
         "icon": "tex.c_legendaryghastbrute_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -2775,14 +2525,12 @@
         "kind": "unit",
         "id": "UNIT_GHASTBRUTE",
         "count": 1,
-        "name": "Упырь-бестия",
         "icon": "tex.c_legendaryghastbrute_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -2790,7 +2538,6 @@
         "kind": "unit",
         "id": "UNIT_FLUFFY",
         "count": 1,
-        "name": "Пушистик",
         "icon": "tex.c_nugfluffy_t1_pt"
        }
       ]
@@ -2805,7 +2552,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -2813,14 +2559,12 @@
         "kind": "unit",
         "id": "UNIT_FLUFFY",
         "count": 1,
-        "name": "Пушистик",
         "icon": "tex.c_nugfluffy_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SPIKE",
         "count": 1,
-        "name": "Шипастик",
         "icon": "tex.c_nugspike_t1_pt"
        }
       ]
@@ -2835,7 +2579,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -2843,21 +2586,18 @@
         "kind": "unit",
         "id": "UNIT_FLUFFY",
         "count": 1,
-        "name": "Пушистик",
         "icon": "tex.c_nugfluffy_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SPIKE",
         "count": 1,
-        "name": "Шипастик",
         "icon": "tex.c_nugspike_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WINTERSENDHALLA",
         "count": 1,
-        "name": "Галла Венца зимы",
         "icon": "tex.c_hallawintersend_t1_pt"
        }
       ]
@@ -2872,28 +2612,24 @@
         "kind": "unit",
         "id": "UNIT_FLUFFY",
         "count": 1,
-        "name": "Пушистик",
         "icon": "tex.c_nugfluffy_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SPIKE",
         "count": 1,
-        "name": "Шипастик",
         "icon": "tex.c_nugspike_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WINTERSENDHALLA",
         "count": 1,
-        "name": "Галла Венца зимы",
         "icon": "tex.c_hallawintersend_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_EPICREDWISP",
         "count": 1,
-        "name": "Эпический красный огонек",
         "icon": "tex.c_wisp_epic_red_pt"
        }
       ]
@@ -2908,28 +2644,24 @@
         "kind": "unit",
         "id": "UNIT_SPIKE",
         "count": 1,
-        "name": "Шипастик",
         "icon": "tex.c_nugspike_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WINTERSENDHALLA",
         "count": 1,
-        "name": "Галла Венца зимы",
         "icon": "tex.c_hallawintersend_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_EPICREDWISP",
         "count": 1,
-        "name": "Эпический красный огонек",
         "icon": "tex.c_wisp_epic_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -2944,28 +2676,24 @@
         "kind": "unit",
         "id": "UNIT_WINTERSENDHALLA",
         "count": 1,
-        "name": "Галла Венца зимы",
         "icon": "tex.c_hallawintersend_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_EPICREDWISP",
         "count": 1,
-        "name": "Эпический красный огонек",
         "icon": "tex.c_wisp_epic_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -2980,28 +2708,24 @@
         "kind": "unit",
         "id": "UNIT_EPICREDWISP",
         "count": 1,
-        "name": "Эпический красный огонек",
         "icon": "tex.c_wisp_epic_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -3068,7 +2792,6 @@
         "kind": "gear",
         "id": "templar_breastplate",
         "count": 1,
-        "name": "Нагрудник храмовника",
         "icon": ""
        }
       ]
@@ -3082,7 +2805,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICREDWISP",
         "count": 1,
-        "name": "Мифический красный огонек",
         "icon": "tex.c_wisp_mythic_red_pt"
        }
       ]
@@ -3096,7 +2818,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 1,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -3114,28 +2835,24 @@
         "kind": "unit",
         "id": "UNIT_COLE",
         "count": 1,
-        "name": "Коул",
         "icon": "tex.hm_dw_cole_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_JANEKA",
         "count": 1,
-        "name": "Джанека",
         "icon": "tex.hf_mw_janeka_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_IMPERIALARCHON",
         "count": 1,
-        "name": "Архонт Империи",
         "icon": "tex.hm_sw_imperialarchon_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PARAGONCARIDIN",
         "count": 1,
-        "name": "Сов. Каридин",
         "icon": "tex.c_caridin_t1_pt"
        }
       ]
@@ -3150,28 +2867,24 @@
         "kind": "unit",
         "id": "UNIT_JANEKA",
         "count": 1,
-        "name": "Джанека",
         "icon": "tex.hf_mw_janeka_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_IMPERIALARCHON",
         "count": 1,
-        "name": "Архонт Империи",
         "icon": "tex.hm_sw_imperialarchon_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PARAGONCARIDIN",
         "count": 1,
-        "name": "Сов. Каридин",
         "icon": "tex.c_caridin_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_RION",
         "count": 1,
-        "name": "Рион",
         "icon": "tex.hm_mw_rion_t1_pt"
        }
       ]
@@ -3186,28 +2899,24 @@
         "kind": "unit",
         "id": "UNIT_IMPERIALARCHON",
         "count": 1,
-        "name": "Архонт Империи",
         "icon": "tex.hm_sw_imperialarchon_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PARAGONCARIDIN",
         "count": 1,
-        "name": "Сов. Каридин",
         "icon": "tex.c_caridin_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_RION",
         "count": 1,
-        "name": "Рион",
         "icon": "tex.hm_mw_rion_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_BERAHT",
         "count": 1,
-        "name": "Берат",
         "icon": "tex.dm_dw_beraht_t1_pt"
        }
       ]
@@ -3222,28 +2931,24 @@
         "kind": "unit",
         "id": "UNIT_PARAGONCARIDIN",
         "count": 1,
-        "name": "Сов. Каридин",
         "icon": "tex.c_caridin_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_RION",
         "count": 1,
-        "name": "Рион",
         "icon": "tex.hm_mw_rion_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_BERAHT",
         "count": 1,
-        "name": "Берат",
         "icon": "tex.dm_dw_beraht_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GIANT",
         "count": 1,
-        "name": "Гигант",
         "icon": "tex.c_giant_t1_pt"
        }
       ]
@@ -3258,28 +2963,24 @@
         "kind": "unit",
         "id": "UNIT_RION",
         "count": 1,
-        "name": "Рион",
         "icon": "tex.hm_mw_rion_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_BERAHT",
         "count": 1,
-        "name": "Берат",
         "icon": "tex.dm_dw_beraht_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GIANT",
         "count": 1,
-        "name": "Гигант",
         "icon": "tex.c_giant_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ERASTHENES",
         "count": 1,
-        "name": "Эрастенес",
         "icon": "tex.hm_mw_erasthenes_t1_pt"
        }
       ]
@@ -3294,28 +2995,24 @@
         "kind": "unit",
         "id": "UNIT_BERAHT",
         "count": 1,
-        "name": "Берат",
         "icon": "tex.dm_dw_beraht_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GIANT",
         "count": 1,
-        "name": "Гигант",
         "icon": "tex.c_giant_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ERASTHENES",
         "count": 1,
-        "name": "Эрастенес",
         "icon": "tex.hm_mw_erasthenes_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -3331,21 +3028,18 @@
         "kind": "unit",
         "id": "UNIT_GIANT",
         "count": 1,
-        "name": "Гигант",
         "icon": "tex.c_giant_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ERASTHENES",
         "count": 1,
-        "name": "Эрастенес",
         "icon": "tex.hm_mw_erasthenes_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -3361,14 +3055,12 @@
         "kind": "unit",
         "id": "UNIT_ERASTHENES",
         "count": 1,
-        "name": "Эрастенес",
         "icon": "tex.hm_mw_erasthenes_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -3384,7 +3076,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 4,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -3400,7 +3091,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -3408,7 +3098,6 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -3423,7 +3112,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -3431,14 +3119,12 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -3453,7 +3139,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -3461,21 +3146,18 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -3542,7 +3224,6 @@
         "kind": "gear",
         "id": "garahels_helm",
         "count": 1,
-        "name": "Шлем Гараэла",
         "icon": ""
        }
       ]
@@ -3556,7 +3237,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICGIANTWISP",
         "count": 1,
-        "name": "Мифический гигантский огонек",
         "icon": "tex.c_wisp_mythic_large_pt"
        }
       ]
@@ -3570,7 +3250,6 @@
         "kind": "tome",
         "id": "tome",
         "count": 1,
-        "name": "Том вознесения",
         "icon": ""
        }
       ]
@@ -3587,28 +3266,24 @@
         "kind": "unit",
         "id": "UNIT_GARAHEL",
         "count": 1,
-        "name": "Гараэл",
         "icon": "tex.em_bw_garahel_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ISSEYA",
         "count": 1,
-        "name": "Иссея",
         "icon": "tex.ef_mw_isseya_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_AVERNUS",
         "count": 1,
-        "name": "Авернус",
         "icon": "tex.hm_mw_avernus_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_JANEKA",
         "count": 1,
-        "name": "Джанека",
         "icon": "tex.hf_mw_janeka_t1_pt"
        }
       ]
@@ -3623,28 +3298,24 @@
         "kind": "unit",
         "id": "UNIT_ISSEYA",
         "count": 1,
-        "name": "Иссея",
         "icon": "tex.ef_mw_isseya_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_AVERNUS",
         "count": 1,
-        "name": "Авернус",
         "icon": "tex.hm_mw_avernus_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_JANEKA",
         "count": 1,
-        "name": "Джанека",
         "icon": "tex.hf_mw_janeka_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GREYWARDENBANNER",
         "count": 1,
-        "name": "Знамя Серых Стражей",
         "icon": "tex.b_greywardenbanner_t1_pt"
        }
       ]
@@ -3659,28 +3330,24 @@
         "kind": "unit",
         "id": "UNIT_AVERNUS",
         "count": 1,
-        "name": "Авернус",
         "icon": "tex.hm_mw_avernus_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_JANEKA",
         "count": 1,
-        "name": "Джанека",
         "icon": "tex.hf_mw_janeka_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GREYWARDENBANNER",
         "count": 1,
-        "name": "Знамя Серых Стражей",
         "icon": "tex.b_greywardenbanner_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_LARIUS",
         "count": 1,
-        "name": "Ларий",
         "icon": "tex.hm_tw_larius_t1_pt"
        }
       ]
@@ -3695,28 +3362,24 @@
         "kind": "unit",
         "id": "UNIT_JANEKA",
         "count": 1,
-        "name": "Джанека",
         "icon": "tex.hf_mw_janeka_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GREYWARDENBANNER",
         "count": 1,
-        "name": "Знамя Серых Стражей",
         "icon": "tex.b_greywardenbanner_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_LARIUS",
         "count": 1,
-        "name": "Ларий",
         "icon": "tex.hm_tw_larius_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SOPHIADRYDEN",
         "count": 1,
-        "name": "София Драйден",
         "icon": "tex.hf_dw_sophiadryden_t1_pt"
        }
       ]
@@ -3731,28 +3394,24 @@
         "kind": "unit",
         "id": "UNIT_GREYWARDENBANNER",
         "count": 1,
-        "name": "Знамя Серых Стражей",
         "icon": "tex.b_greywardenbanner_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_LARIUS",
         "count": 1,
-        "name": "Ларий",
         "icon": "tex.hm_tw_larius_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SOPHIADRYDEN",
         "count": 1,
-        "name": "София Драйден",
         "icon": "tex.hf_dw_sophiadryden_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NATHANIELHOWE",
         "count": 1,
-        "name": "Натаниель Хоу",
         "icon": "tex.hm_bw_nathanielhowe_t1_pt"
        }
       ]
@@ -3767,28 +3426,24 @@
         "kind": "unit",
         "id": "UNIT_LARIUS",
         "count": 1,
-        "name": "Ларий",
         "icon": "tex.hm_tw_larius_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SOPHIADRYDEN",
         "count": 1,
-        "name": "София Драйден",
         "icon": "tex.hf_dw_sophiadryden_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NATHANIELHOWE",
         "count": 1,
-        "name": "Натаниель Хоу",
         "icon": "tex.hm_bw_nathanielhowe_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -3804,21 +3459,18 @@
         "kind": "unit",
         "id": "UNIT_SOPHIADRYDEN",
         "count": 1,
-        "name": "София Драйден",
         "icon": "tex.hf_dw_sophiadryden_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NATHANIELHOWE",
         "count": 1,
-        "name": "Натаниель Хоу",
         "icon": "tex.hm_bw_nathanielhowe_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -3834,14 +3486,12 @@
         "kind": "unit",
         "id": "UNIT_NATHANIELHOWE",
         "count": 1,
-        "name": "Натаниель Хоу",
         "icon": "tex.hm_bw_nathanielhowe_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -3849,7 +3499,6 @@
         "kind": "unit",
         "id": "UNIT_SIGRUN",
         "count": 1,
-        "name": "Сигрун",
         "icon": "tex.df_dw_sigrun_t1_pt"
        }
       ]
@@ -3864,7 +3513,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -3872,14 +3520,12 @@
         "kind": "unit",
         "id": "UNIT_SIGRUN",
         "count": 1,
-        "name": "Сигрун",
         "icon": "tex.df_dw_sigrun_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_OGHREN",
         "count": 1,
-        "name": "Огрен",
         "icon": "tex.dm_tw_oghren_t1_pt"
        }
       ]
@@ -3894,7 +3540,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -3902,21 +3547,18 @@
         "kind": "unit",
         "id": "UNIT_SIGRUN",
         "count": 1,
-        "name": "Сигрун",
         "icon": "tex.df_dw_sigrun_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_OGHREN",
         "count": 1,
-        "name": "Огрен",
         "icon": "tex.dm_tw_oghren_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -3931,28 +3573,24 @@
         "kind": "unit",
         "id": "UNIT_SIGRUN",
         "count": 1,
-        "name": "Сигрун",
         "icon": "tex.df_dw_sigrun_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_OGHREN",
         "count": 1,
-        "name": "Огрен",
         "icon": "tex.dm_tw_oghren_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -3967,28 +3605,24 @@
         "kind": "unit",
         "id": "UNIT_OGHREN",
         "count": 1,
-        "name": "Огрен",
         "icon": "tex.dm_tw_oghren_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -4055,7 +3689,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICBLUEWISP",
         "count": 1,
-        "name": "Мифический синий огонек",
         "icon": "tex.c_wisp_mythic_blue_pt"
        }
       ]
@@ -4069,7 +3702,6 @@
         "kind": "gear",
         "id": "the_golden_princes_helm",
         "count": 1,
-        "name": "Шлем Золотого принца",
         "icon": ""
        }
       ]
@@ -4083,7 +3715,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICBLUEWISP",
         "count": 1,
-        "name": "Мифический синий огонек",
         "icon": "tex.c_wisp_mythic_blue_pt"
        }
       ]
@@ -4097,7 +3728,6 @@
         "kind": "unit",
         "id": "UNIT_DRAGONOFTHEELDERONE",
         "count": 1,
-        "name": "Дракон Старшего",
         "icon": "tex.c_dragonoftheelderone_t1_pt"
        }
       ]
@@ -4111,7 +3741,6 @@
         "kind": "tome",
         "id": "tome",
         "count": 1,
-        "name": "Том вознесения",
         "icon": ""
        }
       ]
@@ -4128,28 +3757,24 @@
         "kind": "unit",
         "id": "UNIT_THEELDERONE",
         "count": 1,
-        "name": "Старший",
         "icon": "tex.c_theelderone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEHIGHESTONE",
         "count": 1,
-        "name": "Высший",
         "icon": "tex.c_thehighestone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GEREONALEXIUS",
         "count": 1,
-        "name": "Герион Алексиус",
         "icon": "tex.hm_mw_alexius_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_VIVIENNE",
         "count": 1,
-        "name": "Вивьен",
         "icon": "tex.hf_mw_vivienne_t1_pt"
        }
       ]
@@ -4164,28 +3789,24 @@
         "kind": "unit",
         "id": "UNIT_THEHIGHESTONE",
         "count": 1,
-        "name": "Высший",
         "icon": "tex.c_thehighestone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GEREONALEXIUS",
         "count": 1,
-        "name": "Герион Алексиус",
         "icon": "tex.hm_mw_alexius_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_VIVIENNE",
         "count": 1,
-        "name": "Вивьен",
         "icon": "tex.hf_mw_vivienne_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_TRANQUILMADDOX",
         "count": 1,
-        "name": "Усмиренный Маддокс",
         "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
        }
       ]
@@ -4200,28 +3821,24 @@
         "kind": "unit",
         "id": "UNIT_GEREONALEXIUS",
         "count": 1,
-        "name": "Герион Алексиус",
         "icon": "tex.hm_mw_alexius_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_VIVIENNE",
         "count": 1,
-        "name": "Вивьен",
         "icon": "tex.hf_mw_vivienne_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_TRANQUILMADDOX",
         "count": 1,
-        "name": "Усмиренный Маддокс",
         "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEFORMLESSONE",
         "count": 1,
-        "name": "Бесформенный",
         "icon": "tex.c_theformlessone_t1_pt"
        }
       ]
@@ -4236,28 +3853,24 @@
         "kind": "unit",
         "id": "UNIT_VIVIENNE",
         "count": 1,
-        "name": "Вивьен",
         "icon": "tex.hf_mw_vivienne_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_TRANQUILMADDOX",
         "count": 1,
-        "name": "Усмиренный Маддокс",
         "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEFORMLESSONE",
         "count": 1,
-        "name": "Бесформенный",
         "icon": "tex.c_theformlessone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DAILAN",
         "count": 1,
-        "name": "Дэйлан",
         "icon": "tex.dm_dw_dailan_t1_pt"
        }
       ]
@@ -4272,28 +3885,24 @@
         "kind": "unit",
         "id": "UNIT_TRANQUILMADDOX",
         "count": 1,
-        "name": "Усмиренный Маддокс",
         "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEFORMLESSONE",
         "count": 1,
-        "name": "Бесформенный",
         "icon": "tex.c_theformlessone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DAILAN",
         "count": 1,
-        "name": "Дэйлан",
         "icon": "tex.dm_dw_dailan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        }
       ]
@@ -4308,28 +3917,24 @@
         "kind": "unit",
         "id": "UNIT_THEFORMLESSONE",
         "count": 1,
-        "name": "Бесформенный",
         "icon": "tex.c_theformlessone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DAILAN",
         "count": 1,
-        "name": "Дэйлан",
         "icon": "tex.dm_dw_dailan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -4345,21 +3950,18 @@
         "kind": "unit",
         "id": "UNIT_DAILAN",
         "count": 1,
-        "name": "Дэйлан",
         "icon": "tex.dm_dw_dailan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -4375,14 +3977,12 @@
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -4398,7 +3998,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 4,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -4414,7 +4013,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -4422,7 +4020,6 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -4437,7 +4034,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -4445,14 +4041,12 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -4467,7 +4061,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -4475,21 +4068,18 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -4550,7 +4140,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICBLUEWISP",
         "count": 1,
-        "name": "Мифический синий огонек",
         "icon": "tex.c_wisp_mythic_blue_pt"
        }
       ]
@@ -4564,7 +4153,6 @@
         "kind": "gear",
         "id": "the_golden_princes_helm",
         "count": 1,
-        "name": "Шлем Золотого принца",
         "icon": ""
        }
       ]
@@ -4578,7 +4166,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICBLUEWISP",
         "count": 1,
-        "name": "Мифический синий огонек",
         "icon": "tex.c_wisp_mythic_blue_pt"
        }
       ]
@@ -4592,7 +4179,6 @@
         "kind": "unit",
         "id": "UNIT_DRAGONOFTHEELDERONE",
         "count": 1,
-        "name": "Дракон Старшего",
         "icon": "tex.c_dragonoftheelderone_t1_pt"
        }
       ]
@@ -4606,7 +4192,6 @@
         "kind": "tome",
         "id": "tome",
         "count": 1,
-        "name": "Том вознесения",
         "icon": ""
        }
       ]
@@ -4623,28 +4208,24 @@
         "kind": "unit",
         "id": "UNIT_THEELDERONE",
         "count": 1,
-        "name": "Старший",
         "icon": "tex.c_theelderone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEHIGHESTONE",
         "count": 1,
-        "name": "Высший",
         "icon": "tex.c_thehighestone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GEREONALEXIUS",
         "count": 1,
-        "name": "Герион Алексиус",
         "icon": "tex.hm_mw_alexius_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_VIVIENNE",
         "count": 1,
-        "name": "Вивьен",
         "icon": "tex.hf_mw_vivienne_t1_pt"
        }
       ]
@@ -4659,28 +4240,24 @@
         "kind": "unit",
         "id": "UNIT_THEHIGHESTONE",
         "count": 1,
-        "name": "Высший",
         "icon": "tex.c_thehighestone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GEREONALEXIUS",
         "count": 1,
-        "name": "Герион Алексиус",
         "icon": "tex.hm_mw_alexius_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_VIVIENNE",
         "count": 1,
-        "name": "Вивьен",
         "icon": "tex.hf_mw_vivienne_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_TRANQUILMADDOX",
         "count": 1,
-        "name": "Усмиренный Маддокс",
         "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
        }
       ]
@@ -4695,28 +4272,24 @@
         "kind": "unit",
         "id": "UNIT_GEREONALEXIUS",
         "count": 1,
-        "name": "Герион Алексиус",
         "icon": "tex.hm_mw_alexius_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_VIVIENNE",
         "count": 1,
-        "name": "Вивьен",
         "icon": "tex.hf_mw_vivienne_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_TRANQUILMADDOX",
         "count": 1,
-        "name": "Усмиренный Маддокс",
         "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEFORMLESSONE",
         "count": 1,
-        "name": "Бесформенный",
         "icon": "tex.c_theformlessone_t1_pt"
        }
       ]
@@ -4731,28 +4304,24 @@
         "kind": "unit",
         "id": "UNIT_VIVIENNE",
         "count": 1,
-        "name": "Вивьен",
         "icon": "tex.hf_mw_vivienne_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_TRANQUILMADDOX",
         "count": 1,
-        "name": "Усмиренный Маддокс",
         "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEFORMLESSONE",
         "count": 1,
-        "name": "Бесформенный",
         "icon": "tex.c_theformlessone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DAILAN",
         "count": 1,
-        "name": "Дэйлан",
         "icon": "tex.dm_dw_dailan_t1_pt"
        }
       ]
@@ -4767,28 +4336,24 @@
         "kind": "unit",
         "id": "UNIT_TRANQUILMADDOX",
         "count": 1,
-        "name": "Усмиренный Маддокс",
         "icon": "tex.hm_nc_tranquilmaddox_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_THEFORMLESSONE",
         "count": 1,
-        "name": "Бесформенный",
         "icon": "tex.c_theformlessone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DAILAN",
         "count": 1,
-        "name": "Дэйлан",
         "icon": "tex.dm_dw_dailan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        }
       ]
@@ -4803,28 +4368,24 @@
         "kind": "unit",
         "id": "UNIT_THEFORMLESSONE",
         "count": 1,
-        "name": "Бесформенный",
         "icon": "tex.c_theformlessone_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DAILAN",
         "count": 1,
-        "name": "Дэйлан",
         "icon": "tex.dm_dw_dailan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -4840,21 +4401,18 @@
         "kind": "unit",
         "id": "UNIT_DAILAN",
         "count": 1,
-        "name": "Дэйлан",
         "icon": "tex.dm_dw_dailan_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -4870,14 +4428,12 @@
         "kind": "unit",
         "id": "UNIT_PHANTASMALSHADOW",
         "count": 1,
-        "name": "Призрачная тень",
         "icon": "tex.dm_dw_phantasmalshadow_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -4893,7 +4449,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 4,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -4909,7 +4464,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -4917,7 +4471,6 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -4932,7 +4485,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -4940,14 +4492,12 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -4962,7 +4512,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -4970,21 +4519,18 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -5003,7 +4549,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 6,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5019,7 +4564,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 5,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5035,7 +4579,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 4,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5051,7 +4594,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 3,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5067,7 +4609,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 2,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5083,7 +4624,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 1,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5099,7 +4639,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 1,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5115,7 +4654,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 1,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5131,7 +4669,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 3,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -5147,7 +4684,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -5163,7 +4699,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -5233,7 +4768,6 @@
         "kind": "gear",
         "id": "asaarash_saddle",
         "count": 1,
-        "name": "Асаарашское седло",
         "icon": ""
        }
       ]
@@ -5247,7 +4781,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICBLACKWISP",
         "count": 1,
-        "name": "Мифический черный огонек",
         "icon": "tex.c_wisp_mythic_black_pt"
        }
       ]
@@ -5261,7 +4794,6 @@
         "kind": "tome",
         "id": "tome",
         "count": 1,
-        "name": "Том вознесения",
         "icon": ""
        }
       ]
@@ -5278,28 +4810,24 @@
         "kind": "unit",
         "id": "UNIT_WILDHART",
         "count": 1,
-        "name": "Дикий олень",
         "icon": "tex.c_wildhart_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNUGTHEBRONTO",
         "count": 1,
-        "name": "Бронто Снаг",
         "icon": "tex.c_snugthebronto_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGKING",
         "count": 1,
-        "name": "Нажий король",
         "icon": "tex.c_nugking_t1_pt"
        }
       ]
@@ -5314,28 +4842,24 @@
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNUGTHEBRONTO",
         "count": 1,
-        "name": "Бронто Снаг",
         "icon": "tex.c_snugthebronto_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGKING",
         "count": 1,
-        "name": "Нажий король",
         "icon": "tex.c_nugking_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTARCHER",
         "count": 1,
-        "name": "Упырь-лучник",
         "icon": "tex.c_legendaryghastarcher_t1_pt"
        }
       ]
@@ -5350,28 +4874,24 @@
         "kind": "unit",
         "id": "UNIT_SNUGTHEBRONTO",
         "count": 1,
-        "name": "Бронто Снаг",
         "icon": "tex.c_snugthebronto_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGKING",
         "count": 1,
-        "name": "Нажий король",
         "icon": "tex.c_nugking_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTARCHER",
         "count": 1,
-        "name": "Упырь-лучник",
         "icon": "tex.c_legendaryghastarcher_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTBRUTE",
         "count": 1,
-        "name": "Упырь-бестия",
         "icon": "tex.c_legendaryghastbrute_t1_pt"
        }
       ]
@@ -5386,28 +4906,24 @@
         "kind": "unit",
         "id": "UNIT_NUGKING",
         "count": 1,
-        "name": "Нажий король",
         "icon": "tex.c_nugking_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTARCHER",
         "count": 1,
-        "name": "Упырь-лучник",
         "icon": "tex.c_legendaryghastarcher_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTBRUTE",
         "count": 1,
-        "name": "Упырь-бестия",
         "icon": "tex.c_legendaryghastbrute_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -5423,21 +4939,18 @@
         "kind": "unit",
         "id": "UNIT_GHASTARCHER",
         "count": 1,
-        "name": "Упырь-лучник",
         "icon": "tex.c_legendaryghastarcher_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_GHASTBRUTE",
         "count": 1,
-        "name": "Упырь-бестия",
         "icon": "tex.c_legendaryghastbrute_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -5453,14 +4966,12 @@
         "kind": "unit",
         "id": "UNIT_GHASTBRUTE",
         "count": 1,
-        "name": "Упырь-бестия",
         "icon": "tex.c_legendaryghastbrute_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -5468,7 +4979,6 @@
         "kind": "unit",
         "id": "UNIT_FLUFFY",
         "count": 1,
-        "name": "Пушистик",
         "icon": "tex.c_nugfluffy_t1_pt"
        }
       ]
@@ -5483,7 +4993,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -5491,14 +5000,12 @@
         "kind": "unit",
         "id": "UNIT_FLUFFY",
         "count": 1,
-        "name": "Пушистик",
         "icon": "tex.c_nugfluffy_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SPIKE",
         "count": 1,
-        "name": "Шипастик",
         "icon": "tex.c_nugspike_t1_pt"
        }
       ]
@@ -5513,7 +5020,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -5521,21 +5027,18 @@
         "kind": "unit",
         "id": "UNIT_FLUFFY",
         "count": 1,
-        "name": "Пушистик",
         "icon": "tex.c_nugfluffy_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SPIKE",
         "count": 1,
-        "name": "Шипастик",
         "icon": "tex.c_nugspike_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WINTERSENDHALLA",
         "count": 1,
-        "name": "Галла Венца зимы",
         "icon": "tex.c_hallawintersend_t1_pt"
        }
       ]
@@ -5550,28 +5053,24 @@
         "kind": "unit",
         "id": "UNIT_FLUFFY",
         "count": 1,
-        "name": "Пушистик",
         "icon": "tex.c_nugfluffy_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SPIKE",
         "count": 1,
-        "name": "Шипастик",
         "icon": "tex.c_nugspike_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WINTERSENDHALLA",
         "count": 1,
-        "name": "Галла Венца зимы",
         "icon": "tex.c_hallawintersend_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_EPICREDWISP",
         "count": 1,
-        "name": "Эпический красный огонек",
         "icon": "tex.c_wisp_epic_red_pt"
        }
       ]
@@ -5586,28 +5085,24 @@
         "kind": "unit",
         "id": "UNIT_SPIKE",
         "count": 1,
-        "name": "Шипастик",
         "icon": "tex.c_nugspike_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WINTERSENDHALLA",
         "count": 1,
-        "name": "Галла Венца зимы",
         "icon": "tex.c_hallawintersend_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_EPICREDWISP",
         "count": 1,
-        "name": "Эпический красный огонек",
         "icon": "tex.c_wisp_epic_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -5622,28 +5117,24 @@
         "kind": "unit",
         "id": "UNIT_WINTERSENDHALLA",
         "count": 1,
-        "name": "Галла Венца зимы",
         "icon": "tex.c_hallawintersend_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_EPICREDWISP",
         "count": 1,
-        "name": "Эпический красный огонек",
         "icon": "tex.c_wisp_epic_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -5658,28 +5149,24 @@
         "kind": "unit",
         "id": "UNIT_EPICREDWISP",
         "count": 1,
-        "name": "Эпический красный огонек",
         "icon": "tex.c_wisp_epic_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -5698,7 +5185,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 7,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5714,7 +5200,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 6,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5730,7 +5215,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 6,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5746,7 +5230,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 5,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5762,7 +5245,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 5,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5778,7 +5260,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 4,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5794,7 +5275,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 4,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5810,7 +5290,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 3,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5826,7 +5305,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 3,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5842,7 +5320,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 2,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5858,7 +5335,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 1,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -5874,7 +5350,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -5890,7 +5365,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -5906,7 +5380,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -5922,7 +5395,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -5997,7 +5469,6 @@
         "kind": "gear",
         "id": "scout_coat_arms",
         "count": 1,
-        "name": "Рукава для куртки разведчика",
         "icon": ""
        }
       ]
@@ -6011,7 +5482,6 @@
         "kind": "unit",
         "id": "UNIT_MYTHICBLUEWISP",
         "count": 1,
-        "name": "Мифический синий огонек",
         "icon": "tex.c_wisp_mythic_blue_pt"
        }
       ]
@@ -6025,7 +5495,6 @@
         "kind": "tome",
         "id": "tome",
         "count": 1,
-        "name": "Том вознесения",
         "icon": ""
        }
       ]
@@ -6042,28 +5511,24 @@
         "kind": "unit",
         "id": "UNIT_KNIGHT-ENCHANTERVIVIENNE",
         "count": 1,
-        "name": "Рыцарь-чародей Вивьен",
         "icon": "tex.hf_dw_knightenchantervivienne_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_HIVERNAL",
         "count": 1,
-        "name": "Хивернал",
         "icon": "tex.c_hivernal_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ZITHER",
         "count": 1,
-        "name": "ЦИТРА",
         "icon": "tex.hm_bd_zither_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_REDLYRIUMBLACKWALL",
         "count": 1,
-        "name": "Красный Блэкволл",
         "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
        }
       ]
@@ -6078,28 +5543,24 @@
         "kind": "unit",
         "id": "UNIT_HIVERNAL",
         "count": 1,
-        "name": "Хивернал",
         "icon": "tex.c_hivernal_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_ZITHER",
         "count": 1,
-        "name": "ЦИТРА",
         "icon": "tex.hm_bd_zither_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_REDLYRIUMBLACKWALL",
         "count": 1,
-        "name": "Красный Блэкволл",
         "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERCLAREL",
         "count": 1,
-        "name": "Страж-Командор Кларель",
         "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
        }
       ]
@@ -6114,28 +5575,24 @@
         "kind": "unit",
         "id": "UNIT_ZITHER",
         "count": 1,
-        "name": "ЦИТРА",
         "icon": "tex.hm_bd_zither_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_REDLYRIUMBLACKWALL",
         "count": 1,
-        "name": "Красный Блэкволл",
         "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERCLAREL",
         "count": 1,
-        "name": "Страж-Командор Кларель",
         "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGGALOPE",
         "count": 1,
-        "name": "Наголопа",
         "icon": "tex.c_nuggalope_t1_pt"
        }
       ]
@@ -6150,28 +5607,24 @@
         "kind": "unit",
         "id": "UNIT_REDLYRIUMBLACKWALL",
         "count": 1,
-        "name": "Красный Блэкволл",
         "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERCLAREL",
         "count": 1,
-        "name": "Страж-Командор Кларель",
         "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGGALOPE",
         "count": 1,
-        "name": "Наголопа",
         "icon": "tex.c_nuggalope_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_MICHELDECHEVIN",
         "count": 1,
-        "name": "Мишель де Шевен",
         "icon": "tex.hm_sw_micheldechevin_t1_pt"
        }
       ]
@@ -6186,28 +5639,24 @@
         "kind": "unit",
         "id": "UNIT_WARDENCOMMANDERCLAREL",
         "count": 1,
-        "name": "Страж-Командор Кларель",
         "icon": "tex.hf_mw_wardencommanderclarel_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_NUGGALOPE",
         "count": 1,
-        "name": "Наголопа",
         "icon": "tex.c_nuggalope_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_MICHELDECHEVIN",
         "count": 1,
-        "name": "Мишель де Шевен",
         "icon": "tex.hm_sw_micheldechevin_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        }
       ]
@@ -6222,28 +5671,24 @@
         "kind": "unit",
         "id": "UNIT_NUGGALOPE",
         "count": 1,
-        "name": "Наголопа",
         "icon": "tex.c_nuggalope_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_MICHELDECHEVIN",
         "count": 1,
-        "name": "Мишель де Шевен",
         "icon": "tex.hm_sw_micheldechevin_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SERSTROUD",
         "count": 1,
-        "name": "Сэр Страуд",
         "icon": "tex.hm_sw_serstroud_t1_pt"
        }
       ]
@@ -6258,28 +5703,24 @@
         "kind": "unit",
         "id": "UNIT_MICHELDECHEVIN",
         "count": 1,
-        "name": "Мишель де Шевен",
         "icon": "tex.hm_sw_micheldechevin_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SERSTROUD",
         "count": 1,
-        "name": "Сэр Страуд",
         "icon": "tex.hm_sw_serstroud_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DUKEPROSPER",
         "count": 1,
-        "name": "Герцог Проспер",
         "icon": "tex.hm_cb_dukeprosper_t1_pt"
        }
       ]
@@ -6294,28 +5735,24 @@
         "kind": "unit",
         "id": "UNIT_SNOWYWYVERN",
         "count": 1,
-        "name": "Снежный виверн",
         "icon": "tex.c_snowywyvern_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_SERSTROUD",
         "count": 1,
-        "name": "Сэр Страуд",
         "icon": "tex.hm_sw_serstroud_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DUKEPROSPER",
         "count": 1,
-        "name": "Герцог Проспер",
         "icon": "tex.hm_cb_dukeprosper_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -6331,21 +5768,18 @@
         "kind": "unit",
         "id": "UNIT_SERSTROUD",
         "count": 1,
-        "name": "Сэр Страуд",
         "icon": "tex.hm_sw_serstroud_t1_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_DUKEPROSPER",
         "count": 1,
-        "name": "Герцог Проспер",
         "icon": "tex.hm_cb_dukeprosper_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -6361,14 +5795,12 @@
         "kind": "unit",
         "id": "UNIT_DUKEPROSPER",
         "count": 1,
-        "name": "Герцог Проспер",
         "icon": "tex.hm_cb_dukeprosper_t1_pt"
        },
        {
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -6376,7 +5808,6 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        }
       ]
@@ -6391,7 +5822,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -6399,14 +5829,12 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        }
       ]
@@ -6421,7 +5849,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        },
@@ -6429,21 +5856,18 @@
         "kind": "unit",
         "id": "UNIT_UNCOMMONREDWISP",
         "count": 1,
-        "name": "Необычный красный огонек",
         "icon": "tex.c_wisp_uncommon_red_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONBLACKWISP",
         "count": 1,
-        "name": "Необычный черный огонек",
         "icon": "tex.c_wisp_uncommon_black_pt"
        },
        {
         "kind": "unit",
         "id": "UNIT_UNCOMMONWHITEWISP",
         "count": 1,
-        "name": "Необычный белый огонек",
         "icon": "tex.c_wisp_uncommon_white_pt"
        }
       ]
@@ -6462,7 +5886,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 7,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6478,7 +5901,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 6,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6494,7 +5916,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 6,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6510,7 +5931,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 5,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6526,7 +5946,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 5,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6542,7 +5961,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 4,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6558,7 +5976,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 4,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6574,7 +5991,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 3,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6590,7 +6006,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 3,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6606,7 +6021,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 2,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6622,7 +6036,6 @@
         "kind": "voucher",
         "id": "bloodstone",
         "count": 1,
-        "name": "Кровавиковый набор",
         "icon": "cache:tex.Voucher_BloodstonePack",
         "index": 4
        }
@@ -6638,7 +6051,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -6654,7 +6066,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 2,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -6670,7 +6081,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }
@@ -6686,7 +6096,6 @@
         "kind": "voucher",
         "id": "iron",
         "count": 1,
-        "name": "Железный набор",
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
        }

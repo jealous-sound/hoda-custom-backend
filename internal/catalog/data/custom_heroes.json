@@ -5,7 +5,6 @@
    "id": "UNIT_VEILWARDEN",
    "based_on": "UNIT_SOLAS",
    "name": "Veilwarden Ithriel",
-   "name_ru": "Страж Завесы Итриэль",
    "icon": {
     "I": "tex.em_mw_veilwarden_t1_pt",
     "II": "tex.em_mw_veilwarden_t2_pt",
@@ -31,14 +30,7 @@
     "Mages",
     "Elves"
    ],
-   "groups_ru": [
-    "Отступники",
-    "Инквизиция",
-    "Маги",
-    "Эльфы"
-   ],
    "faction_en": "White, Blue",
-   "faction_ru": "белая, синяя",
    "specialties": [
     "ATTACKALL",
     "CURSEPOWER",
@@ -51,7 +43,6 @@
    "ability": {
     "key": "ABILITY_DAMAGE_ALL_CURSEPOWER_AND_CURSEHEALTH",
     "text": "Attacks all enemies and curses them, negating and preventing health and power gain for one turn.",
-    "text_ru": "Атакует всех врагов и накладывает на них проклятие, отнимая приращенные силу и здоровье, а также возможность приращивать их в течение одного хода.",
     "target": "All",
     "mechanics": [
      "ATTACK",
@@ -61,10 +52,8 @@
    },
    "equipped_rune": "aura_plus25healthpowercurseresist_to_spiritsdemonsinquisitionbluefaction_and_healthpower50_on_ally_death",
    "equipped_rune_text": "<color=green>+25% Health, Power and curse resist for Spirits, Demons, Inquisition and blue faction (stacking). Gains 50% Health and Power when allies die.</color>",
-   "equipped_rune_text_ru": "<color=green>+25 % здоровья, силы и сопротивления проклятиям для духов, демонов, Инквизиции и синей фракции (суммируется). Получает по 50 % здоровья и силы при смерти союзников.</color>",
    "target_weight": "",
    "target_weight_text": "",
-   "target_weight_text_ru": "",
    "models": {
     "I": "unit.em_mw_veilwarden_t1_pre",
     "II": "unit.em_mw_veilwarden_t2_pre",
@@ -120,7 +109,8 @@
      "max_fortify_health": 32674
     }
    },
-   "max_tier": "IV"
+   "max_tier": "IV",
+   "name_ru": "Страж Завесы Итриэль"
   }
  ]
 }
