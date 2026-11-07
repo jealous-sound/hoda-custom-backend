@@ -339,14 +339,17 @@
       "https://www.youtube.com/watch?v=cJ9SS0MEwHE (AnthonyJoker HoDA #4, t=366s 'Хозяйка Леса' board, t=780s Results MVP 'Хозяйка Леса III' — verified by frame-grab)",
       "https://www.youtube.com/watch?v=lrnMaqXvEio (AnthonyJoker HoDA #7, t=741s board: pale Lady model + 2 dark werewolves + striped wolf, enemy giant pad empty — verified by frame-grab)",
       "client-additional-data/data_tables/campaign_map_nodes.json (node 5 cta_en 'Defeat the Lady of the Forest.')",
-      "recon/wiki_challenges.wikitext (Map 2 themed pool includes Shadow Werewolf, Sylvan)"
+      "recon/wiki_challenges.wikitext (Map 2 themed pool includes Shadow Werewolf, Sylvan)",
+      "client-additional-data/campaign_research/challenge_node_enemy_squads.csv (Map 2 drop table row 5: 'Epic' 'Lady of the Forest' 0.09% — the campaign-era Lady was the Epic one)",
+      "client-additional-data/data_tables/units.csv (4.4.0 rows 390-393: Epic Lady of the Forest I-IV, Spirit|Mage, SLOW, STUN|ATTACKROW, base 479 hp / 179 power; the Legendary rows 1114-1117 are exactly double)",
+      "client-additional-data/char_pack/c_forestspirit (same face, hair and root-dress texture as c_ladyoftheforest_t1, same c_ladyforest_attackv2 attack clip)"
      ],
      "roster": [
       {
-       "id": "UNIT_LADYOFTHEFOREST",
+       "id": "UNIT_FORESTSPIRIT",
        "tier": "I",
        "level": 15,
-       "why": "boss per Results MVP 'Хозяйка Леса III' + cta; Legendary evidenced despite early map"
+       "why": "boss per Results MVP 'Хозяйка Леса III' + cta; the footage Lady is the Epic one, which 5.4.4 ships as Forest Spirit (Lady's body, Epic, Spirit/Mage, Slow, row attack + stun) after the Lady herself became a 3-star Legendary"
       },
       {
        "id": "UNIT_WEREWOLF",
@@ -368,7 +371,7 @@
       },
       null
      ],
-     "notes": "Boss node with 4 units and NO giant: boards in both episodes (ep4 t=366, ep7 t=741) show exactly Lady + 2 dark werewolves + striped wolf with the enemy giant pad empty, and no giant appears in the battle waves either — the previously composed Sylvan giant contradicted footage and was removed. The old \"'Бой -4' = full 5-unit squad\" inference was wrong: that number is the energy cost (node 4 fought at -2 with 4 enemies). Lady of the Forest is a non-giant Legendary in the catalog, so she sits in a regular cell as squad leader (+1 level over her escort). Cell 3's Shadow Werewolf is the one interpreted cell (model ambiguous with plain Werewolf)."
+     "notes": "Boss node with 4 units and NO giant: boards in both episodes (ep4 t=366, ep7 t=741) show exactly Lady + 2 dark werewolves + striped wolf with the enemy giant pad empty, and no giant appears in the battle waves either — the previously composed Sylvan giant contradicted footage and was removed. The old \"'Бой -4' = full 5-unit squad\" inference was wrong: that number is the energy cost (node 4 fought at -2 with 4 enemies). The boss sits in a regular cell as squad leader (+1 level over her escort). She was UNIT_LADYOFTHEFOREST until 2026-11, but our catalog only has the 5.4.4 3-star Legendary rework (967 base power, curse-all + mark, +50% Creature aura): nearly 8x a map-2 Werewolf, and the node could not be won by any squad a map-2 player owns, even with her at level 1. The campaign-era Lady was Epic (map 2 drop table, 4.4.0 unit rows), and 5.4.4 keeps that Epic Lady as Forest Spirit, on the same body with the same row-stun kit, so she stays the Lady on the board at map-2 strength: the post-tutorial squad (Grey Warden Mage, Grey Warden Warrior, Ashaad, Fereldan Ash Warrior, Bear) wins about half its fights at level 10 and most at 15, between Cursed Ruins and the map-3 boss. Cell 3's Shadow Werewolf is the one interpreted cell (model ambiguous with plain Werewolf)."
     },
     {
      "step": 6,

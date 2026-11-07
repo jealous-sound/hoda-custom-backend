@@ -45,6 +45,7 @@
     {"key":"attack_row_drain60_stun35_mark20","hit":{"stun_pct":35,"drain_pct":60,"mark_pct":20},"effects":{},"effect":{},"followup":{}},
     {"key":"attack_row_drainpower50_gainpower25","hit":{"drain_pct":50},"effects":{"self_power_pct":25},"effect":{},"followup":{}},
     {"key":"attack_row_stun50_heal25","hit":{"stun_pct":50},"effects":{"self_heal_pct":25},"effect":{},"followup":{}},
+    {"key":"attack_row_stun50_heal50_all_followup50_single_slow","hit":{"stun_pct":50},"effects":{"ally_heal_pct":50},"effect":{},"followup_pct":50,"followup_count":1,"followup":{"slow_pct":100,"slow_amt":-50,"target":"one"}},
     {"key":"attack_single_curse75all_mark30","hit":{"mark_pct":30},"effects":{},"effect_pct":75,"effect":{"curse_power_pct":100,"curse_health_pct":100,"target":"all","status_only":true},"followup":{}},
     {"key":"attack_single_levy50_heal25gain25_all","hit":{"levy_pct":50},"effects":{"ally_heal_pct":25,"ally_power_pct":25},"effect":{},"followup":{}},
     {"key":"damage_all_20chance_followup_3xdamage","hit":{},"effects":{},"effect":{},"followup_pct":20,"followup_count":1,"followup":{"damage_pct":300,"target":"all"}},
