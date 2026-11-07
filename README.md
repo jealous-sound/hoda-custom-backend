@@ -89,8 +89,12 @@ these fields keep the server's values:
 - `account`: level, experience, energy, stamina, their maximums and regen timers, gold, gems.
 - `store`: opened counters, legendary pity, vouchers. `nexus`: potions, keys, event unlocks and runs, and the run's
   progress and escrow (the event and difficulty stay the client's until the run is committed).
-- `campaign`: completions and losses. `missions.claimed`.
-- `roster`: heroes the server has not granted are dropped, and a hero keeps its id and `ascended` flag.
+- `campaign`: completions and losses.
+- `missions`: `claimed` and `counters`; `progress` is rewritten from the server's own high-water marks.
+- `roster`: heroes the server has not granted are dropped, a hero the upload leaves out is put back (heroes leave
+  only through `consume`), and every hero keeps the server's tier, level, `xp`, `consume_xp` and `ascended` flag.
+- `pvp`: trophies, best trophies, wins, losses, streaks, trophies won, defense results and timer, the trophy hold
+  timers and the battle history. The client keeps `trophies_seen`, its next-opponent count and its event display.
 - `gear`: tomes, prestige and ascension flags; the inventory may move into hero slots but a gear id may not grow.
 - `runes`: unknown runes are dropped, `inventory_expire_at` and running activations are the server's, and a new
   activation may last at most the rune's duration.
@@ -104,9 +108,11 @@ Everything that grants or spends goes through `POST /v1/players/{id}/actions`:
 | `action` | Fields | |
 | --- | --- | --- |
 | `battle` | `mode: "campaign"`, `map`, `node`, `won`, `crit_gold` | spends the node's energy, pays first win, mastery, challenge or grind rewards from `campaign_maps.json` |
-| `battle` | `mode: "pvp"`, `seed`, `won`, `crit_gold`, `event`, `banners` | spends 1 stamina; the opponent's level comes from the seed and the player's level; event banners are capped per win and milestones paid once |
+| `battle` | `mode: "pvp"`, `seed`, `bot`, `won`, `crit_gold`, `event`, `banners`, `duel` or `revenge_at` | spends 1 stamina; the opponent comes from the seed, the server's trophies and the day (a duel from the member's stored level and trophies, a revenge from a lost defense in the server's history); trophies, streaks and history are updated, then due defenses run; event banners are capped per win and milestones paid once |
 | `battle` | `mode: "nexus"`, `step`, `won`, `crit_gold`, `revive` | spends energy (and a potion to revive), escrows gold, XP, potions and a unit roll |
 | `nexus_award` / `nexus_reset` | | pays the escrow and rolls the units / abandons the run |
+| `consume` | `target`, `seeds` | consumes seed heroes that are in no squad into the target: hero XP, consume XP and tier-ups from `consume_tables.json`; the seeds and their gear are gone |
+| `pvp_defend` | | runs the simulated defenses due since the last check (at most three); the client sends it at startup |
 | `nexus_unlock` | `event` | spends the event's keys |
 | `mission_claim` | `mission` | once per mission; campaign, level and map stats are checked against the server's own state |
 | `pvp_event_claim` | `cycle` | once per finished event, ranked from the banners the server counted |
@@ -114,11 +120,19 @@ Everything that grants or spends goes through `POST /v1/players/{id}/actions`:
 | `rune_prestige`, `rune_craft` | `squad` / `pairs` | prestige slot gems; each pair of identical idle runes becomes one of the next tier |
 | `tutorial_reward` | `reward: "giant" \| "gem_pack" \| "parting_gift"` | once each |
 
-Rune gold and XP bonuses come from the active runes of `current_squad`. Crit gold is credited up to 100 crits. The
-client still reports who won; the deterministic battle simulation is not replayed here yet.
+Rune gold and XP bonuses come from the active runes of `current_squad`, and every battle's XP also goes to each hero
+in that squad, up to the hero's level cap for its tier (five more once ascended). Crit gold is credited up to 100
+crits. The client still reports who won; the deterministic battle simulation is not replayed here yet.
 
-The pack catalog, hero pool, runes, gear, tutorial rewards, campaign, Nexus, PvP rules, missions and new-player
-roster are embedded from `internal/catalog/data`, copied
+Missions are counted on the server. Campaign, level, hero, collection, squad and PvP stats are read from the
+server's own state; the other counters grow only from actions: summons from purchases, gold from everything but
+mission rewards, consumes and combines from `consume`, rune activations from uploads, challenge attempts, crits,
+battle days (UTC) and event banners from battles. A battle also reports its biggest `damage`, a `faction_hit` and,
+in an event, whether the squad was `buffed`; like `won`, these are trusted until battles are replayed. A mission
+is claimable once the server has seen its stat reach the target, even if it later drops.
+
+The pack catalog, hero pool (with factions and per-tier level caps), consume tables, runes, gear, tutorial rewards,
+campaign, Nexus, PvP rules, missions and new-player roster are embedded from `internal/catalog/data`, copied
 from the client's `data/` by `scripts/sync-client-data.sh`; `go test` fails when the copies drift from a client
 checkout next to this one.
 

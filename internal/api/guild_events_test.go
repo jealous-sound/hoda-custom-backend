@@ -32,10 +32,11 @@ type revisioned struct {
 		} `json:"account"`
 	} `json:"profile"`
 	Granted struct {
-		Gold      int64 `json:"gold"`
-		Gems      int64 `json:"gems"`
-		Banners   int   `json:"banners"`
-		EventRank int   `json:"event_rank"`
+		Gold        int64 `json:"gold"`
+		Gems        int64 `json:"gems"`
+		Banners     int   `json:"banners"`
+		EventRank   int   `json:"event_rank"`
+		TrophyDelta int   `json:"trophy_delta"`
 	} `json:"granted"`
 }
 
@@ -234,6 +235,10 @@ func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
 		`{"request_id":"duel-battle-1","action":"battle","mode":"pvp","seed":7,"won":true,"duel":"ally"}`)
 	if want := int64(rewards.WinGoldBase + rewards.WinGoldPerLevel*14); duel.Granted.Gold != want {
 		t.Fatalf("duel gold = %d, want %d", duel.Granted.Gold, want)
+	}
+	trophies := shop.Pvp.Trophies
+	if want := trophies.BaseGain + 120/trophies.PointsPerStep; duel.Granted.TrophyDelta != want {
+		t.Fatalf("duel against 120 trophies gained %d, want %d", duel.Granted.TrophyDelta, want)
 	}
 	response, body = h.do("POST", "/v1/players/local/actions", leader, fmt.Sprint(duel.Revision),
 		`{"request_id":"duel-battle-2","action":"battle","mode":"pvp","seed":7,"won":true,"duel":"ally","event":true}`)

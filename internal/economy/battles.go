@@ -12,34 +12,40 @@ const (
 )
 
 type BattleRequest struct {
-	Mode     string `json:"mode"`
-	Won      bool   `json:"won"`
-	CritGold int    `json:"crit_gold"`
-	Map      int    `json:"map"`
-	Node     int    `json:"node"`
-	Seed     uint32 `json:"seed"`
-	Event    bool   `json:"event"`
-	Banners  int    `json:"banners"`
-	Step     int    `json:"step"`
-	Revive   bool   `json:"revive"`
-	Duel     string `json:"duel"`
+	Mode       string `json:"mode"`
+	Won        bool   `json:"won"`
+	CritGold   int    `json:"crit_gold"`
+	Map        int    `json:"map"`
+	Node       int    `json:"node"`
+	Seed       uint32 `json:"seed"`
+	Event      bool   `json:"event"`
+	Banners    int    `json:"banners"`
+	Step       int    `json:"step"`
+	Revive     bool   `json:"revive"`
+	Duel       string `json:"duel"`
+	Bot        *int   `json:"bot"`
+	RevengeAt  int64  `json:"revenge_at"`
+	Damage     int64  `json:"damage"`
+	FactionHit bool   `json:"faction_hit"`
+	Buffed     bool   `json:"buffed"`
 }
 
 type BattleResult struct {
-	Won       bool    `json:"won"`
-	Gold      int64   `json:"gold"`
-	Gems      int64   `json:"gems"`
-	XP        int64   `json:"xp"`
-	FirstWin  bool    `json:"first_win,omitempty"`
-	Mastered  bool    `json:"mastered,omitempty"`
-	Banners   int     `json:"banners,omitempty"`
-	Escrowed  bool    `json:"escrowed,omitempty"`
-	LevelsUp  int     `json:"levels_up,omitempty"`
-	Granted   Granted `json:"granted"`
-	NodeWins  int64   `json:"node_wins,omitempty"`
-	RunStep   int64   `json:"run_step,omitempty"`
-	EventRank int     `json:"event_rank,omitempty"`
-	Cycle     int64   `json:"event_cycle,omitempty"`
+	Won         bool    `json:"won"`
+	Gold        int64   `json:"gold"`
+	Gems        int64   `json:"gems"`
+	XP          int64   `json:"xp"`
+	FirstWin    bool    `json:"first_win,omitempty"`
+	Mastered    bool    `json:"mastered,omitempty"`
+	Banners     int     `json:"banners,omitempty"`
+	Escrowed    bool    `json:"escrowed,omitempty"`
+	LevelsUp    int     `json:"levels_up,omitempty"`
+	Granted     Granted `json:"granted"`
+	NodeWins    int64   `json:"node_wins,omitempty"`
+	RunStep     int64   `json:"run_step,omitempty"`
+	EventRank   int     `json:"event_rank,omitempty"`
+	Cycle       int64   `json:"event_cycle,omitempty"`
+	TrophyDelta int     `json:"trophy_delta,omitempty"`
 }
 
 func (p *player) Battle(request BattleRequest) (BattleResult, error) {
@@ -59,6 +65,7 @@ func (p *player) Battle(request BattleRequest) (BattleResult, error) {
 	if err != nil {
 		return BattleResult{}, err
 	}
+	p.recordBattleFacts(request)
 	result.Won = request.Won
 	result.LevelsUp = p.account.Level - levelBefore
 	result.Granted = p.granted
@@ -79,7 +86,7 @@ func (p *player) payBattle(result *BattleResult, gold, xp int64, critGold int, w
 	p.addGold(gold)
 	p.addGems(result.Gems)
 	p.account.awardBattleXP(xp)
-	return nil
+	return p.awardSquadXP(xp)
 }
 
 type campaignProgress struct {
@@ -181,6 +188,9 @@ func (p *player) campaignBattle(request BattleRequest) (BattleResult, error) {
 	}
 	if err := p.account.spendEnergy(int64(node.EnergyCost)); err != nil {
 		return BattleResult{}, err
+	}
+	if node.Grind {
+		p.count(statChallenges, 1)
 	}
 	lossIndex := request.Map*catalog.CampaignMaxNodes + request.Node
 	result := BattleResult{}

@@ -1,6 +1,7 @@
 package api
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"net/http"
@@ -11,8 +12,29 @@ import (
 )
 
 type guildDuels struct {
-	server *Server
-	player string
+	server   *Server
+	player   string
+	trophies map[string]int
+}
+
+type duelBody struct {
+	Duel string `json:"duel"`
+}
+
+func (s *Server) duelTrophies(body []byte) map[string]int {
+	var request duelBody
+	if err := json.Unmarshal(body, &request); err != nil || request.Duel == "" {
+		return nil
+	}
+	record, err := s.profiles.Get(request.Duel)
+	if err != nil {
+		return nil
+	}
+	opponent, err := economy.DuelOpponentFrom(request.Duel, record.Profile, s.now())
+	if err != nil {
+		return nil
+	}
+	return map[string]int{request.Duel: opponent.Trophies}
 }
 
 func (s *Server) duelMember(player, member string) (guild.Member, error) {
@@ -37,12 +59,12 @@ func refusalFor(code guild.Code, message string) error {
 	return &guild.Refusal{Code: code, Message: message}
 }
 
-func (d guildDuels) DuelLevel(member string) (int, error) {
+func (d guildDuels) DuelOpponent(member string) (economy.DuelMatch, error) {
 	opponent, err := d.server.duelMember(d.player, member)
 	if err != nil {
-		return 0, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
+		return economy.DuelMatch{}, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
 	}
-	return opponent.Level, nil
+	return economy.DuelMatch{Name: opponent.Name, Level: opponent.Level, Trophies: d.trophies[member]}, nil
 }
 
 func (s *Server) duelOpponent(w http.ResponseWriter, r *http.Request, player string) {

@@ -122,6 +122,12 @@ type Hero struct {
 	Rarity      Rarity
 	Obtainable  bool
 	InitialTier string
+	Name        string
+	Factions    Faction
+	Giant       bool
+	MaxTier     int
+	Tiers       [TierCount]HeroTier
+	Consume     *ConsumeProfile
 }
 
 type Rune struct {
@@ -298,11 +304,17 @@ type rawStore struct {
 }
 
 type rawHeroPool struct {
-	Heroes []struct {
-		ID          string `json:"id"`
-		Rarity      string `json:"rarity"`
-		Obtainable  bool   `json:"obtainable"`
-		InitialTier string `json:"initial_tier"`
+	Version int `json:"version"`
+	Heroes  []struct {
+		ID          string         `json:"id"`
+		Rarity      string         `json:"rarity"`
+		Obtainable  bool           `json:"obtainable"`
+		InitialTier string         `json:"initial_tier"`
+		Name        string         `json:"name"`
+		Faction     string         `json:"faction"`
+		Giant       bool           `json:"giant"`
+		MaxTier     string         `json:"max_tier"`
+		TierLevels  map[string]int `json:"tier_levels"`
 	} `json:"heroes"`
 }
 
@@ -362,11 +374,27 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		heroIndex: map[string]int{},
 		runeIndex: map[string]int{},
 	}
-	for _, hero := range heroes.Heroes {
+	if heroes.Version != supportedHeroPool {
+		return nil, fmt.Errorf("hero_pool.json version %d, want %d", heroes.Version, supportedHeroPool)
+	}
+	for _, raw := range heroes.Heroes {
+		maxTier, known := TierIndex(raw.MaxTier)
+		if _, initialKnown := TierIndex(raw.InitialTier); !known || !initialKnown {
+			return nil, fmt.Errorf("hero %s has tiers %q to %q", raw.ID, raw.InitialTier, raw.MaxTier)
+		}
+		hero := Hero{
+			ID: raw.ID, Rarity: ParseRarity(raw.Rarity), Obtainable: raw.Obtainable, InitialTier: raw.InitialTier,
+			Name: raw.Name, Factions: parseFactions(raw.Faction), Giant: raw.Giant, MaxTier: maxTier,
+		}
+		for name, level := range raw.TierLevels {
+			tier, ok := TierIndex(name)
+			if !ok {
+				return nil, fmt.Errorf("hero %s has no tier %q", raw.ID, name)
+			}
+			hero.Tiers[tier] = HeroTier{Present: true, MaxLevel: level}
+		}
 		c.heroIndex[hero.ID] = len(c.Heroes)
-		c.Heroes = append(c.Heroes, Hero{
-			ID: hero.ID, Rarity: ParseRarity(hero.Rarity), Obtainable: hero.Obtainable, InitialTier: hero.InitialTier,
-		})
+		c.Heroes = append(c.Heroes, hero)
 	}
 	for index, hero := range c.Heroes {
 		if heroInDefaultPool(hero) {
@@ -416,6 +444,9 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		if len(c.rarityPool[rarity]) == 0 {
 			return nil, fmt.Errorf("no obtainable heroes of rarity %d", rarity)
 		}
+	}
+	if err := c.loadConsumeTables(read); err != nil {
+		return nil, err
 	}
 	if err := c.loadRules(read); err != nil {
 		return nil, err
