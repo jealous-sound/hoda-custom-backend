@@ -16,10 +16,11 @@ var serverOwnedSections = map[string][]string{
 		"level", "experience", "experience_min", "experience_max", "energy", "energy_max", "stamina", "stamina_max",
 		energyRegenTimer, staminaRegenTimer, "gold", "gems",
 	},
-	"store":    {"opened_total", "opened_by_pack", "champion_since_legendary", "vouchers"},
-	"nexus":    {"potions", "potion_max", "keys", "events"},
-	"campaign": {"completions", "node_losses"},
-	"missions": {"claimed", "counters"},
+	"store":            {"opened_total", "opened_by_pack", "champion_since_legendary", "vouchers"},
+	"nexus":            {"potions", "potion_max", "keys", "events"},
+	"campaign":         {"completions", "node_losses"},
+	"missions":         {"claimed", "counters"},
+	expeditionsSection: {expeditionsActive},
 }
 
 var serverOwnedHeroFields = []string{"tier", "level", "xp", "consume_xp", "ascended", fortifyField}

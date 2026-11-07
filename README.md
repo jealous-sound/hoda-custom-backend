@@ -127,6 +127,7 @@ these fields keep the server's values:
   progress and escrow (the event and difficulty stay the client's until the run is committed).
 - `campaign`: completions and losses.
 - `missions`: `claimed` and `counters`; `progress` is rewritten from the server's own high-water marks.
+- `expeditions`: the `active` parties, with their heroes and server start and return times.
 - `roster`: heroes the server has not granted are dropped, a hero the upload leaves out is put back (heroes leave
   only through `consume` and `fortify`), and every hero keeps the server's tier, level, `xp`, `consume_xp`,
   `ascended` flag and `fortify` slots (absent when none is filled).
@@ -154,6 +155,9 @@ Everything that grants or spends goes through `POST /v1/players/{id}/actions`:
 | `consume` | `target`, `seeds` | consumes seed heroes that are in no squad into the target: hero XP, consume XP and tier-ups from `consume_tables.json`; the seeds and their gear are gone |
 | `fortify` | `parent`, `slots: [{"index", "unit"}]` | sacrifices heroes that are in no squad into the parent's open fortify slots (the progression's fortify column below its consume level); the same hero combines into a higher tier; the sacrificed heroes and their gear are gone |
 | `remove_fortify` | `parent`, `index` (`-1` for every filled slot) | charges `remove_gem_cost` from `fortify_tables.json` per child and gives each back as a new level 1 hero, in slot order |
+| `expedition_start` | `expedition`, `heroes` | sends a party of the expedition's size from heroes in no squad and on no other expedition, if the player's level opens the expedition and a party slot, it is not already under way and the party meets its requirements; the return time is the server's clock plus the expedition's duration |
+| `expedition_claim` | `expeditions` | for each returned party: rolls gold and gems in the expedition's ranges, gives every member its hero XP, then rolls each drop (gear, a rune or a hero from the default pool by rarity weight); a party that meets the bonus trait is a Great Success, paying `great_success_pct` more and every drop for sure; refuses with `inventory_full` when the roster lacks room for the possible hero drops |
+| `expedition_recall` | `expedition` | brings a party home early with nothing |
 | `pvp_defend` | | runs the simulated defenses due since the last check (at most three); the client sends it at startup |
 | `nexus_unlock` | `event` | spends the event's keys |
 | `mission_claim` | `mission` | once per mission; campaign, level and map stats are checked against the server's own state |
@@ -161,6 +165,11 @@ Everything that grants or spends goes through `POST /v1/players/{id}/actions`:
 | `gear_sell`, `gear_prestige`, `ascend` | `gear` / `instance_id` | sell value, prestige slot gems, a tome |
 | `rune_prestige`, `rune_craft` | `squad` / `pairs` | prestige slot gems; each pair of identical idle runes becomes one of the next tier |
 | `tutorial_reward` | `reward: "giant" \| "gem_pack" \| "parting_gift"` | once each |
+
+A hero on an expedition cannot fight (`battle_start` refuses a squad that holds one), be consumed or consumed into,
+fortify or be fortified, until its party is claimed or recalled. `data/expeditions.json` sets the expeditions, the
+player levels that open each party slot and the Great Success bonus; `hero_pool.json` carries each hero's groups
+for the traits.
 
 Rune gold and XP bonuses come from the active runes of `current_squad`, and every battle's XP also goes to each hero
 that fought, up to the hero's level cap for its tier (five more once ascended). Crit gold is credited up to 100 crits.
@@ -224,7 +233,7 @@ its answer. A `battle` without `battle_id` (clients before this change) is refus
 
 The pack catalog, hero pool (with factions and per-tier level caps), runes, gear, tutorial rewards, campaign, Nexus,
 PvP rules, missions, new-player roster and the battle data (characters, custom heroes, intrinsic passives, ability
-recipes, consume and fortify tables, rosters and game changers) are embedded from `internal/catalog/data`, copied from the client
+recipes, consume and fortify tables, expeditions, rosters and game changers) are embedded from `internal/catalog/data`, copied from the client
 by `scripts/sync-client-data.sh`; `go test` fails when the copies drift from a client checkout next to this one.
 
 ## Guilds
