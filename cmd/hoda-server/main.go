@@ -33,14 +33,15 @@ const (
 )
 
 type options struct {
-	addr         string
-	dataDir      string
-	seedProfile  string
-	seedPlayer   string
-	guestIdle    time.Duration
-	pruneEvery   time.Duration
-	sessionIdle  time.Duration
-	unregistered bool
+	addr            string
+	dataDir         string
+	seedProfile     string
+	seedPlayer      string
+	guestIdle       time.Duration
+	pruneEvery      time.Duration
+	sessionIdle     time.Duration
+	unregistered    bool
+	trustCloudflare bool
 }
 
 func parseOptions() options {
@@ -60,6 +61,9 @@ func parseOptions() options {
 		"unused session tokens expire after this long; 0 keeps them until restart")
 	flag.BoolVar(&o.unregistered, "open-unregistered", false,
 		"let player ids without an account, such as -seed-player, open sessions without a secret")
+	flag.BoolVar(&o.trustCloudflare, "trust-cf-connecting-ip", false,
+		"take the visitor address from CF-Connecting-IP whenever it is present; only behind an edge that refuses "+
+			"that header from anywhere but Cloudflare, as Railway's does")
 	flag.Parse()
 	return o
 }
@@ -140,7 +144,7 @@ func run(o options, log *slog.Logger) error {
 	server := &http.Server{
 		Addr: o.addr,
 		Handler: api.NewServer(accounts, store, sessions, shopCatalog, guilds, reports, time.Now, log, api.Config{
-			OpenUnregistered: o.unregistered, Limits: api.DefaultLimits(),
+			OpenUnregistered: o.unregistered, TrustCloudflareHeader: o.trustCloudflare, Limits: api.DefaultLimits(),
 		}).Handler(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}

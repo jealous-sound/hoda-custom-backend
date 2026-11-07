@@ -22,21 +22,23 @@ import (
 const RevisionHeader = "X-Profile-Revision"
 
 type Server struct {
-	accounts         *account.Store
-	profiles         *profile.Store
-	sessions         *session.Registry
-	catalog          *catalog.Catalog
-	guilds           *guild.Store
-	reports          *report.Log
-	now              func() time.Time
-	log              *slog.Logger
-	openUnregistered bool
-	limiters         limiters
+	accounts              *account.Store
+	profiles              *profile.Store
+	sessions              *session.Registry
+	catalog               *catalog.Catalog
+	guilds                *guild.Store
+	reports               *report.Log
+	now                   func() time.Time
+	log                   *slog.Logger
+	openUnregistered      bool
+	trustCloudflareHeader bool
+	limiters              limiters
 }
 
 type Config struct {
-	OpenUnregistered bool
-	Limits           Limits
+	OpenUnregistered      bool
+	TrustCloudflareHeader bool
+	Limits                Limits
 }
 
 func NewServer(
@@ -46,7 +48,8 @@ func NewServer(
 	return &Server{
 		accounts: accounts, profiles: profiles, sessions: sessions, catalog: shopCatalog, guilds: guilds,
 		reports: reports, now: now, log: log, openUnregistered: config.OpenUnregistered,
-		limiters: newLimiters(config.Limits, now),
+		trustCloudflareHeader: config.TrustCloudflareHeader,
+		limiters:              newLimiters(config.Limits, now),
 	}
 }
 
@@ -89,7 +92,7 @@ func (s *Server) logged(next http.Handler) http.Handler {
 		started := time.Now()
 		next.ServeHTTP(recorder, r)
 		s.log.Info("request", "method", r.Method, "path", r.URL.Path, "status", recorder.status,
-			"duration", time.Since(started), "client", clientAddress(r))
+			"duration", time.Since(started), "client", s.visitor(r))
 	})
 }
 
@@ -118,7 +121,7 @@ type createPlayerResponse struct {
 }
 
 func (s *Server) createPlayer(w http.ResponseWriter, r *http.Request) {
-	if !s.allow(w, s.limiters.accountsByAddress, clientAddress(r)) || !s.allow(w, s.limiters.accountsTotal, "") {
+	if !s.allow(w, s.limiters.accountsByAddress, s.visitor(r)) || !s.allow(w, s.limiters.accountsTotal, "") {
 		return
 	}
 	credentials, err := s.accounts.CreateGuest()
@@ -147,7 +150,7 @@ type sessionResponse struct {
 }
 
 func (s *Server) openSession(w http.ResponseWriter, r *http.Request) {
-	if !s.allow(w, s.limiters.sessionsByAddress, clientAddress(r)) {
+	if !s.allow(w, s.limiters.sessionsByAddress, s.visitor(r)) {
 		return
 	}
 	var request sessionRequest

@@ -66,8 +66,11 @@ Requests are rate-limited (token buckets in `internal/api/limits.go`); a limited
 `Retry-After`. New accounts: 10 per visitor address per hour and 360 per hour in all; sessions: 30 per address
 then one per 10 s; any player route: 60 then 10 per second per player; chat lines: 5 then one per 3 s; abuse
 reports: 5 per hour. The visitor address is the last `X-Forwarded-For` hop (else `X-Real-IP`, else the connection),
-replaced by `CF-Connecting-IP` only when that hop is a Cloudflare address, so the header cannot be spoofed by
-calling the origin directly. The request log records it as `client`.
+replaced by `CF-Connecting-IP` when that hop is a Cloudflare address. On Railway the last hop is Railway's own edge
+node, so the Dockerfile passes `-trust-cf-connecting-ip`, which takes `CF-Connecting-IP` whenever it is present:
+Railway's edge answers `403` to a request that carries that header without coming from Cloudflare, so it cannot be
+spoofed by calling the origin directly. Without the header (a direct call) the edge hop is the key, which lumps such
+callers together. The request log records the address as `client`.
 
 Guests that leave in the first minutes would pile up as empty accounts, so the server deletes a guest and its
 profile once it has gone `-guest-idle` (default `336h`, 14 days; `0` keeps everyone) without opening a session,
