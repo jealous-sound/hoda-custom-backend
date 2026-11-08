@@ -68,6 +68,9 @@ func (p *player) close() (json.RawMessage, error) {
 	if err := p.syncMissions(); err != nil {
 		return nil, err
 	}
+	if err := p.countQuests(); err != nil {
+		return nil, err
+	}
 	encoded, err := p.doc.encode()
 	if err != nil {
 		return nil, err

@@ -21,6 +21,7 @@ var serverOwnedSections = map[string][]string{
 	"campaign":         {"completions", "node_losses"},
 	"missions":         {"claimed", "counters"},
 	expeditionsSection: {expeditionsActive},
+	questsSection:      questSectionFields,
 }
 
 var serverOwnedHeroFields = []string{"tier", "level", "xp", "consume_xp", "ascended", fortifyField}
@@ -66,6 +67,9 @@ func MergeUpload(c *catalog.Catalog, current profile.Record, server *profile.Ser
 		return nil, err
 	}
 	if err := syncMissions(c, next, server, now); err != nil {
+		return nil, err
+	}
+	if err := countQuests(next, now); err != nil {
 		return nil, err
 	}
 	return next.encode()

@@ -377,6 +377,9 @@ func (p *player) ConsumeHeroes(request ConsumeRequest) (BattleResult, error) {
 		return BattleResult{}, err
 	}
 	p.count(consumedMissionStat, int64(len(seeds)))
+	if err := p.countQuests(questCount{catalog.QuestStatConsumed, int64(len(seeds))}); err != nil {
+		return BattleResult{}, err
+	}
 	p.count(combinedMissionStat, combined)
 	return BattleResult{}, nil
 }

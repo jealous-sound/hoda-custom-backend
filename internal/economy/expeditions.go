@@ -141,6 +141,9 @@ func (p *player) StartExpedition(request ExpeditionRequest) (BattleResult, error
 		ID: expedition.ID, Heroes: slices.Clone(request.Heroes), StartedAt: p.now.Unix(),
 		EndsAt: p.now.Add(expedition.Duration).Unix(),
 	})
+	if err := p.countQuests(questCount{catalog.QuestStatExpeditionsSent, 1}); err != nil {
+		return BattleResult{}, err
+	}
 	return BattleResult{}, storeExpeditions(p.doc, active)
 }
 
@@ -273,6 +276,9 @@ func (p *player) ClaimExpeditions(request ExpeditionClaimRequest) (BattleResult,
 		return slices.Contains(request.Expeditions, a.ID)
 	})
 	if err := storeExpeditions(p.doc, remaining); err != nil {
+		return BattleResult{}, err
+	}
+	if err := p.countQuests(questCount{catalog.QuestStatExpeditionsReturned, int64(len(claimed))}); err != nil {
 		return BattleResult{}, err
 	}
 	result.Granted = p.granted

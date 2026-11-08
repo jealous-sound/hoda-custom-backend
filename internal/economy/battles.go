@@ -183,6 +183,9 @@ func (p *player) settlePending() (BattleResult, error) {
 		return BattleResult{}, err
 	}
 	p.recordBattleFacts(outcome)
+	if err := p.recordQuestBattle(pending.Mode, outcome.Won, outcome.Crits, outcome.FactionHit); err != nil {
+		return BattleResult{}, err
+	}
 	result.Won = outcome.Won
 	result.Crits = outcome.Crits
 	result.BattleID = pending.ID

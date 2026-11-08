@@ -128,6 +128,7 @@ these fields keep the server's values:
 - `campaign`: completions and losses.
 - `missions`: `claimed` and `counters`; `progress` is rewritten from the server's own high-water marks.
 - `expeditions`: the `active` parties, with their heroes and server start and return times.
+- `timed_quests`: the whole section (the UTC day and week, their counts, claimed quests, swaps and opened chests).
 - `roster`: heroes the server has not granted are dropped, a hero the upload leaves out is put back (heroes leave
   only through `consume` and `fortify`), and every hero keeps the server's tier, level, `xp`, `consume_xp`,
   `ascended` flag and `fortify` slots (absent when none is filled).
@@ -158,6 +159,9 @@ Everything that grants or spends goes through `POST /v1/players/{id}/actions`:
 | `expedition_start` | `expedition`, `heroes` | sends a party of the expedition's size from heroes in no squad and on no other expedition, if the player's level opens the expedition and a party slot, it is not already under way and the party meets its requirements; the return time is the server's clock plus the expedition's duration |
 | `expedition_claim` | `expeditions` | for each returned party: rolls gold and gems in the expedition's ranges, gives every member its hero XP, then rolls each drop (gear, a rune or a hero from the default pool by rarity weight); a party that meets the bonus trait is a Great Success, paying `great_success_pct` more and every drop for sure; refuses with `inventory_full` when the roster lacks room for the possible hero drops |
 | `expedition_recall` | `expedition` | brings a party home early with nothing |
+| `quest_claim` | `quest` | from player level `unlock_level`: one of today's daily quests (after swaps) or a weekly quest, once, when its count reached the target; pays its gold and gems |
+| `quest_swap` | `slot` | moves an unfinished daily quest to the next one in its slot, `swaps` times a day (`counter_limit` after) |
+| `quest_chest` | `chest` | opens a daily or weekly chest once its period's claimed quests hold its points: gold, gems and drops rolled as expedition drops; `inventory_full` without roster room for its hero drops |
 | `pvp_defend` | | runs the simulated defenses due since the last check (at most three); the client sends it at startup |
 | `nexus_unlock` | `event` | spends the event's keys |
 | `mission_claim` | `mission` | once per mission; campaign, level and map stats are checked against the server's own state |
@@ -180,6 +184,13 @@ mission rewards, consumes and combines from `consume`, rune activations from upl
 battle days (UTC) and event banners from battles. A battle's biggest damage, whether it landed a faction hit and,
 in an event, whether the whole squad was buffed come from the server's replay. A mission is claimable once the
 server has seen its stat reach the target, even if it later drops.
+
+Daily and weekly quests come from `timed_quests.json`. The day's daily quest in each slot is the store xorshift seeded
+with `uint32(day) * 2654435761 + uint32(slot + 1) * 40503`, plus the slot's swaps, the same pick the client makes, so
+nothing about the pick is stored. Counts live in the profile's `timed_quests` section per UTC day and per week (Monday
+00:00 UTC) and grow only from actions: every replayed battle (battles, wins by mode, crits up to 100, faction bonus
+hits), consumes, pack summons, expedition starts and claims, and claimed daily quests. The first battle of a day also
+counts an active day for the week. Every action and upload rolls the section to the current day and week.
 
 ## Battle replay
 
@@ -233,7 +244,7 @@ its answer. A `battle` without `battle_id` (clients before this change) is refus
 
 The pack catalog, hero pool (with factions and per-tier level caps), runes, gear, tutorial rewards, campaign, Nexus,
 PvP rules, missions, new-player roster and the battle data (characters, custom heroes, intrinsic passives, ability
-recipes, consume and fortify tables, expeditions, rosters and game changers) are embedded from `internal/catalog/data`, copied from the client
+recipes, consume and fortify tables, expeditions, timed quests, rosters and game changers) are embedded from `internal/catalog/data`, copied from the client
 by `scripts/sync-client-data.sh`; `go test` fails when the copies drift from a client checkout next to this one.
 
 ## Guilds
