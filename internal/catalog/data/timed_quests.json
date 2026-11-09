@@ -1,0 +1,355 @@
+{
+  "version": 1,
+  "unlock_level": 3,
+  "daily": {
+    "swaps": 1,
+    "slots": [
+      {
+        "id": "campaign",
+        "quests": [
+          {
+            "id": "d_campaign_3",
+            "stat": "campaign_wins",
+            "target": 3,
+            "points": 20,
+            "gold": 600,
+            "gems": 0
+          },
+          {
+            "id": "d_campaign_5",
+            "stat": "campaign_wins",
+            "target": 5,
+            "points": 20,
+            "gold": 900,
+            "gems": 0
+          },
+          {
+            "id": "d_battles_won_6",
+            "stat": "battle_wins",
+            "target": 6,
+            "points": 20,
+            "gold": 1000,
+            "gems": 0
+          }
+        ]
+      },
+      {
+        "id": "pvp",
+        "quests": [
+          {
+            "id": "d_pvp_fight_3",
+            "stat": "pvp_battles",
+            "target": 3,
+            "points": 20,
+            "gold": 0,
+            "gems": 2
+          },
+          {
+            "id": "d_pvp_win_2",
+            "stat": "pvp_wins",
+            "target": 2,
+            "points": 20,
+            "gold": 0,
+            "gems": 3
+          },
+          {
+            "id": "d_pvp_win_3",
+            "stat": "pvp_wins",
+            "target": 3,
+            "points": 20,
+            "gold": 0,
+            "gems": 3
+          }
+        ]
+      },
+      {
+        "id": "combat",
+        "quests": [
+          {
+            "id": "d_crits_15",
+            "stat": "crits",
+            "target": 15,
+            "points": 20,
+            "gold": 600,
+            "gems": 0
+          },
+          {
+            "id": "d_faction_hits_2",
+            "stat": "faction_hits",
+            "target": 2,
+            "points": 20,
+            "gold": 700,
+            "gems": 0
+          },
+          {
+            "id": "d_crits_25",
+            "stat": "crits",
+            "target": 25,
+            "points": 20,
+            "gold": 900,
+            "gems": 0
+          }
+        ]
+      },
+      {
+        "id": "heroes",
+        "quests": [
+          {
+            "id": "d_consume_3",
+            "stat": "consumed",
+            "target": 3,
+            "points": 20,
+            "gold": 0,
+            "gems": 2
+          },
+          {
+            "id": "d_summon_2",
+            "stat": "summoned",
+            "target": 2,
+            "points": 20,
+            "gold": 0,
+            "gems": 2
+          },
+          {
+            "id": "d_consume_5",
+            "stat": "consumed",
+            "target": 5,
+            "points": 20,
+            "gold": 0,
+            "gems": 3
+          }
+        ]
+      },
+      {
+        "id": "expeditions",
+        "quests": [
+          {
+            "id": "d_expedition_send_2",
+            "stat": "expeditions_sent",
+            "target": 2,
+            "points": 20,
+            "gold": 600,
+            "gems": 0
+          },
+          {
+            "id": "d_expedition_return_2",
+            "stat": "expeditions_returned",
+            "target": 2,
+            "points": 20,
+            "gold": 700,
+            "gems": 0
+          },
+          {
+            "id": "d_expedition_send_3",
+            "stat": "expeditions_sent",
+            "target": 3,
+            "points": 20,
+            "gold": 900,
+            "gems": 0
+          }
+        ]
+      }
+    ],
+    "chests": [
+      {
+        "id": "daily_chest_1",
+        "points": 40,
+        "art": "gui/quests/chest_daily_1.png",
+        "fallback": "cache:tex.Store_IconBronzePack",
+        "gold": 1000,
+        "gems": 0,
+        "drops": []
+      },
+      {
+        "id": "daily_chest_2",
+        "points": 80,
+        "art": "gui/quests/chest_daily_2.png",
+        "fallback": "cache:tex.Store_IconSilverPack",
+        "gold": 0,
+        "gems": 5,
+        "drops": [
+          {
+            "kind": "rune",
+            "chance": 100,
+            "min_rarity": 1,
+            "max_rarity": 3
+          }
+        ]
+      },
+      {
+        "id": "daily_chest_3",
+        "points": 100,
+        "art": "gui/quests/chest_daily_3.png",
+        "fallback": "cache:tex.Store_IconGoldPack",
+        "gold": 0,
+        "gems": 5,
+        "drops": [
+          {
+            "kind": "hero",
+            "chance": 100,
+            "weights": {
+              "Common": 30,
+              "Uncommon": 45,
+              "Rare": 20,
+              "Epic": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "weekly": {
+    "quests": [
+      {
+        "id": "w_daily_quests_20",
+        "stat": "daily_quests",
+        "target": 20,
+        "points": 20,
+        "gold": 0,
+        "gems": 15
+      },
+      {
+        "id": "w_active_days_5",
+        "stat": "active_days",
+        "target": 5,
+        "points": 20,
+        "gold": 0,
+        "gems": 10
+      },
+      {
+        "id": "w_campaign_40",
+        "stat": "campaign_wins",
+        "target": 40,
+        "points": 20,
+        "gold": 4000,
+        "gems": 0
+      },
+      {
+        "id": "w_pvp_win_15",
+        "stat": "pvp_wins",
+        "target": 15,
+        "points": 20,
+        "gold": 0,
+        "gems": 10
+      },
+      {
+        "id": "w_expedition_return_7",
+        "stat": "expeditions_returned",
+        "target": 7,
+        "points": 20,
+        "gold": 0,
+        "gems": 10
+      }
+    ],
+    "chests": [
+      {
+        "id": "weekly_chest_1",
+        "points": 60,
+        "art": "gui/quests/chest_weekly_1.png",
+        "fallback": "cache:tex.Store_IconSilverPack",
+        "gold": 3000,
+        "gems": 10,
+        "drops": [
+          {
+            "kind": "gear",
+            "chance": 100,
+            "min_rarity": 2,
+            "max_rarity": 4
+          }
+        ]
+      },
+      {
+        "id": "weekly_chest_2",
+        "points": 100,
+        "art": "gui/quests/chest_weekly_2.png",
+        "fallback": "cache:tex.Store_IconLegendaryPack",
+        "gold": 0,
+        "gems": 15,
+        "drops": [
+          {
+            "kind": "hero",
+            "chance": 100,
+            "weights": {
+              "Epic": 90,
+              "Legendary": 10
+            }
+          },
+          {
+            "kind": "rune",
+            "chance": 100,
+            "min_rarity": 3,
+            "max_rarity": 5
+          }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "battle_wins": {
+      "icon": "cache:tex.ico_achievement_a12",
+      "title_key": "HODA_QUEST_BATTLE_WINS_TITLE",
+      "description_key": "HODA_QUEST_BATTLE_WINS_DESC"
+    },
+    "campaign_wins": {
+      "icon": "cache:tex.ico_achievement_a6",
+      "title_key": "HODA_QUEST_CAMPAIGN_WINS_TITLE",
+      "description_key": "HODA_QUEST_CAMPAIGN_WINS_DESC"
+    },
+    "pvp_battles": {
+      "icon": "cache:tex.ico_achievement_a11",
+      "title_key": "HODA_QUEST_PVP_BATTLES_TITLE",
+      "description_key": "HODA_QUEST_PVP_BATTLES_DESC"
+    },
+    "pvp_wins": {
+      "icon": "cache:tex.ico_achievement_a12",
+      "title_key": "HODA_QUEST_PVP_WINS_TITLE",
+      "description_key": "HODA_QUEST_PVP_WINS_DESC"
+    },
+    "crits": {
+      "icon": "cache:tex.ico_achievement_a48",
+      "art": "gui/quests/quest_crits.png",
+      "title_key": "HODA_QUEST_CRITS_TITLE",
+      "description_key": "HODA_QUEST_CRITS_DESC"
+    },
+    "faction_hits": {
+      "icon": "cache:tex.ico_achievement_a51",
+      "title_key": "HODA_QUEST_FACTION_HITS_TITLE",
+      "description_key": "HODA_QUEST_FACTION_HITS_DESC"
+    },
+    "consumed": {
+      "icon": "cache:tex.ico_achievement_a3",
+      "title_key": "HODA_QUEST_CONSUMED_TITLE",
+      "description_key": "HODA_QUEST_CONSUMED_DESC"
+    },
+    "summoned": {
+      "icon": "cache:tex.ico_achievement_a15",
+      "art": "gui/quests/quest_summon.png",
+      "title_key": "HODA_QUEST_SUMMONED_TITLE",
+      "description_key": "HODA_QUEST_SUMMONED_DESC"
+    },
+    "expeditions_sent": {
+      "icon": "cache:tex.ico_achievement_a7",
+      "art": "gui/quests/quest_expeditions.png",
+      "title_key": "HODA_QUEST_EXPEDITIONS_SENT_TITLE",
+      "description_key": "HODA_QUEST_EXPEDITIONS_SENT_DESC"
+    },
+    "expeditions_returned": {
+      "icon": "cache:tex.ico_achievement_a7",
+      "art": "gui/quests/quest_expeditions.png",
+      "title_key": "HODA_QUEST_EXPEDITIONS_RETURNED_TITLE",
+      "description_key": "HODA_QUEST_EXPEDITIONS_RETURNED_DESC"
+    },
+    "daily_quests": {
+      "icon": "cache:tex.ico_achievement_a2",
+      "art": "gui/quests/quest_daily.png",
+      "title_key": "HODA_QUEST_DAILY_QUESTS_TITLE",
+      "description_key": "HODA_QUEST_DAILY_QUESTS_DESC"
+    },
+    "active_days": {
+      "icon": "cache:tex.ico_achievement_a136",
+      "art": "gui/quests/quest_days.png",
+      "title_key": "HODA_QUEST_ACTIVE_DAYS_TITLE",
+      "description_key": "HODA_QUEST_ACTIVE_DAYS_DESC"
+    }
+  }
+}

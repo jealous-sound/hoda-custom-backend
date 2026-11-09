@@ -33,6 +33,10 @@ const (
 	ActionExpeditionStart  = "expedition_start"
 	ActionExpeditionClaim  = "expedition_claim"
 	ActionExpeditionRecall = "expedition_recall"
+
+	ActionQuestClaim = "quest_claim"
+	ActionQuestSwap  = "quest_swap"
+	ActionQuestChest = "quest_chest"
 )
 
 func decodeInto[T any](body []byte, run func(T) (BattleResult, error)) (BattleResult, error) {
@@ -95,6 +99,12 @@ func (p *player) dispatch(action string, body []byte) (BattleResult, error) {
 		return decodeInto(body, p.ClaimExpeditions)
 	case ActionExpeditionRecall:
 		return decodeInto(body, p.RecallExpedition)
+	case ActionQuestClaim:
+		return decodeInto(body, p.ClaimQuest)
+	case ActionQuestSwap:
+		return decodeInto(body, p.SwapQuest)
+	case ActionQuestChest:
+		return decodeInto(body, p.OpenQuestChest)
 	}
 	return BattleResult{}, &BadRequest{Message: fmt.Sprintf("no action %q", action)}
 }

@@ -359,7 +359,10 @@ func (p *purchase) buyHeroPack(w *wallet, offer catalog.Offer, scripted *catalog
 	if roll.tracksPity {
 		w.sinceLegendary = int64(roll.nextPity)
 	}
-	return addMissionCounter(p.doc, summonedMissionStat, int64(p.pack.HeroCount))
+	if err := addMissionCounter(p.doc, summonedMissionStat, int64(p.pack.HeroCount)); err != nil {
+		return err
+	}
+	return countQuests(p.doc, p.now, questCount{catalog.QuestStatSummoned, int64(p.pack.HeroCount)})
 }
 
 func (p *purchase) buyRunePack(w *wallet, offer catalog.Offer) error {

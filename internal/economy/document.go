@@ -60,6 +60,13 @@ func (d document) optionalInt(name string) (int, error) {
 	return d.intField(name)
 }
 
+func (d document) optionalInt64(name string) (int64, error) {
+	if _, ok := d[name]; !ok {
+		return 0, nil
+	}
+	return d.int64Field(name)
+}
+
 func (d document) setInt(name string, value int64) {
 	d[name] = json.Number(strconv.FormatInt(value, 10))
 }
