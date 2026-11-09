@@ -7,6 +7,7 @@ func testBudget() *statBudget {
 		budget: 3000, healthPerPower: 5, giantBudgetPct: 150,
 		patternPowerCostPct: [patternCount]int{patternOne: 100, patternRow: 200, patternColumn: 200, patternAll: 300},
 		auraCostPct:         50, selfAuraSharePct: 20, auraMatchingAllies: 2, auraCapPct: 100,
+		formationBonusPct: 5, changerCapPct: 25,
 		heroPct: map[string]int{"UNIT_A": 80, "UNIT_C": 150},
 	}
 }
@@ -102,6 +103,33 @@ func TestPotencyCutWeakensStatusChancesAndAllyGrantsOnACopy(t *testing.T) {
 	}
 	if recipe.hit.stunPct != 75 || recipe.steps[0].attack.stunPct != 100 || recipe.steps[0].fx.allyPowerPct != 50 {
 		t.Errorf("the shared recipe changed: %+v", recipe)
+	}
+}
+
+func TestStatBudgetLevelsRunesFormationAndEventBuffs(t *testing.T) {
+	b := testBudget()
+	bonus := runeBonus{
+		powerPct: 100, healthPct: 60, damageShield: 10000, damageResistPct: 75, retaliation: 5,
+		initiativeSteps: 1, stunResistPct: 60, slowResistPct: 50, drainResistPct: 40,
+		cursePowerImmune: true, stealth: true, perceptive: true,
+	}
+	bonus.targetLevel[0] = 6
+	tactical := runeBonus{
+		initiativeSteps: 1, stunResistPct: 60, slowResistPct: 50, drainResistPct: 40,
+		cursePowerImmune: true, stealth: true, perceptive: true,
+	}
+	tactical.targetLevel[0] = 6
+	bonus.dropStatBonuses()
+	if bonus != tactical {
+		t.Errorf("levelled runes = %+v, want %+v", bonus, tactical)
+	}
+	if b.formationBonus() != percent(5) {
+		t.Errorf("formation bonus = %v", b.formationBonus())
+	}
+	for pct, want := range map[int]int{300: 25, 25: 25, 10: 10, -50: -50} {
+		if got := b.cappedChangerPct(pct); got != want {
+			t.Errorf("an event buff of %d%% becomes %d%%, want %d%%", pct, got, want)
+		}
 	}
 }
 

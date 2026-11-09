@@ -115,9 +115,10 @@ before it is added, so results do not depend on the CPU fusing multiply-adds.
    on the replay and the answer is `422 outcome_mismatch`. A battle that is never finished settles at the next
    `battle_start`.
 
-PvP battles replay under the stat budget (`stat_budget.json` and `stat_budget_heroes.json`) when `battle.stat_budget`
-in `pvp_rules.json` is on; it ships off. Turning it on changes the PvP simulation, so it needs a client release that
-carries the same switch and a raised `HOD_MIN_CLIENT_VERSION`.
+PvP battles replay under the stat budget (`stat_budget.json` and `stat_budget_heroes.json`) while `battle.stat_budget`
+in `pvp_rules.json` is on, as it ships. Changing it changes the PvP simulation, so it needs a client release that
+carries the same switch and a raised `HOD_MIN_CLIENT_VERSION`. The economy and API tests run their one- and two-hero
+fixture squads with the rule off, because such a squad cannot win a levelled battle.
 
 The golden tests replay `internal/battle/testdata/battle_replays.json`, recorded by the C simulation. They require the
 same outcome, crits and SHA-256 of the action timeline.

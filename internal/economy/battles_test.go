@@ -1,10 +1,7 @@
 package economy
 
 import (
-	"bytes"
 	"encoding/json"
-	"os"
-	"path/filepath"
 	"testing"
 	"time"
 
@@ -433,26 +430,8 @@ func TestPvpBattleFightsTheOpponentTheServerMatched(t *testing.T) {
 	}
 }
 
-func catalogWithPvpStatBudget(t *testing.T) *catalog.Catalog {
-	t.Helper()
-	c, err := catalog.Load(func(name string) ([]byte, error) {
-		data, err := os.ReadFile(filepath.Join("..", "catalog", "data", name))
-		if name == battle.PvpRulesFile {
-			data = bytes.Replace(data, []byte(`"stat_budget": false`), []byte(`"stat_budget": true`), 1)
-		}
-		return data, err
-	})
-	if err != nil {
-		t.Fatal(err)
-	}
-	if !c.Battle.PvpStatBudget() {
-		t.Fatal("the patched rules leave the stat budget off")
-	}
-	return c
-}
-
 func TestPvpBattlesReplayUnderTheStatBudgetOnlyWhenTheRuleIsOn(t *testing.T) {
-	budgeted := catalogWithPvpStatBudget(t)
+	budgeted := catalogWithPvpStatBudget(t, true)
 	raw := gameProfile(t, nil)
 	server := &profile.ServerState{StoreRNG: 3}
 	request := pvpMatched(t, raw, server, false, 42)
@@ -486,13 +465,80 @@ func TestPvpBattlesReplayUnderTheStatBudgetOnlyWhenTheRuleIsOn(t *testing.T) {
 		t.Error("a campaign battle started under the stat budget")
 	}
 
-	shipped := mustCatalog(t)
+	shipped, err := catalog.Default()
+	if err != nil {
+		t.Fatal(err)
+	}
 	ladder := &profile.ServerState{StoreRNG: 3}
-	if _, _, err := startBattle(t, raw, ladder, pvpMatched(t, raw, ladder, false, 42), 1); err != nil {
+	if _, _, err := ActWith(shipped, raw, ladder, ActionBattleStart,
+		encodeBody(t, pvpMatched(t, raw, ladder, false, 42)), ruleNow, Env{Seeds: fixedSeed(1)}); err != nil {
 		t.Fatal(err)
 	}
 	if ladder.Battle.Replay.StatBudget != shipped.Battle.PvpStatBudget() {
 		t.Error("the shipped rule and the started battle disagree about the stat budget")
+	}
+}
+
+var fullSquadHeroes = []string{
+	"UNIT_ELVENMAGE", "UNIT_ARIQUN", "UNIT_CARTASMUGGLER", "UNIT_TEMPLARARCHER", "UNIT_BEAR",
+}
+
+func fullSquadProfile(t *testing.T) (json.RawMessage, battle.Side) {
+	t.Helper()
+	squad := battle.Side{Runes: []string{}}
+	additions := []any{}
+	for slot, id := range fullSquadHeroes {
+		instance := int64(slot + 1)
+		additions = append(additions, map[string]any{
+			"id": id, "instance_id": instance, "tier": "I", "level": 1, "xp": 0, "ascended": false, "consume_xp": 0,
+		})
+		squad.Units = append(squad.Units, battle.Unit{
+			Slot: slot, InstanceID: instance, ID: id, Tier: "I", Level: 1, Gear: emptyGear(),
+		})
+	}
+	raw := gameProfile(t, func(doc map[string]any) {
+		roster := section(doc, "roster")
+		roster["additions"] = additions
+		roster["next_instance_id"] = len(additions) + 1
+	})
+	return raw, squad
+}
+
+func TestAFullSquadOfLowLevelHeroesWinsALevelledLadderBattleAndIsPaid(t *testing.T) {
+	levelled := catalogWithPvpStatBudget(t, true)
+	raw, squad := fullSquadProfile(t)
+	server := &profile.ServerState{StoreRNG: 3}
+	_, match := matchOpponent(t, raw, server, PvpMatchRequest{}, 42)
+	request := pvpStartFor(t, match)
+	request.Squad = squad
+
+	seed, won := uint32(0), battle.Outcome{}
+	for candidate := uint32(1); candidate < seedSearchLimit && seed == 0; candidate++ {
+		outcome, err := levelled.Battle.Run(battle.Replay{
+			Seed: candidate, Player: squad, Enemy: request.Enemy, StatBudget: true,
+		})
+		if err != nil {
+			t.Fatal(err)
+		}
+		if outcome.Won {
+			seed, won = candidate, outcome
+		}
+	}
+	if seed == 0 {
+		t.Fatal("a full squad never wins a levelled ladder battle")
+	}
+	started, start, err := ActWith(levelled, raw, server, ActionBattleStart, encodeBody(t, request), ruleNow,
+		Env{Seeds: fixedSeed(seed)})
+	if err != nil {
+		t.Fatal(err)
+	}
+	claim := BattleRequest{BattleID: start.BattleID, Won: true, CritGold: battle.CritGoldFor(won.Crits)}
+	_, result, err := ActWith(levelled, started, server, ActionBattle, encodeBody(t, claim), ruleNow, Env{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !result.Won || result.Gold < pvpGold(&levelled.Pvp, match.Level, true) {
+		t.Errorf("result = %+v", result)
 	}
 }
 
