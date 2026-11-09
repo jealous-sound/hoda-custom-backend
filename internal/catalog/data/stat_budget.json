@@ -1,0 +1,16 @@
+{
+ "version": 2,
+ "budget": 32000,
+ "health_per_power": 5,
+ "giant_budget_pct": 150,
+ "pattern_power_cost_pct": {
+  "One": 100,
+  "Row": 160,
+  "Column": 120,
+  "All": 330
+ },
+ "aura_cost_pct": 500,
+ "self_aura_share_pct": 20,
+ "aura_matching_allies": 2,
+ "aura_cap_pct": 50
+}

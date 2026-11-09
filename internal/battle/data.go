@@ -35,6 +35,7 @@ type Data struct {
 	nexusRosters     map[rosterKey]Side
 	nexusChangers    map[string]*Changer
 	pvp              *pvpTables
+	statBudget       *statBudget
 }
 
 func Load(read func(name string) ([]byte, error)) (*Data, error) {
@@ -58,6 +59,8 @@ func Load(read func(name string) ([]byte, error)) (*Data, error) {
 		{NexusRostersFile, func(b []byte) (err error) { d.nexusRosters, err = loadRosters(b); return }},
 		{NexusGameChangersFile, func(b []byte) (err error) { d.nexusChangers, err = loadNexusChangers(b); return }},
 		{PvpRulesFile, func(b []byte) (err error) { d.pvp, err = loadPvpTables(b); return }},
+		{StatBudgetFile, func(b []byte) (err error) { d.statBudget, err = loadStatBudget(b); return }},
+		{StatBudgetHeroesFile, func(b []byte) error { return d.statBudget.loadHeroes(b) }},
 	}
 	for _, step := range steps {
 		data, err := read(step.file)

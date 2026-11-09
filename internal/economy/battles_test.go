@@ -1,11 +1,15 @@
 package economy
 
 import (
+	"bytes"
 	"encoding/json"
+	"os"
+	"path/filepath"
 	"testing"
 	"time"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
+	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
 
@@ -44,11 +48,19 @@ func squadFor(request BattleStartRequest, won bool) BattleStartRequest {
 	return request
 }
 
+func replayOf(t *testing.T, request BattleStartRequest, seed uint32) battle.Replay {
+	t.Helper()
+	return battle.Replay{
+		Seed: seed, Player: request.Squad, Enemy: request.Enemy, Changer: canonicalChanger(request.Changer),
+		StatBudget: request.Mode == BattlePvp && mustCatalog(t).Battle.PvpStatBudget(),
+	}
+}
+
 func seedBeforeFlip(t *testing.T, request BattleStartRequest, wanted bool) uint32 {
 	t.Helper()
 	c := mustCatalog(t)
 	won := func(seed uint32) bool {
-		outcome, err := c.Battle.Run(battle.Replay{Seed: seed, Player: request.Squad, Enemy: request.Enemy})
+		outcome, err := c.Battle.Run(replayOf(t, request, seed))
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -128,9 +140,7 @@ func seedFor(t *testing.T, request BattleStartRequest, won bool) (uint32, battle
 	t.Helper()
 	c := mustCatalog(t)
 	for seed := uint32(1); seed < seedSearchLimit; seed++ {
-		replay := battle.Replay{Seed: seed, Player: request.Squad, Enemy: request.Enemy,
-			Changer: canonicalChanger(request.Changer)}
-		outcome, err := c.Battle.Run(replay)
+		outcome, err := c.Battle.Run(replayOf(t, request, seed))
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -420,6 +430,69 @@ func TestPvpBattleFightsTheOpponentTheServerMatched(t *testing.T) {
 	request.Event = true
 	if _, _, err := startBattle(t, raw, stale, request, 1); refusalCode(err) != OpponentChanged {
 		t.Errorf("a ladder match fought as an event battle: %v", err)
+	}
+}
+
+func catalogWithPvpStatBudget(t *testing.T) *catalog.Catalog {
+	t.Helper()
+	c, err := catalog.Load(func(name string) ([]byte, error) {
+		data, err := os.ReadFile(filepath.Join("..", "catalog", "data", name))
+		if name == battle.PvpRulesFile {
+			data = bytes.Replace(data, []byte(`"stat_budget": false`), []byte(`"stat_budget": true`), 1)
+		}
+		return data, err
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !c.Battle.PvpStatBudget() {
+		t.Fatal("the patched rules leave the stat budget off")
+	}
+	return c
+}
+
+func TestPvpBattlesReplayUnderTheStatBudgetOnlyWhenTheRuleIsOn(t *testing.T) {
+	budgeted := catalogWithPvpStatBudget(t)
+	raw := gameProfile(t, nil)
+	server := &profile.ServerState{StoreRNG: 3}
+	request := pvpMatched(t, raw, server, false, 42)
+	if _, _, err := ActWith(budgeted, raw, server, ActionBattleStart, encodeBody(t, request), ruleNow,
+		Env{Seeds: fixedSeed(1)}); err != nil {
+		t.Fatal(err)
+	}
+	if !server.Battle.Replay.StatBudget {
+		t.Error("a PvP battle started without the stat budget")
+	}
+	levelled, err := budgeted.Battle.Run(server.Battle.Replay)
+	if err != nil {
+		t.Fatal(err)
+	}
+	plain := server.Battle.Replay
+	plain.StatBudget = false
+	unlevelled, err := budgeted.Battle.Run(plain)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if levelled.Timeline == unlevelled.Timeline {
+		t.Error("the stat budget did not change the battle")
+	}
+
+	campaign := &profile.ServerState{}
+	if _, _, err := ActWith(budgeted, raw, campaign, ActionBattleStart, encodeBody(t, campaignStart(t, 0, 0)),
+		ruleNow, Env{Seeds: fixedSeed(1)}); err != nil {
+		t.Fatal(err)
+	}
+	if campaign.Battle.Replay.StatBudget {
+		t.Error("a campaign battle started under the stat budget")
+	}
+
+	shipped := mustCatalog(t)
+	ladder := &profile.ServerState{StoreRNG: 3}
+	if _, _, err := startBattle(t, raw, ladder, pvpMatched(t, raw, ladder, false, 42), 1); err != nil {
+		t.Fatal(err)
+	}
+	if ladder.Battle.Replay.StatBudget != shipped.Battle.PvpStatBudget() {
+		t.Error("the shipped rule and the started battle disagree about the stat budget")
 	}
 }
 

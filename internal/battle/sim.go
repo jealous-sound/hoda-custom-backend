@@ -111,6 +111,7 @@ type gearState struct {
 
 type unit struct {
 	hero                     *hero
+	recipe                   *abilityRecipe
 	gear                     gearState
 	present, alive           bool
 	side, slot               int
@@ -141,6 +142,7 @@ type sim struct {
 	gearPendingDeaths uint32
 	gearLastDamage    int
 	overflow          bool
+	budget            *statBudget
 }
 
 func (s *sim) rand() uint32 {
@@ -193,8 +195,13 @@ func (s *sim) initUnit(side, slot int, h *hero) {
 	u.present, u.alive = true, true
 	u.side, u.slot = side, slot
 	u.power = h.statPower()
-	u.startPower = u.power
 	u.maxHealth = h.statHealth()
+	u.recipe = h.recipe
+	if s.budget != nil {
+		u.power, u.maxHealth = s.budget.apply(h, u.power, u.maxHealth)
+		u.recipe = h.recipe.withPotencyCut(s.budget.potencyCutPct(h))
+	}
+	u.startPower = u.power
 	u.critPct = float32(max(h.critChance, baseCritChance))
 	switch h.def.speed {
 	case speedQuick:
@@ -455,6 +462,10 @@ func (s *sim) battleStartPassives() {
 		u := &s.units[i]
 		if !u.present {
 			continue
+		}
+		if s.budget != nil {
+			healthPct[i] = s.budget.cappedAuraPct(healthPct[i])
+			powerPct[i] = s.budget.cappedAuraPct(powerPct[i])
 		}
 		if healthPct[i] != 0 {
 			u.maxHealth = max(lround(mul(float32(u.maxHealth), 1+healthPct[i]/100)), 1)
@@ -1519,7 +1530,7 @@ func (s *sim) takeTurn(actorIdx int) {
 		s.expireAilments(actorIdx, true)
 		return
 	}
-	r := u.hero.recipe
+	r := u.recipe
 	noAttack := u.hero.def.ability.mechanics&mechanicAttackNone != 0 || u.hero.def.hasSpecialty(specAttackNone)
 	if r.generated {
 		s.generatedTurn(actorIdx, r, noAttack)

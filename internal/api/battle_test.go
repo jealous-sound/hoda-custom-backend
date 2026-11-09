@@ -85,6 +85,7 @@ func (h *harness) winningSeed(request economy.BattleStartRequest) (uint32, battl
 		}
 		outcome, err := h.catalog().Battle.Run(battle.Replay{
 			Seed: seed, Player: request.Squad, Enemy: request.Enemy, Changer: changer,
+			StatBudget: request.Mode == economy.BattlePvp && h.catalog().Battle.PvpStatBudget(),
 		})
 		if err != nil {
 			h.t.Fatal(err)

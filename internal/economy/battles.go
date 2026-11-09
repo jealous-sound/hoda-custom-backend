@@ -98,7 +98,10 @@ func (p *player) StartBattle(request BattleStartRequest) (BattleResult, error) {
 	if err := p.checkEnemy(request, start.enemy, start.changer); err != nil {
 		return BattleResult{}, err
 	}
-	replay := battle.Replay{Player: squad, Enemy: start.enemy, Changer: canonicalChanger(start.changer)}
+	replay := battle.Replay{
+		Player: squad, Enemy: start.enemy, Changer: canonicalChanger(start.changer),
+		StatBudget: request.Mode == BattlePvp && p.catalog.Battle.PvpStatBudget(),
+	}
 	if _, err := p.catalog.Battle.Run(replay); err != nil {
 		return BattleResult{}, refuse(Unavailable, "%v", err)
 	}
