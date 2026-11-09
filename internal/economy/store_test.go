@@ -3,9 +3,14 @@ package economy
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
+	"os"
+	"path/filepath"
+	"regexp"
 	"testing"
 	"time"
 
+	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
@@ -65,13 +70,36 @@ func (f fixture) profile(t *testing.T) json.RawMessage {
 	return raw
 }
 
-func mustCatalog(t *testing.T) *catalog.Catalog {
+var (
+	pvpStatBudgetRule = regexp.MustCompile(`"stat_budget": (true|false)`)
+	catalogsByPvpRule = map[bool]*catalog.Catalog{}
+)
+
+func catalogWithPvpStatBudget(t *testing.T, on bool) *catalog.Catalog {
 	t.Helper()
-	c, err := catalog.Default()
+	if c, ok := catalogsByPvpRule[on]; ok {
+		return c
+	}
+	c, err := catalog.Load(func(name string) ([]byte, error) {
+		data, err := os.ReadFile(filepath.Join("..", "catalog", "data", name))
+		if name == battle.PvpRulesFile {
+			data = pvpStatBudgetRule.ReplaceAll(data, fmt.Appendf(nil, `"stat_budget": %v`, on))
+		}
+		return data, err
+	})
 	if err != nil {
 		t.Fatal(err)
 	}
+	if c.Battle.PvpStatBudget() != on {
+		t.Fatalf("the patched rules leave the stat budget on=%v", !on)
+	}
+	catalogsByPvpRule[on] = c
 	return c
+}
+
+func mustCatalog(t *testing.T) *catalog.Catalog {
+	t.Helper()
+	return catalogWithPvpStatBudget(t, false)
 }
 
 type decoded struct {

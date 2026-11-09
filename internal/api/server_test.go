@@ -11,7 +11,6 @@ import (
 	"time"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/account"
-	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/report"
@@ -48,10 +47,7 @@ func newHarnessWith(t *testing.T, config Config) *harness {
 	if err != nil {
 		t.Fatal(err)
 	}
-	shopCatalog, err := catalog.Default()
-	if err != nil {
-		t.Fatal(err)
-	}
+	shopCatalog := unlevelledCatalog(t)
 	guilds, err := guild.NewStore(dir)
 	if err != nil {
 		t.Fatal(err)

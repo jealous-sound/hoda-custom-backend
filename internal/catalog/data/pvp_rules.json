@@ -44,7 +44,7 @@
   "loss_share_pct": 50
  },
  "battle": {
-  "stat_budget": false
+  "stat_budget": true
  },
  "events": {
   "duration_seconds": 259200,

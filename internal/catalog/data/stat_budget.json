@@ -1,5 +1,5 @@
 {
- "version": 2,
+ "version": 3,
  "budget": 32000,
  "health_per_power": 5,
  "giant_budget_pct": 150,
@@ -12,5 +12,7 @@
  "aura_cost_pct": 500,
  "self_aura_share_pct": 20,
  "aura_matching_allies": 2,
- "aura_cap_pct": 50
+ "aura_cap_pct": 50,
+ "formation_bonus_pct_per_hero": 5,
+ "changer_cap_pct": 25
 }

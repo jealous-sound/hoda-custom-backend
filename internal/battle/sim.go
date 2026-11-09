@@ -236,7 +236,11 @@ func (s *sim) formationBonus(side int) {
 		if mask == 0 {
 			return
 		}
-		bonus += formationRarityBonus(u.hero.rarity)
+		if s.budget != nil {
+			bonus += s.budget.formationBonus()
+		} else {
+			bonus += formationRarityBonus(u.hero.rarity)
+		}
 		count++
 	}
 	if count < 4 || mask == 0 {
@@ -1648,9 +1652,13 @@ func (s *sim) applyChanger(changer *Changer) {
 			if !changerEffectMatches(effect, u) {
 				continue
 			}
-			u.power = lround(mul(float32(u.power), 1+percent(effect.PowerPct)))
+			powerPct, healthPct := effect.PowerPct, effect.HealthPct
+			if s.budget != nil {
+				powerPct, healthPct = s.budget.cappedChangerPct(powerPct), s.budget.cappedChangerPct(healthPct)
+			}
+			u.power = lround(mul(float32(u.power), 1+percent(powerPct)))
 			u.startPower = u.power
-			u.maxHealth = lround(mul(float32(u.maxHealth), 1+percent(effect.HealthPct)))
+			u.maxHealth = lround(mul(float32(u.maxHealth), 1+percent(healthPct)))
 			u.health = u.maxHealth
 			u.gameChangerApplied = true
 		}
@@ -1667,6 +1675,10 @@ func (s *sim) setup(player, enemy *side, changer *Changer) {
 	s.formationBonus(1)
 	s.runeBonus[0] = runesBonus(player.runes)
 	s.runeBonus[1] = runesBonus(enemy.runes)
+	if s.budget != nil {
+		s.runeBonus[0].dropStatBonuses()
+		s.runeBonus[1].dropStatBonuses()
+	}
 	s.applyRuneBonus(0, &s.runeBonus[0])
 	s.applyRuneBonus(1, &s.runeBonus[1])
 	s.applyChanger(changer)

@@ -9,7 +9,7 @@ const (
 	StatBudgetFile       = "stat_budget.json"
 	StatBudgetHeroesFile = "stat_budget_heroes.json"
 
-	statBudgetVersion       = 2
+	statBudgetVersion       = 3
 	statBudgetHeroesVersion = 1
 	neutralHeroPct          = 100
 	minHeroPct              = 33
@@ -31,6 +31,8 @@ type statBudget struct {
 	selfAuraSharePct    int
 	auraMatchingAllies  int
 	auraCapPct          int
+	formationBonusPct   int
+	changerCapPct       int
 	heroPct             map[string]int
 }
 
@@ -52,6 +54,8 @@ func loadStatBudget(data []byte) (*statBudget, error) {
 		SelfAuraSharePct    int            `json:"self_aura_share_pct"`
 		AuraMatchingAllies  int            `json:"aura_matching_allies"`
 		AuraCapPct          int            `json:"aura_cap_pct"`
+		FormationBonusPct   int            `json:"formation_bonus_pct_per_hero"`
+		ChangerCapPct       int            `json:"changer_cap_pct"`
 	}
 	if err := json.Unmarshal(data, &raw); err != nil {
 		return nil, fmt.Errorf("stat budget: %w", err)
@@ -62,10 +66,12 @@ func loadStatBudget(data []byte) (*statBudget, error) {
 	b := &statBudget{
 		budget: raw.Budget, healthPerPower: raw.HealthPerPower, giantBudgetPct: raw.GiantBudgetPct,
 		auraCostPct: raw.AuraCostPct, selfAuraSharePct: raw.SelfAuraSharePct,
-		auraMatchingAllies: raw.AuraMatchingAllies, auraCapPct: raw.AuraCapPct, heroPct: map[string]int{},
+		auraMatchingAllies: raw.AuraMatchingAllies, auraCapPct: raw.AuraCapPct,
+		formationBonusPct: raw.FormationBonusPct, changerCapPct: raw.ChangerCapPct, heroPct: map[string]int{},
 	}
 	valid := b.budget > 0 && b.healthPerPower > 0 && b.giantBudgetPct > 0 && b.auraCostPct >= 0 &&
-		b.selfAuraSharePct >= 0 && b.auraMatchingAllies >= 0 && b.auraCapPct > 0
+		b.selfAuraSharePct >= 0 && b.auraMatchingAllies >= 0 && b.auraCapPct > 0 &&
+		b.formationBonusPct >= 0 && b.changerCapPct >= 0
 	for pattern, name := range statBudgetPatternNames {
 		b.patternPowerCostPct[pattern] = raw.PatternPowerCostPct[name]
 		valid = valid && b.patternPowerCostPct[pattern] > 0
@@ -176,6 +182,19 @@ func (b *statBudget) cappedAuraPct(auraPct float32) float32 {
 		return limit
 	}
 	return auraPct
+}
+
+func (b *statBudget) formationBonus() float32 {
+	return percent(b.formationBonusPct)
+}
+
+func (b *statBudget) cappedChangerPct(changerPct int) int {
+	return min(changerPct, b.changerCapPct)
+}
+
+func (bonus *runeBonus) dropStatBonuses() {
+	bonus.powerPct, bonus.healthPct = 0, 0
+	bonus.damageShield, bonus.damageResistPct, bonus.retaliation = 0, 0, 0
 }
 
 func cutPct(pct, cut int) int {

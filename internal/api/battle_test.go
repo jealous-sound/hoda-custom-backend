@@ -4,6 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
+	"path/filepath"
+	"regexp"
 	"testing"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
@@ -67,13 +70,36 @@ func (h *harness) eventBattle(player, token string, revision int64, id string) r
 	return h.battle(player, token, revision, id, request)
 }
 
+var (
+	pvpStatBudgetRule = regexp.MustCompile(`"stat_budget": (true|false)`)
+	unlevelled        *catalog.Catalog
+)
+
+func unlevelledCatalog(t *testing.T) *catalog.Catalog {
+	t.Helper()
+	if unlevelled != nil {
+		return unlevelled
+	}
+	c, err := catalog.Load(func(name string) ([]byte, error) {
+		data, err := os.ReadFile(filepath.Join("..", "catalog", "data", name))
+		if name == battle.PvpRulesFile {
+			data = pvpStatBudgetRule.ReplaceAll(data, []byte(`"stat_budget": false`))
+		}
+		return data, err
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if c.Battle.PvpStatBudget() {
+		t.Fatal("the patched rules leave the stat budget on")
+	}
+	unlevelled = c
+	return c
+}
+
 func (h *harness) catalog() *catalog.Catalog {
 	h.t.Helper()
-	c, err := catalog.Default()
-	if err != nil {
-		h.t.Fatal(err)
-	}
-	return c
+	return unlevelledCatalog(h.t)
 }
 
 func (h *harness) winningSeed(request economy.BattleStartRequest) (uint32, battle.Outcome) {
