@@ -37,10 +37,11 @@ type Changer struct {
 }
 
 type Replay struct {
-	Seed    uint32   `json:"seed"`
-	Player  Side     `json:"player"`
-	Enemy   Side     `json:"enemy"`
-	Changer *Changer `json:"changer"`
+	Seed       uint32   `json:"seed"`
+	Player     Side     `json:"player"`
+	Enemy      Side     `json:"enemy"`
+	Changer    *Changer `json:"changer"`
+	StatBudget bool     `json:"stat_budget,omitempty"`
 }
 
 type Outcome struct {
@@ -176,6 +177,9 @@ func (d *Data) Run(r Replay) (Outcome, error) {
 		return Outcome{}, fmt.Errorf("enemy side: %w", err)
 	}
 	s := &sim{actions: make([]Action, 0, 256)}
+	if r.StatBudget {
+		s.budget = d.statBudget
+	}
 	if err := s.run(player, enemy, r.Changer, r.Seed); err != nil {
 		return Outcome{}, err
 	}

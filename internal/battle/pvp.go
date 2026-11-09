@@ -55,6 +55,7 @@ type pvpTables struct {
 	maxRuneRarity                                        int
 	eventDuration, eventBannerWindow, topBotBanners      int64
 	guildEveryCycles                                     int64
+	statBudget                                           bool
 	bots                                                 []int
 	squads                                               []pvpSquad
 	eventChangers, guildChangers                         []*Changer
@@ -93,6 +94,9 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 			Catalog                 []rawEvent `json:"catalog"`
 			GuildCatalog            []rawEvent `json:"guild_catalog"`
 		} `json:"events"`
+		Battle struct {
+			StatBudget bool `json:"stat_budget"`
+		} `json:"battle"`
 		Bots []struct {
 			Trophies int `json:"trophies"`
 		} `json:"bots"`
@@ -114,6 +118,7 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 		levelsPerRarity: root.Runes.LevelsPerRarity, maxRuneRarity: root.Runes.MaxRarity,
 		eventDuration: root.Events.DurationSeconds, eventBannerWindow: root.Events.MatchmakingBannerWindow,
 		topBotBanners: root.Events.TopBotBanners, guildEveryCycles: root.Events.GuildEveryCycles,
+		statBudget: root.Battle.StatBudget,
 	}
 	if len(root.Bots) == 0 || len(root.Bots) > maxPvpBots || len(root.SquadPool) == 0 ||
 		len(root.SquadPool) > maxPvpSquads || len(root.Events.Catalog) == 0 ||
@@ -249,6 +254,8 @@ func (d *Data) pvpRunes(level int, seed uint32) []string {
 	}
 	return runes
 }
+
+func (d *Data) PvpStatBudget() bool { return d.pvp.statBudget }
 
 func (d *Data) PvpBotCount() int   { return len(d.pvp.bots) }
 func (d *Data) PvpSquadCount() int { return len(d.pvp.squads) }
