@@ -4,8 +4,6 @@ A Go server, standard library only, for the native client in `../hoda-custom-cli
 be able to edit locally: the profile, the economy, the clock, and battle outcomes, which it decides by replaying the
 client's simulation. Production runs on Railway at `https://api.hodareborn.com`.
 
-`hoda-original-backend` is a separate project: it serves the original Android 4.4.0 client.
-
 ## Run
 
 With both repositories side by side:
