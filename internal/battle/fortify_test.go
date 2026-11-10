@@ -36,10 +36,10 @@ func TestFortifyBonusMatchesTheClientFormula(t *testing.T) {
 			fortifyBonus{power: false, rarity: 68, faction: 0, tier: 7},
 		},
 		{
-			"ascended same-faction child rounds the faction share half to even",
-			Unit{Slot: 0, ID: "UNIT_ELVENMAGE", Tier: "II", Level: 1},
-			FortifyChild{Slot: 1, ID: "UNIT_ELVENMAGE", Tier: "IV", Ascended: true},
-			fortifyBonus{power: true, rarity: 150, faction: 24, tier: 46},
+			"same-faction child rounds the faction share half to even",
+			Unit{Slot: 0, ID: "UNIT_ELVENMAGE", Tier: "III", Level: 1},
+			FortifyChild{Slot: 1, ID: "UNIT_ELVENMAGE", Tier: "II"},
+			fortifyBonus{power: true, rarity: 18, faction: 2, tier: 2},
 		},
 		{
 			"tier I child adds no tier bonus",
@@ -58,6 +58,17 @@ func TestFortifyBonusMatchesTheClientFormula(t *testing.T) {
 		if got := bonusFor(t, c.parent, c.child); got != c.want {
 			t.Errorf("%s: bonus = %+v, want %+v", c.name, got, c.want)
 		}
+	}
+}
+
+func TestAnAscendedFortifyChildCountsAtItsOwnRarity(t *testing.T) {
+	parent := Unit{Slot: 0, ID: "UNIT_ELVENMAGE", Tier: "II", Level: 1}
+	plain := FortifyChild{Slot: 1, ID: "UNIT_ELVENMAGE", Tier: "IV"}
+	ascended := plain
+	ascended.Ascended = true
+	want := fortifyBonus{power: true, rarity: 16, faction: 3, tier: 5}
+	if got := bonusFor(t, parent, ascended); got != want || got != bonusFor(t, parent, plain) {
+		t.Errorf("ascended child bonus = %+v, want %+v like the plain child", got, want)
 	}
 }
 

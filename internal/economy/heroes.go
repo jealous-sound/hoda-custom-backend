@@ -84,9 +84,6 @@ func (h *hero) profile() *catalog.ConsumeProfile {
 }
 
 func (h *hero) rarity() catalog.Rarity {
-	if h.ascended {
-		return catalog.RarityMythic
-	}
 	return h.def.Rarity
 }
 

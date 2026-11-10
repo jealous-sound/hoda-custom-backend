@@ -74,7 +74,7 @@
         "ATTACKSINGLE",
         "SLOW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -178,7 +178,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -282,7 +282,7 @@
         "ATTACKSINGLE",
         "ELUSIVE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -388,7 +388,7 @@
         "DEFENDER",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -491,7 +491,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -592,7 +592,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -692,7 +692,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -796,7 +796,7 @@
       "specialties": [
         "ATTACKALL"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -902,7 +902,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -1009,7 +1009,7 @@
         "DEFENDER",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -1216,7 +1216,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -1317,7 +1317,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -1421,7 +1421,7 @@
         "ATTACKSINGLE",
         "SLOW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -1522,7 +1522,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -1625,7 +1625,7 @@
         "ATTACKROW",
         "ELUSIVE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -1728,7 +1728,7 @@
         "POWERDRAIN",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -1831,7 +1831,7 @@
         "ELUSIVE",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -1932,7 +1932,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -2037,7 +2037,7 @@
         "ELUSIVE",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -2139,7 +2139,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -2237,7 +2237,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -2338,7 +2338,7 @@
         "POWERDRAIN",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -2441,7 +2441,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -2542,7 +2542,7 @@
         "TAUNT",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -2646,7 +2646,7 @@
         "ATTACKALL",
         "SLOW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -2752,7 +2752,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -2855,7 +2855,7 @@
         "DEFENDER",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -2961,7 +2961,7 @@
         "ATTACKALL",
         "POWERDRAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -3070,7 +3070,7 @@
         "ATTACKSINGLE",
         "MULTIATTACK"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -3172,7 +3172,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -3275,7 +3275,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -3376,7 +3376,7 @@
         "FLANK",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -3475,7 +3475,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -3575,7 +3575,7 @@
         "LEVY",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -3678,7 +3678,7 @@
         "STUN",
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -3778,7 +3778,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -3880,7 +3880,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -4092,7 +4092,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -4198,7 +4198,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -4298,7 +4298,7 @@
         "STUN",
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -4402,7 +4402,7 @@
         "STUN",
         "ATTACKALL"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -4509,7 +4509,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -4616,7 +4616,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -4720,7 +4720,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -4819,7 +4819,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -4920,7 +4920,7 @@
         "ATTACKSINGLE",
         "SLOW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -5019,7 +5019,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -5117,7 +5117,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -5216,7 +5216,7 @@
         "STUN",
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -5318,7 +5318,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -5417,7 +5417,7 @@
       "specialties": [
         "ATTACKALL"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -5525,7 +5525,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -5635,7 +5635,7 @@
         "ELUSIVE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -5853,7 +5853,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -5958,7 +5958,7 @@
         "HEAL",
         "MULTIATTACK"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -6058,7 +6058,7 @@
         "ATTACKCOLUMN",
         "ELUSIVE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -6157,7 +6157,7 @@
         "TAUNT",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -6257,7 +6257,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -6359,7 +6359,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -6461,7 +6461,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -6563,7 +6563,7 @@
       "specialties": [
         "ATTACKCOLUMN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -6665,7 +6665,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -6764,7 +6764,7 @@
         "DEFENDER",
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -6867,7 +6867,7 @@
         "FLANK",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -6965,7 +6965,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -7067,7 +7067,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -7168,7 +7168,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -7269,7 +7269,7 @@
         "STUN",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -7368,7 +7368,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -7467,7 +7467,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -7566,7 +7566,7 @@
       "specialties": [
         "ATTACKALL"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -7669,7 +7669,7 @@
         "DEFENDER",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -7769,7 +7769,7 @@
         "DEFENDER",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -7867,7 +7867,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -7966,7 +7966,7 @@
         "TAUNT",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -8063,7 +8063,7 @@
         "STUN",
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -8165,7 +8165,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -8493,7 +8493,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -8604,7 +8604,7 @@
         "CURSEPOWER",
         "CURSEHEALTH"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -8710,7 +8710,7 @@
         "ATTACKALL",
         "DEFENDER"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -8821,7 +8821,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -8933,7 +8933,7 @@
         "MULTIATTACK",
         "SLOW"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -9155,7 +9155,7 @@
         "ATTACKALL",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -9260,7 +9260,7 @@
         "HEAL",
         "CURSEHEALTH"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -9369,7 +9369,7 @@
         "STUN",
         "ATTACKCOLUMN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -10131,7 +10131,7 @@
         "MULTIATTACK",
         "SLOW"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -10242,7 +10242,7 @@
         "MULTIATTACK",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -10341,7 +10341,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -10439,7 +10439,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -10537,7 +10537,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -10636,7 +10636,7 @@
         "HEAL",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -10735,7 +10735,7 @@
         "STUN",
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -10837,7 +10837,7 @@
         "ATTACKCOLUMN",
         "ELUSIVE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -10939,7 +10939,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -11039,7 +11039,7 @@
         "FLANK",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -11140,7 +11140,7 @@
         "ATTACKALL",
         "SLOW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -11242,7 +11242,7 @@
         "ATTACKSINGLE",
         "SLOW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -11345,7 +11345,7 @@
         "STEALTH",
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -11452,7 +11452,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -11560,7 +11560,7 @@
         "SLOW",
         "CURSEHEALTH"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -11668,7 +11668,7 @@
         "LEVY",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -11769,7 +11769,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -11871,7 +11871,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -11938,7 +11938,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -12047,7 +12047,7 @@
         "POWERDRAIN",
         "MULTIATTACK"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -12146,7 +12146,7 @@
         "STUN",
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -12246,7 +12246,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -12346,7 +12346,7 @@
         "TAUNT",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -12444,7 +12444,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -12660,7 +12660,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -12760,7 +12760,7 @@
         "ATTACKSINGLE",
         "ATTACKFRIENDLY"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -12863,7 +12863,7 @@
         "POWERDRAIN",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -12963,7 +12963,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -13061,7 +13061,7 @@
       "specialties": [
         "ATTACKROW"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -13162,7 +13162,7 @@
         "ATTACKALL",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -13261,7 +13261,7 @@
         "STUN",
         "ATTACKCOLUMN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -13589,7 +13589,7 @@
         "ATTACKALL",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -13693,7 +13693,7 @@
         "ATTACKSINGLE",
         "SLOW"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -13800,7 +13800,7 @@
         "POWERGAIN",
         "CURSEHEALTH"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -13914,7 +13914,7 @@
         "TAUNT",
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -14020,7 +14020,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -14122,7 +14122,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -14229,7 +14229,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -14331,7 +14331,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -14434,7 +14434,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -14531,7 +14531,7 @@
       "specialties": [
         "ATTACKSINGLE"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -14639,7 +14639,7 @@
         "ELUSIVE",
         "POWERGAIN"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -14964,7 +14964,7 @@
         "STUN",
         "ATTACKALL"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -15070,7 +15070,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -15172,7 +15172,7 @@
         "ATTACKROW",
         "SLOW"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -15278,7 +15278,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -15386,7 +15386,7 @@
         "ATTACKSINGLE",
         "SLOW"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -15491,7 +15491,7 @@
         "RETALIATE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -15599,7 +15599,7 @@
         "ATTACKCOLUMN",
         "SLOW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -15705,7 +15705,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -15808,7 +15808,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -15913,7 +15913,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -16017,7 +16017,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -16121,7 +16121,7 @@
         "ATTACKCOLUMN",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -16228,7 +16228,7 @@
         "POWERDRAIN",
         "SLOW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -16301,7 +16301,7 @@
         "STUN",
         "ATTACKCOLUMN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -16740,7 +16740,7 @@
         "POWERGAIN",
         "CURSEHEALTH"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -16848,7 +16848,7 @@
         "ATTACKCOLUMN",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -16946,7 +16946,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -17052,7 +17052,7 @@
         "ATTACKSINGLE",
         "CURSEHEALTH"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -17162,7 +17162,7 @@
         "ATTACKSINGLE",
         "SLOW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -17266,7 +17266,7 @@
         "POWERDRAIN",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -17370,7 +17370,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -17476,7 +17476,7 @@
         "STUN",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -17581,7 +17581,7 @@
         "ATTACKALL",
         "SLOW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -18118,7 +18118,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -18222,7 +18222,7 @@
         "ATTACKFRIENDLY",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -18326,7 +18326,7 @@
         "POWERDRAIN",
         "ATTACKROW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -18429,7 +18429,7 @@
       "specialties": [
         "ATTACKCOLUMN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -18533,7 +18533,7 @@
         "STUN",
         "ATTACKALL"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -18963,7 +18963,7 @@
         "MULTIATTACK",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -19072,7 +19072,7 @@
         "ELUSIVE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -19179,7 +19179,7 @@
         "CURSEPOWER",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -19284,7 +19284,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -19492,7 +19492,7 @@
         "HEAL",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -21706,7 +21706,7 @@
         "TAUNT",
         "ATTACKROW"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -22032,7 +22032,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -22469,7 +22469,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -22781,7 +22781,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -22886,7 +22886,7 @@
         "POWERGAIN",
         "CURSEHEALTH"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -23642,7 +23642,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -23747,7 +23747,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -25389,7 +25389,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -26599,7 +26599,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -26710,7 +26710,7 @@
         "ATTACKSINGLE",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -26820,7 +26820,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -26933,7 +26933,7 @@
         "POWERDRAIN",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -27273,7 +27273,7 @@
         "ATTACKROW",
         "ATTACKFRIENDLY"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -27383,7 +27383,7 @@
         "HEAL",
         "POWERDRAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -27483,7 +27483,7 @@
       "specialties": [
         "ATTACKCOLUMN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -27582,7 +27582,7 @@
         "ATTACKSINGLE",
         "ELUSIVE"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -29334,7 +29334,7 @@
         "ATTACKALL",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -29438,7 +29438,7 @@
         "HEAL",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -29543,7 +29543,7 @@
         "ATTACKROW",
         "SLOW"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -29647,7 +29647,7 @@
       "specialties": [
         "ATTACKCOLUMN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -29744,7 +29744,7 @@
         "ATTACKCOLUMN",
         "HEAL"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -29948,7 +29948,7 @@
         "STUN",
         "ATTACKCOLUMN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -30046,7 +30046,7 @@
         "POWERDRAIN",
         "ATTACKSINGLE"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -30706,7 +30706,7 @@
         "CURSEPOWER",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -31581,7 +31581,7 @@
         "ATTACKCOLUMN",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -31688,7 +31688,7 @@
         "ELUSIVE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -32579,7 +32579,7 @@
         "CURSEPOWER",
         "ELUSIVE"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -33255,7 +33255,7 @@
         "CURSEPOWER",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -33361,7 +33361,7 @@
         "SLOW",
         "MULTIATTACK"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -33571,7 +33571,7 @@
         "ATTACKALL",
         "MULTIATTACK"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -33678,7 +33678,7 @@
         "CURSEPOWER",
         "MULTIATTACK"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -33785,7 +33785,7 @@
         "POWERDRAIN",
         "MULTIATTACK"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -33892,7 +33892,7 @@
         "HEAL",
         "MULTIATTACK"
       ],
-      "gear_slots": 1,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -34564,7 +34564,7 @@
         "POWERDRAIN",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -36419,7 +36419,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -37001,7 +37001,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 2,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -38430,7 +38430,7 @@
         "CURSEHEALTH",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -38544,7 +38544,7 @@
         "SLOW",
         "ELUSIVE"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -42412,7 +42412,7 @@
         "ATTACKCOLUMN",
         "CURSEHEALTH"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -43715,7 +43715,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -50038,7 +50038,7 @@
         "SLOW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -50482,7 +50482,7 @@
         "ATTACKROW",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -62293,7 +62293,7 @@
         "ATTACKSINGLE",
         "MULTIATTACK"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -65808,7 +65808,7 @@
         "SLOW",
         "ELUSIVE"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -68035,7 +68035,7 @@
         "CURSEHEALTH",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -68586,7 +68586,7 @@
         "ATTACKFRIENDLY",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {
@@ -69601,7 +69601,7 @@
         "ELUSIVE",
         "POWERGAIN"
       ],
-      "gear_slots": 3,
+      "gear_slots": 4,
       "has_prestige_slot": true,
       "obtainable": true,
       "ability": {

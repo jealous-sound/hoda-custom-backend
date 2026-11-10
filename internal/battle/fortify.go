@@ -121,13 +121,9 @@ func (d *Data) fortifyBonus(parent *hero, archetype *fortifyArchetype, child For
 	if tier.String() != child.Tier || !def.hasTier[tier] {
 		return fortifyBonus{}, fmt.Errorf("fortify child %s has no tier %q", child.ID, child.Tier)
 	}
-	childRarity := def.rarity
-	if child.Ascended {
-		childRarity = rarityMythic
-	}
 	slot := archetype[child.Slot]
 	base := mul(float32(parent.maxLevelStat(slot.power)), slot.cap)
-	row := &d.fortify.rarityTierBonus[childRarity-1]
+	row := &d.fortify.rarityTierBonus[def.rarity-1]
 	bonus := fortifyBonus{power: slot.power}
 	bonus.rarity = roundHalfEven(mul(base, row[TierI]))
 	bonus.tier = roundHalfEven(mul(base, float32(row[tier]-row[TierI])))

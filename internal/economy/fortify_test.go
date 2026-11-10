@@ -123,8 +123,8 @@ func TestFortifyCombinesTheSameHeroIntoAHigherTier(t *testing.T) {
 			`[{"id":"UNIT_ELVENMAGE","slot":0,"tier":"II"}]`},
 		{"II and I", fortifyEntry(0, "UNIT_ELVENMAGE", "II", false), rosterEntry("UNIT_ELVENMAGE", 3, "I"),
 			`[{"id":"UNIT_ELVENMAGE","slot":0,"tier":"III"}]`},
-		{"IV and an ascended I", fortifyEntry(0, "UNIT_ARIQUN", "IV", false), ascended,
-			`[{"ascended":true,"id":"UNIT_ARIQUN","slot":0,"tier":"IV"}]`},
+		{"II and an ascended I keep the ascension", fortifyEntry(0, "UNIT_ARIQUN", "II", false), ascended,
+			`[{"ascended":true,"id":"UNIT_ARIQUN","slot":0,"tier":"III"}]`},
 		{"another hero replaces a full slot", fortifyEntry(0, "UNIT_ELVENMAGE", "IV", false),
 			rosterEntry("UNIT_REDIRONMAGE", 3, "I"), `[{"id":"UNIT_REDIRONMAGE","slot":0,"tier":"I"}]`},
 	} {
@@ -143,8 +143,11 @@ func TestFortifyCombinesOnlyIntoPresentTiers(t *testing.T) {
 	if !ok || merged.tier != 2 {
 		t.Errorf("I and I of a hero without tier II = %+v", merged)
 	}
-	merged, ok = fortifyInto(&fortifyChild{def: gapped, tier: 2}, &fortifyChild{def: gapped, ascended: true})
+	merged, ok = fortifyInto(&fortifyChild{def: gapped}, &fortifyChild{def: gapped, ascended: true})
 	if !ok || merged.tier != 2 || !merged.ascended {
+		t.Errorf("I and an ascended I of a hero without tier II = %+v", merged)
+	}
+	if merged, ok = fortifyInto(&fortifyChild{def: gapped, tier: 2}, &fortifyChild{def: gapped, ascended: true}); ok {
 		t.Errorf("an ascended I into the top tier = %+v", merged)
 	}
 }
@@ -152,6 +155,8 @@ func TestFortifyCombinesOnlyIntoPresentTiers(t *testing.T) {
 func TestFortifyRefusesASlotThatHoldsTheBestCopy(t *testing.T) {
 	ascendedFour := rosterEntry("UNIT_ARIQUN", 3, "IV")
 	ascendedFour["ascended"] = true
+	ascendedOne := rosterEntry("UNIT_ARIQUN", 3, "I")
+	ascendedOne["ascended"] = true
 	for name, test := range map[string]struct {
 		existing map[string]any
 		child    map[string]any
@@ -159,6 +164,7 @@ func TestFortifyRefusesASlotThatHoldsTheBestCopy(t *testing.T) {
 		"top tier":                      {fortifyEntry(0, "UNIT_ELVENMAGE", "IV", false), rosterEntry("UNIT_ELVENMAGE", 3, "I")},
 		"ascended top tier":             {fortifyEntry(0, "UNIT_ARIQUN", "IV", true), ascendedFour},
 		"ascended top tier, plain copy": {fortifyEntry(0, "UNIT_ARIQUN", "IV", true), rosterEntry("UNIT_ARIQUN", 3, "IV")},
+		"top tier, ascended copy":       {fortifyEntry(0, "UNIT_ARIQUN", "IV", false), ascendedOne},
 	} {
 		raw := fortifyProfile(t, []any{test.existing}, nil, test.child)
 		_, _, err := act(t, raw, &profile.ServerState{}, ActionFortify, `{"parent":1,"slots":[{"index":0,"unit":3}]}`)
@@ -213,8 +219,8 @@ func TestRemoveFortifyChargesGemsAndReturnsTheHero(t *testing.T) {
 	c := mustCatalog(t)
 	doc, result := mustAct(t, removableProfile(t, 200), &profile.ServerState{}, ActionRemoveFortify,
 		`{"parent":1,"index":3}`)
-	if gems := number(t, doc, "account", "gems"); gems != 170 {
-		t.Errorf("gems = %v, want 170", gems)
+	if gems := number(t, doc, "account", "gems"); gems != 185 {
+		t.Errorf("gems = %v, want 185", gems)
 	}
 	want := `[{"id":"UNIT_REDIRONMAGE","slot":0,"tier":"II"},{"id":"UNIT_ARIQUN","slot":5,"tier":"I"}]`
 	if got := fortifyJSON(t, doc, 1); got != want {
@@ -244,8 +250,8 @@ func TestRemoveFortifyChargesGemsAndReturnsTheHero(t *testing.T) {
 func TestRemoveEveryFortifySlotReturnsTheHeroesInSlotOrder(t *testing.T) {
 	doc, result := mustAct(t, removableProfile(t, 200), &profile.ServerState{}, ActionRemoveFortify,
 		`{"parent":1,"index":-1}`)
-	if gems := number(t, doc, "account", "gems"); gems != 200-5-30-15 {
-		t.Errorf("gems = %v, want %d", gems, 200-5-30-15)
+	if gems := number(t, doc, "account", "gems"); gems != 200-5-15-15 {
+		t.Errorf("gems = %v, want %d", gems, 200-5-15-15)
 	}
 	if _, kept := rosterHero(t, doc, 1)["fortify"]; kept {
 		t.Errorf("an emptied hero kept its fortify key: %v", rosterHero(t, doc, 1))
@@ -275,10 +281,10 @@ func TestRemoveFortifyRefusesEmptySlotsAndThePoor(t *testing.T) {
 	if _, _, err := act(t, gameProfile(t, nil), &profile.ServerState{}, ActionRemoveFortify, `{"parent":1,"index":-1}`); refusalCode(err) != Unavailable {
 		t.Errorf("nothing to remove: %v", err)
 	}
-	if _, _, err := act(t, removableProfile(t, 29), &profile.ServerState{}, ActionRemoveFortify, `{"parent":1,"index":3}`); refusalCode(err) != CantAfford {
+	if _, _, err := act(t, removableProfile(t, 14), &profile.ServerState{}, ActionRemoveFortify, `{"parent":1,"index":3}`); refusalCode(err) != CantAfford {
 		t.Errorf("too few gems: %v", err)
 	}
-	if _, _, err := act(t, removableProfile(t, 49), &profile.ServerState{}, ActionRemoveFortify, `{"parent":1,"index":-1}`); refusalCode(err) != CantAfford {
+	if _, _, err := act(t, removableProfile(t, 34), &profile.ServerState{}, ActionRemoveFortify, `{"parent":1,"index":-1}`); refusalCode(err) != CantAfford {
 		t.Errorf("too few gems for every slot: %v", err)
 	}
 }
