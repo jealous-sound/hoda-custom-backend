@@ -20,9 +20,6 @@ type fortifyChild struct {
 }
 
 func (f *fortifyChild) rarity() catalog.Rarity {
-	if f.ascended {
-		return catalog.RarityMythic
-	}
 	return f.def.Rarity
 }
 
@@ -86,19 +83,15 @@ func fortifyInto(existing, sacrificed *fortifyChild) (*fortifyChild, bool) {
 	if existing == nil || existing.def.ID != sacrificed.def.ID {
 		return sacrificed, true
 	}
-	if existing.tier == existing.def.MaxTier && existing.rarity() >= sacrificed.rarity() {
+	if existing.tier == existing.def.MaxTier {
 		return nil, false
 	}
 	combinedTiers := min(max(sacrificed.tier+existing.tier+1, 1), catalog.TierCount)
-	base := existing
-	if sacrificed.rarity() > existing.rarity() {
-		base = sacrificed
+	tier := existing.tier
+	for range combinedTiers - existing.tier {
+		tier = nextPresentTier(existing.def, tier)
 	}
-	tier := base.tier
-	for range combinedTiers - base.tier {
-		tier = nextPresentTier(base.def, tier)
-	}
-	return &fortifyChild{def: base.def, tier: tier, ascended: base.ascended}, true
+	return &fortifyChild{def: existing.def, tier: tier, ascended: existing.ascended || sacrificed.ascended}, true
 }
 
 type FortifySlotRequest struct {

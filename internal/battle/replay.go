@@ -112,7 +112,6 @@ func (d *Data) buildHero(u Unit, playerSide bool) (*hero, error) {
 		return h, nil
 	}
 	if u.Ascended {
-		h.rarity = rarityMythic
 		for t := range h.stats {
 			h.stats[t].maxLevel += ascensionBonusLevels
 		}
