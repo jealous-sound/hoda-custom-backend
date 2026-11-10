@@ -98,7 +98,7 @@ func TestFortifyStoresTheChildrenAndConsumesThem(t *testing.T) {
 	}, rosterEntry("UNIT_REDIRONMAGE", 3, "II"))
 	doc, _ := mustAct(t, raw, &profile.ServerState{}, ActionFortify,
 		`{"parent":1,"slots":[{"index":1,"unit":3},{"index":0,"unit":2}]}`)
-	want := `[{"id":"UNIT_ARIQUN","slot":0,"tier":"I"},{"id":"UNIT_REDIRONMAGE","slot":1,"tier":"II"}]`
+	want := `[{"id":"UNIT_ARCANEMARIANHAWKE","slot":0,"tier":"I"},{"id":"UNIT_REDIRONMAGE","slot":1,"tier":"II"}]`
 	if got := fortifyJSON(t, doc, 1); got != want {
 		t.Errorf("fortify = %s, want %s", got, want)
 	}
@@ -111,7 +111,7 @@ func TestFortifyStoresTheChildrenAndConsumesThem(t *testing.T) {
 }
 
 func TestFortifyCombinesTheSameHeroIntoAHigherTier(t *testing.T) {
-	ascended := rosterEntry("UNIT_ARIQUN", 3, "I")
+	ascended := rosterEntry("UNIT_ARCANEMARIANHAWKE", 3, "I")
 	ascended["ascended"] = true
 	for _, test := range []struct {
 		name     string
@@ -123,8 +123,8 @@ func TestFortifyCombinesTheSameHeroIntoAHigherTier(t *testing.T) {
 			`[{"id":"UNIT_ELVENMAGE","slot":0,"tier":"II"}]`},
 		{"II and I", fortifyEntry(0, "UNIT_ELVENMAGE", "II", false), rosterEntry("UNIT_ELVENMAGE", 3, "I"),
 			`[{"id":"UNIT_ELVENMAGE","slot":0,"tier":"III"}]`},
-		{"II and an ascended I keep the ascension", fortifyEntry(0, "UNIT_ARIQUN", "II", false), ascended,
-			`[{"ascended":true,"id":"UNIT_ARIQUN","slot":0,"tier":"III"}]`},
+		{"II and an ascended I keep the ascension", fortifyEntry(0, "UNIT_ARCANEMARIANHAWKE", "II", false), ascended,
+			`[{"ascended":true,"id":"UNIT_ARCANEMARIANHAWKE","slot":0,"tier":"III"}]`},
 		{"another hero replaces a full slot", fortifyEntry(0, "UNIT_ELVENMAGE", "IV", false),
 			rosterEntry("UNIT_REDIRONMAGE", 3, "I"), `[{"id":"UNIT_REDIRONMAGE","slot":0,"tier":"I"}]`},
 	} {
@@ -153,18 +153,18 @@ func TestFortifyCombinesOnlyIntoPresentTiers(t *testing.T) {
 }
 
 func TestFortifyRefusesASlotThatHoldsTheBestCopy(t *testing.T) {
-	ascendedFour := rosterEntry("UNIT_ARIQUN", 3, "IV")
+	ascendedFour := rosterEntry("UNIT_ARCANEMARIANHAWKE", 3, "IV")
 	ascendedFour["ascended"] = true
-	ascendedOne := rosterEntry("UNIT_ARIQUN", 3, "I")
+	ascendedOne := rosterEntry("UNIT_ARCANEMARIANHAWKE", 3, "I")
 	ascendedOne["ascended"] = true
 	for name, test := range map[string]struct {
 		existing map[string]any
 		child    map[string]any
 	}{
 		"top tier":                      {fortifyEntry(0, "UNIT_ELVENMAGE", "IV", false), rosterEntry("UNIT_ELVENMAGE", 3, "I")},
-		"ascended top tier":             {fortifyEntry(0, "UNIT_ARIQUN", "IV", true), ascendedFour},
-		"ascended top tier, plain copy": {fortifyEntry(0, "UNIT_ARIQUN", "IV", true), rosterEntry("UNIT_ARIQUN", 3, "IV")},
-		"top tier, ascended copy":       {fortifyEntry(0, "UNIT_ARIQUN", "IV", false), ascendedOne},
+		"ascended top tier":             {fortifyEntry(0, "UNIT_ARCANEMARIANHAWKE", "IV", true), ascendedFour},
+		"ascended top tier, plain copy": {fortifyEntry(0, "UNIT_ARCANEMARIANHAWKE", "IV", true), rosterEntry("UNIT_ARCANEMARIANHAWKE", 3, "IV")},
+		"top tier, ascended copy":       {fortifyEntry(0, "UNIT_ARCANEMARIANHAWKE", "IV", false), ascendedOne},
 	} {
 		raw := fortifyProfile(t, []any{test.existing}, nil, test.child)
 		_, _, err := act(t, raw, &profile.ServerState{}, ActionFortify, `{"parent":1,"slots":[{"index":0,"unit":3}]}`)
@@ -210,8 +210,8 @@ func removableProfile(t *testing.T, gems int) json.RawMessage {
 	t.Helper()
 	return fortifyProfile(t, []any{
 		fortifyEntry(0, "UNIT_REDIRONMAGE", "II", false),
-		fortifyEntry(3, "UNIT_ARIQUN", "IV", true),
-		fortifyEntry(5, "UNIT_ARIQUN", "I", false),
+		fortifyEntry(3, "UNIT_ARCANEMARIANHAWKE", "IV", true),
+		fortifyEntry(5, "UNIT_ARCANEMARIANHAWKE", "I", false),
 	}, func(doc map[string]any) { section(doc, "account")["gems"] = gems })
 }
 
@@ -222,14 +222,14 @@ func TestRemoveFortifyChargesGemsAndReturnsTheHero(t *testing.T) {
 	if gems := number(t, doc, "account", "gems"); gems != 185 {
 		t.Errorf("gems = %v, want 185", gems)
 	}
-	want := `[{"id":"UNIT_REDIRONMAGE","slot":0,"tier":"II"},{"id":"UNIT_ARIQUN","slot":5,"tier":"I"}]`
+	want := `[{"id":"UNIT_REDIRONMAGE","slot":0,"tier":"II"},{"id":"UNIT_ARCANEMARIANHAWKE","slot":5,"tier":"I"}]`
 	if got := fortifyJSON(t, doc, 1); got != want {
 		t.Errorf("fortify = %s, want %s", got, want)
 	}
 	returned := rosterHero(t, doc, 3)
-	def, _ := c.Hero("UNIT_ARIQUN")
+	def, _ := c.Hero("UNIT_ARCANEMARIANHAWKE")
 	floor := (&hero{def: def}).progressionKeyOfTier(3)
-	if returned["id"] != "UNIT_ARIQUN" || returned["tier"] != "IV" || returned["ascended"] != true ||
+	if returned["id"] != "UNIT_ARCANEMARIANHAWKE" || returned["tier"] != "IV" || returned["ascended"] != true ||
 		returned["level"].(float64) != 1 || returned["xp"].(float64) != float64(xpForLevel(def.Consume.LevelTable, 1)) ||
 		returned["consume_xp"].(float64) != float64(xpForLevel(def.Consume.ConsumeTable, int64(floor)+1)) {
 		t.Errorf("returned hero = %v", returned)
@@ -237,7 +237,7 @@ func TestRemoveFortifyChargesGemsAndReturnsTheHero(t *testing.T) {
 	if number(t, doc, "roster", "next_instance_id") != 4 {
 		t.Errorf("next_instance_id = %v", section(doc, "roster")["next_instance_id"])
 	}
-	if len(result.Granted.Heroes) != 1 || result.Granted.Heroes[0] != (GrantedHero{ID: "UNIT_ARIQUN", InstanceID: 3}) {
+	if len(result.Granted.Heroes) != 1 || result.Granted.Heroes[0] != (GrantedHero{ID: "UNIT_ARCANEMARIANHAWKE", InstanceID: 3}) {
 		t.Errorf("granted = %+v", result.Granted.Heroes)
 	}
 	gear := section(doc, "gear")["heroes"].([]any)
@@ -256,8 +256,8 @@ func TestRemoveEveryFortifySlotReturnsTheHeroesInSlotOrder(t *testing.T) {
 	if _, kept := rosterHero(t, doc, 1)["fortify"]; kept {
 		t.Errorf("an emptied hero kept its fortify key: %v", rosterHero(t, doc, 1))
 	}
-	for instance, want := range map[float64][2]string{3: {"UNIT_REDIRONMAGE", "II"}, 4: {"UNIT_ARIQUN", "IV"},
-		5: {"UNIT_ARIQUN", "I"}} {
+	for instance, want := range map[float64][2]string{3: {"UNIT_REDIRONMAGE", "II"}, 4: {"UNIT_ARCANEMARIANHAWKE", "IV"},
+		5: {"UNIT_ARCANEMARIANHAWKE", "I"}} {
 		if hero := rosterHero(t, doc, instance); hero["id"] != want[0] || hero["tier"] != want[1] {
 			t.Errorf("hero %v = %v, want %v", instance, hero, want)
 		}
@@ -293,12 +293,12 @@ func TestUploadCannotAddOrAlterFortify(t *testing.T) {
 	stored := removableProfile(t, 200)
 	forged := gameProfile(t, func(doc map[string]any) {
 		additions := section(doc, "roster")["additions"].([]any)
-		additions[0].(map[string]any)["fortify"] = []any{fortifyEntry(0, "UNIT_ARIQUN", "IV", true)}
-		additions[1].(map[string]any)["fortify"] = []any{fortifyEntry(0, "UNIT_ARIQUN", "IV", true)}
+		additions[0].(map[string]any)["fortify"] = []any{fortifyEntry(0, "UNIT_ARCANEMARIANHAWKE", "IV", true)}
+		additions[1].(map[string]any)["fortify"] = []any{fortifyEntry(0, "UNIT_ARCANEMARIANHAWKE", "IV", true)}
 	})
 	doc := merge(t, stored, forged, &profile.ServerState{})
-	want := `[{"id":"UNIT_REDIRONMAGE","slot":0,"tier":"II"},{"ascended":true,"id":"UNIT_ARIQUN","slot":3,"tier":"IV"},` +
-		`{"id":"UNIT_ARIQUN","slot":5,"tier":"I"}]`
+	want := `[{"id":"UNIT_REDIRONMAGE","slot":0,"tier":"II"},{"ascended":true,"id":"UNIT_ARCANEMARIANHAWKE","slot":3,"tier":"IV"},` +
+		`{"id":"UNIT_ARCANEMARIANHAWKE","slot":5,"tier":"I"}]`
 	if got := fortifyJSON(t, doc, 1); got != want {
 		t.Errorf("fortify = %s, want %s", got, want)
 	}
@@ -314,9 +314,9 @@ func TestUploadCannotAddOrAlterFortify(t *testing.T) {
 
 func TestBattleStartFieldsTheStoredFortify(t *testing.T) {
 	raw := fortifyProfile(t, []any{fortifyEntry(0, "UNIT_REDIRONMAGE", "II", false),
-		fortifyEntry(1, "UNIT_ARIQUN", "IV", true)}, nil)
+		fortifyEntry(1, "UNIT_ARCANEMARIANHAWKE", "IV", true)}, nil)
 	stored := []battle.FortifyChild{
-		{Slot: 0, ID: "UNIT_REDIRONMAGE", Tier: "II"}, {Slot: 1, ID: "UNIT_ARIQUN", Tier: "IV", Ascended: true},
+		{Slot: 0, ID: "UNIT_REDIRONMAGE", Tier: "II"}, {Slot: 1, ID: "UNIT_ARCANEMARIANHAWKE", Tier: "IV", Ascended: true},
 	}
 	request := campaignStart(t, 0, 0)
 	request.Squad.Units[0].Fortify = stored
@@ -331,7 +331,7 @@ func TestBattleStartFieldsTheStoredFortify(t *testing.T) {
 		"none":         nil,
 		"higher tier":  {{Slot: 0, ID: "UNIT_REDIRONMAGE", Tier: "III"}, stored[1]},
 		"extra child":  append(append([]battle.FortifyChild{}, stored...), battle.FortifyChild{Slot: 2, ID: "UNIT_OGRE", Tier: "I"}),
-		"not ascended": {stored[0], {Slot: 1, ID: "UNIT_ARIQUN", Tier: "IV"}},
+		"not ascended": {stored[0], {Slot: 1, ID: "UNIT_ARCANEMARIANHAWKE", Tier: "IV"}},
 	} {
 		forged := campaignStart(t, 0, 0)
 		forged.Squad.Units[0].Fortify = claimed

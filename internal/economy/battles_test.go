@@ -17,7 +17,7 @@ func emptyGear() []string { return make([]string, gearSlotsPerHero) }
 func fixtureSquad() battle.Side {
 	return battle.Side{Units: []battle.Unit{
 		{Slot: 0, InstanceID: 1, ID: "UNIT_ELVENMAGE", Tier: "I", Level: 3, Gear: emptyGear()},
-		{Slot: 1, InstanceID: 2, ID: "UNIT_ARIQUN", Tier: "I", Level: 1, Gear: emptyGear()},
+		{Slot: 1, InstanceID: 2, ID: "UNIT_ARCANEMARIANHAWKE", Tier: "I", Level: 1, Gear: emptyGear()},
 	}, Runes: []string{}}
 }
 
@@ -480,7 +480,7 @@ func TestPvpBattlesReplayUnderTheStatBudgetOnlyWhenTheRuleIsOn(t *testing.T) {
 }
 
 var fullSquadHeroes = []string{
-	"UNIT_ELVENMAGE", "UNIT_ARIQUN", "UNIT_CARTASMUGGLER", "UNIT_TEMPLARARCHER", "UNIT_BEAR",
+	"UNIT_ELVENMAGE", "UNIT_ARCANEMARIANHAWKE", "UNIT_CARTASMUGGLER", "UNIT_TEMPLARARCHER", "UNIT_BEAR",
 }
 
 func fullSquadProfile(t *testing.T) (json.RawMessage, battle.Side) {

@@ -54,6 +54,25 @@ func newRosterWriter(doc document) (*rosterWriter, error) {
 	return &rosterWriter{roster: roster, additions: additions, starterCount: starterCount, nextID: next}, nil
 }
 
+func ownedHeroes(c *catalog.Catalog, doc document) map[int]bool {
+	owned := map[int]bool{}
+	roster, err := doc.section("roster")
+	if err != nil {
+		return owned
+	}
+	for _, name := range rosterLists {
+		list, _ := roster.array(name)
+		for _, entry := range list {
+			object, _ := entry.(map[string]any)
+			id, _ := object["id"].(string)
+			if index, ok := c.HeroIndex(id); ok {
+				owned[index] = true
+			}
+		}
+	}
+	return owned
+}
+
 func (r *rosterWriter) hasRoom(count int) bool {
 	return r.starterCount+len(r.additions)+count <= RosterCapacity
 }

@@ -62,7 +62,7 @@ func TestUploadCannotDropAHeroOutsideAConsume(t *testing.T) {
 		section(doc, "roster")["additions"] = section(doc, "roster")["additions"].([]any)[:1]
 	})
 	doc := merge(t, stored, dropped, &profile.ServerState{})
-	if rosterHero(t, doc, 2)["id"] != "UNIT_ARIQUN" {
+	if rosterHero(t, doc, 2)["id"] != "UNIT_ARCANEMARIANHAWKE" {
 		t.Error("the dropped hero was not restored")
 	}
 	heroes := section(doc, "gear")["heroes"].([]any)
@@ -262,7 +262,7 @@ func TestPvpBattleKeepsTheRecordOnTheServer(t *testing.T) {
 		pvp["trophies"].(float64) >= gained || len(pvp["history"].([]any)) != 2 {
 		t.Errorf("after a loss pvp = %v", pvp)
 	}
-	event := pvpMatched(t, reencode(t, lost), server, true, 44)
+	event := pvpMatched(t, reencode(t, lost), server, true, 45)
 	event.Squad = squadOf(t, lost)
 	afterEvent, _, _ := fight(t, reencode(t, lost), server, event, true)
 	if section(afterEvent, "pvp")["trophies"] != pvp["trophies"] || section(afterEvent, "pvp")["wins"].(float64) != 2 {

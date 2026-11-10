@@ -303,7 +303,7 @@ func (p *purchase) buyHeroPack(w *wallet, offer catalog.Offer, scripted *catalog
 	roll := heroRoll{}
 	if scripted == nil {
 		var ok bool
-		roll, ok = rollHeroes(p.catalog, p.pack, int(w.sinceLegendary), &p.rng)
+		roll, ok = rollHeroes(p.catalog, p.pack, int(w.sinceLegendary), ownedHeroes(p.catalog, p.doc), &p.rng)
 		if !ok {
 			return refuse(Unavailable, "pack %s has no heroes to roll", p.pack.ID)
 		}

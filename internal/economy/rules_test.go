@@ -34,7 +34,7 @@ func gameProfile(t *testing.T, edit func(doc map[string]any)) json.RawMessage {
 			"additions": []any{
 				map[string]any{"id": "UNIT_ELVENMAGE", "instance_id": 1, "tier": "I", "level": 3, "xp": 0,
 					"ascended": false, "consume_xp": 0},
-				map[string]any{"id": "UNIT_ARIQUN", "instance_id": 2, "tier": "I", "level": 1, "xp": 0,
+				map[string]any{"id": "UNIT_ARCANEMARIANHAWKE", "instance_id": 2, "tier": "I", "level": 1, "xp": 0,
 					"ascended": false, "consume_xp": 0},
 			}},
 		"current_squad": 0,
@@ -135,7 +135,7 @@ func TestUploadCannotMintCurrencyHeroesRunesOrGear(t *testing.T) {
 		section(doc, "nexus")["potions"] = 99
 		roster := section(doc, "roster")
 		roster["additions"] = append(roster["additions"].([]any), map[string]any{
-			"id": "UNIT_ARIQUN", "instance_id": 50, "tier": "IV", "level": 60, "xp": 0, "ascended": true,
+			"id": "UNIT_ARCANEMARIANHAWKE", "instance_id": 50, "tier": "IV", "level": 60, "xp": 0, "ascended": true,
 		})
 		roster["additions"].([]any)[0].(map[string]any)["id"] = "UNIT_LEANDRAAMELL"
 		runes := section(doc, "runes")
@@ -157,7 +157,7 @@ func TestUploadCannotMintCurrencyHeroesRunesOrGear(t *testing.T) {
 		t.Errorf("account = %v nexus potions = %v", doc["account"], section(doc, "nexus")["potions"])
 	}
 	additions := section(doc, "roster")["additions"].([]any)
-	if len(additions) != 2 || additions[0].(map[string]any)["id"] != "UNIT_ARIQUN" ||
+	if len(additions) != 2 || additions[0].(map[string]any)["id"] != "UNIT_ARCANEMARIANHAWKE" ||
 		additions[0].(map[string]any)["tier"] != "I" || additions[1].(map[string]any)["id"] != "UNIT_ELVENMAGE" {
 		t.Errorf("roster additions = %v", additions)
 	}
@@ -240,7 +240,7 @@ func TestFirstUploadStartsFromTheNewPlayerEconomy(t *testing.T) {
 	merged, err := MergeUpload(c, profile.Record{}, &server, gameProfile(t, func(doc map[string]any) {
 		section(doc, "roster")["additions"] = []any{
 			map[string]any{"id": "UNIT_LEGIONNAIRESCOUT", "instance_id": 1, "tier": "I", "level": 1},
-			map[string]any{"id": "UNIT_ARIQUN", "instance_id": 2, "tier": "I", "level": 1},
+			map[string]any{"id": "UNIT_ARCANEMARIANHAWKE", "instance_id": 2, "tier": "I", "level": 1},
 		}
 	}), ruleNow)
 	if err != nil {

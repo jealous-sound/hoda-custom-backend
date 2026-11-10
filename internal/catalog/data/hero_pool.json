@@ -153,7 +153,7 @@
   },
   {
    "id": "UNIT_TEVINTERSLAVER",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tevinter Slaver",
@@ -168,10 +168,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -221,7 +221,7 @@
   },
   {
    "id": "UNIT_HIGHDRAGON",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "High Dragon",
@@ -234,10 +234,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
@@ -263,7 +263,7 @@
   },
   {
    "id": "UNIT_DALISHWARRIOR",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish Warrior",
@@ -275,10 +275,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -304,7 +304,7 @@
   },
   {
    "id": "UNIT_DALISHMAGE",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish Mage",
@@ -317,10 +317,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -811,7 +811,7 @@
   },
   {
    "id": "UNIT_MERRILL",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Merrill",
@@ -826,15 +826,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_CHARREDSYLVAN",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Charred Sylvan",
@@ -846,15 +846,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_INFERNOGOLEM",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Inferno Golem",
@@ -868,10 +868,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -1144,7 +1144,7 @@
   },
   {
    "id": "UNIT_DUNCAN",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Duncan",
@@ -1158,15 +1158,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_VARRICTETHRAS",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Varric Tethras",
@@ -1181,10 +1181,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
@@ -1212,7 +1212,7 @@
   },
   {
    "id": "UNIT_GATEGUARDIAN",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gate Guardian",
@@ -1225,10 +1225,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -1686,7 +1686,7 @@
   },
   {
    "id": "UNIT_ISABELA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Isabela",
@@ -1699,15 +1699,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SISTERNIGHTINGALE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sister Nightingale",
@@ -1723,15 +1723,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GREYWARDENCARVER",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Carver",
@@ -1747,15 +1747,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GREYWARDENBETHANY",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Bethany",
@@ -1772,10 +1772,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -1867,10 +1867,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
@@ -1960,15 +1960,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_MORRIGAN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Morrigan",
@@ -1982,15 +1982,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_GREYWARDENOGHREN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Oghren",
@@ -2003,15 +2003,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_FLEMETH",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Flemeth",
@@ -2024,15 +2024,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_GRANDENCHANTERFIONA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grand Enchanter Fiona",
@@ -2046,15 +2046,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_QUEENOFTHEBLACKMARSH",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Queen of the Blackmarsh",
@@ -2067,15 +2067,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_FORESTSPIRIT",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Forest Spirit",
@@ -2087,10 +2087,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -2279,7 +2279,7 @@
   },
   {
    "id": "UNIT_VELGHAST",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Velghast",
@@ -2291,10 +2291,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -2319,7 +2319,7 @@
   },
   {
    "id": "UNIT_SHADOWWEREWOLF",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shadow Werewolf",
@@ -2332,15 +2332,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_BLIGHTEDSHADOWWOLF",
-   "rarity": "Epic",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Shadow Wolf",
@@ -2354,15 +2354,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_RABIDWEREWOLF",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rabid Werewolf",
@@ -2375,15 +2375,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_WEREWOLFALPHA",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Werewolf Alpha",
@@ -2396,10 +2396,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -2442,7 +2442,7 @@
   },
   {
    "id": "UNIT_OGRECOMMANDER",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ogre Commander",
@@ -2454,10 +2454,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -2565,7 +2565,7 @@
   },
   {
    "id": "UNIT_HARVESTERORSINO",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Harvester Orsino",
@@ -2582,15 +2582,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_ARCANEHORROR",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arcane Horror",
@@ -2602,10 +2602,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -2650,7 +2650,7 @@
   },
   {
    "id": "UNIT_RAGEDEMON",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rage Demon",
@@ -2662,10 +2662,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -2731,7 +2731,7 @@
   },
   {
    "id": "UNIT_KINGALISTAIR",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "King Alistair",
@@ -2748,15 +2748,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SANDAL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sandal",
@@ -2768,10 +2768,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -2888,7 +2888,7 @@
   },
   {
    "id": "UNIT_WINTERSENDHALLA",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Halla",
@@ -2900,10 +2900,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -3015,7 +3015,7 @@
   },
   {
    "id": "UNIT_WYNNE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wynne",
@@ -3029,15 +3029,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_GUARDCAPTAINAVELINE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Guard Captain Aveline",
@@ -3052,10 +3052,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
@@ -3103,7 +3103,7 @@
   },
   {
    "id": "UNIT_THEOLDONE",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Old One",
@@ -3114,10 +3114,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -3230,7 +3230,7 @@
   },
   {
    "id": "UNIT_ASHWRAITH",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ash Wraith",
@@ -3242,15 +3242,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_FERELDANBANN",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fereldan Bann",
@@ -3264,10 +3264,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -3294,7 +3294,7 @@
   },
   {
    "id": "UNIT_FERELDANTEYRN",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fereldan Teyrn",
@@ -3308,10 +3308,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -3357,7 +3357,7 @@
   },
   {
    "id": "UNIT_REDLYRIUMMEREDITH",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Meredith",
@@ -3373,15 +3373,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_HYBRIS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hybris",
@@ -3392,15 +3392,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_LOGHAINMACTIR",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Loghain Mac Tir",
@@ -3415,15 +3415,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_CARESS",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Caress",
@@ -3435,10 +3435,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -3485,7 +3485,7 @@
   },
   {
    "id": "UNIT_SHADOWWARRIOR",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shadow Warrior",
@@ -3498,10 +3498,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -3614,7 +3614,7 @@
   },
   {
    "id": "UNIT_SHAHWYRD",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shah Wyrd",
@@ -3626,15 +3626,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BARKSPAWN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Barkspawn",
@@ -3649,15 +3649,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ANCIENTDARKSPAWN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ancient Darkspawn",
@@ -3669,15 +3669,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SCHMOOPLES",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Schmooples",
@@ -3692,15 +3692,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_FLUFFY",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fluffy",
@@ -3712,15 +3712,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SPIKE",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spike",
@@ -3732,15 +3732,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CORRUPTEDNUG",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Corrupted Nug",
@@ -3753,10 +3753,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -3805,7 +3805,7 @@
   },
   {
    "id": "UNIT_LEOPOLD",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Leopold",
@@ -3820,15 +3820,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_KEEPERMARETHARI",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Keeper Marethari",
@@ -3841,15 +3841,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CHASINDGENERAL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chasind General",
@@ -3862,15 +3862,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SALIT",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Salit",
@@ -3883,15 +3883,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ATHENRIL",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Athenril",
@@ -3905,15 +3905,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_VARTERRAL",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Varterral",
@@ -3926,15 +3926,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_FREEMARCHER",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Freemarcher",
@@ -3947,15 +3947,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_ARLATHANGENERAL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arlathan General",
@@ -3967,15 +3967,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ARMOREDBEAR",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Armored Bear",
@@ -3986,15 +3986,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SAAREBAS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Saarebas",
@@ -4007,15 +4007,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DUKEPROSPER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Duke Prosper",
@@ -4030,15 +4030,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BROGANDACE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Brogan Dace",
@@ -4052,15 +4052,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ARIANE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ariane",
@@ -4072,15 +4072,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_KINGENDRINAEDUCAN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "King Endrin Aeducan",
@@ -4093,10 +4093,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
@@ -4461,52 +4461,10 @@
   },
   {
    "id": "UNIT_DIAMONDSHALE",
-   "rarity": "Legendary",
-   "obtainable": true,
-   "initial_tier": "I",
-   "name": "Diamond Shale",
-   "faction": "White",
-   "groups": [
-    "Dwarf",
-    "Golem",
-    "Warrior"
-   ],
-   "giant": false,
-   "max_tier": "IV",
-   "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
-   }
-  },
-  {
-   "id": "UNIT_RUBYSHALE",
-   "rarity": "Legendary",
-   "obtainable": true,
-   "initial_tier": "I",
-   "name": "Ruby Shale",
-   "faction": "White",
-   "groups": [
-    "Dwarf",
-    "Golem",
-    "Warrior"
-   ],
-   "giant": false,
-   "max_tier": "IV",
-   "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
-   }
-  },
-  {
-   "id": "UNIT_STONEGOLEM",
    "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
-   "name": "Stone Golem",
+   "name": "Diamond Shale",
    "faction": "White",
    "groups": [
     "Dwarf",
@@ -4523,8 +4481,50 @@
    }
   },
   {
+   "id": "UNIT_RUBYSHALE",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I",
+   "name": "Ruby Shale",
+   "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Warrior"
+   ],
+   "giant": false,
+   "max_tier": "IV",
+   "tier_levels": {
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
+   }
+  },
+  {
+   "id": "UNIT_STONEGOLEM",
+   "rarity": "Rare",
+   "obtainable": true,
+   "initial_tier": "I",
+   "name": "Stone Golem",
+   "faction": "White",
+   "groups": [
+    "Dwarf",
+    "Golem",
+    "Warrior"
+   ],
+   "giant": false,
+   "max_tier": "IV",
+   "tier_levels": {
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
+   }
+  },
+  {
    "id": "UNIT_APOSTATEJOWAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Apostate Jowan",
@@ -4538,15 +4538,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THEBARONESS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Baroness",
@@ -4562,15 +4562,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CONNORGUERRIN",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Connor Guerrin",
@@ -4586,15 +4586,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_NATHANIELHOWE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Nathaniel Howe",
@@ -4610,15 +4610,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_THEFIRST",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The First",
@@ -4630,15 +4630,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DRAGONFLEMETH",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragon Flemeth",
@@ -4652,15 +4652,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_CHEVALIER",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chevalier",
@@ -4674,15 +4674,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GHASTARCHER",
-   "rarity": "Legendary",
+   "rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ghast Archer",
@@ -4694,15 +4694,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 15,
+    "II": 20,
+    "III": 25,
+    "IV": 30
    }
   },
   {
    "id": "UNIT_GHASTBRUTE",
-   "rarity": "Legendary",
+   "rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ghast Brute",
@@ -4714,15 +4714,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 15,
+    "II": 20,
+    "III": 25,
+    "IV": 30
    }
   },
   {
    "id": "UNIT_THEWITHERED",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Withered",
@@ -4734,15 +4734,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THEHERALD",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Herald",
@@ -4754,15 +4754,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_TALLIS",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tallis",
@@ -4776,15 +4776,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_BEN-HASSRATH",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ben-Hassrath",
@@ -4797,15 +4797,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_JUSTICE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Justice",
@@ -4818,15 +4818,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_THEGRANDOAK",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Grand Oak",
@@ -4838,15 +4838,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BYRON",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Byron",
@@ -4860,15 +4860,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_KNIGHT-CAPTAINCULLEN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Captain Cullen",
@@ -4883,15 +4883,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BRONTO",
-   "rarity": "Epic",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bronto",
@@ -4903,10 +4903,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -4932,7 +4932,7 @@
   },
   {
    "id": "UNIT_CORRUPTEDSPIDERQUEEN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Corrupted Spider Queen",
@@ -4944,10 +4944,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -4966,15 +4966,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_STEELGOLEM",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Steel Golem",
@@ -4987,15 +4987,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ULDRED",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Uldred",
@@ -5011,15 +5011,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CALADRIUS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Caladrius",
@@ -5033,10 +5033,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -5055,15 +5055,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_PRINCEBHELEN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Prince Bhelen Aeducan",
@@ -5076,15 +5076,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_BROODMOTHER",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Broodmother",
@@ -5097,15 +5097,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SNUGTHEBRONTO",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Snug the Bronto",
@@ -5120,15 +5120,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_WITHERFANG",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Witherfang",
@@ -5141,15 +5141,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_VELGHASTCHIEFTAIN",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Velghast Chieftain",
@@ -5161,15 +5161,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_GHASTLEADER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ghast Leader",
@@ -5181,15 +5181,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_CORRUPTEDSPIDERLING",
-   "rarity": "Legendary",
+   "rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Corrupted Spiderling",
@@ -5201,15 +5201,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 15,
+    "II": 20,
+    "III": 25,
+    "IV": 30
    }
   },
   {
    "id": "UNIT_SWIFTRUNNER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Swiftrunner",
@@ -5223,10 +5223,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -5252,7 +5252,7 @@
   },
   {
    "id": "UNIT_GUARDIANOFTHEURN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Guardian of the Urn",
@@ -5266,15 +5266,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_WARDENCOMMANDERDUNCAN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Warden Commander Duncan",
@@ -5288,15 +5288,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_GREYWARDENGENEVIEVE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Genevieve",
@@ -5310,15 +5310,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_LORDPYRALHARROWMONT",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lord Pyral Harrowmont",
@@ -5331,15 +5331,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_ALAMARRIWARLORD",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Alamarri Warlord",
@@ -5353,15 +5353,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_RISENOGRE",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Risen Ogre",
@@ -5374,15 +5374,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_ARLEAMONGUERRIN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arl Eamon Guerrin",
@@ -5396,15 +5396,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_PRINCESEBASTIANVAEL",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Prince Sebastian Vael",
@@ -5419,15 +5419,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_KOLGRIM",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Kolgrim",
@@ -5442,15 +5442,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_EIRIK",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Eirik",
@@ -5466,15 +5466,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CULTISTREAVER",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cultist Reaver",
@@ -5490,15 +5490,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CULTISTASSASSIN",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cultist Assassin",
@@ -5514,10 +5514,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -5546,7 +5546,7 @@
   },
   {
    "id": "UNIT_CULTISTMAGE",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cultist Mage",
@@ -5563,15 +5563,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_LYRIUMFENRIS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lyrium Fenris",
@@ -5586,15 +5586,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DANARIUS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Danarius",
@@ -5609,15 +5609,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SLAVESTATUE",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Slave Statue",
@@ -5631,15 +5631,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_MHAIRI",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Mhairi",
@@ -5654,15 +5654,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_RIFTWRAITH",
-   "rarity": "Rare",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rift Wraith",
@@ -5673,15 +5673,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 30,
-    "II": 35,
-    "III": 40,
-    "IV": 45
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_TERROR",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Terror",
@@ -5692,15 +5692,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HIGHSEEKERALDREN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "High Seeker Aldren",
@@ -5714,15 +5714,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SEEKERCASSANDRA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Seeker Cassandra",
@@ -5738,15 +5738,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_STEN,THEARISHOK",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sten, the Arishok",
@@ -5761,15 +5761,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_CAPTAINISABELA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Captain Isabela",
@@ -5782,15 +5782,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SERA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sera",
@@ -5805,15 +5805,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SERPOUNCE-A-LOT",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Pounce-A-Lot",
@@ -5826,15 +5826,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CROWZEVRAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Crow Zevran",
@@ -5847,15 +5847,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SOPHIADRYDEN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sophia Dryden",
@@ -5870,15 +5870,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_NERIA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Neria",
@@ -5892,15 +5892,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GAXKANGTHEUNBOUND",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gaxkang the Unbound",
@@ -5912,15 +5912,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SKYHORROR",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sky Horror",
@@ -5932,15 +5932,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_GREYWARDENVELANNA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Velanna",
@@ -5954,15 +5954,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GREYWARDENSIGRUN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Sigrun",
@@ -5977,15 +5977,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_VIVIENNE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Vivienne",
@@ -6001,15 +6001,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_ELITEHARLEQUIN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Elite Harlequin",
@@ -6022,10 +6022,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -6137,7 +6137,7 @@
   },
   {
    "id": "UNIT_PHOENIX",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Phoenix",
@@ -6148,40 +6148,21 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_TUSKET",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tusket",
    "faction": "Red",
    "groups": [
     "Nug",
-    "Beast"
-   ],
-   "giant": false,
-   "max_tier": "IV",
-   "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
-   }
-  },
-  {
-   "id": "UNIT_FENNEC",
-   "rarity": "Rare",
-   "obtainable": true,
-   "initial_tier": "I",
-   "name": "Fennec",
-   "faction": "Red",
-   "groups": [
     "Beast"
    ],
    "giant": false,
@@ -6194,8 +6175,27 @@
    }
   },
   {
+   "id": "UNIT_FENNEC",
+   "rarity": "Common",
+   "obtainable": true,
+   "initial_tier": "I",
+   "name": "Fennec",
+   "faction": "Red",
+   "groups": [
+    "Beast"
+   ],
+   "giant": false,
+   "max_tier": "IV",
+   "tier_levels": {
+    "I": 15,
+    "II": 20,
+    "III": 25,
+    "IV": 30
+   }
+  },
+  {
    "id": "UNIT_SPIRITOFHOPE",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit of Hope",
@@ -6207,15 +6207,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_FELIXALEXIUS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Felix",
@@ -6230,15 +6230,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_MAEVARIS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Maevaris",
@@ -6252,15 +6252,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_AURELIANTITUS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Aurelian Titus",
@@ -6275,15 +6275,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_IMPERIALARCHON",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Imperial Archon",
@@ -6298,15 +6298,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_MAGISTERPAVUS",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Magister Pavus",
@@ -6319,15 +6319,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SOLAS",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Solas",
@@ -6341,15 +6341,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_DORIAN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dorian",
@@ -6364,15 +6364,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_GEREONALEXIUS",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gereon Alexius",
@@ -6387,15 +6387,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_ADVISORCULLEN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Advisor Cullen",
@@ -6410,15 +6410,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_CILLIAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cillian",
@@ -6433,15 +6433,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ABELAS",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Abelas",
@@ -6453,15 +6453,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SENTINELSPELLBINDER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sentinel Spellbinder",
@@ -6473,15 +6473,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SENTINELSHADOW",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sentinel Shadow",
@@ -6493,15 +6493,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SENTINELARCHER",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sentinel Archer",
@@ -6513,15 +6513,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THORNTON",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Thornton",
@@ -6535,15 +6535,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_RASAAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rasaan",
@@ -6556,15 +6556,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BEHEMOTH",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Behemoth",
@@ -6579,15 +6579,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_EMPRESSCELENE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Empress Celene",
@@ -6601,15 +6601,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_BRIALA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Briala",
@@ -6623,15 +6623,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_JOSEPHINE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Josephine",
@@ -6645,15 +6645,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_ASSASSINFLORIANNE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Assassin Florianne",
@@ -6668,10 +6668,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -6698,7 +6698,7 @@
   },
   {
    "id": "UNIT_WARDENCOMMANDERCLAREL",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Warden Commander Clarel",
@@ -6713,15 +6713,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_LORDERIMOND",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lord Erimond",
@@ -6737,15 +6737,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BLACKWALL",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blackwall",
@@ -6762,15 +6762,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SERSTROUD",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Stroud",
@@ -6784,15 +6784,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_MADDOX",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Maddox",
@@ -6806,15 +6806,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_TEMPLARSAMSON",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Templar Samson",
@@ -6828,15 +6828,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CHOCOLATENUG",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chocolate Nug",
@@ -6849,10 +6849,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -7051,7 +7051,7 @@
   },
   {
    "id": "UNIT_REDLYRIUMSAMSON",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Samson",
@@ -7066,15 +7066,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SAMSON",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Samson",
@@ -7089,15 +7089,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_REDTEMPLARARCHER",
-   "rarity": "Epic",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Templar Archer",
@@ -7111,15 +7111,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_NOBLESPIRITOFJUSTINIA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Noble Spirit of Justinia",
@@ -7132,15 +7132,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SPIRITOFJUSTINIA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit of Justinia",
@@ -7153,15 +7153,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_NOBLESPIRITOFHOPE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Noble Spirit of Hope",
@@ -7173,15 +7173,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_COLE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cole",
@@ -7195,15 +7195,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_NIGHTMAREASPECT",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Nightmare Aspect",
@@ -7214,15 +7214,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_FERELDENFROSTBACK",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fereldan Frostback",
@@ -7235,15 +7235,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_IRONBULL",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Iron Bull",
@@ -7259,15 +7259,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_GIANT",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Giant",
@@ -7278,15 +7278,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_REDLYRIUMGIANT",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Giant",
@@ -7298,15 +7298,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HORROR",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Horror",
@@ -7320,15 +7320,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_RION",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rion",
@@ -7343,15 +7343,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DESPAIRDEMON",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Despair Demon",
@@ -7362,15 +7362,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ADVISORMORRIGAN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Advisor Morrigan",
@@ -7385,15 +7385,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SNOWYWYVERN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Snowy Wyvern",
@@ -7407,15 +7407,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_VINSOMER",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Vinsomer",
@@ -7428,15 +7428,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_KATARI",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Katari",
@@ -7450,15 +7450,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BERESAADWARRIOR",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Beresaad Warrior",
@@ -7471,10 +7471,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -7497,15 +7497,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_CALPERNIA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Calpernia",
@@ -7519,15 +7519,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_GURDHAROFSEN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gurd Harofsen",
@@ -7542,40 +7542,18 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_THANESVARAHSUN-HAIR",
-   "rarity": "Legendary",
-   "obtainable": true,
-   "initial_tier": "I",
-   "name": "Thane Svarah Sun-Hair",
-   "faction": "Red",
-   "groups": [
-    "Human",
-    "Outlaw",
-    "Avvar",
-    "Warrior"
-   ],
-   "giant": false,
-   "max_tier": "IV",
-   "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
-   }
-  },
-  {
-   "id": "UNIT_AVVARBARBARIAN",
    "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
-   "name": "Avvar Barbarian",
+   "name": "Thane Svarah Sun-Hair",
    "faction": "Red",
    "groups": [
     "Human",
@@ -7593,8 +7571,30 @@
    }
   },
   {
+   "id": "UNIT_AVVARBARBARIAN",
+   "rarity": "Uncommon",
+   "obtainable": true,
+   "initial_tier": "I",
+   "name": "Avvar Barbarian",
+   "faction": "Red",
+   "groups": [
+    "Human",
+    "Outlaw",
+    "Avvar",
+    "Warrior"
+   ],
+   "giant": false,
+   "max_tier": "IV",
+   "tier_levels": {
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
+   }
+  },
+  {
    "id": "UNIT_DAGNA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dagna",
@@ -7607,15 +7607,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SCOUTHARDING",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Scout Harding",
@@ -7628,15 +7628,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_AMETHYSTSHALE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Amethyst Shale",
@@ -7649,15 +7649,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SANDYHOWLER",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sandy Howler",
@@ -7670,15 +7670,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SKYWATCHER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sky Watcher",
@@ -7693,15 +7693,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_LORDWOOLSLEY",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lord Woolsley",
@@ -7713,15 +7713,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THELASTINQUISITOR",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Last Inquisitor",
@@ -7736,15 +7736,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_PROFESSORBRAMKENRIC",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Professor Bram Kenric",
@@ -7759,15 +7759,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THEMOTHER",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Mother",
@@ -7780,15 +7780,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_THELOST",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Lost",
@@ -7801,15 +7801,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THESEEKER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Seeker",
@@ -7821,15 +7821,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_KREM",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Krem",
@@ -7845,15 +7845,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DALISH",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish",
@@ -7867,15 +7867,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GATT",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gatt",
@@ -7889,15 +7889,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HISSRAD",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hissrad",
@@ -7912,15 +7912,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GREATERMISTRAL",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Greater Mistral",
@@ -7932,15 +7932,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_TAMAR",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tamar",
@@ -7954,15 +7954,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_APOSTATESOLAS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Apostate Solas",
@@ -7975,15 +7975,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GOLDENHALLA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Golden Halla",
@@ -7995,15 +7995,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BIANCA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bianca",
@@ -8015,15 +8015,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_KORBIN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Korbin",
@@ -8037,15 +8037,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_EMERALDSHALE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Emerald Shale",
@@ -8058,15 +8058,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_KETOJAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ketojan",
@@ -8079,15 +8079,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ARVAARAD",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arvaarad",
@@ -8100,15 +8100,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_DRAGONMORRIGAN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragon Morrigan",
@@ -8124,15 +8124,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_GREATBEAR",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Great Bear",
@@ -8143,15 +8143,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HALL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hall",
@@ -8164,15 +8164,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_RIORDAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Riordan",
@@ -8187,15 +8187,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_FIRSTENCHANTERIRVING",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "First Enchanter Irving",
@@ -8210,15 +8210,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ARLRENDONHOWE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arl Rendon Howe",
@@ -8233,15 +8233,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_KNIGHT-COMMANDERDELRINBARRIS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Commander Delrin Barris",
@@ -8257,15 +8257,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SERBELINDADARROW",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Belinda Darrow",
@@ -8282,15 +8282,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GASPARDDECHALONS",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gaspard de Chalons",
@@ -8304,15 +8304,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_MARSHALPROULX",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Marshal Proulx",
@@ -8326,15 +8326,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_MICHELDECHEVIN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Michel de Chevin",
@@ -8349,15 +8349,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_NORTHERNHUNTER",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Northern Hunter",
@@ -8369,15 +8369,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_ARIGENA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arigena",
@@ -8391,15 +8391,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_JARVIA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Jarvia",
@@ -8413,15 +8413,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BERAHT",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Beraht",
@@ -8435,15 +8435,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DRAGONOFTHEELDERONE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragon of the Elder One",
@@ -8459,15 +8459,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_MACRINUS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Macrinus",
@@ -8481,15 +8481,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CRASSIUSSERVIS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Crassius Servis",
@@ -8504,15 +8504,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_NECROMANCERDORIAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Necromancer Dorian",
@@ -8527,15 +8527,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SIDONY",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sidony",
@@ -8548,10 +8548,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -8571,15 +8571,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_HAKKONITEARCHER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hakkonite Archer",
@@ -8594,15 +8594,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_HAKKONITEDEFENDER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hakkonite Defender",
@@ -8617,15 +8617,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_ADVISORLELIANA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Advisor Leliana",
@@ -8641,15 +8641,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_CHANTRYWARRIOR",
-   "rarity": "Epic",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chantry Warrior",
@@ -8662,15 +8662,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_LAMBERTVANREEVES",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lambert van Reeves",
@@ -8686,15 +8686,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_LUCIUSCORIN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lucius Corin",
@@ -8708,15 +8708,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HIGHLANDRAVAGER",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Highland Ravager",
@@ -8728,15 +8728,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_LOYALBETYARDRAGONSLAYER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Loyal Betyar, Dragonslayer",
@@ -8748,15 +8748,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SHA-BRYTOLREVEREDDEFENDER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sha-Brytol Revered Defender",
@@ -8768,15 +8768,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ARIQUN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ariqun",
@@ -8790,15 +8790,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_TAMASSRAN",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tamassran",
@@ -8811,15 +8811,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_SNOUFLEUR",
-   "rarity": "Legendary",
+   "rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Snoufleur",
@@ -8831,15 +8831,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 15,
+    "II": 20,
+    "III": 25,
+    "IV": 30
    }
   },
   {
    "id": "UNIT_SANTABLACKWALL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Santa Blackwall",
@@ -8856,15 +8856,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ELFIESERA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Elfie Sera",
@@ -8879,15 +8879,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DIVINEVIVIENNE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Divine Vivienne",
@@ -8904,15 +8904,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_TEMPLARKNIGHT-CORPORAL",
-   "rarity": "Epic",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Templar Knight-Corporal",
@@ -8927,15 +8927,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_THEMESSENGER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Messenger",
@@ -8947,10 +8947,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -8969,15 +8969,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_ARGENT",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Argent",
@@ -8990,15 +8990,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_LUKA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Luka",
@@ -9012,15 +9012,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ATAASHI",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ataashi",
@@ -9033,15 +9033,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_VIDDASALA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Viddasala",
@@ -9054,15 +9054,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_MOVRANTHEUNDER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Movran the Under",
@@ -9076,15 +9076,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HANDOFKORTH",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hand of Korth",
@@ -9098,15 +9098,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ARTIFICERVARRIC",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Artificer Varric",
@@ -9121,15 +9121,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_PALA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Pala",
@@ -9142,15 +9142,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ABYSSALHIGHDRAGON",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Abyssal High Dragon",
@@ -9164,15 +9164,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_PROFESSORFREDERIC",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Professor Frederic",
@@ -9186,15 +9186,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_REGALYAND'MARCALL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Regalyan D'Marcall",
@@ -9208,15 +9208,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_YOUNGCASSANDRA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Young Cassandra",
@@ -9231,10 +9231,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -9635,7 +9635,7 @@
   },
   {
    "id": "UNIT_SAARATH",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Saarath",
@@ -9648,15 +9648,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_QUNARISHOCKTROOPER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Qunari Shock Trooper",
@@ -9670,15 +9670,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_GORDIAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gordian",
@@ -9692,15 +9692,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_MALIPHANT",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Maliphant",
@@ -9713,15 +9713,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SPIRITOFCOLE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit of Cole",
@@ -9735,15 +9735,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SPIRITOFFAITH",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit of Faith",
@@ -9755,15 +9755,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_NUGGALOPE",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Nuggalope",
@@ -9777,15 +9777,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_GUARDSMANDONNIC",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Guardsman Donnic",
@@ -9799,15 +9799,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_JERRIKDACE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Jerrik Dace",
@@ -9820,15 +9820,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_AMBERSHALE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Amber Shale",
@@ -9841,15 +9841,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_VENATORIGLADIATOR",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Venatori Gladiator",
@@ -9863,15 +9863,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_ERASTHENES",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Erasthenes",
@@ -9884,15 +9884,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_REDJENNYSERA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Jenny Sera",
@@ -9907,15 +9907,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_PLAIDEWEAVEVIVIENNE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Plaideweave Vivienne",
@@ -9931,15 +9931,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_PLAIDEWEAVEDORIAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Plaideweave Dorian",
@@ -9954,15 +9954,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SERJORY",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Jory",
@@ -9975,15 +9975,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DAVETH",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Daveth",
@@ -9997,15 +9997,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_RENN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Renn",
@@ -10018,15 +10018,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_NUGKING",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Nug King",
@@ -10039,15 +10039,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GREYWARDENKNIGHT",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Knight",
@@ -10061,15 +10061,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GREYWARDENFIONA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Fiona",
@@ -10084,15 +10084,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CRETAHL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cretahl",
@@ -10105,15 +10105,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SHA-BRYTOLEARTHSHAKER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sha-Brytol Earthshaker",
@@ -10125,15 +10125,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_COMMANDERDUHAIME",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Commander Duhaime",
@@ -10148,15 +10148,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_VENATORIMARKSMAN",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Venatori Marksman",
@@ -10170,10 +10170,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -10190,15 +10190,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_MARYDEN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Maryden",
@@ -10211,15 +10211,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GOLDENNUG",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Golden Nug",
@@ -10231,15 +10231,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SNOWBALL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Snowball",
@@ -10251,15 +10251,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CAHIR",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cahir",
@@ -10272,15 +10272,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DRAGONLING",
-   "rarity": "Epic",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragonling",
@@ -10292,15 +10292,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_DIVINELELIANA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Divine Leliana",
@@ -10316,15 +10316,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_MARJOLAINE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Marjolaine",
@@ -10338,15 +10338,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_REDTEMPLARSHADOW",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Templar Shadow",
@@ -10360,15 +10360,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_REDTEMPLARGUARD",
-   "rarity": "Epic",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Templar Guard",
@@ -10382,15 +10382,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_KNIGHT-ENCHANTERVIVIENNE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Enchanter Vivienne",
@@ -10407,15 +10407,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Enchanter Helaine",
@@ -10429,15 +10429,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SHAPERVALTA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shaper Valta",
@@ -10449,15 +10449,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SHA-BRYTOLBOLTER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sha-Brytol Bolter",
@@ -10469,15 +10469,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_PARAGONBRANKA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Paragon Branka",
@@ -10491,15 +10491,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_DEEPSTALKERMATRIARCH",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Deepstalker Matriarch",
@@ -10511,15 +10511,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GAMORDANSTORMRIDER",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gamordan Stormrider",
@@ -10532,15 +10532,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_DWORKINGLAVONAK",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dworkin Glavonak",
@@ -10553,15 +10553,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BATTLEMASTERGARRETTHAWKE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Battlemaster Garrett Hawke",
@@ -10577,15 +10577,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_BATTLEMASTERMARIANHAWKE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Battlemaster Marian Hawke",
@@ -10601,15 +10601,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_REDLYRIUMIRONBULL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Iron Bull",
@@ -10625,15 +10625,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_NOBLEKINGCAILAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Noble King Cailan",
@@ -10647,15 +10647,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ZITHER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "ZITHER!",
@@ -10669,15 +10669,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_LILY",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lily",
@@ -10690,15 +10690,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DUKECYRIL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Duke Cyril",
@@ -10712,15 +10712,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DIVINECASSANDRA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Divine Cassandra",
@@ -10736,15 +10736,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_BROTHERGENITIVI",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Brother Genitivi",
@@ -10758,15 +10758,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BLIGHTEDOGHREN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Oghren",
@@ -10780,15 +10780,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_LARIUS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Larius",
@@ -10802,15 +10802,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_TITANHEARTGUARDIAN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Titan Heart Guardian",
@@ -10824,15 +10824,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SHA-BRYTOLSTALKER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sha-Brytol Stalker",
@@ -10844,15 +10844,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_VISCOUNTVARRIC",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Viscount Varric",
@@ -10867,15 +10867,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_PIOTINAEDUCAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Piotin Aeducan",
@@ -10888,15 +10888,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HUNTERSHADEDRACOLISK",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hunter Shade Dracolisk",
@@ -10908,15 +10908,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_SHARPTAILDRACOLISK",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sharp-tail Dracolisk",
@@ -10928,15 +10928,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Primal-Trained Longma",
@@ -10948,15 +10948,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_MOUNTAINDRACOLISK",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Mountain Dracolisk",
@@ -10968,15 +10968,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_IMSHAEL",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Imshael",
@@ -10990,15 +10990,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_LIBRARIAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Librarian",
@@ -11009,10 +11009,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -11034,10 +11034,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
@@ -11059,15 +11059,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_REDLYRIUMBLACKWALL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Blackwall",
@@ -11084,15 +11084,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ALPHAGOAT",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Alpha Goat",
@@ -11104,15 +11104,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_MAGISTERDORIAN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Magister Dorian",
@@ -11127,15 +11127,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_VENATORIZEALOT",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Venatori Zealot",
@@ -11149,15 +11149,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_KALTENZAHN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Kaltenzahn",
@@ -11170,15 +11170,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SERWESLEYVALLEN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Wesley Vallen",
@@ -11192,15 +11192,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BLIGHTEDZEVRAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Zevran",
@@ -11214,15 +11214,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DRUFFALO",
-   "rarity": "Legendary",
+   "rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Druffalo",
@@ -11234,15 +11234,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 15,
+    "II": 20,
+    "III": 25,
+    "IV": 30
    }
   },
   {
    "id": "UNIT_GREYWARDENLOGHAIN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Loghain",
@@ -11258,15 +11258,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GREATERFROSTBACKELK",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Greater Frostback Elk",
@@ -11278,10 +11278,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -11298,15 +11298,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_GIBBERINGHORROR",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gibbering Horror",
@@ -11318,15 +11318,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_SABOTEURGARRETTHAWKE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Saboteur Garrett Hawke",
@@ -11342,15 +11342,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SABOTEURMARIANHAWKE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Saboteur Marian Hawke",
@@ -11366,15 +11366,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_THEAUGUR",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Augur",
@@ -11388,15 +11388,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SIGRIDGULDSDOTTEN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sigrid Guldsdotten",
@@ -11412,10 +11412,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -11438,7 +11438,7 @@
   },
   {
    "id": "UNIT_FAIRBANKS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fairbanks",
@@ -11453,15 +11453,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THEDOWAGER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Dowager",
@@ -11475,15 +11475,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THOMRAINIER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Thom Rainier",
@@ -11498,15 +11498,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HIVERNAL",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hivernal",
@@ -11519,15 +11519,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_ICEGIANT",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ice Giant",
@@ -11539,15 +11539,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GRANDENCHANTERVIVIENNE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grand Enchanter Vivienne",
@@ -11562,15 +11562,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_AUGUSTRAM",
-   "rarity": "Legendary",
+   "rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "August Ram",
@@ -11581,15 +11581,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 15,
+    "II": 20,
+    "III": 25,
+    "IV": 30
    }
   },
   {
    "id": "UNIT_WINTERSENDCULLEN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Cullen",
@@ -11604,15 +11604,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_REINDEERMABARI",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Reindeer Mabari",
@@ -11623,15 +11623,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GUARDIANOFMYTHAL",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Guardian of Mythal",
@@ -11644,15 +11644,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_GHOSTOFTHESPIRE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ghost of the Spire",
@@ -11664,15 +11664,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CHARTER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Charter",
@@ -11685,15 +11685,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_RITTS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ritts",
@@ -11706,15 +11706,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ENVYDEMON",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Envy Demon",
@@ -11726,15 +11726,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_XEBENKECK",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Xebenkeck",
@@ -11746,15 +11746,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_NAISHE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Naishe",
@@ -11767,15 +11767,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DRAGONMALVERNIS",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragon Malvernis",
@@ -11790,15 +11790,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_MALVERNIS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Malvernis",
@@ -11812,15 +11812,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_FORGEMASTER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Forge Master",
@@ -11832,15 +11832,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_ARLTEAGANGUERRIN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arl Teagan Guerrin",
@@ -11854,15 +11854,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_MOTHERGISELLE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Mother Giselle",
@@ -11876,15 +11876,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DIVINEGUARD",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Divine Guard",
@@ -11897,10 +11897,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -11918,15 +11918,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_MARIUS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Marius",
@@ -11940,15 +11940,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_TESSAFORSYTHIA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tessa Forsythia",
@@ -11962,15 +11962,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GURN",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gurn",
@@ -11981,10 +11981,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -12097,7 +12097,7 @@
   },
   {
    "id": "UNIT_QUNARIDEFENDER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Qunari Defender",
@@ -12111,15 +12111,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_REDLYRIUMNUG",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Nug",
@@ -12132,15 +12132,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_FADE-TOUCHEDLURKER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fade-Touched Lurker",
@@ -12152,15 +12152,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_RHYS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rhys",
@@ -12175,15 +12175,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_EVANGELINE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Evangeline",
@@ -12199,15 +12199,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_STORVACKER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Storvacker",
@@ -12221,15 +12221,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HISSERA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hissera",
@@ -12243,15 +12243,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SPIRITCHAMPION",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit Champion",
@@ -12264,15 +12264,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_SERAARONHAWTHORNE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Aaron Hawthorne",
@@ -12285,15 +12285,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_VAEA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Vaea",
@@ -12305,15 +12305,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_JANEKA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Janeka",
@@ -12326,10 +12326,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -12368,15 +12368,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_REVENANTGURD",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Revenant Gurd",
@@ -12391,15 +12391,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HAKKONITESPELLBINDER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hakkonite Spellbinder",
@@ -12414,15 +12414,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_BETHANYHAWKE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bethany Hawke",
@@ -12438,10 +12438,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
@@ -12461,15 +12461,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_ARCHONRADONIS",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Archon Radonis",
@@ -12483,10 +12483,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
@@ -12510,7 +12510,7 @@
   },
   {
    "id": "UNIT_SHIANNI",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shianni",
@@ -12523,15 +12523,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_LURKER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lurker",
@@ -12542,15 +12542,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_LADYSEEKERCASSANDRA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lady Seeker Cassandra",
@@ -12566,15 +12566,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_CARVERHAWKE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Carver Hawke",
@@ -12589,10 +12589,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
@@ -12616,7 +12616,7 @@
   },
   {
    "id": "UNIT_KITTY",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Kitty",
@@ -12629,15 +12629,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_XENONTHEANTIQUARIAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Xenon the Antiquarian",
@@ -12650,15 +12650,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_INVISIBLENUG",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Invisible Nug",
@@ -12670,15 +12670,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_AVERNUS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Avernus",
@@ -12693,15 +12693,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GREATDRAGON",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Great Dragon",
@@ -12714,15 +12714,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_BEASTOFTELLARISWAMPS",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Beast of Tellari Swamps",
@@ -12735,15 +12735,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THEDARKTHEURGE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Dark Theurge",
@@ -12755,15 +12755,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_POSSESSEDOGRECOMMANDER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Possessed Ogre Commander",
@@ -12776,15 +12776,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BLIGHTEDFENNEC",
-   "rarity": "Epic",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Fennec",
@@ -12797,10 +12797,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -12820,10 +12820,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
@@ -12847,7 +12847,7 @@
   },
   {
    "id": "UNIT_REDLYRIUMBARTRAND",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Bartrand",
@@ -12862,10 +12862,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -12883,15 +12883,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_ISSEYA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Isseya",
@@ -12905,15 +12905,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_WILDSYLVAN",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wild Sylvan",
@@ -12927,15 +12927,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_KEEPERZATHRIAN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Keeper Zathrian",
@@ -12949,15 +12949,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_THEHIGHESTONE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Highest One",
@@ -12970,10 +12970,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -12997,7 +12997,7 @@
   },
   {
    "id": "UNIT_GREATERMISTRALDRAGONLING",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Greater Mistral Dragonling",
@@ -13009,15 +13009,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_CHAUNCEY",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chauncey",
@@ -13029,15 +13029,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SHAPESHIFTERMORRIGANI",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shapeshifter Morrigan",
@@ -13052,12 +13052,12 @@
    "giant": false,
    "max_tier": "I",
    "tier_levels": {
-    "I": 95
+    "I": 30
    }
   },
   {
    "id": "UNIT_AVVARWARNUG",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Avvar War Nug",
@@ -13070,15 +13070,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_EMERALDGRAVESNUG",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Emerald Graves Nug",
@@ -13091,15 +13091,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_KNIGHT-CAPTAINDENAM",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Captain Denam",
@@ -13114,15 +13114,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_WARDEN-COMMANDERSOPHIA",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Warden-Commander Sophia",
@@ -13138,10 +13138,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
@@ -13165,7 +13165,7 @@
   },
   {
    "id": "UNIT_SKYCULTIST",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sky Cultist",
@@ -13179,15 +13179,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_VINSOMERDRAGONLING",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Vinsomer Dragonling",
@@ -13200,15 +13200,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_TORPOR",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Torpor",
@@ -13220,15 +13220,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_WRYME",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wryme",
@@ -13240,15 +13240,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SPIRITSPELLBINDER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit Spellbinder",
@@ -13261,15 +13261,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_ARCHIVIST",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Archivist",
@@ -13281,15 +13281,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_PHANTASMALWARRIOR",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Phantasmal Warrior",
@@ -13303,15 +13303,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_KALTENZAHNDRAGONLING",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Kaltenzahn Dragonling",
@@ -13324,10 +13324,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
@@ -13346,10 +13346,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
@@ -13372,7 +13372,7 @@
   },
   {
    "id": "UNIT_STONEJAW",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Stonejaw",
@@ -13384,15 +13384,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_LEANDRAAMELL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Leandra Amell",
@@ -13406,15 +13406,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GAMORDANSTORMRIDERDRAGONLING",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gamordan Stormrider Dragonling",
@@ -13427,15 +13427,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_SHADOWNUG",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shadow Nug",
@@ -13449,15 +13449,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_QUEENOFTHEEASTERNSEAS",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Queen of the Eastern Seas",
@@ -13471,15 +13471,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SPIRITARCHER",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit Archer",
@@ -13492,15 +13492,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_PHANTASMALSHADOW",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Phantasmal Shadow",
@@ -13513,15 +13513,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_HUNTERHORNSHRIKE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hunterhorn Shrike",
@@ -13533,15 +13533,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_SUNSHINE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sunshine",
@@ -13557,15 +13557,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_TEMPESTSERAI",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tempest Sera",
@@ -13581,12 +13581,12 @@
    "giant": false,
    "max_tier": "I",
    "tier_levels": {
-    "I": 95
+    "I": 30
    }
   },
   {
    "id": "UNIT_DUKEREMACHEDELYDES",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Duke Remache de Lydes",
@@ -13600,10 +13600,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -13627,7 +13627,7 @@
   },
   {
    "id": "UNIT_WILDHART",
-   "rarity": "Legendary",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wild Hart",
@@ -13639,15 +13639,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_KEEPERDESHANNA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Keeper Deshanna",
@@ -13662,15 +13662,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DUKEANTOINEOFWYCOME",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Duke Antoine of Wycome",
@@ -13685,15 +13685,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_HURLOCKVANGUARD",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hurlock Vanguard",
@@ -13705,15 +13705,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_LADYOFTHEFOREST",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lady of the Forest",
@@ -13728,15 +13728,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_GATEKEEPER",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gatekeeper",
@@ -13751,15 +13751,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_CASSIAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cassian",
@@ -13774,15 +13774,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_BULFA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bulfa",
@@ -13796,15 +13796,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DANYLA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Danyla",
@@ -13819,15 +13819,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_PROFANE",
-   "rarity": "Epic",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Profane",
@@ -13841,15 +13841,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_RUNICGOLEM",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Runic Golem",
@@ -13862,15 +13862,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_DAILAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dailan",
@@ -13883,15 +13883,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_TRANQUILMADDOX",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tranquil Maddox",
@@ -13905,15 +13905,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THEFORMLESSONE",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Formless One",
@@ -13926,15 +13926,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   },
   {
    "id": "UNIT_BLIGHTEDHALLA",
-   "rarity": "Epic",
+   "rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Halla",
@@ -13947,15 +13947,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 20,
+    "II": 25,
+    "III": 30,
+    "IV": 35
    }
   },
   {
    "id": "UNIT_WINTERSENDNUGGALOPE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Nuggalope",
@@ -13970,15 +13970,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_SUNDERMOUNTVARTERRAL",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sundermount Varterral",
@@ -13993,15 +13993,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GALLOWSGUARDIAN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gallows Guardian",
@@ -14016,15 +14016,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_LANAYA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lanaya",
@@ -14037,15 +14037,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 70,
-    "II": 75,
-    "III": 80,
-    "IV": 85
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THEMADHERMIT",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Mad Hermit",
@@ -14061,15 +14061,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_GREATERRAGEDEMON",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Greater Rage Demon",
@@ -14082,15 +14082,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_OGREALPHA",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ogre Alpha",
@@ -14103,15 +14103,15 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_WINTERSENDVIVIENNE",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Vivienne",
@@ -14128,15 +14128,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_WINTERSENDHARLEQUIN",
-   "rarity": "Epic",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Harlequin",
@@ -14150,15 +14150,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 50,
-    "II": 55,
-    "III": 60,
-    "IV": 65
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_AUTUMN",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Autumn",
@@ -14172,15 +14172,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
    "id": "UNIT_THADDEUSGIGANTUSCRUMBUM",
-   "rarity": "Legendary",
+   "rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Thaddeus Gigantus Crumbum",
@@ -14194,10 +14194,10 @@
    "giant": true,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 30,
+    "II": 35,
+    "III": 40,
+    "IV": 45
    }
   },
   {
@@ -14216,15 +14216,15 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 80,
-    "II": 85,
-    "III": 90,
-    "IV": 95
+    "I": 70,
+    "II": 75,
+    "III": 80,
+    "IV": 85
    }
   },
   {
    "id": "UNIT_QUEENANORATHEIRIN",
-   "rarity": "Legendary",
+   "rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Queen Anora Theirin",
@@ -14238,10 +14238,10 @@
    "giant": false,
    "max_tier": "IV",
    "tier_levels": {
-    "I": 75,
-    "II": 80,
-    "III": 85,
-    "IV": 90
+    "I": 50,
+    "II": 55,
+    "III": 60,
+    "IV": 65
    }
   }
  ]
