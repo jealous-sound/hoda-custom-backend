@@ -16,7 +16,7 @@ import (
 )
 
 const (
-	guildHeroID       = "UNIT_ARIQUN"
+	guildHeroID       = "UNIT_ARCANEMARIANHAWKE"
 	guildHeroTier     = "IV"
 	guildHeroLevel    = 30
 	battleSeedSearch  = 4000

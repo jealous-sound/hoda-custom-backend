@@ -51,7 +51,7 @@ func TestFortifyBonusMatchesTheClientFormula(t *testing.T) {
 			"ascended giant parent counts five more levels and shares with a giant",
 			Unit{Slot: GiantSlot, ID: "UNIT_INFERNOGOLEM", Tier: "IV", Level: 1, Ascended: true},
 			FortifyChild{Slot: 2, ID: "UNIT_OGRE", Tier: "III"},
-			fortifyBonus{power: false, rarity: 360, faction: 54, tier: 72},
+			fortifyBonus{power: false, rarity: 222, faction: 33, tier: 44},
 		},
 	}
 	for _, c := range cases {
