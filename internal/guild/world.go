@@ -29,6 +29,14 @@ func (w *WorldChat) MessagesAfter(id int64) []Message {
 	return messagesAfter(w.Messages, id)
 }
 
+func (w *WorldChat) Message(id int64) (Message, bool) {
+	index := slices.IndexFunc(w.Messages, func(m Message) bool { return m.ID == id })
+	if index < 0 {
+		return Message{}, false
+	}
+	return w.Messages[index], true
+}
+
 func (w *WorldChat) post(message Message) {
 	w.NextMessageID++
 	message.ID = w.NextMessageID

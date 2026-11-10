@@ -11,6 +11,7 @@ import (
 const (
 	ReportGuild       = "guild"
 	ReportApplication = "application"
+	ReportWorldLine   = "world_message"
 )
 
 type reportBody struct {
@@ -18,6 +19,7 @@ type reportBody struct {
 	AbuseType   report.AbuseType `json:"abuse_type"`
 	GuildID     string           `json:"guild_id"`
 	ApplicantID string           `json:"applicant_id"`
+	MessageID   int64            `json:"message_id"`
 }
 
 type reportReply struct {
@@ -49,6 +51,18 @@ func describeApplication(state *guild.State, reporter, applicantID string) (stri
 	return "", refusalFor(guild.PlayerNotFound, fmt.Sprintf("no application from %q", applicantID))
 }
 
+func describeWorldLine(state *guild.State, reporter string, messageID int64) (string, error) {
+	line, found := state.World.Message(messageID)
+	if !found {
+		return "", refusalFor(guild.ChatMessageNotFound, fmt.Sprintf("no world chat line %d", messageID))
+	}
+	if line.PlayerID == reporter {
+		return "", refusalFor(guild.InvalidArgument, "this is your own line")
+	}
+	return fmt.Sprintf("World Chat Line: %d, Player Name: %s, Id: %s, Text: %s", line.ID, line.PlayerName,
+		line.PlayerID, line.Text), nil
+}
+
 func (s *Server) reportAbuse(w http.ResponseWriter, r *http.Request, player string) {
 	if !s.allow(w, s.limiters.reportsByPlayer, player) {
 		return
@@ -62,13 +76,15 @@ func (s *Server) reportAbuse(w http.ResponseWriter, r *http.Request, player stri
 		return
 	}
 	var description string
-	err := refusalFor(guild.InvalidArgument, "kind must be guild or application")
+	err := refusalFor(guild.InvalidArgument, "kind must be guild, application or world_message")
 	s.guilds.View(func(state *guild.State) {
 		switch request.Kind {
 		case ReportGuild:
 			description, err = describeGuild(state, request.GuildID)
 		case ReportApplication:
 			description, err = describeApplication(state, player, request.ApplicantID)
+		case ReportWorldLine:
+			description, err = describeWorldLine(state, player, request.MessageID)
 		}
 	})
 	if err != nil {

@@ -3,6 +3,8 @@ package api
 import (
 	"encoding/json"
 	"net/http"
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 	"time"
@@ -90,4 +92,35 @@ func TestWorldChatPostsAreLimitedButPollingIsNot(t *testing.T) {
 	expectTooMany(t, response, body)
 	response, _, body = h.world("local", token, `{"after":0}`)
 	expectStatus(t, response, body, http.StatusOK)
+}
+
+func TestWorldChatLinesCanBeReportedByOthers(t *testing.T) {
+	h := newHarness(t)
+	varric := h.guildPlayer("other", "Varric", 7, 0)
+	hawke := h.guildPlayer("local", "Hawke", 9, 0)
+	response, _, body := h.world("other", varric, `{"text":"buy gold at my site"}`)
+	expectStatus(t, response, body, http.StatusOK)
+
+	response, body = h.do("POST", "/v1/players/local/reports", hawke, "",
+		`{"kind":"world_message","abuse_type":"OTHER","message_id":1}`)
+	expectStatus(t, response, body, http.StatusOK)
+	response, body = h.do("POST", "/v1/players/local/reports", hawke, "",
+		`{"kind":"world_message","abuse_type":"OTHER","message_id":7}`)
+	expectStatus(t, response, body, http.StatusUnprocessableEntity)
+	if !strings.Contains(body, `"code":"CHAT_MESSAGE_NOT_FOUND"`) {
+		t.Fatalf("body = %s", body)
+	}
+	response, body = h.do("POST", "/v1/players/other/reports", varric, "",
+		`{"kind":"world_message","abuse_type":"OTHER","message_id":1}`)
+	expectStatus(t, response, body, http.StatusUnprocessableEntity)
+
+	stored, err := os.ReadFile(filepath.Join(h.dir, "reports.jsonl"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	lines := strings.Split(strings.TrimSpace(string(stored)), "\n")
+	if len(lines) != 1 || !strings.Contains(lines[0], `"reporter":"local"`) ||
+		!strings.Contains(lines[0], "World Chat Line: 1, Player Name: Varric, Id: other, Text: buy gold at my site") {
+		t.Fatalf("reports = %s", stored)
+	}
 }

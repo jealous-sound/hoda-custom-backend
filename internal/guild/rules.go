@@ -61,6 +61,7 @@ const (
 	PendingApplications    Code = "GUILD_CAN_NOT_CHANGE_STATUS_WITH_PENDING_APPLICATIONS"
 	ChatMessageTooLong     Code = "CHAT_MESSAGE_TOO_LONG"
 	ChatLevelTooLow        Code = "CHAT_LEVEL_TOO_LOW"
+	ChatMessageNotFound    Code = "CHAT_MESSAGE_NOT_FOUND"
 )
 
 type Refusal struct {
