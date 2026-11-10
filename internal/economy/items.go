@@ -105,6 +105,10 @@ func (p *player) UnlockGearPrestige(request GearRequest) (BattleResult, error) {
 	return BattleResult{}, nil
 }
 
+func (p *player) takesTome(definition catalog.Hero) bool {
+	return definition.Rarity < catalog.RarityMythic && p.catalog.Battle.HasPrestigeGearSlot(definition.ID)
+}
+
 func (p *player) AscendHero(request GearRequest) (BattleResult, error) {
 	hero, ok := p.rosterHero(request.InstanceID)
 	if !ok {
@@ -112,7 +116,7 @@ func (p *player) AscendHero(request GearRequest) (BattleResult, error) {
 	}
 	name, _ := hero["id"].(string)
 	definition, known := p.catalog.Hero(name)
-	if ascended, _ := hero["ascended"].(bool); ascended || !known || definition.Rarity != catalog.RarityLegendary {
+	if ascended, _ := hero["ascended"].(bool); ascended || !known || !p.takesTome(definition) {
 		return BattleResult{}, refuse(Unavailable, "hero %d cannot ascend", request.InstanceID)
 	}
 	gear, err := p.gearSection()

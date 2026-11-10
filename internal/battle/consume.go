@@ -10,6 +10,7 @@ const (
 	ascendedLevelCap        = 100
 	ascensionBonusLevels    = 5
 	ascensionBonusGearSlots = 1
+	prestigeMinGearSlots    = 4
 	baseCritChance          = 1
 	unlockPromotion         = 1
 	unlockCrit              = 3

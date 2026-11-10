@@ -207,6 +207,11 @@ func (d *Data) Knows(id string) bool {
 	return ok
 }
 
+func (d *Data) HasPrestigeGearSlot(id string) bool {
+	c, ok := d.characters[id]
+	return ok && c.prestige && c.gearSlots >= prestigeMinGearSlots
+}
+
 func (d *Data) RuneKnown(id string) bool {
 	_, ok := d.runesByID[id]
 	return ok

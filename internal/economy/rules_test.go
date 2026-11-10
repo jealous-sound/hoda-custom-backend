@@ -301,12 +301,27 @@ func TestGearSellPrestigeAndAscension(t *testing.T) {
 	if number(t, doc, "account", "gems") != float64(200-c.GearPrestigeGems) {
 		t.Errorf("prestige charged %v", doc["account"])
 	}
-	if _, _, err := act(t, raw, &profile.ServerState{}, ActionAscend, `{"instance_id":1}`); refusalCode(err) != Unavailable {
-		t.Errorf("non-legendary ascension: %v", err)
+	for _, instance := range []string{`{"instance_id":1}`, `{"instance_id":2}`} {
+		doc, _ = mustAct(t, raw, &profile.ServerState{}, ActionAscend, instance)
+		if number(t, doc, "gear", "tomes") != 0 {
+			t.Errorf("ascension of %s kept the tome: %v", instance, doc["gear"])
+		}
 	}
-	doc, _ = mustAct(t, raw, &profile.ServerState{}, ActionAscend, `{"instance_id":2}`)
-	if number(t, doc, "gear", "tomes") != 0 {
-		t.Errorf("ascension kept the tome: %v", doc["gear"])
+}
+
+func TestOnlyGearWearersBelowMythicAscend(t *testing.T) {
+	for _, id := range []string{"UNIT_COMMONWHITEWISP", "UNIT_LEGENDARYWHITEWISP", "UNIT_GREYWARDENBANNER"} {
+		raw := gameProfile(t, func(doc map[string]any) {
+			roster := section(doc, "roster")
+			roster["additions"] = append(roster["additions"].([]any), map[string]any{
+				"id": id, "instance_id": 3, "tier": "IV", "level": 1, "xp": 0, "ascended": false, "consume_xp": 0,
+			})
+			roster["next_instance_id"] = 4
+		})
+		_, _, err := act(t, raw, &profile.ServerState{}, ActionAscend, `{"instance_id":3}`)
+		if refusalCode(err) != Unavailable || !strings.Contains(err.Error(), "cannot ascend") {
+			t.Errorf("%s was not refused ascension: %v", id, err)
+		}
 	}
 }
 
