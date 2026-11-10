@@ -60,6 +60,7 @@ const (
 	ApplicationsFull       Code = "GUILD_APPLICATIONS_FULL"
 	PendingApplications    Code = "GUILD_CAN_NOT_CHANGE_STATUS_WITH_PENDING_APPLICATIONS"
 	ChatMessageTooLong     Code = "CHAT_MESSAGE_TOO_LONG"
+	ChatLevelTooLow        Code = "CHAT_LEVEL_TOO_LOW"
 )
 
 type Refusal struct {
@@ -462,17 +463,11 @@ func (s *State) Say(p Player, text string, now int64) error {
 	if err != nil {
 		return err
 	}
-	text = strings.TrimSpace(text)
-	if text == "" {
-		return refuse(InvalidArgument, "message is empty")
+	line, err := chatLine(text)
+	if err != nil {
+		return err
 	}
-	if utf8.RuneCountInString(text) > MaxChatRunes {
-		return refuse(ChatMessageTooLong, "message is longer than %d characters", MaxChatRunes)
-	}
-	if hasMarkup(text) {
-		return refuse(InvalidArgument, "message cannot contain < or >")
-	}
-	g.post(Message{Time: now, Text: text, PlayerID: p.ID, PlayerName: m.Name, Level: m.Level, Rank: m.Rank})
+	g.post(Message{Time: now, Text: line, PlayerID: p.ID, PlayerName: m.Name, Level: m.Level, Rank: m.Rank})
 	return nil
 }
 

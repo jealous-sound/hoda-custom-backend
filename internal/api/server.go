@@ -82,6 +82,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /v1/players/{player}/guild/members/{member}/duel", s.authorized(s.duelOpponent))
 	mux.HandleFunc("GET /v1/players/{player}/guild/onslaught", s.authorized(s.onslaughtStandings))
 	mux.HandleFunc("POST /v1/players/{player}/guild/onslaught/claim", s.authorized(s.claimOnslaught))
+	mux.HandleFunc("POST /v1/players/{player}/chat/world/messages", s.authorized(s.worldMessages))
 	mux.HandleFunc("POST /v1/players/{player}/reports", s.authorized(s.reportAbuse))
 	mux.HandleFunc("POST /v1/players/{player}/guilds", s.authorized(s.createGuild))
 	mux.HandleFunc("GET /v1/players/{player}/guilds/recommended", s.authorized(s.recommendedGuilds))
