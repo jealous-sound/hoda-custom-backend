@@ -262,18 +262,28 @@ func TestFullRosterIsRefused(t *testing.T) {
 	}
 }
 
-func TestChampionPityGuaranteesALegendary(t *testing.T) {
+func TestPityGuaranteesALegendary(t *testing.T) {
 	c := mustCatalog(t)
-	champion, _ := c.Pack("champion")
+	pack := &catalog.Pack{HeroCount: 1, LegendaryPity: 4, MinimumRarity: catalog.RarityRare}
+	pack.Weights[catalog.RarityRare] = 1
 	for seed := uint32(1); seed <= 20; seed++ {
-		raw := fixture{gems: 100, sinceLegendary: champion.LegendaryPity - 1,
-			openedByPack: [4]int{0, 0, champion.LegendaryPity - 1, 0}}.profile(t)
-		after, granted := buy(t, raw, &profile.ServerState{StoreRNG: seed}, PurchaseRequest{
-			Pack: "champion", Currency: catalog.CurrencyGems, Price: 30,
-		})
-		hero, _ := c.Hero(granted.Heroes[0].ID)
-		if hero.Rarity != catalog.RarityLegendary || after.Store.SinceLegendary != 0 {
-			t.Fatalf("seed %d: %s is %d, since legendary %d", seed, hero.ID, hero.Rarity, after.Store.SinceLegendary)
+		r := rng{state: seed}
+		due, ok := rollHeroes(c, pack, pack.LegendaryPity-1, nil, &r)
+		if !ok || due.rarities[0] != catalog.RarityLegendary || due.nextPity != 0 {
+			t.Fatalf("seed %d: the pack that was due rolled rarity %d, pity %d", seed, due.rarities[0], due.nextPity)
+		}
+		r = rng{state: seed}
+		early, _ := rollHeroes(c, pack, 0, nil, &r)
+		if early.rarities[0] != catalog.RarityRare || early.nextPity != 1 {
+			t.Fatalf("seed %d: the first pack rolled rarity %d, pity %d", seed, early.rarities[0], early.nextPity)
+		}
+	}
+}
+
+func TestNoShippedPackPromisesALegendaryByPity(t *testing.T) {
+	for _, pack := range mustCatalog(t).Packs {
+		if pack.LegendaryPity != 0 {
+			t.Errorf("pack %s has a Legendary pity of %d", pack.ID, pack.LegendaryPity)
 		}
 	}
 }
@@ -420,5 +430,39 @@ func TestRefillTopsUpForGems(t *testing.T) {
 	}
 	if _, err := Refill(c, fixture{gems: 10}.profile(t), &profile.ServerState{}, RefillStamina, springDay); refusalCode(err) != AlreadyFull {
 		t.Errorf("full stamina refill: %v", err)
+	}
+}
+
+func TestLegendaryRollsSkipHeroesAlreadyOwned(t *testing.T) {
+	c := mustCatalog(t)
+	legends := c.RarityPool(catalog.RarityLegendary)
+	if len(legends) < 3 {
+		t.Fatalf("only %d Legendary heroes in the pool", len(legends))
+	}
+	pack := &catalog.Pack{HeroCount: 2}
+	pack.Weights[catalog.RarityLegendary] = 1
+	missing := legends[len(legends)-1]
+	owned := map[int]bool{}
+	for _, hero := range legends[:len(legends)-1] {
+		owned[hero] = true
+	}
+	repeated := false
+	for seed := uint32(1); seed <= 40; seed++ {
+		r := rng{state: seed}
+		roll, ok := rollHeroes(c, pack, 0, owned, &r)
+		if !ok || roll.heroes[0] != missing {
+			t.Fatalf("seed %d rolled %v, want the one Legendary not owned (%d) first", seed, roll.heroes, missing)
+		}
+		if c.Heroes[roll.heroes[1]].Rarity != catalog.RarityLegendary {
+			t.Fatalf("seed %d: second hero is not Legendary", seed)
+		}
+		repeated = repeated || roll.heroes[1] != missing
+	}
+	if !repeated {
+		t.Error("with every Legendary owned or rolled, the pack never fell back to the whole pool")
+	}
+	wisps := &catalog.Pack{HeroCount: 1, PoolTag: "WISP"}
+	if sparesDuplicates(wisps, catalog.RarityLegendary) || sparesDuplicates(pack, catalog.RarityEpic) {
+		t.Error("only Legendary rolls from the open pool spare duplicates")
 	}
 }

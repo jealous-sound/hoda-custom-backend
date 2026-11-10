@@ -132,9 +132,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 0,
       "rune_min_rarity": 1,
@@ -176,11 +176,11 @@
       "guaranteed_epic": 0,
       "legendary_pity": 0,
       "weights": {
-        "Common": 7500,
-        "Uncommon": 2000,
-        "Rare": 400,
-        "Epic": 90,
-        "Legendary": 10
+        "Common": 5500,
+        "Uncommon": 3800,
+        "Rare": 650,
+        "Epic": 50,
+        "Legendary": 0
       },
       "rune_chance_pct": 15,
       "rune_min_rarity": 1,
@@ -222,10 +222,10 @@
       "legendary_pity": 0,
       "weights": {
         "Common": 0,
-        "Uncommon": 7000,
-        "Rare": 2200,
-        "Epic": 700,
-        "Legendary": 100
+        "Uncommon": 6000,
+        "Rare": 3600,
+        "Epic": 400,
+        "Legendary": 0
       },
       "rune_chance_pct": 30,
       "rune_min_rarity": 2,
@@ -258,7 +258,7 @@
       ],
       "bullets": [
         {
-          "text_key": "HODA_STORE_BULLET_LEGENDARY_BY_FOURTH",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 5
         }
       ],
@@ -269,13 +269,13 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 4,
+      "legendary_pity": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -307,7 +307,7 @@
         },
         {
           "text_key": "HODA_STORE_BULLET_GRAND_CHAMPION",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "schedule": null,
@@ -315,15 +315,15 @@
       "opened_counter": 3,
       "hero_count": 10,
       "minimum_rarity": "Rare",
-      "guaranteed_legendary": 2,
+      "guaranteed_legendary": 0,
       "guaranteed_epic": 3,
       "legendary_pity": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6000,
-        "Epic": 3200,
-        "Legendary": 800
+        "Rare": 8000,
+        "Epic": 1850,
+        "Legendary": 150
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -364,10 +364,10 @@
       "legendary_pity": 0,
       "weights": {
         "Common": 0,
-        "Uncommon": 7000,
-        "Rare": 2200,
-        "Epic": 700,
-        "Legendary": 100
+        "Uncommon": 6000,
+        "Rare": 3600,
+        "Epic": 400,
+        "Legendary": 0
       },
       "rune_chance_pct": 20,
       "rune_min_rarity": 1,
@@ -410,9 +410,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 2,
@@ -454,9 +454,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -492,15 +492,15 @@
       "opened_counter": 3,
       "hero_count": 10,
       "minimum_rarity": "Epic",
-      "guaranteed_legendary": 3,
+      "guaranteed_legendary": 1,
       "guaranteed_epic": 0,
       "legendary_pity": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
         "Rare": 0,
-        "Epic": 8500,
-        "Legendary": 1500
+        "Epic": 9700,
+        "Legendary": 300
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 4,
@@ -529,7 +529,7 @@
       ],
       "bullets": [
         {
-          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
+          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 5
         }
       ],
@@ -540,13 +540,13 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 6,
+      "legendary_pity": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 50,
       "rune_min_rarity": 2,
@@ -635,9 +635,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 40,
       "rune_min_rarity": 3,
@@ -679,9 +679,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -953,9 +953,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 0,
       "rune_min_rarity": 1,
@@ -997,9 +997,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 0,
       "rune_min_rarity": 1,
@@ -1041,9 +1041,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 0,
       "rune_min_rarity": 1,
@@ -1086,8 +1086,8 @@
         "Common": 0,
         "Uncommon": 0,
         "Rare": 0,
-        "Epic": 8500,
-        "Legendary": 1500
+        "Epic": 9700,
+        "Legendary": 300
       },
       "rune_chance_pct": 0,
       "rune_min_rarity": 1,
@@ -1127,11 +1127,11 @@
       "guaranteed_epic": 0,
       "legendary_pity": 0,
       "weights": {
-        "Common": 7500,
-        "Uncommon": 2000,
-        "Rare": 400,
-        "Epic": 90,
-        "Legendary": 10
+        "Common": 5500,
+        "Uncommon": 3800,
+        "Rare": 650,
+        "Epic": 50,
+        "Legendary": 0
       },
       "rune_chance_pct": 40,
       "rune_min_rarity": 3,
@@ -1178,9 +1178,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 40,
       "rune_min_rarity": 3,
@@ -1226,9 +1226,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 40,
       "rune_min_rarity": 3,
@@ -1274,9 +1274,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 40,
       "rune_min_rarity": 3,
@@ -1322,9 +1322,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 40,
       "rune_min_rarity": 3,
@@ -1370,9 +1370,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 40,
       "rune_min_rarity": 3,
@@ -1418,9 +1418,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 40,
       "rune_min_rarity": 3,
@@ -1466,9 +1466,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 40,
       "rune_min_rarity": 3,
@@ -1513,9 +1513,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 0,
       "rune_min_rarity": 1,
@@ -1560,9 +1560,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 0,
       "rune_min_rarity": 1,
@@ -1590,7 +1590,7 @@
       "bullets": [
         {
           "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "schedule": null,
@@ -1604,9 +1604,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -1648,9 +1648,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6000,
-        "Epic": 3200,
-        "Legendary": 800
+        "Rare": 8000,
+        "Epic": 1850,
+        "Legendary": 150
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -1686,15 +1686,15 @@
       "opened_counter": 3,
       "hero_count": 5,
       "minimum_rarity": "Epic",
-      "guaranteed_legendary": 2,
+      "guaranteed_legendary": 1,
       "guaranteed_epic": 2,
       "legendary_pity": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
         "Rare": 0,
-        "Epic": 8500,
-        "Legendary": 1500
+        "Epic": 9700,
+        "Legendary": 300
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -1730,15 +1730,15 @@
       "opened_counter": 3,
       "hero_count": 10,
       "minimum_rarity": "Epic",
-      "guaranteed_legendary": 4,
+      "guaranteed_legendary": 2,
       "guaranteed_epic": 2,
       "legendary_pity": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
         "Rare": 0,
-        "Epic": 8500,
-        "Legendary": 1500
+        "Epic": 9700,
+        "Legendary": 300
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -1766,7 +1766,7 @@
       "bullets": [
         {
           "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
-          "rarity": 5
+          "rarity": 4
         }
       ],
       "schedule": null,
@@ -1774,15 +1774,15 @@
       "opened_counter": 3,
       "hero_count": 3,
       "minimum_rarity": "Rare",
-      "guaranteed_legendary": 1,
-      "guaranteed_epic": 0,
+      "guaranteed_legendary": 0,
+      "guaranteed_epic": 1,
       "legendary_pity": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -1827,9 +1827,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -1874,9 +1874,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -1921,9 +1921,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -1968,9 +1968,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -2015,9 +2015,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -2062,9 +2062,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -2109,9 +2109,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -2156,9 +2156,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -2203,9 +2203,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -2250,9 +2250,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -2297,9 +2297,9 @@
       "weights": {
         "Common": 0,
         "Uncommon": 0,
-        "Rare": 6600,
-        "Epic": 2700,
-        "Legendary": 700
+        "Rare": 8400,
+        "Epic": 1500,
+        "Legendary": 100
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,

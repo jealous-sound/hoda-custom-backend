@@ -11,6 +11,7 @@ const (
 	gearOutputShift         = 8
 	percent                 = 100
 	uniqueHeroRerolls       = 32
+	noDuplicateRarity       = catalog.RarityLegendary
 	noRoll                  = -1
 )
 
@@ -79,17 +80,6 @@ func slotRarity(pack *catalog.Pack, rolledSlot int, pity bool, r *rng) catalog.R
 	return rollRarity(pack, r)
 }
 
-func pickHero(c *catalog.Catalog, pack *catalog.Pack, rarity catalog.Rarity, r *rng) int {
-	pool := c.RarityPool(rarity)
-	if pack.PoolTag != "" {
-		pool = c.TaggedPool(pack.PoolTag, rarity)
-	}
-	if len(pool) == 0 {
-		return noRoll
-	}
-	return pool[r.below(len(pool))]
-}
-
 func alreadyRolled(hero int, rolled []int) bool {
 	for _, previous := range rolled {
 		if previous == hero {
@@ -99,10 +89,43 @@ func alreadyRolled(hero int, rolled []int) bool {
 	return false
 }
 
-func rollPackHero(c *catalog.Catalog, pack *catalog.Pack, rarity catalog.Rarity, rolled []int, r *rng) int {
-	hero := pickHero(c, pack, rarity, r)
+func sparesDuplicates(pack *catalog.Pack, rarity catalog.Rarity) bool {
+	return rarity == noDuplicateRarity && pack.PoolTag == ""
+}
+
+func notYetOwned(pool []int, owned map[int]bool, rolled []int) []int {
+	fresh := make([]int, 0, len(pool))
+	for _, hero := range pool {
+		if !owned[hero] && !alreadyRolled(hero, rolled) {
+			fresh = append(fresh, hero)
+		}
+	}
+	return fresh
+}
+
+func pickHero(
+	c *catalog.Catalog, pack *catalog.Pack, rarity catalog.Rarity, owned map[int]bool, rolled []int, r *rng,
+) int {
+	pool := c.RarityPool(rarity)
+	if pack.PoolTag != "" {
+		pool = c.TaggedPool(pack.PoolTag, rarity)
+	} else if sparesDuplicates(pack, rarity) {
+		if fresh := notYetOwned(pool, owned, rolled); len(fresh) > 0 {
+			pool = fresh
+		}
+	}
+	if len(pool) == 0 {
+		return noRoll
+	}
+	return pool[r.below(len(pool))]
+}
+
+func rollPackHero(
+	c *catalog.Catalog, pack *catalog.Pack, rarity catalog.Rarity, owned map[int]bool, rolled []int, r *rng,
+) int {
+	hero := pickHero(c, pack, rarity, owned, rolled, r)
 	for attempt := 0; pack.UniqueHeroes && attempt < uniqueHeroRerolls && alreadyRolled(hero, rolled); attempt++ {
-		hero = pickHero(c, pack, rarity, r)
+		hero = pickHero(c, pack, rarity, owned, rolled, r)
 	}
 	return hero
 }
@@ -114,7 +137,9 @@ type heroRoll struct {
 	tracksPity bool
 }
 
-func rollHeroes(c *catalog.Catalog, pack *catalog.Pack, sinceLegendary int, r *rng) (heroRoll, bool) {
+func rollHeroes(
+	c *catalog.Catalog, pack *catalog.Pack, sinceLegendary int, owned map[int]bool, r *rng,
+) (heroRoll, bool) {
 	roll := heroRoll{tracksPity: pack.LegendaryPity > 0, nextPity: sinceLegendary}
 	for i := 0; i < pack.HeroCount; i++ {
 		var hero int
@@ -128,7 +153,7 @@ func rollHeroes(c *catalog.Catalog, pack *catalog.Pack, sinceLegendary int, r *r
 		} else {
 			pity := roll.tracksPity && roll.nextPity >= pack.LegendaryPity-1
 			rarity = slotRarity(pack, i-len(pack.FixedHeroes), pity, r)
-			hero = rollPackHero(c, pack, rarity, roll.heroes, r)
+			hero = rollPackHero(c, pack, rarity, owned, roll.heroes, r)
 		}
 		if hero == noRoll {
 			return roll, false

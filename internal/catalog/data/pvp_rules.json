@@ -604,10 +604,11 @@
       "gems": 100,
       "prizes": [
        {
-        "kind": "unit",
-        "id": "UNIT_NIGHTMARE",
+        "kind": "voucher",
+        "id": "iron",
         "count": 1,
-        "icon": "tex.c_nightmare_t1_pt"
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        },
        {
         "kind": "unit",
@@ -1482,10 +1483,11 @@
       "gems": 75,
       "prizes": [
        {
-        "kind": "unit",
-        "id": "UNIT_ARCHDEMONURTHEMIEL",
+        "kind": "voucher",
+        "id": "iron",
         "count": 1,
-        "icon": "tex.c_archdemonurthemiel_t1_pt"
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        },
        {
         "kind": "unit",
@@ -1922,10 +1924,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 1,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      }
@@ -2819,10 +2821,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 1,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      }
@@ -2853,10 +2855,11 @@
         "icon": "tex.hm_sw_imperialarchon_t1_pt"
        },
        {
-        "kind": "unit",
-        "id": "UNIT_PARAGONCARIDIN",
+        "kind": "voucher",
+        "id": "iron",
         "count": 1,
-        "icon": "tex.c_caridin_t1_pt"
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -2879,10 +2882,11 @@
         "icon": "tex.hm_sw_imperialarchon_t1_pt"
        },
        {
-        "kind": "unit",
-        "id": "UNIT_PARAGONCARIDIN",
+        "kind": "voucher",
+        "id": "iron",
         "count": 1,
-        "icon": "tex.c_caridin_t1_pt"
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        },
        {
         "kind": "unit",
@@ -2905,10 +2909,11 @@
         "icon": "tex.hm_sw_imperialarchon_t1_pt"
        },
        {
-        "kind": "unit",
-        "id": "UNIT_PARAGONCARIDIN",
+        "kind": "voucher",
+        "id": "iron",
         "count": 1,
-        "icon": "tex.c_caridin_t1_pt"
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        },
        {
         "kind": "unit",
@@ -2931,10 +2936,11 @@
       "gems": 30,
       "prizes": [
        {
-        "kind": "unit",
-        "id": "UNIT_PARAGONCARIDIN",
+        "kind": "voucher",
+        "id": "iron",
         "count": 1,
-        "icon": "tex.c_caridin_t1_pt"
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        },
        {
         "kind": "unit",
@@ -3266,10 +3272,11 @@
       "gems": 75,
       "prizes": [
        {
-        "kind": "unit",
-        "id": "UNIT_GARAHEL",
+        "kind": "voucher",
+        "id": "iron",
         "count": 1,
-        "icon": "tex.em_bw_garahel_t1_pt"
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        },
        {
         "kind": "unit",
@@ -3757,10 +3764,11 @@
       "gems": 175,
       "prizes": [
        {
-        "kind": "unit",
-        "id": "UNIT_THEELDERONE",
+        "kind": "voucher",
+        "id": "iron",
         "count": 1,
-        "icon": "tex.c_theelderone_t1_pt"
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        },
        {
         "kind": "unit",
@@ -4208,10 +4216,11 @@
       "gems": 175,
       "prizes": [
        {
-        "kind": "unit",
-        "id": "UNIT_THEELDERONE",
+        "kind": "voucher",
+        "id": "iron",
         "count": 1,
-        "icon": "tex.c_theelderone_t1_pt"
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        },
        {
         "kind": "unit",
@@ -4550,10 +4559,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 6,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -4565,10 +4574,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 5,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -4580,10 +4589,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 4,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -4595,10 +4604,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 3,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -4610,10 +4619,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 2,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -4625,10 +4634,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 1,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -4640,10 +4649,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 1,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -4655,10 +4664,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 1,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5186,10 +5195,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 7,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5201,10 +5210,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 6,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5216,10 +5225,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 6,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5231,10 +5240,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 5,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5246,10 +5255,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 5,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5261,10 +5270,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 4,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5276,10 +5285,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 4,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5291,10 +5300,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 3,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5306,10 +5315,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 3,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5321,10 +5330,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 2,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5336,10 +5345,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 1,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5887,10 +5896,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 7,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5902,10 +5911,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 6,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5917,10 +5926,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 6,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5932,10 +5941,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 5,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5947,10 +5956,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 5,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5962,10 +5971,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 4,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5977,10 +5986,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 4,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -5992,10 +6001,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 3,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -6007,10 +6016,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 3,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -6022,10 +6031,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 2,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
@@ -6037,10 +6046,10 @@
       "prizes": [
        {
         "kind": "voucher",
-        "id": "bloodstone",
+        "id": "iron",
         "count": 1,
-        "icon": "cache:tex.Voucher_BloodstonePack",
-        "index": 4
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
        }
       ]
      },
