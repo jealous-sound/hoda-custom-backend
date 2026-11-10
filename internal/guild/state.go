@@ -56,6 +56,7 @@ type Message struct {
 	Level      int          `json:"player_level,omitempty"`
 	Rank       Rank         `json:"player_rank"`
 	Title      string       `json:"title,omitempty"`
+	GuildName  string       `json:"guild_name,omitempty"`
 	Params     []EventParam `json:"params,omitempty"`
 }
 
@@ -102,6 +103,7 @@ type State struct {
 	Guilds     []*Guild            `json:"guilds"`
 	Notices    map[string][]Notice `json:"notices"`
 	Onslaughts []*Onslaught        `json:"onslaughts"`
+	World      WorldChat           `json:"world"`
 }
 
 func newState() *State {
@@ -123,7 +125,7 @@ func (s *State) normalize() {
 func (s *State) clone() *State {
 	copied := &State{
 		Guilds: make([]*Guild, 0, len(s.Guilds)), Notices: make(map[string][]Notice, len(s.Notices)),
-		Onslaughts: make([]*Onslaught, 0, len(s.Onslaughts)),
+		Onslaughts: make([]*Onslaught, 0, len(s.Onslaughts)), World: s.World.clone(),
 	}
 	for _, g := range s.Guilds {
 		copied.Guilds = append(copied.Guilds, g.clone())
@@ -234,18 +236,11 @@ func (g *Guild) leader() int {
 }
 
 func (g *Guild) LastMessageID() int64 {
-	if len(g.Messages) == 0 {
-		return 0
-	}
-	return g.Messages[len(g.Messages)-1].ID
+	return lastMessageID(g.Messages)
 }
 
 func (g *Guild) MessagesAfter(id int64) []Message {
-	start := slices.IndexFunc(g.Messages, func(m Message) bool { return m.ID > id })
-	if start < 0 {
-		return []Message{}
-	}
-	return slices.Clone(g.Messages[start:])
+	return messagesAfter(g.Messages, id)
 }
 
 func (g *Guild) MarkRead(playerID string, through int64) {
@@ -277,10 +272,7 @@ func (g *Guild) forget(playerID string) {
 func (g *Guild) post(message Message) {
 	g.NextMessageID++
 	message.ID = g.NextMessageID
-	g.Messages = append(g.Messages, message)
-	if extra := len(g.Messages) - MessageHistoryLimit; extra > 0 {
-		g.Messages = slices.Clone(g.Messages[extra:])
-	}
+	g.Messages = appendWithinLimit(g.Messages, message, MessageHistoryLimit)
 }
 
 func (g *Guild) postEvent(now int64, event string, params ...EventParam) {

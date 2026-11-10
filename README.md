@@ -70,6 +70,7 @@ The wire contract is shared with the client's `source/backend.c`; change both to
 | `POST` | `/v1/players/{id}/refills` | `{"request_id", "kind": "energy" or "stamina"}` |
 | `POST` | `/v1/players/{id}/actions` | `{"request_id", "action", ...}` |
 | | `/v1/players/{id}/guild…`, `/guilds…`, `/reports` | guilds, chat, Onslaught, duels and abuse reports; see `internal/api/server.go` |
+| `POST` | `/v1/players/{id}/chat/world/messages` | `{"after", "text"}` posts an optional line and answers `{"messages", "last_message_id"}` |
 
 Player routes need `Authorization: Bearer <token>`. Profile uploads, purchases, refills, actions and guild creation
 also need `If-Match: <revision>`. Calls that grant or spend answer `{"revision", "profile", "granted"}`, and the client
