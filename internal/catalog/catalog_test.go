@@ -83,27 +83,6 @@ func TestFlashPacksRotateOnePerPeriod(t *testing.T) {
 	}
 }
 
-func TestLimitedPacksOwnTheirCounter(t *testing.T) {
-	c := mustDefault(t)
-	owners := map[int]string{}
-	for _, pack := range c.Packs {
-		owners[pack.OpenedCounter] += pack.ID + " "
-	}
-	limited := 0
-	for _, pack := range c.Packs {
-		if pack.PurchaseLimit == 0 {
-			continue
-		}
-		limited++
-		if pack.OpenedCounter < SharedStoreCounterCount || owners[pack.OpenedCounter] != pack.ID+" " {
-			t.Errorf("limited pack %s shares counter %d with %s", pack.ID, pack.OpenedCounter, owners[pack.OpenedCounter])
-		}
-	}
-	if limited == 0 {
-		t.Error("no limited packs")
-	}
-}
-
 var clientDataSources = map[string]string{
 	"characters.json":     filepath.Join("client-additional-data", "characters.json"),
 	"battle_recipes.json": filepath.Join("tests", "golden", "battle_recipes.json"),

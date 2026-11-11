@@ -140,9 +140,6 @@ func (p *purchase) run(request PurchaseRequest) error {
 	if err != nil {
 		return err
 	}
-	if wallet.soldOut(p.pack) {
-		return refuse(Unavailable, "pack %s was already bought", p.pack.ID)
-	}
 	offer := wallet.activeOffer(p.pack)
 	if offer.Currency != request.Currency || offer.Price != request.Price {
 		return refuse(OfferChanged, "pack %s costs %d %s", p.pack.ID, offer.Price, offer.Currency)
@@ -238,21 +235,10 @@ func (p *purchase) loadWallet() (*wallet, error) {
 	if err == nil {
 		w.openedByPack, err = intArray(opened, "opened_by_pack")
 	}
-	if err != nil || !storeCounterCountValid(len(w.openedByPack)) {
+	if err != nil || len(w.openedByPack) != catalog.StoreCounterCount {
 		return nil, refuse(BadProfile, "store.opened_by_pack must hold %d counters", catalog.StoreCounterCount)
 	}
-	for len(w.openedByPack) < catalog.StoreCounterCount {
-		w.openedByPack = append(w.openedByPack, 0)
-	}
 	return w, nil
-}
-
-func storeCounterCountValid(saved int) bool {
-	return saved == catalog.SharedStoreCounterCount || saved == catalog.StoreCounterCount
-}
-
-func (w *wallet) soldOut(pack *catalog.Pack) bool {
-	return pack.PurchaseLimit > 0 && w.openedByPack[pack.OpenedCounter] >= int64(pack.PurchaseLimit)
 }
 
 func (w *wallet) activeOffer(pack *catalog.Pack) catalog.Offer {

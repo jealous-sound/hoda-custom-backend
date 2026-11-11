@@ -56,17 +56,16 @@ const (
 )
 
 const (
-	SharedStoreCounterCount = 4
-	StoreCounterCount       = 6
-	VoucherCapacity         = 16
-	heroWeightTotal         = 10000
-	maxHeroesPerPack        = 10
-	runePackSlotLimit       = 3
-	gearPackItemLimit       = 5
-	neverSoldHeroMark       = "BANNER"
-	defaultPoolExcluded     = "WISP"
-	overchargedRuneMark     = "-6-"
-	specialRuneMark         = "Special"
+	StoreCounterCount   = 4
+	VoucherCapacity     = 16
+	heroWeightTotal     = 10000
+	maxHeroesPerPack    = 10
+	runePackSlotLimit   = 3
+	gearPackItemLimit   = 5
+	neverSoldHeroMark   = "BANNER"
+	defaultPoolExcluded = "WISP"
+	overchargedRuneMark = "-6-"
+	specialRuneMark     = "Special"
 )
 
 type Offer struct {
@@ -93,14 +92,13 @@ type Rotation struct {
 }
 
 type Pack struct {
-	ID            string
-	Kind          PackKind
-	Paid          *Offer
-	Voucher       int
-	TutorialOnly  bool
-	Schedule      *Schedule
-	Rotation      *Rotation
-	PurchaseLimit int
+	ID           string
+	Kind         PackKind
+	Paid         *Offer
+	Voucher      int
+	TutorialOnly bool
+	Schedule     *Schedule
+	Rotation     *Rotation
 
 	OpenedCounter       int
 	HeroCount           int
@@ -280,7 +278,6 @@ type rawPack struct {
 		Group string `json:"group"`
 		Index int    `json:"index"`
 	} `json:"rotation"`
-	PurchaseLimit       int            `json:"purchase_limit"`
 	OpenedCounter       int            `json:"opened_counter"`
 	HeroCount           int            `json:"hero_count"`
 	MinimumRarity       string         `json:"minimum_rarity"`
@@ -504,11 +501,10 @@ func parseMonthDay(text string) (int, error) {
 
 func (c *Catalog) parsePack(raw rawPack, voucherIndex map[string]int) (Pack, error) {
 	pack := Pack{
-		ID:            raw.ID,
-		Kind:          PackKind(raw.Kind),
-		Voucher:       -1,
-		TutorialOnly:  raw.TutorialOnly,
-		PurchaseLimit: raw.PurchaseLimit,
+		ID:           raw.ID,
+		Kind:         PackKind(raw.Kind),
+		Voucher:      -1,
+		TutorialOnly: raw.TutorialOnly,
 	}
 	if pack.Kind == "" {
 		pack.Kind = KindHero
