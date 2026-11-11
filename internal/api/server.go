@@ -14,6 +14,7 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
 	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
+	"github.com/jealous-sound/hoda-custom-backend/internal/maintenance"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/report"
 	"github.com/jealous-sound/hoda-custom-backend/internal/session"
@@ -35,6 +36,8 @@ type Server struct {
 	limiters              limiters
 	battleSeeds           economy.SeedSource
 	clientUpdates         ClientUpdates
+	maintenance           *maintenance.Schedule
+	adminToken            string
 }
 
 type Config struct {
@@ -43,6 +46,8 @@ type Config struct {
 	Limits                Limits
 	BattleSeeds           economy.SeedSource
 	ClientUpdates         ClientUpdates
+	Maintenance           *maintenance.Schedule
+	AdminToken            string
 }
 
 func NewServer(
@@ -54,7 +59,7 @@ func NewServer(
 		reports: reports, now: now, log: log, openUnregistered: config.OpenUnregistered,
 		trustCloudflareHeader: config.TrustCloudflareHeader,
 		limiters:              newLimiters(config.Limits, now), battleSeeds: config.BattleSeeds,
-		clientUpdates: config.ClientUpdates,
+		clientUpdates: config.ClientUpdates, maintenance: config.Maintenance, adminToken: config.AdminToken,
 	}
 }
 
@@ -63,6 +68,9 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /healthz", s.health)
 	mux.HandleFunc("GET /v1/time", s.serverTime)
 	mux.HandleFunc("GET "+clientUpdatePath, s.clientRelease)
+	mux.HandleFunc("GET "+adminMaintenancePath, s.administered(s.showMaintenance))
+	mux.HandleFunc("PUT "+adminMaintenancePath, s.administered(s.scheduleMaintenance))
+	mux.HandleFunc("DELETE "+adminMaintenancePath, s.administered(s.cancelMaintenance))
 	mux.HandleFunc("POST /v1/players", s.createPlayer)
 	mux.HandleFunc("POST /v1/sessions", s.openSession)
 	mux.HandleFunc("GET /v1/players/{player}/profile", s.authorized(s.getProfile))

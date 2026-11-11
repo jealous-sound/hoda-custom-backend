@@ -35,6 +35,7 @@ const (
 	OfferChanged  RefusalCode = "offer_changed"
 	AlreadyFull   RefusalCode = "already_full"
 	BadProfile    RefusalCode = "bad_profile"
+	Maintenance   RefusalCode = "maintenance"
 )
 
 type Refusal struct {

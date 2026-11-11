@@ -22,6 +22,7 @@ type clientUpdateResponse struct {
 	Latest      string `json:"latest"`
 	Minimum     string `json:"minimum"`
 	DownloadURL string `json:"download_url"`
+	maintenanceResponse
 }
 
 type clientTooOldResponse struct {
@@ -38,7 +39,7 @@ func (s *Server) clientUpdate() clientUpdateResponse {
 	return clientUpdateResponse{
 		Latest:      clientversion.Newest(latest, minimum).String(),
 		Minimum:     minimum.String(),
-		DownloadURL: s.clientUpdates.DownloadURL,
+		DownloadURL: s.clientUpdates.DownloadURL, maintenanceResponse: s.maintenanceStatus(),
 	}
 }
 

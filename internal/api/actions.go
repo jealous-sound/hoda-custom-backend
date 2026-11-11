@@ -187,6 +187,9 @@ func (s *Server) playerAction(w http.ResponseWriter, r *http.Request, player str
 		}
 		duels := guildDuels{server: s, player: player, opponents: s.duelOpponents(body)}
 		return func(record *profile.Record) (any, error) {
+			if err := s.heldForMaintenance(request.Action); err != nil {
+				return nil, err
+			}
 			next, result, err := economy.ActWith(s.catalog, record.Profile, &record.Server, request.Action, body,
 				s.now(), economy.Env{Duels: duels, Seeds: s.battleSeeds})
 			if err != nil && !economy.CommittedRefusal(err) {
