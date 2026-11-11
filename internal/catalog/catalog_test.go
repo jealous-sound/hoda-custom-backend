@@ -31,8 +31,8 @@ func TestEmbeddedCatalogLoads(t *testing.T) {
 	if champion.Voucher < 0 || c.Vouchers[champion.Voucher] != "champion" {
 		t.Errorf("champion voucher = %d", champion.Voucher)
 	}
-	if c.FlashCount == 0 {
-		t.Error("no flash rotation packs")
+	if c.RotationDays == 0 {
+		t.Error("no rotation period")
 	}
 }
 
@@ -70,14 +70,37 @@ func TestSchedulesUseUTCAndWrapTheYear(t *testing.T) {
 func TestFlashPacksRotateOnePerPeriod(t *testing.T) {
 	c := mustDefault(t)
 	at := time.Unix(1_800_000_000, 0)
-	onSale := 0
+	onSale := map[string]int{}
 	for i := range c.Packs {
-		if c.Packs[i].FlashIndex >= 0 && c.PackOnSale(&c.Packs[i], at) {
-			onSale++
+		if rotation := c.Packs[i].Rotation; rotation != nil && c.PackOnSale(&c.Packs[i], at) {
+			onSale[rotation.Group]++
 		}
 	}
-	if onSale != 1 {
-		t.Errorf("%d flash packs on sale, want 1", onSale)
+	for _, group := range []string{"flash", "booster"} {
+		if onSale[group] != 1 {
+			t.Errorf("%d %s packs on sale, want 1", onSale[group], group)
+		}
+	}
+}
+
+func TestLimitedPacksOwnTheirCounter(t *testing.T) {
+	c := mustDefault(t)
+	owners := map[int]string{}
+	for _, pack := range c.Packs {
+		owners[pack.OpenedCounter] += pack.ID + " "
+	}
+	limited := 0
+	for _, pack := range c.Packs {
+		if pack.PurchaseLimit == 0 {
+			continue
+		}
+		limited++
+		if pack.OpenedCounter < SharedStoreCounterCount || owners[pack.OpenedCounter] != pack.ID+" " {
+			t.Errorf("limited pack %s shares counter %d with %s", pack.ID, pack.OpenedCounter, owners[pack.OpenedCounter])
+		}
+	}
+	if limited == 0 {
+		t.Error("no limited packs")
 	}
 }
 

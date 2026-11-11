@@ -197,6 +197,39 @@ func TestHeroPackChargesAndAddsHeroes(t *testing.T) {
 	}
 }
 
+func TestStarterPackSellsOnce(t *testing.T) {
+	server := &profile.ServerState{StoreRNG: 12345}
+	request := PurchaseRequest{Pack: "starter_conversion", Currency: catalog.CurrencyGems, Price: 121}
+	raw := fixture{gems: 1000}.profile(t)
+	next, _, err := Purchase(mustCatalog(t), raw, server, request, springDay)
+	if err != nil {
+		t.Fatalf("first purchase: %v", err)
+	}
+	if got := decode(t, next).Account.Gems; got != 879 {
+		t.Errorf("gems = %d, want 879", got)
+	}
+	if _, _, err := Purchase(mustCatalog(t), next, server, request, springDay); refusalCode(err) != Unavailable {
+		t.Errorf("second purchase = %v, want %s", err, Unavailable)
+	}
+}
+
+func TestSavedSharedCountersStillBuyPacks(t *testing.T) {
+	var doc map[string]any
+	if err := json.Unmarshal(fixture{gold: 1000}.profile(t), &doc); err != nil {
+		t.Fatal(err)
+	}
+	doc["store"].(map[string]any)["opened_by_pack"] = make([]int, catalog.SharedStoreCounterCount)
+	raw, err := json.Marshal(doc)
+	if err != nil {
+		t.Fatal(err)
+	}
+	server := &profile.ServerState{StoreRNG: 12345}
+	after, _ := buy(t, raw, server, PurchaseRequest{Pack: "recruit", Currency: catalog.CurrencyGold, Price: 350})
+	if len(after.Store.OpenedByPack) != catalog.StoreCounterCount {
+		t.Errorf("counters = %v, want %d of them", after.Store.OpenedByPack, catalog.StoreCounterCount)
+	}
+}
+
 func TestVoucherIsSpentBeforeCurrency(t *testing.T) {
 	c := mustCatalog(t)
 	recruit, _ := c.Pack("recruit")

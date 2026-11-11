@@ -423,95 +423,6 @@
       "gear_max_rarity": 3
     },
     {
-      "id": "commander",
-      "kind": "hero",
-      "name_key": "HODA_COMMANDER_PACK_NAME",
-      "info_key": "HODA_STORE_HERO_PACK_INFO_1_RARE",
-      "category": "UNITS",
-      "order": 70,
-      "header": "cache:tex.Store_HeaderBGGoldPack",
-      "icon": "cache:tex.Store_IconCommanderDuhaime",
-      "offers": [
-        {
-          "currency": "gems",
-          "price": 60
-        }
-      ],
-      "bullets": [
-        {
-          "text_key": "HODA_STORE_BULLET_CHANCE_AT",
-          "rarity": 5
-        }
-      ],
-      "schedule": null,
-      "rotation": null,
-      "opened_counter": 2,
-      "hero_count": 1,
-      "minimum_rarity": "Rare",
-      "guaranteed_legendary": 0,
-      "guaranteed_epic": 0,
-      "legendary_pity": 0,
-      "weights": {
-        "Common": 0,
-        "Uncommon": 0,
-        "Rare": 8400,
-        "Epic": 1500,
-        "Legendary": 100
-      },
-      "rune_chance_pct": 100,
-      "rune_min_rarity": 3,
-      "rune_max_rarity": 5,
-      "rune_count": 1,
-      "gear_chance_pct": 20,
-      "gear_min_rarity": 2,
-      "gear_max_rarity": 4
-    },
-    {
-      "id": "elite",
-      "kind": "hero",
-      "name_key": "HODA_ELITE_PACK_NAME",
-      "info_key": "HODA_STORE_HERO_PACK_INFO_10_EPIC",
-      "category": "UNITS",
-      "order": 80,
-      "header": "cache:tex.Store_HeaderBGSilverPack",
-      "icon": "cache:tex.Store_IconGreyWardenFiona",
-      "offers": [
-        {
-          "currency": "gems",
-          "price": 1280
-        }
-      ],
-      "bullets": [
-        {
-          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
-          "rarity": 5
-        }
-      ],
-      "schedule": null,
-      "rotation": null,
-      "opened_counter": 3,
-      "hero_count": 10,
-      "minimum_rarity": "Epic",
-      "guaranteed_legendary": 1,
-      "guaranteed_epic": 0,
-      "legendary_pity": 0,
-      "weights": {
-        "Common": 0,
-        "Uncommon": 0,
-        "Rare": 0,
-        "Epic": 9700,
-        "Legendary": 300
-      },
-      "rune_chance_pct": 100,
-      "rune_min_rarity": 4,
-      "rune_max_rarity": 5,
-      "rune_count": 10,
-      "gear_chance_pct": 50,
-      "gear_min_rarity": 3,
-      "gear_max_rarity": 5,
-      "header_tint": "#B070FF"
-    },
-    {
       "id": "iron",
       "kind": "hero",
       "name_key": "IRON_PACK_NAME",
@@ -670,7 +581,7 @@
       ],
       "schedule": null,
       "rotation": null,
-      "opened_counter": 2,
+      "opened_counter": 4,
       "hero_count": 3,
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
@@ -689,7 +600,8 @@
       "rune_count": 3,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "purchase_limit": 1
     },
     {
       "id": "starter_beasts",
@@ -710,7 +622,7 @@
       "bullets": [],
       "schedule": null,
       "rotation": null,
-      "opened_counter": 2,
+      "opened_counter": 5,
       "hero_count": 5,
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
@@ -733,7 +645,8 @@
       "fixed_heroes": [
         "UNIT_BARKSPAWN",
         "UNIT_VARTERRAL"
-      ]
+      ],
+      "purchase_limit": 1
     },
     {
       "id": "wisp",
@@ -940,10 +853,17 @@
         {
           "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
+        },
+        {
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
+          "rarity": 0
         }
       ],
       "schedule": null,
-      "rotation": null,
+      "rotation": {
+        "group": "booster",
+        "index": 0
+      },
       "opened_counter": 2,
       "hero_count": 1,
       "minimum_rarity": "Rare",
@@ -984,10 +904,17 @@
         {
           "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
+        },
+        {
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
+          "rarity": 0
         }
       ],
       "schedule": null,
-      "rotation": null,
+      "rotation": {
+        "group": "booster",
+        "index": 1
+      },
       "opened_counter": 2,
       "hero_count": 1,
       "minimum_rarity": "Rare",
@@ -1028,10 +955,17 @@
         {
           "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 4
+        },
+        {
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
+          "rarity": 0
         }
       ],
       "schedule": null,
-      "rotation": null,
+      "rotation": {
+        "group": "booster",
+        "index": 2
+      },
       "opened_counter": 2,
       "hero_count": 1,
       "minimum_rarity": "Rare",
@@ -1072,10 +1006,17 @@
         {
           "text_key": "HODA_STORE_BULLET_CHANCE_AT",
           "rarity": 5
+        },
+        {
+          "text_key": "HODA_STORE_BULLET_THIS_WEEK_ONLY",
+          "rarity": 0
         }
       ],
       "schedule": null,
-      "rotation": null,
+      "rotation": {
+        "group": "booster",
+        "index": 3
+      },
       "opened_counter": 2,
       "hero_count": 1,
       "minimum_rarity": "Epic",
@@ -1573,50 +1514,6 @@
       "gear_max_rarity": 3
     },
     {
-      "id": "heroic",
-      "kind": "hero",
-      "name_key": "MTX_PACK_HEROIC_PACK_NAME",
-      "info_key": "HODA_STORE_HERO_PACK_INFO_5_RARE",
-      "category": "FEATURED",
-      "order": 400,
-      "header": "cache:tex.Store_HeaderBGFeaturedPack",
-      "icon": "cache:tex.Store_IconGoldPack",
-      "offers": [
-        {
-          "currency": "gems",
-          "price": 150
-        }
-      ],
-      "bullets": [
-        {
-          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
-          "rarity": 4
-        }
-      ],
-      "schedule": null,
-      "rotation": null,
-      "opened_counter": 3,
-      "hero_count": 5,
-      "minimum_rarity": "Rare",
-      "guaranteed_legendary": 0,
-      "guaranteed_epic": 1,
-      "legendary_pity": 0,
-      "weights": {
-        "Common": 0,
-        "Uncommon": 0,
-        "Rare": 8400,
-        "Epic": 1500,
-        "Legendary": 100
-      },
-      "rune_chance_pct": 100,
-      "rune_min_rarity": 3,
-      "rune_max_rarity": 5,
-      "rune_count": 5,
-      "gear_chance_pct": 40,
-      "gear_min_rarity": 2,
-      "gear_max_rarity": 5
-    },
-    {
       "id": "legendary",
       "kind": "hero",
       "name_key": "MTX_PACK_LEGENDARY_PACK_NAME",
@@ -1651,50 +1548,6 @@
         "Rare": 8000,
         "Epic": 1850,
         "Legendary": 150
-      },
-      "rune_chance_pct": 100,
-      "rune_min_rarity": 3,
-      "rune_max_rarity": 5,
-      "rune_count": 5,
-      "gear_chance_pct": 40,
-      "gear_min_rarity": 2,
-      "gear_max_rarity": 5
-    },
-    {
-      "id": "ultra",
-      "kind": "hero",
-      "name_key": "MTX_PACK_ULTRA_PACK_NAME",
-      "info_key": "HODA_STORE_HERO_PACK_INFO_5_EPIC",
-      "category": "FEATURED",
-      "order": 420,
-      "header": "cache:tex.Store_HeaderBGFeaturedPack",
-      "icon": "cache:tex.PackPromo_Darkspawn",
-      "offers": [
-        {
-          "currency": "gems",
-          "price": 720
-        }
-      ],
-      "bullets": [
-        {
-          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
-          "rarity": 5
-        }
-      ],
-      "schedule": null,
-      "rotation": null,
-      "opened_counter": 3,
-      "hero_count": 5,
-      "minimum_rarity": "Epic",
-      "guaranteed_legendary": 1,
-      "guaranteed_epic": 2,
-      "legendary_pity": 0,
-      "weights": {
-        "Common": 0,
-        "Uncommon": 0,
-        "Rare": 0,
-        "Epic": 9700,
-        "Legendary": 300
       },
       "rune_chance_pct": 100,
       "rune_min_rarity": 3,
@@ -1744,50 +1597,6 @@
       "rune_min_rarity": 3,
       "rune_max_rarity": 5,
       "rune_count": 10,
-      "gear_chance_pct": 40,
-      "gear_min_rarity": 2,
-      "gear_max_rarity": 5
-    },
-    {
-      "id": "special",
-      "kind": "hero",
-      "name_key": "HODA_SPECIAL_PACK_NAME",
-      "info_key": "HODA_STORE_HERO_PACK_INFO_3_RARE",
-      "category": "FEATURED",
-      "order": 440,
-      "header": "cache:tex.Store_HeaderBGFeaturedPack",
-      "icon": "cache:tex.flashpack",
-      "offers": [
-        {
-          "currency": "gems",
-          "price": 275
-        }
-      ],
-      "bullets": [
-        {
-          "text_key": "FEATURED_INTERSTITIAL_GUARANTEED",
-          "rarity": 4
-        }
-      ],
-      "schedule": null,
-      "rotation": null,
-      "opened_counter": 3,
-      "hero_count": 3,
-      "minimum_rarity": "Rare",
-      "guaranteed_legendary": 0,
-      "guaranteed_epic": 1,
-      "legendary_pity": 0,
-      "weights": {
-        "Common": 0,
-        "Uncommon": 0,
-        "Rare": 8400,
-        "Epic": 1500,
-        "Legendary": 100
-      },
-      "rune_chance_pct": 100,
-      "rune_min_rarity": 3,
-      "rune_max_rarity": 5,
-      "rune_count": 3,
       "gear_chance_pct": 40,
       "gear_min_rarity": 2,
       "gear_max_rarity": 5

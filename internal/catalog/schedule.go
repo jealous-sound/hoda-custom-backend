@@ -5,12 +5,12 @@ import "time"
 const secondsPerDay = 24 * 60 * 60
 
 func (c *Catalog) PackOnSale(pack *Pack, now time.Time) bool {
-	if pack.FlashIndex >= 0 {
-		if c.FlashDays <= 0 || c.FlashCount <= 0 {
+	if pack.Rotation != nil {
+		if c.RotationDays <= 0 || pack.Rotation.Count <= 0 {
 			return false
 		}
-		period := now.Unix() / (int64(c.FlashDays) * secondsPerDay)
-		return int(period%int64(c.FlashCount)) == pack.FlashIndex
+		period := now.Unix() / (int64(c.RotationDays) * secondsPerDay)
+		return int(period%int64(pack.Rotation.Count)) == pack.Rotation.Index
 	}
 	if pack.Schedule == nil {
 		return true
