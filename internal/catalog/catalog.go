@@ -85,6 +85,12 @@ type Schedule struct {
 	EndMonthDay   int
 }
 
+type Rotation struct {
+	Group string
+	Index int
+	Count int
+}
+
 type Pack struct {
 	ID           string
 	Kind         PackKind
@@ -92,7 +98,7 @@ type Pack struct {
 	Voucher      int
 	TutorialOnly bool
 	Schedule     *Schedule
-	FlashIndex   int
+	Rotation     *Rotation
 
 	OpenedCounter       int
 	HeroCount           int
@@ -159,14 +165,13 @@ type ScriptedPack struct {
 }
 
 type Catalog struct {
-	Packs      []Pack
-	Vouchers   []string
-	FlashDays  int
-	FlashCount int
-	Heroes     []Hero
-	Runes      []Rune
-	Gear       []Gear
-	Scripted   map[string]ScriptedPack
+	Packs        []Pack
+	Vouchers     []string
+	RotationDays int
+	Heroes       []Hero
+	Runes        []Rune
+	Gear         []Gear
+	Scripted     map[string]ScriptedPack
 
 	Campaign         []CampaignMap
 	Nexus            []NexusEvent
@@ -270,7 +275,8 @@ type rawPack struct {
 		End   string `json:"end"`
 	} `json:"schedule"`
 	Rotation *struct {
-		Index int `json:"index"`
+		Group string `json:"group"`
+		Index int    `json:"index"`
 	} `json:"rotation"`
 	OpenedCounter       int            `json:"opened_counter"`
 	HeroCount           int            `json:"hero_count"`
@@ -376,11 +382,11 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		return nil, fmt.Errorf("store_packs.json version %d, want %d", store.Version, supportedStoreVersion)
 	}
 	c := &Catalog{
-		FlashDays: store.FlashDays,
-		Scripted:  map[string]ScriptedPack{},
-		packIndex: map[string]int{},
-		heroIndex: map[string]int{},
-		runeIndex: map[string]int{},
+		RotationDays: store.FlashDays,
+		Scripted:     map[string]ScriptedPack{},
+		packIndex:    map[string]int{},
+		heroIndex:    map[string]int{},
+		runeIndex:    map[string]int{},
 	}
 	if heroes.Version != supportedHeroPool {
 		return nil, fmt.Errorf("hero_pool.json version %d, want %d", heroes.Version, supportedHeroPool)
@@ -432,11 +438,19 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		if err != nil {
 			return nil, fmt.Errorf("pack %s: %w", raw.ID, err)
 		}
-		if pack.FlashIndex >= 0 {
-			c.FlashCount++
-		}
 		c.packIndex[pack.ID] = len(c.Packs)
 		c.Packs = append(c.Packs, pack)
+	}
+	rotationSizes := map[string]int{}
+	for _, pack := range c.Packs {
+		if pack.Rotation != nil {
+			rotationSizes[pack.Rotation.Group]++
+		}
+	}
+	for _, pack := range c.Packs {
+		if pack.Rotation != nil {
+			pack.Rotation.Count = rotationSizes[pack.Rotation.Group]
+		}
 	}
 	for id, scripted := range tutorial.Packs {
 		for _, hero := range scripted.Heroes {
@@ -491,7 +505,6 @@ func (c *Catalog) parsePack(raw rawPack, voucherIndex map[string]int) (Pack, err
 		Kind:         PackKind(raw.Kind),
 		Voucher:      -1,
 		TutorialOnly: raw.TutorialOnly,
-		FlashIndex:   -1,
 	}
 	if pack.Kind == "" {
 		pack.Kind = KindHero
@@ -526,7 +539,7 @@ func (c *Catalog) parsePack(raw rawPack, voucherIndex map[string]int) (Pack, err
 		pack.Schedule = &Schedule{StartMonthDay: start, EndMonthDay: end}
 	}
 	if raw.Rotation != nil {
-		pack.FlashIndex = raw.Rotation.Index
+		pack.Rotation = &Rotation{Group: raw.Rotation.Group, Index: raw.Rotation.Index}
 	}
 	switch pack.Kind {
 	case KindHero:
