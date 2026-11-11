@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/account"
+	"github.com/jealous-sound/hoda-custom-backend/internal/activity"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
 	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
@@ -18,9 +19,13 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/report"
 	"github.com/jealous-sound/hoda-custom-backend/internal/session"
+	"github.com/jealous-sound/hoda-custom-backend/internal/traffic"
 )
 
-const RevisionHeader = "X-Profile-Revision"
+const (
+	RevisionHeader = "X-Profile-Revision"
+	unmatchedRoute = "unmatched"
+)
 
 type Server struct {
 	accounts              *account.Store
@@ -38,6 +43,13 @@ type Server struct {
 	clientUpdates         ClientUpdates
 	maintenance           *maintenance.Schedule
 	adminToken            string
+	activity              *activity.Tracker
+	traffic               *traffic.Recorder
+	started               time.Time
+	revision              string
+	dataDir               string
+	dataUsage             measuredDataUsage
+	storedPlayers         storedPlayers
 }
 
 type Config struct {
@@ -48,18 +60,26 @@ type Config struct {
 	ClientUpdates         ClientUpdates
 	Maintenance           *maintenance.Schedule
 	AdminToken            string
+	Activity              *activity.Tracker
+	Revision              string
+	DataDir               string
 }
 
 func NewServer(
 	accounts *account.Store, profiles *profile.Store, sessions *session.Registry, shopCatalog *catalog.Catalog,
 	guilds *guild.Store, reports *report.Log, now func() time.Time, log *slog.Logger, config Config,
 ) *Server {
+	if config.Activity == nil {
+		config.Activity = activity.NewTracker(now)
+	}
 	return &Server{
 		accounts: accounts, profiles: profiles, sessions: sessions, catalog: shopCatalog, guilds: guilds,
 		reports: reports, now: now, log: log, openUnregistered: config.OpenUnregistered,
 		trustCloudflareHeader: config.TrustCloudflareHeader,
 		limiters:              newLimiters(config.Limits, now), battleSeeds: config.BattleSeeds,
 		clientUpdates: config.ClientUpdates, maintenance: config.Maintenance, adminToken: config.AdminToken,
+		activity: config.Activity, traffic: traffic.NewRecorder(now), started: now(), revision: config.Revision,
+		dataDir: config.DataDir,
 	}
 }
 
@@ -68,9 +88,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /healthz", s.health)
 	mux.HandleFunc("GET /v1/time", s.serverTime)
 	mux.HandleFunc("GET "+clientUpdatePath, s.clientRelease)
-	mux.HandleFunc("GET "+adminMaintenancePath, s.administered(s.showMaintenance))
-	mux.HandleFunc("PUT "+adminMaintenancePath, s.administered(s.scheduleMaintenance))
-	mux.HandleFunc("DELETE "+adminMaintenancePath, s.administered(s.cancelMaintenance))
+	s.adminRoutes(mux)
 	mux.HandleFunc("POST /v1/players", s.createPlayer)
 	mux.HandleFunc("POST /v1/sessions", s.openSession)
 	mux.HandleFunc("GET /v1/players/{player}/profile", s.authorized(s.getProfile))
@@ -106,9 +124,23 @@ func (s *Server) logged(next http.Handler) http.Handler {
 		recorder := &statusRecorder{ResponseWriter: w, status: http.StatusOK}
 		started := time.Now()
 		next.ServeHTTP(recorder, r)
+		took := time.Since(started)
+		if polledByPanel(r, recorder.status) {
+			return
+		}
+		if !strings.HasPrefix(r.URL.Path, adminPathPrefix) {
+			s.traffic.Request(routeOf(r), recorder.status, took)
+		}
 		s.log.Info("request", "method", r.Method, "path", r.URL.Path, "status", recorder.status,
-			"duration", time.Since(started), "client", s.visitor(r))
+			"duration", took, "client", s.visitor(r))
 	})
+}
+
+func routeOf(r *http.Request) string {
+	if r.Pattern == "" {
+		return unmatchedRoute
+	}
+	return r.Pattern
 }
 
 type statusRecorder struct {
@@ -145,6 +177,7 @@ func (s *Server) createPlayer(w http.ResponseWriter, r *http.Request) {
 		writeError(w, http.StatusInternalServerError, "could not create player")
 		return
 	}
+	s.activity.SignedUp()
 	s.log.Info("created guest player", "player", credentials.PlayerID)
 	writeJSON(w, http.StatusCreated, createPlayerResponse{
 		PlayerID:   credentials.PlayerID,
@@ -221,6 +254,7 @@ func (s *Server) authorized(next func(http.ResponseWriter, *http.Request, string
 			writeError(w, http.StatusForbidden, "session belongs to another player")
 			return
 		}
+		s.activity.Seen(player, clientOf(r))
 		if !s.allow(w, s.limiters.requestsByPlayer, player) {
 			return
 		}

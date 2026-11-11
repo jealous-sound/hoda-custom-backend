@@ -61,6 +61,7 @@ func newHarnessWith(t *testing.T, config Config) *harness {
 	if err != nil {
 		t.Fatal(err)
 	}
+	config.DataDir = dir
 	log := slog.New(slog.NewTextHandler(io.Discard, nil))
 	seed := uint32(1)
 	config.BattleSeeds = func() (uint32, error) { return seed, nil }

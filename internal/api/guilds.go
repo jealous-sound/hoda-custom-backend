@@ -270,7 +270,7 @@ func (s *Server) observeGuild(w http.ResponseWriter, r *http.Request, player str
 }
 
 func (s *Server) createGuild(w http.ResponseWriter, r *http.Request, player string) {
-	s.runAction(w, r, player, func(body []byte) (action, error) {
+	s.runAction(w, r, player, guildCreateAction, func(body []byte) (action, error) {
 		var request createGuildBody
 		if err := json.Unmarshal(body, &request); err != nil || request.Name == "" {
 			return nil, errors.New(`body must be {"request_id", "name", "description", "message_of_the_day", ` +

@@ -74,7 +74,7 @@ func TestAdminRoutesNeedTheToken(t *testing.T) {
 func TestAdminGuessesAreLimitedPerVisitor(t *testing.T) {
 	h := newHarnessWith(t, Config{
 		OpenUnregistered: true, AdminToken: testAdminToken,
-		Limits: Limits{AdminPerAddress: ratelimit.Rule{Burst: 2, Every: time.Minute}},
+		Limits: Limits{AdminGuessesPerAddress: ratelimit.Rule{Burst: 2, Every: time.Minute}},
 	})
 	for range 2 {
 		response, body := h.do("GET", adminMaintenancePath, "wrong", "", "")

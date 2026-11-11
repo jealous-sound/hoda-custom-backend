@@ -93,3 +93,29 @@ func TestZeroRuleAllowsEverything(t *testing.T) {
 		t.Fatal("a nil limiter refused a request")
 	}
 }
+
+func TestExhaustedReportsAnEmptyBucketWithoutSpendingFromIt(t *testing.T) {
+	c := newClock()
+	limiter := New(Rule{Burst: 2, Every: time.Minute}, c.now)
+	if exhausted, _ := limiter.Exhausted("a"); exhausted {
+		t.Fatal("a key that never spent was exhausted")
+	}
+	limiter.Allow("a")
+	for range 5 {
+		if exhausted, _ := limiter.Exhausted("a"); exhausted {
+			t.Fatal("asking spent the last token")
+		}
+	}
+	limiter.Allow("a")
+	if exhausted, retry := limiter.Exhausted("a"); !exhausted || retry != time.Minute {
+		t.Fatalf("empty bucket: exhausted=%v retry=%v, want exhausted for 1m", exhausted, retry)
+	}
+	c.advance(time.Minute)
+	if exhausted, _ := limiter.Exhausted("a"); exhausted {
+		t.Fatal("a refilled bucket stayed exhausted")
+	}
+	var missing *Limiter
+	if exhausted, _ := missing.Exhausted("a"); exhausted {
+		t.Fatal("a nil limiter was exhausted")
+	}
+}

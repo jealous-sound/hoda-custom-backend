@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/account"
+	"github.com/jealous-sound/hoda-custom-backend/internal/activity"
 	"github.com/jealous-sound/hoda-custom-backend/internal/api"
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/clientversion"
@@ -28,7 +29,10 @@ const cliDescription = "Backend for the Heroes of Dragon Age native client: sess
 
 const shutdownGrace = 5 * time.Second
 
-const adminTokenVariable = "HOD_ADMIN_TOKEN"
+const (
+	adminTokenVariable       = "HOD_ADMIN_TOKEN"
+	deployedRevisionVariable = "RAILWAY_GIT_COMMIT_SHA"
+)
 
 const (
 	defaultGuestIdle   = 14 * 24 * time.Hour
@@ -58,6 +62,7 @@ type options struct {
 	releasesEvery   time.Duration
 	clientDownload  string
 	adminToken      string
+	revision        string
 }
 
 func parseOptions() options {
@@ -90,6 +95,7 @@ func parseOptions() options {
 		"page the client opens to download a new version")
 	flag.Parse()
 	o.adminToken = os.Getenv(adminTokenVariable)
+	o.revision = os.Getenv(deployedRevisionVariable)
 	return o
 }
 
@@ -134,6 +140,21 @@ func pruneGuests(ctx context.Context, pruner *prune.Pruner, every time.Duration,
 		case <-ctx.Done():
 			return
 		case <-ticker.C:
+		}
+	}
+}
+
+func sampleActivity(ctx context.Context, tracker *activity.Tracker, log *slog.Logger) {
+	ticker := time.NewTicker(activity.SampleEvery)
+	defer ticker.Stop()
+	for {
+		select {
+		case <-ctx.Done():
+			return
+		case <-ticker.C:
+		}
+		if err := tracker.Sample(); err != nil {
+			log.Error("save activity history", "error", err)
 		}
 	}
 }
@@ -222,17 +243,26 @@ func run(o options, log *slog.Logger) error {
 	if at, scheduled := schedule.At(); scheduled {
 		log.Info("maintenance is still scheduled", "at", at.UTC().Format(time.RFC3339))
 	}
+	tracker, err := activity.Open(o.dataDir, time.Now)
+	if err != nil {
+		if tracker == nil {
+			return err
+		}
+		log.Error("activity history was unreadable and starts over", "error", err)
+	}
 	sessions := session.NewRegistry(time.Now, o.sessionIdle)
 	server := &http.Server{
 		Addr: o.addr,
 		Handler: api.NewServer(accounts, store, sessions, shopCatalog, guilds, reports, time.Now, log, api.Config{
 			OpenUnregistered: o.unregistered, TrustCloudflareHeader: o.trustCloudflare, Limits: api.DefaultLimits(),
-			ClientUpdates: updates, Maintenance: schedule, AdminToken: o.adminToken,
+			ClientUpdates: updates, Maintenance: schedule, AdminToken: o.adminToken, Activity: tracker,
+			Revision: o.revision, DataDir: o.dataDir,
 		}).Handler(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
+	go sampleActivity(ctx, tracker, log)
 	if releases != nil {
 		go followClientReleases(ctx, releases, o.releasesEvery, log)
 	}
@@ -251,7 +281,11 @@ func run(o options, log *slog.Logger) error {
 	}
 	shutdown, cancel := context.WithTimeout(context.Background(), shutdownGrace)
 	defer cancel()
-	return server.Shutdown(shutdown)
+	stopped := server.Shutdown(shutdown)
+	if err := tracker.Sample(); err != nil {
+		log.Error("save activity history", "error", err)
+	}
+	return stopped
 }
 
 func main() {

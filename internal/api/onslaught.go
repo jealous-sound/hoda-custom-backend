@@ -77,7 +77,7 @@ func (s *Server) onslaughtStandings(w http.ResponseWriter, r *http.Request, play
 }
 
 func (s *Server) claimOnslaught(w http.ResponseWriter, r *http.Request, player string) {
-	s.runAction(w, r, player, func(body []byte) (action, error) {
+	s.runAction(w, r, player, onslaughtClaimAction, func(body []byte) (action, error) {
 		var request onslaughtClaimBody
 		if err := json.Unmarshal(body, &request); err != nil {
 			return nil, errors.New(`body must be {"request_id", "cycle"}`)

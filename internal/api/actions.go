@@ -1,6 +1,7 @@
 package api
 
 import (
+	"cmp"
 	"encoding/json"
 	"errors"
 	"io"
@@ -12,12 +13,20 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
 
-const maxActionBodyBytes = 16384
+const (
+	maxActionBodyBytes   = 16384
+	purchaseAction       = "purchase"
+	refillAction         = "refill"
+	guildCreateAction    = "guild_create"
+	onslaughtClaimAction = "onslaught_claim"
+	namedInBody          = ""
+)
 
 var requestIDPattern = regexp.MustCompile(`^[A-Za-z0-9_-]{8,64}$`)
 
 type actionEnvelope struct {
 	RequestID string `json:"request_id"`
+	Action    string `json:"action"`
 }
 
 type actionResponse struct {
@@ -35,7 +44,9 @@ type refusalResponse struct {
 
 type action func(record *profile.Record) (granted any, err error)
 
-func (s *Server) runAction(w http.ResponseWriter, r *http.Request, player string, decode func([]byte) (action, error)) {
+func (s *Server) runAction(
+	w http.ResponseWriter, r *http.Request, player, name string, decode func([]byte) (action, error),
+) {
 	expected, ok := parseIfMatch(r.Header.Get("If-Match"))
 	if !ok {
 		writeError(w, http.StatusPreconditionRequired, "If-Match with the last seen revision is required")
@@ -56,6 +67,7 @@ func (s *Server) runAction(w http.ResponseWriter, r *http.Request, player string
 		writeError(w, http.StatusBadRequest, err.Error())
 		return
 	}
+	name = cmp.Or(name, envelope.Action)
 
 	var refusal *economy.Refusal
 	var badRequest *economy.BadRequest
@@ -119,11 +131,13 @@ func (s *Server) runAction(w http.ResponseWriter, r *http.Request, player string
 		if refusal.Code == economy.OutcomeMismatch {
 			s.log.Warn("battle outcome mismatch", "player", player, "request", envelope.RequestID)
 		}
+		s.traffic.Action(player, name, string(refusal.Code))
 		writeRevision(w, record.Revision)
 		writeJSON(w, http.StatusUnprocessableEntity, refusalResponse{
 			Error: refusal.Message, Code: string(refusal.Code), Revision: record.Revision, Profile: record.Profile,
 		})
 	default:
+		s.traffic.Action(player, name, "")
 		writeRevision(w, record.Revision)
 		writeJSON(w, http.StatusOK, actionResponse{Revision: record.Revision, Profile: record.Profile, Granted: granted})
 	}
@@ -134,7 +148,7 @@ type purchaseBody struct {
 }
 
 func (s *Server) purchase(w http.ResponseWriter, r *http.Request, player string) {
-	s.runAction(w, r, player, func(body []byte) (action, error) {
+	s.runAction(w, r, player, purchaseAction, func(body []byte) (action, error) {
 		var request purchaseBody
 		if err := json.Unmarshal(body, &request); err != nil || request.Pack == "" {
 			return nil, errors.New(`body must be {"request_id", "pack", "currency", "price"}`)
@@ -156,7 +170,7 @@ type refillBody struct {
 }
 
 func (s *Server) refill(w http.ResponseWriter, r *http.Request, player string) {
-	s.runAction(w, r, player, func(body []byte) (action, error) {
+	s.runAction(w, r, player, refillAction, func(body []byte) (action, error) {
 		var request refillBody
 		if err := json.Unmarshal(body, &request); err != nil || request.Kind == "" {
 			return nil, errors.New(`body must be {"request_id", "kind"}`)
@@ -180,7 +194,7 @@ type genericActionBody struct {
 }
 
 func (s *Server) playerAction(w http.ResponseWriter, r *http.Request, player string) {
-	s.runAction(w, r, player, func(body []byte) (action, error) {
+	s.runAction(w, r, player, namedInBody, func(body []byte) (action, error) {
 		var request genericActionBody
 		if err := json.Unmarshal(body, &request); err != nil || request.Action == "" {
 			return nil, errors.New(`body must be {"request_id", "action", ...}`)

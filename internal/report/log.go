@@ -1,7 +1,9 @@
 package report
 
 import (
+	"bytes"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -62,4 +64,24 @@ func (l *Log) Append(entry Entry) error {
 		return fmt.Errorf("write report: %w", err)
 	}
 	return file.Close()
+}
+
+func (l *Log) Entries() ([]Entry, error) {
+	l.mutex.Lock()
+	data, err := os.ReadFile(l.path)
+	l.mutex.Unlock()
+	if errors.Is(err, os.ErrNotExist) {
+		return []Entry{}, nil
+	}
+	if err != nil {
+		return nil, fmt.Errorf("read reports: %w", err)
+	}
+	entries := []Entry{}
+	for line := range bytes.Lines(data) {
+		var entry Entry
+		if err := json.Unmarshal(line, &entry); err == nil {
+			entries = append(entries, entry)
+		}
+	}
+	return entries, nil
 }

@@ -29,7 +29,7 @@ server when the game exits. Server logs go to `runtime/server.log`.
 | Flag | Default | |
 | --- | --- | --- |
 | `-addr` | `127.0.0.1:8787` | listen address |
-| `-data` | `runtime` | accounts, profiles, `guilds.json`, `reports.jsonl`, `maintenance.json` |
+| `-data` | `runtime` | accounts, profiles, `guilds.json`, `reports.jsonl`, `maintenance.json`, `activity.json` |
 | `-seed-profile`, `-seed-player` | unset, `local` | imports a client save for one player |
 | `-open-unregistered` | off | lets players without an account, such as a seeded `local`, open sessions |
 | `-session-idle` | `24h` | unused session tokens expire after this |
@@ -64,6 +64,24 @@ Clients read the time from `/v1/client` and count down to it. From 3 minutes bef
 schedule is kept in `maintenance.json`, so it survives a deploy made before the announced time. It ends with the first
 start after that time, or 10 minutes after it if the server never restarted. Set it from the script, not from a
 Railway variable: a variable only applies after a redeploy, which is itself a restart.
+
+## Monitoring
+
+The same token opens read-only routes that an operator's dashboard polls. They answer JSON, change nothing, and are
+neither logged nor counted as traffic while they succeed. A wrong token spends from a per-address allowance of 10
+guesses, one back every 30 seconds; the right token is never limited.
+
+| Path | |
+| --- | --- |
+| `/admin/overview` | who is online and on which client version, today's totals, player and guild counts, memory, disk, the deployed commit |
+| `/admin/activity` | peak players online per 5 minutes for 7 days, and per UTC day for 90: peak, distinct players, sign-ups |
+| `/admin/traffic` | requests per minute for the last hour, totals per route, actions by name and the latest 200 refusals |
+| `/admin/players`, `/admin/players/{id}` | every account and profile in brief; one player with the stored save |
+| `/admin/guilds`, `/admin/guilds/{id}` | guilds in brief; one guild with its members, applications and chat |
+| `/admin/chat/world`, `/admin/reports` | the world chat history and the newest 500 abuse reports |
+
+A player is online for 5 minutes after their last authorised request. The history lives in `activity.json` and is
+sampled once a minute; traffic counters start over with the process.
 
 ## Client data
 

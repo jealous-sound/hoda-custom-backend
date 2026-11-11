@@ -10,6 +10,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 	"strings"
 	"sync"
 	"time"
@@ -109,26 +110,40 @@ func (s *Store) RecordSession(playerID string) error {
 	return s.write(record)
 }
 
-func (s *Store) Guests() ([]Account, error) {
+func (s *Store) All() ([]Account, error) {
 	s.mutex.Lock()
 	defer s.mutex.Unlock()
 	entries, err := os.ReadDir(s.dir)
 	if err != nil {
 		return nil, fmt.Errorf("list accounts: %w", err)
 	}
-	var guests []Account
+	var accounts []Account
 	for _, entry := range entries {
 		playerID, isRecord := strings.CutSuffix(entry.Name(), ".json")
-		if !isRecord || entry.IsDir() || !strings.HasPrefix(playerID, guestIDPrefix) {
+		if !isRecord || entry.IsDir() {
 			continue
 		}
 		record, err := s.read(playerID)
 		if err != nil {
 			return nil, err
 		}
-		guests = append(guests, record)
+		accounts = append(accounts, record)
 	}
-	return guests, nil
+	return accounts, nil
+}
+
+func (s *Store) Guests() ([]Account, error) {
+	accounts, err := s.All()
+	if err != nil {
+		return nil, err
+	}
+	return slices.DeleteFunc(accounts, func(a Account) bool { return !a.IsGuest() }), nil
+}
+
+func (s *Store) Find(playerID string) (Account, error) {
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
+	return s.read(playerID)
 }
 
 func (s *Store) DeleteIfUnseenSince(playerID string, cutoff time.Time) (bool, error) {
