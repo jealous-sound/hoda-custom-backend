@@ -1,12 +1,10 @@
 package api
 
 import (
-	"crypto/subtle"
 	"encoding/json"
 	"errors"
 	"io"
 	"net/http"
-	"strings"
 	"time"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
@@ -15,7 +13,6 @@ import (
 
 const (
 	adminMaintenancePath    = "/admin/maintenance"
-	MinAdminTokenLength     = 32
 	maxMaintenanceBodyBytes = 1024
 	maintenanceBodyShape    = `body must be {"in": "30m"} or {"at": "2026-01-02T15:04:05Z"}`
 )
@@ -46,24 +43,6 @@ func (r maintenanceRequest) moment(now time.Time) (time.Time, error) {
 		return time.Time{}, errors.New(maintenanceBodyShape)
 	}
 	return at, nil
-}
-
-func (s *Server) administered(next http.HandlerFunc) http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
-		if s.adminToken == "" {
-			writeError(w, http.StatusNotFound, "the server runs without an admin token")
-			return
-		}
-		if !s.allow(w, s.limiters.adminByAddress, s.visitor(r)) {
-			return
-		}
-		token, found := strings.CutPrefix(r.Header.Get("Authorization"), "Bearer ")
-		if !found || subtle.ConstantTimeCompare([]byte(token), []byte(s.adminToken)) != 1 {
-			writeError(w, http.StatusUnauthorized, "the admin token is required")
-			return
-		}
-		next(w, r)
-	}
 }
 
 func (s *Server) maintenanceStatus() maintenanceResponse {

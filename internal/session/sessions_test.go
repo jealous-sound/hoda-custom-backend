@@ -46,7 +46,7 @@ func TestExpiredSessionsAreSwept(t *testing.T) {
 	open(t, r, "a")
 	c.current = c.current.Add(2 * time.Hour)
 	open(t, r, "b")
-	if got := r.count(); got != 1 {
+	if got := r.Count(); got != 1 {
 		t.Fatalf("registry holds %d sessions, want only the fresh one", got)
 	}
 }

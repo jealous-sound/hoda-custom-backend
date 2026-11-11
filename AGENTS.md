@@ -17,6 +17,7 @@ Run and API details are in `README.md`.
 - `internal/api/`: HTTP routes and their tests.
 - `internal/profile/`: profile storage with revisions, and save validation.
 - `internal/session/`: session tokens.
+- `internal/activity/`, `internal/traffic/`: who is online, its history, and request counters for the `/admin` routes.
 - `scripts/play-local.sh`: builds and runs backend and client together.
 
 ## Working here

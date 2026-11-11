@@ -144,9 +144,11 @@ func (s *ServerState) Remember(receipt ActionReceipt) {
 var ErrNoChange = errors.New("transaction left the record unchanged")
 
 type Store struct {
-	dir   string
-	now   func() time.Time
-	mutex sync.Mutex
+	dir       string
+	now       func() time.Time
+	mutex     sync.Mutex
+	summaries map[string]Summary
+	changed   map[string]struct{}
 }
 
 func NewStore(dir string, now func() time.Time) (*Store, error) {
@@ -154,11 +156,11 @@ func NewStore(dir string, now func() time.Time) (*Store, error) {
 	if err := os.MkdirAll(playersDir, 0o755); err != nil {
 		return nil, fmt.Errorf("create profile directory: %w", err)
 	}
-	return &Store{dir: playersDir, now: now}, nil
+	return &Store{dir: playersDir, now: now, changed: map[string]struct{}{}}, nil
 }
 
 func (s *Store) path(playerID string) string {
-	return filepath.Join(s.dir, playerID+".json")
+	return filepath.Join(s.dir, playerID+recordSuffix)
 }
 
 func (s *Store) Get(playerID string) (Record, error) {
@@ -259,6 +261,7 @@ func (s *Store) Delete(playerID string) error {
 	if err != nil && !errors.Is(err, os.ErrNotExist) {
 		return fmt.Errorf("delete profile %s: %w", playerID, err)
 	}
+	s.summaryChangedLocked(playerID)
 	return nil
 }
 
@@ -276,5 +279,6 @@ func (s *Store) write(record Record) error {
 		os.Remove(temporary)
 		return fmt.Errorf("commit profile %s: %w", record.PlayerID, err)
 	}
+	s.summaryChangedLocked(record.PlayerID)
 	return nil
 }

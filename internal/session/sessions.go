@@ -104,7 +104,7 @@ func (r *Registry) makeRoomLocked(playerID string) {
 	}
 }
 
-func (r *Registry) count() int {
+func (r *Registry) Count() int {
 	r.mutex.Lock()
 	defer r.mutex.Unlock()
 	return len(r.tokens)
