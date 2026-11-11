@@ -17,6 +17,7 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/clientversion"
 	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
+	"github.com/jealous-sound/hoda-custom-backend/internal/maintenance"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/prune"
 	"github.com/jealous-sound/hoda-custom-backend/internal/report"
@@ -26,6 +27,8 @@ import (
 const cliDescription = "Backend for the Heroes of Dragon Age native client: sessions, server clock and player profiles."
 
 const shutdownGrace = 5 * time.Second
+
+const adminTokenVariable = "HOD_ADMIN_TOKEN"
 
 const (
 	defaultGuestIdle   = 14 * 24 * time.Hour
@@ -54,6 +57,7 @@ type options struct {
 	clientReleases  string
 	releasesEvery   time.Duration
 	clientDownload  string
+	adminToken      string
 }
 
 func parseOptions() options {
@@ -85,6 +89,7 @@ func parseOptions() options {
 	flag.StringVar(&o.clientDownload, "client-download-url", defaultClientDownloadURL,
 		"page the client opens to download a new version")
 	flag.Parse()
+	o.adminToken = os.Getenv(adminTokenVariable)
 	return o
 }
 
@@ -207,12 +212,22 @@ func run(o options, log *slog.Logger) error {
 	if err != nil {
 		return err
 	}
+	if o.adminToken != "" && len(o.adminToken) < api.MinAdminTokenLength {
+		return fmt.Errorf("%s must be at least %d characters", adminTokenVariable, api.MinAdminTokenLength)
+	}
+	schedule, err := maintenance.Open(o.dataDir, time.Now)
+	if err != nil {
+		return err
+	}
+	if at, scheduled := schedule.At(); scheduled {
+		log.Info("maintenance is still scheduled", "at", at.UTC().Format(time.RFC3339))
+	}
 	sessions := session.NewRegistry(time.Now, o.sessionIdle)
 	server := &http.Server{
 		Addr: o.addr,
 		Handler: api.NewServer(accounts, store, sessions, shopCatalog, guilds, reports, time.Now, log, api.Config{
 			OpenUnregistered: o.unregistered, TrustCloudflareHeader: o.trustCloudflare, Limits: api.DefaultLimits(),
-			ClientUpdates: updates,
+			ClientUpdates: updates, Maintenance: schedule, AdminToken: o.adminToken,
 		}).Handler(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}

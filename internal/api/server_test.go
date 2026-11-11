@@ -12,6 +12,7 @@ import (
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/account"
 	"github.com/jealous-sound/hoda-custom-backend/internal/guild"
+	"github.com/jealous-sound/hoda-custom-backend/internal/maintenance"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 	"github.com/jealous-sound/hoda-custom-backend/internal/report"
 	"github.com/jealous-sound/hoda-custom-backend/internal/session"
@@ -53,6 +54,10 @@ func newHarnessWith(t *testing.T, config Config) *harness {
 		t.Fatal(err)
 	}
 	reports, err := report.NewLog(dir)
+	if err != nil {
+		t.Fatal(err)
+	}
+	config.Maintenance, err = maintenance.Open(dir, clock)
 	if err != nil {
 		t.Fatal(err)
 	}

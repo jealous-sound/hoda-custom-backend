@@ -17,6 +17,7 @@ type Limits struct {
 	ChatPerPlayer      ratelimit.Rule
 	WorldChatPerPlayer ratelimit.Rule
 	ReportsPerPlayer   ratelimit.Rule
+	AdminPerAddress    ratelimit.Rule
 }
 
 func DefaultLimits() Limits {
@@ -28,6 +29,7 @@ func DefaultLimits() Limits {
 		ChatPerPlayer:      ratelimit.Rule{Burst: 5, Every: 3 * time.Second},
 		WorldChatPerPlayer: ratelimit.Rule{Burst: 3, Every: 5 * time.Second},
 		ReportsPerPlayer:   ratelimit.Rule{Burst: 5, Every: 12 * time.Minute},
+		AdminPerAddress:    ratelimit.Rule{Burst: 10, Every: 30 * time.Second},
 	}
 }
 
@@ -39,6 +41,7 @@ type limiters struct {
 	chatByPlayer      *ratelimit.Limiter
 	worldChatByPlayer *ratelimit.Limiter
 	reportsByPlayer   *ratelimit.Limiter
+	adminByAddress    *ratelimit.Limiter
 }
 
 func newLimiters(limits Limits, now func() time.Time) limiters {
@@ -50,6 +53,7 @@ func newLimiters(limits Limits, now func() time.Time) limiters {
 		chatByPlayer:      ratelimit.New(limits.ChatPerPlayer, now),
 		worldChatByPlayer: ratelimit.New(limits.WorldChatPerPlayer, now),
 		reportsByPlayer:   ratelimit.New(limits.ReportsPerPlayer, now),
+		adminByAddress:    ratelimit.New(limits.AdminPerAddress, now),
 	}
 }
 

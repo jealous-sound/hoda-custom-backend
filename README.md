@@ -29,7 +29,7 @@ server when the game exits. Server logs go to `runtime/server.log`.
 | Flag | Default | |
 | --- | --- | --- |
 | `-addr` | `127.0.0.1:8787` | listen address |
-| `-data` | `runtime` | accounts, profiles, `guilds.json`, `reports.jsonl` |
+| `-data` | `runtime` | accounts, profiles, `guilds.json`, `reports.jsonl`, `maintenance.json` |
 | `-seed-profile`, `-seed-player` | unset, `local` | imports a client save for one player |
 | `-open-unregistered` | off | lets players without an account, such as a seeded `local`, open sessions |
 | `-session-idle` | `24h` | unused session tokens expire after this |
@@ -46,6 +46,25 @@ data in `/data`, and runs with `-trust-cf-connecting-ip`. The Railway variable `
 `-min-client-version`. Raise it only for a client release that older clients cannot play alongside, such as a change
 to the simulation or to an action's shape.
 
+## Maintenance
+
+Announce a restart before a deploy that players would feel, such as a raised minimum version:
+
+```sh
+HOD_ADMIN_TOKEN=... ./scripts/schedule-maintenance.sh 30m
+```
+
+The argument is a wait (`30m`, `2h`) or a UTC time (`2026-01-02T15:04:05Z`); `cancel` withdraws it and no argument
+shows it. The script calls `PUT`, `DELETE` and `GET /admin/maintenance` on `HOD_SERVER_URL`, production by default.
+Those routes need `Authorization: Bearer $HOD_ADMIN_TOKEN` and answer `404` while the server runs without the
+variable, which must be at least 32 characters.
+
+Clients read the time from `/v1/client` and count down to it. From 3 minutes before until 10 minutes after,
+`battle_start` and `pvp_match` are refused with `422 maintenance`; a battle already under way still finishes. The
+schedule is kept in `maintenance.json`, so it survives a deploy made before the announced time. It ends with the first
+start after that time, or 10 minutes after it if the server never restarted. Set it from the script, not from a
+Railway variable: a variable only applies after a redeploy, which is itself a restart.
+
 ## Client data
 
 The client's rule tables, `characters.json` and golden battle corpus are embedded from `internal/catalog/data` and
@@ -61,7 +80,7 @@ The wire contract is shared with the client's `source/backend.c`; change both to
 | --- | --- | --- |
 | `GET` | `/healthz` | liveness |
 | `GET` | `/v1/time` | `{"server_time"}` in unix seconds |
-| `GET` | `/v1/client` | `{"latest", "minimum", "download_url"}` |
+| `GET` | `/v1/client` | `{"latest", "minimum", "download_url", "server_time"}`, plus `maintenance_at` while a restart is announced |
 | `POST` | `/v1/players` | creates a guest, answering `201 {"player_id", "secret", "server_time"}` |
 | `POST` | `/v1/sessions` | `{"player_id", "secret"}` answers `{"token", "player_id", "server_time"}` |
 | `GET` | `/v1/players/{id}/profile` | the save JSON, revision in `X-Profile-Revision` |
@@ -81,7 +100,7 @@ loads that profile in place of its own. A repeated `request_id` replays the firs
 | `401` | wrong secret or expired token; the client opens a new session |
 | `404` | unknown player; the client creates a new guest |
 | `409` | stale revision; carries the current one |
-| `422` | refused: `{"error", "code"}`, plus `revision` and `profile` on economy calls; codes such as `cant_afford`, `inventory_full`, `squad_changed` or `outcome_mismatch`, and the original `GuildResponseCode` names for guilds |
+| `422` | refused: `{"error", "code"}`, plus `revision` and `profile` on economy calls; codes such as `cant_afford`, `inventory_full`, `squad_changed`, `outcome_mismatch` or `maintenance`, and the original `GuildResponseCode` names for guilds |
 | `428` | missing `If-Match` |
 | `426` | client older than `-min-client-version`; never sent to builds without a version tag |
 | `429` | rate limited, with `Retry-After`; limits are in `internal/api/limits.go` |
