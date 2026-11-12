@@ -23,8 +23,9 @@ import (
 )
 
 const (
-	RevisionHeader = "X-Profile-Revision"
-	unmatchedRoute = "unmatched"
+	RevisionHeader      = "X-Profile-Revision"
+	unmatchedRoute      = "unmatched"
+	outdatedClientRoute = "outdated client"
 )
 
 type Server struct {
@@ -129,18 +130,22 @@ func (s *Server) logged(next http.Handler) http.Handler {
 			return
 		}
 		if !strings.HasPrefix(r.URL.Path, adminPathPrefix) {
-			s.traffic.Request(routeOf(r), recorder.status, took)
+			s.traffic.Request(s.routeOf(r), recorder.status, took)
 		}
 		s.log.Info("request", "method", r.Method, "path", r.URL.Path, "status", recorder.status,
 			"duration", took, "client", s.visitor(r))
 	})
 }
 
-func routeOf(r *http.Request) string {
-	if r.Pattern == "" {
+func (s *Server) routeOf(r *http.Request) string {
+	switch {
+	case r.Pattern != "":
+		return r.Pattern
+	case s.clientTooOld(r):
+		return outdatedClientRoute
+	default:
 		return unmatchedRoute
 	}
-	return r.Pattern
 }
 
 type statusRecorder struct {
