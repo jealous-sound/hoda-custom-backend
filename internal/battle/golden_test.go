@@ -158,10 +158,9 @@ func TestRecordedPvpOpponentsMatchTheClient(t *testing.T) {
 		case "ladder":
 			opponent = d.PvpLadderOpponent(golden.Level, golden.Trophies, golden.Now/SecondsPerDay, golden.Seed)
 		case "event":
-			opponent = d.PvpEventOpponent(golden.Level, golden.Trophies, golden.Banners, golden.Now, golden.Seed)
+			opponent = d.PvpEventOpponent(golden.Level, golden.Banners, golden.Now, golden.Seed)
 		case "bot":
-			opponent = d.PvpOpponentFromBot(golden.Bot, golden.Level, golden.Trophies, golden.Now/SecondsPerDay,
-				golden.Seed)
+			opponent = d.PvpOpponentFromBot(golden.Bot, golden.Level, golden.Now/SecondsPerDay, golden.Seed)
 		case "revenge":
 			opponent = PvpOpponent{
 				Bot: golden.Bot, Squad: golden.Squad, Level: golden.Level, Trophies: golden.OpponentTrophies,

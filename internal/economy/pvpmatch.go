@@ -76,9 +76,9 @@ func (p *player) MatchPvp(request PvpMatchRequest) (BattleResult, error) {
 	var opponent battle.PvpOpponent
 	switch {
 	case request.Bot != nil:
-		opponent = data.PvpOpponentFromBot(bot, level, stats.Trophies, day, seed)
+		opponent = data.PvpOpponentFromBot(bot, level, day, seed)
 	case request.Event:
-		opponent = data.PvpEventOpponent(level, stats.Trophies, p.server.PvpEvent.Banners, now, seed)
+		opponent = data.PvpEventOpponent(level, p.server.PvpEvent.Banners, now, seed)
 	default:
 		opponent = data.PvpLadderOpponent(level, stats.Trophies, day, seed)
 	}

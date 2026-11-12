@@ -9,10 +9,16 @@ import (
 )
 
 func guildProfile(name string, level, gold int) string {
+	heroes := []map[string]any{}
+	for _, unit := range guildSquad().Units {
+		heroes = append(heroes, map[string]any{
+			"id": unit.ID, "instance_id": unit.InstanceID, "tier": unit.Tier, "level": unit.Level,
+		})
+	}
+	additions, _ := json.Marshal(heroes)
 	return fmt.Sprintf(`{"version":9,"account":{"name":%q,"level":%d,"experience":10,"energy":5,"energy_max":30,`+
-		`"stamina":8,"stamina_max":8,"gold":%d,"gems":7},"roster":{"starters":[],"additions":[{"id":%q,`+
-		`"instance_id":%d,"tier":%q,"level":%d}]},"squads":[]}`, name, level, gold, guildHeroID, guildHeroInstance,
-		guildHeroTier, guildHeroLevel)
+		`"stamina":8,"stamina_max":8,"gold":%d,"gems":7},"roster":{"starters":[],"additions":%s},"squads":[]}`,
+		name, level, gold, additions)
 }
 
 func (h *harness) guildPlayer(id, name string, level, gold int) string {

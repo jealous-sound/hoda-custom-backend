@@ -11,7 +11,6 @@ import (
 
 const (
 	pvpBotSalt         = 0x7A3C11
-	pvpSquadSalt       = 0x2F90D3
 	pvpDriftSalt       = 0x1C8A77
 	pvpDefenseSalt     = 0x3D6F02
 	pvpHistoryCapacity = 30
@@ -220,42 +219,17 @@ func pickBot(rules *catalog.PvpRules, trophies int, day int64, seed uint32) int 
 	return closest
 }
 
-func targetRating(rules *catalog.PvpRules, level, trophyLead int) int64 {
-	squads := rules.Squads
-	l := int64(level)
-	base := squads.RatingBase + squads.RatingPerLevel*l + squads.RatingPerLevelSquared*l*l
-	shift := min(max(trophyLead/squads.TrophiesPerShiftPct, -squads.RatingMaxShiftPct), squads.RatingMaxShiftPct)
-	return base * int64(percent+shift) / percent
-}
-
-func pickSquad(rules *catalog.PvpRules, rating int64, seed uint32) int {
-	pool := rules.SquadPool
-	distance := func(index int) int64 {
-		delta := int64(pool[index].Rating) - rating
-		return max(delta, -delta)
-	}
-	nearest := 0
-	for index := 1; index < len(pool); index++ {
-		if distance(index) < distance(nearest) {
-			nearest = index
-		}
-	}
-	candidates := rules.Squads.Candidates
-	first := min(max(nearest-candidates/2, 0), max(len(pool)-candidates, 0))
-	return first + pvpRoll(seed, pvpSquadSalt, min(candidates, len(pool)))
-}
-
-func (p *player) botOpponent(bot, trophies int, day int64, seed uint32) pvpOpponent {
+func (p *player) botOpponent(bot int, day int64, seed uint32) pvpOpponent {
 	rules := &p.catalog.Pvp
 	seed = nonZeroSeed(seed)
 	opponent := pvpOpponent{bot: bot, seed: seed, trophies: botTrophies(rules, bot, day)}
 	opponent.level = pvpOpponentLevel(rules, p.account.Level, seed)
-	opponent.squad = pickSquad(rules, targetRating(rules, p.account.Level, opponent.trophies-trophies), seed)
+	opponent.squad = p.catalog.Battle.PvpBotSquad(bot, seed)
 	return opponent
 }
 
 func (p *player) generatedOpponent(trophies int, day int64, seed uint32) pvpOpponent {
-	return p.botOpponent(pickBot(&p.catalog.Pvp, trophies, day, nonZeroSeed(seed)), trophies, day, seed)
+	return p.botOpponent(pickBot(&p.catalog.Pvp, trophies, day, nonZeroSeed(seed)), day, seed)
 }
 
 func (p *player) recordAttack(stats *pvpStats, opponent pvpOpponent, won, event bool, banners int) int {

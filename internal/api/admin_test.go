@@ -147,7 +147,7 @@ func TestPlayersListJoinsAccountProfileGuildAndPresence(t *testing.T) {
 
 	players := h.listedPlayers()
 	leader := players["local"]
-	if leader.Name != "Hawke" || leader.Level != 9 || leader.Gold != 2000 || leader.Heroes != 1 ||
+	if leader.Name != "Hawke" || leader.Level != 9 || leader.Gold != 2000 || leader.Heroes != len(guildHeroes) ||
 		leader.GuildName != "Champions" || !leader.Online || leader.Client != playedOnClient ||
 		leader.Registered || !leader.HasProfile || leader.Revision != 2 || leader.LastActiveAt != h.now.Unix() {
 		t.Fatalf("leader = %+v", leader)

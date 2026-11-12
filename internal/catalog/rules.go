@@ -101,12 +101,7 @@ type PvpRules struct {
 		LevelSpread   int `json:"level_spread"`
 	} `json:"matchmaking"`
 	Squads struct {
-		RatingBase            int64 `json:"rating_base"`
-		RatingPerLevel        int64 `json:"rating_per_level"`
-		RatingPerLevelSquared int64 `json:"rating_per_level_squared"`
-		RatingMaxShiftPct     int   `json:"rating_max_shift_pct"`
-		TrophiesPerShiftPct   int   `json:"trophies_per_shift_pct"`
-		Candidates            int   `json:"candidates"`
+		Candidates int `json:"candidates"`
 	} `json:"squads"`
 	Defense struct {
 		AttackIntervalSeconds int64 `json:"attack_interval_seconds"`
@@ -127,9 +122,7 @@ type PvpRules struct {
 		Name     string `json:"name"`
 		Trophies int    `json:"trophies"`
 	} `json:"bots"`
-	SquadPool []struct {
-		Rating int `json:"rating"`
-	} `json:"squad_pool"`
+	SquadPool []struct{} `json:"squad_pool"`
 }
 
 type PvpEvents struct {
@@ -461,7 +454,7 @@ func (c *Catalog) parseNexus(events []rawNexusEvent) error {
 func (c *Catalog) checkPvp() error {
 	events := c.Pvp.Events
 	if len(c.Pvp.Bots) == 0 || len(c.Pvp.SquadPool) == 0 || c.Pvp.Squads.Candidates <= 0 ||
-		c.Pvp.Squads.TrophiesPerShiftPct <= 0 || c.Pvp.Defense.AttackIntervalSeconds <= 0 ||
+		c.Pvp.Defense.AttackIntervalSeconds <= 0 ||
 		len(events.Catalog) == 0 || events.DurationSeconds <= 0 ||
 		events.WinBannersStepsToPeak <= 0 || events.WinBannersDeclineSlowdown <= 0 || events.LadderBanners <= 0 ||
 		c.Pvp.Trophies.PointsPerStep <= 0 || c.Pvp.Trophies.MaxGain <= c.Pvp.Trophies.MinGain {
