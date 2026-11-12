@@ -7323,7 +7323,7 @@
  ],
  "squad_pool": [
   {
-   "strength": 2132,
+   "strength": 1451,
    "cells": [
     {
      "id": "UNIT_HURLOCKBOLTER",
@@ -7349,7 +7349,7 @@
    ]
   },
   {
-   "strength": 1958,
+   "strength": 1241,
    "cells": [
     {
      "id": "UNIT_WEREWOLF",
@@ -7375,7 +7375,7 @@
    ]
   },
   {
-   "strength": 4353,
+   "strength": 3365,
    "cells": [
     {
      "id": "UNIT_HURLOCKEMISSARY",
@@ -7401,7 +7401,7 @@
    ]
   },
   {
-   "strength": 2115,
+   "strength": 2552,
    "cells": [
     {
      "id": "UNIT_CARTATHUG",
@@ -7427,7 +7427,7 @@
    ]
   },
   {
-   "strength": 2159,
+   "strength": 1582,
    "cells": [
     {
      "id": "UNIT_HURLOCKGRUNT",
@@ -7453,7 +7453,7 @@
    ]
   },
   {
-   "strength": 5646,
+   "strength": 4239,
    "cells": [
     {
      "id": "UNIT_WEREWOLF",
@@ -7483,7 +7483,7 @@
    ]
   },
   {
-   "strength": 2150,
+   "strength": 2045,
    "cells": [
     {
      "id": "UNIT_CARTATHUG",
@@ -7509,7 +7509,7 @@
    ]
   },
   {
-   "strength": 5681,
+   "strength": 5384,
    "cells": [
     {
      "id": "UNIT_FENNEC",
@@ -7535,7 +7535,7 @@
    ]
   },
   {
-   "strength": 2456,
+   "strength": 1678,
    "cells": [
     {
      "id": "UNIT_WEREWOLF",
@@ -7561,7 +7561,7 @@
    ]
   },
   {
-   "strength": 3828,
+   "strength": 3173,
    "cells": [
     {
      "id": "UNIT_FORESTSPIRIT",
@@ -7587,7 +7587,7 @@
    ]
   },
   {
-   "strength": 9571,
+   "strength": 9370,
    "cells": [
     {
      "id": "UNIT_NUG",
@@ -7617,7 +7617,7 @@
    ]
   },
   {
-   "strength": 4361,
+   "strength": 3610,
    "cells": [
     {
      "id": "UNIT_CARTAASSASSIN",
@@ -7643,7 +7643,7 @@
    ]
   },
   {
-   "strength": 7893,
+   "strength": 6923,
    "cells": [
     {
      "id": "UNIT_HURLOCKBOLTER",
@@ -7673,7 +7673,7 @@
    ]
   },
   {
-   "strength": 2430,
+   "strength": 1791,
    "cells": [
     {
      "id": "UNIT_CARTAASSASSIN",
@@ -7699,7 +7699,7 @@
    ]
   },
   {
-   "strength": 6363,
+   "strength": 5270,
    "cells": [
     {
      "id": "UNIT_CARTASMUGGLER",
@@ -7729,7 +7729,7 @@
    ]
   },
   {
-   "strength": 5069,
+   "strength": 5026,
    "cells": [
     {
      "id": "UNIT_TEMPLARARCHER",
@@ -7759,7 +7759,7 @@
    ]
   },
   {
-   "strength": 7858,
+   "strength": 6730,
    "cells": [
     {
      "id": "UNIT_WOLF",
@@ -7789,7 +7789,7 @@
    ]
   },
   {
-   "strength": 1459,
+   "strength": 1206,
    "cells": [
     {
      "id": "UNIT_TEVINTERSLAVER",
@@ -7815,7 +7815,7 @@
    ]
   },
   {
-   "strength": 3863,
+   "strength": 3138,
    "cells": [
     {
      "id": "UNIT_DALISHMAGE",
@@ -7841,7 +7841,7 @@
    ]
   },
   {
-   "strength": 7062,
+   "strength": 6625,
    "cells": [
     {
      "id": "UNIT_GENLOCKBRUTE",
@@ -7871,7 +7871,7 @@
    ]
   },
   {
-   "strength": 2054,
+   "strength": 1923,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -7897,7 +7897,7 @@
    ]
   },
   {
-   "strength": 7325,
+   "strength": 6302,
    "cells": [
     {
      "id": "UNIT_CARTASMUGGLER",
@@ -7927,7 +7927,7 @@
    ]
   },
   {
-   "strength": 2500,
+   "strength": 3006,
    "cells": [
     {
      "id": "UNIT_TEMPLARARCHER",
@@ -7957,7 +7957,7 @@
    ]
   },
   {
-   "strength": 3776,
+   "strength": 3085,
    "cells": [
     {
      "id": "UNIT_DALISHMAGE",
@@ -7983,7 +7983,7 @@
    ]
   },
   {
-   "strength": 1993,
+   "strength": 1888,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -8009,7 +8009,7 @@
    ]
   },
   {
-   "strength": 3321,
+   "strength": 3645,
    "cells": [
     {
      "id": "UNIT_TEMPLARARCHER",
@@ -8039,7 +8039,7 @@
    ]
   },
   {
-   "strength": 5917,
+   "strength": 5201,
    "cells": [
     {
      "id": "UNIT_WOLF",
@@ -8069,7 +8069,7 @@
    ]
   },
   {
-   "strength": 5349,
+   "strength": 3697,
    "cells": [
     {
      "id": "UNIT_TEVINTERARCANEMAGE",
@@ -8095,7 +8095,7 @@
    ]
   },
   {
-   "strength": 1984,
+   "strength": 1153,
    "cells": [
     {
      "id": "UNIT_TEVINTERSLAVER",
@@ -8121,7 +8121,7 @@
    ]
   },
   {
-   "strength": 8304,
+   "strength": 7150,
    "cells": [
     {
      "id": "UNIT_CIRCLEAPPRENTICE",
@@ -8151,7 +8151,7 @@
    ]
   },
   {
-   "strength": 3409,
+   "strength": 2928,
    "cells": [
     {
      "id": "UNIT_GHAST",
@@ -8177,7 +8177,7 @@
    ]
   },
   {
-   "strength": 3680,
+   "strength": 3164,
    "cells": [
     {
      "id": "UNIT_DALISHMAGE",
@@ -8203,7 +8203,7 @@
    ]
   },
   {
-   "strength": 8706,
+   "strength": 7403,
    "cells": [
     {
      "id": "UNIT_DALISHWARRIOR",
@@ -8229,7 +8229,7 @@
    ]
   },
   {
-   "strength": 1118,
+   "strength": 1643,
    "cells": [
     {
      "id": "UNIT_KNIGHTCOMMANDERGREAGOIR",
@@ -8255,7 +8255,7 @@
    ]
   },
   {
-   "strength": 882,
+   "strength": 1048,
    "cells": [
     {
      "id": "UNIT_HARLEQUIN",
@@ -8281,7 +8281,7 @@
    ]
   },
   {
-   "strength": 1075,
+   "strength": 1337,
    "cells": [
     {
      "id": "UNIT_ASHAAD",
@@ -8307,7 +8307,7 @@
    ]
   },
   {
-   "strength": 3898,
+   "strength": 3041,
    "cells": [
     {
      "id": "UNIT_SENTINELARCHER",
@@ -8333,7 +8333,7 @@
    ]
   },
   {
-   "strength": 1162,
+   "strength": 1092,
    "cells": [
     {
      "id": "UNIT_SHADE",
@@ -8359,7 +8359,7 @@
    ]
   },
   {
-   "strength": 3688,
+   "strength": 3094,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -8385,7 +8385,7 @@
    ]
   },
   {
-   "strength": 3898,
+   "strength": 3006,
    "cells": [
     {
      "id": "UNIT_BLIGHTEDWEREWOLF",
@@ -8411,7 +8411,7 @@
    ]
   },
   {
-   "strength": 8697,
+   "strength": 8968,
    "cells": [
     {
      "id": "UNIT_SHADE",
@@ -8441,7 +8441,7 @@
    ]
   },
   {
-   "strength": 1048,
+   "strength": 1503,
    "cells": [
     {
      "id": "UNIT_KNIGHTCOMMANDERGREAGOIR",
@@ -8467,7 +8467,7 @@
    ]
   },
   {
-   "strength": 9239,
+   "strength": 8968,
    "cells": [
     {
      "id": "UNIT_HURLOCKEMISSARY",
@@ -8497,7 +8497,7 @@
    ]
   },
   {
-   "strength": 847,
+   "strength": 1048,
    "cells": [
     {
      "id": "UNIT_HARLEQUIN",
@@ -8523,7 +8523,7 @@
    ]
   },
   {
-   "strength": 4090,
+   "strength": 3260,
    "cells": [
     {
      "id": "UNIT_SENTINELARCHER",
@@ -8549,7 +8549,7 @@
    ]
   },
   {
-   "strength": 6486,
+   "strength": 5944,
    "cells": [
     {
      "id": "UNIT_SHRIEKALPHA",
@@ -8575,7 +8575,7 @@
    ]
   },
   {
-   "strength": 2788,
+   "strength": 2569,
    "cells": [
     {
      "id": "UNIT_SHRIEK",
@@ -8601,7 +8601,7 @@
    ]
   },
   {
-   "strength": 2604,
+   "strength": 2683,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARARCHER",
@@ -8627,7 +8627,7 @@
    ]
   },
   {
-   "strength": 1529,
+   "strength": 1949,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -8653,7 +8653,7 @@
    ]
   },
   {
-   "strength": 3986,
+   "strength": 3024,
    "cells": [
     {
      "id": "UNIT_HURLOCKGRUNT",
@@ -8679,7 +8679,7 @@
    ]
   },
   {
-   "strength": 1110,
+   "strength": 1486,
    "cells": [
     {
      "id": "UNIT_KNIGHTCOMMANDERGREAGOIR",
@@ -8705,7 +8705,7 @@
    ]
   },
   {
-   "strength": 769,
+   "strength": 935,
    "cells": [
     {
      "id": "UNIT_HARLEQUIN",
@@ -8731,7 +8731,7 @@
    ]
   },
   {
-   "strength": 3881,
+   "strength": 3120,
    "cells": [
     {
      "id": "UNIT_SENTINELARCHER",
@@ -8757,7 +8757,7 @@
    ]
   },
   {
-   "strength": 9169,
+   "strength": 9090,
    "cells": [
     {
      "id": "UNIT_NOBLENUG",
@@ -8787,7 +8787,7 @@
    ]
   },
   {
-   "strength": 7351,
+   "strength": 7858,
    "cells": [
     {
      "id": "UNIT_LEGIONNAIRESCOUT",
@@ -8817,7 +8817,7 @@
    ]
   },
   {
-   "strength": 2080,
+   "strength": 1407,
    "cells": [
     {
      "id": "UNIT_HURLOCKGRUNT",
@@ -8843,7 +8843,7 @@
    ]
   },
   {
-   "strength": 8811,
+   "strength": 8688,
    "cells": [
     {
      "id": "UNIT_GENLOCKALPHA",
@@ -8873,7 +8873,7 @@
    ]
   },
   {
-   "strength": 2106,
+   "strength": 1861,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -8899,7 +8899,7 @@
    ]
   },
   {
-   "strength": 6346,
+   "strength": 5926,
    "cells": [
     {
      "id": "UNIT_SHRIEKALPHA",
@@ -8925,7 +8925,7 @@
    ]
   },
   {
-   "strength": 1459,
+   "strength": 1879,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -8951,7 +8951,7 @@
    ]
   },
   {
-   "strength": 7596,
+   "strength": 7097,
    "cells": [
     {
      "id": "UNIT_CARTAASSASSIN",
@@ -8981,7 +8981,7 @@
    ]
   },
   {
-   "strength": 2587,
+   "strength": 2709,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARARCHER",
@@ -9007,7 +9007,7 @@
    ]
   },
   {
-   "strength": 1092,
+   "strength": 1477,
    "cells": [
     {
      "id": "UNIT_KNIGHTCOMMANDERGREAGOIR",
@@ -9033,7 +9033,7 @@
    ]
   },
   {
-   "strength": 3942,
+   "strength": 4571,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -9059,7 +9059,7 @@
    ]
   },
   {
-   "strength": 5463,
+   "strength": 4047,
    "cells": [
     {
      "id": "UNIT_APOSTATEWANDERER",
@@ -9089,7 +9089,7 @@
    ]
   },
   {
-   "strength": 4047,
+   "strength": 3111,
    "cells": [
     {
      "id": "UNIT_SENTINELARCHER",
@@ -9115,7 +9115,7 @@
    ]
   },
   {
-   "strength": 882,
+   "strength": 996,
    "cells": [
     {
      "id": "UNIT_HARLEQUIN",
@@ -9141,7 +9141,7 @@
    ]
   },
   {
-   "strength": 1118,
+   "strength": 1250,
    "cells": [
     {
      "id": "UNIT_WALKINGCORPSE",
@@ -9167,7 +9167,7 @@
    ]
   },
   {
-   "strength": 1136,
+   "strength": 909,
    "cells": [
     {
      "id": "UNIT_ENRAGEDSPIRIT",
@@ -9193,7 +9193,7 @@
    ]
   },
   {
-   "strength": 4965,
+   "strength": 4798,
    "cells": [
     {
      "id": "UNIT_ELVENMAGE",
@@ -9223,7 +9223,7 @@
    ]
   },
   {
-   "strength": 2360,
+   "strength": 2604,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -9249,7 +9249,7 @@
    ]
   },
   {
-   "strength": 6127,
+   "strength": 5795,
    "cells": [
     {
      "id": "UNIT_SHRIEKALPHA",
@@ -9275,7 +9275,7 @@
    ]
   },
   {
-   "strength": 2500,
+   "strength": 1966,
    "cells": [
     {
      "id": "UNIT_CROWASSASSIN",
@@ -9301,7 +9301,7 @@
    ]
   },
   {
-   "strength": 8907,
+   "strength": 8618,
    "cells": [
     {
      "id": "UNIT_FENNEC",
@@ -9331,7 +9331,7 @@
    ]
   },
   {
-   "strength": 979,
+   "strength": 1083,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -9357,7 +9357,7 @@
    ]
   },
   {
-   "strength": 5367,
+   "strength": 4134,
    "cells": [
     {
      "id": "UNIT_DALISHMAGE",
@@ -9383,7 +9383,7 @@
    ]
   },
   {
-   "strength": 2596,
+   "strength": 2709,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARARCHER",
@@ -9409,7 +9409,7 @@
    ]
   },
   {
-   "strength": 4449,
+   "strength": 4248,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -9435,7 +9435,7 @@
    ]
   },
   {
-   "strength": 2727,
+   "strength": 1984,
    "cells": [
     {
      "id": "UNIT_WOLF",
@@ -9461,7 +9461,7 @@
    ]
   },
   {
-   "strength": 4064,
+   "strength": 4624,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -9487,7 +9487,7 @@
    ]
   },
   {
-   "strength": 9554,
+   "strength": 9335,
    "cells": [
     {
      "id": "UNIT_HURLOCKBOLTER",
@@ -9517,7 +9517,7 @@
    ]
   },
   {
-   "strength": 4064,
+   "strength": 3164,
    "cells": [
     {
      "id": "UNIT_SENTINELARCHER",
@@ -9543,7 +9543,7 @@
    ]
   },
   {
-   "strength": 804,
+   "strength": 987,
    "cells": [
     {
      "id": "UNIT_HARLEQUIN",
@@ -9569,7 +9569,7 @@
    ]
   },
   {
-   "strength": 3680,
+   "strength": 2963,
    "cells": [
     {
      "id": "UNIT_DALISHMAGE",
@@ -9595,7 +9595,7 @@
    ]
   },
   {
-   "strength": 4423,
+   "strength": 4755,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -9621,7 +9621,7 @@
    ]
   },
   {
-   "strength": 6416,
+   "strength": 5970,
    "cells": [
     {
      "id": "UNIT_SHRIEKALPHA",
@@ -9647,7 +9647,7 @@
    ]
   },
   {
-   "strength": 8863,
+   "strength": 8627,
    "cells": [
     {
      "id": "UNIT_FENNEC",
@@ -9677,7 +9677,7 @@
    ]
   },
   {
-   "strength": 2167,
+   "strength": 2473,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -9703,7 +9703,7 @@
    ]
   },
   {
-   "strength": 3653,
+   "strength": 3522,
    "cells": [
     {
      "id": "UNIT_SHADE",
@@ -9729,7 +9729,7 @@
    ]
   },
   {
-   "strength": 1564,
+   "strength": 1520,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -9755,7 +9755,7 @@
    ]
   },
   {
-   "strength": 987,
+   "strength": 1083,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -9781,7 +9781,7 @@
    ]
   },
   {
-   "strength": 5034,
+   "strength": 5288,
    "cells": [
     {
      "id": "UNIT_WINTERSENDHARLEQUIN",
@@ -9807,7 +9807,7 @@
    ]
   },
   {
-   "strength": 4554,
+   "strength": 5131,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -9833,7 +9833,7 @@
    ]
   },
   {
-   "strength": 5078,
+   "strength": 4125,
    "cells": [
     {
      "id": "UNIT_DALISHMAGE",
@@ -9859,7 +9859,7 @@
    ]
   },
   {
-   "strength": 2543,
+   "strength": 2657,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARARCHER",
@@ -9885,7 +9885,7 @@
    ]
   },
   {
-   "strength": 4414,
+   "strength": 4291,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -9911,7 +9911,7 @@
    ]
   },
   {
-   "strength": 3889,
+   "strength": 4554,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -9937,7 +9937,7 @@
    ]
   },
   {
-   "strength": 5367,
+   "strength": 5393,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -9963,7 +9963,7 @@
    ]
   },
   {
-   "strength": 1372,
+   "strength": 751,
    "cells": [
     {
      "id": "UNIT_WOLF",
@@ -9989,7 +9989,7 @@
    ]
   },
   {
-   "strength": 3583,
+   "strength": 3994,
    "cells": [
     {
      "id": "UNIT_TEMPLARASSASSIN",
@@ -10019,7 +10019,7 @@
    ]
   },
   {
-   "strength": 4152,
+   "strength": 4632,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -10045,7 +10045,7 @@
    ]
   },
   {
-   "strength": 2132,
+   "strength": 2526,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -10071,7 +10071,7 @@
    ]
   },
   {
-   "strength": 1608,
+   "strength": 1363,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -10097,7 +10097,7 @@
    ]
   },
   {
-   "strength": 4763,
+   "strength": 4449,
    "cells": [
     {
      "id": "UNIT_SHRIEK",
@@ -10123,7 +10123,7 @@
    ]
   },
   {
-   "strength": 5069,
+   "strength": 5157,
    "cells": [
     {
      "id": "UNIT_WINTERSENDHARLEQUIN",
@@ -10149,7 +10149,7 @@
    ]
   },
   {
-   "strength": 4370,
+   "strength": 5096,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -10175,7 +10175,7 @@
    ]
   },
   {
-   "strength": 5209,
+   "strength": 4213,
    "cells": [
     {
      "id": "UNIT_DALISHMAGE",
@@ -10201,7 +10201,7 @@
    ]
   },
   {
-   "strength": 4029,
+   "strength": 4685,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -10227,7 +10227,7 @@
    ]
   },
   {
-   "strength": 2229,
+   "strength": 2631,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -10253,7 +10253,7 @@
    ]
   },
   {
-   "strength": 4248,
+   "strength": 4020,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -10279,7 +10279,7 @@
    ]
   },
   {
-   "strength": 5480,
+   "strength": 4956,
    "cells": [
     {
      "id": "UNIT_WALKINGCORPSE",
@@ -10309,7 +10309,7 @@
    ]
   },
   {
-   "strength": 4807,
+   "strength": 5454,
    "cells": [
     {
      "id": "UNIT_STEN",
@@ -10335,7 +10335,7 @@
    ]
   },
   {
-   "strength": 5262,
+   "strength": 5244,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -10361,7 +10361,7 @@
    ]
   },
   {
-   "strength": 2884,
+   "strength": 3330,
    "cells": [
     {
      "id": "UNIT_SHADE",
@@ -10387,7 +10387,7 @@
    ]
   },
   {
-   "strength": 4545,
+   "strength": 4746,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -10413,7 +10413,7 @@
    ]
   },
   {
-   "strength": 3146,
+   "strength": 3688,
    "cells": [
     {
      "id": "UNIT_ASHAAD",
@@ -10439,7 +10439,7 @@
    ]
   },
   {
-   "strength": 4414,
+   "strength": 4720,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -10465,7 +10465,7 @@
    ]
   },
   {
-   "strength": 2919,
+   "strength": 3225,
    "cells": [
     {
      "id": "UNIT_TEVINTERARCANEMAGE",
@@ -10491,7 +10491,7 @@
    ]
   },
   {
-   "strength": 1555,
+   "strength": 1319,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -10517,7 +10517,7 @@
    ]
   },
   {
-   "strength": 2290,
+   "strength": 2596,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -10543,7 +10543,7 @@
    ]
   },
   {
-   "strength": 4536,
+   "strength": 5166,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -10569,7 +10569,7 @@
    ]
   },
   {
-   "strength": 5104,
+   "strength": 5402,
    "cells": [
     {
      "id": "UNIT_WINTERSENDHARLEQUIN",
@@ -10595,7 +10595,7 @@
    ]
   },
   {
-   "strength": 769,
+   "strength": 646,
    "cells": [
     {
      "id": "UNIT_SHADE",
@@ -10621,7 +10621,7 @@
    ]
   },
   {
-   "strength": 5043,
+   "strength": 4099,
    "cells": [
     {
      "id": "UNIT_DALISHMAGE",
@@ -10647,7 +10647,7 @@
    ]
   },
   {
-   "strength": 4510,
+   "strength": 4353,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -10673,7 +10673,7 @@
    ]
   },
   {
-   "strength": 2220,
+   "strength": 2561,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -10699,7 +10699,7 @@
    ]
   },
   {
-   "strength": 7613,
+   "strength": 7115,
    "cells": [
     {
      "id": "UNIT_CHASINDSCOUT",
@@ -10729,7 +10729,7 @@
    ]
   },
   {
-   "strength": 1188,
+   "strength": 1520,
    "cells": [
     {
      "id": "UNIT_DEVOURINGCORPSE",
@@ -10755,7 +10755,7 @@
    ]
   },
   {
-   "strength": 3680,
+   "strength": 2377,
    "cells": [
     {
      "id": "UNIT_CIRCLESENIORENCHANTER",
@@ -10781,7 +10781,7 @@
    ]
   },
   {
-   "strength": 5349,
+   "strength": 5314,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -10807,7 +10807,7 @@
    ]
   },
   {
-   "strength": 1075,
+   "strength": 1372,
    "cells": [
     {
      "id": "UNIT_SKELETONARCHER",
@@ -10833,7 +10833,7 @@
    ]
   },
   {
-   "strength": 2298,
+   "strength": 2797,
    "cells": [
     {
      "id": "UNIT_KARASHOK",
@@ -10859,7 +10859,7 @@
    ]
   },
   {
-   "strength": 4571,
+   "strength": 4685,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -10885,7 +10885,7 @@
    ]
   },
   {
-   "strength": 4003,
+   "strength": 4335,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -10911,7 +10911,7 @@
    ]
   },
   {
-   "strength": 1302,
+   "strength": 1590,
    "cells": [
     {
      "id": "UNIT_RAGEDEMON",
@@ -10937,7 +10937,7 @@
    ]
   },
   {
-   "strength": 4283,
+   "strength": 4606,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -10963,7 +10963,7 @@
    ]
   },
   {
-   "strength": 1040,
+   "strength": 1171,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -10989,7 +10989,7 @@
    ]
   },
   {
-   "strength": 1634,
+   "strength": 1389,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -11015,7 +11015,7 @@
    ]
   },
   {
-   "strength": 4493,
+   "strength": 5061,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -11041,7 +11041,7 @@
    ]
   },
   {
-   "strength": 8277,
+   "strength": 6923,
    "cells": [
     {
      "id": "UNIT_ELVENMAGE",
@@ -11071,7 +11071,7 @@
    ]
   },
   {
-   "strength": 2762,
+   "strength": 2963,
    "cells": [
     {
      "id": "UNIT_TEVINTERARCANEMAGE",
@@ -11097,7 +11097,7 @@
    ]
   },
   {
-   "strength": 5218,
+   "strength": 5402,
    "cells": [
     {
      "id": "UNIT_WINTERSENDHARLEQUIN",
@@ -11123,7 +11123,7 @@
    ]
   },
   {
-   "strength": 3618,
+   "strength": 3382,
    "cells": [
     {
      "id": "UNIT_PROFANE",
@@ -11149,7 +11149,7 @@
    ]
   },
   {
-   "strength": 865,
+   "strength": 926,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -11175,7 +11175,7 @@
    ]
   },
   {
-   "strength": 7727,
+   "strength": 7447,
    "cells": [
     {
      "id": "UNIT_DARKSPAWNEMISSARY",
@@ -11205,7 +11205,7 @@
    ]
   },
   {
-   "strength": 3409,
+   "strength": 2272,
    "cells": [
     {
      "id": "UNIT_DALISHARCANEWARRIOR",
@@ -11231,7 +11231,7 @@
    ]
   },
   {
-   "strength": 2211,
+   "strength": 2517,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -11257,7 +11257,7 @@
    ]
   },
   {
-   "strength": 5533,
+   "strength": 5506,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -11283,7 +11283,7 @@
    ]
   },
   {
-   "strength": 4851,
+   "strength": 4414,
    "cells": [
     {
      "id": "UNIT_CHASINDSCOUT",
@@ -11313,7 +11313,7 @@
    ]
   },
   {
-   "strength": 3837,
+   "strength": 2543,
    "cells": [
     {
      "id": "UNIT_CIRCLESENIORENCHANTER",
@@ -11339,7 +11339,7 @@
    ]
   },
   {
-   "strength": 1057,
+   "strength": 1013,
    "cells": [
     {
      "id": "UNIT_SLOTHDEMON",
@@ -11365,7 +11365,7 @@
    ]
   },
   {
-   "strength": 1127,
+   "strength": 1424,
    "cells": [
     {
      "id": "UNIT_DEVOURINGSKELETON",
@@ -11391,7 +11391,7 @@
    ]
   },
   {
-   "strength": 4589,
+   "strength": 4667,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -11417,7 +11417,7 @@
    ]
   },
   {
-   "strength": 1520,
+   "strength": 1625,
    "cells": [
     {
      "id": "UNIT_VENATORIMARKSMAN",
@@ -11443,7 +11443,7 @@
    ]
   },
   {
-   "strength": 3846,
+   "strength": 4405,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -11469,7 +11469,7 @@
    ]
   },
   {
-   "strength": 4519,
+   "strength": 4790,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -11495,7 +11495,7 @@
    ]
   },
   {
-   "strength": 4554,
+   "strength": 5253,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -11521,7 +11521,7 @@
    ]
   },
   {
-   "strength": 2744,
+   "strength": 2893,
    "cells": [
     {
      "id": "UNIT_TEVINTERARCANEMAGE",
@@ -11547,7 +11547,7 @@
    ]
   },
   {
-   "strength": 1643,
+   "strength": 1774,
    "cells": [
     {
      "id": "UNIT_VENATORIMARKSMAN",
@@ -11573,7 +11573,7 @@
    ]
   },
   {
-   "strength": 8400,
+   "strength": 7272,
    "cells": [
     {
      "id": "UNIT_ELFAPOSTATE",
@@ -11603,7 +11603,7 @@
    ]
   },
   {
-   "strength": 812,
+   "strength": 865,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -11629,7 +11629,7 @@
    ]
   },
   {
-   "strength": 2272,
+   "strength": 2500,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -11655,7 +11655,7 @@
    ]
   },
   {
-   "strength": 5541,
+   "strength": 5131,
    "cells": [
     {
      "id": "UNIT_HARLEQUIN",
@@ -11685,7 +11685,7 @@
    ]
   },
   {
-   "strength": 3793,
+   "strength": 2508,
    "cells": [
     {
      "id": "UNIT_CIRCLESENIORENCHANTER",
@@ -11711,7 +11711,7 @@
    ]
   },
   {
-   "strength": 4396,
+   "strength": 4632,
    "cells": [
     {
      "id": "UNIT_SHADE",
@@ -11737,7 +11737,7 @@
    ]
   },
   {
-   "strength": 8260,
+   "strength": 7701,
    "cells": [
     {
      "id": "UNIT_HURLOCKGRUNT",
@@ -11767,7 +11767,7 @@
    ]
   },
   {
-   "strength": 1013,
+   "strength": 996,
    "cells": [
     {
      "id": "UNIT_SLOTHDEMON",
@@ -11793,7 +11793,7 @@
    ]
   },
   {
-   "strength": 4554,
+   "strength": 4624,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -11819,7 +11819,7 @@
    ]
   },
   {
-   "strength": 3959,
+   "strength": 4405,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -11845,7 +11845,7 @@
    ]
   },
   {
-   "strength": 2832,
+   "strength": 3103,
    "cells": [
     {
      "id": "UNIT_TEMPLARKNIGHT-CORPORAL",
@@ -11875,7 +11875,7 @@
    ]
   },
   {
-   "strength": 6993,
+   "strength": 6494,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARSHADOW",
@@ -11901,7 +11901,7 @@
    ]
   },
   {
-   "strength": 7010,
+   "strength": 6608,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARSHADOW",
@@ -11927,7 +11927,7 @@
    ]
   },
   {
-   "strength": 1870,
+   "strength": 1512,
    "cells": [
     {
      "id": "UNIT_GREYWARDENMAGE",
@@ -11953,7 +11953,7 @@
    ]
   },
   {
-   "strength": 2683,
+   "strength": 2972,
    "cells": [
     {
      "id": "UNIT_TEVINTERARCANEMAGE",
@@ -11979,7 +11979,7 @@
    ]
   },
   {
-   "strength": 7753,
+   "strength": 6503,
    "cells": [
     {
      "id": "UNIT_ELFBARD",
@@ -12009,7 +12009,7 @@
    ]
   },
   {
-   "strength": 7657,
+   "strength": 7150,
    "cells": [
     {
      "id": "UNIT_CHASINDSCOUT",
@@ -12039,7 +12039,7 @@
    ]
   },
   {
-   "strength": 2421,
+   "strength": 2718,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -12065,7 +12065,7 @@
    ]
   },
   {
-   "strength": 970,
+   "strength": 996,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -12091,7 +12091,7 @@
    ]
   },
   {
-   "strength": 8173,
+   "strength": 7342,
    "cells": [
     {
      "id": "UNIT_CORRUPTEDSPIDER",
@@ -12121,7 +12121,7 @@
    ]
   },
   {
-   "strength": 3540,
+   "strength": 3033,
    "cells": [
     {
      "id": "UNIT_FORESTSPIRIT",
@@ -12147,7 +12147,7 @@
    ]
   },
   {
-   "strength": 3819,
+   "strength": 2438,
    "cells": [
     {
      "id": "UNIT_CIRCLESENIORENCHANTER",
@@ -12199,7 +12199,7 @@
    ]
   },
   {
-   "strength": 4020,
+   "strength": 4318,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -12225,7 +12225,7 @@
    ]
   },
   {
-   "strength": 4554,
+   "strength": 4615,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -12251,7 +12251,7 @@
    ]
   },
   {
-   "strength": 3986,
+   "strength": 4405,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -12303,7 +12303,7 @@
    ]
   },
   {
-   "strength": 8933,
+   "strength": 8286,
    "cells": [
     {
      "id": "UNIT_DALISHMAGE",
@@ -12333,7 +12333,7 @@
    ]
   },
   {
-   "strength": 2036,
+   "strength": 1590,
    "cells": [
     {
      "id": "UNIT_GREYWARDENMAGE",
@@ -12359,7 +12359,7 @@
    ]
   },
   {
-   "strength": 734,
+   "strength": 699,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -12385,7 +12385,7 @@
    ]
   },
   {
-   "strength": 926,
+   "strength": 987,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -12411,7 +12411,7 @@
    ]
   },
   {
-   "strength": 3610,
+   "strength": 3033,
    "cells": [
     {
      "id": "UNIT_FORESTSPIRIT",
@@ -12437,7 +12437,7 @@
    ]
   },
   {
-   "strength": 6092,
+   "strength": 6215,
    "cells": [
     {
      "id": "UNIT_TEVINTERSLAVER",
@@ -12467,7 +12467,7 @@
    ]
   },
   {
-   "strength": 1110,
+   "strength": 1101,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -12493,7 +12493,7 @@
    ]
   },
   {
-   "strength": 1083,
+   "strength": 1040,
    "cells": [
     {
      "id": "UNIT_SLOTHDEMON",
@@ -12519,7 +12519,7 @@
    ]
   },
   {
-   "strength": 9125,
+   "strength": 8889,
    "cells": [
     {
      "id": "UNIT_SPIRITOFVALOR",
@@ -12549,7 +12549,7 @@
    ]
   },
   {
-   "strength": 3889,
+   "strength": 3907,
    "cells": [
     {
      "id": "UNIT_COTERIETHIEF",
@@ -12579,7 +12579,7 @@
    ]
   },
   {
-   "strength": 2132,
+   "strength": 1678,
    "cells": [
     {
      "id": "UNIT_GREYWARDENMAGE",
@@ -12605,7 +12605,7 @@
    ]
   },
   {
-   "strength": 777,
+   "strength": 725,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -12631,7 +12631,7 @@
    ]
   },
   {
-   "strength": 1704,
+   "strength": 2071,
    "cells": [
     {
      "id": "UNIT_ASHAAD",
@@ -12657,7 +12657,7 @@
    ]
   },
   {
-   "strength": 909,
+   "strength": 979,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -12683,7 +12683,7 @@
    ]
   },
   {
-   "strength": 3444,
+   "strength": 3304,
    "cells": [
     {
      "id": "UNIT_HUNGERDEMON",
@@ -12709,7 +12709,7 @@
    ]
   },
   {
-   "strength": 3583,
+   "strength": 3208,
    "cells": [
     {
      "id": "UNIT_FORESTSPIRIT",
@@ -12735,7 +12735,7 @@
    ]
   },
   {
-   "strength": 6713,
+   "strength": 5996,
    "cells": [
     {
      "id": "UNIT_CORRUPTEDSPIDER",
@@ -12765,7 +12765,7 @@
    ]
   },
   {
-   "strength": 961,
+   "strength": 856,
    "cells": [
     {
      "id": "UNIT_ENRAGEDSPIRIT",
@@ -12791,7 +12791,7 @@
    ]
   },
   {
-   "strength": 1162,
+   "strength": 1040,
    "cells": [
     {
      "id": "UNIT_SLOTHDEMON",
@@ -12817,7 +12817,7 @@
    ]
   },
   {
-   "strength": 9090,
+   "strength": 8994,
    "cells": [
     {
      "id": "UNIT_SHRIEK",
@@ -12847,7 +12847,7 @@
    ]
   },
   {
-   "strength": 9152,
+   "strength": 8924,
    "cells": [
     {
      "id": "UNIT_SPIRITOFVALOR",
@@ -12877,7 +12877,7 @@
    ]
   },
   {
-   "strength": 1931,
+   "strength": 1451,
    "cells": [
     {
      "id": "UNIT_GREYWARDENMAGE",
@@ -12903,7 +12903,7 @@
    ]
   },
   {
-   "strength": 3575,
+   "strength": 3085,
    "cells": [
     {
      "id": "UNIT_TEVINTERSLAVER",
@@ -12933,7 +12933,7 @@
    ]
   },
   {
-   "strength": 9501,
+   "strength": 9230,
    "cells": [
     {
      "id": "UNIT_SHRIEK",
@@ -12963,7 +12963,7 @@
    ]
   },
   {
-   "strength": 3924,
+   "strength": 3216,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -12993,7 +12993,7 @@
    ]
   },
   {
-   "strength": 8225,
+   "strength": 8435,
    "cells": [
     {
      "id": "UNIT_SILENTSISTER",
@@ -13023,7 +13023,7 @@
    ]
   },
   {
-   "strength": 786,
+   "strength": 751,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -13049,7 +13049,7 @@
    ]
   },
   {
-   "strength": 4930,
+   "strength": 5419,
    "cells": [
     {
      "id": "UNIT_BEN-HASSRATH",
@@ -13075,7 +13075,7 @@
    ]
   },
   {
-   "strength": 3697,
+   "strength": 3750,
    "cells": [
     {
      "id": "UNIT_SHAHWYRD",
@@ -13101,7 +13101,7 @@
    ]
   },
   {
-   "strength": 2290,
+   "strength": 1284,
    "cells": [
     {
      "id": "UNIT_CAHIR",
@@ -13127,7 +13127,7 @@
    ]
   },
   {
-   "strength": 3610,
+   "strength": 3094,
    "cells": [
     {
      "id": "UNIT_FORESTSPIRIT",
@@ -13153,7 +13153,7 @@
    ]
   },
   {
-   "strength": 1582,
+   "strength": 1923,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -13179,7 +13179,7 @@
    ]
   },
   {
-   "strength": 3863,
+   "strength": 3741,
    "cells": [
     {
      "id": "UNIT_HUNGERDEMON",
@@ -13209,7 +13209,7 @@
    ]
   },
   {
-   "strength": 1092,
+   "strength": 1118,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -13235,7 +13235,7 @@
    ]
   },
   {
-   "strength": 4947,
+   "strength": 5463,
    "cells": [
     {
      "id": "UNIT_BEN-HASSRATH",
@@ -13261,7 +13261,7 @@
    ]
   },
   {
-   "strength": 7027,
+   "strength": 6582,
    "cells": [
     {
      "id": "UNIT_TEVINTERSLAVER",
@@ -13291,7 +13291,7 @@
    ]
   },
   {
-   "strength": 2526,
+   "strength": 1381,
    "cells": [
     {
      "id": "UNIT_CIRCLEAPPRENTICE",
@@ -13317,7 +13317,7 @@
    ]
   },
   {
-   "strength": 7744,
+   "strength": 7893,
    "cells": [
     {
      "id": "UNIT_BLIGHTEDWEREWOLF",
@@ -13347,7 +13347,7 @@
    ]
   },
   {
-   "strength": 2080,
+   "strength": 1660,
    "cells": [
     {
      "id": "UNIT_GREYWARDENMAGE",
@@ -13373,7 +13373,7 @@
    ]
   },
   {
-   "strength": 3618,
+   "strength": 3522,
    "cells": [
     {
      "id": "UNIT_SHAHWYRD",
@@ -13399,7 +13399,7 @@
    ]
   },
   {
-   "strength": 2395,
+   "strength": 2578,
    "cells": [
     {
      "id": "UNIT_DRAGONLING",
@@ -13425,7 +13425,7 @@
    ]
   },
   {
-   "strength": 699,
+   "strength": 550,
    "cells": [
     {
      "id": "UNIT_ENRAGEDSPIRIT",
@@ -13451,7 +13451,7 @@
    ]
   },
   {
-   "strength": 7159,
+   "strength": 6923,
    "cells": [
     {
      "id": "UNIT_STEN",
@@ -13481,7 +13481,7 @@
    ]
   },
   {
-   "strength": 2456,
+   "strength": 2482,
    "cells": [
     {
      "id": "UNIT_DRAGONLING",
@@ -13507,7 +13507,7 @@
    ]
   },
   {
-   "strength": 6022,
+   "strength": 4545,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -13537,7 +13537,7 @@
    ]
   },
   {
-   "strength": 1048,
+   "strength": 1031,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -13563,7 +13563,7 @@
    ]
   },
   {
-   "strength": 2552,
+   "strength": 2963,
    "cells": [
     {
      "id": "UNIT_ASHWRAITH",
@@ -13589,7 +13589,7 @@
    ]
   },
   {
-   "strength": 4606,
+   "strength": 5096,
    "cells": [
     {
      "id": "UNIT_FLORIANNE",
@@ -13615,7 +13615,7 @@
    ]
   },
   {
-   "strength": 1896,
+   "strength": 1582,
    "cells": [
     {
      "id": "UNIT_GREYWARDENMAGE",
@@ -13641,7 +13641,7 @@
    ]
   },
   {
-   "strength": 4099,
+   "strength": 4833,
    "cells": [
     {
      "id": "UNIT_DEVOURINGSKELETON",
@@ -13667,7 +13667,7 @@
    ]
   },
   {
-   "strength": 4388,
+   "strength": 3968,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -13693,7 +13693,7 @@
    ]
   },
   {
-   "strength": 4571,
+   "strength": 4239,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -13719,7 +13719,7 @@
    ]
   },
   {
-   "strength": 4414,
+   "strength": 4047,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -13745,7 +13745,7 @@
    ]
   },
   {
-   "strength": 4589,
+   "strength": 4073,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -13771,7 +13771,7 @@
    ]
   },
   {
-   "strength": 4667,
+   "strength": 5026,
    "cells": [
     {
      "id": "UNIT_SAAREBAS",
@@ -13797,7 +13797,7 @@
    ]
   },
   {
-   "strength": 1879,
+   "strength": 1993,
    "cells": [
     {
      "id": "UNIT_REVENANT",
@@ -13823,7 +13823,7 @@
    ]
   },
   {
-   "strength": 3286,
+   "strength": 3339,
    "cells": [
     {
      "id": "UNIT_SHADE",
@@ -13849,7 +13849,7 @@
    ]
   },
   {
-   "strength": 987,
+   "strength": 743,
    "cells": [
     {
      "id": "UNIT_TEVINTERWARRIOR",
@@ -13875,7 +13875,7 @@
    ]
   },
   {
-   "strength": 6241,
+   "strength": 6319,
    "cells": [
     {
      "id": "UNIT_RAGEDEMON",
@@ -13905,7 +13905,7 @@
    ]
   },
   {
-   "strength": 8977,
+   "strength": 9064,
    "cells": [
     {
      "id": "UNIT_RAGEDEMON",
@@ -13935,7 +13935,7 @@
    ]
   },
   {
-   "strength": 4825,
+   "strength": 5297,
    "cells": [
     {
      "id": "UNIT_FLORIANNE",
@@ -13961,7 +13961,7 @@
    ]
   },
   {
-   "strength": 970,
+   "strength": 760,
    "cells": [
     {
      "id": "UNIT_SHADE",
@@ -13987,7 +13987,7 @@
    ]
   },
   {
-   "strength": 1923,
+   "strength": 1494,
    "cells": [
     {
      "id": "UNIT_GREYWARDENMAGE",
@@ -14013,63 +14013,63 @@
    ]
   },
   {
-   "strength": 5699,
-   "cells": [
-    {
-     "id": "UNIT_MACRINUS",
-     "tier": "IV",
-     "level": 62
-    },
-    {
-     "id": "UNIT_VENATORIGLADIATOR",
-     "tier": "IV",
-     "level": 62
-    },
-    {
-     "id": "UNIT_VENATORIMARKSMAN",
-     "tier": "IV",
-     "level": 62
-    },
-    {
-     "id": "UNIT_VENATORIZEALOT",
-     "tier": "IV",
-     "level": 62
-    },
-    null
-   ]
-  },
-  {
-   "strength": 5576,
-   "cells": [
-    {
-     "id": "UNIT_MACRINUS",
-     "tier": "IV",
-     "level": 65
-    },
-    {
-     "id": "UNIT_VENATORIGLADIATOR",
-     "tier": "IV",
-     "level": 65
-    },
-    {
-     "id": "UNIT_VENATORIMARKSMAN",
-     "tier": "IV",
-     "level": 65
-    },
-    {
-     "id": "UNIT_VENATORIZEALOT",
-     "tier": "IV",
-     "level": 65
-    },
-    null
-   ]
-  },
-  {
    "strength": 5629,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
      "tier": "IV",
+     "level": 62
+    },
+    {
+     "id": "UNIT_VENATORIGLADIATOR",
+     "tier": "IV",
+     "level": 62
+    },
+    {
+     "id": "UNIT_VENATORIMARKSMAN",
+     "tier": "IV",
+     "level": 62
+    },
+    {
+     "id": "UNIT_VENATORIZEALOT",
+     "tier": "IV",
+     "level": 62
+    },
+    null
+   ]
+  },
+  {
+   "strength": 5437,
+   "cells": [
+    {
+     "id": "UNIT_MACRINUS",
+     "tier": "IV",
+     "level": 65
+    },
+    {
+     "id": "UNIT_VENATORIGLADIATOR",
+     "tier": "IV",
+     "level": 65
+    },
+    {
+     "id": "UNIT_VENATORIMARKSMAN",
+     "tier": "IV",
+     "level": 65
+    },
+    {
+     "id": "UNIT_VENATORIZEALOT",
+     "tier": "IV",
+     "level": 65
+    },
+    null
+   ]
+  },
+  {
+   "strength": 5638,
+   "cells": [
+    {
+     "id": "UNIT_MACRINUS",
+     "tier": "IV",
      "level": 74
     },
     {
@@ -14091,7 +14091,7 @@
    ]
   },
   {
-   "strength": 5480,
+   "strength": 5402,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -14117,7 +14117,7 @@
    ]
   },
   {
-   "strength": 4291,
+   "strength": 4886,
    "cells": [
     {
      "id": "UNIT_RASAAN",
@@ -14143,7 +14143,7 @@
    ]
   },
   {
-   "strength": 4239,
+   "strength": 4746,
    "cells": [
     {
      "id": "UNIT_RASAAN",
@@ -14169,7 +14169,7 @@
    ]
   },
   {
-   "strength": 3103,
+   "strength": 3164,
    "cells": [
     {
      "id": "UNIT_SHAHWYRD",
@@ -14195,7 +14195,7 @@
    ]
   },
   {
-   "strength": 2875,
+   "strength": 3041,
    "cells": [
     {
      "id": "UNIT_SHAHWYRD",
@@ -14221,7 +14221,7 @@
    ]
   },
   {
-   "strength": 9029,
+   "strength": 8400,
    "cells": [
     {
      "id": "UNIT_GENLOCKBRUTE",
@@ -14251,7 +14251,7 @@
    ]
   },
   {
-   "strength": 6704,
+   "strength": 6013,
    "cells": [
     {
      "id": "UNIT_SENTINELSHADOW",
@@ -14277,7 +14277,7 @@
    ]
   },
   {
-   "strength": 6284,
+   "strength": 5131,
    "cells": [
     {
      "id": "UNIT_DALISHARCANEWARRIOR",
@@ -14307,7 +14307,7 @@
    ]
   },
   {
-   "strength": 1739,
+   "strength": 2202,
    "cells": [
     {
      "id": "UNIT_MAGISTERPAVUS",
@@ -14333,7 +14333,7 @@
    ]
   },
   {
-   "strength": 4484,
+   "strength": 5148,
    "cells": [
     {
      "id": "UNIT_SAAREBAS",
@@ -14359,7 +14359,7 @@
    ]
   },
   {
-   "strength": 3033,
+   "strength": 3505,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -14385,7 +14385,7 @@
    ]
   },
   {
-   "strength": 3120,
+   "strength": 3671,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -14411,7 +14411,7 @@
    ]
   },
   {
-   "strength": 3076,
+   "strength": 3513,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -14437,7 +14437,7 @@
    ]
   },
   {
-   "strength": 3199,
+   "strength": 3793,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -14463,7 +14463,7 @@
    ]
   },
   {
-   "strength": 7919,
+   "strength": 8015,
    "cells": [
     {
      "id": "UNIT_DEVOURINGCORPSE",
@@ -14493,7 +14493,7 @@
    ]
   },
   {
-   "strength": 7185,
+   "strength": 7176,
    "cells": [
     {
      "id": "UNIT_CHOCOLATENUG",
@@ -14523,7 +14523,7 @@
    ]
   },
   {
-   "strength": 8050,
+   "strength": 7648,
    "cells": [
     {
      "id": "UNIT_DALISHMAGE",
@@ -14553,7 +14553,7 @@
    ]
   },
   {
-   "strength": 5533,
+   "strength": 5419,
    "cells": [
     {
      "id": "UNIT_ELITEHARLEQUIN",
@@ -14579,7 +14579,7 @@
    ]
   },
   {
-   "strength": 6818,
+   "strength": 6171,
    "cells": [
     {
      "id": "UNIT_SENTINELSHADOW",
@@ -14605,7 +14605,7 @@
    ]
   },
   {
-   "strength": 1634,
+   "strength": 2150,
    "cells": [
     {
      "id": "UNIT_MAGISTERPAVUS",
@@ -14631,7 +14631,7 @@
    ]
   },
   {
-   "strength": 8566,
+   "strength": 8697,
    "cells": [
     {
      "id": "UNIT_RAGEDEMON",
@@ -14661,7 +14661,7 @@
    ]
   },
   {
-   "strength": 4545,
+   "strength": 4589,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -14687,7 +14687,7 @@
    ]
   },
   {
-   "strength": 3863,
+   "strength": 3951,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -14713,7 +14713,7 @@
    ]
   },
   {
-   "strength": 1494,
+   "strength": 1809,
    "cells": [
     {
      "id": "UNIT_THEDARKTHEURGE",
@@ -14739,7 +14739,7 @@
    ]
   },
   {
-   "strength": 9038,
+   "strength": 8907,
    "cells": [
     {
      "id": "UNIT_BLIGHTEDWEREWOLF",
@@ -14769,7 +14769,7 @@
    ]
   },
   {
-   "strength": 3732,
+   "strength": 3994,
    "cells": [
     {
      "id": "UNIT_SIGRUN",
@@ -14795,7 +14795,7 @@
    ]
   },
   {
-   "strength": 5209,
+   "strength": 5139,
    "cells": [
     {
      "id": "UNIT_PROFANE",
@@ -14825,7 +14825,7 @@
    ]
   },
   {
-   "strength": 8776,
+   "strength": 9125,
    "cells": [
     {
      "id": "UNIT_SLOTHDEMON",
@@ -14855,7 +14855,7 @@
    ]
   },
   {
-   "strength": 1206,
+   "strength": 1695,
    "cells": [
     {
      "id": "UNIT_YAVANA",
@@ -14881,7 +14881,7 @@
    ]
   },
   {
-   "strength": 3138,
+   "strength": 3723,
    "cells": [
     {
      "id": "UNIT_SAAREBAS",
@@ -14907,7 +14907,7 @@
    ]
   },
   {
-   "strength": 6250,
+   "strength": 6092,
    "cells": [
     {
      "id": "UNIT_WINTERSENDHARLEQUIN",
@@ -14937,7 +14937,7 @@
    ]
   },
   {
-   "strength": 7272,
+   "strength": 7019,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -14967,7 +14967,7 @@
    ]
   },
   {
-   "strength": 7150,
+   "strength": 6608,
    "cells": [
     {
      "id": "UNIT_SENTINELARCHER",
@@ -14997,7 +14997,7 @@
    ]
   },
   {
-   "strength": 5375,
+   "strength": 5445,
    "cells": [
     {
      "id": "UNIT_ELITEHARLEQUIN",
@@ -15023,7 +15023,7 @@
    ]
   },
   {
-   "strength": 4283,
+   "strength": 4510,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -15049,7 +15049,7 @@
    ]
   },
   {
-   "strength": 1704,
+   "strength": 1870,
    "cells": [
     {
      "id": "UNIT_THEDARKTHEURGE",
@@ -15075,7 +15075,7 @@
    ]
   },
   {
-   "strength": 3680,
+   "strength": 4020,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -15101,7 +15101,7 @@
    ]
   },
   {
-   "strength": 8295,
+   "strength": 8216,
    "cells": [
     {
      "id": "UNIT_STEN",
@@ -15131,7 +15131,7 @@
    ]
   },
   {
-   "strength": 1101,
+   "strength": 1503,
    "cells": [
     {
      "id": "UNIT_YAVANA",
@@ -15157,7 +15157,7 @@
    ]
   },
   {
-   "strength": 6267,
+   "strength": 5000,
    "cells": [
     {
      "id": "UNIT_TEVINTERSLAVER",
@@ -15187,7 +15187,7 @@
    ]
   },
   {
-   "strength": 5629,
+   "strength": 4650,
    "cells": [
     {
      "id": "UNIT_ZATHRIAN",
@@ -15213,7 +15213,7 @@
    ]
   },
   {
-   "strength": 8680,
+   "strength": 8409,
    "cells": [
     {
      "id": "UNIT_GENLOCKALPHA",
@@ -15243,7 +15243,7 @@
    ]
   },
   {
-   "strength": 3732,
+   "strength": 4134,
    "cells": [
     {
      "id": "UNIT_SIGRUN",
@@ -15269,7 +15269,7 @@
    ]
   },
   {
-   "strength": 4702,
+   "strength": 4965,
    "cells": [
     {
      "id": "UNIT_SPIRITARCHER",
@@ -15295,7 +15295,7 @@
    ]
   },
   {
-   "strength": 4868,
+   "strength": 5061,
    "cells": [
     {
      "id": "UNIT_SPIRITARCHER",
@@ -15321,7 +15321,7 @@
    ]
   },
   {
-   "strength": 4326,
+   "strength": 4755,
    "cells": [
     {
      "id": "UNIT_MARJOLAINE",
@@ -15347,7 +15347,7 @@
    ]
   },
   {
-   "strength": 4143,
+   "strength": 4685,
    "cells": [
     {
      "id": "UNIT_MARJOLAINE",
@@ -15373,7 +15373,7 @@
    ]
   },
   {
-   "strength": 4265,
+   "strength": 4737,
    "cells": [
     {
      "id": "UNIT_MARJOLAINE",
@@ -15399,7 +15399,7 @@
    ]
   },
   {
-   "strength": 4344,
+   "strength": 4877,
    "cells": [
     {
      "id": "UNIT_MARJOLAINE",
@@ -15425,7 +15425,7 @@
    ]
   },
   {
-   "strength": 7858,
+   "strength": 7945,
    "cells": [
     {
      "id": "UNIT_DANARIUS",
@@ -15455,7 +15455,7 @@
    ]
   },
   {
-   "strength": 5052,
+   "strength": 5148,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -15485,7 +15485,7 @@
    ]
   },
   {
-   "strength": 5559,
+   "strength": 4545,
    "cells": [
     {
      "id": "UNIT_ZATHRIAN",
@@ -15511,7 +15511,7 @@
    ]
   },
   {
-   "strength": 4833,
+   "strength": 5209,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -15537,7 +15537,7 @@
    ]
   },
   {
-   "strength": 5489,
+   "strength": 6206,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -15567,7 +15567,7 @@
    ]
   },
   {
-   "strength": 7631,
+   "strength": 8103,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -15597,7 +15597,7 @@
    ]
   },
   {
-   "strength": 646,
+   "strength": 480,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -15623,7 +15623,7 @@
    ]
   },
   {
-   "strength": 8977,
+   "strength": 8601,
    "cells": [
     {
      "id": "UNIT_FORESTSPIRIT",
@@ -15653,7 +15653,7 @@
    ]
   },
   {
-   "strength": 2849,
+   "strength": 3015,
    "cells": [
     {
      "id": "UNIT_TORPOR",
@@ -15679,7 +15679,7 @@
    ]
   },
   {
-   "strength": 2980,
+   "strength": 3033,
    "cells": [
     {
      "id": "UNIT_TORPOR",
@@ -15705,7 +15705,7 @@
    ]
   },
   {
-   "strength": 9125,
+   "strength": 8645,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARSHADOW",
@@ -15735,7 +15735,7 @@
    ]
   },
   {
-   "strength": 9073,
+   "strength": 8741,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARSHADOW",
@@ -15765,7 +15765,7 @@
    ]
   },
   {
-   "strength": 6451,
+   "strength": 6538,
    "cells": [
     {
      "id": "UNIT_CIRCLESENIORENCHANTER",
@@ -15795,7 +15795,7 @@
    ]
   },
   {
-   "strength": 4903,
+   "strength": 5253,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -15821,7 +15821,7 @@
    ]
   },
   {
-   "strength": 3391,
+   "strength": 3924,
    "cells": [
     {
      "id": "UNIT_MALIPHANT",
@@ -15847,7 +15847,7 @@
    ]
   },
   {
-   "strength": 3618,
+   "strength": 3994,
    "cells": [
     {
      "id": "UNIT_MALIPHANT",
@@ -15873,7 +15873,7 @@
    ]
   },
   {
-   "strength": 7561,
+   "strength": 7395,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -15903,7 +15903,7 @@
    ]
   },
   {
-   "strength": 5166,
+   "strength": 5183,
    "cells": [
     {
      "id": "UNIT_SPIRITSPELLBINDER",
@@ -15929,7 +15929,7 @@
    ]
   },
   {
-   "strength": 3540,
+   "strength": 3618,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -15955,7 +15955,7 @@
    ]
   },
   {
-   "strength": 8540,
+   "strength": 8671,
    "cells": [
     {
      "id": "UNIT_SHADE",
@@ -15985,7 +15985,7 @@
    ]
   },
   {
-   "strength": 489,
+   "strength": 524,
    "cells": [
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
@@ -16011,7 +16011,7 @@
    ]
   },
   {
-   "strength": 498,
+   "strength": 506,
    "cells": [
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
@@ -16037,7 +16037,7 @@
    ]
   },
   {
-   "strength": 3522,
+   "strength": 3776,
    "cells": [
     {
      "id": "UNIT_GREYWARDENBETHANY",
@@ -16063,7 +16063,7 @@
    ]
   },
   {
-   "strength": 7945,
+   "strength": 7867,
    "cells": [
     {
      "id": "UNIT_RAGEDEMON",
@@ -16093,7 +16093,7 @@
    ]
   },
   {
-   "strength": 3522,
+   "strength": 3540,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -16119,7 +16119,7 @@
    ]
   },
   {
-   "strength": 7613,
+   "strength": 7683,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -16149,7 +16149,7 @@
    ]
   },
   {
-   "strength": 5209,
+   "strength": 5270,
    "cells": [
     {
      "id": "UNIT_DESPAIRDEMON",
@@ -16175,7 +16175,7 @@
    ]
   },
   {
-   "strength": 5166,
+   "strength": 5340,
    "cells": [
     {
      "id": "UNIT_DESPAIRDEMON",
@@ -16201,7 +16201,7 @@
    ]
   },
   {
-   "strength": 1931,
+   "strength": 2351,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -16227,7 +16227,7 @@
    ]
   },
   {
-   "strength": 4527,
+   "strength": 4868,
    "cells": [
     {
      "id": "UNIT_KNIGHTCOMMANDERGREAGOIR",
@@ -16257,7 +16257,7 @@
    ]
   },
   {
-   "strength": 1879,
+   "strength": 2281,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -16309,7 +16309,7 @@
    ]
   },
   {
-   "strength": 1162,
+   "strength": 1276,
    "cells": [
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
@@ -16335,7 +16335,7 @@
    ]
   },
   {
-   "strength": 979,
+   "strength": 1083,
    "cells": [
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
@@ -16361,7 +16361,7 @@
    ]
   },
   {
-   "strength": 7709,
+   "strength": 8129,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -16391,7 +16391,7 @@
    ]
   },
   {
-   "strength": 5332,
+   "strength": 5909,
    "cells": [
     {
      "id": "UNIT_THEBARONESS",
@@ -16417,7 +16417,7 @@
    ]
   },
   {
-   "strength": 3330,
+   "strength": 3618,
    "cells": [
     {
      "id": "UNIT_GREYWARDENBETHANY",
@@ -16443,7 +16443,7 @@
    ]
   },
   {
-   "strength": 6617,
+   "strength": 6896,
    "cells": [
     {
      "id": "UNIT_VELGHAST",
@@ -16473,7 +16473,7 @@
    ]
   },
   {
-   "strength": 5323,
+   "strength": 4868,
    "cells": [
     {
      "id": "UNIT_ELITEHARLEQUIN",
@@ -16503,7 +16503,7 @@
    ]
   },
   {
-   "strength": 4781,
+   "strength": 3566,
    "cells": [
     {
      "id": "UNIT_GREYWARDENROGUE",
@@ -16533,7 +16533,7 @@
    ]
   },
   {
-   "strength": 2578,
+   "strength": 2718,
    "cells": [
     {
      "id": "UNIT_LORDWOOLSLEY",
@@ -16559,7 +16559,7 @@
    ]
   },
   {
-   "strength": 8260,
+   "strength": 8138,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -16589,7 +16589,7 @@
    ]
   },
   {
-   "strength": 2421,
+   "strength": 2578,
    "cells": [
     {
      "id": "UNIT_LORDWOOLSLEY",
@@ -16615,7 +16615,7 @@
    ]
   },
   {
-   "strength": 2823,
+   "strength": 3304,
    "cells": [
     {
      "id": "UNIT_STONEGOLEM",
@@ -16641,7 +16641,7 @@
    ]
   },
   {
-   "strength": 6783,
+   "strength": 6791,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -16671,7 +16671,7 @@
    ]
   },
   {
-   "strength": 2220,
+   "strength": 2587,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -16697,7 +16697,7 @@
    ]
   },
   {
-   "strength": 7736,
+   "strength": 7543,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -16727,7 +16727,7 @@
    ]
   },
   {
-   "strength": 5970,
+   "strength": 5690,
    "cells": [
     {
      "id": "UNIT_MARJOLAINE",
@@ -16757,7 +16757,7 @@
    ]
   },
   {
-   "strength": 5008,
+   "strength": 5148,
    "cells": [
     {
      "id": "UNIT_MARJOLAINE",
@@ -16787,7 +16787,7 @@
    ]
   },
   {
-   "strength": 3881,
+   "strength": 4003,
    "cells": [
     {
      "id": "UNIT_YAVANA",
@@ -16813,7 +16813,7 @@
    ]
   },
   {
-   "strength": 2342,
+   "strength": 2753,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -16839,7 +16839,7 @@
    ]
   },
   {
-   "strength": 6590,
+   "strength": 6966,
    "cells": [
     {
      "id": "UNIT_FLORIANNE",
@@ -16869,7 +16869,7 @@
    ]
   },
   {
-   "strength": 7753,
+   "strength": 8006,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -16899,7 +16899,7 @@
    ]
   },
   {
-   "strength": 6634,
+   "strength": 6844,
    "cells": [
     {
      "id": "UNIT_REVENANT",
@@ -16929,7 +16929,7 @@
    ]
   },
   {
-   "strength": 1582,
+   "strength": 1765,
    "cells": [
     {
      "id": "UNIT_ASHA'BELLANAR",
@@ -16955,7 +16955,7 @@
    ]
   },
   {
-   "strength": 7351,
+   "strength": 7692,
    "cells": [
     {
      "id": "UNIT_HARLEQUIN",
@@ -16985,7 +16985,7 @@
    ]
   },
   {
-   "strength": 6459,
+   "strength": 6223,
    "cells": [
     {
      "id": "UNIT_KEEPERMARETHARI",
@@ -17015,7 +17015,7 @@
    ]
   },
   {
-   "strength": 8767,
+   "strength": 8645,
    "cells": [
     {
      "id": "UNIT_THEFIRST",
@@ -17045,7 +17045,7 @@
    ]
   },
   {
-   "strength": 6547,
+   "strength": 6905,
    "cells": [
     {
      "id": "UNIT_FLORIANNE",
@@ -17075,7 +17075,7 @@
    ]
   },
   {
-   "strength": 1416,
+   "strength": 1669,
    "cells": [
     {
      "id": "UNIT_ASHA'BELLANAR",
@@ -17101,7 +17101,7 @@
    ]
   },
   {
-   "strength": 7569,
+   "strength": 7027,
    "cells": [
     {
      "id": "UNIT_TEVINTERWARRIOR",
@@ -17131,41 +17131,41 @@
    ]
   },
   {
-   "strength": 7001,
-   "cells": [
-    {
-     "id": "UNIT_SHAHWYRD",
-     "tier": "IV",
-     "level": 46
-    },
-    {
-     "id": "UNIT_GIBBERINGHORROR",
-     "tier": "IV",
-     "level": 46
-    },
-    {
-     "id": "UNIT_ARCANEHORROR",
-     "tier": "IV",
-     "level": 46
-    },
-    {
-     "id": "UNIT_PROFANE",
-     "tier": "IV",
-     "level": 46
-    },
-    {
-     "id": "UNIT_NIGHTMAREASPECT",
-     "tier": "IV",
-     "level": 46
-    }
-   ]
-  },
-  {
    "strength": 6966,
    "cells": [
     {
      "id": "UNIT_SHAHWYRD",
      "tier": "IV",
+     "level": 46
+    },
+    {
+     "id": "UNIT_GIBBERINGHORROR",
+     "tier": "IV",
+     "level": 46
+    },
+    {
+     "id": "UNIT_ARCANEHORROR",
+     "tier": "IV",
+     "level": 46
+    },
+    {
+     "id": "UNIT_PROFANE",
+     "tier": "IV",
+     "level": 46
+    },
+    {
+     "id": "UNIT_NIGHTMAREASPECT",
+     "tier": "IV",
+     "level": 46
+    }
+   ]
+  },
+  {
+   "strength": 7036,
+   "cells": [
+    {
+     "id": "UNIT_SHAHWYRD",
+     "tier": "IV",
      "level": 49
     },
     {
@@ -17191,7 +17191,7 @@
    ]
   },
   {
-   "strength": 6800,
+   "strength": 7010,
    "cells": [
     {
      "id": "UNIT_SHAHWYRD",
@@ -17221,7 +17221,7 @@
    ]
   },
   {
-   "strength": 6477,
+   "strength": 6809,
    "cells": [
     {
      "id": "UNIT_FLORIANNE",
@@ -17251,7 +17251,7 @@
    ]
   },
   {
-   "strength": 9064,
+   "strength": 8706,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARSHADOW",
@@ -17281,7 +17281,7 @@
    ]
   },
   {
-   "strength": 5673,
+   "strength": 5987,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -17311,7 +17311,7 @@
    ]
   },
   {
-   "strength": 5769,
+   "strength": 6066,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -17341,7 +17341,7 @@
    ]
   },
   {
-   "strength": 6958,
+   "strength": 7631,
    "cells": [
     {
      "id": "UNIT_RASAAN",
@@ -17371,7 +17371,7 @@
    ]
   },
   {
-   "strength": 7176,
+   "strength": 7797,
    "cells": [
     {
      "id": "UNIT_RASAAN",
@@ -17401,7 +17401,7 @@
    ]
   },
   {
-   "strength": 7893,
+   "strength": 8111,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -17431,7 +17431,7 @@
    ]
   },
   {
-   "strength": 3889,
+   "strength": 3758,
    "cells": [
     {
      "id": "UNIT_YAVANA",
@@ -17457,7 +17457,7 @@
    ]
   },
   {
-   "strength": 4020,
+   "strength": 4143,
    "cells": [
     {
      "id": "UNIT_RUNICGOLEM",
@@ -17483,7 +17483,7 @@
    ]
   },
   {
-   "strength": 244,
+   "strength": 323,
    "cells": [
     {
      "id": "UNIT_ASHA'BELLANAR",
@@ -17509,7 +17509,7 @@
    ]
   },
   {
-   "strength": 6206,
+   "strength": 6232,
    "cells": [
     {
      "id": "UNIT_SHAHWYRD",
@@ -17535,36 +17535,6 @@
      "id": "UNIT_NIGHTMAREASPECT",
      "tier": "IV",
      "level": 68
-    }
-   ]
-  },
-  {
-   "strength": 6083,
-   "cells": [
-    {
-     "id": "UNIT_SHAHWYRD",
-     "tier": "IV",
-     "level": 71
-    },
-    {
-     "id": "UNIT_GIBBERINGHORROR",
-     "tier": "IV",
-     "level": 71
-    },
-    {
-     "id": "UNIT_SHAHWYRD",
-     "tier": "IV",
-     "level": 71
-    },
-    {
-     "id": "UNIT_GIBBERINGHORROR",
-     "tier": "IV",
-     "level": 71
-    },
-    {
-     "id": "UNIT_NIGHTMAREASPECT",
-     "tier": "IV",
-     "level": 71
     }
    ]
   },
@@ -17574,6 +17544,36 @@
     {
      "id": "UNIT_SHAHWYRD",
      "tier": "IV",
+     "level": 71
+    },
+    {
+     "id": "UNIT_GIBBERINGHORROR",
+     "tier": "IV",
+     "level": 71
+    },
+    {
+     "id": "UNIT_SHAHWYRD",
+     "tier": "IV",
+     "level": 71
+    },
+    {
+     "id": "UNIT_GIBBERINGHORROR",
+     "tier": "IV",
+     "level": 71
+    },
+    {
+     "id": "UNIT_NIGHTMAREASPECT",
+     "tier": "IV",
+     "level": 71
+    }
+   ]
+  },
+  {
+   "strength": 6066,
+   "cells": [
+    {
+     "id": "UNIT_SHAHWYRD",
+     "tier": "IV",
      "level": 74
     },
     {
@@ -17599,7 +17599,7 @@
    ]
   },
   {
-   "strength": 5026,
+   "strength": 5419,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -17629,7 +17629,7 @@
    ]
   },
   {
-   "strength": 7814,
+   "strength": 7867,
    "cells": [
     {
      "id": "UNIT_TEVINTERARCANEMAGE",
@@ -17659,7 +17659,7 @@
    ]
   },
   {
-   "strength": 3889,
+   "strength": 4055,
    "cells": [
     {
      "id": "UNIT_RUNICGOLEM",
@@ -17685,7 +17685,7 @@
    ]
   },
   {
-   "strength": 8540,
+   "strength": 8863,
    "cells": [
     {
      "id": "UNIT_BEN-HASSRATH",
@@ -17715,7 +17715,7 @@
    ]
   },
   {
-   "strength": 8444,
+   "strength": 8715,
    "cells": [
     {
      "id": "UNIT_BEN-HASSRATH",
@@ -17745,7 +17745,7 @@
    ]
   },
   {
-   "strength": 8592,
+   "strength": 8898,
    "cells": [
     {
      "id": "UNIT_BEN-HASSRATH",
@@ -17775,7 +17775,7 @@
    ]
   },
   {
-   "strength": 7395,
+   "strength": 7875,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -17805,7 +17805,7 @@
    ]
   },
   {
-   "strength": 7263,
+   "strength": 7928,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -17835,7 +17835,7 @@
    ]
   },
   {
-   "strength": 7447,
+   "strength": 8085,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -17865,7 +17865,7 @@
    ]
   },
   {
-   "strength": 7325,
+   "strength": 7229,
    "cells": [
     {
      "id": "UNIT_ELITEHARLEQUIN",
@@ -17895,7 +17895,7 @@
    ]
   },
   {
-   "strength": 7639,
+   "strength": 7517,
    "cells": [
     {
      "id": "UNIT_ELITEHARLEQUIN",
@@ -17925,7 +17925,7 @@
    ]
   },
   {
-   "strength": 4912,
+   "strength": 5332,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -17955,7 +17955,7 @@
    ]
   },
   {
-   "strength": 8356,
+   "strength": 8662,
    "cells": [
     {
      "id": "UNIT_SLOTHDEMON",
@@ -17985,7 +17985,7 @@
    ]
   },
   {
-   "strength": 244,
+   "strength": 323,
    "cells": [
     {
      "id": "UNIT_ASHA'BELLANAR",
@@ -18011,7 +18011,7 @@
    ]
   },
   {
-   "strength": 6739,
+   "strength": 6870,
    "cells": [
     {
      "id": "UNIT_DUKEPROSPER",
@@ -18041,7 +18041,7 @@
    ]
   },
   {
-   "strength": 2430,
+   "strength": 2989,
    "cells": [
     {
      "id": "UNIT_EVANGELINE",
@@ -18067,7 +18067,7 @@
    ]
   },
   {
-   "strength": 7080,
+   "strength": 7500,
    "cells": [
     {
      "id": "UNIT_MARJOLAINE",
@@ -18097,7 +18097,7 @@
    ]
   },
   {
-   "strength": 7150,
+   "strength": 7281,
    "cells": [
     {
      "id": "UNIT_MARJOLAINE",
@@ -18127,7 +18127,7 @@
    ]
   },
   {
-   "strength": 7132,
+   "strength": 7456,
    "cells": [
     {
      "id": "UNIT_MARJOLAINE",
@@ -18157,7 +18157,7 @@
    ]
   },
   {
-   "strength": 7316,
+   "strength": 7631,
    "cells": [
     {
      "id": "UNIT_MARJOLAINE",
@@ -18187,7 +18187,7 @@
    ]
   },
   {
-   "strength": 4545,
+   "strength": 5052,
    "cells": [
     {
      "id": "UNIT_CHEVALIER",
@@ -18247,7 +18247,7 @@
    ]
   },
   {
-   "strength": 4291,
+   "strength": 4501,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -18277,7 +18277,7 @@
    ]
   },
   {
-   "strength": 4169,
+   "strength": 4545,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -18307,7 +18307,7 @@
    ]
   },
   {
-   "strength": 4388,
+   "strength": 4650,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -18337,7 +18337,7 @@
    ]
   },
   {
-   "strength": 7875,
+   "strength": 7963,
    "cells": [
     {
      "id": "UNIT_BEN-HASSRATH",
@@ -18367,7 +18367,7 @@
    ]
   },
   {
-   "strength": 8592,
+   "strength": 8103,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARSHADOW",
@@ -18397,7 +18397,7 @@
    ]
   },
   {
-   "strength": 7727,
+   "strength": 7045,
    "cells": [
     {
      "id": "UNIT_SENTINELSHADOW",
@@ -18427,7 +18427,7 @@
    ]
   },
   {
-   "strength": 7316,
+   "strength": 7561,
    "cells": [
     {
      "id": "UNIT_ABOMINATION",
@@ -18457,7 +18457,7 @@
    ]
   },
   {
-   "strength": 8627,
+   "strength": 8636,
    "cells": [
     {
      "id": "UNIT_SHRIEKALPHA",
@@ -18487,7 +18487,7 @@
    ]
   },
   {
-   "strength": 6486,
+   "strength": 6800,
    "cells": [
     {
      "id": "UNIT_SHAHWYRD",
@@ -18517,7 +18517,7 @@
    ]
   },
   {
-   "strength": 7596,
+   "strength": 7465,
    "cells": [
     {
      "id": "UNIT_DRAGONLING",
@@ -18547,7 +18547,7 @@
    ]
   },
   {
-   "strength": 7263,
+   "strength": 7272,
    "cells": [
     {
      "id": "UNIT_DRAGONLING",
@@ -18577,7 +18577,7 @@
    ]
   },
   {
-   "strength": 7395,
+   "strength": 7517,
    "cells": [
     {
      "id": "UNIT_BARTRANDTETHRAS",
@@ -18607,7 +18607,7 @@
    ]
   },
   {
-   "strength": 7788,
+   "strength": 8277,
    "cells": [
     {
      "id": "UNIT_SAAREBAS",
@@ -18637,7 +18637,7 @@
    ]
   },
   {
-   "strength": 7919,
+   "strength": 8435,
    "cells": [
     {
      "id": "UNIT_SAAREBAS",
@@ -18667,7 +18667,7 @@
    ]
   },
   {
-   "strength": 2526,
+   "strength": 3006,
    "cells": [
     {
      "id": "UNIT_EVANGELINE",
@@ -18693,7 +18693,7 @@
    ]
   },
   {
-   "strength": 7473,
+   "strength": 7928,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -18723,7 +18723,7 @@
    ]
   },
   {
-   "strength": 7622,
+   "strength": 8138,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -18753,7 +18753,7 @@
    ]
   },
   {
-   "strength": 7622,
+   "strength": 8173,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -18783,7 +18783,7 @@
    ]
   },
   {
-   "strength": 7552,
+   "strength": 8094,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -18813,7 +18813,7 @@
    ]
   },
   {
-   "strength": 7561,
+   "strength": 8111,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -18843,7 +18843,7 @@
    ]
   },
   {
-   "strength": 7639,
+   "strength": 8120,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -18873,7 +18873,7 @@
    ]
   },
   {
-   "strength": 7307,
+   "strength": 7534,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARARCHER",
@@ -18903,7 +18903,7 @@
    ]
   },
   {
-   "strength": 4169,
+   "strength": 4702,
    "cells": [
     {
      "id": "UNIT_THEBARONESS",
@@ -18929,7 +18929,7 @@
    ]
   },
   {
-   "strength": 4020,
+   "strength": 4580,
    "cells": [
     {
      "id": "UNIT_THEBARONESS",
@@ -18955,7 +18955,7 @@
    ]
   },
   {
-   "strength": 8776,
+   "strength": 8933,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -18985,7 +18985,7 @@
    ]
   },
   {
-   "strength": 4099,
+   "strength": 4361,
    "cells": [
     {
      "id": "UNIT_ASHA'BELLANAR",
@@ -19015,7 +19015,7 @@
    ]
   },
   {
-   "strength": 5996,
+   "strength": 6040,
    "cells": [
     {
      "id": "UNIT_KEEPERMARETHARI",
@@ -19045,7 +19045,7 @@
    ]
   },
   {
-   "strength": 5699,
+   "strength": 6223,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -19075,7 +19075,7 @@
    ]
   },
   {
-   "strength": 5847,
+   "strength": 6241,
    "cells": [
     {
      "id": "UNIT_TAMASSRAN",
@@ -19105,7 +19105,7 @@
    ]
   },
   {
-   "strength": 2403,
+   "strength": 2342,
    "cells": [
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
@@ -19135,7 +19135,7 @@
    ]
   },
   {
-   "strength": 2272,
+   "strength": 2229,
    "cells": [
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
@@ -19161,66 +19161,6 @@
      "id": "UNIT_WINTERSENDNUGGALOPE",
      "tier": "IV",
      "level": 71
-    }
-   ]
-  },
-  {
-   "strength": 2185,
-   "cells": [
-    {
-     "id": "UNIT_WINTERSENDVIVIENNE",
-     "tier": "IV",
-     "level": 74
-    },
-    {
-     "id": "UNIT_WINTERSENDCULLEN",
-     "tier": "IV",
-     "level": 74
-    },
-    {
-     "id": "UNIT_WINTERSENDVIVIENNE",
-     "tier": "IV",
-     "level": 74
-    },
-    {
-     "id": "UNIT_WINTERSENDCULLEN",
-     "tier": "IV",
-     "level": 74
-    },
-    {
-     "id": "UNIT_WINTERSENDNUGGALOPE",
-     "tier": "IV",
-     "level": 74
-    }
-   ]
-  },
-  {
-   "strength": 2290,
-   "cells": [
-    {
-     "id": "UNIT_WINTERSENDVIVIENNE",
-     "tier": "IV",
-     "level": 77
-    },
-    {
-     "id": "UNIT_WINTERSENDCULLEN",
-     "tier": "IV",
-     "level": 77
-    },
-    {
-     "id": "UNIT_WINTERSENDVIVIENNE",
-     "tier": "IV",
-     "level": 77
-    },
-    {
-     "id": "UNIT_WINTERSENDCULLEN",
-     "tier": "IV",
-     "level": 77
-    },
-    {
-     "id": "UNIT_WINTERSENDNUGGALOPE",
-     "tier": "IV",
-     "level": 77
     }
    ]
   },
@@ -19230,122 +19170,182 @@
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
      "tier": "IV",
-     "level": 78
+     "level": 74
     },
     {
      "id": "UNIT_WINTERSENDCULLEN",
      "tier": "IV",
-     "level": 78
+     "level": 74
     },
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
      "tier": "IV",
-     "level": 78
+     "level": 74
     },
     {
      "id": "UNIT_WINTERSENDCULLEN",
      "tier": "IV",
-     "level": 78
+     "level": 74
     },
     {
      "id": "UNIT_WINTERSENDNUGGALOPE",
      "tier": "IV",
-     "level": 78
-    }
-   ]
-  },
-  {
-   "strength": 2307,
-   "cells": [
-    {
-     "id": "UNIT_WINTERSENDVIVIENNE",
-     "tier": "IV",
-     "level": 80
-    },
-    {
-     "id": "UNIT_WINTERSENDCULLEN",
-     "tier": "IV",
-     "level": 80
-    },
-    {
-     "id": "UNIT_WINTERSENDVIVIENNE",
-     "tier": "IV",
-     "level": 80
-    },
-    {
-     "id": "UNIT_WINTERSENDCULLEN",
-     "tier": "IV",
-     "level": 80
-    },
-    {
-     "id": "UNIT_WINTERSENDNUGGALOPE",
-     "tier": "IV",
-     "level": 80
-    }
-   ]
-  },
-  {
-   "strength": 2395,
-   "cells": [
-    {
-     "id": "UNIT_WINTERSENDVIVIENNE",
-     "tier": "IV",
-     "level": 82
-    },
-    {
-     "id": "UNIT_WINTERSENDCULLEN",
-     "tier": "IV",
-     "level": 82
-    },
-    {
-     "id": "UNIT_WINTERSENDVIVIENNE",
-     "tier": "IV",
-     "level": 82
-    },
-    {
-     "id": "UNIT_WINTERSENDCULLEN",
-     "tier": "IV",
-     "level": 82
-    },
-    {
-     "id": "UNIT_WINTERSENDNUGGALOPE",
-     "tier": "IV",
-     "level": 82
-    }
-   ]
-  },
-  {
-   "strength": 2430,
-   "cells": [
-    {
-     "id": "UNIT_WINTERSENDVIVIENNE",
-     "tier": "IV",
-     "level": 84
-    },
-    {
-     "id": "UNIT_WINTERSENDCULLEN",
-     "tier": "IV",
-     "level": 84
-    },
-    {
-     "id": "UNIT_WINTERSENDVIVIENNE",
-     "tier": "IV",
-     "level": 84
-    },
-    {
-     "id": "UNIT_WINTERSENDCULLEN",
-     "tier": "IV",
-     "level": 84
-    },
-    {
-     "id": "UNIT_WINTERSENDNUGGALOPE",
-     "tier": "IV",
-     "level": 84
+     "level": 74
     }
    ]
   },
   {
    "strength": 2263,
+   "cells": [
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "IV",
+     "level": 77
+    },
+    {
+     "id": "UNIT_WINTERSENDCULLEN",
+     "tier": "IV",
+     "level": 77
+    },
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "IV",
+     "level": 77
+    },
+    {
+     "id": "UNIT_WINTERSENDCULLEN",
+     "tier": "IV",
+     "level": 77
+    },
+    {
+     "id": "UNIT_WINTERSENDNUGGALOPE",
+     "tier": "IV",
+     "level": 77
+    }
+   ]
+  },
+  {
+   "strength": 2255,
+   "cells": [
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "IV",
+     "level": 78
+    },
+    {
+     "id": "UNIT_WINTERSENDCULLEN",
+     "tier": "IV",
+     "level": 78
+    },
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "IV",
+     "level": 78
+    },
+    {
+     "id": "UNIT_WINTERSENDCULLEN",
+     "tier": "IV",
+     "level": 78
+    },
+    {
+     "id": "UNIT_WINTERSENDNUGGALOPE",
+     "tier": "IV",
+     "level": 78
+    }
+   ]
+  },
+  {
+   "strength": 2351,
+   "cells": [
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "IV",
+     "level": 80
+    },
+    {
+     "id": "UNIT_WINTERSENDCULLEN",
+     "tier": "IV",
+     "level": 80
+    },
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "IV",
+     "level": 80
+    },
+    {
+     "id": "UNIT_WINTERSENDCULLEN",
+     "tier": "IV",
+     "level": 80
+    },
+    {
+     "id": "UNIT_WINTERSENDNUGGALOPE",
+     "tier": "IV",
+     "level": 80
+    }
+   ]
+  },
+  {
+   "strength": 2325,
+   "cells": [
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "IV",
+     "level": 82
+    },
+    {
+     "id": "UNIT_WINTERSENDCULLEN",
+     "tier": "IV",
+     "level": 82
+    },
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "IV",
+     "level": 82
+    },
+    {
+     "id": "UNIT_WINTERSENDCULLEN",
+     "tier": "IV",
+     "level": 82
+    },
+    {
+     "id": "UNIT_WINTERSENDNUGGALOPE",
+     "tier": "IV",
+     "level": 82
+    }
+   ]
+  },
+  {
+   "strength": 2386,
+   "cells": [
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "IV",
+     "level": 84
+    },
+    {
+     "id": "UNIT_WINTERSENDCULLEN",
+     "tier": "IV",
+     "level": 84
+    },
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "IV",
+     "level": 84
+    },
+    {
+     "id": "UNIT_WINTERSENDCULLEN",
+     "tier": "IV",
+     "level": 84
+    },
+    {
+     "id": "UNIT_WINTERSENDNUGGALOPE",
+     "tier": "IV",
+     "level": 84
+    }
+   ]
+  },
+  {
+   "strength": 2255,
    "cells": [
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
@@ -19375,7 +19375,7 @@
    ]
   },
   {
-   "strength": 5664,
+   "strength": 6145,
    "cells": [
     {
      "id": "UNIT_FLORIANNE",
@@ -19405,7 +19405,7 @@
    ]
   },
   {
-   "strength": 6284,
+   "strength": 6652,
    "cells": [
     {
      "id": "UNIT_MALIPHANT",
@@ -19435,7 +19435,7 @@
    ]
   },
   {
-   "strength": 6284,
+   "strength": 6826,
    "cells": [
     {
      "id": "UNIT_MALIPHANT",
@@ -19465,7 +19465,7 @@
    ]
   },
   {
-   "strength": 6258,
+   "strength": 6695,
    "cells": [
     {
      "id": "UNIT_MALIPHANT",
@@ -19495,7 +19495,7 @@
    ]
   },
   {
-   "strength": 8732,
+   "strength": 8688,
    "cells": [
     {
      "id": "UNIT_SPIRITSPELLBINDER",
@@ -19525,7 +19525,7 @@
    ]
   },
   {
-   "strength": 7657,
+   "strength": 7762,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -19555,7 +19555,7 @@
    ]
   },
   {
-   "strength": 1634,
+   "strength": 1958,
    "cells": [
     {
      "id": "UNIT_LORDWOOLSLEY",
@@ -19581,7 +19581,7 @@
    ]
   },
   {
-   "strength": 1660,
+   "strength": 1931,
    "cells": [
     {
      "id": "UNIT_LORDWOOLSLEY",
@@ -19607,7 +19607,7 @@
    ]
   },
   {
-   "strength": 9641,
+   "strength": 9440,
    "cells": [
     {
      "id": "UNIT_SENTINELSHADOW",
@@ -19637,7 +19637,7 @@
    ]
   },
   {
-   "strength": 9729,
+   "strength": 9458,
    "cells": [
     {
      "id": "UNIT_SENTINELSHADOW",
@@ -19667,7 +19667,7 @@
    ]
   },
   {
-   "strength": 9615,
+   "strength": 9361,
    "cells": [
     {
      "id": "UNIT_SENTINELSHADOW",
@@ -19697,7 +19697,7 @@
    ]
   },
   {
-   "strength": 4606,
+   "strength": 4903,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -19727,7 +19727,7 @@
    ]
   },
   {
-   "strength": 7797,
+   "strength": 8356,
    "cells": [
     {
      "id": "UNIT_CHEVALIER",
@@ -19757,7 +19757,7 @@
    ]
   },
   {
-   "strength": 6958,
+   "strength": 7552,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -19787,7 +19787,7 @@
    ]
   },
   {
-   "strength": 7587,
+   "strength": 8138,
    "cells": [
     {
      "id": "UNIT_GATT",
@@ -19817,7 +19817,7 @@
    ]
   },
   {
-   "strength": 3513,
+   "strength": 3715,
    "cells": [
     {
      "id": "UNIT_DESIREDEMON",
@@ -19847,7 +19847,7 @@
    ]
   },
   {
-   "strength": 4082,
+   "strength": 4466,
    "cells": [
     {
      "id": "UNIT_THEDARKTHEURGE",
@@ -19877,7 +19877,7 @@
    ]
   },
   {
-   "strength": 5611,
+   "strength": 5777,
    "cells": [
     {
      "id": "UNIT_CHEVALIER",
@@ -19907,7 +19907,7 @@
    ]
   },
   {
-   "strength": 6389,
+   "strength": 6835,
    "cells": [
     {
      "id": "UNIT_THEDARKTHEURGE",
@@ -19937,7 +19937,7 @@
    ]
   },
   {
-   "strength": 6966,
+   "strength": 6573,
    "cells": [
     {
      "id": "UNIT_DRAKE",
@@ -19967,7 +19967,7 @@
    ]
   },
   {
-   "strength": 4222,
+   "strength": 4405,
    "cells": [
     {
      "id": "UNIT_ASHA'BELLANAR",
@@ -19997,7 +19997,7 @@
    ]
   },
   {
-   "strength": 7849,
+   "strength": 7954,
    "cells": [
     {
      "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -20027,7 +20027,7 @@
    ]
   },
   {
-   "strength": 6311,
+   "strength": 6800,
    "cells": [
     {
      "id": "UNIT_THEDARKTHEURGE",
@@ -20057,7 +20057,7 @@
    ]
   },
   {
-   "strength": 1861,
+   "strength": 2211,
    "cells": [
     {
      "id": "UNIT_YAVANA",
@@ -20087,7 +20087,7 @@
    ]
   },
   {
-   "strength": 8592,
+   "strength": 7902,
    "cells": [
     {
      "id": "UNIT_CIRCLESENIORENCHANTER",
@@ -20117,7 +20117,7 @@
    ]
   },
   {
-   "strength": 6398,
+   "strength": 6888,
    "cells": [
     {
      "id": "UNIT_THEDARKTHEURGE",
@@ -20147,7 +20147,7 @@
    ]
   },
   {
-   "strength": 8374,
+   "strength": 8199,
    "cells": [
     {
      "id": "UNIT_DRAGONLING",
@@ -20177,7 +20177,7 @@
    ]
   },
   {
-   "strength": 6145,
+   "strength": 6293,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -20207,7 +20207,7 @@
    ]
   },
   {
-   "strength": 3610,
+   "strength": 4178,
    "cells": [
     {
      "id": "UNIT_HIGHSEEKERALDREN",
@@ -20233,7 +20233,7 @@
    ]
   },
   {
-   "strength": 8680,
+   "strength": 8837,
    "cells": [
     {
      "id": "UNIT_SPIRITARCHER",
@@ -20263,7 +20263,7 @@
    ]
   },
   {
-   "strength": 3409,
+   "strength": 4029,
    "cells": [
     {
      "id": "UNIT_HIGHSEEKERALDREN",
@@ -20289,7 +20289,7 @@
    ]
   },
   {
-   "strength": 8557,
+   "strength": 8662,
    "cells": [
     {
      "id": "UNIT_SPIRITARCHER",
@@ -20319,7 +20319,7 @@
    ]
   },
   {
-   "strength": 8269,
+   "strength": 8382,
    "cells": [
     {
      "id": "UNIT_DESPAIRDEMON",
@@ -20349,7 +20349,7 @@
    ]
   },
   {
-   "strength": 8330,
+   "strength": 8531,
    "cells": [
     {
      "id": "UNIT_DESPAIRDEMON",
@@ -20379,7 +20379,7 @@
    ]
   },
   {
-   "strength": 6879,
+   "strength": 6888,
    "cells": [
     {
      "id": "UNIT_HUNGERDEMON",
@@ -20409,7 +20409,7 @@
    ]
   },
   {
-   "strength": 7298,
+   "strength": 7692,
    "cells": [
     {
      "id": "UNIT_MALIPHANT",
@@ -20439,7 +20439,7 @@
    ]
   },
   {
-   "strength": 7508,
+   "strength": 8024,
    "cells": [
     {
      "id": "UNIT_GREYWARDENBETHANY",
@@ -20469,7 +20469,7 @@
    ]
   },
   {
-   "strength": 7552,
+   "strength": 8216,
    "cells": [
     {
      "id": "UNIT_GREYWARDENBETHANY",
@@ -20499,7 +20499,7 @@
    ]
   },
   {
-   "strength": 7578,
+   "strength": 8094,
    "cells": [
     {
      "id": "UNIT_GREYWARDENBETHANY",
@@ -20529,7 +20529,7 @@
    ]
   },
   {
-   "strength": 7403,
+   "strength": 8024,
    "cells": [
     {
      "id": "UNIT_GREYWARDENBETHANY",
@@ -20559,7 +20559,7 @@
    ]
   },
   {
-   "strength": 7438,
+   "strength": 8094,
    "cells": [
     {
      "id": "UNIT_GREYWARDENBETHANY",
@@ -20619,7 +20619,7 @@
    ]
   },
   {
-   "strength": 7692,
+   "strength": 7246,
    "cells": [
     {
      "id": "UNIT_HURLOCKEMISSARY",
@@ -20649,7 +20649,7 @@
    ]
   },
   {
-   "strength": 7954,
+   "strength": 8234,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -20679,7 +20679,7 @@
    ]
   },
   {
-   "strength": 7902,
+   "strength": 8321,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -20709,7 +20709,7 @@
    ]
   },
   {
-   "strength": 7893,
+   "strength": 8138,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -20739,7 +20739,7 @@
    ]
   },
   {
-   "strength": 7019,
+   "strength": 7648,
    "cells": [
     {
      "id": "UNIT_CARESS",
@@ -20769,7 +20769,7 @@
    ]
   },
   {
-   "strength": 8802,
+   "strength": 8793,
    "cells": [
     {
      "id": "UNIT_REDTEMPLARSHADOW",
@@ -20799,7 +20799,7 @@
    ]
   },
   {
-   "strength": 7281,
+   "strength": 7762,
    "cells": [
     {
      "id": "UNIT_TEVINTERARCANEWARRIOR",
@@ -20829,7 +20829,7 @@
    ]
   },
   {
-   "strength": 7840,
+   "strength": 7360,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -20859,7 +20859,7 @@
    ]
   },
   {
-   "strength": 4169,
+   "strength": 4860,
    "cells": [
     {
      "id": "UNIT_MAGISTERPAVUS",
@@ -20889,7 +20889,7 @@
    ]
   },
   {
-   "strength": 6704,
+   "strength": 6381,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -20919,7 +20919,7 @@
    ]
   },
   {
-   "strength": 6660,
+   "strength": 6267,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -20949,7 +20949,7 @@
    ]
   },
   {
-   "strength": 6765,
+   "strength": 6486,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -20979,7 +20979,7 @@
    ]
   },
   {
-   "strength": 8513,
+   "strength": 8688,
    "cells": [
     {
      "id": "UNIT_ARCANEHORROR",
@@ -21009,7 +21009,7 @@
    ]
   },
   {
-   "strength": 4309,
+   "strength": 5061,
    "cells": [
     {
      "id": "UNIT_MAGISTERPAVUS",
@@ -21039,7 +21039,7 @@
    ]
   },
   {
-   "strength": 8409,
+   "strength": 8356,
    "cells": [
     {
      "id": "UNIT_SPIRITSPELLBINDER",
@@ -21069,7 +21069,7 @@
    ]
   },
   {
-   "strength": 7954,
+   "strength": 7578,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -21099,7 +21099,7 @@
    ]
   },
   {
-   "strength": 7980,
+   "strength": 7604,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -21129,7 +21129,7 @@
    ]
   },
   {
-   "strength": 8129,
+   "strength": 7683,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -21159,7 +21159,7 @@
    ]
   },
   {
-   "strength": 8199,
+   "strength": 7884,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -21189,7 +21189,7 @@
    ]
   },
   {
-   "strength": 7290,
+   "strength": 7229,
    "cells": [
     {
      "id": "UNIT_VENATORIMARKSMAN",
@@ -21219,7 +21219,7 @@
    ]
   },
   {
-   "strength": 6372,
+   "strength": 6634,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -21249,7 +21249,7 @@
    ]
   },
   {
-   "strength": 6284,
+   "strength": 6573,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -21279,7 +21279,7 @@
    ]
   },
   {
-   "strength": 8435,
+   "strength": 8409,
    "cells": [
     {
      "id": "UNIT_SPIRITSPELLBINDER",
@@ -21309,7 +21309,7 @@
    ]
   },
   {
-   "strength": 4353,
+   "strength": 4877,
    "cells": [
     {
      "id": "UNIT_MAGISTERPAVUS",
@@ -21339,7 +21339,7 @@
    ]
   },
   {
-   "strength": 5874,
+   "strength": 4781,
    "cells": [
     {
      "id": "UNIT_GREYWARDENMAGE",
@@ -21369,7 +21369,7 @@
    ]
   },
   {
-   "strength": 6940,
+   "strength": 7438,
    "cells": [
     {
      "id": "UNIT_MALVERNIS",
@@ -21399,7 +21399,7 @@
    ]
   },
   {
-   "strength": 7386,
+   "strength": 7150,
    "cells": [
     {
      "id": "UNIT_VENATORIMARKSMAN",
@@ -21429,7 +21429,7 @@
    ]
   },
   {
-   "strength": 8085,
+   "strength": 8557,
    "cells": [
     {
      "id": "UNIT_SAAREBAS",
@@ -21459,7 +21459,7 @@
    ]
   },
   {
-   "strength": 8470,
+   "strength": 8557,
    "cells": [
     {
      "id": "UNIT_TORPOR",
@@ -21489,7 +21489,7 @@
    ]
   },
   {
-   "strength": 7744,
+   "strength": 8269,
    "cells": [
     {
      "id": "UNIT_RASAAN",
@@ -21519,7 +21519,7 @@
    ]
   },
   {
-   "strength": 5611,
+   "strength": 6101,
    "cells": [
     {
      "id": "UNIT_LORDWOOLSLEY",
@@ -21549,7 +21549,7 @@
    ]
   },
   {
-   "strength": 5611,
+   "strength": 6145,
    "cells": [
     {
      "id": "UNIT_LORDWOOLSLEY",
@@ -21579,7 +21579,7 @@
    ]
   },
   {
-   "strength": 5769,
+   "strength": 6153,
    "cells": [
     {
      "id": "UNIT_LORDWOOLSLEY",
@@ -21609,7 +21609,7 @@
    ]
   },
   {
-   "strength": 5743,
+   "strength": 6145,
    "cells": [
     {
      "id": "UNIT_LORDWOOLSLEY",
@@ -21639,7 +21639,7 @@
    ]
   },
   {
-   "strength": 6206,
+   "strength": 6503,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -21669,7 +21669,7 @@
    ]
   },
   {
-   "strength": 6180,
+   "strength": 6459,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -21699,7 +21699,7 @@
    ]
   },
   {
-   "strength": 6206,
+   "strength": 6337,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -21729,7 +21729,7 @@
    ]
   },
   {
-   "strength": 7744,
+   "strength": 7762,
    "cells": [
     {
      "id": "UNIT_SIGRUN",
@@ -21759,7 +21759,7 @@
    ]
   },
   {
-   "strength": 4781,
+   "strength": 5305,
    "cells": [
     {
      "id": "UNIT_LORDWOOLSLEY",
@@ -21789,7 +21789,7 @@
    ]
   },
   {
-   "strength": 4763,
+   "strength": 5270,
    "cells": [
     {
      "id": "UNIT_LORDWOOLSLEY",
@@ -21819,7 +21819,7 @@
    ]
   },
   {
-   "strength": 6232,
+   "strength": 5620,
    "cells": [
     {
      "id": "UNIT_KEEPERMARETHARI",
@@ -21849,7 +21849,7 @@
    ]
   },
   {
-   "strength": 7229,
+   "strength": 6739,
    "cells": [
     {
      "id": "UNIT_CALPERNIA",
@@ -21879,7 +21879,7 @@
    ]
   },
   {
-   "strength": 6075,
+   "strength": 6311,
    "cells": [
     {
      "id": "UNIT_MAGISTERPAVUS",
@@ -21909,7 +21909,7 @@
    ]
   },
   {
-   "strength": 7657,
+   "strength": 7797,
    "cells": [
     {
      "id": "UNIT_SIGRUN",
@@ -21939,7 +21939,7 @@
    ]
   },
   {
-   "strength": 2150,
+   "strength": 2115,
    "cells": [
     {
      "id": "UNIT_GUARDIANOFTHEURN",
@@ -21965,7 +21965,7 @@
    ]
   },
   {
-   "strength": 8750,
+   "strength": 8260,
    "cells": [
     {
      "id": "UNIT_KEEPERMARETHARI",
@@ -21995,7 +21995,7 @@
    ]
   },
   {
-   "strength": 8793,
+   "strength": 8164,
    "cells": [
     {
      "id": "UNIT_KEEPERMARETHARI",
@@ -22025,7 +22025,7 @@
    ]
   },
   {
-   "strength": 8610,
+   "strength": 8505,
    "cells": [
     {
      "id": "UNIT_TORPOR",
@@ -22055,7 +22055,7 @@
    ]
   },
   {
-   "strength": 8461,
+   "strength": 8435,
    "cells": [
     {
      "id": "UNIT_TORPOR",
@@ -22085,7 +22085,7 @@
    ]
   },
   {
-   "strength": 2762,
+   "strength": 2438,
    "cells": [
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
@@ -22115,7 +22115,7 @@
    ]
   },
   {
-   "strength": 1993,
+   "strength": 2089,
    "cells": [
     {
      "id": "UNIT_GUARDIANOFTHEURN",
@@ -22141,7 +22141,7 @@
    ]
   },
   {
-   "strength": 7237,
+   "strength": 7770,
    "cells": [
     {
      "id": "UNIT_THEBARONESS",
@@ -22171,7 +22171,7 @@
    ]
   },
   {
-   "strength": 6844,
+   "strength": 7307,
    "cells": [
     {
      "id": "UNIT_THEBARONESS",
@@ -22201,7 +22201,7 @@
    ]
   },
   {
-   "strength": 4230,
+   "strength": 4589,
    "cells": [
     {
      "id": "UNIT_ASHA'BELLANAR",
@@ -22231,7 +22231,7 @@
    ]
   },
   {
-   "strength": 7674,
+   "strength": 7526,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -22261,7 +22261,7 @@
    ]
   },
   {
-   "strength": 6730,
+   "strength": 6319,
    "cells": [
     {
      "id": "UNIT_VENATORIMARKSMAN",
@@ -22291,7 +22291,7 @@
    ]
   },
   {
-   "strength": 6381,
+   "strength": 6232,
    "cells": [
     {
      "id": "UNIT_TRANQUILMADDOX",
@@ -22321,7 +22321,7 @@
    ]
   },
   {
-   "strength": 6267,
+   "strength": 6678,
    "cells": [
     {
      "id": "UNIT_THEBARONESS",
@@ -22351,7 +22351,7 @@
    ]
   },
   {
-   "strength": 6197,
+   "strength": 6608,
    "cells": [
     {
      "id": "UNIT_THEBARONESS",
@@ -22381,7 +22381,7 @@
    ]
   },
   {
-   "strength": 6293,
+   "strength": 6765,
    "cells": [
     {
      "id": "UNIT_THEBARONESS",
@@ -22411,7 +22411,7 @@
    ]
   },
   {
-   "strength": 4020,
+   "strength": 4291,
    "cells": [
     {
      "id": "UNIT_ASHA'BELLANAR",
@@ -22441,7 +22441,7 @@
    ]
   },
   {
-   "strength": 1075,
+   "strength": 1250,
    "cells": [
     {
      "id": "UNIT_YAVANA",
@@ -22471,7 +22471,7 @@
    ]
   },
   {
-   "strength": 2875,
+   "strength": 2604,
    "cells": [
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
@@ -22501,7 +22501,7 @@
    ]
   },
   {
-   "strength": 2788,
+   "strength": 2465,
    "cells": [
     {
      "id": "UNIT_WINTERSENDVIVIENNE",
@@ -22531,7 +22531,7 @@
    ]
   },
   {
-   "strength": 5926,
+   "strength": 6337,
    "cells": [
     {
      "id": "UNIT_LIBRARIAN",
@@ -22561,7 +22561,7 @@
    ]
   },
   {
-   "strength": 7884,
+   "strength": 8277,
    "cells": [
     {
      "id": "UNIT_DESPAIRDEMON",
@@ -22591,7 +22591,7 @@
    ]
   },
   {
-   "strength": 6442,
+   "strength": 6923,
    "cells": [
     {
      "id": "UNIT_EVANGELINE",
@@ -22621,7 +22621,7 @@
    ]
   },
   {
-   "strength": 6293,
+   "strength": 6835,
    "cells": [
     {
      "id": "UNIT_EVANGELINE",
@@ -22651,7 +22651,7 @@
    ]
   },
   {
-   "strength": 6284,
+   "strength": 6853,
    "cells": [
     {
      "id": "UNIT_EVANGELINE",
@@ -22681,7 +22681,7 @@
    ]
   },
   {
-   "strength": 3155,
+   "strength": 3487,
    "cells": [
     {
      "id": "UNIT_YAVANA",
@@ -22711,7 +22711,7 @@
    ]
   },
   {
-   "strength": 6791,
+   "strength": 7351,
    "cells": [
     {
      "id": "UNIT_EVANGELINE",
@@ -22741,7 +22741,7 @@
    ]
   },
   {
-   "strength": 6870,
+   "strength": 7561,
    "cells": [
     {
      "id": "UNIT_HIGHSEEKERALDREN",
@@ -22771,7 +22771,7 @@
    ]
   },
   {
-   "strength": 2989,
+   "strength": 3312,
    "cells": [
     {
      "id": "UNIT_YAVANA",
@@ -22801,7 +22801,7 @@
    ]
   },
   {
-   "strength": 7071,
+   "strength": 7438,
    "cells": [
     {
      "id": "UNIT_HIGHSEEKERALDREN",
@@ -22831,7 +22831,7 @@
    ]
   },
   {
-   "strength": 6975,
+   "strength": 7377,
    "cells": [
     {
      "id": "UNIT_HIGHSEEKERALDREN",
@@ -22861,7 +22861,7 @@
    ]
   },
   {
-   "strength": 6984,
+   "strength": 7430,
    "cells": [
     {
      "id": "UNIT_HIGHSEEKERALDREN",
@@ -22891,7 +22891,7 @@
    ]
   },
   {
-   "strength": 3068,
+   "strength": 3365,
    "cells": [
     {
      "id": "UNIT_YAVANA",
@@ -22921,7 +22921,7 @@
    ]
   },
   {
-   "strength": 6774,
+   "strength": 5996,
    "cells": [
     {
      "id": "UNIT_RUNICGOLEM",
@@ -22951,7 +22951,7 @@
    ]
   },
   {
-   "strength": 6783,
+   "strength": 6153,
    "cells": [
     {
      "id": "UNIT_RUNICGOLEM",
@@ -22981,7 +22981,7 @@
    ]
   },
   {
-   "strength": 7788,
+   "strength": 7491,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -23011,7 +23011,7 @@
    ]
   },
   {
-   "strength": 8583,
+   "strength": 8181,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -23041,7 +23041,7 @@
    ]
   },
   {
-   "strength": 8627,
+   "strength": 8146,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -23071,7 +23071,7 @@
    ]
   },
   {
-   "strength": 8557,
+   "strength": 8208,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -23101,7 +23101,7 @@
    ]
   },
   {
-   "strength": 8522,
+   "strength": 8374,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -23131,7 +23131,7 @@
    ]
   },
   {
-   "strength": 5935,
+   "strength": 5664,
    "cells": [
     {
      "id": "UNIT_TORPOR",
@@ -23161,7 +23161,7 @@
    ]
   },
   {
-   "strength": 8138,
+   "strength": 7561,
    "cells": [
     {
      "id": "UNIT_MACRINUS",
@@ -23191,7 +23191,7 @@
    ]
   },
   {
-   "strength": 6669,
+   "strength": 6739,
    "cells": [
     {
      "id": "UNIT_RUNICGOLEM",
@@ -23221,7 +23221,7 @@
    ]
   },
   {
-   "strength": 6223,
+   "strength": 6346,
    "cells": [
     {
      "id": "UNIT_GUARDIANOFTHEURN",
@@ -23251,7 +23251,7 @@
    ]
   },
   {
-   "strength": 6180,
+   "strength": 6276,
    "cells": [
     {
      "id": "UNIT_GUARDIANOFTHEURN",
@@ -23311,7 +23311,7 @@
    ]
   },
   {
-   "strength": 6739,
+   "strength": 6861,
    "cells": [
     {
      "id": "UNIT_GUARDIANOFTHEURN",
@@ -23341,7 +23341,7 @@
    ]
   },
   {
-   "strength": 6870,
+   "strength": 6975,
    "cells": [
     {
      "id": "UNIT_GUARDIANOFTHEURN",
@@ -23371,7 +23371,7 @@
    ]
   },
   {
-   "strength": 6730,
+   "strength": 6940,
    "cells": [
     {
      "id": "UNIT_GUARDIANOFTHEURN",

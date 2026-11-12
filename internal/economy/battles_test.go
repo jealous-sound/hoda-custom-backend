@@ -37,20 +37,24 @@ func veteranSquad() battle.Side {
 	return squad
 }
 
+func enlistVeterans(doc map[string]any) battle.Side {
+	squad := veteranSquad()
+	heroes := []any{}
+	for _, unit := range squad.Units {
+		heroes = append(heroes, map[string]any{
+			"id": unit.ID, "instance_id": unit.InstanceID, "tier": unit.Tier, "level": unit.Level, "xp": 0,
+			"ascended": false, "consume_xp": 0,
+		})
+	}
+	roster := section(doc, "roster")
+	roster["additions"], roster["next_instance_id"] = heroes, len(heroes)+1
+	return squad
+}
+
 func veteranProfile(t *testing.T) (json.RawMessage, battle.Side) {
 	t.Helper()
-	squad := veteranSquad()
-	raw := gameProfile(t, func(doc map[string]any) {
-		heroes := []any{}
-		for _, unit := range squad.Units {
-			heroes = append(heroes, map[string]any{
-				"id": unit.ID, "instance_id": unit.InstanceID, "tier": unit.Tier, "level": unit.Level, "xp": 0,
-				"ascended": false, "consume_xp": 0,
-			})
-		}
-		roster := section(doc, "roster")
-		roster["additions"], roster["next_instance_id"] = heroes, len(heroes)+1
-	})
+	var squad battle.Side
+	raw := gameProfile(t, func(doc map[string]any) { squad = enlistVeterans(doc) })
 	return raw, squad
 }
 
@@ -684,7 +688,7 @@ func TestPvpChosenBotsKeepTheirTrophiesAndTheServersSeed(t *testing.T) {
 func TestPvpEventBannersComeFromTheServer(t *testing.T) {
 	c := mustCatalog(t)
 	server := &profile.ServerState{StoreRNG: 3}
-	raw, squad := strongerProfile(t)
+	raw, squad := veteranProfile(t)
 	_, match := matchOpponent(t, raw, server, PvpMatchRequest{Event: true}, 7)
 	request := pvpStartFor(t, match)
 	request.Squad = squad
@@ -704,7 +708,7 @@ func TestPvpEventBannersComeFromTheServer(t *testing.T) {
 
 func TestPvpEventClaimPaysOnceAfterTheEvent(t *testing.T) {
 	c := mustCatalog(t)
-	raw, squad := strongerProfile(t)
+	raw, squad := veteranProfile(t)
 	server := &profile.ServerState{StoreRNG: 3}
 	request := pvpMatched(t, raw, server, true, 7)
 	request.Squad = squad
