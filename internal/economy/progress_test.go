@@ -353,15 +353,10 @@ func TestDefensesAndRevengeRunOnTheServer(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	_, squad := strongerProfile(t)
+	stronger := asMap(t, reencode(t, doc))
 	revenge := BattleStartRequest{
-		Mode: BattlePvp, RevengeAt: int64(lost["at"].(float64)), Squad: squad, Enemy: enemy,
+		Mode: BattlePvp, RevengeAt: int64(lost["at"].(float64)), Squad: enlistVeterans(stronger), Enemy: enemy,
 		Opponent: PvpOpponentRequest{Kind: OpponentRevenge, Seed: opponent.Seed},
-	}
-	withHeroes := reencode(t, doc)
-	stronger := asMap(t, withHeroes)
-	for _, hero := range section(stronger, "roster")["additions"].([]any) {
-		hero.(map[string]any)["tier"], hero.(map[string]any)["level"] = "IV", 30
 	}
 	section(stronger, "account")["energy"] = 99
 	revenged, _, _ := fight(t, reencode(t, stronger), server, revenge, true)
