@@ -240,9 +240,11 @@ func TestUploadCannotForgeTrophiesOrPvpRecord(t *testing.T) {
 
 func TestPvpBattleKeepsTheRecordOnTheServer(t *testing.T) {
 	c := mustCatalog(t)
-	raw := gameProfile(t, nil)
+	raw, squad := veteranProfile(t)
 	server := &profile.ServerState{StoreRNG: 3}
-	won, result, _ := fight(t, raw, server, pvpMatched(t, raw, server, false, 42), true)
+	first := pvpMatched(t, raw, server, false, 42)
+	first.Squad = squad
+	won, result, _ := fight(t, raw, server, first, true)
 	pvp := section(won, "pvp")
 	gained := pvp["trophies"].(float64)
 	if gained < float64(c.Pvp.Trophies.MinGain) || gained > float64(c.Pvp.Trophies.MaxGain) ||
@@ -255,7 +257,7 @@ func TestPvpBattleKeepsTheRecordOnTheServer(t *testing.T) {
 		t.Errorf("history = %v", entry)
 	}
 	loss := pvpMatched(t, reencode(t, won), server, false, 43)
-	loss.Squad = squadOf(t, won)
+	loss.Squad = squadFrom(t, won, squad)
 	lost, _, _ := fight(t, reencode(t, won), server, loss, false)
 	pvp = section(lost, "pvp")
 	if pvp["losses"].(float64) != 1 || pvp["win_streak"].(float64) != 0 || pvp["best_win_streak"].(float64) != 1 ||
@@ -263,7 +265,7 @@ func TestPvpBattleKeepsTheRecordOnTheServer(t *testing.T) {
 		t.Errorf("after a loss pvp = %v", pvp)
 	}
 	event := pvpMatched(t, reencode(t, lost), server, true, 45)
-	event.Squad = squadOf(t, lost)
+	event.Squad = squadFrom(t, lost, squad)
 	afterEvent, _, _ := fight(t, reencode(t, lost), server, event, true)
 	if section(afterEvent, "pvp")["trophies"] != pvp["trophies"] || section(afterEvent, "pvp")["wins"].(float64) != 2 {
 		t.Errorf("an event battle moved trophies: %v", section(afterEvent, "pvp"))

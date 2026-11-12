@@ -16,18 +16,27 @@ import (
 )
 
 const (
-	guildHeroID       = "UNIT_ARCANEMARIANHAWKE"
-	guildHeroTier     = "IV"
-	guildHeroLevel    = 30
-	battleSeedSearch  = 4000
-	guildHeroInstance = 1
+	guildHeroTier    = "IV"
+	battleSeedSearch = 4000
 )
 
+var guildHeroes = []struct {
+	id    string
+	level int
+}{
+	{"UNIT_HEROOFRIVERDANE", 85}, {"UNIT_THEARCHITECT", 85}, {"UNIT_ARCANEGARRETTHAWKE", 85},
+	{"UNIT_ARCANEMARIANHAWKE", 85}, {"UNIT_STONEJAW", 65},
+}
+
 func guildSquad() battle.Side {
-	return battle.Side{Units: []battle.Unit{{
-		Slot: 0, InstanceID: guildHeroInstance, ID: guildHeroID, Tier: guildHeroTier, Level: guildHeroLevel,
-		Gear: make([]string, 5),
-	}}, Runes: []string{}}
+	squad := battle.Side{Runes: []string{}}
+	for slot, hero := range guildHeroes {
+		squad.Units = append(squad.Units, battle.Unit{
+			Slot: slot, InstanceID: int64(slot + 1), ID: hero.id, Tier: guildHeroTier, Level: hero.level,
+			Gear: make([]string, 5),
+		})
+	}
+	return squad
 }
 
 func (h *harness) matchedStart(player, token string, revision int64, id string, event bool, roll uint32) (
@@ -139,9 +148,12 @@ func (h *harness) storedSquad(player string) battle.Side {
 		h.t.Fatal(err)
 	}
 	squad := guildSquad()
-	for _, hero := range stored.Roster.Additions {
-		if hero.InstanceID == squad.Units[0].InstanceID {
-			squad.Units[0].Tier, squad.Units[0].Level, squad.Units[0].ConsumeXP = hero.Tier, hero.Level, hero.ConsumeXP
+	for i := range squad.Units {
+		unit := &squad.Units[i]
+		for _, hero := range stored.Roster.Additions {
+			if hero.InstanceID == unit.InstanceID {
+				unit.Tier, unit.Level, unit.ConsumeXP = hero.Tier, hero.Level, hero.ConsumeXP
+			}
 		}
 	}
 	return squad
