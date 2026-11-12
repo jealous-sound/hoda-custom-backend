@@ -21,9 +21,46 @@ func fixtureSquad() battle.Side {
 	}, Runes: []string{}}
 }
 
+func veteranSquad() battle.Side {
+	squad := battle.Side{Runes: []string{}}
+	for slot, hero := range []struct {
+		id    string
+		level int
+	}{
+		{"UNIT_HEROOFRIVERDANE", 85}, {"UNIT_THEARCHITECT", 85}, {"UNIT_ARCANEGARRETTHAWKE", 85},
+		{"UNIT_ARCANEMARIANHAWKE", 85}, {"UNIT_STONEJAW", 65},
+	} {
+		squad.Units = append(squad.Units, battle.Unit{
+			Slot: slot, InstanceID: int64(slot + 1), ID: hero.id, Tier: "IV", Level: hero.level, Gear: emptyGear(),
+		})
+	}
+	return squad
+}
+
+func veteranProfile(t *testing.T) (json.RawMessage, battle.Side) {
+	t.Helper()
+	squad := veteranSquad()
+	raw := gameProfile(t, func(doc map[string]any) {
+		heroes := []any{}
+		for _, unit := range squad.Units {
+			heroes = append(heroes, map[string]any{
+				"id": unit.ID, "instance_id": unit.InstanceID, "tier": unit.Tier, "level": unit.Level, "xp": 0,
+				"ascended": false, "consume_xp": 0,
+			})
+		}
+		roster := section(doc, "roster")
+		roster["additions"], roster["next_instance_id"] = heroes, len(heroes)+1
+	})
+	return raw, squad
+}
+
 func squadOf(t *testing.T, doc map[string]any) battle.Side {
 	t.Helper()
-	squad := fixtureSquad()
+	return squadFrom(t, doc, fixtureSquad())
+}
+
+func squadFrom(t *testing.T, doc map[string]any, squad battle.Side) battle.Side {
+	t.Helper()
 	for i := range squad.Units {
 		unit := &squad.Units[i]
 		for _, entry := range section(doc, "roster")["additions"].([]any) {
@@ -387,7 +424,7 @@ func TestTutorialBattlesGetTheScriptedOutcome(t *testing.T) {
 
 func TestPvpBattleFightsTheOpponentTheServerMatched(t *testing.T) {
 	c := mustCatalog(t)
-	raw := gameProfile(t, nil)
+	raw, squad := veteranProfile(t)
 	server := &profile.ServerState{StoreRNG: 3}
 	_, match := matchOpponent(t, raw, server, PvpMatchRequest{}, 42)
 	want := c.Battle.PvpLadderOpponent(5, 0, ruleNow.Unix()/battle.SecondsPerDay, pvpMatchSeed(42, false, -1))
@@ -396,6 +433,7 @@ func TestPvpBattleFightsTheOpponentTheServerMatched(t *testing.T) {
 		t.Fatalf("match = %+v, want %+v", match, want)
 	}
 	request := pvpStartFor(t, match)
+	request.Squad = squad
 	doc, result, _ := fight(t, raw, server, request, true)
 	if result.Gold < pvpGold(&c.Pvp, match.Level, true) || number(t, doc, "account", "stamina") != 7 {
 		t.Errorf("result = %+v level %d", result, match.Level)
@@ -606,7 +644,7 @@ func TestPvpEventMatchmakingReadsTheServersBannersAndClock(t *testing.T) {
 	cycle := c.Battle.PvpEventCycle(ruleNow.Unix())
 	server := &profile.ServerState{PvpEvent: profile.PvpEventState{Cycle: cycle, Banners: 400}}
 	_, match := matchOpponent(t, raw, server, PvpMatchRequest{Event: true}, 7)
-	want := c.Battle.PvpEventOpponent(5, 0, 400, ruleNow.Unix(), pvpMatchSeed(7, true, -1))
+	want := c.Battle.PvpEventOpponent(5, 400, ruleNow.Unix(), pvpMatchSeed(7, true, -1))
 	if match.Bot != want.Bot || match.Squad != want.Squad || match.Seed != want.Seed || !match.Event {
 		t.Fatalf("match = %+v, want %+v", match, want)
 	}
@@ -619,13 +657,13 @@ func TestPvpEventMatchmakingReadsTheServersBannersAndClock(t *testing.T) {
 
 func TestPvpChosenBotsKeepTheirTrophiesAndTheServersSeed(t *testing.T) {
 	c := mustCatalog(t)
-	raw, squad := strongerProfile(t)
+	raw, squad := veteranProfile(t)
 	day := ruleNow.Unix() / battle.SecondsPerDay
 	for _, event := range []bool{false, true} {
 		bot := c.Battle.PvpBotCount() - 1
 		server := &profile.ServerState{StoreRNG: 3}
 		_, match := matchOpponent(t, raw, server, PvpMatchRequest{Event: event, Bot: &bot}, 5)
-		want := c.Battle.PvpOpponentFromBot(bot, 5, 0, day, pvpMatchSeed(5, event, bot))
+		want := c.Battle.PvpOpponentFromBot(bot, 5, day, pvpMatchSeed(5, event, bot))
 		if !match.Chosen || match.Bot != bot || match.Seed != want.Seed || match.Squad != want.Squad ||
 			match.Trophies != want.Trophies {
 			t.Fatalf("event %v match = %+v, want %+v", event, match, want)

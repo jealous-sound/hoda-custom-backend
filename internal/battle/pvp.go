@@ -1,8 +1,10 @@
 package battle
 
 import (
+	"cmp"
 	"encoding/json"
 	"fmt"
+	"slices"
 )
 
 const (
@@ -43,14 +45,13 @@ func pvpRoll(seed, salt uint32, count int) int {
 }
 
 type pvpSquad struct {
-	rating int
-	cells  []Unit
+	strength int
+	cells    []Unit
 }
 
 type pvpTables struct {
 	windowBelow, windowAbove, botDailyDrift, levelSpread int
-	ratingBase, ratingPerLevel, ratingPerLevelSquared    int
-	ratingMaxShiftPct, trophiesPerShiftPct, candidates   int
+	candidates                                           int
 	firstRuneLevel, levelsPerRune, levelsPerRarity       int
 	maxRuneRarity                                        int
 	eventDuration, eventBannerWindow, topBotBanners      int64
@@ -58,6 +59,7 @@ type pvpTables struct {
 	statBudget                                           bool
 	bots                                                 []int
 	squads                                               []pvpSquad
+	squadsWeakestFirst                                   []int
 	eventChangers, guildChangers                         []*Changer
 }
 
@@ -73,12 +75,7 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 			LevelSpread   int `json:"level_spread"`
 		} `json:"matchmaking"`
 		Squads struct {
-			RatingBase            int `json:"rating_base"`
-			RatingPerLevel        int `json:"rating_per_level"`
-			RatingPerLevelSquared int `json:"rating_per_level_squared"`
-			RatingMaxShiftPct     int `json:"rating_max_shift_pct"`
-			TrophiesPerShiftPct   int `json:"trophies_per_shift_pct"`
-			Candidates            int `json:"candidates"`
+			Candidates int `json:"candidates"`
 		} `json:"squads"`
 		Runes struct {
 			FirstRuneLevel  int `json:"first_rune_level"`
@@ -101,8 +98,8 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 			Trophies int `json:"trophies"`
 		} `json:"bots"`
 		SquadPool []struct {
-			Rating int        `json:"rating"`
-			Cells  []*rawCell `json:"cells"`
+			Strength int        `json:"strength"`
+			Cells    []*rawCell `json:"cells"`
 		} `json:"squad_pool"`
 	}
 	if err := json.Unmarshal(data, &root); err != nil {
@@ -111,11 +108,9 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 	t := &pvpTables{
 		windowBelow: root.Matchmaking.WindowBelow, windowAbove: root.Matchmaking.WindowAbove,
 		botDailyDrift: root.Matchmaking.BotDailyDrift, levelSpread: root.Matchmaking.LevelSpread,
-		ratingBase: root.Squads.RatingBase, ratingPerLevel: root.Squads.RatingPerLevel,
-		ratingPerLevelSquared: root.Squads.RatingPerLevelSquared, ratingMaxShiftPct: root.Squads.RatingMaxShiftPct,
-		trophiesPerShiftPct: root.Squads.TrophiesPerShiftPct, candidates: root.Squads.Candidates,
-		firstRuneLevel: root.Runes.FirstRuneLevel, levelsPerRune: root.Runes.LevelsPerRune,
-		levelsPerRarity: root.Runes.LevelsPerRarity, maxRuneRarity: root.Runes.MaxRarity,
+		candidates: root.Squads.Candidates, firstRuneLevel: root.Runes.FirstRuneLevel,
+		levelsPerRune: root.Runes.LevelsPerRune, levelsPerRarity: root.Runes.LevelsPerRarity,
+		maxRuneRarity: root.Runes.MaxRarity,
 		eventDuration: root.Events.DurationSeconds, eventBannerWindow: root.Events.MatchmakingBannerWindow,
 		topBotBanners: root.Events.TopBotBanners, guildEveryCycles: root.Events.GuildEveryCycles,
 		statBudget: root.Battle.StatBudget,
@@ -123,7 +118,7 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 	if len(root.Bots) == 0 || len(root.Bots) > maxPvpBots || len(root.SquadPool) == 0 ||
 		len(root.SquadPool) > maxPvpSquads || len(root.Events.Catalog) == 0 ||
 		len(root.Events.Catalog) > maxPvpEvents || len(root.Events.GuildCatalog) > maxPvpGuildEvents ||
-		t.eventDuration <= 0 || t.trophiesPerShiftPct == 0 || t.levelsPerRune == 0 || t.levelsPerRarity == 0 {
+		t.eventDuration <= 0 || t.levelsPerRune == 0 || t.levelsPerRarity == 0 {
 		return nil, fmt.Errorf("pvp rules: incomplete tables")
 	}
 	if len(root.Events.GuildCatalog) > 0 && t.guildEveryCycles <= 0 {
@@ -136,7 +131,7 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 		if len(raw.Cells) > SlotCount {
 			return nil, fmt.Errorf("pvp rules: squad %d has too many cells", i)
 		}
-		squad := pvpSquad{rating: raw.Rating}
+		squad := pvpSquad{strength: raw.Strength}
 		for slot, cell := range raw.Cells {
 			if cell != nil {
 				squad.cells = append(squad.cells, Unit{
@@ -145,7 +140,11 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 			}
 		}
 		t.squads = append(t.squads, squad)
+		t.squadsWeakestFirst = append(t.squadsWeakestFirst, i)
 	}
+	slices.SortStableFunc(t.squadsWeakestFirst, func(squad, other int) int {
+		return cmp.Compare(t.squads[squad].strength, t.squads[other].strength)
+	})
 	for _, list := range []struct {
 		raw []rawEvent
 		out *[]*Changer
@@ -209,27 +208,17 @@ func (t *pvpTables) pickBot(trophies int, day int64, seed uint32) int {
 	return closest
 }
 
-func (t *pvpTables) targetRating(level, trophyLead int) int {
-	base := int64(t.ratingBase) + int64(t.ratingPerLevel)*int64(level) +
-		int64(t.ratingPerLevelSquared)*int64(level)*int64(level)
-	shift := min(max(trophyLead/t.trophiesPerShiftPct, -t.ratingMaxShiftPct), t.ratingMaxShiftPct)
-	return int(base * int64(100+shift) / percentScale)
+func (t *pvpTables) botStrengthRank(bot int) int {
+	if len(t.bots) < 2 {
+		return 0
+	}
+	return int(int64(bot) * int64(len(t.squads)-1) / int64(len(t.bots)-1))
 }
 
-func (t *pvpTables) pickSquad(rating int, seed uint32) int {
-	nearest := 0
-	for i := 1; i < len(t.squads); i++ {
-		if absInt(t.squads[i].rating-rating) < absInt(t.squads[nearest].rating-rating) {
-			nearest = i
-		}
-	}
-	upper := 0
-	if len(t.squads) > t.candidates {
-		upper = len(t.squads) - t.candidates
-	}
-	first := min(max(nearest-t.candidates/2, 0), upper)
+func (t *pvpTables) pickSquad(bot int, seed uint32) int {
+	weakest := min(max(t.botStrengthRank(bot)-t.candidates/2, 0), max(len(t.squads)-t.candidates, 0))
 	span := min(t.candidates, len(t.squads))
-	return first + pvpRoll(seed, pvpSquadSalt, span)
+	return t.squadsWeakestFirst[weakest+pvpRoll(seed, pvpSquadSalt, span)]
 }
 
 func (d *Data) pvpRunes(level int, seed uint32) []string {
@@ -260,14 +249,16 @@ func (d *Data) PvpStatBudget() bool { return d.pvp.statBudget }
 func (d *Data) PvpBotCount() int   { return len(d.pvp.bots) }
 func (d *Data) PvpSquadCount() int { return len(d.pvp.squads) }
 
-func (d *Data) PvpOpponentFromBot(bot, level, trophies int, day int64, seed uint32) PvpOpponent {
+func (d *Data) PvpBotSquad(bot int, seed uint32) int { return d.pvp.pickSquad(bot, seed) }
+
+func (d *Data) PvpOpponentFromBot(bot, level int, day int64, seed uint32) PvpOpponent {
 	t := d.pvp
 	if seed == 0 {
 		seed = defaultOpponentSeed
 	}
 	o := PvpOpponent{Bot: bot, Seed: seed, Trophies: t.botTrophies(bot, day)}
 	o.Level = min(max(level+pvpRoll(seed, pvpLevelSalt, t.levelSpread*2+1)-t.levelSpread, 1), PvpMaxLevel)
-	o.Squad = t.pickSquad(t.targetRating(level, o.Trophies-trophies), seed)
+	o.Squad = t.pickSquad(bot, seed)
 	return o
 }
 
@@ -276,7 +267,7 @@ func (d *Data) PvpLadderOpponent(level, trophies int, day int64, seed uint32) Pv
 	if pickSeed == 0 {
 		pickSeed = defaultOpponentSeed
 	}
-	return d.PvpOpponentFromBot(d.pvp.pickBot(trophies, day, pickSeed), level, trophies, day, seed)
+	return d.PvpOpponentFromBot(d.pvp.pickBot(trophies, day, pickSeed), level, day, seed)
 }
 
 func (t *pvpTables) botBanners(bot int, cycle, elapsed int64) int {
@@ -318,13 +309,13 @@ func (d *Data) PvpEventCycle(now int64) int64 {
 	return now / d.pvp.eventDuration
 }
 
-func (d *Data) PvpEventOpponent(level, trophies, banners int, now int64, seed uint32) PvpOpponent {
+func (d *Data) PvpEventOpponent(level, banners int, now int64, seed uint32) PvpOpponent {
 	pickSeed := seed
 	if pickSeed == 0 {
 		pickSeed = defaultOpponentSeed
 	}
 	bot := d.pvp.pickEventBot(banners, d.PvpEventCycle(now), now%d.pvp.eventDuration, pickSeed)
-	return d.PvpOpponentFromBot(bot, level, trophies, now/SecondsPerDay, seed)
+	return d.PvpOpponentFromBot(bot, level, now/SecondsPerDay, seed)
 }
 
 func (d *Data) PvpRoster(o PvpOpponent) (Side, error) {
