@@ -20,8 +20,9 @@ type Unit struct {
 }
 
 type Side struct {
-	Units []Unit   `json:"units"`
-	Runes []string `json:"runes"`
+	Units      []Unit   `json:"units"`
+	Runes      []string `json:"runes"`
+	HeroBuilds bool     `json:"hero_builds,omitempty"`
 }
 
 type ChangerEffect struct {
@@ -94,7 +95,7 @@ type side struct {
 	runes  []*runeDef
 }
 
-func (d *Data) buildHero(u Unit, playerSide bool) (*hero, error) {
+func (d *Data) buildHero(u Unit, heroBuild bool) (*hero, error) {
 	if u.Slot < 0 || u.Slot >= SlotCount {
 		return nil, fmt.Errorf("unit %s has slot %d", u.ID, u.Slot)
 	}
@@ -108,7 +109,7 @@ func (d *Data) buildHero(u Unit, playerSide bool) (*hero, error) {
 	}
 	h.recipe = d.recipeFor(def.ability.key, def.ability.mechanics)
 	h.passives = d.passives[def.dataID()]
-	if !playerSide {
+	if !heroBuild {
 		return h, nil
 	}
 	if u.Ascended {
@@ -141,10 +142,10 @@ func (d *Data) buildHero(u Unit, playerSide bool) (*hero, error) {
 	return h, nil
 }
 
-func (d *Data) buildSide(s Side, playerSide bool) (*side, error) {
+func (d *Data) buildSide(s Side, heroBuilds bool) (*side, error) {
 	built := &side{}
 	for _, u := range s.Units {
-		h, err := d.buildHero(u, playerSide)
+		h, err := d.buildHero(u, heroBuilds)
 		if err != nil {
 			return nil, err
 		}
@@ -171,7 +172,7 @@ func (d *Data) Run(r Replay) (Outcome, error) {
 	if err != nil {
 		return Outcome{}, fmt.Errorf("player side: %w", err)
 	}
-	enemy, err := d.buildSide(r.Enemy, false)
+	enemy, err := d.buildSide(r.Enemy, r.Enemy.HeroBuilds)
 	if err != nil {
 		return Outcome{}, fmt.Errorf("enemy side: %w", err)
 	}

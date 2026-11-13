@@ -8,7 +8,6 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
@@ -108,6 +107,7 @@ func TestALadderRivalIsFoughtWithoutSharingAGuild(t *testing.T) {
 
 	response, body := h.do("GET", "/v1/players/local/pvp/ladder/rival", challenger, "", "")
 	expectStatus(t, response, body, http.StatusOK)
+	rivalSquad := body
 	var opponent economy.DuelOpponent
 	if err := json.Unmarshal([]byte(body), &opponent); err != nil {
 		t.Fatal(err)
@@ -121,7 +121,10 @@ func TestALadderRivalIsFoughtWithoutSharingAGuild(t *testing.T) {
 		expectStatus(t, response, body, http.StatusNotFound)
 	}
 
-	enemy := battle.Side{Units: []battle.Unit{{Slot: 0, ID: "UNIT_VIVIENNE", Tier: "II", Level: 9}}, Runes: []string{}}
+	enemy := duelSide(t, rivalSquad)
+	if !enemy.HeroBuilds || len(enemy.Units) != 1 || len(enemy.Units[0].Gear) != 5 {
+		t.Fatalf("the rival fields %+v", enemy)
+	}
 	fought := h.battle("local", challenger, 1, "ladder-duel", economy.BattleStartRequest{
 		Mode: economy.BattlePvp, Duel: "rival", Enemy: enemy,
 	})

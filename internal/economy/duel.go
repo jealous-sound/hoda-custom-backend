@@ -3,31 +3,31 @@ package economy
 import (
 	"encoding/json"
 	"time"
+
+	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 )
 
 const squadCells = 5
 
 type DuelUnit struct {
-	Slot  int    `json:"slot"`
-	ID    string `json:"id"`
-	Tier  string `json:"tier"`
-	Level int    `json:"level"`
+	Slot      int                   `json:"slot"`
+	ID        string                `json:"id"`
+	Tier      string                `json:"tier"`
+	Level     int                   `json:"level"`
+	ConsumeXP int                   `json:"consume_xp"`
+	Ascended  bool                  `json:"ascended"`
+	Gear      []string              `json:"gear"`
+	Fortify   []battle.FortifyChild `json:"fortify"`
 }
 
 type DuelOpponent struct {
-	ID       string     `json:"id"`
-	Name     string     `json:"name"`
-	Level    int        `json:"level"`
-	Trophies int        `json:"trophies"`
-	Units    []DuelUnit `json:"units"`
-	Runes    []string   `json:"runes"`
-}
-
-type duelRosterEntry struct {
-	ID         string `json:"id"`
-	InstanceID int64  `json:"instance_id"`
-	Tier       string `json:"tier"`
-	Level      int    `json:"level"`
+	ID         string     `json:"id"`
+	Name       string     `json:"name"`
+	Level      int        `json:"level"`
+	Trophies   int        `json:"trophies"`
+	Units      []DuelUnit `json:"units"`
+	Runes      []string   `json:"runes"`
+	HeroBuilds bool       `json:"hero_builds"`
 }
 
 type duelProfile struct {
@@ -38,9 +38,12 @@ type duelProfile struct {
 	CurrentSquad int        `json:"current_squad"`
 	Squads       [][]*int64 `json:"squads"`
 	Roster       struct {
-		Starters  []duelRosterEntry `json:"starters"`
-		Additions []duelRosterEntry `json:"additions"`
+		Starters  []storedHero `json:"starters"`
+		Additions []storedHero `json:"additions"`
 	} `json:"roster"`
+	Gear struct {
+		Heroes []storedGear `json:"heroes"`
+	} `json:"gear"`
 	Runes struct {
 		Items []struct {
 			UUID     int64  `json:"uuid"`
@@ -63,7 +66,7 @@ func DuelOpponentFrom(playerID string, raw json.RawMessage, now time.Time) (Duel
 	}
 	opponent := DuelOpponent{
 		ID: playerID, Name: stored.Account.Name, Level: max(stored.Account.Level, 1), Trophies: stored.Pvp.Trophies,
-		Units: []DuelUnit{}, Runes: []string{},
+		Units: []DuelUnit{}, Runes: []string{}, HeroBuilds: true,
 	}
 	if opponent.Name == "" {
 		opponent.Name = playerID
@@ -72,19 +75,26 @@ func DuelOpponentFrom(playerID string, raw json.RawMessage, now time.Time) (Duel
 	if squad < 0 || squad >= len(stored.Squads) {
 		return opponent, nil
 	}
-	units := map[int64]duelRosterEntry{}
-	for _, list := range [][]duelRosterEntry{stored.Roster.Starters, stored.Roster.Additions} {
+	units := map[int64]storedHero{}
+	for _, list := range [][]storedHero{stored.Roster.Starters, stored.Roster.Additions} {
 		for _, entry := range list {
 			units[entry.InstanceID] = entry
 		}
+	}
+	gear := map[int64]storedGear{}
+	for _, entry := range stored.Gear.Heroes {
+		gear[entry.InstanceID] = entry
 	}
 	for slot, cell := range stored.Squads[squad] {
 		if slot >= squadCells || cell == nil {
 			continue
 		}
 		if unit, found := units[*cell]; found {
+			loadout := gear[unit.InstanceID]
 			opponent.Units = append(opponent.Units, DuelUnit{
 				Slot: slot, ID: unit.ID, Tier: unit.Tier, Level: max(unit.Level, 1),
+				ConsumeXP: unit.ConsumeXP, Ascended: unit.Ascended || loadout.Ascended,
+				Gear: wornOnce(loadout.Slots), Fortify: append([]battle.FortifyChild{}, unit.Fortify...),
 			})
 		}
 	}
