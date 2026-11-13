@@ -11,30 +11,26 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
 
-type guildDuels struct {
-	server    *Server
-	player    string
-	opponents map[string]economy.DuelOpponent
+type playerDuels struct {
+	server *Server
+	player string
+	rivals map[string]duelRival
 }
 
 type duelBody struct {
 	Duel string `json:"duel"`
 }
 
-func (s *Server) duelOpponents(body []byte) map[string]economy.DuelOpponent {
+func (s *Server) duelRivals(body []byte) map[string]duelRival {
 	var request duelBody
 	if err := json.Unmarshal(body, &request); err != nil || request.Duel == "" {
 		return nil
 	}
-	record, err := s.profiles.Get(request.Duel)
+	rival, err := s.duelRival(request.Duel)
 	if err != nil {
 		return nil
 	}
-	opponent, err := economy.DuelOpponentFrom(request.Duel, record.Profile, s.now())
-	if err != nil {
-		return nil
-	}
-	return map[string]economy.DuelOpponent{request.Duel: opponent}
+	return map[string]duelRival{request.Duel: rival}
 }
 
 func (s *Server) duelMember(player, member string) (guild.Member, error) {
@@ -59,23 +55,37 @@ func refusalFor(code guild.Code, message string) error {
 	return &guild.Refusal{Code: code, Message: message}
 }
 
-func (d guildDuels) DuelOpponent(member string) (economy.DuelMatch, error) {
-	opponent, err := d.server.duelMember(d.player, member)
-	if err != nil {
-		return economy.DuelMatch{}, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
-	}
-	return economy.DuelMatch{Name: opponent.Name, Level: opponent.Level, Trophies: d.opponents[member].Trophies}, nil
+func (d playerDuels) onLadder(rival string) bool {
+	return rival != d.player && d.rivals[rival].ranked
 }
 
-func (d guildDuels) DuelSquad(member string) (economy.DuelOpponent, error) {
-	if _, err := d.server.duelMember(d.player, member); err != nil {
-		return economy.DuelOpponent{}, &economy.Refusal{Code: economy.Unavailable, Message: err.Error()}
+func (d playerDuels) refusal(rival string, notAGuildmate error) error {
+	return &economy.Refusal{
+		Code: economy.Unavailable, Message: fmt.Sprintf("%v, and %q is not on the ladder", notAGuildmate, rival),
 	}
-	opponent, ok := d.opponents[member]
+}
+
+func (d playerDuels) DuelOpponent(rival string) (economy.DuelMatch, error) {
+	stored := d.rivals[rival].opponent
+	guildmate, err := d.server.duelMember(d.player, rival)
+	switch {
+	case err == nil:
+		return economy.DuelMatch{Name: guildmate.Name, Level: guildmate.Level, Trophies: stored.Trophies}, nil
+	case d.onLadder(rival):
+		return economy.DuelMatch{Name: stored.Name, Level: stored.Level, Trophies: stored.Trophies}, nil
+	}
+	return economy.DuelMatch{}, d.refusal(rival, err)
+}
+
+func (d playerDuels) DuelSquad(rival string) (economy.DuelOpponent, error) {
+	if _, err := d.server.duelMember(d.player, rival); err != nil && !d.onLadder(rival) {
+		return economy.DuelOpponent{}, d.refusal(rival, err)
+	}
+	stored, ok := d.rivals[rival]
 	if !ok {
 		return economy.DuelOpponent{}, &economy.Refusal{Code: economy.Unavailable, Message: "the member has no profile"}
 	}
-	return opponent, nil
+	return stored.opponent, nil
 }
 
 func (s *Server) duelOpponent(w http.ResponseWriter, r *http.Request, player string) {
