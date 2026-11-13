@@ -1,5 +1,6 @@
 {
- "version": 5,
+ "version": 6,
+ "scale_stats": false,
  "budget": 32000,
  "health_per_power": 5,
  "giant_budget_pct": 150,

@@ -70,6 +70,8 @@ func (f fixture) profile(t *testing.T) json.RawMessage {
 	return raw
 }
 
+const trimmedFixtureHero = `{"version": 1, "heroes": {"UNIT_ARCANEMARIANHAWKE": 50}}`
+
 var (
 	pvpStatBudgetRule = regexp.MustCompile(`"stat_budget": (true|false)`)
 	catalogsByPvpRule = map[bool]*catalog.Catalog{}
@@ -84,6 +86,9 @@ func catalogWithPvpStatBudget(t *testing.T, on bool) *catalog.Catalog {
 		data, err := os.ReadFile(filepath.Join("..", "catalog", "data", name))
 		if name == battle.PvpRulesFile {
 			data = pvpStatBudgetRule.ReplaceAll(data, fmt.Appendf(nil, `"stat_budget": %v`, on))
+		}
+		if on && name == battle.StatBudgetHeroesFile {
+			data = []byte(trimmedFixtureHero)
 		}
 		return data, err
 	})

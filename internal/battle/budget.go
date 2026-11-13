@@ -9,7 +9,7 @@ const (
 	StatBudgetFile       = "stat_budget.json"
 	StatBudgetHeroesFile = "stat_budget_heroes.json"
 
-	statBudgetVersion       = 5
+	statBudgetVersion       = 6
 	statBudgetHeroesVersion = 1
 	neutralHeroPct          = 100
 	neutralRarityPct        = 100
@@ -33,6 +33,7 @@ var statBudgetRarityNames = [budgetRarityCount]string{
 }
 
 type statBudget struct {
+	scaleStats             bool
 	budget                 int
 	healthPerPower         int
 	giantBudgetPct         int
@@ -69,6 +70,7 @@ type budgetStats struct {
 func loadStatBudget(data []byte) (*statBudget, error) {
 	var raw struct {
 		Version                int            `json:"version"`
+		ScaleStats             *bool          `json:"scale_stats"`
 		Budget                 int            `json:"budget"`
 		HealthPerPower         int            `json:"health_per_power"`
 		GiantBudgetPct         int            `json:"giant_budget_pct"`
@@ -93,8 +95,12 @@ func loadStatBudget(data []byte) (*statBudget, error) {
 	if raw.Version != statBudgetVersion {
 		return nil, fmt.Errorf("stat budget: version %d", raw.Version)
 	}
+	if raw.ScaleStats == nil {
+		return nil, fmt.Errorf("stat budget: scale_stats is missing")
+	}
 	b := &statBudget{
-		budget: raw.Budget, healthPerPower: raw.HealthPerPower, giantBudgetPct: raw.GiantBudgetPct,
+		scaleStats: *raw.ScaleStats,
+		budget:     raw.Budget, healthPerPower: raw.HealthPerPower, giantBudgetPct: raw.GiantBudgetPct,
 		auraCostPct: raw.AuraCostPct, selfAuraSharePct: raw.SelfAuraSharePct,
 		auraMatchingAllies: raw.AuraMatchingAllies, auraCapPct: raw.AuraCapPct, gearCapPct: raw.GearCapPct,
 		formationBonusPct: raw.FormationBonusPct, changerCapPct: raw.ChangerCapPct,
@@ -225,7 +231,22 @@ func (b *statBudget) applyKit(kit budgetKit, grown budgetStats, power, health in
 	return scaled(power), scaled(health)
 }
 
+func (b *statBudget) ifScaling() *statBudget {
+	if b != nil && b.scaleStats {
+		return b
+	}
+	return nil
+}
+
+func trimmedStat(stat, heroPct int) int {
+	return int((int64(stat)*int64(heroPct) + neutralHeroPct/2) / neutralHeroPct)
+}
+
 func (b *statBudget) apply(h *hero, power, health int) (int, int) {
+	if !b.scaleStats {
+		heroPct := b.heroPctFor(h.def.id)
+		return trimmedStat(power, heroPct), trimmedStat(health, heroPct)
+	}
 	kit := budgetKit{
 		giant: h.def.giant, pattern: h.def.ability.target, auraPoints: b.auraPoints(h.passives),
 		heroPct: b.heroPctFor(h.def.id), rarityPct: b.rarityPct(h.rarity),
@@ -238,6 +259,13 @@ func (b *statBudget) potencyCutPct(h *hero) int {
 		return neutralHeroPct - pct
 	}
 	return 0
+}
+
+func (b *statBudget) passiveCutPct(h *hero) int {
+	if b.scaleStats {
+		return 0
+	}
+	return b.potencyCutPct(h)
 }
 
 func (b *statBudget) cappedAuraPct(auraPct float32) float32 {
