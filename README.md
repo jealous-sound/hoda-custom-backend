@@ -108,7 +108,7 @@ The wire contract is shared with the client's `source/backend.c`; change both to
 | `POST` | `/v1/players/{id}/actions` | `{"request_id", "action", ...}` |
 | | `/v1/players/{id}/guild…`, `/guilds…`, `/reports` | guilds, chat, Onslaught, duels and abuse reports; see `internal/api/server.go` |
 | `GET` | `/v1/players/{id}/pvp/ladder` | `{"players": [{"id", "name", "level", "trophies"}]}`: up to 100 other named players who have fought PvP, most trophies first |
-| `GET` | `/v1/players/{id}/pvp/ladder/{rival}` | that rival's current squad, in the shape of a guild duel opponent; fight it with `battle_start` and `"duel": "<rival>"` |
+| `GET` | `/v1/players/{id}/pvp/ladder/{rival}` | that rival's current squad, in the shape of a guild duel opponent (see [Battle replay](#battle-replay)); fight it with `battle_start` and `"duel": "<rival>"` |
 | `GET` | `/v1/players/{id}/pvp/event/ladder` | `{"cycle", "players": [{"id", "name", "banners"}], "results": [{"cycle", "rank"}]}`: up to 250 other named players holding banners in the running event, most banners first, and the final rank of each of the caller's unclaimed finished events. An event rank counts the bots and these players with more banners; a rank below the reward table pays its last tier |
 | `POST` | `/v1/players/{id}/chat/world/messages` | `{"after", "text"}` posts an optional line and answers `{"messages", "last_message_id"}` |
 
@@ -155,6 +155,15 @@ before it is added, so results do not depend on the CPU fusing multiply-adds.
 2. `battle` replays the battle and pays the server's result. If the client's claim differs, the battle still settles
    on the replay and the answer is `422 outcome_mismatch`. A battle that is never finished settles at the next
    `battle_start`.
+
+A duel opponent, a guildmate from `guild/members/{member}/duel` or a ladder rival, is the defender's current squad
+read from their stored profile: `{"id", "name", "level", "trophies", "units", "runes", "hero_builds": true}`. Each unit
+carries `consume_xp`, `ascended`, five `gear` slots (an item counts once per hero) and its `fortify` children beside
+`slot`, `id`, `tier` and `level`, in the shape of a replay unit. The client sends that squad back as the `enemy` of
+`battle_start` with `"hero_builds": true`, and the replay then builds the enemy heroes like the attacker's: ascension,
+consume level, fortify and gear. A side without the flag, such as a bot's squad or a PvE roster, fights on tier and
+level alone. An older client that leaves the builds out is refused with `opponent_changed`, so this needs a client
+release and a raised `HOD_MIN_CLIENT_VERSION` before it goes live.
 
 PvP battles replay under the stat budget (`stat_budget.json` and `stat_budget_heroes.json`) while `battle.stat_budget`
 in `pvp_rules.json` is on, as it ships. Changing it changes the PvP simulation, so it needs a client release that

@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"reflect"
 	"strings"
 	"testing"
 	"time"
@@ -21,7 +22,10 @@ const createOpenGuild = `{"request_id":"create-guild-1","name":"Champions","desc
 const duelistProfile = `{"version":9,"account":{"name":"Isabela","level":14,"experience":10,"energy":5,` +
 	`"energy_max":30,"stamina":8,"stamina_max":8,"gold":10,"gems":7},"current_squad":0,` +
 	`"squads":[[7,null,null,null,null]],"roster":{"starters":[],"additions":[{"id":"UNIT_VIVIENNE",` +
-	`"instance_id":7,"tier":"II","level":9}]},"runes":{"items":[{"uuid":3,"def":"rune-power-1",` +
+	`"instance_id":7,"tier":"II","level":9,"consume_xp":120,"ascended":true,` +
+	`"fortify":[{"slot":2,"id":"UNIT_ELVENMAGE","tier":"II"}]}]},` +
+	`"gear":{"heroes":[{"instance_id":7,"ascended":false,"slots":["templar_longsword","","","",""]}]},` +
+	`"runes":{"items":[{"uuid":3,"def":"rune-power-1",` +
 	`"expire_at":1900000000},{"uuid":4,"def":"rune-health-1","expire_at":0}],"squads":[{"slots":[3,4,0]}]},` +
 	`"pvp":{"trophies":120}}`
 
@@ -214,6 +218,15 @@ func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
 		strings.Join(opponent.Runes, ",") != "rune-power-1" {
 		t.Fatalf("opponent = %+v", opponent)
 	}
+	fielded := duelSide(t, body)
+	grown := battle.Unit{
+		Slot: 0, ID: "UNIT_VIVIENNE", Tier: "II", Level: 9, ConsumeXP: 120, Ascended: true,
+		Gear:    []string{"templar_longsword", "", "", "", ""},
+		Fortify: []battle.FortifyChild{{Slot: 2, ID: "UNIT_ELVENMAGE", Tier: "II"}},
+	}
+	if !fielded.HeroBuilds || len(fielded.Units) != 1 || !reflect.DeepEqual(fielded.Units[0], grown) {
+		t.Fatalf("the duel fields %+v, want %+v with hero builds", fielded, grown)
+	}
 	response, body = h.do("GET", "/v1/players/local/guild/members/local/duel", leader, "", "")
 	expectStatus(t, response, body, http.StatusUnprocessableEntity)
 	stranger := h.guildPlayer("stranger", "Anders", 9, 10)
@@ -228,11 +241,7 @@ func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
 		t.Fatal(err)
 	}
 	rewards := shop.Pvp.Rewards
-	duelStart := economy.BattleStartRequest{
-		Mode: economy.BattlePvp, Duel: "ally", Squad: guildSquad(),
-		Enemy: battle.Side{Units: []battle.Unit{{Slot: 0, ID: "UNIT_VIVIENNE", Tier: "II", Level: 9}},
-			Runes: []string{"rune-power-1"}},
-	}
+	duelStart := economy.BattleStartRequest{Mode: economy.BattlePvp, Duel: "ally", Squad: guildSquad(), Enemy: fielded}
 	duel := h.battle("local", leader, 2, "duel-battle-1", duelStart)
 	if want := int64(rewards.WinGoldBase + rewards.WinGoldPerLevel*14); duel.Granted.Gold < want {
 		t.Fatalf("duel gold = %d, want at least %d", duel.Granted.Gold, want)
@@ -252,8 +261,8 @@ func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
 	expectStatus(t, response, body, http.StatusUnprocessableEntity)
 	changed := duelStart
 	changed.Squad = h.storedSquad("local")
-	changed.Enemy = battle.Side{Units: []battle.Unit{{Slot: 0, ID: "UNIT_VIVIENNE", Tier: "I", Level: 1}},
-		Runes: []string{}}
+	changed.Enemy = battle.Side{Units: []battle.Unit{{Slot: 0, ID: "UNIT_VIVIENNE", Tier: "II", Level: 9}},
+		Runes: []string{"rune-power-1"}}
 	changedBody, _ := json.Marshal(changed)
 	var fields map[string]any
 	_ = json.Unmarshal(changedBody, &fields)
@@ -264,6 +273,15 @@ func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
 	if !strings.Contains(body, `"code":"opponent_changed"`) {
 		t.Fatalf("a weaker duel opponent was accepted: %s", body)
 	}
+}
+
+func duelSide(t *testing.T, opponent string) battle.Side {
+	t.Helper()
+	var side battle.Side
+	if err := json.Unmarshal([]byte(opponent), &side); err != nil {
+		t.Fatal(err)
+	}
+	return side
 }
 
 func (h *harness) guilds(t *testing.T, player, token string) {

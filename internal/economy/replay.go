@@ -89,7 +89,9 @@ func bySlot(units []battle.Unit) []battle.Unit {
 }
 
 func canonicalSide(side battle.Side) battle.Side {
-	canonical := battle.Side{Units: bySlot(side.Units), Runes: append([]string{}, side.Runes...)}
+	canonical := battle.Side{
+		Units: bySlot(side.Units), Runes: append([]string{}, side.Runes...), HeroBuilds: side.HeroBuilds,
+	}
 	for i := range canonical.Units {
 		unit := &canonical.Units[i]
 		if unit.Gear != nil {
@@ -274,14 +276,19 @@ func (p *player) duelEnemy(member string) (battle.Side, error) {
 		return battle.Side{}, err
 	}
 	data := p.catalog.Battle
-	enemy := battle.Side{Units: []battle.Unit{}, Runes: []string{}}
+	enemy := battle.Side{Units: []battle.Unit{}, Runes: []string{}, HeroBuilds: duel.HeroBuilds}
 	for _, unit := range duel.Units {
 		if unit.Slot < 0 || unit.Slot >= battle.SlotCount || unit.ID == "" || !data.Knows(unit.ID) {
 			continue
 		}
-		enemy.Units = append(enemy.Units, battle.Unit{
+		fielded := battle.Unit{
 			Slot: unit.Slot, ID: unit.ID, Tier: battle.ParseTier(unit.Tier).String(), Level: max(unit.Level, 1),
-		})
+		}
+		if duel.HeroBuilds {
+			fielded.ConsumeXP, fielded.Ascended = unit.ConsumeXP, unit.Ascended
+			fielded.Gear, fielded.Fortify = unit.Gear, unit.Fortify
+		}
+		enemy.Units = append(enemy.Units, fielded)
 	}
 	for _, id := range duel.Runes {
 		if data.RuneKnown(id) && len(enemy.Runes) < battle.RuneSlotCount {
