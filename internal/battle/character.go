@@ -268,6 +268,7 @@ type character struct {
 	ability     ability
 	gearSlots   int
 	prestige    bool
+	maxTier     Tier
 	hasTier     [tierCount]bool
 	stats       [tierCount]tierStats
 }
@@ -291,6 +292,7 @@ type rawCharacter struct {
 	Specialties []string `json:"specialties"`
 	GearSlots   int      `json:"gear_slots"`
 	Prestige    bool     `json:"has_prestige_slot"`
+	MaxTier     string   `json:"max_tier"`
 	Ability     struct {
 		Key       string   `json:"key"`
 		Target    string   `json:"target"`
@@ -309,7 +311,7 @@ func (raw rawCharacter) parse() *character {
 	c := &character{
 		id: raw.ID, basedOn: raw.BasedOn, rarity: parseRarity(raw.Rarity), stars: raw.Stars, giant: raw.Giant,
 		speed: parseSpeed(raw.Speed), faction: parseFaction(raw.Faction), gearSlots: raw.GearSlots,
-		prestige: raw.Prestige,
+		prestige: raw.Prestige, maxTier: ParseTier(raw.MaxTier),
 	}
 	for _, group := range raw.Groups {
 		if len(c.groups) == maxGroups {

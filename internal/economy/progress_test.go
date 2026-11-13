@@ -257,7 +257,7 @@ func TestPvpBattleKeepsTheRecordOnTheServer(t *testing.T) {
 		t.Errorf("history = %v", entry)
 	}
 	loss := pvpMatched(t, reencode(t, won), server, false, 43)
-	loss.Squad = squadFrom(t, won, squad)
+	loss.Squad = recruitSquad()
 	lost, _, _ := fight(t, reencode(t, won), server, loss, false)
 	pvp = section(lost, "pvp")
 	if pvp["losses"].(float64) != 1 || pvp["win_streak"].(float64) != 0 || pvp["best_win_streak"].(float64) != 1 ||

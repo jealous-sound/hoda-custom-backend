@@ -1,5 +1,5 @@
 {
- "version": 3,
+ "version": 4,
  "budget": 32000,
  "health_per_power": 5,
  "giant_budget_pct": 150,
@@ -13,6 +13,15 @@
  "self_aura_share_pct": 20,
  "aura_matching_allies": 2,
  "aura_cap_pct": 50,
+ "gear_cap_pct": 50,
  "formation_bonus_pct_per_hero": 5,
- "changer_cap_pct": 25
+ "changer_cap_pct": 25,
+ "rarity_budget_pct": {
+  "Common": 72,
+  "Uncommon": 78,
+  "Rare": 85,
+  "Epic": 92,
+  "Legendary": 100,
+  "Mythic": 108
+ }
 }

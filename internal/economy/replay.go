@@ -116,6 +116,21 @@ func sameJSON(a, b any) bool {
 	return leftErr == nil && rightErr == nil && string(left) == string(right)
 }
 
+func wornOnce(worn []string) []string {
+	slots := make([]string, gearSlotsPerHero)
+	counted := map[string]bool{}
+	for slot, id := range worn {
+		if slot == len(slots) {
+			break
+		}
+		if id != "" && !counted[id] {
+			slots[slot] = id
+			counted[id] = true
+		}
+	}
+	return slots
+}
+
 func (p *player) battleSquad(claimed battle.Side, runeIDs []int64) (battle.Side, error) {
 	if len(claimed.Units) == 0 || len(claimed.Units) > battle.SlotCount {
 		return battle.Side{}, refuse(Unavailable, "a squad needs 1-%d heroes", battle.SlotCount)
@@ -149,8 +164,7 @@ func (p *player) battleSquad(claimed battle.Side, runeIDs []int64) (battle.Side,
 		}
 		seen[unit.InstanceID] = true
 		loadout := gear[unit.InstanceID]
-		slots := make([]string, gearSlotsPerHero)
-		copy(slots, loadout.Slots)
+		slots := wornOnce(loadout.Slots)
 		squad.Units = append(squad.Units, battle.Unit{
 			Slot: unit.Slot, InstanceID: hero.InstanceID, ID: hero.ID, Tier: hero.Tier, Level: hero.Level,
 			ConsumeXP: hero.ConsumeXP, Ascended: hero.Ascended || loadout.Ascended, Gear: slots,

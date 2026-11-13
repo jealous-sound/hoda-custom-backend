@@ -311,6 +311,7 @@ func keepGear(c *catalog.Catalog, next, stored document, restored map[int64]bool
 	if !forged {
 		returnUnsoldGear(gear, gearTotals(storedGear, instances), uploaded)
 	}
+	returnSecondCopies(gear)
 	if value, ok := storedGear["tomes"]; ok {
 		gear["tomes"] = value
 	} else {
@@ -329,16 +330,47 @@ func keepGear(c *catalog.Catalog, next, stored document, restored map[int64]bool
 	}
 }
 
-func returnUnsoldGear(gear document, kept, uploaded map[string]int64) {
+func gearInventory(gear document) document {
 	inventory, err := gear.section("inventory")
 	if err != nil {
 		inventory = document{}
 		gear["inventory"] = map[string]any(inventory)
 	}
+	return inventory
+}
+
+func returnUnsoldGear(gear document, kept, uploaded map[string]int64) {
+	inventory := gearInventory(gear)
 	for id, total := range kept {
 		if missing := total - uploaded[id]; missing > 0 {
 			count, _ := inventory.optionalInt(id)
 			inventory.setInt(id, int64(count)+missing)
+		}
+	}
+}
+
+func returnSecondCopies(gear document) {
+	heroes, _ := gear.array("heroes")
+	for _, entry := range heroes {
+		object, ok := entry.(map[string]any)
+		if !ok {
+			continue
+		}
+		slots, _ := object["slots"].([]any)
+		worn := map[string]bool{}
+		for slot, value := range slots {
+			id, ok := value.(string)
+			if !ok || id == "" {
+				continue
+			}
+			if !worn[id] {
+				worn[id] = true
+				continue
+			}
+			slots[slot] = ""
+			inventory := gearInventory(gear)
+			count, _ := inventory.optionalInt(id)
+			inventory.setInt(id, int64(count)+1)
 		}
 	}
 }

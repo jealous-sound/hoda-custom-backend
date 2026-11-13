@@ -424,8 +424,11 @@ func gearPrefersMatchedTarget(attacker, target *unit) bool {
 }
 
 func (s *sim) battleStartPassives() {
-	var healthPct, powerPct [unitCount]float32
-	s.gearAuras(&healthPct, &powerPct)
+	var gearHealthPct, gearPowerPct, healthPct, powerPct [unitCount]float32
+	s.gearAuras(&gearHealthPct, &gearPowerPct)
+	if s.budget == nil {
+		healthPct, powerPct = gearHealthPct, gearPowerPct
+	}
 	for sourceIdx := range unitCount {
 		source := &s.units[sourceIdx]
 		if !source.present {
@@ -468,8 +471,8 @@ func (s *sim) battleStartPassives() {
 			continue
 		}
 		if s.budget != nil {
-			healthPct[i] = s.budget.cappedAuraPct(healthPct[i])
-			powerPct[i] = s.budget.cappedAuraPct(powerPct[i])
+			healthPct[i] = s.budget.cappedAuraPct(healthPct[i]) + s.budget.cappedGearPct(gearHealthPct[i])
+			powerPct[i] = s.budget.cappedAuraPct(powerPct[i]) + s.budget.cappedGearPct(gearPowerPct[i])
 		}
 		if healthPct[i] != 0 {
 			u.maxHealth = max(lround(mul(float32(u.maxHealth), 1+healthPct[i]/100)), 1)
@@ -1676,8 +1679,8 @@ func (s *sim) setup(player, enemy *side, changer *Changer) {
 	s.runeBonus[0] = runesBonus(player.runes)
 	s.runeBonus[1] = runesBonus(enemy.runes)
 	if s.budget != nil {
-		s.runeBonus[0].dropStatBonuses()
-		s.runeBonus[1].dropStatBonuses()
+		s.runeBonus[0].dropFlatShield()
+		s.runeBonus[1].dropFlatShield()
 	}
 	s.applyRuneBonus(0, &s.runeBonus[0])
 	s.applyRuneBonus(1, &s.runeBonus[1])

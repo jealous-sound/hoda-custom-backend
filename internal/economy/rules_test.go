@@ -214,6 +214,45 @@ func TestUploadKeepsHonestClientChanges(t *testing.T) {
 	}
 }
 
+func TestUploadReturnsASecondCopyOfAnItemOnOneHeroToTheInventory(t *testing.T) {
+	c := mustCatalog(t)
+	stored := profile.Record{Profile: gameProfile(t, nil), Revision: 1}
+	stacked := gameProfile(t, func(doc map[string]any) {
+		section(doc, "gear", "inventory")["templar_longsword"] = 0
+		section(doc, "gear")["heroes"] = []any{map[string]any{"instance_id": 1, "ascended": false,
+			"prestige_unlocked": false, "slots": []any{"templar_longsword", "", "templar_longsword"}}}
+	})
+	merged, err := MergeUpload(c, stored, &profile.ServerState{}, stacked, ruleNow)
+	if err != nil {
+		t.Fatal(err)
+	}
+	doc := asMap(t, merged)
+	slots := section(doc, "gear")["heroes"].([]any)[0].(map[string]any)["slots"].([]any)
+	if slots[0] != "templar_longsword" || slots[1] != "" || slots[2] != "" {
+		t.Errorf("slots = %v", slots)
+	}
+	if number(t, doc, "gear", "inventory", "templar_longsword") != 1 {
+		t.Errorf("the second copy was not returned: %v", doc["gear"])
+	}
+}
+
+func TestABattleCountsAnItemOncePerHero(t *testing.T) {
+	slots := wornOnce([]string{"templar_longsword", "", "templar_longsword", "legionnaire_helmet"})
+	want := []string{"templar_longsword", "", "", "legionnaire_helmet", ""}
+	if len(slots) != gearSlotsPerHero {
+		t.Fatalf("%d gear slots", len(slots))
+	}
+	for slot := range want {
+		if slots[slot] != want[slot] {
+			t.Errorf("slots = %v, want %v", slots, want)
+			break
+		}
+	}
+	if overfull := wornOnce(make([]string, gearSlotsPerHero+2)); len(overfull) != gearSlotsPerHero {
+		t.Errorf("an overfull loadout keeps %d slots", len(overfull))
+	}
+}
+
 func TestEnergyRegeneratesOnTheServerClock(t *testing.T) {
 	c := mustCatalog(t)
 	stored := profile.Record{Profile: gameProfile(t, func(doc map[string]any) {
