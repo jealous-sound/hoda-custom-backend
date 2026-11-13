@@ -186,6 +186,18 @@ type PvpEventDetails struct {
 	GuildRankRewards    []PvpRankReward `json:"guild_rank_rewards"`
 }
 
+func (d *PvpEventDetails) RankReward(rank int) (PvpReward, bool) {
+	for _, tier := range d.RankRewards {
+		if rank >= tier.First && rank <= tier.Last {
+			return tier.PvpReward, true
+		}
+	}
+	if tiers := len(d.RankRewards); tiers > 0 && rank > d.RankRewards[tiers-1].Last {
+		return d.RankRewards[tiers-1].PvpReward, true
+	}
+	return PvpReward{}, false
+}
+
 func (d *PvpEventDetails) GuildReward(rank int) (PvpReward, bool) {
 	for _, tier := range d.GuildRankRewards {
 		if rank >= tier.First && rank <= tier.Last {

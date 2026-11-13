@@ -145,3 +145,21 @@ func TestOnslaughtReplacesEveryFewPvpEvents(t *testing.T) {
 		t.Fatalf("%d Onslaughts, want %d", guildCycles, len(events.GuildCatalog))
 	}
 }
+
+func TestEventRanksBelowTheRewardTablePayItsLastTier(t *testing.T) {
+	details := PvpEventDetails{RankRewards: []PvpRankReward{
+		{First: 1, Last: 1, PvpReward: PvpReward{Gold: 500}},
+		{First: 2, Last: 10, PvpReward: PvpReward{Gold: 200}},
+	}}
+	for rank, want := range map[int]int{1: 500, 2: 200, 10: 200, 11: 200, 4000: 200} {
+		if reward, rewarded := details.RankReward(rank); !rewarded || reward.Gold != want {
+			t.Errorf("rank %d pays %d gold (rewarded %v), want %d", rank, reward.Gold, rewarded, want)
+		}
+	}
+	if _, rewarded := details.RankReward(0); rewarded {
+		t.Error("rank 0 is rewarded")
+	}
+	if _, rewarded := (&PvpEventDetails{}).RankReward(1); rewarded {
+		t.Error("an event without rank rewards pays one")
+	}
+}

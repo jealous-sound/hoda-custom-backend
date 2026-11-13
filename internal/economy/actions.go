@@ -130,9 +130,20 @@ func (noDuels) DuelSquad(memberID string) (DuelOpponent, error) {
 	return DuelOpponent{}, refuse(Unavailable, "no guild to duel %q in", memberID)
 }
 
+type EventStandings interface {
+	RivalsAhead(cycle int64, banners int) int
+}
+
+type noRivals struct{}
+
+func (noRivals) RivalsAhead(int64, int) int {
+	return 0
+}
+
 type Env struct {
-	Duels Duels
-	Seeds SeedSource
+	Duels  Duels
+	Seeds  SeedSource
+	Rivals EventStandings
 }
 
 func Act(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerState, action string, body []byte,
@@ -158,6 +169,9 @@ func ActWith(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerStat
 	}
 	if env.Seeds != nil {
 		p.seeds = env.Seeds
+	}
+	if env.Rivals != nil {
+		p.rivals = env.Rivals
 	}
 	result, err := p.dispatch(action, body)
 	if err != nil && !CommittedRefusal(err) {

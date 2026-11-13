@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"os"
 	"path/filepath"
+	"reflect"
 	"testing"
 	"time"
 )
@@ -47,7 +48,7 @@ func TestSummaryReadsTheFieldsAnAdminLooksAt(t *testing.T) {
 		ProfileBytes: len(summarizedProfile), Name: "Hawke", Level: 19, Gold: 9277, Gems: 41, Trophies: 114,
 		BestTrophies: 120, PvpWins: 7, PvpLosses: 3, Heroes: 3, PacksOpened: 116, TutorialComplete: true,
 	}
-	if len(listed) != 1 || listed[0] != want {
+	if len(listed) != 1 || !reflect.DeepEqual(listed[0], want) {
 		t.Fatalf("summaries = %+v, want %+v", listed, want)
 	}
 }
@@ -81,5 +82,24 @@ func TestAProfileThatCannotBeReadIsListedAsUnreadable(t *testing.T) {
 	listed := summaries(t, store)
 	if len(listed) != 3 || listed[0].Unreadable || !listed[1].Unreadable || !listed[2].Unreadable {
 		t.Fatalf("summaries = %+v, want odd and torn marked unreadable", listed)
+	}
+}
+
+func TestSummaryKnowsTheBannersOfTheRunningAndFinishedEvents(t *testing.T) {
+	store := newSummaryStore(t)
+	put(t, store, "hawke", 0, summarizedProfile)
+	_, err := store.Transact("hawke", func(record *Record) error {
+		record.Server.PvpEvent = PvpEventState{Cycle: 7, Banners: 120}
+		record.Server.PvpResults = []PvpEventResult{{Cycle: 5, Banners: 300, Claimed: true}}
+		return nil
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+	listed := summaries(t, store)
+	for cycle, want := range map[int64]int{7: 120, 5: 300, 6: 0} {
+		if got := listed[0].EventBanners(cycle); got != want {
+			t.Errorf("banners in event %d = %d, want %d", cycle, got, want)
+		}
 	}
 }

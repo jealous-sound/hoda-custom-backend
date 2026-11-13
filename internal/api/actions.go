@@ -200,12 +200,16 @@ func (s *Server) playerAction(w http.ResponseWriter, r *http.Request, player str
 			return nil, errors.New(`body must be {"request_id", "action", ...}`)
 		}
 		duels := playerDuels{server: s, player: player, rivals: s.duelRivals(body)}
+		standings, standingsErr := s.eventRivalsFor(player, request.Action)
 		return func(record *profile.Record) (any, error) {
 			if err := s.heldForMaintenance(request.Action); err != nil {
 				return nil, err
 			}
+			if standingsErr != nil {
+				return nil, standingsErr
+			}
 			next, result, err := economy.ActWith(s.catalog, record.Profile, &record.Server, request.Action, body,
-				s.now(), economy.Env{Duels: duels, Seeds: s.battleSeeds})
+				s.now(), economy.Env{Duels: duels, Seeds: s.battleSeeds, Rivals: standings})
 			if err != nil && !economy.CommittedRefusal(err) {
 				return nil, err
 			}

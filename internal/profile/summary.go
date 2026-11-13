@@ -30,6 +30,20 @@ type Summary struct {
 	PacksOpened      int
 	TutorialComplete bool
 	Unreadable       bool
+	Event            PvpEventState
+	EventResults     []PvpEventResult
+}
+
+func (s Summary) EventBanners(cycle int64) int {
+	if s.Event.Cycle == cycle {
+		return s.Event.Banners
+	}
+	for _, finished := range s.EventResults {
+		if finished.Cycle == cycle {
+			return finished.Banners
+		}
+	}
+	return 0
 }
 
 type summarizedSections struct {
@@ -79,6 +93,8 @@ func Summarize(record Record) Summary {
 	summary.PacksOpened = int(sections.Store.OpenedTotal)
 	savedBeforeTutorialExisted := sections.Tutorial == nil
 	summary.TutorialComplete = savedBeforeTutorialExisted || sections.Tutorial.Complete
+	summary.Event = record.Server.PvpEvent
+	summary.EventResults = slices.Clone(record.Server.PvpResults)
 	return summary
 }
 

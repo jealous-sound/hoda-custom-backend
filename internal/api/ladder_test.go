@@ -10,6 +10,7 @@ import (
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
 	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
+	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
 
 const (
@@ -139,5 +140,107 @@ func TestALadderRivalIsFoughtWithoutSharingAGuild(t *testing.T) {
 		if !strings.Contains(body, "not on the ladder") {
 			t.Fatalf("refusal of %s = %s", notARival, body)
 		}
+	}
+}
+
+type nobodyAhead struct{}
+
+func (nobodyAhead) RivalsAhead(int64, int) int {
+	return 0
+}
+
+func (h *harness) currentEvent() int64 {
+	return h.now.Unix() / h.catalog().Pvp.Events.DurationSeconds
+}
+
+func (h *harness) eventPlayer(id, name string, state profile.PvpEventState, finished ...profile.PvpEventResult) string {
+	h.t.Helper()
+	token := h.storedPlayer(id, name, rivalTrophies, 1)
+	_, err := h.profiles.Transact(id, func(record *profile.Record) error {
+		record.Server.PvpEvent, record.Server.PvpResults = state, finished
+		return nil
+	})
+	if err != nil {
+		h.t.Fatal(err)
+	}
+	return token
+}
+
+func (h *harness) eventLadder(player, token string) eventLadderResponse {
+	h.t.Helper()
+	response, body := h.do("GET", "/v1/players/"+player+"/pvp/event/ladder", token, "", "")
+	expectStatus(h.t, response, body, http.StatusOK)
+	var reply eventLadderResponse
+	if err := json.Unmarshal([]byte(body), &reply); err != nil || reply.Players == nil || reply.Results == nil {
+		h.t.Fatalf("event ladder reply %s", body)
+	}
+	return reply
+}
+
+func (h *harness) claimEvent(player, token string, revision, cycle int64) revisioned {
+	h.t.Helper()
+	return h.act(player, token, revision, fmt.Sprintf(
+		`{"request_id":"claim-event-%d","action":%q,"cycle":%d}`, cycle, economy.ActionPvpEventClaim, cycle))
+}
+
+func TestEventLadderListsRivalsByTheBannersTheyHoldThisEvent(t *testing.T) {
+	h := newHarness(t)
+	running := h.currentEvent()
+	viewer := h.eventPlayer("viewer", "Hawke", profile.PvpEventState{Cycle: running, Banners: 300})
+	h.eventPlayer("second", "Isabela", profile.PvpEventState{Cycle: running, Banners: 200})
+	h.eventPlayer("first", "Varric", profile.PvpEventState{Cycle: running, Banners: 900})
+	h.eventPlayer("unnamed", "", profile.PvpEventState{Cycle: running, Banners: 950})
+	h.eventPlayer("idle", "Merrill", profile.PvpEventState{Cycle: running})
+	h.eventPlayer("last-event", "Fenris", profile.PvpEventState{Cycle: running - 1, Banners: 800})
+
+	reply := h.eventLadder("viewer", viewer)
+	want := []eventLadderPlayer{
+		{ID: "first", Name: "Varric", Banners: 900}, {ID: "second", Name: "Isabela", Banners: 200},
+	}
+	if reply.Cycle != running || !slices.Equal(reply.Players, want) || len(reply.Results) != 0 {
+		t.Fatalf("event ladder = %+v, want event %d with %+v", reply, running, want)
+	}
+}
+
+func TestRivalsWithMoreBannersLowerTheRankAFinishedEventPays(t *testing.T) {
+	h := newHarness(t)
+	finished := h.currentEvent() - 1
+	banners := int(h.catalog().Pvp.Events.TopBotBanners)
+	viewer := h.eventPlayer("viewer", "Hawke", profile.PvpEventState{Cycle: finished, Banners: banners})
+	h.eventPlayer("ahead", "Varric", profile.PvpEventState{Cycle: finished, Banners: banners + 1})
+	h.eventPlayer("ahead-and-playing-on", "Isabela", profile.PvpEventState{Cycle: finished + 1, Banners: 5},
+		profile.PvpEventResult{Cycle: finished, Banners: banners + 500, Claimed: true})
+	h.eventPlayer("level", "Merrill", profile.PvpEventState{Cycle: finished, Banners: banners})
+	h.eventPlayer("behind", "Fenris", profile.PvpEventState{Cycle: finished, Banners: banners - 1})
+	h.eventPlayer("unnamed", "", profile.PvpEventState{Cycle: finished, Banners: banners + 9})
+
+	result := profile.PvpEventResult{Cycle: finished, Banners: banners}
+	want := economy.FinalEventRank(&h.catalog().Pvp, nobodyAhead{}, result) + 2
+	standings := h.eventLadder("viewer", viewer).Results
+	if !slices.Equal(standings, []economy.EventStanding{{Cycle: finished, Rank: want}}) {
+		t.Fatalf("standings = %+v, want rank %d in event %d", standings, want, finished)
+	}
+	claimed := h.claimEvent("viewer", viewer, 2, finished)
+	reward, _ := h.catalog().Pvp.Events.ForCycle(finished).RankReward(want)
+	if claimed.Granted.EventRank != want || claimed.Granted.Gold != int64(reward.Gold) {
+		t.Fatalf("claim = %+v, want rank %d paying %d gold", claimed.Granted, want, reward.Gold)
+	}
+	if standings := h.eventLadder("viewer", viewer).Results; len(standings) != 0 {
+		t.Fatalf("standings after the claim = %+v", standings)
+	}
+}
+
+func TestAClaimCountsARivalTheLadderHasNotListedYet(t *testing.T) {
+	h := newHarness(t)
+	finished := h.currentEvent() - 1
+	viewer := h.eventPlayer("viewer", "Hawke", profile.PvpEventState{Cycle: finished, Banners: 400})
+	before := h.eventLadder("viewer", viewer).Results
+	h.eventPlayer("late", "Varric", profile.PvpEventState{Cycle: finished, Banners: 401})
+	if unchanged := h.eventLadder("viewer", viewer).Results; !slices.Equal(unchanged, before) {
+		t.Fatalf("standings re-read every profile within %v: %+v", ladderMaxAge, unchanged)
+	}
+	claimed := h.claimEvent("viewer", viewer, 2, finished)
+	if want := before[0].Rank + 1; claimed.Granted.EventRank != want {
+		t.Fatalf("claimed rank %d, want %d", claimed.Granted.EventRank, want)
 	}
 }
