@@ -731,6 +731,43 @@ func TestPvpEventClaimPaysOnceAfterTheEvent(t *testing.T) {
 	}
 }
 
+type rivalsAhead int
+
+func (ahead rivalsAhead) RivalsAhead(int64, int) int {
+	return int(ahead)
+}
+
+func TestRealRivalsAheadLowerTheRankAnEventPays(t *testing.T) {
+	c := mustCatalog(t)
+	raw, _ := veteranProfile(t)
+	cycle := ruleNow.Unix()/c.Pvp.Events.DurationSeconds - 1
+	finished := profile.PvpEventResult{Cycle: cycle, Banners: int(c.Pvp.Events.TopBotBanners)}
+	claim := func(rivals EventStandings) BattleResult {
+		t.Helper()
+		server := &profile.ServerState{StoreRNG: 3, PvpResults: []profile.PvpEventResult{finished}}
+		_, result, err := ActWith(c, raw, server, ActionPvpEventClaim, []byte(`{"cycle":`+itoa(cycle)+`}`), ruleNow,
+			Env{Rivals: rivals})
+		if err != nil {
+			t.Fatal(err)
+		}
+		return result
+	}
+	tiers := c.Pvp.Events.ForCycle(cycle).RankRewards
+	lastTier := tiers[len(tiers)-1]
+	againstBots := claim(nil)
+	for _, ahead := range []int{3, lastTier.Last + 1000} {
+		crowded := claim(rivalsAhead(ahead))
+		want, _ := c.Pvp.Events.ForCycle(cycle).RankReward(againstBots.EventRank + ahead)
+		if crowded.EventRank != againstBots.EventRank+ahead || crowded.Gold != int64(want.Gold) {
+			t.Errorf("%d rivals ahead of rank %d: rank %d paying %d gold, want %d gold", ahead, againstBots.EventRank,
+				crowded.EventRank, crowded.Gold, want.Gold)
+		}
+		if crowded.Gold <= 0 || crowded.Gold >= againstBots.Gold {
+			t.Errorf("%d rivals ahead pay %d gold against %d without them", ahead, crowded.Gold, againstBots.Gold)
+		}
+	}
+}
+
 func strongerProfile(t *testing.T) (json.RawMessage, battle.Side) {
 	t.Helper()
 	raw := gameProfile(t, func(doc map[string]any) {

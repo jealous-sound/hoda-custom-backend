@@ -2,6 +2,7 @@ package economy
 
 import (
 	"encoding/json"
+	"slices"
 	"time"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
@@ -81,14 +82,52 @@ func botBanners(rules *catalog.PvpRules, bot int, cycle, elapsed int64) int64 {
 	return full * elapsed / rules.Events.DurationSeconds
 }
 
-func pvpEventRank(rules *catalog.PvpRules, banners int, cycle, elapsed int64) int {
-	rank := 1
+func botsAhead(rules *catalog.PvpRules, banners int, cycle, elapsed int64) int {
+	ahead := 0
 	for bot := range rules.Bots {
 		if botBanners(rules, bot, cycle, elapsed) > int64(banners) {
-			rank++
+			ahead++
 		}
 	}
-	return rank
+	return ahead
+}
+
+func EventRank(rules *catalog.PvpRules, rivals EventStandings, banners int, cycle, elapsed int64) int {
+	return 1 + botsAhead(rules, banners, cycle, elapsed) + rivals.RivalsAhead(cycle, banners)
+}
+
+func FinalEventRank(rules *catalog.PvpRules, rivals EventStandings, finished profile.PvpEventResult) int {
+	return EventRank(rules, rivals, finished.Banners, finished.Cycle, rules.Events.DurationSeconds)
+}
+
+func eventResultsAt(server *profile.ServerState, cycle int64) []profile.PvpEventResult {
+	state := server.PvpEvent
+	if state.Cycle == cycle || state.Banners <= 0 {
+		return server.PvpResults
+	}
+	results := append(slices.Clone(server.PvpResults), profile.PvpEventResult{
+		Cycle: state.Cycle, Banners: state.Banners,
+	})
+	return results[max(len(results)-pvpResultsKept, 0):]
+}
+
+type EventStanding struct {
+	Cycle int64 `json:"cycle"`
+	Rank  int   `json:"rank"`
+}
+
+func UnclaimedEventStandings(
+	rules *catalog.PvpRules, server *profile.ServerState, rivals EventStandings, now time.Time,
+) []EventStanding {
+	standings := []EventStanding{}
+	for _, finished := range eventResultsAt(server, now.Unix()/rules.Events.DurationSeconds) {
+		if !finished.Claimed {
+			standings = append(standings, EventStanding{
+				Cycle: finished.Cycle, Rank: FinalEventRank(rules, rivals, finished),
+			})
+		}
+	}
+	return standings
 }
 
 func (p *player) eventDetails(cycle int64) *catalog.PvpEventDetails {
@@ -97,19 +136,11 @@ func (p *player) eventDetails(cycle int64) *catalog.PvpEventDetails {
 
 func (p *player) syncPvpEvent() {
 	cycle := p.now.Unix() / p.catalog.Pvp.Events.DurationSeconds
-	state := &p.server.PvpEvent
-	if state.Cycle == cycle {
+	if p.server.PvpEvent.Cycle == cycle {
 		return
 	}
-	if state.Banners > 0 {
-		p.server.PvpResults = append(p.server.PvpResults, profile.PvpEventResult{
-			Cycle: state.Cycle, Banners: state.Banners,
-		})
-		if extra := len(p.server.PvpResults) - pvpResultsKept; extra > 0 {
-			p.server.PvpResults = append([]profile.PvpEventResult(nil), p.server.PvpResults[extra:]...)
-		}
-	}
-	*state = profile.PvpEventState{Cycle: cycle}
+	p.server.PvpResults = eventResultsAt(p.server, cycle)
+	p.server.PvpEvent = profile.PvpEventState{Cycle: cycle}
 }
 
 func (p *player) payPvpReward(reward catalog.PvpReward, result *BattleResult) error {
@@ -230,7 +261,8 @@ func (p *player) settlePvp(pending profile.PendingBattle, outcome battle.Outcome
 		}
 		gold = saturatingAdd(gold, milestones.Gold)
 		result.Gems = milestones.Gems
-		result.EventRank = pvpEventRank(rules, state.Banners, state.Cycle, p.now.Unix()%rules.Events.DurationSeconds)
+		elapsed := p.now.Unix() % rules.Events.DurationSeconds
+		result.EventRank = EventRank(rules, p.rivals, state.Banners, state.Cycle, elapsed)
 	}
 	result.TrophyDelta = p.recordAttack(&stats, rival, outcome.Won, pending.PvpEvent, result.Banners)
 	p.simulateDefense(&stats)
@@ -280,19 +312,15 @@ func (p *player) ClaimPvpEvent(request EventClaimRequest) (BattleResult, error) 
 		if entry.Claimed {
 			return BattleResult{}, refuse(Unavailable, "event %d is already claimed", request.Cycle)
 		}
-		rank := pvpEventRank(rules, entry.Banners, entry.Cycle, rules.Events.DurationSeconds)
+		rank := FinalEventRank(rules, p.rivals, *entry)
 		result := BattleResult{EventRank: rank, Banners: entry.Banners}
-		for _, reward := range p.eventDetails(entry.Cycle).RankRewards {
-			if rank < reward.First || rank > reward.Last {
-				continue
-			}
-			if rewardUnits(reward.PvpReward) > p.rosterRoom() {
+		if reward, rewarded := p.eventDetails(entry.Cycle).RankReward(rank); rewarded {
+			if rewardUnits(reward) > p.rosterRoom() {
 				return BattleResult{}, refuse(InventoryFull, "roster has no room for the event prizes")
 			}
-			if err := p.payPvpReward(reward.PvpReward, &result); err != nil {
+			if err := p.payPvpReward(reward, &result); err != nil {
 				return BattleResult{}, err
 			}
-			break
 		}
 		entry.Claimed = true
 		p.addGold(result.Gold)

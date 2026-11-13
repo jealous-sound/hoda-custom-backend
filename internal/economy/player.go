@@ -31,6 +31,7 @@ type player struct {
 	rng      rng
 	granted  Granted
 	duels    Duels
+	rivals   EventStandings
 	counters missionCounters
 	seeds    SeedSource
 	fighters []int64
@@ -49,7 +50,7 @@ func openPlayer(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerS
 		return nil, err
 	}
 	p := &player{
-		catalog: c, doc: doc, account: a, server: server, now: now, duels: noDuels{}, seeds: RandomSeeds,
+		catalog: c, doc: doc, account: a, server: server, now: now, duels: noDuels{}, rivals: noRivals{}, seeds: RandomSeeds,
 		granted: Granted{Heroes: []GrantedHero{}, Runes: []string{}, Gear: []string{}},
 	}
 	p.rng.state = server.StoreRNG

@@ -107,6 +107,9 @@ The wire contract is shared with the client's `source/backend.c`; change both to
 | `POST` | `/v1/players/{id}/refills` | `{"request_id", "kind": "energy" or "stamina"}` |
 | `POST` | `/v1/players/{id}/actions` | `{"request_id", "action", ...}` |
 | | `/v1/players/{id}/guild…`, `/guilds…`, `/reports` | guilds, chat, Onslaught, duels and abuse reports; see `internal/api/server.go` |
+| `GET` | `/v1/players/{id}/pvp/ladder` | `{"players": [{"id", "name", "level", "trophies"}]}`: up to 100 other named players who have fought PvP, most trophies first |
+| `GET` | `/v1/players/{id}/pvp/ladder/{rival}` | that rival's current squad, in the shape of a guild duel opponent; fight it with `battle_start` and `"duel": "<rival>"` |
+| `GET` | `/v1/players/{id}/pvp/event/ladder` | `{"cycle", "players": [{"id", "name", "banners"}], "results": [{"cycle", "rank"}]}`: up to 250 other named players holding banners in the running event, most banners first, and the final rank of each of the caller's unclaimed finished events. An event rank counts the bots and these players with more banners; a rank below the reward table pays its last tier |
 | `POST` | `/v1/players/{id}/chat/world/messages` | `{"after", "text"}` posts an optional line and answers `{"messages", "last_message_id"}` |
 
 Player routes need `Authorization: Bearer <token>`. Profile uploads, purchases, refills, actions and guild creation
