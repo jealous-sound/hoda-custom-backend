@@ -214,6 +214,33 @@ func TestGuildsWorldChatAndReportsCanBeReadByTheAdmin(t *testing.T) {
 	}
 }
 
+func routesByName(reply trafficReply) map[string]traffic.Route {
+	routes := map[string]traffic.Route{}
+	for _, route := range reply.Routes {
+		routes[route.Route] = route
+	}
+	return routes
+}
+
+func TestTrafficCountsOutdatedClientRefusalsApartFromUnknownPaths(t *testing.T) {
+	h := newHarnessWith(t, Config{
+		OpenUnregistered: true, AdminToken: testAdminToken,
+		ClientUpdates: ClientUpdates{Minimum: version(t, "v0.4.0")},
+	})
+	response, body := h.doAs("HeroesOfDragonAge/v0.3.7", "GET", "/v1/players/local/guild", "")
+	expectStatus(t, response, body, http.StatusUpgradeRequired)
+	response, body = h.doAs("HeroesOfDragonAge/v0.3.7", "GET", "/wp-login.php", "")
+	expectStatus(t, response, body, http.StatusNotFound)
+
+	var reply trafficReply
+	h.adminRead(adminTrafficPath, &reply)
+	routes := routesByName(reply)
+	refused := routes[outdatedClientRoute]
+	if refused.Requests != 1 || refused.ClientErrors != 1 || routes[unmatchedRoute].Requests != 1 {
+		t.Fatalf("routes = %+v", reply.Routes)
+	}
+}
+
 func TestTrafficCountsPlayerRoutesAndRefusedActionsButNotThePanel(t *testing.T) {
 	h := newMaintenanceHarness(t)
 	token := h.shopPlayer()
@@ -228,10 +255,7 @@ func TestTrafficCountsPlayerRoutesAndRefusedActionsButNotThePanel(t *testing.T) 
 	var reply trafficReply
 	h.adminRead(adminTrafficPath, &reply)
 	h.adminRead(adminTrafficPath, &reply)
-	routes := map[string]traffic.Route{}
-	for _, route := range reply.Routes {
-		routes[route.Route] = route
-	}
+	routes := routesByName(reply)
 	purchases := routes["POST /v1/players/{player}/store/purchases"]
 	if purchases.Requests != 2 || purchases.ClientErrors != 1 || routes[unmatchedRoute].Requests != 1 {
 		t.Fatalf("routes = %+v", reply.Routes)
