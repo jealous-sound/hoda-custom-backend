@@ -126,6 +126,7 @@ type unit struct {
 	marked                   int
 	faction                  uint32
 	gameChangerApplied       bool
+	gearTriggerWorth         [gearSlotCapacity]int64
 }
 
 func (u *unit) giant() bool { return u.hero.def.giant }
@@ -341,6 +342,67 @@ func applyGearStat(g *gearState, stat gearStat, value int) {
 	}
 }
 
+type gearShare struct {
+	granted, asked int
+}
+
+var gearFullShare = gearShare{granted: 1, asked: 1}
+
+func gearStatIsPooled(stat gearStat) bool {
+	switch stat {
+	case gearStatPower, gearStatHealth, gearStatCrit, gearStatBonusDamage, gearStatDamageResist,
+		gearStatRawDamageResist:
+		return true
+	}
+	return false
+}
+
+func (b *statBudget) gearPooledPoints(stat gearStat, value int) int {
+	size := max(value, -value)
+	if stat == gearStatRawDamageResist {
+		return b.flatResistPct(size)
+	}
+	return size
+}
+
+func (share gearShare) of(value int) int {
+	return int(int64(value) * int64(share.granted) / int64(share.asked))
+}
+
+func (share gearShare) pct(value int) float32 {
+	if share.granted == share.asked {
+		return float32(value)
+	}
+	return float32(int64(value)*int64(share.granted)) / float32(share.asked)
+}
+
+func gearEffectIsAura(effect *gearEffect, wearer *unit) bool {
+	return effect.on == onBattle && !effect.versus.hasMatch && effect.stat != gearStatTargetMatch &&
+		wearerQualifies(effect, wearer)
+}
+
+func (s *sim) gearAuraShare(wearer *unit, def *gearDef) gearShare {
+	if s.budget == nil {
+		return gearFullShare
+	}
+	asked := 0
+	for e := range def.effects {
+		effect := &def.effects[e]
+		if !gearEffectIsAura(effect, wearer) || !gearStatIsPooled(effect.stat) {
+			continue
+		}
+		for recipientIdx := range unitCount {
+			if multiplier := filterMatchCount(&effect.recipient, wearer, &s.units[recipientIdx]); multiplier > 0 {
+				asked += s.budget.gearPooledPoints(effect.stat, effect.value*multiplier)
+			}
+		}
+	}
+	if limit := s.budget.gearItemCapPct; asked > limit {
+		return gearShare{granted: limit, asked: asked}
+	}
+	return gearFullShare
+}
+
 func (s *sim) gearAuras(healthPct, powerPct *[unitCount]float32) {
 	for wearerIdx := range unitCount {
 		wearer := &s.units[wearerIdx]
@@ -351,10 +413,10 @@ func (s *sim) gearAuras(healthPct, powerPct *[unitCount]float32) {
 			if def == nil {
 				continue
 			}
+			share := s.gearAuraShare(wearer, def)
 			for e := range def.effects {
 				effect := &def.effects[e]
-				if effect.on != onBattle || effect.versus.hasMatch || effect.stat == gearStatTargetMatch ||
-					!wearerQualifies(effect, wearer) {
+				if !gearEffectIsAura(effect, wearer) {
 					continue
 				}
 				for recipientIdx := range unitCount {
@@ -364,15 +426,17 @@ func (s *sim) gearAuras(healthPct, powerPct *[unitCount]float32) {
 						continue
 					}
 					value := effect.value * multiplier
-					switch effect.stat {
-					case gearStatPower:
-						powerPct[recipientIdx] += float32(value)
-					case gearStatHealth:
-						healthPct[recipientIdx] += float32(value)
-					case gearStatCrit:
-						recipient.critPct += float32(value)
-					case gearStatBonusDamage:
-						recipient.damageBonusPct += float32(value)
+					switch {
+					case effect.stat == gearStatPower:
+						powerPct[recipientIdx] += share.pct(value)
+					case effect.stat == gearStatHealth:
+						healthPct[recipientIdx] += share.pct(value)
+					case effect.stat == gearStatCrit:
+						recipient.critPct += share.pct(value)
+					case effect.stat == gearStatBonusDamage:
+						recipient.damageBonusPct += share.pct(value)
+					case gearStatIsPooled(effect.stat):
+						applyGearStat(&recipient.gear, effect.stat, share.of(value))
 					default:
 						applyGearStat(&recipient.gear, effect.stat, value)
 					}
@@ -916,6 +980,10 @@ func (s *sim) mitigatedDamage(actor, t *unit, damage int) int {
 	bonus := &s.runeBonus[t.side]
 	shield := bonus.damageShield + t.gear.rawDamageResist + s.gearVersusStat(t, actor, gearStatRawDamageResist)
 	resist := bonus.damageResistPct + t.gear.damageResistPct + s.gearVersusStat(t, actor, gearStatDamageResist)
+	if s.budget != nil {
+		resist += s.budget.flatResistPct(shield)
+		shield = 0
+	}
 	return damageAfterResist(damage, shield, resist)
 }
 
@@ -948,54 +1016,111 @@ type gearReaction struct {
 	touched [unitCount]bool
 }
 
-func (s *sim) gearReactionAdd(reaction *gearReaction, effect *gearEffect, recipientIdx, amount int) {
-	recipient := &s.units[recipientIdx]
+func gearStatIsMetered(stat gearStat) bool {
+	return stat == gearStatDamage || stat == gearStatDrain || gearStatIsPooled(stat)
+}
+
+func (s *sim) gearTriggerAmount(effect *gearEffect, recipient *unit, amount int) int {
 	pct := percent(effect.value)
-	t := &reaction.targets[recipientIdx]
-	t.Unit = recipientIdx
-	base := 0
 	switch effect.stat {
 	case gearStatPower:
-		base = recipient.startPower
+		base := recipient.startPower
 		if effect.damageBasis {
 			base = amount
 		}
-		if !recipient.cursePower {
-			t.PowerDelta += lround(mul(float32(base), pct))
+		if recipient.cursePower {
+			return 0
 		}
+		return lround(mul(float32(base), pct))
 	case gearStatHealth:
-		base = recipient.maxHealth
+		base := recipient.maxHealth
 		if effect.damageBasis {
 			base = amount
 		}
-		if !recipient.curseHealth {
-			t.HealthDelta += lround(mul(float32(base), pct))
+		if recipient.curseHealth {
+			return 0
 		}
+		return lround(mul(float32(base), pct))
 	case gearStatDamage:
-		base = recipient.maxHealth
+		base := recipient.maxHealth
 		if effect.damageBasis {
 			base = amount
 		}
-		t.HealthDelta -= lround(mul(float32(base), pct))
+		return lround(mul(float32(base), pct))
 	case gearStatDrain:
-		if !s.runeResists(s.runeBonus[recipient.side].drainResistPct + recipient.gear.drainResistPct) {
-			t.PowerDelta -= lround(mul(float32(recipient.startPower), pct))
+		if s.runeResists(s.runeBonus[recipient.side].drainResistPct + recipient.gear.drainResistPct) {
+			return 0
 		}
+		return lround(mul(float32(recipient.startPower), pct))
+	}
+	return effect.value
+}
+
+func (s *sim) gearReactionAdd(reaction *gearReaction, effect *gearEffect, recipientIdx, amount int) {
+	recipient := &s.units[recipientIdx]
+	t := &reaction.targets[recipientIdx]
+	t.Unit = recipientIdx
+	switch effect.stat {
+	case gearStatPower:
+		t.PowerDelta += amount
+	case gearStatHealth:
+		t.HealthDelta += amount
+	case gearStatDamage:
+		t.HealthDelta -= amount
+	case gearStatDrain:
+		t.PowerDelta -= amount
 	case gearStatCrit:
-		t.CritDelta += float32(effect.value)
+		t.CritDelta += float32(amount)
 	case gearStatBonusDamage:
-		t.DamageBonusDelta += float32(effect.value)
+		t.DamageBonusDelta += float32(amount)
 	default:
-		applyGearStat(&recipient.gear, effect.stat, effect.value)
+		applyGearStat(&recipient.gear, effect.stat, amount)
 		return
 	}
 	reaction.touched[recipientIdx] = true
 }
 
-func (s *sim) gearFireEffect(reaction *gearReaction, wearer *unit, effect *gearEffect, amount int) {
+func (s *sim) gearTriggerWorth(effect *gearEffect, recipient *unit, amount int) int64 {
+	switch effect.stat {
+	case gearStatPower, gearStatDrain:
+		return shareOfStat(int64(amount), recipient.startPower)
+	case gearStatHealth, gearStatDamage:
+		return shareOfStat(int64(amount), recipient.maxHealth)
+	}
+	return worthOfPoints(int64(s.budget.gearPooledPoints(effect.stat, amount)))
+}
+
+func gearMissingHealth(reaction *gearReaction, recipient *unit, idx int) int {
+	return max(recipient.maxHealth-recipient.health-reaction.targets[idx].HealthDelta, 0)
+}
+
+func (s *sim) gearMeterTrigger(reaction *gearReaction, spent *int64, effect *gearEffect, amounts *[unitCount]int) {
+	var asked int64
+	for idx := range unitCount {
+		recipient := &s.units[idx]
+		if effect.stat == gearStatHealth {
+			amounts[idx] = min(amounts[idx], gearMissingHealth(reaction, recipient, idx))
+		}
+		asked += s.gearTriggerWorth(effect, recipient, amounts[idx])
+	}
+	left := s.budget.gearTriggerAllowance() - *spent
+	if asked <= left {
+		*spent += asked
+		return
+	}
+	for idx := range unitCount {
+		amounts[idx] = int(int64(amounts[idx]) * left / asked)
+	}
+	*spent += left
+}
+
+func (s *sim) gearFireEffect(reaction *gearReaction, wearer *unit, slot int, effect *gearEffect, amount int) {
 	if !wearerQualifies(effect, wearer) {
 		return
 	}
+	metered := gearStatIsMetered(effect.stat)
+	var amounts [unitCount]int
+	var reached [unitCount]bool
 	for idx := range unitCount {
 		recipient := &s.units[idx]
 		if !recipient.alive {
@@ -1003,19 +1128,36 @@ func (s *sim) gearFireEffect(reaction *gearReaction, wearer *unit, effect *gearE
 		}
 		multiplier := filterMatchCount(&effect.recipient, wearer, recipient)
 		for range multiplier {
-			s.gearReactionAdd(reaction, effect, idx, amount)
+			fired := s.gearTriggerAmount(effect, recipient, amount)
+			if metered {
+				amounts[idx] += fired
+			} else {
+				s.gearReactionAdd(reaction, effect, idx, fired)
+			}
+		}
+		reached[idx] = metered && multiplier > 0
+	}
+	if !metered {
+		return
+	}
+	if s.budget != nil {
+		s.gearMeterTrigger(reaction, &wearer.gearTriggerWorth[slot], effect, &amounts)
+	}
+	for idx := range unitCount {
+		if reached[idx] {
+			s.gearReactionAdd(reaction, effect, idx, amounts[idx])
 		}
 	}
 }
 
 func (s *sim) gearFireTrigger(reaction *gearReaction, wearer *unit, on gearTrigger, amount int) {
-	for _, def := range wearer.hero.gear {
+	for slot, def := range wearer.hero.gear {
 		if def == nil {
 			continue
 		}
 		for e := range def.effects {
 			if def.effects[e].on == on {
-				s.gearFireEffect(reaction, wearer, &def.effects[e], amount)
+				s.gearFireEffect(reaction, wearer, slot, &def.effects[e], amount)
 			}
 		}
 	}
@@ -1576,12 +1718,15 @@ func (s *sim) takeTurn(actorIdx int) {
 func (s *sim) rollInitiative(u *unit) int {
 	lo := u.initClass * initClassSpan
 	hi := lo + initClassSpan - 1
-	runeSteps := s.runeBonus[u.side].initiativeSteps
+	runeInitiative := s.runeBonus[u.side].initiativeSteps * initClassSpan
+	if s.budget != nil {
+		runeInitiative = s.budget.runeInitiative(runeInitiative)
+	}
 	roll := s.rangeRoll(lo, hi)
 	if u.gear.haste {
 		roll = max(roll, s.rangeRoll(lo, hi))
 	}
-	return roll + u.curInitiative + runeSteps*initClassSpan
+	return roll + u.curInitiative + runeInitiative
 }
 
 func (s *sim) rollRoundOrder() []int {
@@ -1614,11 +1759,18 @@ func (s *sim) applyRuneBonus(side int, bonus *runeBonus) {
 		if !u.present {
 			continue
 		}
-		u.power = runeApplyPct(u.power, bonus.powerPct)
+		u.power = s.runeStat(u.power, bonus.powerPct)
 		u.startPower = u.power
-		u.maxHealth = runeApplyPct(u.maxHealth, bonus.healthPct)
+		u.maxHealth = s.runeStat(u.maxHealth, bonus.healthPct)
 		u.health = u.maxHealth
 	}
+}
+
+func (s *sim) runeStat(stat, runePct int) int {
+	if s.budget != nil {
+		return s.budget.runeStat(stat, runePct)
+	}
+	return runeApplyPct(stat, runePct)
 }
 
 func changerEffectMatches(effect *ChangerEffect, u *unit) bool {
@@ -1679,8 +1831,8 @@ func (s *sim) setup(player, enemy *side, changer *Changer) {
 	s.runeBonus[0] = runesBonus(player.runes)
 	s.runeBonus[1] = runesBonus(enemy.runes)
 	if s.budget != nil {
-		s.runeBonus[0].dropFlatShield()
-		s.runeBonus[1].dropFlatShield()
+		s.budget.limitRuneBonus(&s.runeBonus[0])
+		s.budget.limitRuneBonus(&s.runeBonus[1])
 	}
 	s.applyRuneBonus(0, &s.runeBonus[0])
 	s.applyRuneBonus(1, &s.runeBonus[1])
