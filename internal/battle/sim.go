@@ -127,9 +127,17 @@ type unit struct {
 	faction                  uint32
 	gameChangerApplied       bool
 	gearTriggerWorth         [gearSlotCapacity]int64
+	passiveCutPct            int
 }
 
 func (u *unit) giant() bool { return u.hero.def.giant }
+
+func (u *unit) passiveValuePct(effect *passiveEffect) float32 {
+	if u.passiveCutPct <= 0 {
+		return effect.valuePct
+	}
+	return mul(effect.valuePct, float32(100-u.passiveCutPct)) / 100
+}
 
 type sim struct {
 	units             [unitCount]unit
@@ -144,6 +152,12 @@ type sim struct {
 	gearLastDamage    int
 	overflow          bool
 	budget            *statBudget
+	heroRules         *statBudget
+}
+
+func (s *sim) useStatBudget(b *statBudget) {
+	s.heroRules = b
+	s.budget = b.ifScaling()
 }
 
 func (s *sim) rand() uint32 {
@@ -198,9 +212,10 @@ func (s *sim) initUnit(side, slot int, h *hero) {
 	u.power = h.statPower()
 	u.maxHealth = h.statHealth()
 	u.recipe = h.recipe
-	if s.budget != nil {
-		u.power, u.maxHealth = s.budget.apply(h, u.power, u.maxHealth)
-		u.recipe = h.recipe.withPotencyCut(s.budget.potencyCutPct(h))
+	if s.heroRules != nil {
+		u.power, u.maxHealth = s.heroRules.apply(h, u.power, u.maxHealth)
+		u.recipe = h.recipe.withPotencyCut(s.heroRules.potencyCutPct(h))
+		u.passiveCutPct = s.heroRules.passiveCutPct(h)
 	}
 	u.startPower = u.power
 	u.critPct = float32(max(h.critChance, baseCritChance))
@@ -519,7 +534,7 @@ func (s *sim) battleStartPassives() {
 				if multiplier <= 0 {
 					continue
 				}
-				value := mul(mul(effect.valuePct, float32(multiplier)), float32(composition))
+				value := mul(mul(source.passiveValuePct(effect), float32(multiplier)), float32(composition))
 				if effect.stats&statHealth != 0 {
 					healthPct[recipientIdx] += value
 				}
@@ -625,7 +640,7 @@ func (s *sim) passiveBonusDamagePct(attacker, target *unit) float32 {
 				targets = filterMatchCount(&effect.target, source, target)
 			}
 			if targets > 0 {
-				bonus += mul(mul(effect.valuePct, float32(recipients)), float32(targets))
+				bonus += mul(mul(source.passiveValuePct(effect), float32(recipients)), float32(targets))
 			}
 		}
 	}
@@ -872,7 +887,7 @@ func (s *sim) applyEnemyDeathPassives(a *Action, deadIdx int) {
 				if recipientMultiplier <= 0 {
 					continue
 				}
-				pct := mul(mul(effect.valuePct, float32(recipientMultiplier)), float32(targetMultiplier)) / 100
+				pct := mul(mul(source.passiveValuePct(effect), float32(recipientMultiplier)), float32(targetMultiplier)) / 100
 				s.recordPassiveHeal(a, recipientIdx, lround(mul(float32(recipient.maxHealth), pct)))
 			}
 		}

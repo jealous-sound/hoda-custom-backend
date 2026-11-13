@@ -178,7 +178,7 @@ func (d *Data) Run(r Replay) (Outcome, error) {
 	}
 	s := &sim{actions: make([]Action, 0, 256)}
 	if r.StatBudget {
-		s.budget = d.statBudget
+		s.useStatBudget(d.statBudget)
 	}
 	if err := s.run(player, enemy, r.Changer, r.Seed); err != nil {
 		return Outcome{}, err

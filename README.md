@@ -165,9 +165,12 @@ consume level, fortify and gear. A side without the flag, such as a bot's squad 
 level alone. An older client that leaves the builds out is refused with `opponent_changed`, so this needs a client
 release and a raised `HOD_MIN_CLIENT_VERSION` before it goes live.
 
-PvP battles replay under the stat budget (`stat_budget.json` and `stat_budget_heroes.json`) while `battle.stat_budget`
-in `pvp_rules.json` is on, as it ships. Changing it changes the PvP simulation, so it needs a client release that
-carries the same switch and a raised `HOD_MIN_CLIENT_VERSION`. The economy and API tests run their one- and two-hero
+PvP battles replay under the PvP rules (`stat_budget.json` and `stat_budget_heroes.json`) while `battle.stat_budget`
+in `pvp_rules.json` is on, as it ships. `scale_stats` in `stat_budget.json` picks the mode. Off, as it ships, heroes
+fight on their original stats and only the heroes listed in `stat_budget_heroes.json` are trimmed: their stats, status
+chances, ally grants and passive values are cut to the listed percent. On, the stat budget scales every hero and the
+list is a handicap table. Changing a switch or the list changes the PvP simulation, so it needs a client release that
+carries the same data and a raised `HOD_MIN_CLIENT_VERSION`. The economy and API tests run their one- and two-hero
 fixture squads with the rule off, because such a squad cannot win a levelled battle.
 
 The golden tests replay `internal/battle/testdata/battle_replays.json`, recorded by the C simulation. They require the

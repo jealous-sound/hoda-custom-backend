@@ -4,7 +4,8 @@ import "testing"
 
 func testBudget() *statBudget {
 	return &statBudget{
-		budget: 3000, healthPerPower: 5, giantBudgetPct: 150,
+		scaleStats: true,
+		budget:     3000, healthPerPower: 5, giantBudgetPct: 150,
 		patternPowerCostPct: [patternCount]int{patternOne: 100, patternRow: 200, patternColumn: 200, patternAll: 300},
 		auraCostPct:         50, selfAuraSharePct: 20, auraMatchingAllies: 2, auraCapPct: 100, gearCapPct: 100,
 		formationBonusPct: 5, changerCapPct: 25,
@@ -439,5 +440,92 @@ func TestStatBudgetMetersWhatOneItemsTriggersGive(t *testing.T) {
 	hit, friend = &s.units[hitIdx], &s.units[friendIdx]
 	if hit.health != 40000-2000+50000 || hit.power != 1400 || friend.power != 1400 {
 		t.Errorf("without the budget: %d health, %d and %d power", hit.health, hit.power, friend.power)
+	}
+}
+
+const backRowTestSlot = 0
+
+func originalStatsBudget() *statBudget {
+	b := testBudget()
+	b.scaleStats = false
+	return b
+}
+
+func TestOriginalStatsRulesTrimOnlyTheListedHeroes(t *testing.T) {
+	b := originalStatsBudget()
+	heroNamed := func(id string) *hero {
+		h := grownHero(id, rarityCommon, 105, 505)
+		h.recipe = &abilityRecipe{hit: attackRecipe{stunPct: 50}}
+		return h
+	}
+	if power, health := b.apply(heroNamed("UNIT_A"), 105, 505); power != 84 || health != 404 {
+		t.Errorf("an 80%% trim gives %d/%d", power, health)
+	}
+	if power, health := b.apply(heroNamed("UNIT_B"), 105, 505); power != 105 || health != 505 {
+		t.Errorf("an unlisted hero fights with %d/%d", power, health)
+	}
+	if power, health := b.apply(heroNamed("UNIT_C"), 105, 505); power != 158 || health != 758 {
+		t.Errorf("a 150%% entry gives %d/%d", power, health)
+	}
+	s := &sim{}
+	s.useStatBudget(b)
+	if s.budget != nil || s.heroRules != b {
+		t.Fatal("original stats should keep the hero rules and drop the scaling rules")
+	}
+	s.initUnit(0, backRowTestSlot, heroNamed("UNIT_A"))
+	s.initUnit(1, backRowTestSlot, heroNamed("UNIT_B"))
+	trimmed, unlisted := s.unitAt(0, backRowTestSlot), s.unitAt(1, backRowTestSlot)
+	if trimmed.power != 84 || trimmed.maxHealth != 404 || unlisted.power != 105 || unlisted.maxHealth != 505 {
+		t.Errorf("seated stats: %d/%d and %d/%d", trimmed.power, trimmed.maxHealth, unlisted.power, unlisted.maxHealth)
+	}
+	if trimmed.recipe.hit.stunPct != 40 || unlisted.recipe.hit.stunPct != 50 {
+		t.Errorf("stun chances: %d and %d", trimmed.recipe.hit.stunPct, unlisted.recipe.hit.stunPct)
+	}
+	aura := &passiveEffect{valuePct: 50}
+	if trimmed.passiveValuePct(aura) != 40 || unlisted.passiveValuePct(aura) != 50 {
+		t.Errorf("a 50%% passive gives %v and %v", trimmed.passiveValuePct(aura), unlisted.passiveValuePct(aura))
+	}
+}
+
+func TestScalingRulesLeavePassivesWhole(t *testing.T) {
+	b := testBudget()
+	h := grownHero("UNIT_A", rarityCommon, 105, 505)
+	h.recipe = &abilityRecipe{}
+	s := &sim{}
+	s.useStatBudget(b)
+	if s.budget != b || s.heroRules != b {
+		t.Fatal("scaling rules should apply in full")
+	}
+	s.initUnit(0, backRowTestSlot, h)
+	if u := s.unitAt(0, backRowTestSlot); u.passiveCutPct != 0 || u.passiveValuePct(&passiveEffect{valuePct: 50}) != 50 {
+		t.Errorf("a scaled hero's passives are cut by %d%%", u.passiveCutPct)
+	}
+}
+
+func TestOriginalStatsRulesWithNoTrimsPlayLikeTheOriginalGame(t *testing.T) {
+	d := loadTestData(t)
+	if d.statBudget.scaleStats {
+		t.Skip("the shipped rules scale stats")
+	}
+	shipped := d.statBudget.heroPct
+	d.statBudget.heroPct = map[string]int{}
+	defer func() { d.statBudget.heroPct = shipped }()
+	for _, battle := range loadCorpus(t).Battles {
+		if !battle.StatBudget {
+			continue
+		}
+		plain := battle.Replay
+		plain.StatBudget = false
+		want, err := d.Run(plain)
+		if err != nil {
+			t.Fatalf("%s: %v", battle.Name, err)
+		}
+		got, err := d.Run(battle.Replay)
+		if err != nil {
+			t.Fatalf("%s: %v", battle.Name, err)
+		}
+		if got.Timeline != want.Timeline {
+			t.Errorf("%s plays differently under the PvP rules with no hero trimmed", battle.Name)
+		}
 	}
 }
