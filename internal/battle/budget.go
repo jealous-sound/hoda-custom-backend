@@ -9,17 +9,24 @@ const (
 	StatBudgetFile       = "stat_budget.json"
 	StatBudgetHeroesFile = "stat_budget_heroes.json"
 
-	statBudgetVersion       = 3
+	statBudgetVersion       = 4
 	statBudgetHeroesVersion = 1
 	neutralHeroPct          = 100
+	neutralRarityPct        = 100
 	minHeroPct              = 33
 	maxHeroPct              = 300
 	auraStatCount           = 2
 	patternCount            = int(patternAll) + 1
+	budgetRarityCount       = int(rarityMythic) + 1
 )
 
 var statBudgetPatternNames = [patternCount]string{
 	patternOne: "One", patternRow: "Row", patternColumn: "Column", patternAll: "All",
+}
+
+var statBudgetRarityNames = [budgetRarityCount]string{
+	rarityCommon: "Common", rarityUncommon: "Uncommon", rarityRare: "Rare", rarityEpic: "Epic",
+	rarityLegendary: "Legendary", rarityMythic: "Mythic",
 }
 
 type statBudget struct {
@@ -31,8 +38,10 @@ type statBudget struct {
 	selfAuraSharePct    int
 	auraMatchingAllies  int
 	auraCapPct          int
+	gearCapPct          int
 	formationBonusPct   int
 	changerCapPct       int
+	rarityBudgetPct     [budgetRarityCount]int
 	heroPct             map[string]int
 }
 
@@ -41,6 +50,12 @@ type budgetKit struct {
 	pattern    targetPattern
 	auraPoints int
 	heroPct    int
+	rarityPct  int
+}
+
+type budgetStats struct {
+	power  int
+	health int
 }
 
 func loadStatBudget(data []byte) (*statBudget, error) {
@@ -54,8 +69,10 @@ func loadStatBudget(data []byte) (*statBudget, error) {
 		SelfAuraSharePct    int            `json:"self_aura_share_pct"`
 		AuraMatchingAllies  int            `json:"aura_matching_allies"`
 		AuraCapPct          int            `json:"aura_cap_pct"`
+		GearCapPct          int            `json:"gear_cap_pct"`
 		FormationBonusPct   int            `json:"formation_bonus_pct_per_hero"`
 		ChangerCapPct       int            `json:"changer_cap_pct"`
+		RarityBudgetPct     map[string]int `json:"rarity_budget_pct"`
 	}
 	if err := json.Unmarshal(data, &raw); err != nil {
 		return nil, fmt.Errorf("stat budget: %w", err)
@@ -66,15 +83,19 @@ func loadStatBudget(data []byte) (*statBudget, error) {
 	b := &statBudget{
 		budget: raw.Budget, healthPerPower: raw.HealthPerPower, giantBudgetPct: raw.GiantBudgetPct,
 		auraCostPct: raw.AuraCostPct, selfAuraSharePct: raw.SelfAuraSharePct,
-		auraMatchingAllies: raw.AuraMatchingAllies, auraCapPct: raw.AuraCapPct,
+		auraMatchingAllies: raw.AuraMatchingAllies, auraCapPct: raw.AuraCapPct, gearCapPct: raw.GearCapPct,
 		formationBonusPct: raw.FormationBonusPct, changerCapPct: raw.ChangerCapPct, heroPct: map[string]int{},
 	}
 	valid := b.budget > 0 && b.healthPerPower > 0 && b.giantBudgetPct > 0 && b.auraCostPct >= 0 &&
-		b.selfAuraSharePct >= 0 && b.auraMatchingAllies >= 0 && b.auraCapPct > 0 &&
+		b.selfAuraSharePct >= 0 && b.auraMatchingAllies >= 0 && b.auraCapPct > 0 && b.gearCapPct >= 0 &&
 		b.formationBonusPct >= 0 && b.changerCapPct >= 0
 	for pattern, name := range statBudgetPatternNames {
 		b.patternPowerCostPct[pattern] = raw.PatternPowerCostPct[name]
 		valid = valid && b.patternPowerCostPct[pattern] > 0
+	}
+	for r := rarityCommon; r <= rarityMythic; r++ {
+		b.rarityBudgetPct[r] = raw.RarityBudgetPct[statBudgetRarityNames[r]]
+		valid = valid && b.rarityBudgetPct[r] > 0
 	}
 	if !valid {
 		return nil, fmt.Errorf("stat budget: a rule is missing or not positive")
@@ -147,8 +168,32 @@ func (b *statBudget) auraChargePct(auraPoints int) int {
 	return 100 + auraPoints*b.auraCostPct/100
 }
 
-func (b *statBudget) applyKit(kit budgetKit, power, health int) (int, int) {
-	costPct := int64(power)*int64(b.healthPerPower)*int64(b.patternPowerCostPct[kit.pattern]) + int64(health)*100
+func (b *statBudget) rarityPct(r rarity) int {
+	if r >= rarityCommon && r <= rarityMythic {
+		return b.rarityBudgetPct[r]
+	}
+	return neutralRarityPct
+}
+
+func (c *character) grownTier(current Tier) Tier {
+	if c.hasTier[c.maxTier] {
+		return c.maxTier
+	}
+	return current
+}
+
+func (h *hero) grownStats() budgetStats {
+	st := &h.def.stats[h.def.grownTier(h.tier)]
+	steps := max(st.maxLevel, 1) - 1
+	return budgetStats{
+		power:  st.basePower + steps*st.powerPerLevel,
+		health: st.baseHealth + steps*st.healthPerLevel,
+	}
+}
+
+func (b *statBudget) applyKit(kit budgetKit, grown budgetStats, power, health int) (int, int) {
+	costPct := int64(grown.power)*int64(b.healthPerPower)*int64(b.patternPowerCostPct[kit.pattern]) +
+		int64(grown.health)*100
 	if costPct <= 0 {
 		return power, health
 	}
@@ -156,8 +201,8 @@ func (b *statBudget) applyKit(kit budgetKit, power, health int) (int, int) {
 	if kit.giant {
 		sizePct = b.giantBudgetPct
 	}
-	numerator := int64(b.budget) * int64(sizePct) * int64(kit.heroPct)
-	denominator := costPct * int64(b.auraChargePct(kit.auraPoints))
+	numerator := int64(b.budget) * int64(sizePct) * int64(kit.heroPct) * int64(kit.rarityPct)
+	denominator := costPct * int64(b.auraChargePct(kit.auraPoints)) * neutralRarityPct
 	scaled := func(stat int) int { return int((int64(stat)*numerator + denominator/2) / denominator) }
 	return scaled(power), scaled(health)
 }
@@ -165,9 +210,9 @@ func (b *statBudget) applyKit(kit budgetKit, power, health int) (int, int) {
 func (b *statBudget) apply(h *hero, power, health int) (int, int) {
 	kit := budgetKit{
 		giant: h.def.giant, pattern: h.def.ability.target, auraPoints: b.auraPoints(h.passives),
-		heroPct: b.heroPctFor(h.def.id),
+		heroPct: b.heroPctFor(h.def.id), rarityPct: b.rarityPct(h.rarity),
 	}
-	return b.applyKit(kit, power, health)
+	return b.applyKit(kit, h.grownStats(), power, health)
 }
 
 func (b *statBudget) potencyCutPct(h *hero) int {
@@ -184,6 +229,13 @@ func (b *statBudget) cappedAuraPct(auraPct float32) float32 {
 	return auraPct
 }
 
+func (b *statBudget) cappedGearPct(gearPct float32) float32 {
+	if limit := float32(b.gearCapPct); gearPct > limit {
+		return limit
+	}
+	return gearPct
+}
+
 func (b *statBudget) formationBonus() float32 {
 	return percent(b.formationBonusPct)
 }
@@ -192,9 +244,8 @@ func (b *statBudget) cappedChangerPct(changerPct int) int {
 	return min(changerPct, b.changerCapPct)
 }
 
-func (bonus *runeBonus) dropStatBonuses() {
-	bonus.powerPct, bonus.healthPct = 0, 0
-	bonus.damageShield, bonus.damageResistPct, bonus.retaliation = 0, 0, 0
+func (bonus *runeBonus) dropFlatShield() {
+	bonus.damageShield = 0
 }
 
 func cutPct(pct, cut int) int {

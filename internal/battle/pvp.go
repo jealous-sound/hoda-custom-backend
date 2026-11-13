@@ -23,7 +23,7 @@ const (
 	defaultOpponentSeed = 1
 	percentScale        = 100
 	maxPvpBots          = 256
-	maxPvpSquads        = 640
+	maxPvpSquads        = 1024
 	maxPvpEvents        = 16
 	maxPvpGuildEvents   = 8
 )
@@ -209,10 +209,14 @@ func (t *pvpTables) pickBot(trophies int, day int64, seed uint32) int {
 }
 
 func (t *pvpTables) botStrengthRank(bot int) int {
-	if len(t.bots) < 2 {
+	if len(t.bots) == 0 {
 		return 0
 	}
-	return int(int64(bot) * int64(len(t.squads)-1) / int64(len(t.bots)-1))
+	topTrophies := t.bots[len(t.bots)-1]
+	if topTrophies <= 0 {
+		return 0
+	}
+	return int(int64(t.bots[bot]) * int64(len(t.squads)-1) / int64(topTrophies))
 }
 
 func (t *pvpTables) pickSquad(bot int, seed uint32) int {

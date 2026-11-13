@@ -37,10 +37,18 @@ func veteranSquad() battle.Side {
 	return squad
 }
 
+func recruitSquad() battle.Side {
+	recruit := battle.Unit{
+		Slot: 0, InstanceID: int64(len(veteranSquad().Units) + 1), ID: "UNIT_ELVENMAGE", Tier: "I", Level: 1,
+		Gear: emptyGear(),
+	}
+	return battle.Side{Units: []battle.Unit{recruit}, Runes: []string{}}
+}
+
 func enlistVeterans(doc map[string]any) battle.Side {
 	squad := veteranSquad()
 	heroes := []any{}
-	for _, unit := range squad.Units {
+	for _, unit := range append(squad.Units, recruitSquad().Units...) {
 		heroes = append(heroes, map[string]any{
 			"id": unit.ID, "instance_id": unit.InstanceID, "tier": unit.Tier, "level": unit.Level, "xp": 0,
 			"ascended": false, "consume_xp": 0,
@@ -699,7 +707,7 @@ func TestPvpEventBannersComeFromTheServer(t *testing.T) {
 	}
 	losing := &profile.ServerState{StoreRNG: 3}
 	request = pvpMatched(t, raw, losing, true, 7)
-	request.Squad = squad
+	request.Squad = recruitSquad()
 	_, lost, _ := fight(t, raw, losing, request, false)
 	if lost.Banners != c.Pvp.Events.LossBanners {
 		t.Errorf("loss banners = %d, want %d", lost.Banners, c.Pvp.Events.LossBanners)
