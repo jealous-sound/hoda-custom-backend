@@ -1,5 +1,5 @@
 {
- "version": 4,
+ "version": 5,
  "budget": 32000,
  "health_per_power": 5,
  "giant_budget_pct": 150,
@@ -16,6 +16,11 @@
  "gear_cap_pct": 50,
  "formation_bonus_pct_per_hero": 5,
  "changer_cap_pct": 25,
+ "rune_stat_share_pct": 8,
+ "rune_initiative_share_pct": 20,
+ "flat_resist_per_pct": 250,
+ "gear_item_cap_pct": 40,
+ "gear_trigger_cap_pct": 30,
  "rarity_budget_pct": {
   "Common": 72,
   "Uncommon": 78,

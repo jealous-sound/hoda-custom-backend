@@ -9,13 +9,16 @@ const (
 	StatBudgetFile       = "stat_budget.json"
 	StatBudgetHeroesFile = "stat_budget_heroes.json"
 
-	statBudgetVersion       = 4
+	statBudgetVersion       = 5
 	statBudgetHeroesVersion = 1
 	neutralHeroPct          = 100
 	neutralRarityPct        = 100
 	minHeroPct              = 33
 	maxHeroPct              = 300
 	auraStatCount           = 2
+	fullSharePct            = 100
+	worthPerPct             = 100
+	worthOfAHero            = 100 * worthPerPct
 	patternCount            = int(patternAll) + 1
 	budgetRarityCount       = int(rarityMythic) + 1
 )
@@ -30,19 +33,24 @@ var statBudgetRarityNames = [budgetRarityCount]string{
 }
 
 type statBudget struct {
-	budget              int
-	healthPerPower      int
-	giantBudgetPct      int
-	patternPowerCostPct [patternCount]int
-	auraCostPct         int
-	selfAuraSharePct    int
-	auraMatchingAllies  int
-	auraCapPct          int
-	gearCapPct          int
-	formationBonusPct   int
-	changerCapPct       int
-	rarityBudgetPct     [budgetRarityCount]int
-	heroPct             map[string]int
+	budget                 int
+	healthPerPower         int
+	giantBudgetPct         int
+	patternPowerCostPct    [patternCount]int
+	auraCostPct            int
+	selfAuraSharePct       int
+	auraMatchingAllies     int
+	auraCapPct             int
+	gearCapPct             int
+	formationBonusPct      int
+	changerCapPct          int
+	runeStatSharePct       int
+	runeInitiativeSharePct int
+	flatResistPerPct       int
+	gearItemCapPct         int
+	gearTriggerCapPct      int
+	rarityBudgetPct        [budgetRarityCount]int
+	heroPct                map[string]int
 }
 
 type budgetKit struct {
@@ -60,19 +68,24 @@ type budgetStats struct {
 
 func loadStatBudget(data []byte) (*statBudget, error) {
 	var raw struct {
-		Version             int            `json:"version"`
-		Budget              int            `json:"budget"`
-		HealthPerPower      int            `json:"health_per_power"`
-		GiantBudgetPct      int            `json:"giant_budget_pct"`
-		PatternPowerCostPct map[string]int `json:"pattern_power_cost_pct"`
-		AuraCostPct         int            `json:"aura_cost_pct"`
-		SelfAuraSharePct    int            `json:"self_aura_share_pct"`
-		AuraMatchingAllies  int            `json:"aura_matching_allies"`
-		AuraCapPct          int            `json:"aura_cap_pct"`
-		GearCapPct          int            `json:"gear_cap_pct"`
-		FormationBonusPct   int            `json:"formation_bonus_pct_per_hero"`
-		ChangerCapPct       int            `json:"changer_cap_pct"`
-		RarityBudgetPct     map[string]int `json:"rarity_budget_pct"`
+		Version                int            `json:"version"`
+		Budget                 int            `json:"budget"`
+		HealthPerPower         int            `json:"health_per_power"`
+		GiantBudgetPct         int            `json:"giant_budget_pct"`
+		PatternPowerCostPct    map[string]int `json:"pattern_power_cost_pct"`
+		AuraCostPct            int            `json:"aura_cost_pct"`
+		SelfAuraSharePct       int            `json:"self_aura_share_pct"`
+		AuraMatchingAllies     int            `json:"aura_matching_allies"`
+		AuraCapPct             int            `json:"aura_cap_pct"`
+		GearCapPct             int            `json:"gear_cap_pct"`
+		FormationBonusPct      int            `json:"formation_bonus_pct_per_hero"`
+		ChangerCapPct          int            `json:"changer_cap_pct"`
+		RuneStatSharePct       int            `json:"rune_stat_share_pct"`
+		RuneInitiativeSharePct int            `json:"rune_initiative_share_pct"`
+		FlatResistPerPct       int            `json:"flat_resist_per_pct"`
+		GearItemCapPct         int            `json:"gear_item_cap_pct"`
+		GearTriggerCapPct      int            `json:"gear_trigger_cap_pct"`
+		RarityBudgetPct        map[string]int `json:"rarity_budget_pct"`
 	}
 	if err := json.Unmarshal(data, &raw); err != nil {
 		return nil, fmt.Errorf("stat budget: %w", err)
@@ -84,11 +97,16 @@ func loadStatBudget(data []byte) (*statBudget, error) {
 		budget: raw.Budget, healthPerPower: raw.HealthPerPower, giantBudgetPct: raw.GiantBudgetPct,
 		auraCostPct: raw.AuraCostPct, selfAuraSharePct: raw.SelfAuraSharePct,
 		auraMatchingAllies: raw.AuraMatchingAllies, auraCapPct: raw.AuraCapPct, gearCapPct: raw.GearCapPct,
-		formationBonusPct: raw.FormationBonusPct, changerCapPct: raw.ChangerCapPct, heroPct: map[string]int{},
+		formationBonusPct: raw.FormationBonusPct, changerCapPct: raw.ChangerCapPct,
+		runeStatSharePct: raw.RuneStatSharePct, runeInitiativeSharePct: raw.RuneInitiativeSharePct,
+		flatResistPerPct: raw.FlatResistPerPct, gearItemCapPct: raw.GearItemCapPct,
+		gearTriggerCapPct: raw.GearTriggerCapPct, heroPct: map[string]int{},
 	}
 	valid := b.budget > 0 && b.healthPerPower > 0 && b.giantBudgetPct > 0 && b.auraCostPct >= 0 &&
 		b.selfAuraSharePct >= 0 && b.auraMatchingAllies >= 0 && b.auraCapPct > 0 && b.gearCapPct >= 0 &&
-		b.formationBonusPct >= 0 && b.changerCapPct >= 0
+		b.formationBonusPct >= 0 && b.changerCapPct >= 0 && b.runeStatSharePct >= 0 &&
+		b.runeInitiativeSharePct >= 0 && b.flatResistPerPct > 0 && b.gearItemCapPct >= 0 &&
+		b.gearTriggerCapPct >= 0
 	for pattern, name := range statBudgetPatternNames {
 		b.patternPowerCostPct[pattern] = raw.PatternPowerCostPct[name]
 		valid = valid && b.patternPowerCostPct[pattern] > 0
@@ -230,10 +248,33 @@ func (b *statBudget) cappedAuraPct(auraPct float32) float32 {
 }
 
 func (b *statBudget) cappedGearPct(gearPct float32) float32 {
-	if limit := float32(b.gearCapPct); gearPct > limit {
+	limit := float32(b.gearCapPct)
+	if gearPct < -limit {
+		return -limit
+	}
+	if gearPct > limit {
 		return limit
 	}
 	return gearPct
+}
+
+func (b *statBudget) gearTriggerAllowance() int64 {
+	return int64(b.gearTriggerCapPct) * worthPerPct
+}
+
+func shareOfStat(amount int64, stat int) int64 {
+	if stat <= 0 {
+		return 0
+	}
+	return max(amount, -amount) * worthOfAHero / int64(stat)
+}
+
+func worthOfPoints(points int64) int64 {
+	return max(points, -points) * worthPerPct
+}
+
+func (b *statBudget) flatResistPct(flatResist int) int {
+	return flatResist / b.flatResistPerPct
 }
 
 func (b *statBudget) formationBonus() float32 {
@@ -244,8 +285,25 @@ func (b *statBudget) cappedChangerPct(changerPct int) int {
 	return min(changerPct, b.changerCapPct)
 }
 
-func (bonus *runeBonus) dropFlatShield() {
+func runeShare(runeValue, sharePct int) int {
+	return (runeValue*sharePct + fullSharePct/2) / fullSharePct
+}
+
+func (b *statBudget) limitRuneBonus(bonus *runeBonus) {
 	bonus.damageShield = 0
+	bonus.damageResistPct = runeShare(bonus.damageResistPct, b.runeStatSharePct)
+}
+
+func (b *statBudget) runeStat(stat, runePct int) int {
+	if stat <= 0 || runePct <= 0 {
+		return stat
+	}
+	whole := int64(100 * fullSharePct)
+	return int((int64(stat)*(whole+int64(runePct)*int64(b.runeStatSharePct)) + whole/2) / whole)
+}
+
+func (b *statBudget) runeInitiative(initiative int) int {
+	return runeShare(initiative, b.runeInitiativeSharePct)
 }
 
 func cutPct(pct, cut int) int {
