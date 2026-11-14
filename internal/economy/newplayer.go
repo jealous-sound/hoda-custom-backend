@@ -8,7 +8,10 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 )
 
-const runInitialStep = 1
+const (
+	runInitialStep = 1
+	newPlayerLevel = 1
+)
 
 var starterRunes = []string{"rune-power-1", "rune-health-1", "rune-knowledge-1", "rune-greed-1"}
 
@@ -34,14 +37,15 @@ func newRunNodes() []any {
 
 func newPlayerEconomy(c *catalog.Catalog, upload document) document {
 	account := document{}
-	account.setInt("level", 1)
+	account.setInt("level", newPlayerLevel)
 	account.setInt("experience", 0)
-	account.setInt("experience_min", xpForCurrentLevel(1))
-	account.setInt("experience_max", xpForNextLevel(1))
-	account.setInt("energy", StartEnergyMax)
-	account.setInt("energy_max", StartEnergyMax)
-	account.setInt("stamina", StartStaminaMax)
-	account.setInt("stamina_max", StartStaminaMax)
+	account.setInt("experience_min", xpForCurrentLevel(newPlayerLevel))
+	account.setInt("experience_max", xpForNextLevel(newPlayerLevel))
+	perks := newRenown(&c.Renown)
+	account.setInt("energy", energyMaxWith(newPlayerLevel, perks))
+	account.setInt("energy_max", energyMaxWith(newPlayerLevel, perks))
+	account.setInt("stamina", staminaMaxWith(perks))
+	account.setInt("stamina_max", staminaMaxWith(perks))
 	account.setFloat(energyRegenTimer, 0)
 	account.setFloat(staminaRegenTimer, 0)
 	account.setInt("gold", StartGold)
@@ -82,10 +86,11 @@ func newPlayerEconomy(c *catalog.Catalog, upload document) document {
 			"completions": zeroGrid(catalog.CampaignMaxMaps, catalog.CampaignMaxNodes),
 			"node_losses": zeros(catalog.CampaignMaxMaps * catalog.CampaignMaxNodes),
 		},
-		"missions": map[string]any{"claimed": []any{}, "counters": map[string]any{}},
-		"roster":   map[string]any(starterRoster(c, upload)),
-		"gear":     map[string]any{"inventory": map[string]any{}, "heroes": []any{}, "tomes": json.Number("0")},
-		"runes":    map[string]any(starterRuneSet(upload)),
+		"missions":    map[string]any{"claimed": []any{}, "counters": map[string]any{}},
+		"roster":      map[string]any(starterRoster(c, upload)),
+		"gear":        map[string]any{"inventory": map[string]any{}, "heroes": []any{}, "tomes": json.Number("0")},
+		"runes":       map[string]any(starterRuneSet(upload)),
+		renownSection: map[string]any{renownPerksField: map[string]any{}},
 	}
 }
 

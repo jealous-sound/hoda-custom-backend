@@ -14,6 +14,7 @@ import (
 
 const (
 	voucherWinDropPct  = 5
+	nexusKeyLimit      = 99
 	critGoldPerCrit    = 10
 	maxCreditedCrits   = 100
 	percentScale       = 100.0
@@ -45,7 +46,7 @@ func openPlayer(c *catalog.Catalog, raw json.RawMessage, server *profile.ServerS
 	if err := regenerate(doc, regenSince(server), now); err != nil {
 		return nil, err
 	}
-	a, err := loadAccount(doc)
+	a, err := loadAccount(doc, &c.Renown)
 	if err != nil {
 		return nil, err
 	}
@@ -122,14 +123,42 @@ func (p *player) addVoucher(index, count int) error {
 	return nil
 }
 
+func (p *player) perk(id string) int {
+	return p.account.renown.value(id)
+}
+
 func (p *player) maybeAwardVoucherForWin() error {
 	kinds := len(p.catalog.Vouchers)
-	if kinds == 0 || !p.rng.chance(voucherWinDropPct) {
+	if kinds == 0 || !p.rng.chance(voucherWinDropPct+p.perk(catalog.RenownVoucherPct)) {
 		return nil
 	}
 	index := p.rng.below(kinds)
 	p.granted.Vouchers = append(p.granted.Vouchers, index)
 	return p.addVoucher(index, 1)
+}
+
+func (p *player) maybeAwardKeyForWin() error {
+	keyPct := p.perk(catalog.RenownKeyPct)
+	if keyPct <= 0 || !p.rng.chance(keyPct) {
+		return nil
+	}
+	return p.addKey(p.rng.below(catalog.NexusKeyCount))
+}
+
+func (p *player) awardWinDrops() error {
+	if err := p.maybeAwardVoucherForWin(); err != nil {
+		return err
+	}
+	return p.maybeAwardKeyForWin()
+}
+
+func (p *player) payoutBonus() (goldPct, accountXPPct int) {
+	goldPct, accountXPPct = p.runeBonus()
+	return goldPct + p.perk(catalog.RenownGoldPct), accountXPPct
+}
+
+func (p *player) squadXPFor(accountXP int64) int64 {
+	return applyPct(accountXP, p.perk(catalog.RenownHeroXPPct))
 }
 
 func creditedCritGold(crits int) int64 {
@@ -268,5 +297,31 @@ func (p *player) addPotions(count int64) error {
 		potions = min(potions, int64(maximum))
 	}
 	nexus.setInt("potions", potions)
+	return nil
+}
+
+func (p *player) addKey(index int) error {
+	nexus, err := p.doc.section("nexus")
+	if err != nil {
+		return refuse(BadProfile, "%v", err)
+	}
+	items, err := nexus.array("keys")
+	if err != nil {
+		return refuse(BadProfile, "%v", err)
+	}
+	keys, err := intArray(items, "keys")
+	if err != nil {
+		return refuse(BadProfile, "%v", err)
+	}
+	for len(keys) < catalog.NexusKeyCount {
+		keys = append(keys, 0)
+	}
+	if index < 0 || index >= catalog.NexusKeyCount {
+		return refuse(Unavailable, "no nexus key %d", index)
+	}
+	if keys[index] < nexusKeyLimit {
+		keys[index]++
+	}
+	nexus["keys"] = numberArray(keys)
 	return nil
 }

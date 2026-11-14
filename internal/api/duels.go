@@ -104,7 +104,7 @@ func (s *Server) duelOpponent(w http.ResponseWriter, r *http.Request, player str
 		writeError(w, http.StatusInternalServerError, "could not read the opponent")
 		return
 	}
-	opponent, err := economy.DuelOpponentFrom(member, record.Profile, s.now())
+	opponent, err := economy.DuelOpponentFrom(s.catalog, member, record.Profile, s.now())
 	if err == nil && len(opponent.Units) == 0 {
 		err = refusalFor(guild.PlayerNotFound, "the member has no squad")
 	}

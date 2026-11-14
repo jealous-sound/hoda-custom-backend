@@ -184,6 +184,7 @@ type Catalog struct {
 	Fortify          FortifyRules
 	Expeditions      ExpeditionRules
 	TimedQuests      TimedQuestRules
+	Renown           RenownRules
 	Battle           *battle.Data
 
 	packIndex    map[string]int
@@ -487,6 +488,9 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		return nil, err
 	}
 	if err := c.loadTimedQuests(read); err != nil {
+		return nil, err
+	}
+	if err := c.loadRenown(read); err != nil {
 		return nil, err
 	}
 	battleData, err := battle.Load(read)

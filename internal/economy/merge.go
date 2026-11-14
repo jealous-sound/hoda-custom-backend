@@ -22,6 +22,7 @@ var serverOwnedSections = map[string][]string{
 	"missions":         {"claimed", "counters"},
 	expeditionsSection: {expeditionsActive},
 	questsSection:      questSectionFields,
+	renownSection:      {renownPerksField},
 }
 
 var serverOwnedHeroFields = []string{"tier", "level", "xp", "consume_xp", "ascended", fortifyField}

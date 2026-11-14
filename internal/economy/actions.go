@@ -37,6 +37,8 @@ const (
 	ActionQuestClaim = "quest_claim"
 	ActionQuestSwap  = "quest_swap"
 	ActionQuestChest = "quest_chest"
+
+	ActionRenownUpgrade = "renown_upgrade"
 )
 
 func decodeInto[T any](body []byte, run func(T) (BattleResult, error)) (BattleResult, error) {
@@ -105,6 +107,8 @@ func (p *player) dispatch(action string, body []byte) (BattleResult, error) {
 		return decodeInto(body, p.SwapQuest)
 	case ActionQuestChest:
 		return decodeInto(body, p.OpenQuestChest)
+	case ActionRenownUpgrade:
+		return decodeInto(body, p.UpgradeRenown)
 	}
 	return BattleResult{}, &BadRequest{Message: fmt.Sprintf("no action %q", action)}
 }

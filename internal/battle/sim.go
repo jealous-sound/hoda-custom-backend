@@ -79,6 +79,8 @@ func roundf(value float32) float32 { return float32(math.Round(float64(value))) 
 
 func percent(value int) float32 { return float32(value) / 100.0 }
 
+func permilleAsPercent(value int) float32 { return float32(value) / 10.0 }
+
 type Target struct {
 	Unit               int
 	HealthDelta        int
@@ -1788,6 +1790,20 @@ func (s *sim) runeStat(stat, runePct int) int {
 	return runeApplyPct(stat, runePct)
 }
 
+func (s *sim) applyRenown(side int, renown *SideRenown) {
+	for slot := range SlotCount {
+		u := s.unitAt(side, slot)
+		if !u.present {
+			continue
+		}
+		u.power = runeApplyPct(u.power, renown.PowerPct)
+		u.startPower = u.power
+		u.maxHealth = runeApplyPct(u.maxHealth, renown.HealthPct)
+		u.health = u.maxHealth
+		u.critPct += permilleAsPercent(renown.CritPermille)
+	}
+}
+
 func changerEffectMatches(effect *ChangerEffect, u *unit) bool {
 	for _, group := range effect.Groups {
 		if !u.hero.def.hasGroup(group) {
@@ -1851,6 +1867,8 @@ func (s *sim) setup(player, enemy *side, changer *Changer) {
 	}
 	s.applyRuneBonus(0, &s.runeBonus[0])
 	s.applyRuneBonus(1, &s.runeBonus[1])
+	s.applyRenown(0, &player.renown)
+	s.applyRenown(1, &enemy.renown)
 	s.applyChanger(changer)
 }
 

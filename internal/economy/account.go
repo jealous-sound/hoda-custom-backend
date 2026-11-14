@@ -4,6 +4,7 @@ import (
 	"math"
 	"time"
 
+	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
 
@@ -62,6 +63,7 @@ func saturatingAdd(value, amount int64) int64 {
 
 type account struct {
 	doc        document
+	renown     *renown
 	Level      int
 	Experience int64
 	Energy     int64
@@ -72,12 +74,12 @@ type account struct {
 	Gems       int64
 }
 
-func loadAccount(doc document) (*account, error) {
+func loadAccount(doc document, rules *catalog.RenownRules) (*account, error) {
 	section, err := doc.section("account")
 	if err != nil {
 		return nil, refuse(BadProfile, "%v", err)
 	}
-	a := &account{doc: section}
+	a := &account{doc: section, renown: loadRenown(rules, doc)}
 	level, err := section.intField("level")
 	if err != nil {
 		return nil, refuse(BadProfile, "%v", err)
@@ -97,14 +99,23 @@ func loadAccount(doc document) (*account, error) {
 		}
 		*target = value
 	}
+	a.renown = a.renown.withinRank(a.Experience)
 	return a, nil
 }
 
+func (a *account) experienceBounds() (low, high int64) {
+	if a.Level < MaxPlayerLevel {
+		return xpForCurrentLevel(a.Level), xpForNextLevel(a.Level)
+	}
+	return a.renown.rankExperienceBounds(a.Experience)
+}
+
 func (a *account) store() {
+	low, high := a.experienceBounds()
 	a.doc.setInt("level", int64(a.Level))
 	a.doc.setInt("experience", a.Experience)
-	a.doc.setInt("experience_min", xpForCurrentLevel(a.Level))
-	a.doc.setInt("experience_max", xpForNextLevel(a.Level))
+	a.doc.setInt("experience_min", low)
+	a.doc.setInt("experience_max", high)
 	a.doc.setInt("energy", a.Energy)
 	a.doc.setInt("energy_max", a.EnergyMax)
 	a.doc.setInt("stamina", a.Stamina)
@@ -149,18 +160,19 @@ func (a *account) awardBattleXP(xp int64) {
 	if xp <= 0 {
 		return
 	}
-	before := a.Level
+	levelBefore, rankBefore := a.Level, a.renown.rank(a.Experience)
 	a.Experience = saturatingAdd(a.Experience, xp)
 	for a.Level < MaxPlayerLevel && a.Experience >= xpForNextLevel(a.Level) {
 		a.Level++
 	}
-	if a.Level == MaxPlayerLevel && a.Experience > xpForNextLevel(a.Level) {
-		a.Experience = xpForNextLevel(a.Level)
+	rankAfter := a.renown.rank(a.Experience)
+	if rankAfter > rankBefore {
+		a.Gems = saturatingAdd(a.Gems, int64(a.renown.rules.RankGems)*int64(rankAfter-rankBefore))
 	}
-	if a.Level == before {
+	if a.Level == levelBefore && rankAfter == rankBefore {
 		return
 	}
-	a.EnergyMax = energyMaxForLevel(a.Level)
+	a.EnergyMax = energyMaxWith(a.Level, a.renown)
 	a.Energy = a.EnergyMax
 	a.Stamina = a.StaminaMax
 	a.doc.setFloat(energyRegenTimer, 0)

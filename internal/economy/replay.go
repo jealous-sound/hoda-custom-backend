@@ -91,6 +91,7 @@ func bySlot(units []battle.Unit) []battle.Unit {
 func canonicalSide(side battle.Side) battle.Side {
 	canonical := battle.Side{
 		Units: bySlot(side.Units), Runes: append([]string{}, side.Runes...), HeroBuilds: side.HeroBuilds,
+		Renown: side.Renown.Canonical(),
 	}
 	for i := range canonical.Units {
 		unit := &canonical.Units[i]
@@ -154,7 +155,7 @@ func (p *player) battleSquad(claimed battle.Side, runeIDs []int64) (battle.Side,
 	for _, entry := range stored.Gear.Heroes {
 		gear[entry.InstanceID] = entry
 	}
-	squad := battle.Side{Units: []battle.Unit{}, Runes: []string{}}
+	squad := battle.Side{Units: []battle.Unit{}, Runes: []string{}, Renown: p.account.renown.sideBonus()}
 	seen := map[int64]bool{}
 	for _, unit := range claimed.Units {
 		if err := refuseAway(p.doc, unit.InstanceID); err != nil {
@@ -276,7 +277,9 @@ func (p *player) duelEnemy(member string) (battle.Side, error) {
 		return battle.Side{}, err
 	}
 	data := p.catalog.Battle
-	enemy := battle.Side{Units: []battle.Unit{}, Runes: []string{}, HeroBuilds: duel.HeroBuilds}
+	enemy := battle.Side{
+		Units: []battle.Unit{}, Runes: []string{}, HeroBuilds: duel.HeroBuilds, Renown: duel.Renown.Canonical(),
+	}
 	for _, unit := range duel.Units {
 		if unit.Slot < 0 || unit.Slot >= battle.SlotCount || unit.ID == "" || !data.Knows(unit.ID) {
 			continue
