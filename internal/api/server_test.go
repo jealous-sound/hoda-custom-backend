@@ -20,6 +20,8 @@ import (
 
 var fixedNow = time.Unix(1_800_000_000, 0)
 
+const testPasswordIterations = 4
+
 const validProfile = `{"version":1,"account":{"level":3,"experience":10,"energy":5,"energy_max":30,` +
 	`"stamina":8,"stamina_max":8,"gold":100,"gems":7},"roster":{},"squads":[],"settings":{"fast_battles":true}}`
 
@@ -44,7 +46,7 @@ func newHarnessWith(t *testing.T, config Config) *harness {
 	if err != nil {
 		t.Fatal(err)
 	}
-	accounts, err := account.NewStore(dir, clock)
+	accounts, err := account.NewStore(dir, clock, account.WithPasswordIterations(testPasswordIterations))
 	if err != nil {
 		t.Fatal(err)
 	}

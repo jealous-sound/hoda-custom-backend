@@ -12,15 +12,23 @@ With both repositories side by side:
 ./scripts/play-local.sh
 ```
 
-The script builds both projects, starts the server on `127.0.0.1:8787`, runs the game against it, and stops the
-server when the game exits. Server logs go to `runtime/server.log`.
+The script builds both projects, starts the server on `127.0.0.1:8787`, runs the game, and stops the server when the
+game exits; `make run` in the client does the same. The game still asks Local Game or Online Game, and Online Game
+plays on this server. Server logs go to `runtime/server.log`.
+
+Online Game keeps its account in `runtime/client-account.dat`, never in the client's own `account.dat`. On the first
+run against an empty `runtime` the script creates that account as a copy of the client's `player_save.dat`, so it
+starts with the local game's progress. Logging out in the game leaves the next run at the log-in choice. Deleting
+`runtime` starts over.
 
 | Variable | Default | |
 | --- | --- | --- |
 | `HOD_CLIENT_DIR` | `../hoda-custom-client` | client checkout |
 | `HOD_BACKEND_ADDR` | `127.0.0.1:8787` | listen address |
 | `HOD_BACKEND_DATA` | `runtime` | data directory |
-| `HOD_PLAYER_ID` | unset (new guest) | plays as this id, such as `local`, importing the client's `player_save.dat` on first start |
+| `HOD_PLAYER_ID` | unset | plays online as this id without an account, such as `local`, importing the client's `player_save.dat` on first start |
+| `HOD_ACCOUNT_PATH` | `runtime/client-account.dat` | the game's account file for Online Game |
+| `HOD_CLIENT_EXECUTABLE` | the macOS app's binary | the built game, relative to the client checkout |
 
 `make test` runs `go vet` and `go test`. `make run` starts the server alone, and `make format-check` checks `gofmt`.
 
@@ -65,6 +73,28 @@ schedule is kept in `maintenance.json`, so it survives a deploy made before the 
 start after that time, or 10 minutes after it if the server never restarted. Set it from the script, not from a
 Railway variable: a variable only applies after a redeploy, which is itself a restart.
 
+## Accounts
+
+A new player is a guest: the client keeps a player id and a device key in `account.dat`, and that file is the only way
+back into the account. From the profile screen a guest can pick a login and a password, and from then on signs in on
+any device with them. Every sign-in gives that device its own key, so logging one device out leaves the others
+playing. Besides the device it was created on, an account keeps its 8 latest sign-ins; one more drops the oldest.
+
+A login is 3 to 24 characters of `A-Z a-z 0-9 . _ -`, starts with a letter or digit, is unique whatever its case, and
+cannot be changed. A password is 8 to 64 characters and is stored as a salted PBKDF2-HMAC-SHA256 hash of 600,000
+iterations. Changing it signs out every other device. Deleting the account removes the account, the profile and the
+guild membership; a leader's guild passes to its most senior member and closes when nobody is left. Accounts with a
+login are never pruned as abandoned guests.
+
+There is no self-service recovery. For a player who forgot the password:
+
+```sh
+HOD_ADMIN_TOKEN=... ./scripts/reset-password.sh <login>
+```
+
+It calls `PUT /admin/logins/{login}/password`, prints `{"player_id", "login", "password"}` with a temporary password
+to pass on, and signs out every device of that account. The player logs in with it and changes it in the profile.
+
 ## Monitoring
 
 The same token opens read-only routes that an operator's dashboard polls. They answer JSON, change nothing, and are
@@ -76,7 +106,7 @@ guesses, one back every 30 seconds; the right token is never limited.
 | `/admin/overview` | who is online and on which client version, today's totals, player and guild counts, memory, disk, the deployed commit |
 | `/admin/activity` | peak players online per 5 minutes for 7 days, and per UTC day for 90: peak, distinct players, sign-ups |
 | `/admin/traffic` | requests per minute for the last hour, totals per route, actions by name and the latest 200 refusals |
-| `/admin/players`, `/admin/players/{id}` | every account and profile in brief; one player with the stored save |
+| `/admin/players`, `/admin/players/{id}` | every account and profile in brief, with its login if it has one; one player with the stored save |
 | `/admin/guilds`, `/admin/guilds/{id}` | guilds in brief; one guild with its members, applications and chat |
 | `/admin/chat/world`, `/admin/reports` | the world chat history and the newest 500 abuse reports |
 
@@ -101,6 +131,12 @@ The wire contract is shared with the client's `source/backend.c`; change both to
 | `GET` | `/v1/client` | `{"latest", "minimum", "download_url", "server_time"}`, plus `maintenance_at` while a restart is announced |
 | `POST` | `/v1/players` | creates a guest, answering `201 {"player_id", "secret", "server_time"}` |
 | `POST` | `/v1/sessions` | `{"player_id", "secret"}` answers `{"token", "player_id", "server_time"}` |
+| `POST` | `/v1/logins` | `{"login", "password"}` signs a device in, answering `{"player_id", "secret", "server_time"}` with a key of its own |
+| `GET` | `/v1/players/{id}/account` | `{"player_id", "login", "created_at", "devices"}`; `login` is empty for a guest |
+| `POST` | `/v1/players/{id}/account/login` | `{"login", "password"}` gives a guest its login, once |
+| `POST` | `/v1/players/{id}/account/password` | `{"current_password", "new_password", "secret"}` signs out every device but the one holding `secret` |
+| `POST` | `/v1/players/{id}/account/logout` | `{"secret"}` revokes that device's key and closes its session |
+| `POST` | `/v1/players/{id}/account/delete` | `{"password"}`, empty for a guest; see [Accounts](#accounts) |
 | `GET` | `/v1/players/{id}/profile` | the save JSON, revision in `X-Profile-Revision` |
 | `PUT` | `/v1/players/{id}/profile` | uploads the save; `If-Match: 0` creates it |
 | `POST` | `/v1/players/{id}/store/purchases` | `{"request_id", "pack", "currency", "price", "scripted"}` |
@@ -118,9 +154,10 @@ loads that profile in place of its own. A repeated `request_id` replays the firs
 
 | Status | Meaning |
 | --- | --- |
-| `401` | wrong secret or expired token; the client opens a new session |
+| `401` | wrong secret or expired token; the client opens a new session, and a device whose key was revoked returns to its sign-in screen. `/v1/logins` answers `wrong_credentials` for an unknown login and for a wrong password alike |
+| `403` | `wrong_password` on an account route |
 | `404` | unknown player; the client creates a new guest |
-| `409` | stale revision; carries the current one |
+| `409` | stale revision; carries the current one. On account routes `login_taken`, `has_login` or `no_login` |
 | `422` | refused: `{"error", "code"}`, plus `revision` and `profile` on economy calls; codes such as `cant_afford`, `inventory_full`, `squad_changed`, `outcome_mismatch` or `maintenance`, and the original `GuildResponseCode` names for guilds |
 | `428` | missing `If-Match` |
 | `426` | client older than `-min-client-version`; never sent to builds without a version tag |

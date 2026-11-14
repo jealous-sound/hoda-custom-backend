@@ -25,6 +25,7 @@ const (
 	adminGuildsPath     = "/admin/guilds"
 	adminWorldChatPath  = "/admin/chat/world"
 	adminReportsPath    = "/admin/reports"
+	adminLoginsPath     = "/admin/logins"
 	MinAdminTokenLength = 32
 	adminOnlineListed   = 100
 	adminReportsListed  = 500
@@ -63,6 +64,7 @@ func (s *Server) adminRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("GET "+adminGuildsPath+"/{guild}", s.administered(s.adminGuild))
 	mux.HandleFunc("GET "+adminWorldChatPath, s.administered(s.adminWorldChat))
 	mux.HandleFunc("GET "+adminReportsPath, s.administered(s.adminReports))
+	mux.HandleFunc("PUT "+adminLoginsPath+"/{login}/password", s.administered(s.adminResetPassword))
 }
 
 func polledByPanel(r *http.Request, status int) bool {

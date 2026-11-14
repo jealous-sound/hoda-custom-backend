@@ -18,6 +18,7 @@ const storedPlayersMaxAge = 10 * time.Second
 
 type adminPlayer struct {
 	PlayerID         string `json:"player_id"`
+	Login            string `json:"login,omitempty"`
 	Name             string `json:"name"`
 	Level            int    `json:"level"`
 	Gold             int64  `json:"gold"`
@@ -54,6 +55,7 @@ func unixOrZero(moment time.Time) int64 {
 
 func (p *adminPlayer) describeAccount(record account.Account) {
 	p.Registered = true
+	p.Login = record.Login
 	p.CreatedAt = unixOrZero(record.CreatedAt)
 	p.LastSessionAt = unixOrZero(record.LastSessionAt)
 }
@@ -212,4 +214,26 @@ func (s *Server) adminPlayer(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	writeJSON(w, http.StatusOK, reply)
+}
+
+type passwordResetReply struct {
+	PlayerID string `json:"player_id"`
+	Login    string `json:"login"`
+	Password string `json:"password"`
+}
+
+func (s *Server) adminResetPassword(w http.ResponseWriter, r *http.Request) {
+	reset, err := s.accounts.ResetPassword(r.PathValue("login"))
+	if errors.Is(err, account.ErrUnknownLogin) {
+		writeError(w, http.StatusNotFound, "no account has this login")
+		return
+	}
+	if err != nil {
+		s.log.Error("admin password reset", "error", err)
+		writeError(w, http.StatusInternalServerError, "could not reset the password")
+		return
+	}
+	s.sessions.CloseAll(reset.PlayerID)
+	s.log.Info("operator reset a password", "player", reset.PlayerID)
+	writeJSON(w, http.StatusOK, passwordResetReply{PlayerID: reset.PlayerID, Login: reset.Login, Password: reset.Password})
 }
