@@ -26,6 +26,7 @@ type DuelOpponent struct {
 	Name       string             `json:"name"`
 	Level      int                `json:"level"`
 	Trophies   int                `json:"trophies"`
+	RenownRank int                `json:"renown_rank,omitempty"`
 	Units      []DuelUnit         `json:"units"`
 	Runes      []string           `json:"runes"`
 	HeroBuilds bool               `json:"hero_builds"`
@@ -77,7 +78,8 @@ func DuelOpponentFrom(c *catalog.Catalog, playerID string, raw json.RawMessage, 
 	}
 	opponent := DuelOpponent{
 		ID: playerID, Name: stored.Account.Name, Level: max(stored.Account.Level, 1), Trophies: stored.Pvp.Trophies,
-		Units: []DuelUnit{}, Runes: []string{}, HeroBuilds: true, Renown: stored.sideRenown(&c.Renown),
+		RenownRank: RenownRank(&c.Renown, stored.Account.Experience),
+		Units:      []DuelUnit{}, Runes: []string{}, HeroBuilds: true, Renown: stored.sideRenown(&c.Renown),
 	}
 	if opponent.Name == "" {
 		opponent.Name = playerID

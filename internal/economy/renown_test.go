@@ -2,6 +2,7 @@ package economy
 
 import (
 	"encoding/json"
+	"fmt"
 	"math"
 	"strings"
 	"testing"
@@ -102,7 +103,7 @@ func TestRenownRankIsTheVirtualLevelInTens(t *testing.T) {
 		{rankTwelveXP - 1, 119, 11}, {rankTwelveXP, 120, 12},
 	}
 	for _, c := range cases {
-		if level, rank := virtualLevel(c.xp), renownRank(rules, c.xp); level != c.level || rank != c.rank {
+		if level, rank := virtualLevel(c.xp), RenownRank(rules, c.xp); level != c.level || rank != c.rank {
 			t.Errorf("%d xp is virtual level %d rank %d, want level %d rank %d", c.xp, level, rank, c.level, c.rank)
 		}
 	}
@@ -770,6 +771,29 @@ func TestBattleStartFieldsTheAttackersRenown(t *testing.T) {
 	}
 }
 
+func TestADuelOpponentCarriesTheRenownRankItsExperienceEarned(t *testing.T) {
+	c := mustCatalog(t)
+	const rank = 4
+	firstLevel := c.Renown.LevelsPerRank * rank
+	for name, sent := range map[string]struct {
+		xp   int64
+		rank int
+	}{
+		"the first level of a rank": {cumulativeXPThroughLevel(firstLevel - 1), rank},
+		"the level before it":       {cumulativeXPThroughLevel(firstLevel-1) - 1, rank - 1},
+		"a new account":             {0, 0},
+	} {
+		defender := asMap(t, grownDefender(t))
+		seasoned(firstLevel, sent.xp)(defender)
+		opponent := duelOpponent(t, reencode(t, defender))
+		wire := string(encodeBody(t, opponent))
+		ranked := strings.Contains(wire, fmt.Sprintf(`"renown_rank":%d`, sent.rank))
+		if opponent.RenownRank != sent.rank || ranked != (sent.rank > 0) || strings.Contains(wire, `"renown_rank":0`) {
+			t.Errorf("a defender at %s is sent as %s, want renown rank %d", name, wire, sent.rank)
+		}
+	}
+}
+
 func TestADuelIsFoughtAgainstTheDefendersRenown(t *testing.T) {
 	c := mustCatalog(t)
 	const powerRank, critRank = 5, 1
@@ -821,7 +845,7 @@ func TestADuelIsFoughtAgainstTheDefendersRenown(t *testing.T) {
 		peaceful := asMap(t, grownDefender(t))
 		withEarnedRenown(t, perks)(peaceful)
 		opponent := duelOpponent(t, reencode(t, peaceful))
-		if opponent.Renown != nil || strings.Contains(string(encodeBody(t, opponent)), "renown") {
+		if opponent.Renown != nil || strings.Contains(string(encodeBody(t, opponent)), `"renown":`) {
 			t.Errorf("a defender with %s is sent with renown %+v", name, opponent.Renown)
 		}
 	}

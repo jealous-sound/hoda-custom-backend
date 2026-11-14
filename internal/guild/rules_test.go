@@ -263,3 +263,40 @@ func TestRemovedPlayerLeavesNoApplicationsNoticesOrEmptyGuild(t *testing.T) {
 	}
 	s.RemovePlayer("stranger", start)
 }
+
+func TestRenownRankFollowsAPlayerThroughApplicationMembershipAndChat(t *testing.T) {
+	const founderRank, appliedRank, earnedRank = 12, 3, 4
+	s := newState()
+	founding := leader
+	founding.RenownRank = founderRank
+	settings := openSettings("Champions")
+	settings.Status = StatusApplicationOnly
+	g, err := s.Create(founding, settings, start)
+	must(t, err)
+	veteran := Player{ID: "veteran", Name: "Fenris", Level: 30, RenownRank: appliedRank}
+	must(t, s.Join(veteran, g.ID, "", start))
+	if g.Members[0].RenownRank != founderRank || g.Applications[0].RenownRank != appliedRank {
+		t.Fatalf("founder %+v and application %+v", g.Members[0], g.Applications[0])
+	}
+	must(t, s.Accept(founding, veteran.ID, start))
+	if joined, _ := g.Member(veteran.ID); joined.RenownRank != appliedRank {
+		t.Fatalf("an accepted applicant joins as %+v", joined)
+	}
+
+	veteran.RenownRank = earnedRank
+	s.Touch(veteran, start+1)
+	must(t, s.Say(veteran, "hello", start+1))
+	must(t, s.SayToWorld(veteran, "hello, world", start+1))
+	s.CreditOnslaught(veteran, 9, start, 25)
+	touched, _ := g.Member(veteran.ID)
+	said := g.Messages[len(g.Messages)-1]
+	shouted := s.World.Messages[0]
+	credited := s.OnslaughtMembers(founding.ID, 9)[0]
+	if touched.RenownRank != earnedRank || said.RenownRank != earnedRank || shouted.RenownRank != earnedRank ||
+		credited.PlayerID != veteran.ID || credited.RenownRank != earnedRank {
+		t.Fatalf("member %+v, guild line %+v, world line %+v, contribution %+v", touched, said, shouted, credited)
+	}
+	if event := g.Messages[0]; !event.IsEvent() || event.RenownRank != 0 {
+		t.Fatalf("a guild event line carries a renown rank: %+v", event)
+	}
+}

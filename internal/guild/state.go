@@ -26,12 +26,13 @@ const (
 )
 
 type Member struct {
-	PlayerID  string `json:"id"`
-	Name      string `json:"name"`
-	Rank      Rank   `json:"rank"`
-	JoinedAt  int64  `json:"join_date"`
-	LastLogin int64  `json:"last_login_date"`
-	Level     int    `json:"player_level"`
+	PlayerID   string `json:"id"`
+	Name       string `json:"name"`
+	Rank       Rank   `json:"rank"`
+	JoinedAt   int64  `json:"join_date"`
+	LastLogin  int64  `json:"last_login_date"`
+	Level      int    `json:"player_level"`
+	RenownRank int    `json:"renown_rank,omitempty"`
 }
 
 type Application struct {
@@ -40,6 +41,7 @@ type Application struct {
 	Level       int    `json:"player_level"`
 	RequestedAt int64  `json:"request_date"`
 	Text        string `json:"application_text,omitempty"`
+	RenownRank  int    `json:"renown_rank,omitempty"`
 }
 
 type EventParam struct {
@@ -54,6 +56,7 @@ type Message struct {
 	PlayerID   string       `json:"player_id,omitempty"`
 	PlayerName string       `json:"player_name,omitempty"`
 	Level      int          `json:"player_level,omitempty"`
+	RenownRank int          `json:"renown_rank,omitempty"`
 	Rank       Rank         `json:"player_rank"`
 	Title      string       `json:"title,omitempty"`
 	GuildName  string       `json:"guild_name,omitempty"`

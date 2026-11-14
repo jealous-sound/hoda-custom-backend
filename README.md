@@ -143,9 +143,9 @@ The wire contract is shared with the client's `source/backend.c`; change both to
 | `POST` | `/v1/players/{id}/refills` | `{"request_id", "kind": "energy" or "stamina"}` |
 | `POST` | `/v1/players/{id}/actions` | `{"request_id", "action", ...}` |
 | | `/v1/players/{id}/guild…`, `/guilds…`, `/reports` | guilds, chat, Onslaught, duels and abuse reports; see `internal/api/server.go` |
-| `GET` | `/v1/players/{id}/pvp/ladder` | `{"players": [{"id", "name", "level", "trophies"}]}`: up to 100 other named players who have fought PvP, most trophies first |
+| `GET` | `/v1/players/{id}/pvp/ladder` | `{"players": [{"id", "name", "level", "trophies", "renown_rank"}]}`: up to 100 other named players who have fought PvP, most trophies first |
 | `GET` | `/v1/players/{id}/pvp/ladder/{rival}` | that rival's current squad, in the shape of a guild duel opponent (see [Battle replay](#battle-replay)); fight it with `battle_start` and `"duel": "<rival>"` |
-| `GET` | `/v1/players/{id}/pvp/event/ladder` | `{"cycle", "players": [{"id", "name", "banners"}], "results": [{"cycle", "rank"}]}`: up to 250 other named players holding banners in the running event, most banners first, and the final rank of each of the caller's unclaimed finished events. An event rank counts the bots and these players with more banners; a rank below the reward table pays its last tier |
+| `GET` | `/v1/players/{id}/pvp/event/ladder` | `{"cycle", "players": [{"id", "name", "banners", "renown_rank"}], "results": [{"cycle", "rank"}]}`: up to 250 other named players holding banners in the running event, most banners first, and the final rank of each of the caller's unclaimed finished events. An event rank counts the bots and these players with more banners; a rank below the reward table pays its last tier |
 | `POST` | `/v1/players/{id}/chat/world/messages` | `{"after", "text"}` posts an optional line and answers `{"messages", "last_message_id"}` |
 
 Player routes need `Authorization: Bearer <token>`. Profile uploads, purchases, refills, actions and guild creation
@@ -186,6 +186,12 @@ Account XP is not capped at level 100. Every `levels_per_rank` levels of XP is o
 each rank is one point for `renown_upgrade` to spend on a perk. Perks that add up to more than the earned rank are
 read as no perks at all.
 
+Every entry about another player carries that player's `renown_rank`, left out at rank 0: guild members, applications
+and Onslaught contributions, guild and world chat lines, PvP ladder and event ladder rows, and duel opponents. The
+server works it out from the account XP in the stored profile and reads it from no request. Ladders and duel opponents
+show the current rank; a guild keeps the rank a member had at their last guild call, and a chat line keeps the rank
+its author had when it was posted.
+
 ## Battle replay
 
 `internal/battle` is a Go port of the client's `source/battle_sim.c`. It keeps float32 math with each product rounded
@@ -199,8 +205,9 @@ before it is added, so results do not depend on the CPU fusing multiply-adds.
    `battle_start`.
 
 A duel opponent, a guildmate from `guild/members/{member}/duel` or a ladder rival, is the defender's current squad
-read from their stored profile: `{"id", "name", "level", "trophies", "units", "runes", "hero_builds": true}`. Each unit
-carries `consume_xp`, `ascended`, five `gear` slots (an item counts once per hero) and its `fortify` children beside
+read from their stored profile: `{"id", "name", "level", "trophies", "renown_rank", "units", "runes",
+"hero_builds": true}`. Each unit carries `consume_xp`, `ascended`, five `gear` slots (an item counts once per hero) and
+its `fortify` children beside
 `slot`, `id`, `tier` and `level`, in the shape of a replay unit. The client sends that squad back as the `enemy` of
 `battle_start` with `"hero_builds": true`, and the replay then builds the enemy heroes like the attacker's: ascension,
 consume level, fortify and gear. A side without the flag, such as a bot's squad or a PvE roster, fights on tier and

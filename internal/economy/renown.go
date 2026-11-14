@@ -22,7 +22,7 @@ func virtualLevel(xp int64) int {
 	return level
 }
 
-func renownRank(rules *catalog.RenownRules, xp int64) int {
+func RenownRank(rules *catalog.RenownRules, xp int64) int {
 	return virtualLevel(xp) / rules.LevelsPerRank
 }
 
@@ -84,7 +84,7 @@ func (r *renown) spent() int {
 }
 
 func (r *renown) rank(xp int64) int {
-	return renownRank(r.rules, xp)
+	return RenownRank(r.rules, xp)
 }
 
 func (r *renown) freePoints(xp int64) int {

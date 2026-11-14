@@ -84,12 +84,13 @@ type createGuildBody struct {
 
 type profileIdentity struct {
 	Account struct {
-		Name  string `json:"name"`
-		Level int    `json:"level"`
+		Name       string `json:"name"`
+		Level      int    `json:"level"`
+		Experience int64  `json:"experience"`
 	} `json:"account"`
 }
 
-func identityFrom(playerID string, raw json.RawMessage) (guild.Player, error) {
+func (s *Server) identityFrom(playerID string, raw json.RawMessage) (guild.Player, error) {
 	var identity profileIdentity
 	if err := json.Unmarshal(raw, &identity); err != nil {
 		return guild.Player{}, err
@@ -98,7 +99,10 @@ func identityFrom(playerID string, raw json.RawMessage) (guild.Player, error) {
 	if name == "" {
 		name = playerID
 	}
-	return guild.Player{ID: playerID, Name: name, Level: identity.Account.Level}, nil
+	return guild.Player{
+		ID: playerID, Name: name, Level: identity.Account.Level,
+		RenownRank: economy.RenownRank(&s.catalog.Renown, identity.Account.Experience),
+	}, nil
 }
 
 func summarize(g *guild.Guild) guildSummary {
@@ -161,7 +165,7 @@ func (s *Server) guildPlayer(w http.ResponseWriter, playerID string) (guild.Play
 		writeError(w, http.StatusInternalServerError, "could not read profile")
 		return guild.Player{}, false
 	}
-	p, err := identityFrom(playerID, record.Profile)
+	p, err := s.identityFrom(playerID, record.Profile)
 	if err != nil {
 		writeError(w, http.StatusUnprocessableEntity, "profile has no readable account")
 		return guild.Player{}, false
@@ -277,7 +281,7 @@ func (s *Server) createGuild(w http.ResponseWriter, r *http.Request, player stri
 				`"language", "status", "icon", "required_level"}`)
 		}
 		return func(record *profile.Record) (any, error) {
-			p, err := identityFrom(player, record.Profile)
+			p, err := s.identityFrom(player, record.Profile)
 			if err != nil {
 				return nil, &economy.BadRequest{Message: "profile has no readable account"}
 			}

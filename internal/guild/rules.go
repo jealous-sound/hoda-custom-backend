@@ -78,9 +78,10 @@ func refuse(code Code, format string, args ...any) error {
 }
 
 type Player struct {
-	ID    string
-	Name  string
-	Level int
+	ID         string
+	Name       string
+	Level      int
+	RenownRank int
 }
 
 type Settings struct {
@@ -158,6 +159,7 @@ func (s *State) Touch(p Player, now int64) {
 	if p.Level > 0 {
 		g.Members[index].Level = p.Level
 	}
+	g.Members[index].RenownRank = p.RenownRank
 	g.replaceInactiveLeader(s, now)
 }
 
@@ -204,7 +206,7 @@ func (s *State) Create(p Player, settings Settings, now int64) (*Guild, error) {
 		ID: id, Name: settings.Name, Description: settings.Description, MessageOfTheDay: settings.MessageOfTheDay,
 		Language: settings.Language, Icon: settings.Icon, Status: settings.Status,
 		RequiredLevel: settings.RequiredLevel, CreatedAt: now,
-		Members:      []Member{{PlayerID: p.ID, Name: p.Name, Rank: RankLeader, JoinedAt: now, LastLogin: now, Level: p.Level}},
+		Members:      []Member{founder(p, now)},
 		Applications: []Application{},
 		Messages:     []Message{},
 	}
@@ -212,6 +214,13 @@ func (s *State) Create(p Player, settings Settings, now int64) (*Guild, error) {
 	g.postEvent(now, "GUILD_CREATION", plain(p.Name))
 	s.Guilds = append(s.Guilds, g)
 	return g, nil
+}
+
+func founder(p Player, now int64) Member {
+	return Member{
+		PlayerID: p.ID, Name: p.Name, Rank: RankLeader, JoinedAt: now, LastLogin: now, Level: p.Level,
+		RenownRank: p.RenownRank,
+	}
 }
 
 func (s *State) Join(p Player, guildID, text string, now int64) error {
@@ -238,6 +247,7 @@ func (s *State) Join(p Player, guildID, text string, now int64) error {
 		s.withdrawApplications(p, now)
 		g.Members = append(g.Members, Member{
 			PlayerID: p.ID, Name: p.Name, Rank: RankMember, JoinedAt: now, LastLogin: now, Level: p.Level,
+			RenownRank: p.RenownRank,
 		})
 		g.postEvent(now, "MEMBER_JOINED", plain(p.Name))
 		return nil
@@ -254,7 +264,7 @@ func (s *State) Join(p Player, guildID, text string, now int64) error {
 	}
 	s.withdrawApplications(p, now)
 	g.Applications = append(g.Applications, Application{
-		PlayerID: p.ID, Name: p.Name, Level: p.Level, RequestedAt: now, Text: text,
+		PlayerID: p.ID, Name: p.Name, Level: p.Level, RequestedAt: now, Text: text, RenownRank: p.RenownRank,
 	})
 	g.postEvent(now, "PLAYER_APPLICATION", plain(p.Name))
 	return nil
@@ -305,7 +315,7 @@ func (s *State) Accept(actor Player, applicantID string, now int64) error {
 	g.Applications = slices.Delete(g.Applications, index, index+1)
 	g.Members = append(g.Members, Member{
 		PlayerID: applicant.PlayerID, Name: applicant.Name, Rank: RankMember, JoinedAt: now, LastLogin: now,
-		Level: applicant.Level,
+		Level: applicant.Level, RenownRank: applicant.RenownRank,
 	})
 	g.postEvent(now, "APPLICATION_ACCEPTED", plain(applicant.Name), plain(m.Name))
 	s.notify(applicantID, Notice{Kind: NoticeAccepted, Guild: g.Name, Rank: RankMember, Time: now})
@@ -505,7 +515,9 @@ func (s *State) Say(p Player, text string, now int64) error {
 	if err != nil {
 		return err
 	}
-	g.post(Message{Time: now, Text: line, PlayerID: p.ID, PlayerName: m.Name, Level: m.Level, Rank: m.Rank})
+	g.post(Message{
+		Time: now, Text: line, PlayerID: p.ID, PlayerName: m.Name, Level: m.Level, RenownRank: m.RenownRank, Rank: m.Rank,
+	})
 	return nil
 }
 

@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-const summarizedProfile = `{"account":{"name":"Hawke","level":19,"gold":9277,"gems":41.0},` +
+const summarizedProfile = `{"account":{"name":"Hawke","level":19,"experience":1840,"gold":9277,"gems":41.0},` +
 	`"pvp":{"trophies":114,"best_trophies":120,"wins":7,"losses":3},` +
 	`"roster":{"starters":[{"id":"a"}],"additions":[{"id":"b"},{"id":"c"}]},` +
 	`"store":{"opened_total":116},"tutorial":{"complete":true}}`
@@ -45,7 +45,8 @@ func TestSummaryReadsTheFieldsAnAdminLooksAt(t *testing.T) {
 	listed := summaries(t, store)
 	want := Summary{
 		PlayerID: "hawke", Revision: 1, UpdatedAt: time.Unix(1_800_000_000, 0).UTC(),
-		ProfileBytes: len(summarizedProfile), Name: "Hawke", Level: 19, Gold: 9277, Gems: 41, Trophies: 114,
+		ProfileBytes: len(summarizedProfile), Name: "Hawke", Level: 19, Experience: 1840, Gold: 9277, Gems: 41,
+		Trophies:     114,
 		BestTrophies: 120, PvpWins: 7, PvpLosses: 3, Heroes: 3, PacksOpened: 116, TutorialComplete: true,
 	}
 	if len(listed) != 1 || !reflect.DeepEqual(listed[0], want) {

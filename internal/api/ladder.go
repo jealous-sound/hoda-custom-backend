@@ -8,6 +8,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 	"github.com/jealous-sound/hoda-custom-backend/internal/economy"
 	"github.com/jealous-sound/hoda-custom-backend/internal/profile"
 )
@@ -20,10 +21,11 @@ const (
 )
 
 type ladderPlayer struct {
-	ID       string `json:"id"`
-	Name     string `json:"name"`
-	Level    int    `json:"level"`
-	Trophies int    `json:"trophies"`
+	ID         string `json:"id"`
+	Name       string `json:"name"`
+	Level      int    `json:"level"`
+	Trophies   int    `json:"trophies"`
+	RenownRank int    `json:"renown_rank,omitempty"`
 }
 
 type ladderResponse struct {
@@ -31,9 +33,10 @@ type ladderResponse struct {
 }
 
 type eventLadderPlayer struct {
-	ID      string `json:"id"`
-	Name    string `json:"name"`
-	Banners int    `json:"banners"`
+	ID         string `json:"id"`
+	Name       string `json:"name"`
+	Banners    int    `json:"banners"`
+	RenownRank int    `json:"renown_rank,omitempty"`
 }
 
 type eventLadderResponse struct {
@@ -97,6 +100,7 @@ func (s *Server) ladder(w http.ResponseWriter, _ *http.Request, player string) {
 		if listed.PlayerID != player && len(rivals) < ladderPlayerLimit {
 			rivals = append(rivals, ladderPlayer{
 				ID: listed.PlayerID, Name: listed.Name, Level: max(listed.Level, 1), Trophies: listed.Trophies,
+				RenownRank: economy.RenownRank(&s.catalog.Renown, listed.Experience),
 			})
 		}
 	}
@@ -118,11 +122,14 @@ func (r eventRivals) RivalsAhead(cycle int64, banners int) int {
 	return ahead
 }
 
-func (r eventRivals) top(cycle int64) []eventLadderPlayer {
+func (r eventRivals) top(cycle int64, renown *catalog.RenownRules) []eventLadderPlayer {
 	players := []eventLadderPlayer{}
 	for _, rival := range r.ranked {
 		if banners := rival.EventBanners(cycle); banners > 0 && rival.PlayerID != r.player {
-			players = append(players, eventLadderPlayer{ID: rival.PlayerID, Name: rival.Name, Banners: banners})
+			players = append(players, eventLadderPlayer{
+				ID: rival.PlayerID, Name: rival.Name, Banners: banners,
+				RenownRank: economy.RenownRank(renown, rival.Experience),
+			})
 		}
 	}
 	slices.SortFunc(players, func(a, b eventLadderPlayer) int {
@@ -162,7 +169,9 @@ func (s *Server) eventLadder(w http.ResponseWriter, _ *http.Request, player stri
 	}
 	rivals := eventRivals{player: player, ranked: ranked}
 	running := s.currentCycle()
-	reply := eventLadderResponse{Cycle: running, Players: rivals.top(running), Results: []economy.EventStanding{}}
+	reply := eventLadderResponse{
+		Cycle: running, Players: rivals.top(running, &s.catalog.Renown), Results: []economy.EventStanding{},
+	}
 	record, err := s.profiles.Get(player)
 	switch {
 	case err == nil:

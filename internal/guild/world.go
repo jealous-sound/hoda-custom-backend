@@ -88,7 +88,10 @@ func (s *State) SayToWorld(p Player, text string, now int64) error {
 	if err != nil {
 		return err
 	}
-	message := Message{Time: now, Text: line, PlayerID: p.ID, PlayerName: p.Name, Level: p.Level, Rank: RankNotMember}
+	message := Message{
+		Time: now, Text: line, PlayerID: p.ID, PlayerName: p.Name, Level: p.Level, RenownRank: p.RenownRank,
+		Rank: RankNotMember,
+	}
 	if g := s.GuildOf(p.ID); g != nil {
 		member, _ := g.Member(p.ID)
 		message.Rank = member.Rank
