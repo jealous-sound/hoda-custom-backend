@@ -143,7 +143,8 @@
           "max_fortify_health": 4750
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_REDIRONMAGE",
@@ -246,7 +247,8 @@
           "max_fortify_health": 6350
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_REDWATERRAIDER",
@@ -351,7 +353,8 @@
           "max_fortify_health": 3745
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_FERELDANKNIGHT",
@@ -457,7 +460,8 @@
           "max_fortify_health": 7570
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_DWARVENWARRIOR",
@@ -560,7 +564,8 @@
           "max_fortify_health": 6395
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_APOSTATEWANDERER",
@@ -660,7 +665,8 @@
           "max_fortify_health": 6560
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_KIRKWALLGUARD",
@@ -760,7 +766,8 @@
           "max_fortify_health": 4780
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_TEVINTERSLAVER",
@@ -868,7 +875,8 @@
           "max_fortify_health": 6100
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_COTERIETHUG",
@@ -970,7 +978,8 @@
           "max_fortify_health": 2785
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_CASSANDRAPENTAGHAST",
@@ -1081,7 +1090,8 @@
           "max_fortify_health": 23625
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_HIGHDRAGON",
@@ -1184,7 +1194,8 @@
           "max_fortify_health": 22565
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DALISHARCANEWARRIOR",
@@ -1286,7 +1297,8 @@
           "max_fortify_health": 9070
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_DALISHWARRIOR",
@@ -1388,7 +1400,8 @@
           "max_fortify_health": 5005
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_FERELDANINFANTRY",
@@ -1490,7 +1503,8 @@
           "max_fortify_health": 4905
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_DALISHMAGE",
@@ -1592,7 +1606,8 @@
           "max_fortify_health": 5935
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_ELFAPOSTATE",
@@ -1693,7 +1708,8 @@
           "max_fortify_health": 6530
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_CARTATHUG",
@@ -1797,7 +1813,8 @@
           "max_fortify_health": 2150
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_CROWASSASSIN",
@@ -1899,7 +1916,8 @@
           "max_fortify_health": 3765
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_SILENTSISTER",
@@ -2001,7 +2019,8 @@
           "max_fortify_health": 6640
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_CARTAASSASSIN",
@@ -2105,7 +2124,8 @@
           "max_fortify_health": 3615
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_SHARPSHIGHWAYMAN",
@@ -2207,7 +2227,8 @@
           "max_fortify_health": 2000
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_HURLOCKGRUNT",
@@ -2305,7 +2326,8 @@
           "max_fortify_health": 2790
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_BLACKSTONEIRREGULAR",
@@ -2407,7 +2429,8 @@
           "max_fortify_health": 2175
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_CARTASMUGGLER",
@@ -2509,7 +2532,8 @@
           "max_fortify_health": 2065
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_TEVINTERWARRIOR",
@@ -2612,7 +2636,8 @@
           "max_fortify_health": 4855
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_TEVINTERBATTLEMAGE",
@@ -2718,7 +2743,8 @@
           "max_fortify_health": 8975
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_COTERIETHIEF",
@@ -2820,7 +2846,8 @@
           "max_fortify_health": 3520
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_SERCAUTHRIEN",
@@ -2923,7 +2950,8 @@
           "max_fortify_health": 9105
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_FENRIS",
@@ -3033,7 +3061,8 @@
           "max_fortify_health": 11435
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_THEARISHOK",
@@ -3140,7 +3169,8 @@
           "max_fortify_health": 16965
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_DALISHHUNTER",
@@ -3243,7 +3273,8 @@
           "max_fortify_health": 3860
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_ELFBANDIT",
@@ -3343,7 +3374,8 @@
           "max_fortify_health": 2030
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_WEREWOLF",
@@ -3444,7 +3476,8 @@
           "max_fortify_health": 2770
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_DEVOURINGSKELETON",
@@ -3543,7 +3576,8 @@
           "max_fortify_health": 4845
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_PRIDEDEMON",
@@ -3645,7 +3679,8 @@
           "max_fortify_health": 16880
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_CIRCLESENIORENCHANTER",
@@ -3747,7 +3782,8 @@
           "max_fortify_health": 12205
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_ABOMINATION",
@@ -3846,7 +3882,8 @@
           "max_fortify_health": 8615
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_YAVANA",
@@ -3950,7 +3987,8 @@
           "max_fortify_health": 16105
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_MERRILL",
@@ -4062,7 +4100,8 @@
           "max_fortify_health": 12360
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CHARREDSYLVAN",
@@ -4160,7 +4199,8 @@
           "max_fortify_health": 8525
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_INFERNOGOLEM",
@@ -4269,7 +4309,8 @@
           "max_fortify_health": 14480
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_OGRE",
@@ -4371,7 +4412,8 @@
           "max_fortify_health": 8670
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_DESIREDEMON",
@@ -4471,7 +4513,8 @@
           "max_fortify_health": 11405
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_TEVINTERARCANEWARRIOR",
@@ -4579,7 +4622,8 @@
           "max_fortify_health": 9015
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_GREYWARDENMAGE",
@@ -4686,7 +4730,8 @@
           "max_fortify_health": 12220
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_GREYWARDENROGUE",
@@ -4789,7 +4834,8 @@
           "max_fortify_health": 6835
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_HURLOCKBOLTER",
@@ -4887,7 +4933,8 @@
           "max_fortify_health": 2140
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_DARKSPAWNEMISSARY",
@@ -4989,7 +5036,8 @@
           "max_fortify_health": 6790
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_SKELETONARCHER",
@@ -5087,7 +5135,8 @@
           "max_fortify_health": 2005
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_SKELETONMAGE",
@@ -5185,7 +5234,8 @@
           "max_fortify_health": 2730
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_GENLOCKBRUTE",
@@ -5285,7 +5335,8 @@
           "max_fortify_health": 6310
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_TAL-VASHOTHBERSERKER",
@@ -5387,7 +5438,8 @@
           "max_fortify_health": 9010
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_STEN",
@@ -5490,7 +5542,8 @@
           "max_fortify_health": 8860
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_HARLEQUIN",
@@ -5596,7 +5649,8 @@
           "max_fortify_health": 6685
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_DUNCAN",
@@ -5706,7 +5760,8 @@
           "max_fortify_health": 9545
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_VARRICTETHRAS",
@@ -5816,7 +5871,8 @@
           "max_fortify_health": 8150
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SEBASTIANVAEL",
@@ -5924,7 +5980,8 @@
           "max_fortify_health": 7385
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_GATEGUARDIAN",
@@ -6027,7 +6084,8 @@
           "max_fortify_health": 17470
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_ASHAAD",
@@ -6126,7 +6184,8 @@
           "max_fortify_health": 3630
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_KARASHOK",
@@ -6225,7 +6284,8 @@
           "max_fortify_health": 4670
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_TAL-VASHOTHMARAUDER",
@@ -6325,7 +6385,8 @@
           "max_fortify_health": 5115
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_TEMPLARASSASSIN",
@@ -6427,7 +6488,8 @@
           "max_fortify_health": 3545
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_TEMPLARRECRUIT",
@@ -6529,7 +6591,8 @@
           "max_fortify_health": 2780
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_TEMPLARARCHER",
@@ -6633,7 +6696,8 @@
           "max_fortify_health": 2115
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_CIRCLEAPPRENTICE",
@@ -6733,7 +6797,8 @@
           "max_fortify_health": 3780
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_REVENANT",
@@ -6832,7 +6897,8 @@
           "max_fortify_health": 9045
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_BLIGHTEDWEREWOLF",
@@ -6935,7 +7001,8 @@
           "max_fortify_health": 5025
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_DEVOURINGCORPSE",
@@ -7034,7 +7101,8 @@
           "max_fortify_health": 5090
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_LEGIONNAIRESCOUT",
@@ -7136,7 +7204,8 @@
           "max_fortify_health": 2130
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_LEGIONNAIREWARRIOR",
@@ -7236,7 +7305,8 @@
           "max_fortify_health": 2835
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_FERELDANASHWARRIOR",
@@ -7338,7 +7408,8 @@
           "max_fortify_health": 2665
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_SPIRITOFVALOR",
@@ -7436,7 +7507,8 @@
           "max_fortify_health": 9060
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_ENRAGEDSPIRIT",
@@ -7536,7 +7608,8 @@
           "max_fortify_health": 6490
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_DRAKE",
@@ -7634,7 +7707,8 @@
           "max_fortify_health": 9470
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_DRAGONTHRALL",
@@ -7737,7 +7811,8 @@
           "max_fortify_health": 15595
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_WYVERN",
@@ -7837,7 +7912,8 @@
           "max_fortify_health": 11430
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_CORRUPTEDSPIDER",
@@ -7935,7 +8011,8 @@
           "max_fortify_health": 5135
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_MABARI",
@@ -8034,7 +8111,8 @@
           "max_fortify_health": 3670
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_BEAR",
@@ -8135,7 +8213,8 @@
           "max_fortify_health": 4905
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_NUG",
@@ -8233,7 +8312,8 @@
           "max_fortify_health": 2675
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_ISABELA",
@@ -8338,7 +8418,8 @@
           "max_fortify_health": 7690
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SISTERNIGHTINGALE",
@@ -8452,7 +8533,8 @@
           "max_fortify_health": 7590
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREYWARDENCARVER",
@@ -8562,7 +8644,8 @@
           "max_fortify_health": 14930
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_GREYWARDENBETHANY",
@@ -8674,7 +8757,8 @@
           "max_fortify_health": 6065
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_STROUD",
@@ -8781,7 +8865,8 @@
           "max_fortify_health": 17140
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_TEMPLARCARVER",
@@ -8889,7 +8974,8 @@
           "max_fortify_health": 6240
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_GREYWARDENALISTAIR",
@@ -9004,7 +9090,8 @@
           "max_fortify_health": 11975
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_THEARCHITECT",
@@ -9118,7 +9205,8 @@
           "max_fortify_health": 16005
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FIRSTENCHANTERORSINO",
@@ -9224,7 +9312,8 @@
           "max_fortify_health": 20710
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_ANDERS",
@@ -9330,7 +9419,8 @@
           "max_fortify_health": 14880
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_CIRCLEMAGEBETHANY",
@@ -9438,7 +9528,8 @@
           "max_fortify_health": 12220
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_VENGEANCEANDERS",
@@ -9552,7 +9643,8 @@
           "max_fortify_health": 19255
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MORRIGAN",
@@ -9660,7 +9752,8 @@
           "max_fortify_health": 9620
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREYWARDENOGHREN",
@@ -9768,7 +9861,8 @@
           "max_fortify_health": 15595
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FLEMETH",
@@ -9871,7 +9965,8 @@
           "max_fortify_health": 13750
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GRANDENCHANTERFIONA",
@@ -9986,7 +10081,8 @@
           "max_fortify_health": 16660
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_QUEENOFTHEBLACKMARSH",
@@ -10096,7 +10192,8 @@
           "max_fortify_health": 21395
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FORESTSPIRIT",
@@ -10203,7 +10300,8 @@
           "max_fortify_health": 8460
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_AVELINEVALLEN",
@@ -10313,7 +10411,8 @@
           "max_fortify_health": 12250
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_WOLF",
@@ -10409,7 +10508,8 @@
           "max_fortify_health": 2775
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_SYLVAN",
@@ -10507,7 +10607,8 @@
           "max_fortify_health": 5690
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_GENLOCKALPHA",
@@ -10605,7 +10706,8 @@
           "max_fortify_health": 6780
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_WALKINGCORPSE",
@@ -10704,7 +10806,8 @@
           "max_fortify_health": 5150
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_GENLOCKASSASSIN",
@@ -10804,7 +10907,8 @@
           "max_fortify_health": 6770
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_HURLOCKEMISSARY",
@@ -10905,7 +11009,8 @@
           "max_fortify_health": 6250
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_GREYWARDENWARRIOR",
@@ -11008,7 +11113,8 @@
           "max_fortify_health": 9060
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_GHAST",
@@ -11109,7 +11215,8 @@
           "max_fortify_health": 2135
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_VELGHAST",
@@ -11211,7 +11318,8 @@
           "max_fortify_health": 7905
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_ELFBARD",
@@ -11311,7 +11419,8 @@
           "max_fortify_health": 3770
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_SHADOWWEREWOLF",
@@ -11415,7 +11524,8 @@
           "max_fortify_health": 3565
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_BLIGHTEDSHADOWWOLF",
@@ -11523,7 +11633,8 @@
           "max_fortify_health": 6890
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_RABIDWEREWOLF",
@@ -11633,7 +11744,8 @@
           "max_fortify_health": 5815
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_WEREWOLFALPHA",
@@ -11739,7 +11851,8 @@
           "max_fortify_health": 10450
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_GIANTCORRUPTEDSPIDER",
@@ -11839,7 +11952,8 @@
           "max_fortify_health": 4980
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_DARKREVENANTIV",
@@ -11906,7 +12020,8 @@
           "max_fortify_health": 7120
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_OGRECOMMANDER",
@@ -12007,7 +12122,8 @@
           "max_fortify_health": 12945
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_CORYPHEUS",
@@ -12117,7 +12233,8 @@
           "max_fortify_health": 15880
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_ARMOREDOGRE",
@@ -12215,7 +12332,8 @@
           "max_fortify_health": 11655
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_SHRIEKALPHA",
@@ -12315,7 +12433,8 @@
           "max_fortify_health": 6465
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_BERESKARN",
@@ -12414,7 +12533,8 @@
           "max_fortify_health": 8550
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_SHRIEK",
@@ -12512,7 +12632,8 @@
           "max_fortify_health": 3670
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_HARVESTERORSINO",
@@ -12628,7 +12749,8 @@
           "max_fortify_health": 27335
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARCANEHORROR",
@@ -12729,7 +12851,8 @@
           "max_fortify_health": 9120
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_HUNGERDEMON",
@@ -12832,7 +12955,8 @@
           "max_fortify_health": 8685
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_SLOTHDEMON",
@@ -12933,7 +13057,8 @@
           "max_fortify_health": 8360
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_RAGEDEMON",
@@ -13031,7 +13156,8 @@
           "max_fortify_health": 8110
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_SHADE",
@@ -13129,7 +13255,8 @@
           "max_fortify_health": 2715
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_WINTERSENDDRAGON",
@@ -13230,7 +13357,8 @@
           "max_fortify_health": 7690
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_WINTERSENDROCKWRAITH",
@@ -13330,7 +13458,8 @@
           "max_fortify_health": 12815
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_KINGALISTAIR",
@@ -13448,7 +13577,8 @@
           "max_fortify_health": 16290
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SANDAL",
@@ -13554,7 +13684,8 @@
           "max_fortify_health": 11800
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ANORAMACTIR",
@@ -13658,7 +13789,8 @@
           "max_fortify_health": 9865
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_KINGCAILAN",
@@ -13762,7 +13894,8 @@
           "max_fortify_health": 14785
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_STENOFTHEBERESAAD",
@@ -13874,7 +14007,8 @@
           "max_fortify_health": 15245
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_TEMPLARRECRUITALISTAIR",
@@ -13983,7 +14117,8 @@
           "max_fortify_health": 6775
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_LAYSISTERLELIANA",
@@ -14091,7 +14226,8 @@
           "max_fortify_health": 6365
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_WINTERSENDHALLA",
@@ -14193,7 +14329,8 @@
           "max_fortify_health": 11070
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_KNIGHTCOMMANDERGREAGOIR",
@@ -14297,7 +14434,8 @@
           "max_fortify_health": 5665
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_WINTERSENDNUG",
@@ -14399,7 +14537,8 @@
           "max_fortify_health": 8790
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_CHASINDWILDER",
@@ -14503,7 +14642,8 @@
           "max_fortify_health": 6465
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_HALLA",
@@ -14603,7 +14743,8 @@
           "max_fortify_health": 4465
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_CHASINDSCOUT",
@@ -14708,7 +14849,8 @@
           "max_fortify_health": 6345
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_WYNNE",
@@ -14819,7 +14961,8 @@
           "max_fortify_health": 17410
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GUARDCAPTAINAVELINE",
@@ -14929,7 +15072,8 @@
           "max_fortify_health": 10090
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VELANNA",
@@ -15035,7 +15179,8 @@
           "max_fortify_health": 15775
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_ZEVRAN",
@@ -15143,7 +15288,8 @@
           "max_fortify_health": 6105
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_THEOLDONE",
@@ -15241,7 +15387,8 @@
           "max_fortify_health": 8565
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_SIGRUN",
@@ -15350,7 +15497,8 @@
           "max_fortify_health": 11255
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LELIANA",
@@ -15458,7 +15606,8 @@
           "max_fortify_health": 11390
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_OGHREN",
@@ -15563,7 +15712,8 @@
           "max_fortify_health": 16565
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_ZATHRIAN",
@@ -15669,7 +15819,8 @@
           "max_fortify_health": 8885
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_BRANKA",
@@ -15777,7 +15928,8 @@
           "max_fortify_health": 5965
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_ASHWRAITH",
@@ -15877,7 +16029,8 @@
           "max_fortify_health": 4740
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_FERELDANBANN",
@@ -15982,7 +16135,8 @@
           "max_fortify_health": 4190
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_FERELDANARL",
@@ -16086,7 +16240,8 @@
           "max_fortify_health": 7220
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_FERELDANTEYRN",
@@ -16192,7 +16347,8 @@
           "max_fortify_health": 8865
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_TEVINTERLAETANMAGE",
@@ -16266,7 +16422,8 @@
           "max_fortify_health": 7395
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_SLAVEFENRIS",
@@ -16372,7 +16529,8 @@
           "max_fortify_health": 7325
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_REDLYRIUMMEREDITH",
@@ -16486,7 +16644,8 @@
           "max_fortify_health": 11000
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HYBRIS",
@@ -16590,7 +16749,8 @@
           "max_fortify_health": 14575
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LOGHAINMACTIR",
@@ -16707,7 +16867,8 @@
           "max_fortify_health": 15955
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CARESS",
@@ -16811,7 +16972,8 @@
           "max_fortify_health": 11980
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_KNIGHTCOMMANDERMEREDITH",
@@ -16917,7 +17079,8 @@
           "max_fortify_health": 16000
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_ANCIENTROCKWRAITH",
@@ -17017,7 +17180,8 @@
           "max_fortify_health": 18795
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_SHADOWWARRIOR",
@@ -17123,7 +17287,8 @@
           "max_fortify_health": 10925
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_REANIMATEDLEANDRA",
@@ -17232,7 +17397,8 @@
           "max_fortify_health": 7095
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_PRIDEABOMINATION",
@@ -17338,7 +17504,8 @@
           "max_fortify_health": 9610
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_SLOTHABOMINATION",
@@ -17439,7 +17606,8 @@
           "max_fortify_health": 11125
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_BARTRANDTETHRAS",
@@ -17548,7 +17716,8 @@
           "max_fortify_health": 9165
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_TEVINTERARCANEMAGE",
@@ -17652,7 +17821,8 @@
           "max_fortify_health": 9085
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_SHAHWYRD",
@@ -17753,7 +17923,8 @@
           "max_fortify_health": 9805
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BARKSPAWN",
@@ -17867,7 +18038,8 @@
           "max_fortify_health": 10040
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ANCIENTDARKSPAWN",
@@ -17978,7 +18150,8 @@
           "max_fortify_health": 19045
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SCHMOOPLES",
@@ -18086,7 +18259,8 @@
           "max_fortify_health": 12470
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FLUFFY",
@@ -18189,7 +18363,8 @@
           "max_fortify_health": 7010
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_SPIKE",
@@ -18293,7 +18468,8 @@
           "max_fortify_health": 8295
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_CORRUPTEDNUG",
@@ -18395,7 +18571,8 @@
           "max_fortify_health": 3375
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_NOBLENUG",
@@ -18498,7 +18675,8 @@
           "max_fortify_health": 6740
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_MAGENUG",
@@ -18602,7 +18780,8 @@
           "max_fortify_health": 9070
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_LEOPOLD",
@@ -18715,7 +18894,8 @@
           "max_fortify_health": 9825
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KEEPERMARETHARI",
@@ -18823,7 +19003,8 @@
           "max_fortify_health": 9185
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CHASINDGENERAL",
@@ -18927,7 +19108,8 @@
           "max_fortify_health": 13475
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SALIT",
@@ -19036,7 +19218,8 @@
           "max_fortify_health": 10510
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_ATHENRIL",
@@ -19143,7 +19326,8 @@
           "max_fortify_health": 5085
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_VARTERRAL",
@@ -19251,7 +19435,8 @@
           "max_fortify_health": 6115
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_FREEMARCHER",
@@ -19353,7 +19538,8 @@
           "max_fortify_health": 6260
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_ARLATHANGENERAL",
@@ -19462,7 +19648,8 @@
           "max_fortify_health": 6045
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARMOREDBEAR",
@@ -19564,7 +19751,8 @@
           "max_fortify_health": 13315
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_SAAREBAS",
@@ -19669,7 +19857,8 @@
           "max_fortify_health": 9185
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DUKEPROSPER",
@@ -19786,7 +19975,8 @@
           "max_fortify_health": 5505
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BROGANDACE",
@@ -19897,7 +20087,8 @@
           "max_fortify_health": 15295
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARIANE",
@@ -20007,7 +20198,8 @@
           "max_fortify_health": 5140
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KINGENDRINAEDUCAN",
@@ -20118,7 +20310,8 @@
           "max_fortify_health": 25565
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_COMMONWHITEWISP",
@@ -20185,7 +20378,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_UNCOMMONWHITEWISP",
@@ -20252,7 +20446,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_RAREWHITEWISP",
@@ -20319,7 +20514,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_EPICWHITEWISP",
@@ -20386,7 +20582,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LEGENDARYWHITEWISP",
@@ -20453,7 +20650,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_COMMONREDWISP",
@@ -20520,7 +20718,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_UNCOMMONREDWISP",
@@ -20587,7 +20786,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_RAREREDWISP",
@@ -20654,7 +20854,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_EPICREDWISP",
@@ -20721,7 +20922,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LEGENDARYREDWISP",
@@ -20788,7 +20990,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_COMMONBLACKWISP",
@@ -20855,7 +21058,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_UNCOMMONBLACKWISP",
@@ -20922,7 +21126,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_RAREBLACKWISP",
@@ -20989,7 +21194,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_EPICBLACKWISP",
@@ -21056,7 +21262,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LEGENDARYBLACKWISP",
@@ -21123,7 +21330,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_COMMONBLUEWISP",
@@ -21190,7 +21398,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_UNCOMMONBLUEWISP",
@@ -21257,7 +21466,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_RAREBLUEWISP",
@@ -21324,7 +21534,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_EPICBLUEWISP",
@@ -21391,7 +21602,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LEGENDARYBLUEWISP",
@@ -21458,7 +21670,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DIAMONDSHALE",
@@ -21563,7 +21776,8 @@
           "max_fortify_health": 24665
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RUBYSHALE",
@@ -21672,7 +21886,8 @@
           "max_fortify_health": 8990
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_STONEGOLEM",
@@ -21775,7 +21990,8 @@
           "max_fortify_health": 7545
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_APOSTATEJOWAN",
@@ -21881,7 +22097,8 @@
           "max_fortify_health": 11185
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEBARONESS",
@@ -21992,7 +22209,8 @@
           "max_fortify_health": 12305
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CONNORGUERRIN",
@@ -22104,7 +22322,8 @@
           "max_fortify_health": 10135
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_NATHANIELHOWE",
@@ -22219,7 +22438,8 @@
           "max_fortify_health": 8880
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEFIRST",
@@ -22326,7 +22546,8 @@
           "max_fortify_health": 10415
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DRAGONFLEMETH",
@@ -22433,7 +22654,8 @@
           "max_fortify_health": 22140
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CHEVALIER",
@@ -22540,7 +22762,8 @@
           "max_fortify_health": 10075
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_GHASTARCHER",
@@ -22642,7 +22865,8 @@
           "max_fortify_health": 2430
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GHASTBRUTE",
@@ -22747,7 +22971,8 @@
           "max_fortify_health": 6780
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEWITHERED",
@@ -22854,7 +23079,8 @@
           "max_fortify_health": 6535
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_THEHERALD",
@@ -22958,7 +23184,8 @@
           "max_fortify_health": 9640
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_TALLIS",
@@ -23065,7 +23292,8 @@
           "max_fortify_health": 11845
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BEN-HASSRATH",
@@ -23172,7 +23400,8 @@
           "max_fortify_health": 5220
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_JUSTICE",
@@ -23283,7 +23512,8 @@
           "max_fortify_health": 18190
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEGRANDOAK",
@@ -23393,7 +23623,8 @@
           "max_fortify_health": 14315
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BYRON",
@@ -23499,7 +23730,8 @@
           "max_fortify_health": 8880
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KNIGHT-CAPTAINCULLEN",
@@ -23609,7 +23841,8 @@
           "max_fortify_health": 10440
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BRONTO",
@@ -23713,7 +23946,8 @@
           "max_fortify_health": 9530
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_DALISHSOLISWARRIOR",
@@ -23819,7 +24053,8 @@
           "max_fortify_health": 7690
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_CORRUPTEDSPIDERQUEEN",
@@ -23927,7 +24162,8 @@
           "max_fortify_health": 11940
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PARAGONCARIDIN",
@@ -24035,7 +24271,8 @@
           "max_fortify_health": 26125
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_STEELGOLEM",
@@ -24139,7 +24376,8 @@
           "max_fortify_health": 9995
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ULDRED",
@@ -24254,7 +24492,8 @@
           "max_fortify_health": 9895
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CALADRIUS",
@@ -24362,7 +24601,8 @@
           "max_fortify_health": 7150
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KINGMARIC",
@@ -24483,7 +24723,8 @@
           "max_fortify_health": 38320
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PRINCEBHELEN",
@@ -24594,7 +24835,8 @@
           "max_fortify_health": 17445
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BROODMOTHER",
@@ -24703,7 +24945,8 @@
           "max_fortify_health": 15140
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SNUGTHEBRONTO",
@@ -24814,7 +25057,8 @@
           "max_fortify_health": 18590
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_WITHERFANG",
@@ -24926,7 +25170,8 @@
           "max_fortify_health": 13900
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VELGHASTCHIEFTAIN",
@@ -25029,7 +25274,8 @@
           "max_fortify_health": 7255
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GHASTLEADER",
@@ -25140,7 +25386,8 @@
           "max_fortify_health": 4745
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CORRUPTEDSPIDERLING",
@@ -25242,7 +25489,8 @@
           "max_fortify_health": 3935
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SWIFTRUNNER",
@@ -25356,7 +25604,8 @@
           "max_fortify_health": 11910
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DALISHLUNARWARRIOR",
@@ -25460,7 +25709,8 @@
           "max_fortify_health": 7690
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_GUARDIANOFTHEURN",
@@ -25572,7 +25822,8 @@
           "max_fortify_health": 24595
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_WARDENCOMMANDERDUNCAN",
@@ -25682,7 +25933,8 @@
           "max_fortify_health": 13680
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREYWARDENGENEVIEVE",
@@ -25788,7 +26040,8 @@
           "max_fortify_health": 12830
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LORDPYRALHARROWMONT",
@@ -25900,7 +26153,8 @@
           "max_fortify_health": 10965
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ALAMARRIWARLORD",
@@ -26013,7 +26267,8 @@
           "max_fortify_health": 8810
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RISENOGRE",
@@ -26118,7 +26373,8 @@
           "max_fortify_health": 7285
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARLEAMONGUERRIN",
@@ -26231,7 +26487,8 @@
           "max_fortify_health": 11580
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PRINCESEBASTIANVAEL",
@@ -26337,7 +26594,8 @@
           "max_fortify_health": 9480
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KOLGRIM",
@@ -26447,7 +26705,8 @@
           "max_fortify_health": 13285
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_EIRIK",
@@ -26559,7 +26818,8 @@
           "max_fortify_health": 11205
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CULTISTREAVER",
@@ -26670,7 +26930,8 @@
           "max_fortify_health": 11685
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_CULTISTASSASSIN",
@@ -26781,7 +27042,8 @@
           "max_fortify_health": 5070
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_CULTISTOVERSEER",
@@ -26891,7 +27153,8 @@
           "max_fortify_health": 9610
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_CULTISTMAGE",
@@ -27004,7 +27267,8 @@
           "max_fortify_health": 6765
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_LYRIUMFENRIS",
@@ -27123,7 +27387,8 @@
           "max_fortify_health": 7325
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DANARIUS",
@@ -27237,7 +27502,8 @@
           "max_fortify_health": 15715
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SLAVESTATUE",
@@ -27344,7 +27610,8 @@
           "max_fortify_health": 11685
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_MHAIRI",
@@ -27455,7 +27722,8 @@
           "max_fortify_health": 16695
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_RIFTWRAITH",
@@ -27553,7 +27821,8 @@
           "max_fortify_health": 5840
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_TERROR",
@@ -27652,7 +27921,8 @@
           "max_fortify_health": 7295
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_HIGHSEEKERALDREN",
@@ -27762,7 +28032,8 @@
           "max_fortify_health": 14315
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SEEKERCASSANDRA",
@@ -27874,7 +28145,8 @@
           "max_fortify_health": 12585
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_STEN,THEARISHOK",
@@ -27986,7 +28258,8 @@
           "max_fortify_health": 22915
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CAPTAINISABELA",
@@ -28094,7 +28367,8 @@
           "max_fortify_health": 8845
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SERA",
@@ -28207,7 +28481,8 @@
           "max_fortify_health": 8940
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SERPOUNCE-A-LOT",
@@ -28314,7 +28589,8 @@
           "max_fortify_health": 7385
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CROWZEVRAN",
@@ -28430,7 +28706,8 @@
           "max_fortify_health": 8585
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SOPHIADRYDEN",
@@ -28539,7 +28816,8 @@
           "max_fortify_health": 8720
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_NERIA",
@@ -28645,7 +28923,8 @@
           "max_fortify_health": 9435
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GAXKANGTHEUNBOUND",
@@ -28747,7 +29026,8 @@
           "max_fortify_health": 16775
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SKYHORROR",
@@ -28857,7 +29137,8 @@
           "max_fortify_health": 8640
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREYWARDENVELANNA",
@@ -28965,7 +29246,8 @@
           "max_fortify_health": 9205
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREYWARDENSIGRUN",
@@ -29078,7 +29360,8 @@
           "max_fortify_health": 4830
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VIVIENNE",
@@ -29195,7 +29478,8 @@
           "max_fortify_health": 10225
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ELITEHARLEQUIN",
@@ -29299,7 +29583,8 @@
           "max_fortify_health": 7540
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REDNUGLYSWEATER",
@@ -29403,7 +29688,8 @@
           "max_fortify_health": 7690
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_BLUENUGLYSWEATER",
@@ -29507,7 +29793,8 @@
           "max_fortify_health": 9610
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_BLACKNUGLYSWEATER",
@@ -29613,7 +29900,8 @@
           "max_fortify_health": 7540
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_WHITENUGLYSWEATER",
@@ -29715,7 +30003,8 @@
           "max_fortify_health": 4120
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_SILVERHALLA",
@@ -29816,7 +30105,8 @@
           "max_fortify_health": 9095
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_PHOENIX",
@@ -29917,7 +30207,8 @@
           "max_fortify_health": 4020
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TUSKET",
@@ -30017,7 +30308,8 @@
           "max_fortify_health": 10720
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_FENNEC",
@@ -30115,7 +30407,8 @@
           "max_fortify_health": 2485
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_SPIRITOFHOPE",
@@ -30220,7 +30513,8 @@
           "max_fortify_health": 7270
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FELIXALEXIUS",
@@ -30334,7 +30628,8 @@
           "max_fortify_health": 7020
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MAEVARIS",
@@ -30442,7 +30737,8 @@
           "max_fortify_health": 7675
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_AURELIANTITUS",
@@ -30557,7 +30853,8 @@
           "max_fortify_health": 8130
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_IMPERIALARCHON",
@@ -30671,7 +30968,8 @@
           "max_fortify_health": 5210
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MAGISTERPAVUS",
@@ -30777,7 +31075,8 @@
           "max_fortify_health": 7100
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_SOLAS",
@@ -30886,7 +31185,8 @@
           "max_fortify_health": 13075
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DORIAN",
@@ -30998,7 +31298,8 @@
           "max_fortify_health": 13090
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GEREONALEXIUS",
@@ -31107,7 +31408,8 @@
           "max_fortify_health": 11995
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ADVISORCULLEN",
@@ -31223,7 +31525,8 @@
           "max_fortify_health": 16865
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CILLIAN",
@@ -31336,7 +31639,8 @@
           "max_fortify_health": 11470
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ABELAS",
@@ -31447,7 +31751,8 @@
           "max_fortify_health": 13345
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SENTINELSPELLBINDER",
@@ -31549,7 +31854,8 @@
           "max_fortify_health": 6490
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SENTINELSHADOW",
@@ -31653,7 +31959,8 @@
           "max_fortify_health": 5585
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_SENTINELARCHER",
@@ -31758,7 +32065,8 @@
           "max_fortify_health": 6185
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_THORNTON",
@@ -31866,7 +32174,8 @@
           "max_fortify_health": 6370
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RASAAN",
@@ -31975,7 +32284,8 @@
           "max_fortify_health": 7995
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BEHEMOTH",
@@ -32090,7 +32400,8 @@
           "max_fortify_health": 29660
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_EMPRESSCELENE",
@@ -32204,7 +32515,8 @@
           "max_fortify_health": 11875
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BRIALA",
@@ -32314,7 +32626,8 @@
           "max_fortify_health": 6500
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_JOSEPHINE",
@@ -32430,7 +32743,8 @@
           "max_fortify_health": 24415
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ASSASSINFLORIANNE",
@@ -32543,7 +32857,8 @@
           "max_fortify_health": 5035
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FLORIANNE",
@@ -32652,7 +32967,8 @@
           "max_fortify_health": 7625
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_WARDENCOMMANDERCLAREL",
@@ -32764,7 +33080,8 @@
           "max_fortify_health": 13740
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LORDERIMOND",
@@ -32884,7 +33201,8 @@
           "max_fortify_health": 6915
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BLACKWALL",
@@ -33001,7 +33319,8 @@
           "max_fortify_health": 24595
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SERSTROUD",
@@ -33109,7 +33428,8 @@
           "max_fortify_health": 15760
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MADDOX",
@@ -33218,7 +33538,8 @@
           "max_fortify_health": 6600
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TEMPLARSAMSON",
@@ -33327,7 +33648,8 @@
           "max_fortify_health": 9610
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_CHOCOLATENUG",
@@ -33431,7 +33753,8 @@
           "max_fortify_health": 5465
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_AVVARGOATLEGENDARY",
@@ -33537,7 +33860,8 @@
           "max_fortify_health": 24085
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_AVVARGOATEPIC",
@@ -33644,7 +33968,8 @@
           "max_fortify_health": 11390
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_AVVARGOATRARE",
@@ -33751,7 +34076,8 @@
           "max_fortify_health": 9610
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_AVVARGOATUNCOMMON",
@@ -33858,7 +34184,8 @@
           "max_fortify_health": 3605
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_AVVARGOATCOMMON",
@@ -33965,7 +34292,8 @@
           "max_fortify_health": 2030
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_LEGENDARYGIANTWISP",
@@ -34034,7 +34362,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_EPICGIANTWISP",
@@ -34103,7 +34432,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_RAREGIANTWISP",
@@ -34172,7 +34502,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_UNCOMMONGIANTWISP",
@@ -34241,7 +34572,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Uncommon"
     },
     {
       "id": "UNIT_COMMONGIANTWISP",
@@ -34310,7 +34642,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Common"
     },
     {
       "id": "UNIT_REDLYRIUMSAMSON",
@@ -34420,7 +34753,8 @@
           "max_fortify_health": 11820
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SAMSON",
@@ -34528,7 +34862,8 @@
           "max_fortify_health": 15715
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REDTEMPLARARCHER",
@@ -34636,7 +34971,8 @@
           "max_fortify_health": 5095
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_NOBLESPIRITOFJUSTINIA",
@@ -34744,7 +35080,8 @@
           "max_fortify_health": 9010
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SPIRITOFJUSTINIA",
@@ -34854,7 +35191,8 @@
           "max_fortify_health": 14295
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_NOBLESPIRITOFHOPE",
@@ -34957,7 +35295,8 @@
           "max_fortify_health": 12195
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_COLE",
@@ -35075,7 +35414,8 @@
           "max_fortify_health": 8595
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_NIGHTMAREASPECT",
@@ -35177,7 +35517,8 @@
           "max_fortify_health": 13930
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FERELDENFROSTBACK",
@@ -35289,7 +35630,8 @@
           "max_fortify_health": 23555
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_IRONBULL",
@@ -35406,7 +35748,8 @@
           "max_fortify_health": 17570
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GIANT",
@@ -35511,7 +35854,8 @@
           "max_fortify_health": 19355
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REDLYRIUMGIANT",
@@ -35620,7 +35964,8 @@
           "max_fortify_health": 12245
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HORROR",
@@ -35733,7 +36078,8 @@
           "max_fortify_health": 4495
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RION",
@@ -35843,7 +36189,8 @@
           "max_fortify_health": 6785
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DESPAIRDEMON",
@@ -35949,7 +36296,8 @@
           "max_fortify_health": 5795
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ADVISORMORRIGAN",
@@ -36061,7 +36409,8 @@
           "max_fortify_health": 17555
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SNOWYWYVERN",
@@ -36167,7 +36516,8 @@
           "max_fortify_health": 11440
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VINSOMER",
@@ -36277,7 +36627,8 @@
           "max_fortify_health": 23770
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KATARI",
@@ -36385,7 +36736,8 @@
           "max_fortify_health": 7175
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BERESAADWARRIOR",
@@ -36492,7 +36844,8 @@
           "max_fortify_health": 7860
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_THEELDERONE",
@@ -36616,7 +36969,8 @@
           "max_fortify_health": 23045
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CALPERNIA",
@@ -36730,7 +37084,8 @@
           "max_fortify_health": 8460
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GURDHAROFSEN",
@@ -36850,7 +37205,8 @@
           "max_fortify_health": 16055
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THANESVARAHSUN-HAIR",
@@ -36964,7 +37320,8 @@
           "max_fortify_health": 7565
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_AVVARBARBARIAN",
@@ -37072,7 +37429,8 @@
           "max_fortify_health": 8025
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_DAGNA",
@@ -37179,7 +37537,8 @@
           "max_fortify_health": 7715
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SCOUTHARDING",
@@ -37289,7 +37648,8 @@
           "max_fortify_health": 9415
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_AMETHYSTSHALE",
@@ -37398,7 +37758,8 @@
           "max_fortify_health": 6535
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SANDYHOWLER",
@@ -37505,7 +37866,8 @@
           "max_fortify_health": 18205
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SKYWATCHER",
@@ -37621,7 +37983,8 @@
           "max_fortify_health": 7395
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LORDWOOLSLEY",
@@ -37727,7 +38090,8 @@
           "max_fortify_health": 10350
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THELASTINQUISITOR",
@@ -37843,7 +38207,8 @@
           "max_fortify_health": 13350
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PROFESSORBRAMKENRIC",
@@ -37955,7 +38320,8 @@
           "max_fortify_health": 7720
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEMOTHER",
@@ -38063,7 +38429,8 @@
           "max_fortify_health": 25485
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THELOST",
@@ -38169,7 +38536,8 @@
           "max_fortify_health": 7605
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THESEEKER",
@@ -38274,7 +38642,8 @@
           "max_fortify_health": 10615
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KREM",
@@ -38390,7 +38759,8 @@
           "max_fortify_health": 6320
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DALISH",
@@ -38506,7 +38876,8 @@
           "max_fortify_health": 13360
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_GATT",
@@ -38617,7 +38988,8 @@
           "max_fortify_health": 5645
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_HISSRAD",
@@ -38735,7 +39107,8 @@
           "max_fortify_health": 16510
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREATERMISTRAL",
@@ -38841,7 +39214,8 @@
           "max_fortify_health": 24105
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TAMAR",
@@ -38950,7 +39324,8 @@
           "max_fortify_health": 4495
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_APOSTATESOLAS",
@@ -39057,7 +39432,8 @@
           "max_fortify_health": 9625
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GOLDENHALLA",
@@ -39164,7 +39540,8 @@
           "max_fortify_health": 10235
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BIANCA",
@@ -39271,7 +39648,8 @@
           "max_fortify_health": 6940
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KORBIN",
@@ -39382,7 +39760,8 @@
           "max_fortify_health": 10395
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_EMERALDSHALE",
@@ -39488,7 +39867,8 @@
           "max_fortify_health": 9985
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KETOJAN",
@@ -39593,7 +39973,8 @@
           "max_fortify_health": 11770
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARVAARAD",
@@ -39699,7 +40080,8 @@
           "max_fortify_health": 9470
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DRAGONMORRIGAN",
@@ -39818,7 +40200,8 @@
           "max_fortify_health": 26955
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREATBEAR",
@@ -39921,7 +40304,8 @@
           "max_fortify_health": 18765
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HALL",
@@ -40028,7 +40412,8 @@
           "max_fortify_health": 7380
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RIORDAN",
@@ -40140,7 +40525,8 @@
           "max_fortify_health": 5710
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FIRSTENCHANTERIRVING",
@@ -40254,7 +40640,8 @@
           "max_fortify_health": 7705
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARLRENDONHOWE",
@@ -40369,7 +40756,8 @@
           "max_fortify_health": 18775
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KNIGHT-COMMANDERDELRINBARRIS",
@@ -40480,7 +40868,8 @@
           "max_fortify_health": 11710
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SERBELINDADARROW",
@@ -40595,7 +40984,8 @@
           "max_fortify_health": 11010
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GASPARDDECHALONS",
@@ -40703,7 +41093,8 @@
           "max_fortify_health": 13530
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MARSHALPROULX",
@@ -40816,7 +41207,8 @@
           "max_fortify_health": 9925
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MICHELDECHEVIN",
@@ -40927,7 +41319,8 @@
           "max_fortify_health": 10075
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_NORTHERNHUNTER",
@@ -41027,7 +41420,8 @@
           "max_fortify_health": 22325
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARIGENA",
@@ -41136,7 +41530,8 @@
           "max_fortify_health": 8885
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_JARVIA",
@@ -41252,7 +41647,8 @@
           "max_fortify_health": 5145
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BERAHT",
@@ -41363,7 +41759,8 @@
           "max_fortify_health": 11840
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DRAGONOFTHEELDERONE",
@@ -41477,7 +41874,8 @@
           "max_fortify_health": 51530
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MACRINUS",
@@ -41587,7 +41985,8 @@
           "max_fortify_health": 13365
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CRASSIUSSERVIS",
@@ -41704,7 +42103,8 @@
           "max_fortify_health": 7845
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_NECROMANCERDORIAN",
@@ -41815,7 +42215,8 @@
           "max_fortify_health": 9840
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SIDONY",
@@ -41920,7 +42321,8 @@
           "max_fortify_health": 5580
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HAKKONWINTERSBREATH",
@@ -42034,7 +42436,8 @@
           "max_fortify_health": 29720
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HAKKONITEARCHER",
@@ -42147,7 +42550,8 @@
           "max_fortify_health": 5635
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HAKKONITEDEFENDER",
@@ -42262,7 +42666,8 @@
           "max_fortify_health": 12205
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ADVISORLELIANA",
@@ -42379,7 +42784,8 @@
           "max_fortify_health": 13855
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CHANTRYWARRIOR",
@@ -42483,7 +42889,8 @@
           "max_fortify_health": 6615
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LAMBERTVANREEVES",
@@ -42595,7 +43002,8 @@
           "max_fortify_health": 15670
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LUCIUSCORIN",
@@ -42707,7 +43115,8 @@
           "max_fortify_health": 8845
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HIGHLANDRAVAGER",
@@ -42808,7 +43217,8 @@
           "max_fortify_health": 35085
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LOYALBETYARDRAGONSLAYER",
@@ -42908,7 +43318,8 @@
           "max_fortify_health": 6325
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHA-BRYTOLREVEREDDEFENDER",
@@ -43013,7 +43424,8 @@
           "max_fortify_health": 10625
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARIQUN",
@@ -43124,7 +43536,8 @@
           "max_fortify_health": 9355
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TAMASSRAN",
@@ -43232,7 +43645,8 @@
           "max_fortify_health": 5630
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SNOUFLEUR",
@@ -43334,7 +43748,8 @@
           "max_fortify_health": 4195
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SANTABLACKWALL",
@@ -43449,7 +43864,8 @@
           "max_fortify_health": 7605
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ELFIESERA",
@@ -43558,7 +43974,8 @@
           "max_fortify_health": 5925
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DIVINEVIVIENNE",
@@ -43677,7 +44094,8 @@
           "max_fortify_health": 13680
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TEMPLARKNIGHT-CORPORAL",
@@ -43785,7 +44203,8 @@
           "max_fortify_health": 4365
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_THEMESSENGER",
@@ -43889,7 +44308,8 @@
           "max_fortify_health": 7560
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARCHDEMONURTHEMIEL",
@@ -43998,7 +44418,8 @@
           "max_fortify_health": 31905
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARGENT",
@@ -44102,7 +44523,8 @@
           "max_fortify_health": 8460
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LUKA",
@@ -44223,7 +44645,8 @@
           "max_fortify_health": 11460
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ATAASHI",
@@ -44328,7 +44751,8 @@
           "max_fortify_health": 18385
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VIDDASALA",
@@ -44438,7 +44862,8 @@
           "max_fortify_health": 8575
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MOVRANTHEUNDER",
@@ -44547,7 +44972,8 @@
           "max_fortify_health": 7920
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HANDOFKORTH",
@@ -44651,7 +45077,8 @@
           "max_fortify_health": 5690
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARTIFICERVARRIC",
@@ -44764,7 +45191,8 @@
           "max_fortify_health": 6990
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PALA",
@@ -44868,7 +45296,8 @@
           "max_fortify_health": 5880
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ABYSSALHIGHDRAGON",
@@ -44976,7 +45405,8 @@
           "max_fortify_health": 28885
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PROFESSORFREDERIC",
@@ -45087,7 +45517,8 @@
           "max_fortify_health": 13350
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REGALYAND'MARCALL",
@@ -45195,7 +45626,8 @@
           "max_fortify_health": 9885
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_YOUNGCASSANDRA",
@@ -45307,7 +45739,8 @@
           "max_fortify_health": 7850
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RAREWHITEBLUEWISP",
@@ -45374,7 +45807,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_EPICWHITEBLUEWISP",
@@ -45441,7 +45875,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LEGENDARYWHITEBLUEWISP",
@@ -45508,7 +45943,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RAREBLUEREDWISP",
@@ -45575,7 +46011,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_EPICBLUEREDWISP",
@@ -45642,7 +46079,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LEGENDARYBLUEREDWISP",
@@ -45709,7 +46147,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RAREBLUEBLACKWISP",
@@ -45776,7 +46215,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_EPICBLUEBLACKWISP",
@@ -45843,7 +46283,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LEGENDARYBLUEBLACKWISP",
@@ -45910,7 +46351,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RAREWHITEREDWISP",
@@ -45977,7 +46419,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_EPICWHITEREDWISP",
@@ -46044,7 +46487,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LEGENDARYWHITEREDWISP",
@@ -46111,7 +46555,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RAREWHITEBLACKWISP",
@@ -46178,7 +46623,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_EPICWHITEBLACKWISP",
@@ -46245,7 +46691,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LEGENDARYWHITEBLACKWISP",
@@ -46312,7 +46759,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RAREREDBLACKWISP",
@@ -46379,7 +46827,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Rare"
     },
     {
       "id": "UNIT_EPICREDBLACKWISP",
@@ -46446,7 +46895,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_LEGENDARYREDBLACKWISP",
@@ -46513,7 +46963,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MYTHICREDWISP",
@@ -46580,7 +47031,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_MYTHICBLUEWISP",
@@ -46647,7 +47099,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_MYTHICBLACKWISP",
@@ -46714,7 +47167,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_MYTHICWHITEWISP",
@@ -46781,7 +47235,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_SAARATH",
@@ -46890,7 +47345,8 @@
           "max_fortify_health": 15910
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_QUNARISHOCKTROOPER",
@@ -46996,7 +47452,8 @@
           "max_fortify_health": 5445
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GORDIAN",
@@ -47109,7 +47566,8 @@
           "max_fortify_health": 7810
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MALIPHANT",
@@ -47212,7 +47670,8 @@
           "max_fortify_health": 7570
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SPIRITOFCOLE",
@@ -47326,7 +47785,8 @@
           "max_fortify_health": 5415
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SPIRITOFFAITH",
@@ -47428,7 +47888,8 @@
           "max_fortify_health": 13030
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_NUGGALOPE",
@@ -47537,7 +47998,8 @@
           "max_fortify_health": 7900
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GUARDSMANDONNIC",
@@ -47646,7 +48108,8 @@
           "max_fortify_health": 10710
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_JERRIKDACE",
@@ -47754,7 +48217,8 @@
           "max_fortify_health": 4680
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_AMBERSHALE",
@@ -47858,7 +48322,8 @@
           "max_fortify_health": 10450
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VENATORIGLADIATOR",
@@ -47969,7 +48434,8 @@
           "max_fortify_health": 10260
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ERASTHENES",
@@ -48074,7 +48540,8 @@
           "max_fortify_health": 7205
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REDJENNYSERA",
@@ -48182,7 +48649,8 @@
           "max_fortify_health": 6365
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PLAIDEWEAVEVIVIENNE",
@@ -48292,7 +48760,8 @@
           "max_fortify_health": 8000
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PLAIDEWEAVEDORIAN",
@@ -48398,7 +48867,8 @@
           "max_fortify_health": 8065
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SERJORY",
@@ -48502,7 +48972,8 @@
           "max_fortify_health": 7875
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DAVETH",
@@ -48607,7 +49078,8 @@
           "max_fortify_health": 5940
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RENN",
@@ -48711,7 +49183,8 @@
           "max_fortify_health": 10490
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_NUGKING",
@@ -48813,7 +49286,8 @@
           "max_fortify_health": 9005
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREYWARDENKNIGHT",
@@ -48927,7 +49401,8 @@
           "max_fortify_health": 9995
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREYWARDENFIONA",
@@ -49038,7 +49513,8 @@
           "max_fortify_health": 8030
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CRETAHL",
@@ -49141,7 +49617,8 @@
           "max_fortify_health": 13315
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHA-BRYTOLEARTHSHAKER",
@@ -49246,7 +49723,8 @@
           "max_fortify_health": 6635
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_COMMANDERDUHAIME",
@@ -49363,7 +49841,8 @@
           "max_fortify_health": 16920
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VENATORIMARKSMAN",
@@ -49472,7 +49951,8 @@
           "max_fortify_health": 4845
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FEN'HAREL",
@@ -49585,7 +50065,8 @@
           "max_fortify_health": 17525
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MARYDEN",
@@ -49687,7 +50168,8 @@
           "max_fortify_health": 11130
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GOLDENNUG",
@@ -49791,7 +50273,8 @@
           "max_fortify_health": 8050
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SNOWBALL",
@@ -49898,7 +50381,8 @@
           "max_fortify_health": 10670
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CAHIR",
@@ -50005,7 +50489,8 @@
           "max_fortify_health": 7925
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DRAGONLING",
@@ -50107,7 +50592,8 @@
           "max_fortify_health": 6770
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_DIVINELELIANA",
@@ -50226,7 +50712,8 @@
           "max_fortify_health": 11950
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MARJOLAINE",
@@ -50332,7 +50819,8 @@
           "max_fortify_health": 8430
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REDTEMPLARSHADOW",
@@ -50443,7 +50931,8 @@
           "max_fortify_health": 5270
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REDTEMPLARGUARD",
@@ -50553,7 +51042,8 @@
           "max_fortify_health": 8885
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_KNIGHT-ENCHANTERVIVIENNE",
@@ -50668,7 +51158,8 @@
           "max_fortify_health": 8935
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
@@ -50775,7 +51266,8 @@
           "max_fortify_health": 5595
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHAPERVALTA",
@@ -50875,7 +51367,8 @@
           "max_fortify_health": 11450
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHA-BRYTOLBOLTER",
@@ -50981,7 +51474,8 @@
           "max_fortify_health": 5320
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PARAGONBRANKA",
@@ -51085,7 +51579,8 @@
           "max_fortify_health": 17880
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DEEPSTALKERMATRIARCH",
@@ -51186,7 +51681,8 @@
           "max_fortify_health": 6525
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GAMORDANSTORMRIDER",
@@ -51290,7 +51786,8 @@
           "max_fortify_health": 12165
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DWORKINGLAVONAK",
@@ -51400,7 +51897,8 @@
           "max_fortify_health": 10070
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BATTLEMASTERGARRETTHAWKE",
@@ -51511,7 +52009,8 @@
           "max_fortify_health": 12675
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BATTLEMASTERMARIANHAWKE",
@@ -51622,7 +52121,8 @@
           "max_fortify_health": 20180
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REDLYRIUMIRONBULL",
@@ -51736,7 +52236,8 @@
           "max_fortify_health": 7545
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_NOBLEKINGCAILAN",
@@ -51841,7 +52342,8 @@
           "max_fortify_health": 8405
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ZITHER",
@@ -51951,7 +52453,8 @@
           "max_fortify_health": 7760
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LILY",
@@ -52054,7 +52557,8 @@
           "max_fortify_health": 5770
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DUKECYRIL",
@@ -52161,7 +52665,8 @@
           "max_fortify_health": 7925
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DIVINECASSANDRA",
@@ -52277,7 +52782,8 @@
           "max_fortify_health": 18795
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BROTHERGENITIVI",
@@ -52385,7 +52891,8 @@
           "max_fortify_health": 6975
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BLIGHTEDOGHREN",
@@ -52495,7 +53002,8 @@
           "max_fortify_health": 10905
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LARIUS",
@@ -52602,7 +53110,8 @@
           "max_fortify_health": 8365
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TITANHEARTGUARDIAN",
@@ -52712,7 +53221,8 @@
           "max_fortify_health": 30365
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHA-BRYTOLSTALKER",
@@ -52818,7 +53328,8 @@
           "max_fortify_health": 3915
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VISCOUNTVARRIC",
@@ -52928,7 +53439,8 @@
           "max_fortify_health": 9735
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PIOTINAEDUCAN",
@@ -53033,7 +53545,8 @@
           "max_fortify_health": 6585
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HUNTERSHADEDRACOLISK",
@@ -53134,7 +53647,8 @@
           "max_fortify_health": 4870
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHARPTAILDRACOLISK",
@@ -53235,7 +53749,8 @@
           "max_fortify_health": 4870
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
@@ -53336,7 +53851,8 @@
           "max_fortify_health": 6125
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MOUNTAINDRACOLISK",
@@ -53437,7 +53953,8 @@
           "max_fortify_health": 4870
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_IMSHAEL",
@@ -53544,7 +54061,8 @@
           "max_fortify_health": 13655
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LIBRARIAN",
@@ -53644,7 +54162,8 @@
           "max_fortify_health": 9765
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARCANEGARRETTHAWKE",
@@ -53756,7 +54275,8 @@
           "max_fortify_health": 16595
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARCANEMARIANHAWKE",
@@ -53868,7 +54388,8 @@
           "max_fortify_health": 26550
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REDLYRIUMBLACKWALL",
@@ -53986,7 +54507,8 @@
           "max_fortify_health": 23110
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ALPHAGOAT",
@@ -54088,7 +54610,8 @@
           "max_fortify_health": 5025
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MAGISTERDORIAN",
@@ -54199,7 +54722,8 @@
           "max_fortify_health": 19150
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VENATORIZEALOT",
@@ -54308,7 +54832,8 @@
           "max_fortify_health": 4845
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KALTENZAHN",
@@ -54420,7 +54945,8 @@
           "max_fortify_health": 15420
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SERWESLEYVALLEN",
@@ -54526,7 +55052,8 @@
           "max_fortify_health": 7485
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BLIGHTEDZEVRAN",
@@ -54634,7 +55161,8 @@
           "max_fortify_health": 7655
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DRUFFALO",
@@ -54735,7 +55263,8 @@
           "max_fortify_health": 6580
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREYWARDENLOGHAIN",
@@ -54852,7 +55381,8 @@
           "max_fortify_health": 7540
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREATERFROSTBACKELK",
@@ -54954,7 +55484,8 @@
           "max_fortify_health": 3925
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_NIGHTMARE",
@@ -55061,7 +55592,8 @@
           "max_fortify_health": 30410
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GIBBERINGHORROR",
@@ -55166,7 +55698,8 @@
           "max_fortify_health": 5630
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SABOTEURGARRETTHAWKE",
@@ -55278,7 +55811,8 @@
           "max_fortify_health": 9625
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SABOTEURMARIANHAWKE",
@@ -55391,7 +55925,8 @@
           "max_fortify_health": 15470
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEAUGUR",
@@ -55504,7 +56039,8 @@
           "max_fortify_health": 7800
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SIGRIDGULDSDOTTEN",
@@ -55614,7 +56150,8 @@
           "max_fortify_health": 8145
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MYTHICGIANTWISP",
@@ -55683,7 +56220,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_FAIRBANKS",
@@ -55791,7 +56329,8 @@
           "max_fortify_health": 7765
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEDOWAGER",
@@ -55899,7 +56438,8 @@
           "max_fortify_health": 5820
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THOMRAINIER",
@@ -56012,7 +56552,8 @@
           "max_fortify_health": 10445
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HIVERNAL",
@@ -56117,7 +56658,8 @@
           "max_fortify_health": 32840
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ICEGIANT",
@@ -56221,7 +56763,8 @@
           "max_fortify_health": 11240
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GRANDENCHANTERVIVIENNE",
@@ -56329,7 +56872,8 @@
           "max_fortify_health": 11655
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_AUGUSTRAM",
@@ -56427,7 +56971,8 @@
           "max_fortify_health": 3000
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_WINTERSENDCULLEN",
@@ -56534,7 +57079,8 @@
           "max_fortify_health": 8455
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REINDEERMABARI",
@@ -56635,7 +57181,8 @@
           "max_fortify_health": 7540
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GUARDIANOFMYTHAL",
@@ -56743,7 +57290,8 @@
           "max_fortify_health": 29135
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GHOSTOFTHESPIRE",
@@ -56846,7 +57394,8 @@
           "max_fortify_health": 6355
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CHARTER",
@@ -56948,7 +57497,8 @@
           "max_fortify_health": 6305
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RITTS",
@@ -57054,7 +57604,8 @@
           "max_fortify_health": 7750
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ENVYDEMON",
@@ -57159,7 +57710,8 @@
           "max_fortify_health": 12860
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_XEBENKECK",
@@ -57264,7 +57816,8 @@
           "max_fortify_health": 8365
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_NAISHE",
@@ -57370,7 +57923,8 @@
           "max_fortify_health": 10895
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DRAGONMALVERNIS",
@@ -57477,7 +58031,8 @@
           "max_fortify_health": 19265
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MALVERNIS",
@@ -57584,7 +58139,8 @@
           "max_fortify_health": 8140
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FORGEMASTER",
@@ -57687,7 +58243,8 @@
           "max_fortify_health": 8350
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARLTEAGANGUERRIN",
@@ -57794,7 +58351,8 @@
           "max_fortify_health": 6910
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MOTHERGISELLE",
@@ -57900,7 +58458,8 @@
           "max_fortify_health": 12880
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DIVINEGUARD",
@@ -58003,7 +58562,8 @@
           "max_fortify_health": 10015
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SPIRITOFSHARTAN",
@@ -58108,7 +58668,8 @@
           "max_fortify_health": 20350
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MARIUS",
@@ -58216,7 +58777,8 @@
           "max_fortify_health": 7910
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TESSAFORSYTHIA",
@@ -58320,7 +58882,8 @@
           "max_fortify_health": 5535
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GURN",
@@ -58419,7 +58982,8 @@
           "max_fortify_health": 6125
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MYTHICREDBLACKWISP",
@@ -58486,7 +59050,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_MYTHICWHITEBLACKWISP",
@@ -58553,7 +59118,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_MYTHICWHITEREDWISP",
@@ -58620,7 +59186,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_MYTHICBLUEBLACKWISP",
@@ -58687,7 +59254,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_MYTHICBLUEREDWISP",
@@ -58754,7 +59322,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_MYTHICWHITEBLUEWISP",
@@ -58821,7 +59390,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_QUNARIDEFENDER",
@@ -58928,7 +59498,8 @@
           "max_fortify_health": 11570
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REDLYRIUMNUG",
@@ -59035,7 +59606,8 @@
           "max_fortify_health": 11050
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FADE-TOUCHEDLURKER",
@@ -59137,7 +59709,8 @@
           "max_fortify_health": 4310
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_RHYS",
@@ -59246,7 +59819,8 @@
           "max_fortify_health": 8745
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_EVANGELINE",
@@ -59359,7 +59933,8 @@
           "max_fortify_health": 9985
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_STORVACKER",
@@ -59466,7 +60041,8 @@
           "max_fortify_health": 11680
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HISSERA",
@@ -59575,7 +60151,8 @@
           "max_fortify_health": 8365
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SPIRITCHAMPION",
@@ -59680,7 +60257,8 @@
           "max_fortify_health": 8525
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SERAARONHAWTHORNE",
@@ -59787,7 +60365,8 @@
           "max_fortify_health": 8485
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VAEA",
@@ -59891,7 +60470,8 @@
           "max_fortify_health": 6320
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_JANEKA",
@@ -59997,7 +60577,8 @@
           "max_fortify_health": 7600
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREYWARDENBANNER",
@@ -60097,7 +60678,8 @@
           "max_fortify_health": 24940
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_MAFERATH",
@@ -60211,7 +60793,8 @@
           "max_fortify_health": 17105
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_REVENANTGURD",
@@ -60324,7 +60907,8 @@
           "max_fortify_health": 16555
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HAKKONITESPELLBINDER",
@@ -60435,7 +61019,8 @@
           "max_fortify_health": 5850
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BETHANYHAWKE",
@@ -60549,7 +61134,8 @@
           "max_fortify_health": 7805
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_INQUISITORAMERIDAN",
@@ -60665,7 +61251,8 @@
           "max_fortify_health": 27290
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARCHONRADONIS",
@@ -60773,7 +61360,8 @@
           "max_fortify_health": 13235
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TEVINTERBANNER",
@@ -60878,7 +61466,8 @@
           "max_fortify_health": 21415
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_SHIANNI",
@@ -60987,7 +61576,8 @@
           "max_fortify_health": 6305
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LURKER",
@@ -61088,7 +61678,8 @@
           "max_fortify_health": 3975
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LADYSEEKERCASSANDRA",
@@ -61202,7 +61793,8 @@
           "max_fortify_health": 13425
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CARVERHAWKE",
@@ -61313,7 +61905,8 @@
           "max_fortify_health": 12985
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TEMPLARBANNER",
@@ -61415,7 +62008,8 @@
           "max_fortify_health": 27400
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_KITTY",
@@ -61521,7 +62115,8 @@
           "max_fortify_health": 8765
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_XENONTHEANTIQUARIAN",
@@ -61631,7 +62226,8 @@
           "max_fortify_health": 10230
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_INVISIBLENUG",
@@ -61734,7 +62330,8 @@
           "max_fortify_health": 7835
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_AVERNUS",
@@ -61843,7 +62440,8 @@
           "max_fortify_health": 6960
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREATDRAGON",
@@ -61947,7 +62545,8 @@
           "max_fortify_health": 30025
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BEASTOFTELLARISWAMPS",
@@ -62052,7 +62651,8 @@
           "max_fortify_health": 7155
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEDARKTHEURGE",
@@ -62154,7 +62754,8 @@
           "max_fortify_health": 10930
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_POSSESSEDOGRECOMMANDER",
@@ -62258,7 +62859,8 @@
           "max_fortify_health": 16740
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BLIGHTEDFENNEC",
@@ -62363,7 +62965,8 @@
           "max_fortify_health": 4615
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_KINGCALENHAD",
@@ -62474,7 +63077,8 @@
           "max_fortify_health": 18795
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_FERELDENBANNER",
@@ -62577,7 +63181,8 @@
           "max_fortify_health": 17660
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_REDLYRIUMBARTRAND",
@@ -62686,7 +63291,8 @@
           "max_fortify_health": 5945
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GARAHEL",
@@ -62790,7 +63396,8 @@
           "max_fortify_health": 12805
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ISSEYA",
@@ -62897,7 +63504,8 @@
           "max_fortify_health": 10695
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_WILDSYLVAN",
@@ -63000,7 +63608,8 @@
           "max_fortify_health": 6965
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KEEPERZATHRIAN",
@@ -63107,7 +63716,8 @@
           "max_fortify_health": 11320
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEHIGHESTONE",
@@ -63214,7 +63824,8 @@
           "max_fortify_health": 5325
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DALISHBANNER",
@@ -63316,7 +63927,8 @@
           "max_fortify_health": 13435
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_GREATERMISTRALDRAGONLING",
@@ -63423,7 +64035,8 @@
           "max_fortify_health": 5235
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CHAUNCEY",
@@ -63525,7 +64138,8 @@
           "max_fortify_health": 7765
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHAPESHIFTERMORRIGANI",
@@ -63613,7 +64227,8 @@
           "max_fortify_health": 9030
         }
       },
-      "max_tier": "I"
+      "max_tier": "I",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHAPESHIFTERMORRIGANII",
@@ -63698,7 +64313,8 @@
           "max_fortify_health": null
         }
       },
-      "max_tier": "II"
+      "max_tier": "II",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHAPESHIFTERMORRIGANIII",
@@ -63781,7 +64397,8 @@
           "max_fortify_health": null
         }
       },
-      "max_tier": "III"
+      "max_tier": "III",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHAPESHIFTERMORRIGANIV",
@@ -63864,7 +64481,8 @@
           "max_fortify_health": null
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_AVVARWARNUG",
@@ -63969,7 +64587,8 @@
           "max_fortify_health": 8345
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_EMERALDGRAVESNUG",
@@ -64076,7 +64695,8 @@
           "max_fortify_health": 7855
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KNIGHT-CAPTAINDENAM",
@@ -64189,7 +64809,8 @@
           "max_fortify_health": 11605
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_WARDEN-COMMANDERSOPHIA",
@@ -64304,7 +64925,8 @@
           "max_fortify_health": 15145
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PARVOLLENBANNER",
@@ -64408,7 +65030,8 @@
           "max_fortify_health": 31345
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_SKYCULTIST",
@@ -64516,7 +65139,8 @@
           "max_fortify_health": 3985
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_VINSOMERDRAGONLING",
@@ -64627,7 +65251,8 @@
           "max_fortify_health": 11165
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TORPOR",
@@ -64731,7 +65356,8 @@
           "max_fortify_health": 15715
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_WRYME",
@@ -64835,7 +65461,8 @@
           "max_fortify_health": 11940
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SPIRITSPELLBINDER",
@@ -64943,7 +65570,8 @@
           "max_fortify_health": 4950
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ARCHIVIST",
@@ -65046,7 +65674,8 @@
           "max_fortify_health": 7595
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PHANTASMALWARRIOR",
@@ -65158,7 +65787,8 @@
           "max_fortify_health": 19285
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KALTENZAHNDRAGONLING",
@@ -65265,7 +65895,8 @@
           "max_fortify_health": 3770
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ASHA'BELLANAR",
@@ -65379,7 +66010,8 @@
           "max_fortify_health": 16965
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_MYTHICPRESTIGEWISP",
@@ -65446,7 +66078,8 @@
           "max_fortify_health": 5
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_STONEJAW",
@@ -65554,7 +66187,8 @@
           "max_fortify_health": 40060
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LEANDRAAMELL",
@@ -65661,7 +66295,8 @@
           "max_fortify_health": 7565
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GAMORDANSTORMRIDERDRAGONLING",
@@ -65769,7 +66404,8 @@
           "max_fortify_health": 9155
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SHADOWNUG",
@@ -65878,7 +66514,8 @@
           "max_fortify_health": 11220
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_QUEENOFTHEEASTERNSEAS",
@@ -65986,7 +66623,8 @@
           "max_fortify_health": 9130
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SPIRITARCHER",
@@ -66096,7 +66734,8 @@
           "max_fortify_health": 4075
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PHANTASMALSHADOW",
@@ -66205,7 +66844,8 @@
           "max_fortify_health": 3985
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HUNTERHORNSHRIKE",
@@ -66313,7 +66953,8 @@
           "max_fortify_health": 23520
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SUNSHINE",
@@ -66425,7 +67066,8 @@
           "max_fortify_health": 7260
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TEMPESTSERAI",
@@ -66514,7 +67156,8 @@
           "max_fortify_health": 4285
         }
       },
-      "max_tier": "I"
+      "max_tier": "I",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TEMPESTSERAII",
@@ -66603,7 +67246,8 @@
           "max_fortify_health": null
         }
       },
-      "max_tier": "II"
+      "max_tier": "II",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TEMPESTSERAIII",
@@ -66692,7 +67336,8 @@
           "max_fortify_health": null
         }
       },
-      "max_tier": "III"
+      "max_tier": "III",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TEMPESTSERAIV",
@@ -66783,7 +67428,8 @@
           "max_fortify_health": null
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DUKEREMACHEDELYDES",
@@ -66895,7 +67541,8 @@
           "max_fortify_health": 10055
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_ORLESIANBANNER",
@@ -67001,7 +67648,8 @@
           "max_fortify_health": 14740
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Mythic"
     },
     {
       "id": "UNIT_WILDHART",
@@ -67105,7 +67753,8 @@
           "max_fortify_health": 5820
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_KEEPERDESHANNA",
@@ -67217,7 +67866,8 @@
           "max_fortify_health": 15915
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DUKEANTOINEOFWYCOME",
@@ -67335,7 +67985,8 @@
           "max_fortify_health": 14680
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HURLOCKVANGUARD",
@@ -67440,7 +68091,8 @@
           "max_fortify_health": 11610
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LADYOFTHEFOREST",
@@ -67552,7 +68204,8 @@
           "max_fortify_health": 13745
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GATEKEEPER",
@@ -67664,7 +68317,8 @@
           "max_fortify_health": 12485
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_CASSIAN",
@@ -67775,7 +68429,8 @@
           "max_fortify_health": 25095
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BULFA",
@@ -67885,7 +68540,8 @@
           "max_fortify_health": 5540
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DANYLA",
@@ -67994,7 +68650,8 @@
           "max_fortify_health": 5540
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_PROFANE",
@@ -68110,7 +68767,8 @@
           "max_fortify_health": 5095
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_RUNICGOLEM",
@@ -68221,7 +68879,8 @@
           "max_fortify_health": 14110
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_DAILAN",
@@ -68327,7 +68986,8 @@
           "max_fortify_health": 6935
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_TRANQUILMADDOX",
@@ -68441,7 +69101,8 @@
           "max_fortify_health": 7990
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEFORMLESSONE",
@@ -68550,7 +69211,8 @@
           "max_fortify_health": 12235
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_BLIGHTEDHALLA",
@@ -68660,7 +69322,8 @@
           "max_fortify_health": 5590
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_WINTERSENDNUGGALOPE",
@@ -68772,7 +69435,8 @@
           "max_fortify_health": 9420
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_SUNDERMOUNTVARTERRAL",
@@ -68890,7 +69554,8 @@
           "max_fortify_health": 21740
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GALLOWSGUARDIAN",
@@ -69003,7 +69668,8 @@
           "max_fortify_health": 22715
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_LANAYA",
@@ -69114,7 +69780,8 @@
           "max_fortify_health": 10085
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THEMADHERMIT",
@@ -69229,7 +69896,8 @@
           "max_fortify_health": 8815
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_GREATERRAGEDEMON",
@@ -69338,7 +70006,8 @@
           "max_fortify_health": 13100
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_OGREALPHA",
@@ -69447,7 +70116,8 @@
           "max_fortify_health": 31370
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_WINTERSENDVIVIENNE",
@@ -69561,7 +70231,8 @@
           "max_fortify_health": 8390
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_WINTERSENDHARLEQUIN",
@@ -69672,7 +70343,8 @@
           "max_fortify_health": 5875
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Epic"
     },
     {
       "id": "UNIT_AUTUMN",
@@ -69779,7 +70451,8 @@
           "max_fortify_health": 7935
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_THADDEUSGIGANTUSCRUMBUM",
@@ -69888,7 +70561,8 @@
           "max_fortify_health": 18375
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_HEROOFRIVERDANE",
@@ -69999,7 +70673,8 @@
           "max_fortify_health": 36650
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     },
     {
       "id": "UNIT_QUEENANORATHEIRIN",
@@ -70109,7 +70784,8 @@
           "max_fortify_health": 10690
         }
       },
-      "max_tier": "IV"
+      "max_tier": "IV",
+      "original_rarity": "Legendary"
     }
   ]
 }
