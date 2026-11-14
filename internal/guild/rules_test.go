@@ -227,3 +227,39 @@ func TestRecommendedSkipsClosedFullAndTooHighGuilds(t *testing.T) {
 		t.Fatalf("unexpected recommendations %+v", found)
 	}
 }
+
+func TestRemovedLeaderHandsTheGuildToTheMostSeniorMember(t *testing.T) {
+	s, g := guildWithOfficer(t)
+	s.TakeNotices(officer.ID)
+	s.RemovePlayer(leader.ID, start)
+	heir, _ := g.Member(officer.ID)
+	if _, stayed := g.Member(leader.ID); stayed || heir.Rank != RankLeader || len(g.Members) != 2 {
+		t.Fatalf("members after the leader was removed: %+v", g.Members)
+	}
+	if notices := s.TakeNotices(officer.ID); len(notices) != 1 || notices[0].Kind != NoticeNewLeader {
+		t.Fatalf("want a new leader notice, got %+v", notices)
+	}
+	last := g.Messages[len(g.Messages)-1]
+	if last.Title != "GUILD_CHAT_EVENT_MEMBER_LEFT_TITLE" || last.Params[0].Text != leader.Name {
+		t.Fatalf("departure not announced: %+v", last)
+	}
+}
+
+func TestRemovedPlayerLeavesNoApplicationsNoticesOrEmptyGuild(t *testing.T) {
+	s, g := guildWithOfficer(t)
+	settings := openSettings("Wardens")
+	settings.Status = StatusApplicationOnly
+	wardens, err := s.Create(Player{ID: "warden", Name: "Alistair", Level: 20}, settings, start)
+	must(t, err)
+	must(t, s.Kick(leader, member.ID, start))
+	must(t, s.Join(member, wardens.ID, "let me in", start))
+	s.RemovePlayer(member.ID, start)
+	if len(wardens.Applications) != 0 || len(s.TakeNotices(member.ID)) != 0 {
+		t.Fatalf("removed player left applications %+v", wardens.Applications)
+	}
+	s.RemovePlayer("warden", start)
+	if s.Guild(wardens.ID) != nil || s.Guild(g.ID) == nil {
+		t.Fatal("removing the only member should close that guild alone")
+	}
+	s.RemovePlayer("stranger", start)
+}

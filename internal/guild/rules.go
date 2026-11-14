@@ -166,16 +166,9 @@ func (g *Guild) replaceInactiveLeader(s *State, now int64) {
 	if leader < 0 || now-g.Members[leader].LastLogin < InactiveLeaderSeconds {
 		return
 	}
-	successor := -1
-	for i, m := range g.Members {
-		if i == leader || now-m.LastLogin >= InactiveLeaderSeconds {
-			continue
-		}
-		if successor < 0 || m.Rank > g.Members[successor].Rank ||
-			(m.Rank == g.Members[successor].Rank && m.JoinedAt < g.Members[successor].JoinedAt) {
-			successor = i
-		}
-	}
+	successor := g.mostSenior(func(i int, m Member) bool {
+		return i != leader && now-m.LastLogin < InactiveLeaderSeconds
+	})
 	if successor < 0 {
 		return
 	}
@@ -409,6 +402,50 @@ func (s *State) Leave(p Player, now int64) error {
 	g.forget(p.ID)
 	g.postEvent(now, "MEMBER_LEFT", plain(m.Name))
 	return nil
+}
+
+func (g *Guild) mostSenior(eligible func(index int, m Member) bool) int {
+	senior := -1
+	for i, m := range g.Members {
+		if !eligible(i, m) {
+			continue
+		}
+		if senior < 0 || m.Rank > g.Members[senior].Rank ||
+			(m.Rank == g.Members[senior].Rank && m.JoinedAt < g.Members[senior].JoinedAt) {
+			senior = i
+		}
+	}
+	return senior
+}
+
+func (s *State) RemovePlayer(playerID string, now int64) {
+	delete(s.Notices, playerID)
+	for _, g := range s.Guilds {
+		if index := g.application(playerID); index >= 0 {
+			name := g.Applications[index].Name
+			g.Applications = slices.Delete(g.Applications, index, index+1)
+			g.postEvent(now, "APPLICATION_WITHDRAWN", plain(name))
+		}
+	}
+	g := s.GuildOf(playerID)
+	if g == nil {
+		return
+	}
+	if len(g.Members) == 1 {
+		s.removeGuild(g.ID)
+		return
+	}
+	index := g.member(playerID)
+	leaving := g.Members[index]
+	if leaving.Rank == RankLeader {
+		heir := g.mostSenior(func(i int, _ Member) bool { return i != index })
+		g.Members[heir].Rank = RankLeader
+		g.postEvent(now, "PROMOTION", plain(g.Members[heir].Name), localized(rankKey(RankLeader)), plain(leaving.Name))
+		s.notify(g.Members[heir].PlayerID, Notice{Kind: NoticeNewLeader, Guild: g.Name, Rank: RankLeader, Time: now})
+	}
+	g.Members = slices.Delete(g.Members, index, index+1)
+	g.forget(playerID)
+	g.postEvent(now, "MEMBER_LEFT", plain(leaving.Name))
 }
 
 func (s *State) ChangeSettings(actor Player, settings Settings, now int64) error {
