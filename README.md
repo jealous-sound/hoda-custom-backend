@@ -12,15 +12,23 @@ With both repositories side by side:
 ./scripts/play-local.sh
 ```
 
-The script builds both projects, starts the server on `127.0.0.1:8787`, runs the game against it, and stops the
-server when the game exits. Server logs go to `runtime/server.log`.
+The script builds both projects, starts the server on `127.0.0.1:8787`, runs the game, and stops the server when the
+game exits; `make run` in the client does the same. The game still asks Local Game or Online Game, and Online Game
+plays on this server. Server logs go to `runtime/server.log`.
+
+Online Game keeps its account in `runtime/client-account.dat`, never in the client's own `account.dat`. On the first
+run against an empty `runtime` the script creates that account as a copy of the client's `player_save.dat`, so it
+starts with the local game's progress. Logging out in the game leaves the next run at the log-in choice. Deleting
+`runtime` starts over.
 
 | Variable | Default | |
 | --- | --- | --- |
 | `HOD_CLIENT_DIR` | `../hoda-custom-client` | client checkout |
 | `HOD_BACKEND_ADDR` | `127.0.0.1:8787` | listen address |
 | `HOD_BACKEND_DATA` | `runtime` | data directory |
-| `HOD_PLAYER_ID` | unset (new guest) | plays as this id, such as `local`, importing the client's `player_save.dat` on first start |
+| `HOD_PLAYER_ID` | unset | plays online as this id without an account, such as `local`, importing the client's `player_save.dat` on first start |
+| `HOD_ACCOUNT_PATH` | `runtime/client-account.dat` | the game's account file for Online Game |
+| `HOD_CLIENT_EXECUTABLE` | the macOS app's binary | the built game, relative to the client checkout |
 
 `make test` runs `go vet` and `go test`. `make run` starts the server alone, and `make format-check` checks `gofmt`.
 
