@@ -167,19 +167,24 @@ loads that profile in place of its own. A repeated `request_id` replays the firs
 
 The server is the only writer of the economy. A profile `PUT` is merged: the client's copy is kept, but the server's
 values win for account currencies, levels and timers, store counters, Nexus, campaign, missions, expeditions,
-`timed_quests`, PvP, gear, runes, and the roster's heroes with their progression. Anything that grants or spends is an
+`timed_quests`, PvP, gear, runes, Renown perks, and the roster's heroes with their progression. Anything that grants or spends is an
 action, handled in `internal/economy/actions.go`:
 
 - Battles: `battle_start`, `battle`, `pvp_match`, `pvp_defend`
 - Heroes: `consume`, `fortify`, `remove_fortify`, `ascend`
 - Expeditions: `expedition_start`, `expedition_claim`, `expedition_recall`
 - Bounties: `quest_claim`, `quest_swap`, `quest_chest`
+- Renown: `renown_upgrade`
 - Nexus: `nexus_unlock`, `nexus_award`, `nexus_reset`
 - Rewards: `mission_claim`, `pvp_event_claim`, `tutorial_reward`
 - Items: `gear_sell`, `gear_prestige`, `rune_prestige`, `rune_craft`
 
 Pack rolls, PvP matches and battle seeds are rolled on the server from random state it never sends, so reloading a
 save cannot predict or reroll them.
+
+Account XP is not capped at level 100. Every `levels_per_rank` levels of XP is one Renown rank (`renown.json`), and
+each rank is one point for `renown_upgrade` to spend on a perk. Perks that add up to more than the earned rank are
+read as no perks at all.
 
 ## Battle replay
 

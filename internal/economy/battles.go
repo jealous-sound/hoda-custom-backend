@@ -198,20 +198,20 @@ func (p *player) settlePending() (BattleResult, error) {
 }
 
 func (p *player) payBattle(result *BattleResult, gold, xp int64, crits int, won bool) error {
-	goldPct, xpPct := p.runeBonus()
+	goldPct, xpPct := p.payoutBonus()
 	gold = applyPct(saturatingAdd(gold, creditedCritGold(crits)), goldPct)
 	xp = applyPct(xp, xpPct)
 	result.Gold = saturatingAdd(result.Gold, gold)
 	result.XP = xp
 	if won {
-		if err := p.maybeAwardVoucherForWin(); err != nil {
+		if err := p.awardWinDrops(); err != nil {
 			return err
 		}
 	}
 	p.addGold(gold)
 	p.addGems(result.Gems)
 	p.account.awardBattleXP(xp)
-	return p.awardSquadXP(xp)
+	return p.awardSquadXP(p.squadXPFor(xp))
 }
 
 type campaignProgress struct {

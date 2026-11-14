@@ -181,10 +181,10 @@ func (p *player) settleNexus(pending profile.PendingBattle, outcome battle.Outco
 	node := difficulty.Nodes[pending.Step-1]
 	progress.setInt("wins", saturatingAdd(n.int(progress, "wins"), 1))
 	result.NodeWins = n.int(progress, "wins")
-	goldPct, xpPct := p.runeBonus()
+	goldPct, xpPct := p.payoutBonus()
 	result.Gold = applyPct(saturatingAdd(int64(max(node.Gold, 0)), creditedCritGold(outcome.Crits)), goldPct)
 	result.XP = applyPct(int64(max(node.XP, 0)), xpPct)
-	if err := p.maybeAwardVoucherForWin(); err != nil {
+	if err := p.awardWinDrops(); err != nil {
 		return BattleResult{}, err
 	}
 	n.run.setInt("escrow_gold", saturatingAdd(n.int(n.run, "escrow_gold"), result.Gold))
@@ -199,7 +199,7 @@ func (p *player) settleNexus(pending profile.PendingBattle, outcome battle.Outco
 		}
 	}
 	p.account.awardBattleXP(result.XP)
-	if err := p.awardSquadXP(result.XP); err != nil {
+	if err := p.awardSquadXP(p.squadXPFor(result.XP)); err != nil {
 		return BattleResult{}, err
 	}
 	if current < len(difficulty.Nodes) {

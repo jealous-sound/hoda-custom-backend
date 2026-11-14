@@ -185,7 +185,7 @@ func (s *Server) duelRival(playerID string) (duelRival, error) {
 	if err != nil {
 		return duelRival{}, err
 	}
-	opponent, err := economy.DuelOpponentFrom(playerID, record.Profile, s.now())
+	opponent, err := economy.DuelOpponentFrom(s.catalog, playerID, record.Profile, s.now())
 	if err != nil {
 		return duelRival{}, err
 	}

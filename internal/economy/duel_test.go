@@ -31,7 +31,7 @@ func grownDefender(t *testing.T) json.RawMessage {
 
 func duelOpponent(t *testing.T, raw json.RawMessage) DuelOpponent {
 	t.Helper()
-	opponent, err := DuelOpponentFrom("defender", raw, ruleNow)
+	opponent, err := DuelOpponentFrom(mustCatalog(t), "defender", raw, ruleNow)
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -19,10 +19,31 @@ type Unit struct {
 	Fortify    []FortifyChild `json:"fortify,omitempty"`
 }
 
+type SideRenown struct {
+	PowerPct     int `json:"power_pct"`
+	HealthPct    int `json:"health_pct"`
+	CritPermille int `json:"crit_permille"`
+}
+
+func NewSideRenown(powerPct, healthPct, critPermille int) *SideRenown {
+	if powerPct == 0 && healthPct == 0 && critPermille == 0 {
+		return nil
+	}
+	return &SideRenown{PowerPct: powerPct, HealthPct: healthPct, CritPermille: critPermille}
+}
+
+func (r *SideRenown) Canonical() *SideRenown {
+	if r == nil {
+		return nil
+	}
+	return NewSideRenown(r.PowerPct, r.HealthPct, r.CritPermille)
+}
+
 type Side struct {
-	Units      []Unit   `json:"units"`
-	Runes      []string `json:"runes"`
-	HeroBuilds bool     `json:"hero_builds,omitempty"`
+	Units      []Unit      `json:"units"`
+	Runes      []string    `json:"runes"`
+	HeroBuilds bool        `json:"hero_builds,omitempty"`
+	Renown     *SideRenown `json:"renown,omitempty"`
 }
 
 type ChangerEffect struct {
@@ -93,6 +114,7 @@ func (h *hero) statHealth() int {
 type side struct {
 	heroes [SlotCount]*hero
 	runes  []*runeDef
+	renown SideRenown
 }
 
 func (d *Data) buildHero(u Unit, heroBuild bool) (*hero, error) {
@@ -163,6 +185,9 @@ func (d *Data) buildSide(s Side, heroBuilds bool) (*side, error) {
 			return nil, fmt.Errorf("unknown rune %s", id)
 		}
 		built.runes = append(built.runes, def)
+	}
+	if s.Renown != nil {
+		built.renown = *s.Renown
 	}
 	return built, nil
 }

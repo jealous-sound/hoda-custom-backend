@@ -221,7 +221,7 @@ func TestUploadCannotForgeTrophiesOrPvpRecord(t *testing.T) {
 	if pvp["trophies_seen"].(float64) != 5000 {
 		t.Errorf("the client's seen-trophies marker was dropped: %v", pvp)
 	}
-	opponent, err := DuelOpponentFrom("cheater", reencode(t, doc), ruleNow)
+	opponent, err := DuelOpponentFrom(mustCatalog(t), "cheater", reencode(t, doc), ruleNow)
 	if err != nil || opponent.Trophies != 0 {
 		t.Errorf("guild duels show %d trophies: %v", opponent.Trophies, err)
 	}

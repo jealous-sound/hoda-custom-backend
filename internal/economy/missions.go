@@ -308,7 +308,7 @@ func (p *player) syncMissions() error {
 }
 
 func syncMissions(c *catalog.Catalog, doc document, server *profile.ServerState, now time.Time) error {
-	a, err := loadAccount(doc)
+	a, err := loadAccount(doc, &c.Renown)
 	if err != nil {
 		return err
 	}

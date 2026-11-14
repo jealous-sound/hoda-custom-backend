@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
+	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 )
 
 const squadCells = 5
@@ -21,19 +22,21 @@ type DuelUnit struct {
 }
 
 type DuelOpponent struct {
-	ID         string     `json:"id"`
-	Name       string     `json:"name"`
-	Level      int        `json:"level"`
-	Trophies   int        `json:"trophies"`
-	Units      []DuelUnit `json:"units"`
-	Runes      []string   `json:"runes"`
-	HeroBuilds bool       `json:"hero_builds"`
+	ID         string             `json:"id"`
+	Name       string             `json:"name"`
+	Level      int                `json:"level"`
+	Trophies   int                `json:"trophies"`
+	Units      []DuelUnit         `json:"units"`
+	Runes      []string           `json:"runes"`
+	HeroBuilds bool               `json:"hero_builds"`
+	Renown     *battle.SideRenown `json:"renown,omitempty"`
 }
 
 type duelProfile struct {
 	Account struct {
-		Name  string `json:"name"`
-		Level int    `json:"level"`
+		Name       string `json:"name"`
+		Level      int    `json:"level"`
+		Experience int64  `json:"experience"`
 	} `json:"account"`
 	CurrentSquad int        `json:"current_squad"`
 	Squads       [][]*int64 `json:"squads"`
@@ -57,16 +60,24 @@ type duelProfile struct {
 	Pvp struct {
 		Trophies int `json:"trophies"`
 	} `json:"pvp"`
+	Renown json.RawMessage `json:"renown"`
 }
 
-func DuelOpponentFrom(playerID string, raw json.RawMessage, now time.Time) (DuelOpponent, error) {
+func (d *duelProfile) sideRenown(rules *catalog.RenownRules) *battle.SideRenown {
+	section, _ := parseDocument(d.Renown)
+	return readRenown(rules, section).withinRank(d.Account.Experience).sideBonus()
+}
+
+func DuelOpponentFrom(c *catalog.Catalog, playerID string, raw json.RawMessage, now time.Time) (
+	DuelOpponent, error,
+) {
 	var stored duelProfile
 	if err := json.Unmarshal(raw, &stored); err != nil {
 		return DuelOpponent{}, refuse(BadProfile, "%v", err)
 	}
 	opponent := DuelOpponent{
 		ID: playerID, Name: stored.Account.Name, Level: max(stored.Account.Level, 1), Trophies: stored.Pvp.Trophies,
-		Units: []DuelUnit{}, Runes: []string{}, HeroBuilds: true,
+		Units: []DuelUnit{}, Runes: []string{}, HeroBuilds: true, Renown: stored.sideRenown(&c.Renown),
 	}
 	if opponent.Name == "" {
 		opponent.Name = playerID
