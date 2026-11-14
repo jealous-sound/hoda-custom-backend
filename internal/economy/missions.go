@@ -148,7 +148,7 @@ func (p *player) missionView() (*missionView, error) {
 	}
 	seen := map[collection]map[string]bool{}
 	for _, h := range r.heroes {
-		kind := collection{rarity: h.rarity(), tier: h.tier}
+		kind := collection{rarity: h.shownRarity(), tier: h.tier}
 		if seen[kind] == nil {
 			seen[kind] = map[string]bool{}
 		}
@@ -229,7 +229,7 @@ func (v *missionView) value(mission catalog.Mission) int64 {
 	case statHeroLevel:
 		return v.highestLevel(func(*hero) bool { return true })
 	case statTierIVLevel:
-		return v.highestLevel(func(h *hero) bool { return h.tier == tierIV && h.rarity() == mission.Rarity })
+		return v.highestLevel(func(h *hero) bool { return h.tier == tierIV && h.shownRarity() == mission.Rarity })
 	case statCollected:
 		return v.collected[collection{rarity: mission.Rarity, tier: mission.HeroTier}]
 	case statSquadFaction:

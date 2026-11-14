@@ -83,7 +83,7 @@ func refuseAway(doc document, instances ...int64) error {
 func traitMet(trait catalog.ExpeditionTrait, party []*hero) bool {
 	matches := 0
 	for _, member := range party {
-		if trait.Matches(member.def, member.rarity()) {
+		if trait.Matches(member.def, member.shownRarity()) {
 			matches++
 		}
 	}

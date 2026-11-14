@@ -126,17 +126,18 @@ type Pack struct {
 }
 
 type Hero struct {
-	ID          string
-	Rarity      Rarity
-	Obtainable  bool
-	InitialTier string
-	Name        string
-	Factions    Faction
-	Groups      []string
-	Giant       bool
-	MaxTier     int
-	Tiers       [TierCount]HeroTier
-	Consume     *ConsumeProfile
+	ID             string
+	Rarity         Rarity
+	OriginalRarity Rarity
+	Obtainable     bool
+	InitialTier    string
+	Name           string
+	Factions       Faction
+	Groups         []string
+	Giant          bool
+	MaxTier        int
+	Tiers          [TierCount]HeroTier
+	Consume        *ConsumeProfile
 }
 
 type Rune struct {
@@ -319,16 +320,17 @@ type rawStore struct {
 type rawHeroPool struct {
 	Version int `json:"version"`
 	Heroes  []struct {
-		ID          string         `json:"id"`
-		Rarity      string         `json:"rarity"`
-		Obtainable  bool           `json:"obtainable"`
-		InitialTier string         `json:"initial_tier"`
-		Name        string         `json:"name"`
-		Faction     string         `json:"faction"`
-		Groups      []string       `json:"groups"`
-		Giant       bool           `json:"giant"`
-		MaxTier     string         `json:"max_tier"`
-		TierLevels  map[string]int `json:"tier_levels"`
+		ID             string         `json:"id"`
+		Rarity         string         `json:"rarity"`
+		OriginalRarity string         `json:"original_rarity"`
+		Obtainable     bool           `json:"obtainable"`
+		InitialTier    string         `json:"initial_tier"`
+		Name           string         `json:"name"`
+		Faction        string         `json:"faction"`
+		Groups         []string       `json:"groups"`
+		Giant          bool           `json:"giant"`
+		MaxTier        string         `json:"max_tier"`
+		TierLevels     map[string]int `json:"tier_levels"`
 	} `json:"heroes"`
 }
 
@@ -400,6 +402,10 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 			ID: raw.ID, Rarity: ParseRarity(raw.Rarity), Obtainable: raw.Obtainable, InitialTier: raw.InitialTier,
 			Name: raw.Name, Factions: parseFactions(raw.Faction), Groups: raw.Groups, Giant: raw.Giant,
 			MaxTier: maxTier,
+		}
+		hero.OriginalRarity = hero.Rarity
+		if raw.OriginalRarity != "" {
+			hero.OriginalRarity = ParseRarity(raw.OriginalRarity)
 		}
 		for name, level := range raw.TierLevels {
 			tier, ok := TierIndex(name)

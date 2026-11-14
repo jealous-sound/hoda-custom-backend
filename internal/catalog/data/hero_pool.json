@@ -4,6 +4,7 @@
   {
    "id": "UNIT_ELVENMAGE",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Elven Mage",
@@ -25,6 +26,7 @@
   {
    "id": "UNIT_REDIRONMAGE",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Iron Mage",
@@ -47,6 +49,7 @@
   {
    "id": "UNIT_REDWATERRAIDER",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Redwater Raider",
@@ -69,6 +72,7 @@
   {
    "id": "UNIT_FERELDANKNIGHT",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fereldan Knight",
@@ -91,6 +95,7 @@
   {
    "id": "UNIT_DWARVENWARRIOR",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dwarven Warrior",
@@ -112,6 +117,7 @@
   {
    "id": "UNIT_APOSTATEWANDERER",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Apostate Wanderer",
@@ -133,6 +139,7 @@
   {
    "id": "UNIT_KIRKWALLGUARD",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Kirkwall Guard",
@@ -154,6 +161,7 @@
   {
    "id": "UNIT_TEVINTERSLAVER",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tevinter Slaver",
@@ -177,6 +185,7 @@
   {
    "id": "UNIT_COTERIETHUG",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Coterie Thug",
@@ -199,6 +208,7 @@
   {
    "id": "UNIT_CASSANDRAPENTAGHAST",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cassandra Pentaghast",
@@ -222,6 +232,7 @@
   {
    "id": "UNIT_HIGHDRAGON",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "High Dragon",
@@ -243,6 +254,7 @@
   {
    "id": "UNIT_DALISHARCANEWARRIOR",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish Arcane Warrior",
@@ -264,6 +276,7 @@
   {
    "id": "UNIT_DALISHWARRIOR",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish Warrior",
@@ -284,6 +297,7 @@
   {
    "id": "UNIT_FERELDANINFANTRY",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fereldan Infantry",
@@ -305,6 +319,7 @@
   {
    "id": "UNIT_DALISHMAGE",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish Mage",
@@ -326,6 +341,7 @@
   {
    "id": "UNIT_ELFAPOSTATE",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Elf Apostate",
@@ -347,6 +363,7 @@
   {
    "id": "UNIT_CARTATHUG",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Carta Thug",
@@ -369,6 +386,7 @@
   {
    "id": "UNIT_CROWASSASSIN",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Crow Assassin",
@@ -390,6 +408,7 @@
   {
    "id": "UNIT_SILENTSISTER",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Silent Sister",
@@ -411,6 +430,7 @@
   {
    "id": "UNIT_CARTAASSASSIN",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Carta Assassin",
@@ -433,6 +453,7 @@
   {
    "id": "UNIT_SHARPSHIGHWAYMAN",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sharps Highwayman",
@@ -455,6 +476,7 @@
   {
    "id": "UNIT_HURLOCKGRUNT",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hurlock Grunt",
@@ -475,6 +497,7 @@
   {
    "id": "UNIT_BLACKSTONEIRREGULAR",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blackstone Irregular",
@@ -496,6 +519,7 @@
   {
    "id": "UNIT_CARTASMUGGLER",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Carta Smuggler",
@@ -518,6 +542,7 @@
   {
    "id": "UNIT_TEVINTERWARRIOR",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tevinter Warrior",
@@ -539,6 +564,7 @@
   {
    "id": "UNIT_TEVINTERBATTLEMAGE",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tevinter Battlemage",
@@ -560,6 +586,7 @@
   {
    "id": "UNIT_COTERIETHIEF",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Coterie Thief",
@@ -582,6 +609,7 @@
   {
    "id": "UNIT_SERCAUTHRIEN",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Cauthrien",
@@ -604,6 +632,7 @@
   {
    "id": "UNIT_FENRIS",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fenris",
@@ -627,6 +656,7 @@
   {
    "id": "UNIT_THEARISHOK",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Arishok",
@@ -649,6 +679,7 @@
   {
    "id": "UNIT_DALISHHUNTER",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish Hunter",
@@ -669,6 +700,7 @@
   {
    "id": "UNIT_ELFBANDIT",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Elf Bandit",
@@ -690,6 +722,7 @@
   {
    "id": "UNIT_WEREWOLF",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Werewolf",
@@ -711,6 +744,7 @@
   {
    "id": "UNIT_DEVOURINGSKELETON",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Devouring Skeleton",
@@ -731,6 +765,7 @@
   {
    "id": "UNIT_PRIDEDEMON",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Pride Demon",
@@ -750,6 +785,7 @@
   {
    "id": "UNIT_CIRCLESENIORENCHANTER",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Circle Senior Enchanter",
@@ -771,6 +807,7 @@
   {
    "id": "UNIT_ABOMINATION",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Abomination",
@@ -791,6 +828,7 @@
   {
    "id": "UNIT_YAVANA",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Yavana",
@@ -812,6 +850,7 @@
   {
    "id": "UNIT_MERRILL",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Merrill",
@@ -835,6 +874,7 @@
   {
    "id": "UNIT_CHARREDSYLVAN",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Charred Sylvan",
@@ -855,6 +895,7 @@
   {
    "id": "UNIT_INFERNOGOLEM",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Inferno Golem",
@@ -877,6 +918,7 @@
   {
    "id": "UNIT_OGRE",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ogre",
@@ -896,6 +938,7 @@
   {
    "id": "UNIT_DESIREDEMON",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Desire Demon",
@@ -916,6 +959,7 @@
   {
    "id": "UNIT_TEVINTERARCANEWARRIOR",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tevinter Arcane Warrior",
@@ -939,6 +983,7 @@
   {
    "id": "UNIT_GREYWARDENMAGE",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Mage",
@@ -961,6 +1006,7 @@
   {
    "id": "UNIT_GREYWARDENROGUE",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Rogue",
@@ -982,6 +1028,7 @@
   {
    "id": "UNIT_HURLOCKBOLTER",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hurlock Bolter",
@@ -1002,6 +1049,7 @@
   {
    "id": "UNIT_DARKSPAWNEMISSARY",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Darkspawn Emissary",
@@ -1023,6 +1071,7 @@
   {
    "id": "UNIT_SKELETONARCHER",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Skeleton Archer",
@@ -1043,6 +1092,7 @@
   {
    "id": "UNIT_SKELETONMAGE",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Skeleton Mage",
@@ -1063,6 +1113,7 @@
   {
    "id": "UNIT_GENLOCKBRUTE",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Genlock Brute",
@@ -1083,6 +1134,7 @@
   {
    "id": "UNIT_TAL-VASHOTHBERSERKER",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tal-Vashoth Berserker",
@@ -1104,6 +1156,7 @@
   {
    "id": "UNIT_STEN",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sten",
@@ -1124,6 +1177,7 @@
   {
    "id": "UNIT_HARLEQUIN",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Harlequin",
@@ -1145,6 +1199,7 @@
   {
    "id": "UNIT_DUNCAN",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Duncan",
@@ -1167,6 +1222,7 @@
   {
    "id": "UNIT_VARRICTETHRAS",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Varric Tethras",
@@ -1190,6 +1246,7 @@
   {
    "id": "UNIT_SEBASTIANVAEL",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sebastian Vael",
@@ -1213,6 +1270,7 @@
   {
    "id": "UNIT_GATEGUARDIAN",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gate Guardian",
@@ -1234,6 +1292,7 @@
   {
    "id": "UNIT_ASHAAD",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ashaad",
@@ -1254,6 +1313,7 @@
   {
    "id": "UNIT_KARASHOK",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Karashok",
@@ -1274,6 +1334,7 @@
   {
    "id": "UNIT_TAL-VASHOTHMARAUDER",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tal-Vashoth Marauder",
@@ -1295,6 +1356,7 @@
   {
    "id": "UNIT_TEMPLARASSASSIN",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Templar Assassin",
@@ -1317,6 +1379,7 @@
   {
    "id": "UNIT_TEMPLARRECRUIT",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Templar Recruit",
@@ -1339,6 +1402,7 @@
   {
    "id": "UNIT_TEMPLARARCHER",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Templar Archer",
@@ -1361,6 +1425,7 @@
   {
    "id": "UNIT_CIRCLEAPPRENTICE",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Circle Apprentice",
@@ -1382,6 +1447,7 @@
   {
    "id": "UNIT_REVENANT",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Revenant",
@@ -1402,6 +1468,7 @@
   {
    "id": "UNIT_BLIGHTEDWEREWOLF",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Werewolf",
@@ -1424,6 +1491,7 @@
   {
    "id": "UNIT_DEVOURINGCORPSE",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Devouring Corpse",
@@ -1444,6 +1512,7 @@
   {
    "id": "UNIT_LEGIONNAIRESCOUT",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Legionnaire Scout",
@@ -1465,6 +1534,7 @@
   {
    "id": "UNIT_LEGIONNAIREWARRIOR",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Legionnaire Warrior",
@@ -1486,6 +1556,7 @@
   {
    "id": "UNIT_FERELDANASHWARRIOR",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fereldan Ash Warrior",
@@ -1507,6 +1578,7 @@
   {
    "id": "UNIT_SPIRITOFVALOR",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit of Valor",
@@ -1527,6 +1599,7 @@
   {
    "id": "UNIT_ENRAGEDSPIRIT",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Enraged Spirit",
@@ -1547,6 +1620,7 @@
   {
    "id": "UNIT_DRAKE",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Drake",
@@ -1567,6 +1641,7 @@
   {
    "id": "UNIT_DRAGONTHRALL",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragon Thrall",
@@ -1588,6 +1663,7 @@
   {
    "id": "UNIT_WYVERN",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wyvern",
@@ -1608,6 +1684,7 @@
   {
    "id": "UNIT_CORRUPTEDSPIDER",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Corrupted Spider",
@@ -1628,6 +1705,7 @@
   {
    "id": "UNIT_MABARI",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Mabari",
@@ -1648,6 +1726,7 @@
   {
    "id": "UNIT_BEAR",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bear",
@@ -1667,6 +1746,7 @@
   {
    "id": "UNIT_NUG",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Nug",
@@ -1687,6 +1767,7 @@
   {
    "id": "UNIT_ISABELA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Isabela",
@@ -1708,6 +1789,7 @@
   {
    "id": "UNIT_SISTERNIGHTINGALE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sister Nightingale",
@@ -1732,6 +1814,7 @@
   {
    "id": "UNIT_GREYWARDENCARVER",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Carver",
@@ -1756,6 +1839,7 @@
   {
    "id": "UNIT_GREYWARDENBETHANY",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Bethany",
@@ -1781,6 +1865,7 @@
   {
    "id": "UNIT_STROUD",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Stroud",
@@ -1803,6 +1888,7 @@
   {
    "id": "UNIT_TEMPLARCARVER",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Templar Carver",
@@ -1828,6 +1914,7 @@
   {
    "id": "UNIT_GREYWARDENALISTAIR",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Alistair",
@@ -1852,6 +1939,7 @@
   {
    "id": "UNIT_THEARCHITECT",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Architect",
@@ -1876,6 +1964,7 @@
   {
    "id": "UNIT_FIRSTENCHANTERORSINO",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "First Enchanter Orsino",
@@ -1899,6 +1988,7 @@
   {
    "id": "UNIT_ANDERS",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Anders",
@@ -1921,6 +2011,7 @@
   {
    "id": "UNIT_CIRCLEMAGEBETHANY",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Circle Mage Bethany",
@@ -1945,6 +2036,7 @@
   {
    "id": "UNIT_VENGEANCEANDERS",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Vengeance Anders",
@@ -1969,6 +2061,7 @@
   {
    "id": "UNIT_MORRIGAN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Morrigan",
@@ -1991,6 +2084,7 @@
   {
    "id": "UNIT_GREYWARDENOGHREN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Oghren",
@@ -2012,6 +2106,7 @@
   {
    "id": "UNIT_FLEMETH",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Flemeth",
@@ -2033,6 +2128,7 @@
   {
    "id": "UNIT_GRANDENCHANTERFIONA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grand Enchanter Fiona",
@@ -2055,6 +2151,7 @@
   {
    "id": "UNIT_QUEENOFTHEBLACKMARSH",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Queen of the Blackmarsh",
@@ -2076,6 +2173,7 @@
   {
    "id": "UNIT_FORESTSPIRIT",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Forest Spirit",
@@ -2096,6 +2194,7 @@
   {
    "id": "UNIT_AVELINEVALLEN",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Aveline Vallen",
@@ -2119,6 +2218,7 @@
   {
    "id": "UNIT_WOLF",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wolf",
@@ -2138,6 +2238,7 @@
   {
    "id": "UNIT_SYLVAN",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sylvan",
@@ -2158,6 +2259,7 @@
   {
    "id": "UNIT_GENLOCKALPHA",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Genlock Alpha",
@@ -2178,6 +2280,7 @@
   {
    "id": "UNIT_WALKINGCORPSE",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Walking Corpse",
@@ -2198,6 +2301,7 @@
   {
    "id": "UNIT_GENLOCKASSASSIN",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Genlock Assassin",
@@ -2218,6 +2322,7 @@
   {
    "id": "UNIT_HURLOCKEMISSARY",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hurlock Emissary",
@@ -2239,6 +2344,7 @@
   {
    "id": "UNIT_GREYWARDENWARRIOR",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Warrior",
@@ -2260,6 +2366,7 @@
   {
    "id": "UNIT_GHAST",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ghast",
@@ -2280,6 +2387,7 @@
   {
    "id": "UNIT_VELGHAST",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Velghast",
@@ -2300,6 +2408,7 @@
   {
    "id": "UNIT_ELFBARD",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Elf Bard",
@@ -2320,6 +2429,7 @@
   {
    "id": "UNIT_SHADOWWEREWOLF",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shadow Werewolf",
@@ -2341,6 +2451,7 @@
   {
    "id": "UNIT_BLIGHTEDSHADOWWOLF",
    "rarity": "Uncommon",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Shadow Wolf",
@@ -2363,6 +2474,7 @@
   {
    "id": "UNIT_RABIDWEREWOLF",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rabid Werewolf",
@@ -2384,6 +2496,7 @@
   {
    "id": "UNIT_WEREWOLFALPHA",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Werewolf Alpha",
@@ -2405,6 +2518,7 @@
   {
    "id": "UNIT_GIANTCORRUPTEDSPIDER",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Giant Corrupted Spider",
@@ -2425,6 +2539,7 @@
   {
    "id": "UNIT_DARKREVENANTIV",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Dark Revenant",
@@ -2443,6 +2558,7 @@
   {
    "id": "UNIT_OGRECOMMANDER",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ogre Commander",
@@ -2463,6 +2579,7 @@
   {
    "id": "UNIT_CORYPHEUS",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Corypheus",
@@ -2487,6 +2604,7 @@
   {
    "id": "UNIT_ARMOREDOGRE",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Armored Ogre",
@@ -2506,6 +2624,7 @@
   {
    "id": "UNIT_SHRIEKALPHA",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shriek Alpha",
@@ -2526,6 +2645,7 @@
   {
    "id": "UNIT_BERESKARN",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bereskarn",
@@ -2546,6 +2666,7 @@
   {
    "id": "UNIT_SHRIEK",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shriek",
@@ -2566,6 +2687,7 @@
   {
    "id": "UNIT_HARVESTERORSINO",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Harvester Orsino",
@@ -2591,6 +2713,7 @@
   {
    "id": "UNIT_ARCANEHORROR",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arcane Horror",
@@ -2611,6 +2734,7 @@
   {
    "id": "UNIT_HUNGERDEMON",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hunger Demon",
@@ -2631,6 +2755,7 @@
   {
    "id": "UNIT_SLOTHDEMON",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sloth Demon",
@@ -2651,6 +2776,7 @@
   {
    "id": "UNIT_RAGEDEMON",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rage Demon",
@@ -2671,6 +2797,7 @@
   {
    "id": "UNIT_SHADE",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shade",
@@ -2691,6 +2818,7 @@
   {
    "id": "UNIT_WINTERSENDDRAGON",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Dragon",
@@ -2712,6 +2840,7 @@
   {
    "id": "UNIT_WINTERSENDROCKWRAITH",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Rock Wraith",
@@ -2732,6 +2861,7 @@
   {
    "id": "UNIT_KINGALISTAIR",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "King Alistair",
@@ -2757,6 +2887,7 @@
   {
    "id": "UNIT_SANDAL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sandal",
@@ -2777,6 +2908,7 @@
   {
    "id": "UNIT_ANORAMACTIR",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Anora Mac Tir",
@@ -2799,6 +2931,7 @@
   {
    "id": "UNIT_KINGCAILAN",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "King Cailan",
@@ -2821,6 +2954,7 @@
   {
    "id": "UNIT_STENOFTHEBERESAAD",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sten of the Beresaad",
@@ -2842,6 +2976,7 @@
   {
    "id": "UNIT_TEMPLARRECRUITALISTAIR",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Templar Recruit Alistair",
@@ -2866,6 +3001,7 @@
   {
    "id": "UNIT_LAYSISTERLELIANA",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lay Sister Leliana",
@@ -2889,6 +3025,7 @@
   {
    "id": "UNIT_WINTERSENDHALLA",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Halla",
@@ -2909,6 +3046,7 @@
   {
    "id": "UNIT_KNIGHTCOMMANDERGREAGOIR",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Commander Greagoir",
@@ -2932,6 +3070,7 @@
   {
    "id": "UNIT_WINTERSENDNUG",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Nug",
@@ -2953,6 +3092,7 @@
   {
    "id": "UNIT_CHASINDWILDER",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chasind Wilder",
@@ -2975,6 +3115,7 @@
   {
    "id": "UNIT_HALLA",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Halla",
@@ -2994,6 +3135,7 @@
   {
    "id": "UNIT_CHASINDSCOUT",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chasind Scout",
@@ -3016,6 +3158,7 @@
   {
    "id": "UNIT_WYNNE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wynne",
@@ -3038,6 +3181,7 @@
   {
    "id": "UNIT_GUARDCAPTAINAVELINE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Guard Captain Aveline",
@@ -3061,6 +3205,7 @@
   {
    "id": "UNIT_VELANNA",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Velanna",
@@ -3083,6 +3228,7 @@
   {
    "id": "UNIT_ZEVRAN",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Zevran",
@@ -3104,6 +3250,7 @@
   {
    "id": "UNIT_THEOLDONE",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Old One",
@@ -3123,6 +3270,7 @@
   {
    "id": "UNIT_SIGRUN",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sigrun",
@@ -3145,6 +3293,7 @@
   {
    "id": "UNIT_LELIANA",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Leliana",
@@ -3167,6 +3316,7 @@
   {
    "id": "UNIT_OGHREN",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Oghren",
@@ -3187,6 +3337,7 @@
   {
    "id": "UNIT_ZATHRIAN",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Zathrian",
@@ -3209,6 +3360,7 @@
   {
    "id": "UNIT_BRANKA",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Branka",
@@ -3231,6 +3383,7 @@
   {
    "id": "UNIT_ASHWRAITH",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ash Wraith",
@@ -3251,6 +3404,7 @@
   {
    "id": "UNIT_FERELDANBANN",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fereldan Bann",
@@ -3273,6 +3427,7 @@
   {
    "id": "UNIT_FERELDANARL",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fereldan Arl",
@@ -3295,6 +3450,7 @@
   {
    "id": "UNIT_FERELDANTEYRN",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fereldan Teyrn",
@@ -3317,6 +3473,7 @@
   {
    "id": "UNIT_TEVINTERLAETANMAGE",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Tevinter Laetan Mage",
@@ -3336,6 +3493,7 @@
   {
    "id": "UNIT_SLAVEFENRIS",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Slave Fenris",
@@ -3358,6 +3516,7 @@
   {
    "id": "UNIT_REDLYRIUMMEREDITH",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Meredith",
@@ -3382,6 +3541,7 @@
   {
    "id": "UNIT_HYBRIS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hybris",
@@ -3401,6 +3561,7 @@
   {
    "id": "UNIT_LOGHAINMACTIR",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Loghain Mac Tir",
@@ -3424,6 +3585,7 @@
   {
    "id": "UNIT_CARESS",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Caress",
@@ -3444,6 +3606,7 @@
   {
    "id": "UNIT_KNIGHTCOMMANDERMEREDITH",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Comm. Meredith",
@@ -3467,6 +3630,7 @@
   {
    "id": "UNIT_ANCIENTROCKWRAITH",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ancient Rock Wraith",
@@ -3486,6 +3650,7 @@
   {
    "id": "UNIT_SHADOWWARRIOR",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shadow Warrior",
@@ -3507,6 +3672,7 @@
   {
    "id": "UNIT_REANIMATEDLEANDRA",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Reanimated Leandra",
@@ -3530,6 +3696,7 @@
   {
    "id": "UNIT_PRIDEABOMINATION",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Pride Abomination",
@@ -3551,6 +3718,7 @@
   {
    "id": "UNIT_SLOTHABOMINATION",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sloth Abomination",
@@ -3571,6 +3739,7 @@
   {
    "id": "UNIT_BARTRANDTETHRAS",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bartrand Tethras",
@@ -3594,6 +3763,7 @@
   {
    "id": "UNIT_TEVINTERARCANEMAGE",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tevinter Arcane Mage",
@@ -3615,6 +3785,7 @@
   {
    "id": "UNIT_SHAHWYRD",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shah Wyrd",
@@ -3635,6 +3806,7 @@
   {
    "id": "UNIT_BARKSPAWN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Barkspawn",
@@ -3658,6 +3830,7 @@
   {
    "id": "UNIT_ANCIENTDARKSPAWN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ancient Darkspawn",
@@ -3678,6 +3851,7 @@
   {
    "id": "UNIT_SCHMOOPLES",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Schmooples",
@@ -3701,6 +3875,7 @@
   {
    "id": "UNIT_FLUFFY",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fluffy",
@@ -3721,6 +3896,7 @@
   {
    "id": "UNIT_SPIKE",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spike",
@@ -3741,6 +3917,7 @@
   {
    "id": "UNIT_CORRUPTEDNUG",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Corrupted Nug",
@@ -3762,6 +3939,7 @@
   {
    "id": "UNIT_NOBLENUG",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Noble Nug",
@@ -3784,6 +3962,7 @@
   {
    "id": "UNIT_MAGENUG",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Mage Nug",
@@ -3806,6 +3985,7 @@
   {
    "id": "UNIT_LEOPOLD",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Leopold",
@@ -3829,6 +4009,7 @@
   {
    "id": "UNIT_KEEPERMARETHARI",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Keeper Marethari",
@@ -3850,6 +4031,7 @@
   {
    "id": "UNIT_CHASINDGENERAL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chasind General",
@@ -3871,6 +4053,7 @@
   {
    "id": "UNIT_SALIT",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Salit",
@@ -3892,6 +4075,7 @@
   {
    "id": "UNIT_ATHENRIL",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Athenril",
@@ -3914,6 +4098,7 @@
   {
    "id": "UNIT_VARTERRAL",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Varterral",
@@ -3935,6 +4120,7 @@
   {
    "id": "UNIT_FREEMARCHER",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Freemarcher",
@@ -3956,6 +4142,7 @@
   {
    "id": "UNIT_ARLATHANGENERAL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arlathan General",
@@ -3976,6 +4163,7 @@
   {
    "id": "UNIT_ARMOREDBEAR",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Armored Bear",
@@ -3995,6 +4183,7 @@
   {
    "id": "UNIT_SAAREBAS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Saarebas",
@@ -4016,6 +4205,7 @@
   {
    "id": "UNIT_DUKEPROSPER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Duke Prosper",
@@ -4039,6 +4229,7 @@
   {
    "id": "UNIT_BROGANDACE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Brogan Dace",
@@ -4061,6 +4252,7 @@
   {
    "id": "UNIT_ARIANE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ariane",
@@ -4081,6 +4273,7 @@
   {
    "id": "UNIT_KINGENDRINAEDUCAN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "King Endrin Aeducan",
@@ -4102,6 +4295,7 @@
   {
    "id": "UNIT_COMMONWHITEWISP",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Common White Wisp",
@@ -4120,6 +4314,7 @@
   {
    "id": "UNIT_UNCOMMONWHITEWISP",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Uncommon White Wisp",
@@ -4138,6 +4333,7 @@
   {
    "id": "UNIT_RAREWHITEWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare White Wisp",
@@ -4156,6 +4352,7 @@
   {
    "id": "UNIT_EPICWHITEWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic White Wisp",
@@ -4174,6 +4371,7 @@
   {
    "id": "UNIT_LEGENDARYWHITEWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary White Wisp",
@@ -4192,6 +4390,7 @@
   {
    "id": "UNIT_COMMONREDWISP",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Common Red Wisp",
@@ -4210,6 +4409,7 @@
   {
    "id": "UNIT_UNCOMMONREDWISP",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Uncommon Red Wisp",
@@ -4228,6 +4428,7 @@
   {
    "id": "UNIT_RAREREDWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare Red Wisp",
@@ -4246,6 +4447,7 @@
   {
    "id": "UNIT_EPICREDWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic Red Wisp",
@@ -4264,6 +4466,7 @@
   {
    "id": "UNIT_LEGENDARYREDWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary Red Wisp",
@@ -4282,6 +4485,7 @@
   {
    "id": "UNIT_COMMONBLACKWISP",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Common Black Wisp",
@@ -4300,6 +4504,7 @@
   {
    "id": "UNIT_UNCOMMONBLACKWISP",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Uncommon Black Wisp",
@@ -4318,6 +4523,7 @@
   {
    "id": "UNIT_RAREBLACKWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare Black Wisp",
@@ -4336,6 +4542,7 @@
   {
    "id": "UNIT_EPICBLACKWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic Black Wisp",
@@ -4354,6 +4561,7 @@
   {
    "id": "UNIT_LEGENDARYBLACKWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary Black Wisp",
@@ -4372,6 +4580,7 @@
   {
    "id": "UNIT_COMMONBLUEWISP",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Common Blue Wisp",
@@ -4390,6 +4599,7 @@
   {
    "id": "UNIT_UNCOMMONBLUEWISP",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Uncommon Blue Wisp",
@@ -4408,6 +4618,7 @@
   {
    "id": "UNIT_RAREBLUEWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare Blue Wisp",
@@ -4426,6 +4637,7 @@
   {
    "id": "UNIT_EPICBLUEWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic Blue Wisp",
@@ -4444,6 +4656,7 @@
   {
    "id": "UNIT_LEGENDARYBLUEWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary Blue Wisp",
@@ -4462,6 +4675,7 @@
   {
    "id": "UNIT_DIAMONDSHALE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Diamond Shale",
@@ -4483,6 +4697,7 @@
   {
    "id": "UNIT_RUBYSHALE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ruby Shale",
@@ -4504,6 +4719,7 @@
   {
    "id": "UNIT_STONEGOLEM",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Stone Golem",
@@ -4525,6 +4741,7 @@
   {
    "id": "UNIT_APOSTATEJOWAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Apostate Jowan",
@@ -4547,6 +4764,7 @@
   {
    "id": "UNIT_THEBARONESS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Baroness",
@@ -4571,6 +4789,7 @@
   {
    "id": "UNIT_CONNORGUERRIN",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Connor Guerrin",
@@ -4595,6 +4814,7 @@
   {
    "id": "UNIT_NATHANIELHOWE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Nathaniel Howe",
@@ -4619,6 +4839,7 @@
   {
    "id": "UNIT_THEFIRST",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The First",
@@ -4639,6 +4860,7 @@
   {
    "id": "UNIT_DRAGONFLEMETH",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragon Flemeth",
@@ -4661,6 +4883,7 @@
   {
    "id": "UNIT_CHEVALIER",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chevalier",
@@ -4683,6 +4906,7 @@
   {
    "id": "UNIT_GHASTARCHER",
    "rarity": "Common",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ghast Archer",
@@ -4703,6 +4927,7 @@
   {
    "id": "UNIT_GHASTBRUTE",
    "rarity": "Common",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ghast Brute",
@@ -4723,6 +4948,7 @@
   {
    "id": "UNIT_THEWITHERED",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Withered",
@@ -4743,6 +4969,7 @@
   {
    "id": "UNIT_THEHERALD",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Herald",
@@ -4763,6 +4990,7 @@
   {
    "id": "UNIT_TALLIS",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tallis",
@@ -4785,6 +5013,7 @@
   {
    "id": "UNIT_BEN-HASSRATH",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ben-Hassrath",
@@ -4806,6 +5035,7 @@
   {
    "id": "UNIT_JUSTICE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Justice",
@@ -4827,6 +5057,7 @@
   {
    "id": "UNIT_THEGRANDOAK",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Grand Oak",
@@ -4847,6 +5078,7 @@
   {
    "id": "UNIT_BYRON",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Byron",
@@ -4869,6 +5101,7 @@
   {
    "id": "UNIT_KNIGHT-CAPTAINCULLEN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Captain Cullen",
@@ -4892,6 +5125,7 @@
   {
    "id": "UNIT_BRONTO",
    "rarity": "Uncommon",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bronto",
@@ -4912,6 +5146,7 @@
   {
    "id": "UNIT_DALISHSOLISWARRIOR",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish Solis Warrior",
@@ -4933,6 +5168,7 @@
   {
    "id": "UNIT_CORRUPTEDSPIDERQUEEN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Corrupted Spider Queen",
@@ -4953,6 +5189,7 @@
   {
    "id": "UNIT_PARAGONCARIDIN",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Paragon Caridin",
@@ -4975,6 +5212,7 @@
   {
    "id": "UNIT_STEELGOLEM",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Steel Golem",
@@ -4996,6 +5234,7 @@
   {
    "id": "UNIT_ULDRED",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Uldred",
@@ -5020,6 +5259,7 @@
   {
    "id": "UNIT_CALADRIUS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Caladrius",
@@ -5042,6 +5282,7 @@
   {
    "id": "UNIT_KINGMARIC",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "King Maric",
@@ -5064,6 +5305,7 @@
   {
    "id": "UNIT_PRINCEBHELEN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Prince Bhelen Aeducan",
@@ -5085,6 +5327,7 @@
   {
    "id": "UNIT_BROODMOTHER",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Broodmother",
@@ -5106,6 +5349,7 @@
   {
    "id": "UNIT_SNUGTHEBRONTO",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Snug the Bronto",
@@ -5129,6 +5373,7 @@
   {
    "id": "UNIT_WITHERFANG",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Witherfang",
@@ -5150,6 +5395,7 @@
   {
    "id": "UNIT_VELGHASTCHIEFTAIN",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Velghast Chieftain",
@@ -5170,6 +5416,7 @@
   {
    "id": "UNIT_GHASTLEADER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ghast Leader",
@@ -5190,6 +5437,7 @@
   {
    "id": "UNIT_CORRUPTEDSPIDERLING",
    "rarity": "Common",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Corrupted Spiderling",
@@ -5210,6 +5458,7 @@
   {
    "id": "UNIT_SWIFTRUNNER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Swiftrunner",
@@ -5232,6 +5481,7 @@
   {
    "id": "UNIT_DALISHLUNARWARRIOR",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish Lunar Warrior",
@@ -5253,6 +5503,7 @@
   {
    "id": "UNIT_GUARDIANOFTHEURN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Guardian of the Urn",
@@ -5275,6 +5526,7 @@
   {
    "id": "UNIT_WARDENCOMMANDERDUNCAN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Warden Commander Duncan",
@@ -5297,6 +5549,7 @@
   {
    "id": "UNIT_GREYWARDENGENEVIEVE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Genevieve",
@@ -5319,6 +5572,7 @@
   {
    "id": "UNIT_LORDPYRALHARROWMONT",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lord Pyral Harrowmont",
@@ -5340,6 +5594,7 @@
   {
    "id": "UNIT_ALAMARRIWARLORD",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Alamarri Warlord",
@@ -5362,6 +5617,7 @@
   {
    "id": "UNIT_RISENOGRE",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Risen Ogre",
@@ -5383,6 +5639,7 @@
   {
    "id": "UNIT_ARLEAMONGUERRIN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arl Eamon Guerrin",
@@ -5405,6 +5662,7 @@
   {
    "id": "UNIT_PRINCESEBASTIANVAEL",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Prince Sebastian Vael",
@@ -5428,6 +5686,7 @@
   {
    "id": "UNIT_KOLGRIM",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Kolgrim",
@@ -5451,6 +5710,7 @@
   {
    "id": "UNIT_EIRIK",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Eirik",
@@ -5475,6 +5735,7 @@
   {
    "id": "UNIT_CULTISTREAVER",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cultist Reaver",
@@ -5499,6 +5760,7 @@
   {
    "id": "UNIT_CULTISTASSASSIN",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cultist Assassin",
@@ -5523,6 +5785,7 @@
   {
    "id": "UNIT_CULTISTOVERSEER",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cultist Overseer",
@@ -5547,6 +5810,7 @@
   {
    "id": "UNIT_CULTISTMAGE",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cultist Mage",
@@ -5572,6 +5836,7 @@
   {
    "id": "UNIT_LYRIUMFENRIS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lyrium Fenris",
@@ -5595,6 +5860,7 @@
   {
    "id": "UNIT_DANARIUS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Danarius",
@@ -5618,6 +5884,7 @@
   {
    "id": "UNIT_SLAVESTATUE",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Slave Statue",
@@ -5640,6 +5907,7 @@
   {
    "id": "UNIT_MHAIRI",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Mhairi",
@@ -5663,6 +5931,7 @@
   {
    "id": "UNIT_RIFTWRAITH",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rift Wraith",
@@ -5682,6 +5951,7 @@
   {
    "id": "UNIT_TERROR",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Terror",
@@ -5701,6 +5971,7 @@
   {
    "id": "UNIT_HIGHSEEKERALDREN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "High Seeker Aldren",
@@ -5723,6 +5994,7 @@
   {
    "id": "UNIT_SEEKERCASSANDRA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Seeker Cassandra",
@@ -5747,6 +6019,7 @@
   {
    "id": "UNIT_STEN,THEARISHOK",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sten, the Arishok",
@@ -5770,6 +6043,7 @@
   {
    "id": "UNIT_CAPTAINISABELA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Captain Isabela",
@@ -5791,6 +6065,7 @@
   {
    "id": "UNIT_SERA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sera",
@@ -5814,6 +6089,7 @@
   {
    "id": "UNIT_SERPOUNCE-A-LOT",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Pounce-A-Lot",
@@ -5835,6 +6111,7 @@
   {
    "id": "UNIT_CROWZEVRAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Crow Zevran",
@@ -5856,6 +6133,7 @@
   {
    "id": "UNIT_SOPHIADRYDEN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sophia Dryden",
@@ -5879,6 +6157,7 @@
   {
    "id": "UNIT_NERIA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Neria",
@@ -5901,6 +6180,7 @@
   {
    "id": "UNIT_GAXKANGTHEUNBOUND",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gaxkang the Unbound",
@@ -5921,6 +6201,7 @@
   {
    "id": "UNIT_SKYHORROR",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sky Horror",
@@ -5941,6 +6222,7 @@
   {
    "id": "UNIT_GREYWARDENVELANNA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Velanna",
@@ -5963,6 +6245,7 @@
   {
    "id": "UNIT_GREYWARDENSIGRUN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Sigrun",
@@ -5986,6 +6269,7 @@
   {
    "id": "UNIT_VIVIENNE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Vivienne",
@@ -6010,6 +6294,7 @@
   {
    "id": "UNIT_ELITEHARLEQUIN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Elite Harlequin",
@@ -6031,6 +6316,7 @@
   {
    "id": "UNIT_REDNUGLYSWEATER",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Nugly Sweater",
@@ -6053,6 +6339,7 @@
   {
    "id": "UNIT_BLUENUGLYSWEATER",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blue Nugly Sweater",
@@ -6075,6 +6362,7 @@
   {
    "id": "UNIT_BLACKNUGLYSWEATER",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Black Nugly Sweater",
@@ -6097,6 +6385,7 @@
   {
    "id": "UNIT_WHITENUGLYSWEATER",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "White Nugly Sweater",
@@ -6119,6 +6408,7 @@
   {
    "id": "UNIT_SILVERHALLA",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Silver Halla",
@@ -6138,6 +6428,7 @@
   {
    "id": "UNIT_PHOENIX",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Phoenix",
@@ -6157,6 +6448,7 @@
   {
    "id": "UNIT_TUSKET",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tusket",
@@ -6177,6 +6469,7 @@
   {
    "id": "UNIT_FENNEC",
    "rarity": "Common",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fennec",
@@ -6196,6 +6489,7 @@
   {
    "id": "UNIT_SPIRITOFHOPE",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit of Hope",
@@ -6216,6 +6510,7 @@
   {
    "id": "UNIT_FELIXALEXIUS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Felix",
@@ -6239,6 +6534,7 @@
   {
    "id": "UNIT_MAEVARIS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Maevaris",
@@ -6261,6 +6557,7 @@
   {
    "id": "UNIT_AURELIANTITUS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Aurelian Titus",
@@ -6284,6 +6581,7 @@
   {
    "id": "UNIT_IMPERIALARCHON",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Imperial Archon",
@@ -6307,6 +6605,7 @@
   {
    "id": "UNIT_MAGISTERPAVUS",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Magister Pavus",
@@ -6328,6 +6627,7 @@
   {
    "id": "UNIT_SOLAS",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Solas",
@@ -6350,6 +6650,7 @@
   {
    "id": "UNIT_DORIAN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dorian",
@@ -6373,6 +6674,7 @@
   {
    "id": "UNIT_GEREONALEXIUS",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gereon Alexius",
@@ -6396,6 +6698,7 @@
   {
    "id": "UNIT_ADVISORCULLEN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Advisor Cullen",
@@ -6419,6 +6722,7 @@
   {
    "id": "UNIT_CILLIAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cillian",
@@ -6442,6 +6746,7 @@
   {
    "id": "UNIT_ABELAS",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Abelas",
@@ -6462,6 +6767,7 @@
   {
    "id": "UNIT_SENTINELSPELLBINDER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sentinel Spellbinder",
@@ -6482,6 +6788,7 @@
   {
    "id": "UNIT_SENTINELSHADOW",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sentinel Shadow",
@@ -6502,6 +6809,7 @@
   {
    "id": "UNIT_SENTINELARCHER",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sentinel Archer",
@@ -6522,6 +6830,7 @@
   {
    "id": "UNIT_THORNTON",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Thornton",
@@ -6544,6 +6853,7 @@
   {
    "id": "UNIT_RASAAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rasaan",
@@ -6565,6 +6875,7 @@
   {
    "id": "UNIT_BEHEMOTH",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Behemoth",
@@ -6588,6 +6899,7 @@
   {
    "id": "UNIT_EMPRESSCELENE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Empress Celene",
@@ -6610,6 +6922,7 @@
   {
    "id": "UNIT_BRIALA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Briala",
@@ -6632,6 +6945,7 @@
   {
    "id": "UNIT_JOSEPHINE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Josephine",
@@ -6654,6 +6968,7 @@
   {
    "id": "UNIT_ASSASSINFLORIANNE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Assassin Florianne",
@@ -6677,6 +6992,7 @@
   {
    "id": "UNIT_FLORIANNE",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Florianne",
@@ -6699,6 +7015,7 @@
   {
    "id": "UNIT_WARDENCOMMANDERCLAREL",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Warden Commander Clarel",
@@ -6722,6 +7039,7 @@
   {
    "id": "UNIT_LORDERIMOND",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lord Erimond",
@@ -6746,6 +7064,7 @@
   {
    "id": "UNIT_BLACKWALL",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blackwall",
@@ -6771,6 +7090,7 @@
   {
    "id": "UNIT_SERSTROUD",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Stroud",
@@ -6793,6 +7113,7 @@
   {
    "id": "UNIT_MADDOX",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Maddox",
@@ -6815,6 +7136,7 @@
   {
    "id": "UNIT_TEMPLARSAMSON",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Templar Samson",
@@ -6837,6 +7159,7 @@
   {
    "id": "UNIT_CHOCOLATENUG",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chocolate Nug",
@@ -6858,6 +7181,7 @@
   {
    "id": "UNIT_AVVARGOATLEGENDARY",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Avvar Goat Legendary",
@@ -6878,6 +7202,7 @@
   {
    "id": "UNIT_AVVARGOATEPIC",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Avvar Goat Epic",
@@ -6899,6 +7224,7 @@
   {
    "id": "UNIT_AVVARGOATRARE",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Avvar Goat Rare",
@@ -6920,6 +7246,7 @@
   {
    "id": "UNIT_AVVARGOATUNCOMMON",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Avvar Goat Uncommon",
@@ -6941,6 +7268,7 @@
   {
    "id": "UNIT_AVVARGOATCOMMON",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Avvar Goat Common",
@@ -6962,6 +7290,7 @@
   {
    "id": "UNIT_LEGENDARYGIANTWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary Giant Wisp",
@@ -6980,6 +7309,7 @@
   {
    "id": "UNIT_EPICGIANTWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic Giant Wisp",
@@ -6998,6 +7328,7 @@
   {
    "id": "UNIT_RAREGIANTWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare Giant Wisp",
@@ -7016,6 +7347,7 @@
   {
    "id": "UNIT_UNCOMMONGIANTWISP",
    "rarity": "Uncommon",
+   "original_rarity": "Uncommon",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Uncommon Giant Wisp",
@@ -7034,6 +7366,7 @@
   {
    "id": "UNIT_COMMONGIANTWISP",
    "rarity": "Common",
+   "original_rarity": "Common",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Common Giant Wisp",
@@ -7052,6 +7385,7 @@
   {
    "id": "UNIT_REDLYRIUMSAMSON",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Samson",
@@ -7075,6 +7409,7 @@
   {
    "id": "UNIT_SAMSON",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Samson",
@@ -7098,6 +7433,7 @@
   {
    "id": "UNIT_REDTEMPLARARCHER",
    "rarity": "Uncommon",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Templar Archer",
@@ -7120,6 +7456,7 @@
   {
    "id": "UNIT_NOBLESPIRITOFJUSTINIA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Noble Spirit of Justinia",
@@ -7141,6 +7478,7 @@
   {
    "id": "UNIT_SPIRITOFJUSTINIA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit of Justinia",
@@ -7162,6 +7500,7 @@
   {
    "id": "UNIT_NOBLESPIRITOFHOPE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Noble Spirit of Hope",
@@ -7182,6 +7521,7 @@
   {
    "id": "UNIT_COLE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cole",
@@ -7204,6 +7544,7 @@
   {
    "id": "UNIT_NIGHTMAREASPECT",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Nightmare Aspect",
@@ -7223,6 +7564,7 @@
   {
    "id": "UNIT_FERELDENFROSTBACK",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fereldan Frostback",
@@ -7244,6 +7586,7 @@
   {
    "id": "UNIT_IRONBULL",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Iron Bull",
@@ -7268,6 +7611,7 @@
   {
    "id": "UNIT_GIANT",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Giant",
@@ -7287,6 +7631,7 @@
   {
    "id": "UNIT_REDLYRIUMGIANT",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Giant",
@@ -7307,6 +7652,7 @@
   {
    "id": "UNIT_HORROR",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Horror",
@@ -7329,6 +7675,7 @@
   {
    "id": "UNIT_RION",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rion",
@@ -7352,6 +7699,7 @@
   {
    "id": "UNIT_DESPAIRDEMON",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Despair Demon",
@@ -7371,6 +7719,7 @@
   {
    "id": "UNIT_ADVISORMORRIGAN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Advisor Morrigan",
@@ -7394,6 +7743,7 @@
   {
    "id": "UNIT_SNOWYWYVERN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Snowy Wyvern",
@@ -7416,6 +7766,7 @@
   {
    "id": "UNIT_VINSOMER",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Vinsomer",
@@ -7437,6 +7788,7 @@
   {
    "id": "UNIT_KATARI",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Katari",
@@ -7459,6 +7811,7 @@
   {
    "id": "UNIT_BERESAADWARRIOR",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Beresaad Warrior",
@@ -7480,6 +7833,7 @@
   {
    "id": "UNIT_THEELDERONE",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Elder One",
@@ -7506,6 +7860,7 @@
   {
    "id": "UNIT_CALPERNIA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Calpernia",
@@ -7528,6 +7883,7 @@
   {
    "id": "UNIT_GURDHAROFSEN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gurd Harofsen",
@@ -7551,6 +7907,7 @@
   {
    "id": "UNIT_THANESVARAHSUN-HAIR",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Thane Svarah Sun-Hair",
@@ -7573,6 +7930,7 @@
   {
    "id": "UNIT_AVVARBARBARIAN",
    "rarity": "Uncommon",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Avvar Barbarian",
@@ -7595,6 +7953,7 @@
   {
    "id": "UNIT_DAGNA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dagna",
@@ -7616,6 +7975,7 @@
   {
    "id": "UNIT_SCOUTHARDING",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Scout Harding",
@@ -7637,6 +7997,7 @@
   {
    "id": "UNIT_AMETHYSTSHALE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Amethyst Shale",
@@ -7658,6 +8019,7 @@
   {
    "id": "UNIT_SANDYHOWLER",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sandy Howler",
@@ -7679,6 +8041,7 @@
   {
    "id": "UNIT_SKYWATCHER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sky Watcher",
@@ -7702,6 +8065,7 @@
   {
    "id": "UNIT_LORDWOOLSLEY",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lord Woolsley",
@@ -7722,6 +8086,7 @@
   {
    "id": "UNIT_THELASTINQUISITOR",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Last Inquisitor",
@@ -7745,6 +8110,7 @@
   {
    "id": "UNIT_PROFESSORBRAMKENRIC",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Professor Bram Kenric",
@@ -7768,6 +8134,7 @@
   {
    "id": "UNIT_THEMOTHER",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Mother",
@@ -7789,6 +8156,7 @@
   {
    "id": "UNIT_THELOST",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Lost",
@@ -7810,6 +8178,7 @@
   {
    "id": "UNIT_THESEEKER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Seeker",
@@ -7830,6 +8199,7 @@
   {
    "id": "UNIT_KREM",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Krem",
@@ -7854,6 +8224,7 @@
   {
    "id": "UNIT_DALISH",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish",
@@ -7876,6 +8247,7 @@
   {
    "id": "UNIT_GATT",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gatt",
@@ -7898,6 +8270,7 @@
   {
    "id": "UNIT_HISSRAD",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hissrad",
@@ -7921,6 +8294,7 @@
   {
    "id": "UNIT_GREATERMISTRAL",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Greater Mistral",
@@ -7941,6 +8315,7 @@
   {
    "id": "UNIT_TAMAR",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tamar",
@@ -7963,6 +8338,7 @@
   {
    "id": "UNIT_APOSTATESOLAS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Apostate Solas",
@@ -7984,6 +8360,7 @@
   {
    "id": "UNIT_GOLDENHALLA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Golden Halla",
@@ -8004,6 +8381,7 @@
   {
    "id": "UNIT_BIANCA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bianca",
@@ -8024,6 +8402,7 @@
   {
    "id": "UNIT_KORBIN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Korbin",
@@ -8046,6 +8425,7 @@
   {
    "id": "UNIT_EMERALDSHALE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Emerald Shale",
@@ -8067,6 +8447,7 @@
   {
    "id": "UNIT_KETOJAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ketojan",
@@ -8088,6 +8469,7 @@
   {
    "id": "UNIT_ARVAARAD",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arvaarad",
@@ -8109,6 +8491,7 @@
   {
    "id": "UNIT_DRAGONMORRIGAN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragon Morrigan",
@@ -8133,6 +8516,7 @@
   {
    "id": "UNIT_GREATBEAR",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Great Bear",
@@ -8152,6 +8536,7 @@
   {
    "id": "UNIT_HALL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hall",
@@ -8173,6 +8558,7 @@
   {
    "id": "UNIT_RIORDAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Riordan",
@@ -8196,6 +8582,7 @@
   {
    "id": "UNIT_FIRSTENCHANTERIRVING",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "First Enchanter Irving",
@@ -8219,6 +8606,7 @@
   {
    "id": "UNIT_ARLRENDONHOWE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arl Rendon Howe",
@@ -8242,6 +8630,7 @@
   {
    "id": "UNIT_KNIGHT-COMMANDERDELRINBARRIS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Commander Delrin Barris",
@@ -8266,6 +8655,7 @@
   {
    "id": "UNIT_SERBELINDADARROW",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Belinda Darrow",
@@ -8291,6 +8681,7 @@
   {
    "id": "UNIT_GASPARDDECHALONS",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gaspard de Chalons",
@@ -8313,6 +8704,7 @@
   {
    "id": "UNIT_MARSHALPROULX",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Marshal Proulx",
@@ -8335,6 +8727,7 @@
   {
    "id": "UNIT_MICHELDECHEVIN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Michel de Chevin",
@@ -8358,6 +8751,7 @@
   {
    "id": "UNIT_NORTHERNHUNTER",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Northern Hunter",
@@ -8378,6 +8772,7 @@
   {
    "id": "UNIT_ARIGENA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arigena",
@@ -8400,6 +8795,7 @@
   {
    "id": "UNIT_JARVIA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Jarvia",
@@ -8422,6 +8818,7 @@
   {
    "id": "UNIT_BERAHT",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Beraht",
@@ -8444,6 +8841,7 @@
   {
    "id": "UNIT_DRAGONOFTHEELDERONE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragon of the Elder One",
@@ -8468,6 +8866,7 @@
   {
    "id": "UNIT_MACRINUS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Macrinus",
@@ -8490,6 +8889,7 @@
   {
    "id": "UNIT_CRASSIUSSERVIS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Crassius Servis",
@@ -8513,6 +8913,7 @@
   {
    "id": "UNIT_NECROMANCERDORIAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Necromancer Dorian",
@@ -8536,6 +8937,7 @@
   {
    "id": "UNIT_SIDONY",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sidony",
@@ -8557,6 +8959,7 @@
   {
    "id": "UNIT_HAKKONWINTERSBREATH",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hakkon Wintersbreath",
@@ -8580,6 +8983,7 @@
   {
    "id": "UNIT_HAKKONITEARCHER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hakkonite Archer",
@@ -8603,6 +9007,7 @@
   {
    "id": "UNIT_HAKKONITEDEFENDER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hakkonite Defender",
@@ -8626,6 +9031,7 @@
   {
    "id": "UNIT_ADVISORLELIANA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Advisor Leliana",
@@ -8650,6 +9056,7 @@
   {
    "id": "UNIT_CHANTRYWARRIOR",
    "rarity": "Uncommon",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chantry Warrior",
@@ -8671,6 +9078,7 @@
   {
    "id": "UNIT_LAMBERTVANREEVES",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lambert van Reeves",
@@ -8695,6 +9103,7 @@
   {
    "id": "UNIT_LUCIUSCORIN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lucius Corin",
@@ -8717,6 +9126,7 @@
   {
    "id": "UNIT_HIGHLANDRAVAGER",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Highland Ravager",
@@ -8737,6 +9147,7 @@
   {
    "id": "UNIT_LOYALBETYARDRAGONSLAYER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Loyal Betyar, Dragonslayer",
@@ -8757,6 +9168,7 @@
   {
    "id": "UNIT_SHA-BRYTOLREVEREDDEFENDER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sha-Brytol Revered Defender",
@@ -8777,6 +9189,7 @@
   {
    "id": "UNIT_ARIQUN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ariqun",
@@ -8799,6 +9212,7 @@
   {
    "id": "UNIT_TAMASSRAN",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tamassran",
@@ -8820,6 +9234,7 @@
   {
    "id": "UNIT_SNOUFLEUR",
    "rarity": "Common",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Snoufleur",
@@ -8840,6 +9255,7 @@
   {
    "id": "UNIT_SANTABLACKWALL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Santa Blackwall",
@@ -8865,6 +9281,7 @@
   {
    "id": "UNIT_ELFIESERA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Elfie Sera",
@@ -8888,6 +9305,7 @@
   {
    "id": "UNIT_DIVINEVIVIENNE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Divine Vivienne",
@@ -8913,6 +9331,7 @@
   {
    "id": "UNIT_TEMPLARKNIGHT-CORPORAL",
    "rarity": "Uncommon",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Templar Knight-Corporal",
@@ -8936,6 +9355,7 @@
   {
    "id": "UNIT_THEMESSENGER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Messenger",
@@ -8956,6 +9376,7 @@
   {
    "id": "UNIT_ARCHDEMONURTHEMIEL",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Archdemon Urthemiel",
@@ -8978,6 +9399,7 @@
   {
    "id": "UNIT_ARGENT",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Argent",
@@ -8999,6 +9421,7 @@
   {
    "id": "UNIT_LUKA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Luka",
@@ -9021,6 +9444,7 @@
   {
    "id": "UNIT_ATAASHI",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ataashi",
@@ -9042,6 +9466,7 @@
   {
    "id": "UNIT_VIDDASALA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Viddasala",
@@ -9063,6 +9488,7 @@
   {
    "id": "UNIT_MOVRANTHEUNDER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Movran the Under",
@@ -9085,6 +9511,7 @@
   {
    "id": "UNIT_HANDOFKORTH",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hand of Korth",
@@ -9107,6 +9534,7 @@
   {
    "id": "UNIT_ARTIFICERVARRIC",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Artificer Varric",
@@ -9130,6 +9558,7 @@
   {
    "id": "UNIT_PALA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Pala",
@@ -9151,6 +9580,7 @@
   {
    "id": "UNIT_ABYSSALHIGHDRAGON",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Abyssal High Dragon",
@@ -9173,6 +9603,7 @@
   {
    "id": "UNIT_PROFESSORFREDERIC",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Professor Frederic",
@@ -9195,6 +9626,7 @@
   {
    "id": "UNIT_REGALYAND'MARCALL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Regalyan D'Marcall",
@@ -9217,6 +9649,7 @@
   {
    "id": "UNIT_YOUNGCASSANDRA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Young Cassandra",
@@ -9240,6 +9673,7 @@
   {
    "id": "UNIT_RAREWHITEBLUEWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare White Blue Wisp",
@@ -9258,6 +9692,7 @@
   {
    "id": "UNIT_EPICWHITEBLUEWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic White Blue Wisp",
@@ -9276,6 +9711,7 @@
   {
    "id": "UNIT_LEGENDARYWHITEBLUEWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary White Blue Wisp",
@@ -9294,6 +9730,7 @@
   {
    "id": "UNIT_RAREBLUEREDWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare Blue Red Wisp",
@@ -9312,6 +9749,7 @@
   {
    "id": "UNIT_EPICBLUEREDWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic Blue Red Wisp",
@@ -9330,6 +9768,7 @@
   {
    "id": "UNIT_LEGENDARYBLUEREDWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary Blue Red Wisp",
@@ -9348,6 +9787,7 @@
   {
    "id": "UNIT_RAREBLUEBLACKWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare Blue Black Wisp",
@@ -9366,6 +9806,7 @@
   {
    "id": "UNIT_EPICBLUEBLACKWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic Blue Black Wisp",
@@ -9384,6 +9825,7 @@
   {
    "id": "UNIT_LEGENDARYBLUEBLACKWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary Blue Black Wisp",
@@ -9402,6 +9844,7 @@
   {
    "id": "UNIT_RAREWHITEREDWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare White Red Wisp",
@@ -9420,6 +9863,7 @@
   {
    "id": "UNIT_EPICWHITEREDWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic White Red Wisp",
@@ -9438,6 +9882,7 @@
   {
    "id": "UNIT_LEGENDARYWHITEREDWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary White Red Wisp",
@@ -9456,6 +9901,7 @@
   {
    "id": "UNIT_RAREWHITEBLACKWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare White Black Wisp",
@@ -9474,6 +9920,7 @@
   {
    "id": "UNIT_EPICWHITEBLACKWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic White Black Wisp",
@@ -9492,6 +9939,7 @@
   {
    "id": "UNIT_LEGENDARYWHITEBLACKWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary White Black Wisp",
@@ -9510,6 +9958,7 @@
   {
    "id": "UNIT_RAREREDBLACKWISP",
    "rarity": "Rare",
+   "original_rarity": "Rare",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Rare Red Black Wisp",
@@ -9528,6 +9977,7 @@
   {
    "id": "UNIT_EPICREDBLACKWISP",
    "rarity": "Epic",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Epic Red Black Wisp",
@@ -9546,6 +9996,7 @@
   {
    "id": "UNIT_LEGENDARYREDBLACKWISP",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Legendary Red Black Wisp",
@@ -9564,6 +10015,7 @@
   {
    "id": "UNIT_MYTHICREDWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic Red Wisp",
@@ -9582,6 +10034,7 @@
   {
    "id": "UNIT_MYTHICBLUEWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic Blue Wisp",
@@ -9600,6 +10053,7 @@
   {
    "id": "UNIT_MYTHICBLACKWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic Black Wisp",
@@ -9618,6 +10072,7 @@
   {
    "id": "UNIT_MYTHICWHITEWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic White Wisp",
@@ -9636,6 +10091,7 @@
   {
    "id": "UNIT_SAARATH",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Saarath",
@@ -9657,6 +10113,7 @@
   {
    "id": "UNIT_QUNARISHOCKTROOPER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Qunari Shock Trooper",
@@ -9679,6 +10136,7 @@
   {
    "id": "UNIT_GORDIAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gordian",
@@ -9701,6 +10159,7 @@
   {
    "id": "UNIT_MALIPHANT",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Maliphant",
@@ -9722,6 +10181,7 @@
   {
    "id": "UNIT_SPIRITOFCOLE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit of Cole",
@@ -9744,6 +10204,7 @@
   {
    "id": "UNIT_SPIRITOFFAITH",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit of Faith",
@@ -9764,6 +10225,7 @@
   {
    "id": "UNIT_NUGGALOPE",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Nuggalope",
@@ -9786,6 +10248,7 @@
   {
    "id": "UNIT_GUARDSMANDONNIC",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Guardsman Donnic",
@@ -9808,6 +10271,7 @@
   {
    "id": "UNIT_JERRIKDACE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Jerrik Dace",
@@ -9829,6 +10293,7 @@
   {
    "id": "UNIT_AMBERSHALE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Amber Shale",
@@ -9850,6 +10315,7 @@
   {
    "id": "UNIT_VENATORIGLADIATOR",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Venatori Gladiator",
@@ -9872,6 +10338,7 @@
   {
    "id": "UNIT_ERASTHENES",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Erasthenes",
@@ -9893,6 +10360,7 @@
   {
    "id": "UNIT_REDJENNYSERA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Jenny Sera",
@@ -9916,6 +10384,7 @@
   {
    "id": "UNIT_PLAIDEWEAVEVIVIENNE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Plaideweave Vivienne",
@@ -9940,6 +10409,7 @@
   {
    "id": "UNIT_PLAIDEWEAVEDORIAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Plaideweave Dorian",
@@ -9963,6 +10433,7 @@
   {
    "id": "UNIT_SERJORY",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Jory",
@@ -9984,6 +10455,7 @@
   {
    "id": "UNIT_DAVETH",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Daveth",
@@ -10006,6 +10478,7 @@
   {
    "id": "UNIT_RENN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Renn",
@@ -10027,6 +10500,7 @@
   {
    "id": "UNIT_NUGKING",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Nug King",
@@ -10048,6 +10522,7 @@
   {
    "id": "UNIT_GREYWARDENKNIGHT",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Knight",
@@ -10070,6 +10545,7 @@
   {
    "id": "UNIT_GREYWARDENFIONA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Fiona",
@@ -10093,6 +10569,7 @@
   {
    "id": "UNIT_CRETAHL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cretahl",
@@ -10114,6 +10591,7 @@
   {
    "id": "UNIT_SHA-BRYTOLEARTHSHAKER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sha-Brytol Earthshaker",
@@ -10134,6 +10612,7 @@
   {
    "id": "UNIT_COMMANDERDUHAIME",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Commander Duhaime",
@@ -10157,6 +10636,7 @@
   {
    "id": "UNIT_VENATORIMARKSMAN",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Venatori Marksman",
@@ -10179,6 +10659,7 @@
   {
    "id": "UNIT_FEN'HAREL",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fen'Harel",
@@ -10199,6 +10680,7 @@
   {
    "id": "UNIT_MARYDEN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Maryden",
@@ -10220,6 +10702,7 @@
   {
    "id": "UNIT_GOLDENNUG",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Golden Nug",
@@ -10240,6 +10723,7 @@
   {
    "id": "UNIT_SNOWBALL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Snowball",
@@ -10260,6 +10744,7 @@
   {
    "id": "UNIT_CAHIR",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cahir",
@@ -10281,6 +10766,7 @@
   {
    "id": "UNIT_DRAGONLING",
    "rarity": "Uncommon",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragonling",
@@ -10301,6 +10787,7 @@
   {
    "id": "UNIT_DIVINELELIANA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Divine Leliana",
@@ -10325,6 +10812,7 @@
   {
    "id": "UNIT_MARJOLAINE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Marjolaine",
@@ -10347,6 +10835,7 @@
   {
    "id": "UNIT_REDTEMPLARSHADOW",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Templar Shadow",
@@ -10369,6 +10858,7 @@
   {
    "id": "UNIT_REDTEMPLARGUARD",
    "rarity": "Uncommon",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Templar Guard",
@@ -10391,6 +10881,7 @@
   {
    "id": "UNIT_KNIGHT-ENCHANTERVIVIENNE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Enchanter Vivienne",
@@ -10416,6 +10907,7 @@
   {
    "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Enchanter Helaine",
@@ -10438,6 +10930,7 @@
   {
    "id": "UNIT_SHAPERVALTA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shaper Valta",
@@ -10458,6 +10951,7 @@
   {
    "id": "UNIT_SHA-BRYTOLBOLTER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sha-Brytol Bolter",
@@ -10478,6 +10972,7 @@
   {
    "id": "UNIT_PARAGONBRANKA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Paragon Branka",
@@ -10500,6 +10995,7 @@
   {
    "id": "UNIT_DEEPSTALKERMATRIARCH",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Deepstalker Matriarch",
@@ -10520,6 +11016,7 @@
   {
    "id": "UNIT_GAMORDANSTORMRIDER",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gamordan Stormrider",
@@ -10541,6 +11038,7 @@
   {
    "id": "UNIT_DWORKINGLAVONAK",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dworkin Glavonak",
@@ -10562,6 +11060,7 @@
   {
    "id": "UNIT_BATTLEMASTERGARRETTHAWKE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Battlemaster Garrett Hawke",
@@ -10586,6 +11085,7 @@
   {
    "id": "UNIT_BATTLEMASTERMARIANHAWKE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Battlemaster Marian Hawke",
@@ -10610,6 +11110,7 @@
   {
    "id": "UNIT_REDLYRIUMIRONBULL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Iron Bull",
@@ -10634,6 +11135,7 @@
   {
    "id": "UNIT_NOBLEKINGCAILAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Noble King Cailan",
@@ -10656,6 +11158,7 @@
   {
    "id": "UNIT_ZITHER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "ZITHER!",
@@ -10678,6 +11181,7 @@
   {
    "id": "UNIT_LILY",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lily",
@@ -10699,6 +11203,7 @@
   {
    "id": "UNIT_DUKECYRIL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Duke Cyril",
@@ -10721,6 +11226,7 @@
   {
    "id": "UNIT_DIVINECASSANDRA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Divine Cassandra",
@@ -10745,6 +11251,7 @@
   {
    "id": "UNIT_BROTHERGENITIVI",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Brother Genitivi",
@@ -10767,6 +11274,7 @@
   {
    "id": "UNIT_BLIGHTEDOGHREN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Oghren",
@@ -10789,6 +11297,7 @@
   {
    "id": "UNIT_LARIUS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Larius",
@@ -10811,6 +11320,7 @@
   {
    "id": "UNIT_TITANHEARTGUARDIAN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Titan Heart Guardian",
@@ -10833,6 +11343,7 @@
   {
    "id": "UNIT_SHA-BRYTOLSTALKER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sha-Brytol Stalker",
@@ -10853,6 +11364,7 @@
   {
    "id": "UNIT_VISCOUNTVARRIC",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Viscount Varric",
@@ -10876,6 +11388,7 @@
   {
    "id": "UNIT_PIOTINAEDUCAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Piotin Aeducan",
@@ -10897,6 +11410,7 @@
   {
    "id": "UNIT_HUNTERSHADEDRACOLISK",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hunter Shade Dracolisk",
@@ -10917,6 +11431,7 @@
   {
    "id": "UNIT_SHARPTAILDRACOLISK",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sharp-tail Dracolisk",
@@ -10937,6 +11452,7 @@
   {
    "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Primal-Trained Longma",
@@ -10957,6 +11473,7 @@
   {
    "id": "UNIT_MOUNTAINDRACOLISK",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Mountain Dracolisk",
@@ -10977,6 +11494,7 @@
   {
    "id": "UNIT_IMSHAEL",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Imshael",
@@ -10999,6 +11517,7 @@
   {
    "id": "UNIT_LIBRARIAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Librarian",
@@ -11018,6 +11537,7 @@
   {
    "id": "UNIT_ARCANEGARRETTHAWKE",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arcane Garrett Hawke",
@@ -11043,6 +11563,7 @@
   {
    "id": "UNIT_ARCANEMARIANHAWKE",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arcane Marian Hawke",
@@ -11068,6 +11589,7 @@
   {
    "id": "UNIT_REDLYRIUMBLACKWALL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Blackwall",
@@ -11093,6 +11615,7 @@
   {
    "id": "UNIT_ALPHAGOAT",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Alpha Goat",
@@ -11113,6 +11636,7 @@
   {
    "id": "UNIT_MAGISTERDORIAN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Magister Dorian",
@@ -11136,6 +11660,7 @@
   {
    "id": "UNIT_VENATORIZEALOT",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Venatori Zealot",
@@ -11158,6 +11683,7 @@
   {
    "id": "UNIT_KALTENZAHN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Kaltenzahn",
@@ -11179,6 +11705,7 @@
   {
    "id": "UNIT_SERWESLEYVALLEN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Wesley Vallen",
@@ -11201,6 +11728,7 @@
   {
    "id": "UNIT_BLIGHTEDZEVRAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Zevran",
@@ -11223,6 +11751,7 @@
   {
    "id": "UNIT_DRUFFALO",
    "rarity": "Common",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Druffalo",
@@ -11243,6 +11772,7 @@
   {
    "id": "UNIT_GREYWARDENLOGHAIN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Loghain",
@@ -11267,6 +11797,7 @@
   {
    "id": "UNIT_GREATERFROSTBACKELK",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Greater Frostback Elk",
@@ -11287,6 +11818,7 @@
   {
    "id": "UNIT_NIGHTMARE",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Nightmare",
@@ -11307,6 +11839,7 @@
   {
    "id": "UNIT_GIBBERINGHORROR",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gibbering Horror",
@@ -11327,6 +11860,7 @@
   {
    "id": "UNIT_SABOTEURGARRETTHAWKE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Saboteur Garrett Hawke",
@@ -11351,6 +11885,7 @@
   {
    "id": "UNIT_SABOTEURMARIANHAWKE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Saboteur Marian Hawke",
@@ -11375,6 +11910,7 @@
   {
    "id": "UNIT_THEAUGUR",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Augur",
@@ -11397,6 +11933,7 @@
   {
    "id": "UNIT_SIGRIDGULDSDOTTEN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sigrid Guldsdotten",
@@ -11421,6 +11958,7 @@
   {
    "id": "UNIT_MYTHICGIANTWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic Giant Wisp",
@@ -11439,6 +11977,7 @@
   {
    "id": "UNIT_FAIRBANKS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fairbanks",
@@ -11462,6 +12001,7 @@
   {
    "id": "UNIT_THEDOWAGER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Dowager",
@@ -11484,6 +12024,7 @@
   {
    "id": "UNIT_THOMRAINIER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Thom Rainier",
@@ -11507,6 +12048,7 @@
   {
    "id": "UNIT_HIVERNAL",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hivernal",
@@ -11528,6 +12070,7 @@
   {
    "id": "UNIT_ICEGIANT",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ice Giant",
@@ -11548,6 +12091,7 @@
   {
    "id": "UNIT_GRANDENCHANTERVIVIENNE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grand Enchanter Vivienne",
@@ -11571,6 +12115,7 @@
   {
    "id": "UNIT_AUGUSTRAM",
    "rarity": "Common",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "August Ram",
@@ -11590,6 +12135,7 @@
   {
    "id": "UNIT_WINTERSENDCULLEN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Cullen",
@@ -11613,6 +12159,7 @@
   {
    "id": "UNIT_REINDEERMABARI",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Reindeer Mabari",
@@ -11632,6 +12179,7 @@
   {
    "id": "UNIT_GUARDIANOFMYTHAL",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Guardian of Mythal",
@@ -11653,6 +12201,7 @@
   {
    "id": "UNIT_GHOSTOFTHESPIRE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ghost of the Spire",
@@ -11673,6 +12222,7 @@
   {
    "id": "UNIT_CHARTER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Charter",
@@ -11694,6 +12244,7 @@
   {
    "id": "UNIT_RITTS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ritts",
@@ -11715,6 +12266,7 @@
   {
    "id": "UNIT_ENVYDEMON",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Envy Demon",
@@ -11735,6 +12287,7 @@
   {
    "id": "UNIT_XEBENKECK",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Xebenkeck",
@@ -11755,6 +12308,7 @@
   {
    "id": "UNIT_NAISHE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Naishe",
@@ -11776,6 +12330,7 @@
   {
    "id": "UNIT_DRAGONMALVERNIS",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dragon Malvernis",
@@ -11799,6 +12354,7 @@
   {
    "id": "UNIT_MALVERNIS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Malvernis",
@@ -11821,6 +12377,7 @@
   {
    "id": "UNIT_FORGEMASTER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Forge Master",
@@ -11841,6 +12398,7 @@
   {
    "id": "UNIT_ARLTEAGANGUERRIN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Arl Teagan Guerrin",
@@ -11863,6 +12421,7 @@
   {
    "id": "UNIT_MOTHERGISELLE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Mother Giselle",
@@ -11885,6 +12444,7 @@
   {
    "id": "UNIT_DIVINEGUARD",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Divine Guard",
@@ -11906,6 +12466,7 @@
   {
    "id": "UNIT_SPIRITOFSHARTAN",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit of Shartan",
@@ -11927,6 +12488,7 @@
   {
    "id": "UNIT_MARIUS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Marius",
@@ -11949,6 +12511,7 @@
   {
    "id": "UNIT_TESSAFORSYTHIA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tessa Forsythia",
@@ -11971,6 +12534,7 @@
   {
    "id": "UNIT_GURN",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gurn",
@@ -11990,6 +12554,7 @@
   {
    "id": "UNIT_MYTHICREDBLACKWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic Red Black Wisp",
@@ -12008,6 +12573,7 @@
   {
    "id": "UNIT_MYTHICWHITEBLACKWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic White Black Wisp",
@@ -12026,6 +12592,7 @@
   {
    "id": "UNIT_MYTHICWHITEREDWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic White Red Wisp",
@@ -12044,6 +12611,7 @@
   {
    "id": "UNIT_MYTHICBLUEBLACKWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic Blue Black Wisp",
@@ -12062,6 +12630,7 @@
   {
    "id": "UNIT_MYTHICBLUEREDWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic Blue Red Wisp",
@@ -12080,6 +12649,7 @@
   {
    "id": "UNIT_MYTHICWHITEBLUEWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic White Blue Wisp",
@@ -12098,6 +12668,7 @@
   {
    "id": "UNIT_QUNARIDEFENDER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Qunari Defender",
@@ -12120,6 +12691,7 @@
   {
    "id": "UNIT_REDLYRIUMNUG",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Nug",
@@ -12141,6 +12713,7 @@
   {
    "id": "UNIT_FADE-TOUCHEDLURKER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Fade-Touched Lurker",
@@ -12161,6 +12734,7 @@
   {
    "id": "UNIT_RHYS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Rhys",
@@ -12184,6 +12758,7 @@
   {
    "id": "UNIT_EVANGELINE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Evangeline",
@@ -12208,6 +12783,7 @@
   {
    "id": "UNIT_STORVACKER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Storvacker",
@@ -12230,6 +12806,7 @@
   {
    "id": "UNIT_HISSERA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hissera",
@@ -12252,6 +12829,7 @@
   {
    "id": "UNIT_SPIRITCHAMPION",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit Champion",
@@ -12273,6 +12851,7 @@
   {
    "id": "UNIT_SERAARONHAWTHORNE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ser Aaron Hawthorne",
@@ -12294,6 +12873,7 @@
   {
    "id": "UNIT_VAEA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Vaea",
@@ -12314,6 +12894,7 @@
   {
    "id": "UNIT_JANEKA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Janeka",
@@ -12335,6 +12916,7 @@
   {
    "id": "UNIT_GREYWARDENBANNER",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Grey Warden Banner",
@@ -12354,6 +12936,7 @@
   {
    "id": "UNIT_MAFERATH",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Maferath",
@@ -12377,6 +12960,7 @@
   {
    "id": "UNIT_REVENANTGURD",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Revenant Gurd",
@@ -12400,6 +12984,7 @@
   {
    "id": "UNIT_HAKKONITESPELLBINDER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hakkonite Spellbinder",
@@ -12423,6 +13008,7 @@
   {
    "id": "UNIT_BETHANYHAWKE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bethany Hawke",
@@ -12447,6 +13033,7 @@
   {
    "id": "UNIT_INQUISITORAMERIDAN",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Inquisitor Ameridan",
@@ -12470,6 +13057,7 @@
   {
    "id": "UNIT_ARCHONRADONIS",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Archon Radonis",
@@ -12492,6 +13080,7 @@
   {
    "id": "UNIT_TEVINTERBANNER",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tevinter Banner",
@@ -12511,6 +13100,7 @@
   {
    "id": "UNIT_SHIANNI",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shianni",
@@ -12532,6 +13122,7 @@
   {
    "id": "UNIT_LURKER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lurker",
@@ -12551,6 +13142,7 @@
   {
    "id": "UNIT_LADYSEEKERCASSANDRA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lady Seeker Cassandra",
@@ -12575,6 +13167,7 @@
   {
    "id": "UNIT_CARVERHAWKE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Carver Hawke",
@@ -12598,6 +13191,7 @@
   {
    "id": "UNIT_TEMPLARBANNER",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Templar Banner",
@@ -12617,6 +13211,7 @@
   {
    "id": "UNIT_KITTY",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Kitty",
@@ -12638,6 +13233,7 @@
   {
    "id": "UNIT_XENONTHEANTIQUARIAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Xenon the Antiquarian",
@@ -12659,6 +13255,7 @@
   {
    "id": "UNIT_INVISIBLENUG",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Invisible Nug",
@@ -12679,6 +13276,7 @@
   {
    "id": "UNIT_AVERNUS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Avernus",
@@ -12702,6 +13300,7 @@
   {
    "id": "UNIT_GREATDRAGON",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Great Dragon",
@@ -12723,6 +13322,7 @@
   {
    "id": "UNIT_BEASTOFTELLARISWAMPS",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Beast of Tellari Swamps",
@@ -12744,6 +13344,7 @@
   {
    "id": "UNIT_THEDARKTHEURGE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Dark Theurge",
@@ -12764,6 +13365,7 @@
   {
    "id": "UNIT_POSSESSEDOGRECOMMANDER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Possessed Ogre Commander",
@@ -12785,6 +13387,7 @@
   {
    "id": "UNIT_BLIGHTEDFENNEC",
    "rarity": "Uncommon",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Fennec",
@@ -12806,6 +13409,7 @@
   {
    "id": "UNIT_KINGCALENHAD",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "King Calenhad",
@@ -12829,6 +13433,7 @@
   {
    "id": "UNIT_FERELDENBANNER",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ferelden Banner",
@@ -12848,6 +13453,7 @@
   {
    "id": "UNIT_REDLYRIUMBARTRAND",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Red Lyrium Bartrand",
@@ -12871,6 +13477,7 @@
   {
    "id": "UNIT_GARAHEL",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Garahel",
@@ -12892,6 +13499,7 @@
   {
    "id": "UNIT_ISSEYA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Isseya",
@@ -12914,6 +13522,7 @@
   {
    "id": "UNIT_WILDSYLVAN",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wild Sylvan",
@@ -12936,6 +13545,7 @@
   {
    "id": "UNIT_KEEPERZATHRIAN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Keeper Zathrian",
@@ -12958,6 +13568,7 @@
   {
    "id": "UNIT_THEHIGHESTONE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Highest One",
@@ -12979,6 +13590,7 @@
   {
    "id": "UNIT_DALISHBANNER",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dalish Banner",
@@ -12998,6 +13610,7 @@
   {
    "id": "UNIT_GREATERMISTRALDRAGONLING",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Greater Mistral Dragonling",
@@ -13018,6 +13631,7 @@
   {
    "id": "UNIT_CHAUNCEY",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Chauncey",
@@ -13038,6 +13652,7 @@
   {
    "id": "UNIT_SHAPESHIFTERMORRIGANI",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shapeshifter Morrigan",
@@ -13058,6 +13673,7 @@
   {
    "id": "UNIT_AVVARWARNUG",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Avvar War Nug",
@@ -13079,6 +13695,7 @@
   {
    "id": "UNIT_EMERALDGRAVESNUG",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Emerald Graves Nug",
@@ -13100,6 +13717,7 @@
   {
    "id": "UNIT_KNIGHT-CAPTAINDENAM",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Knight-Captain Denam",
@@ -13123,6 +13741,7 @@
   {
    "id": "UNIT_WARDEN-COMMANDERSOPHIA",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Warden-Commander Sophia",
@@ -13147,6 +13766,7 @@
   {
    "id": "UNIT_PARVOLLENBANNER",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Par Vollen Banner",
@@ -13166,6 +13786,7 @@
   {
    "id": "UNIT_SKYCULTIST",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sky Cultist",
@@ -13188,6 +13809,7 @@
   {
    "id": "UNIT_VINSOMERDRAGONLING",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Vinsomer Dragonling",
@@ -13209,6 +13831,7 @@
   {
    "id": "UNIT_TORPOR",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Torpor",
@@ -13229,6 +13852,7 @@
   {
    "id": "UNIT_WRYME",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wryme",
@@ -13249,6 +13873,7 @@
   {
    "id": "UNIT_SPIRITSPELLBINDER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit Spellbinder",
@@ -13270,6 +13895,7 @@
   {
    "id": "UNIT_ARCHIVIST",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Archivist",
@@ -13290,6 +13916,7 @@
   {
    "id": "UNIT_PHANTASMALWARRIOR",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Phantasmal Warrior",
@@ -13312,6 +13939,7 @@
   {
    "id": "UNIT_KALTENZAHNDRAGONLING",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Kaltenzahn Dragonling",
@@ -13333,6 +13961,7 @@
   {
    "id": "UNIT_ASHA'BELLANAR",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Asha'Bellanar",
@@ -13355,6 +13984,7 @@
   {
    "id": "UNIT_MYTHICPRESTIGEWISP",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "IV",
    "name": "Mythic Prestige Wisp",
@@ -13373,6 +14003,7 @@
   {
    "id": "UNIT_STONEJAW",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Stonejaw",
@@ -13393,6 +14024,7 @@
   {
    "id": "UNIT_LEANDRAAMELL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Leandra Amell",
@@ -13415,6 +14047,7 @@
   {
    "id": "UNIT_GAMORDANSTORMRIDERDRAGONLING",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gamordan Stormrider Dragonling",
@@ -13436,6 +14069,7 @@
   {
    "id": "UNIT_SHADOWNUG",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Shadow Nug",
@@ -13458,6 +14092,7 @@
   {
    "id": "UNIT_QUEENOFTHEEASTERNSEAS",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Queen of the Eastern Seas",
@@ -13480,6 +14115,7 @@
   {
    "id": "UNIT_SPIRITARCHER",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Spirit Archer",
@@ -13501,6 +14137,7 @@
   {
    "id": "UNIT_PHANTASMALSHADOW",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Phantasmal Shadow",
@@ -13522,6 +14159,7 @@
   {
    "id": "UNIT_HUNTERHORNSHRIKE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hunterhorn Shrike",
@@ -13542,6 +14180,7 @@
   {
    "id": "UNIT_SUNSHINE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sunshine",
@@ -13566,6 +14205,7 @@
   {
    "id": "UNIT_TEMPESTSERAI",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tempest Sera",
@@ -13587,6 +14227,7 @@
   {
    "id": "UNIT_DUKEREMACHEDELYDES",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Duke Remache de Lydes",
@@ -13609,6 +14250,7 @@
   {
    "id": "UNIT_ORLESIANBANNER",
    "rarity": "Mythic",
+   "original_rarity": "Mythic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Orlesian Banner",
@@ -13628,6 +14270,7 @@
   {
    "id": "UNIT_WILDHART",
    "rarity": "Uncommon",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wild Hart",
@@ -13648,6 +14291,7 @@
   {
    "id": "UNIT_KEEPERDESHANNA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Keeper Deshanna",
@@ -13671,6 +14315,7 @@
   {
    "id": "UNIT_DUKEANTOINEOFWYCOME",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Duke Antoine of Wycome",
@@ -13694,6 +14339,7 @@
   {
    "id": "UNIT_HURLOCKVANGUARD",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hurlock Vanguard",
@@ -13714,6 +14360,7 @@
   {
    "id": "UNIT_LADYOFTHEFOREST",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lady of the Forest",
@@ -13737,6 +14384,7 @@
   {
    "id": "UNIT_GATEKEEPER",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gatekeeper",
@@ -13760,6 +14408,7 @@
   {
    "id": "UNIT_CASSIAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Cassian",
@@ -13783,6 +14432,7 @@
   {
    "id": "UNIT_BULFA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Bulfa",
@@ -13805,6 +14455,7 @@
   {
    "id": "UNIT_DANYLA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Danyla",
@@ -13828,6 +14479,7 @@
   {
    "id": "UNIT_PROFANE",
    "rarity": "Uncommon",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Profane",
@@ -13850,6 +14502,7 @@
   {
    "id": "UNIT_RUNICGOLEM",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Runic Golem",
@@ -13871,6 +14524,7 @@
   {
    "id": "UNIT_DAILAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Dailan",
@@ -13892,6 +14546,7 @@
   {
    "id": "UNIT_TRANQUILMADDOX",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Tranquil Maddox",
@@ -13914,6 +14569,7 @@
   {
    "id": "UNIT_THEFORMLESSONE",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Formless One",
@@ -13935,6 +14591,7 @@
   {
    "id": "UNIT_BLIGHTEDHALLA",
    "rarity": "Uncommon",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Blighted Halla",
@@ -13956,6 +14613,7 @@
   {
    "id": "UNIT_WINTERSENDNUGGALOPE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Nuggalope",
@@ -13979,6 +14637,7 @@
   {
    "id": "UNIT_SUNDERMOUNTVARTERRAL",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Sundermount Varterral",
@@ -14002,6 +14661,7 @@
   {
    "id": "UNIT_GALLOWSGUARDIAN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Gallows Guardian",
@@ -14025,6 +14685,7 @@
   {
    "id": "UNIT_LANAYA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Lanaya",
@@ -14046,6 +14707,7 @@
   {
    "id": "UNIT_THEMADHERMIT",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "The Mad Hermit",
@@ -14070,6 +14732,7 @@
   {
    "id": "UNIT_GREATERRAGEDEMON",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Greater Rage Demon",
@@ -14091,6 +14754,7 @@
   {
    "id": "UNIT_OGREALPHA",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Ogre Alpha",
@@ -14112,6 +14776,7 @@
   {
    "id": "UNIT_WINTERSENDVIVIENNE",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Vivienne",
@@ -14137,6 +14802,7 @@
   {
    "id": "UNIT_WINTERSENDHARLEQUIN",
    "rarity": "Rare",
+   "original_rarity": "Epic",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Wintersend Harlequin",
@@ -14159,6 +14825,7 @@
   {
    "id": "UNIT_AUTUMN",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Autumn",
@@ -14181,6 +14848,7 @@
   {
    "id": "UNIT_THADDEUSGIGANTUSCRUMBUM",
    "rarity": "Rare",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Thaddeus Gigantus Crumbum",
@@ -14203,6 +14871,7 @@
   {
    "id": "UNIT_HEROOFRIVERDANE",
    "rarity": "Legendary",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Hero of River Dane",
@@ -14225,6 +14894,7 @@
   {
    "id": "UNIT_QUEENANORATHEIRIN",
    "rarity": "Epic",
+   "original_rarity": "Legendary",
    "obtainable": true,
    "initial_tier": "I",
    "name": "Queen Anora Theirin",

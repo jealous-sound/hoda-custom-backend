@@ -87,6 +87,10 @@ func (h *hero) rarity() catalog.Rarity {
 	return h.def.Rarity
 }
 
+func (h *hero) shownRarity() catalog.Rarity {
+	return h.def.OriginalRarity
+}
+
 func (h *hero) levelCap(tier int) int64 {
 	levelLimit := int64(h.def.Tiers[tier].MaxLevel)
 	if h.ascended {

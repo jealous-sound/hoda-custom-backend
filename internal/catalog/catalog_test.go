@@ -163,3 +163,24 @@ func TestEventRanksBelowTheRewardTablePayItsLastTier(t *testing.T) {
 		t.Error("an event without rank rewards pays one")
 	}
 }
+
+func TestARetieredHeroMeetsRequirementsAtTheRarityItIsShownAt(t *testing.T) {
+	c := mustDefault(t)
+	const drawnLegendaryPlayedAsRare = "UNIT_SISTERNIGHTINGALE"
+	hero, ok := c.Hero(drawnLegendaryPlayedAsRare)
+	if !ok {
+		t.Fatalf("%s is not in the hero pool", drawnLegendaryPlayedAsRare)
+	}
+	if hero.Rarity != RarityRare || hero.OriginalRarity != RarityLegendary {
+		t.Fatalf("%s plays at %d and is shown at %d", hero.ID, hero.Rarity, hero.OriginalRarity)
+	}
+	epicOrBetter := ExpeditionTrait{Rarity: RarityEpic}
+	if !epicOrBetter.Matches(hero, hero.OriginalRarity) {
+		t.Fatalf("%s shown as Legendary fails an Epic-or-better slot", hero.ID)
+	}
+	for _, hero := range c.Heroes {
+		if hero.OriginalRarity < hero.Rarity {
+			t.Fatalf("%s is shown below the rarity it plays at", hero.ID)
+		}
+	}
+}
