@@ -3,7 +3,6 @@ package account
 import (
 	"crypto/rand"
 	"crypto/sha256"
-	"crypto/subtle"
 	"encoding/hex"
 	"encoding/json"
 	"errors"
@@ -24,15 +23,27 @@ const (
 
 var ErrNotRegistered = errors.New("player has no account")
 
+type Device struct {
+	SecretHash string    `json:"secret_hash"`
+	SignedInAt time.Time `json:"signed_in_at"`
+}
+
 type Account struct {
 	PlayerID      string    `json:"player_id"`
 	SecretHash    string    `json:"secret_hash"`
+	Login         string    `json:"login,omitempty"`
+	Password      string    `json:"password,omitempty"`
+	Devices       []Device  `json:"devices,omitempty"`
 	CreatedAt     time.Time `json:"created_at"`
 	LastSessionAt time.Time `json:"last_session_at,omitzero"`
 }
 
+func (a Account) HasLogin() bool {
+	return a.Login != ""
+}
+
 func (a Account) IsGuest() bool {
-	return strings.HasPrefix(a.PlayerID, guestIDPrefix)
+	return strings.HasPrefix(a.PlayerID, guestIDPrefix) && !a.HasLogin()
 }
 
 func (a Account) LastSeen() time.Time {
@@ -48,17 +59,50 @@ type Credentials struct {
 }
 
 type Store struct {
-	dir   string
-	now   func() time.Time
-	mutex sync.Mutex
+	dir                string
+	now                func() time.Time
+	mutex              sync.Mutex
+	passwordIterations int
+	decoy              func() (string, error)
+	owners             map[string]string
 }
 
-func NewStore(dir string, now func() time.Time) (*Store, error) {
+type Option func(*Store)
+
+func WithPasswordIterations(iterations int) Option {
+	return func(s *Store) { s.passwordIterations = iterations }
+}
+
+func NewStore(dir string, now func() time.Time, options ...Option) (*Store, error) {
 	accountsDir := filepath.Join(dir, "accounts")
 	if err := os.MkdirAll(accountsDir, 0o755); err != nil {
 		return nil, fmt.Errorf("create account directory: %w", err)
 	}
-	return &Store{dir: accountsDir, now: now}, nil
+	s := &Store{dir: accountsDir, now: now, passwordIterations: DefaultPasswordIterations}
+	for _, option := range options {
+		option(s)
+	}
+	s.decoy = sync.OnceValues(func() (string, error) { return hashPassword(decoyPassword, s.passwordIterations) })
+	if err := s.indexLogins(); err != nil {
+		return nil, err
+	}
+	return s, nil
+}
+
+func (s *Store) indexLogins() error {
+	accounts, err := s.All()
+	if err != nil {
+		return err
+	}
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
+	s.owners = map[string]string{}
+	for _, record := range accounts {
+		if record.HasLogin() {
+			s.owners[LoginKey(record.Login)] = record.PlayerID
+		}
+	}
+	return nil
 }
 
 func (s *Store) path(playerID string) string {
@@ -96,7 +140,7 @@ func (s *Store) Verify(playerID, secret string) (bool, error) {
 	if err != nil {
 		return false, err
 	}
-	return subtle.ConstantTimeCompare([]byte(record.SecretHash), []byte(hashSecret(secret))) == 1, nil
+	return record.holds(secret), nil
 }
 
 func (s *Store) RecordSession(playerID string) error {
@@ -140,12 +184,6 @@ func (s *Store) Guests() ([]Account, error) {
 	return slices.DeleteFunc(accounts, func(a Account) bool { return !a.IsGuest() }), nil
 }
 
-func (s *Store) Find(playerID string) (Account, error) {
-	s.mutex.Lock()
-	defer s.mutex.Unlock()
-	return s.read(playerID)
-}
-
 func (s *Store) DeleteIfUnseenSince(playerID string, cutoff time.Time) (bool, error) {
 	s.mutex.Lock()
 	defer s.mutex.Unlock()
@@ -159,10 +197,20 @@ func (s *Store) DeleteIfUnseenSince(playerID string, cutoff time.Time) (bool, er
 	if record.LastSeen().After(cutoff) {
 		return false, nil
 	}
-	if err := os.Remove(s.path(playerID)); err != nil {
-		return false, fmt.Errorf("delete account %s: %w", playerID, err)
+	if err := s.remove(record); err != nil {
+		return false, err
 	}
 	return true, nil
+}
+
+func (s *Store) remove(record Account) error {
+	if err := os.Remove(s.path(record.PlayerID)); err != nil {
+		return fmt.Errorf("delete account %s: %w", record.PlayerID, err)
+	}
+	if record.HasLogin() {
+		delete(s.owners, LoginKey(record.Login))
+	}
+	return nil
 }
 
 func (s *Store) read(playerID string) (Account, error) {

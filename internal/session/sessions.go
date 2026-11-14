@@ -63,13 +63,23 @@ func (r *Registry) Player(token string) (string, bool) {
 }
 
 func (r *Registry) CloseAll(playerID string) {
+	r.CloseOthers(playerID, "")
+}
+
+func (r *Registry) CloseOthers(playerID, keptToken string) {
 	r.mutex.Lock()
 	defer r.mutex.Unlock()
 	for token, session := range r.tokens {
-		if session.player == playerID {
+		if session.player == playerID && token != keptToken {
 			delete(r.tokens, token)
 		}
 	}
+}
+
+func (r *Registry) Close(token string) {
+	r.mutex.Lock()
+	defer r.mutex.Unlock()
+	delete(r.tokens, token)
 }
 
 func (r *Registry) expired(session *entry, now time.Time) bool {

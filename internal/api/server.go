@@ -93,6 +93,7 @@ func (s *Server) Handler() http.Handler {
 	s.adminRoutes(mux)
 	mux.HandleFunc("POST /v1/players", s.createPlayer)
 	mux.HandleFunc("POST /v1/sessions", s.openSession)
+	s.accountRoutes(mux)
 	mux.HandleFunc("GET /v1/players/{player}/profile", s.authorized(s.getProfile))
 	mux.HandleFunc("PUT /v1/players/{player}/profile", s.authorized(s.putProfile))
 	mux.HandleFunc("POST /v1/players/{player}/store/purchases", s.authorized(s.purchase))

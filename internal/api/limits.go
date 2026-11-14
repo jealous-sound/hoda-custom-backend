@@ -18,6 +18,10 @@ type Limits struct {
 	WorldChatPerPlayer     ratelimit.Rule
 	ReportsPerPlayer       ratelimit.Rule
 	AdminGuessesPerAddress ratelimit.Rule
+	SignInsPerAddress      ratelimit.Rule
+	SignInsPerLogin        ratelimit.Rule
+	SignInsTotal           ratelimit.Rule
+	PasswordsPerPlayer     ratelimit.Rule
 }
 
 func DefaultLimits() Limits {
@@ -30,6 +34,10 @@ func DefaultLimits() Limits {
 		WorldChatPerPlayer:     ratelimit.Rule{Burst: 3, Every: 5 * time.Second},
 		ReportsPerPlayer:       ratelimit.Rule{Burst: 5, Every: 12 * time.Minute},
 		AdminGuessesPerAddress: ratelimit.Rule{Burst: 10, Every: 30 * time.Second},
+		SignInsPerAddress:      ratelimit.Rule{Burst: 10, Every: 30 * time.Second},
+		SignInsPerLogin:        ratelimit.Rule{Burst: 10, Every: time.Minute},
+		SignInsTotal:           ratelimit.Rule{Burst: 60, Every: time.Second},
+		PasswordsPerPlayer:     ratelimit.Rule{Burst: 10, Every: 30 * time.Second},
 	}
 }
 
@@ -42,6 +50,10 @@ type limiters struct {
 	worldChatByPlayer     *ratelimit.Limiter
 	reportsByPlayer       *ratelimit.Limiter
 	adminGuessesByAddress *ratelimit.Limiter
+	signInsByAddress      *ratelimit.Limiter
+	signInsByLogin        *ratelimit.Limiter
+	signInsTotal          *ratelimit.Limiter
+	passwordsByPlayer     *ratelimit.Limiter
 }
 
 func newLimiters(limits Limits, now func() time.Time) limiters {
@@ -54,6 +66,10 @@ func newLimiters(limits Limits, now func() time.Time) limiters {
 		worldChatByPlayer:     ratelimit.New(limits.WorldChatPerPlayer, now),
 		reportsByPlayer:       ratelimit.New(limits.ReportsPerPlayer, now),
 		adminGuessesByAddress: ratelimit.New(limits.AdminGuessesPerAddress, now),
+		signInsByAddress:      ratelimit.New(limits.SignInsPerAddress, now),
+		signInsByLogin:        ratelimit.New(limits.SignInsPerLogin, now),
+		signInsTotal:          ratelimit.New(limits.SignInsTotal, now),
+		passwordsByPlayer:     ratelimit.New(limits.PasswordsPerPlayer, now),
 	}
 }
 
