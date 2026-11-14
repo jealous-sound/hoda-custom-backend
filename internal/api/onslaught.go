@@ -108,7 +108,7 @@ func (s *Server) creditOnslaught(record *profile.Record, playerID string, result
 	if result.Banners <= 0 || !events.IsGuildCycle(result.Cycle) {
 		return nil
 	}
-	p, err := identityFrom(playerID, record.Profile)
+	p, err := s.identityFrom(playerID, record.Profile)
 	if err != nil {
 		return nil
 	}

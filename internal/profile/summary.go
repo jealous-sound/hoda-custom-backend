@@ -20,6 +20,7 @@ type Summary struct {
 	ProfileBytes     int
 	Name             string
 	Level            int
+	Experience       int64
 	Gold             int64
 	Gems             int64
 	Trophies         int
@@ -48,10 +49,11 @@ func (s Summary) EventBanners(cycle int64) int {
 
 type summarizedSections struct {
 	Account struct {
-		Name  string  `json:"name"`
-		Level float64 `json:"level"`
-		Gold  float64 `json:"gold"`
-		Gems  float64 `json:"gems"`
+		Name       string  `json:"name"`
+		Level      float64 `json:"level"`
+		Experience float64 `json:"experience"`
+		Gold       float64 `json:"gold"`
+		Gems       float64 `json:"gems"`
 	} `json:"account"`
 	Pvp struct {
 		Trophies     float64 `json:"trophies"`
@@ -83,6 +85,7 @@ func Summarize(record Record) Summary {
 	}
 	summary.Name = sections.Account.Name
 	summary.Level = int(sections.Account.Level)
+	summary.Experience = int64(sections.Account.Experience)
 	summary.Gold = int64(sections.Account.Gold)
 	summary.Gems = int64(sections.Account.Gems)
 	summary.Trophies = int(sections.Pvp.Trophies)
