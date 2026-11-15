@@ -33,6 +33,7 @@ type Member struct {
 	LastLogin  int64  `json:"last_login_date"`
 	Level      int    `json:"player_level"`
 	RenownRank int    `json:"renown_rank,omitempty"`
+	VaultTier  int    `json:"vault_tier,omitempty"`
 }
 
 type Application struct {
@@ -42,6 +43,7 @@ type Application struct {
 	RequestedAt int64  `json:"request_date"`
 	Text        string `json:"application_text,omitempty"`
 	RenownRank  int    `json:"renown_rank,omitempty"`
+	VaultTier   int    `json:"vault_tier,omitempty"`
 }
 
 type EventParam struct {
@@ -57,6 +59,7 @@ type Message struct {
 	PlayerName string       `json:"player_name,omitempty"`
 	Level      int          `json:"player_level,omitempty"`
 	RenownRank int          `json:"renown_rank,omitempty"`
+	VaultTier  int          `json:"vault_tier,omitempty"`
 	Rank       Rank         `json:"player_rank"`
 	Title      string       `json:"title,omitempty"`
 	GuildName  string       `json:"guild_name,omitempty"`

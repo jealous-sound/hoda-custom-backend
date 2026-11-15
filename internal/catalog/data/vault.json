@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "lock_days": 14,
+  "early_withdraw_fee_pct": 10,
+  "unclaimed_days": 7,
+  "minimum_deposit": 100,
+  "brackets": [
+    {"up_to": 1000, "basis_points_per_day": 50},
+    {"up_to": 5000, "basis_points_per_day": 25},
+    {"up_to": 15000, "basis_points_per_day": 10}
+  ],
+  "tier_gems": {
+    "bronze": 1000,
+    "silver": 5000,
+    "gold": 15000
+  }
+}

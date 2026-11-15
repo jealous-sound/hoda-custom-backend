@@ -88,6 +88,9 @@ type profileIdentity struct {
 		Level      int    `json:"level"`
 		Experience int64  `json:"experience"`
 	} `json:"account"`
+	Vault struct {
+		Locked int64 `json:"locked"`
+	} `json:"vault"`
 }
 
 func (s *Server) identityFrom(playerID string, raw json.RawMessage) (guild.Player, error) {
@@ -102,6 +105,7 @@ func (s *Server) identityFrom(playerID string, raw json.RawMessage) (guild.Playe
 	return guild.Player{
 		ID: playerID, Name: name, Level: identity.Account.Level,
 		RenownRank: economy.RenownRank(&s.catalog.Renown, identity.Account.Experience),
+		VaultTier:  economy.VaultTier(s.catalog, identity.Vault.Locked),
 	}, nil
 }
 

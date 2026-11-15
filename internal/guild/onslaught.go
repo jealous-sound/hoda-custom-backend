@@ -61,6 +61,7 @@ type Contribution struct {
 	Name       string `json:"name"`
 	Banners    int    `json:"banners"`
 	RenownRank int    `json:"renown_rank,omitempty"`
+	VaultTier  int    `json:"vault_tier,omitempty"`
 }
 
 func (s *State) onslaught(cycle int64) *Onslaught {
@@ -193,6 +194,7 @@ func (s *State) OnslaughtMembers(playerID string, cycle int64) []Contribution {
 			}
 			contributions = append(contributions, Contribution{
 				PlayerID: m.PlayerID, Name: m.Name, Banners: banners, RenownRank: m.RenownRank,
+				VaultTier: m.VaultTier,
 			})
 			listed[m.PlayerID] = true
 		}

@@ -103,7 +103,7 @@ guesses, one back every 30 seconds; the right token is never limited.
 
 | Path | |
 | --- | --- |
-| `/admin/overview` | who is online and on which client version, today's totals, player and guild counts, memory, disk, the deployed commit |
+| `/admin/overview` | who is online and on which client version, today's totals, player and guild counts, gems in wallets and Vaults, memory, disk, the deployed commit |
 | `/admin/activity` | peak players online per 5 minutes for 7 days, and per UTC day for 90: peak, distinct players, sign-ups |
 | `/admin/traffic` | requests per minute for the last hour, totals per route, actions by name and the latest 200 refusals |
 | `/admin/players`, `/admin/players/{id}` | every account and profile in brief, with its login if it has one; one player with the stored save |
@@ -143,9 +143,9 @@ The wire contract is shared with the client's `source/backend.c`; change both to
 | `POST` | `/v1/players/{id}/refills` | `{"request_id", "kind": "energy" or "stamina"}` |
 | `POST` | `/v1/players/{id}/actions` | `{"request_id", "action", ...}` |
 | | `/v1/players/{id}/guild…`, `/guilds…`, `/reports` | guilds, chat, Onslaught, duels and abuse reports; see `internal/api/server.go` |
-| `GET` | `/v1/players/{id}/pvp/ladder` | `{"players": [{"id", "name", "level", "trophies", "renown_rank"}]}`: up to 100 other named players who have fought PvP, most trophies first |
+| `GET` | `/v1/players/{id}/pvp/ladder` | `{"players": [{"id", "name", "level", "trophies", "renown_rank", "vault_tier"}]}`: up to 100 other named players who have fought PvP, most trophies first |
 | `GET` | `/v1/players/{id}/pvp/ladder/{rival}` | that rival's current squad, in the shape of a guild duel opponent (see [Battle replay](#battle-replay)); fight it with `battle_start` and `"duel": "<rival>"` |
-| `GET` | `/v1/players/{id}/pvp/event/ladder` | `{"cycle", "players": [{"id", "name", "banners", "renown_rank"}], "results": [{"cycle", "rank"}]}`: up to 250 other named players holding banners in the running event, most banners first, and the final rank of each of the caller's unclaimed finished events. An event rank counts the bots and these players with more banners; a rank below the reward table pays its last tier |
+| `GET` | `/v1/players/{id}/pvp/event/ladder` | `{"cycle", "players": [{"id", "name", "banners", "renown_rank", "vault_tier"}], "results": [{"cycle", "rank"}]}`: up to 250 other named players holding banners in the running event, most banners first, and the final rank of each of the caller's unclaimed finished events. An event rank counts the bots and these players with more banners; a rank below the reward table pays its last tier |
 | `POST` | `/v1/players/{id}/chat/world/messages` | `{"after", "text"}` posts an optional line and answers `{"messages", "last_message_id"}` |
 
 Player routes need `Authorization: Bearer <token>`. Profile uploads, purchases, refills, actions and guild creation
@@ -167,7 +167,7 @@ loads that profile in place of its own. A repeated `request_id` replays the firs
 
 The server is the only writer of the economy. A profile `PUT` is merged: the client's copy is kept, but the server's
 values win for account currencies, levels and timers, store counters, Nexus, campaign, missions, expeditions,
-`timed_quests`, PvP, gear, runes, Renown perks, and the roster's heroes with their progression. Anything that grants or spends is an
+`timed_quests`, PvP, gear, runes, Renown perks, the Vault, and the roster's heroes with their progression. Anything that grants or spends is an
 action, handled in `internal/economy/actions.go`:
 
 - Battles: `battle_start`, `battle`, `pvp_match`, `pvp_defend`
@@ -175,6 +175,7 @@ action, handled in `internal/economy/actions.go`:
 - Expeditions: `expedition_start`, `expedition_claim`, `expedition_recall`
 - Bounties: `quest_claim`, `quest_swap`, `quest_chest`
 - Renown: `renown_upgrade`
+- Vault: `vault_deposit` and `vault_withdraw` with `{"gems"}`, `vault_claim`
 - Nexus: `nexus_unlock`, `nexus_award`, `nexus_reset`
 - Rewards: `mission_claim`, `pvp_event_claim`, `tutorial_reward`
 - Items: `gear_sell`, `gear_prestige`, `rune_prestige`, `rune_craft`
@@ -192,6 +193,15 @@ server works it out from the account XP in the stored profile and reads it from 
 show the current rank; a guild keeps the rank a member had at their last guild call, and a chat line keeps the rank
 its author had when it was posted.
 
+The Vault (`vault.json`) holds gems a player locks away and pays simple interest into the wallet. Each slice of the
+balance earns its bracket's `basis_points_per_day`, nothing past the last bracket's `up_to` can be deposited, and
+interest stops building `unclaimed_days` after the last `vault_claim`, so one player's yield has a fixed ceiling. A
+deposit relocks the whole balance for `lock_days`; withdrawing before that costs `early_withdraw_fee_pct` (rounded up,
+and destroyed) plus the interest waiting. Emptying an unlocked Vault pays out the interest waiting. The `vault`
+section is server-owned. Entries about another player carry `vault_tier` beside `renown_rank` (1 bronze, 2 silver,
+3 gold from `tier_gems`, left out below bronze), worked out from the stored balance. `/admin/overview` sums
+`gems.in_wallets`, `gems.in_vaults`, `gems.vault_interest_paid` and `gems.vault_fees_paid` to watch the supply.
+
 ## Battle replay
 
 `internal/battle` is a Go port of the client's `source/battle_sim.c`. It keeps float32 math with each product rounded
@@ -205,7 +215,7 @@ before it is added, so results do not depend on the CPU fusing multiply-adds.
    `battle_start`.
 
 A duel opponent, a guildmate from `guild/members/{member}/duel` or a ladder rival, is the defender's current squad
-read from their stored profile: `{"id", "name", "level", "trophies", "renown_rank", "units", "runes",
+read from their stored profile: `{"id", "name", "level", "trophies", "renown_rank", "vault_tier", "units", "runes",
 "hero_builds": true}`. Each unit carries `consume_xp`, `ascended`, five `gear` slots (an item counts once per hero) and
 its `fortify` children beside
 `slot`, `id`, `tier` and `level`, in the shape of a replay unit. The client sends that squad back as the `enemy` of

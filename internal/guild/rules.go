@@ -82,6 +82,7 @@ type Player struct {
 	Name       string
 	Level      int
 	RenownRank int
+	VaultTier  int
 }
 
 type Settings struct {
@@ -160,6 +161,7 @@ func (s *State) Touch(p Player, now int64) {
 		g.Members[index].Level = p.Level
 	}
 	g.Members[index].RenownRank = p.RenownRank
+	g.Members[index].VaultTier = p.VaultTier
 	g.replaceInactiveLeader(s, now)
 }
 
@@ -219,7 +221,7 @@ func (s *State) Create(p Player, settings Settings, now int64) (*Guild, error) {
 func founder(p Player, now int64) Member {
 	return Member{
 		PlayerID: p.ID, Name: p.Name, Rank: RankLeader, JoinedAt: now, LastLogin: now, Level: p.Level,
-		RenownRank: p.RenownRank,
+		RenownRank: p.RenownRank, VaultTier: p.VaultTier,
 	}
 }
 
@@ -247,7 +249,7 @@ func (s *State) Join(p Player, guildID, text string, now int64) error {
 		s.withdrawApplications(p, now)
 		g.Members = append(g.Members, Member{
 			PlayerID: p.ID, Name: p.Name, Rank: RankMember, JoinedAt: now, LastLogin: now, Level: p.Level,
-			RenownRank: p.RenownRank,
+			RenownRank: p.RenownRank, VaultTier: p.VaultTier,
 		})
 		g.postEvent(now, "MEMBER_JOINED", plain(p.Name))
 		return nil
@@ -265,6 +267,7 @@ func (s *State) Join(p Player, guildID, text string, now int64) error {
 	s.withdrawApplications(p, now)
 	g.Applications = append(g.Applications, Application{
 		PlayerID: p.ID, Name: p.Name, Level: p.Level, RequestedAt: now, Text: text, RenownRank: p.RenownRank,
+		VaultTier: p.VaultTier,
 	})
 	g.postEvent(now, "PLAYER_APPLICATION", plain(p.Name))
 	return nil
@@ -315,7 +318,7 @@ func (s *State) Accept(actor Player, applicantID string, now int64) error {
 	g.Applications = slices.Delete(g.Applications, index, index+1)
 	g.Members = append(g.Members, Member{
 		PlayerID: applicant.PlayerID, Name: applicant.Name, Rank: RankMember, JoinedAt: now, LastLogin: now,
-		Level: applicant.Level, RenownRank: applicant.RenownRank,
+		Level: applicant.Level, RenownRank: applicant.RenownRank, VaultTier: applicant.VaultTier,
 	})
 	g.postEvent(now, "APPLICATION_ACCEPTED", plain(applicant.Name), plain(m.Name))
 	s.notify(applicantID, Notice{Kind: NoticeAccepted, Guild: g.Name, Rank: RankMember, Time: now})
@@ -516,7 +519,8 @@ func (s *State) Say(p Player, text string, now int64) error {
 		return err
 	}
 	g.post(Message{
-		Time: now, Text: line, PlayerID: p.ID, PlayerName: m.Name, Level: m.Level, RenownRank: m.RenownRank, Rank: m.Rank,
+		Time: now, Text: line, PlayerID: p.ID, PlayerName: m.Name, Level: m.Level, RenownRank: m.RenownRank,
+		VaultTier: m.VaultTier, Rank: m.Rank,
 	})
 	return nil
 }
