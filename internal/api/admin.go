@@ -126,6 +126,14 @@ type playerTotals struct {
 	Created7d        int `json:"created_7d"`
 }
 
+type gemTotals struct {
+	InWallets         int64 `json:"in_wallets"`
+	InVaults          int64 `json:"in_vaults"`
+	VaultHolders      int   `json:"vault_holders"`
+	VaultInterestPaid int64 `json:"vault_interest_paid"`
+	VaultFeesPaid     int64 `json:"vault_fees_paid"`
+}
+
 type guildTotals struct {
 	Guilds        int `json:"guilds"`
 	Members       int `json:"members"`
@@ -145,6 +153,7 @@ type overviewReply struct {
 	Online  onlineStatus `json:"online"`
 	Today   activity.Day `json:"today"`
 	Players playerTotals `json:"players"`
+	Gems    gemTotals    `json:"gems"`
 	Guilds  guildTotals  `json:"guilds"`
 	Reports int          `json:"reports"`
 }
@@ -226,6 +235,20 @@ func totalsOf(players []adminPlayer, now time.Time) playerTotals {
 	return totals
 }
 
+func gemTotalsOf(players []adminPlayer) gemTotals {
+	var totals gemTotals
+	for _, player := range players {
+		totals.InWallets += player.Gems
+		totals.InVaults += player.VaultGems
+		totals.VaultInterestPaid += player.VaultInterest
+		totals.VaultFeesPaid += player.VaultFees
+		if player.VaultGems > 0 {
+			totals.VaultHolders++
+		}
+	}
+	return totals
+}
+
 func (s *Server) guildTotals() guildTotals {
 	var totals guildTotals
 	s.guilds.View(func(state *guild.State) {
@@ -256,6 +279,7 @@ func (s *Server) adminOverview(w http.ResponseWriter, _ *http.Request) {
 	reply := overviewReply{
 		ServerTime: update.ServerTime, MaintenanceAt: update.MaintenanceAt, Server: s.serverStatus(),
 		Online: onlineOf(players), Today: s.activity.Today(), Players: totalsOf(players, s.now()),
+		Gems:   gemTotalsOf(players),
 		Guilds: s.guildTotals(), Reports: len(reports),
 	}
 	reply.Client.Latest, reply.Client.Minimum, reply.Client.DownloadURL = update.Latest, update.Minimum,

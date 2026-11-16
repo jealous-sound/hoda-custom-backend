@@ -21,6 +21,9 @@ type Summary struct {
 	Name             string
 	Level            int
 	Experience       int64
+	VaultLocked      int64
+	VaultInterest    int64
+	VaultFees        int64
 	Gold             int64
 	Gems             int64
 	Trophies         int
@@ -68,6 +71,11 @@ type summarizedSections struct {
 	Store struct {
 		OpenedTotal float64 `json:"opened_total"`
 	} `json:"store"`
+	Vault struct {
+		Locked       float64 `json:"locked"`
+		InterestPaid float64 `json:"interest_paid"`
+		FeesPaid     float64 `json:"fees_paid"`
+	} `json:"vault"`
 	Tutorial *struct {
 		Complete bool `json:"complete"`
 	} `json:"tutorial"`
@@ -88,6 +96,9 @@ func Summarize(record Record) Summary {
 	summary.Experience = int64(sections.Account.Experience)
 	summary.Gold = int64(sections.Account.Gold)
 	summary.Gems = int64(sections.Account.Gems)
+	summary.VaultLocked = int64(sections.Vault.Locked)
+	summary.VaultInterest = int64(sections.Vault.InterestPaid)
+	summary.VaultFees = int64(sections.Vault.FeesPaid)
 	summary.Trophies = int(sections.Pvp.Trophies)
 	summary.BestTrophies = int(sections.Pvp.BestTrophies)
 	summary.PvpWins = int(sections.Pvp.Wins)

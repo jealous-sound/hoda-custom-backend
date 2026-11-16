@@ -26,6 +26,7 @@ type ladderPlayer struct {
 	Level      int    `json:"level"`
 	Trophies   int    `json:"trophies"`
 	RenownRank int    `json:"renown_rank,omitempty"`
+	VaultTier  int    `json:"vault_tier,omitempty"`
 }
 
 type ladderResponse struct {
@@ -37,6 +38,7 @@ type eventLadderPlayer struct {
 	Name       string `json:"name"`
 	Banners    int    `json:"banners"`
 	RenownRank int    `json:"renown_rank,omitempty"`
+	VaultTier  int    `json:"vault_tier,omitempty"`
 }
 
 type eventLadderResponse struct {
@@ -101,6 +103,7 @@ func (s *Server) ladder(w http.ResponseWriter, _ *http.Request, player string) {
 			rivals = append(rivals, ladderPlayer{
 				ID: listed.PlayerID, Name: listed.Name, Level: max(listed.Level, 1), Trophies: listed.Trophies,
 				RenownRank: economy.RenownRank(&s.catalog.Renown, listed.Experience),
+				VaultTier:  economy.VaultTier(s.catalog, listed.VaultLocked),
 			})
 		}
 	}
@@ -122,13 +125,14 @@ func (r eventRivals) RivalsAhead(cycle int64, banners int) int {
 	return ahead
 }
 
-func (r eventRivals) top(cycle int64, renown *catalog.RenownRules) []eventLadderPlayer {
+func (r eventRivals) top(cycle int64, c *catalog.Catalog) []eventLadderPlayer {
 	players := []eventLadderPlayer{}
 	for _, rival := range r.ranked {
 		if banners := rival.EventBanners(cycle); banners > 0 && rival.PlayerID != r.player {
 			players = append(players, eventLadderPlayer{
 				ID: rival.PlayerID, Name: rival.Name, Banners: banners,
-				RenownRank: economy.RenownRank(renown, rival.Experience),
+				RenownRank: economy.RenownRank(&c.Renown, rival.Experience),
+				VaultTier:  economy.VaultTier(c, rival.VaultLocked),
 			})
 		}
 	}
@@ -170,7 +174,7 @@ func (s *Server) eventLadder(w http.ResponseWriter, _ *http.Request, player stri
 	rivals := eventRivals{player: player, ranked: ranked}
 	running := s.currentCycle()
 	reply := eventLadderResponse{
-		Cycle: running, Players: rivals.top(running, &s.catalog.Renown), Results: []economy.EventStanding{},
+		Cycle: running, Players: rivals.top(running, s.catalog), Results: []economy.EventStanding{},
 	}
 	record, err := s.profiles.Get(player)
 	switch {

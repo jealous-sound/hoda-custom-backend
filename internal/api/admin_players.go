@@ -23,6 +23,9 @@ type adminPlayer struct {
 	Level            int    `json:"level"`
 	Gold             int64  `json:"gold"`
 	Gems             int64  `json:"gems"`
+	VaultGems        int64  `json:"vault_gems"`
+	VaultInterest    int64  `json:"vault_interest_paid"`
+	VaultFees        int64  `json:"vault_fees_paid"`
 	Trophies         int    `json:"trophies"`
 	BestTrophies     int    `json:"best_trophies"`
 	PvpWins          int    `json:"pvp_wins"`
@@ -63,6 +66,7 @@ func (p *adminPlayer) describeAccount(record account.Account) {
 func (p *adminPlayer) describeProfile(summary profile.Summary) {
 	p.HasProfile = true
 	p.Name, p.Level, p.Gold, p.Gems = summary.Name, summary.Level, summary.Gold, summary.Gems
+	p.VaultGems, p.VaultInterest, p.VaultFees = summary.VaultLocked, summary.VaultInterest, summary.VaultFees
 	p.Trophies, p.BestTrophies = summary.Trophies, summary.BestTrophies
 	p.PvpWins, p.PvpLosses = summary.PvpWins, summary.PvpLosses
 	p.Heroes, p.PacksOpened, p.TutorialComplete = summary.Heroes, summary.PacksOpened, summary.TutorialComplete
