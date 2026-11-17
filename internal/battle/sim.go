@@ -1277,9 +1277,10 @@ func (s *sim) gearReactToAttack(actorIdx int, hits []Target) {
 				s.gearFireTrigger(&reaction, wearer, onEnemyHit, dealt)
 			case hidden:
 				continue
-			case wearer == target:
-				s.gearFireTrigger(&reaction, wearer, onSelfHit, dealt)
 			default:
+				if wearer == target {
+					s.gearFireTrigger(&reaction, wearer, onSelfHit, dealt)
+				}
 				s.gearFireTrigger(&reaction, wearer, onAllyHit, dealt)
 			}
 		}
