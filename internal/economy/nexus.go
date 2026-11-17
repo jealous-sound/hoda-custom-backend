@@ -114,6 +114,13 @@ func (p *player) nexusStep(n *nexusState, request BattleStartRequest) (int, *cat
 	return eventIndex, event, difficulty, nil
 }
 
+func (n *nexusState) stepEnergyCost(difficulty *catalog.NexusDifficulty, step int) int64 {
+	if step != runInitialStep || n.int(n.nodes[runInitialStep-1], "losses") > 0 {
+		return 0
+	}
+	return int64(difficulty.EnergyCost)
+}
+
 func (p *player) startNexus(request BattleStartRequest) (battleStart, error) {
 	n, err := p.loadNexus()
 	if err != nil {
@@ -146,7 +153,7 @@ func (p *player) commitNexusStep(request BattleStartRequest, start *battleStart)
 		n.section.setInt("potions", n.int(n.section, "potions")-1)
 		n.run["reset"] = false
 	}
-	if err := p.account.spendEnergy(int64(difficulty.EnergyCost)); err != nil {
+	if err := p.account.spendEnergy(n.stepEnergyCost(difficulty, request.Step)); err != nil {
 		return err
 	}
 	if !n.run.boolField("committed") {

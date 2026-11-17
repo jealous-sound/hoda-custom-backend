@@ -835,6 +835,48 @@ func TestNexusLossNeedsAPotionToContinue(t *testing.T) {
 	}
 }
 
+func nexusEnergyAfterStart(t *testing.T, doc map[string]any, request BattleStartRequest) (float64, error) {
+	t.Helper()
+	started, _, err := startBattle(t, reencode(t, doc), &profile.ServerState{StoreRNG: 3}, request, 1)
+	if err != nil {
+		return 0, err
+	}
+	return number(t, asMap(t, started), "account", "energy"), nil
+}
+
+func TestNexusEnergyPaysToEnterTheMapOnly(t *testing.T) {
+	cost := float64(mustCatalog(t).Nexus[0].Difficulties[0].EnergyCost)
+	raw, squad := veteranProfile(t)
+	entering := asMap(t, raw)
+	section(entering, "account")["energy"] = cost
+	first := nexusStart(t, 1)
+	first.Squad = squad
+	if energy, err := nexusEnergyAfterStart(t, entering, first); err != nil || energy != 0 {
+		t.Fatalf("entering the map: energy = %v, %v", energy, err)
+	}
+
+	server := &profile.ServerState{StoreRNG: 3}
+	won, _, _ := fight(t, reencode(t, entering), server, first, true)
+	section(won, "account")["energy"] = 0
+	second := nexusStart(t, 2)
+	second.Squad = squadFrom(t, won, squad)
+	if energy, err := nexusEnergyAfterStart(t, won, second); err != nil || energy != 0 {
+		t.Errorf("the next step with no energy: energy = %v, %v", energy, err)
+	}
+}
+
+func TestNexusRetryAfterLosingTheFirstStepIsFree(t *testing.T) {
+	raw := gameProfile(t, func(doc map[string]any) { section(doc, "account")["energy"] = 99 })
+	server := &profile.ServerState{StoreRNG: 3}
+	request := nexusStart(t, 1)
+	lost, _, _ := fight(t, raw, server, request, false)
+	section(lost, "account")["energy"] = 0
+	request.Revive = section(lost, "nexus", "run")["reset"] == true
+	if energy, err := nexusEnergyAfterStart(t, lost, request); err != nil || energy != 0 {
+		t.Errorf("retrying the first step with no energy: energy = %v, %v", energy, err)
+	}
+}
+
 func TestEveryCampaignNodeHasARoster(t *testing.T) {
 	c := mustCatalog(t)
 	for m, campaignMap := range c.Campaign {
