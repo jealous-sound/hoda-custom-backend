@@ -94,7 +94,7 @@ type hero struct {
 	consumeXP     int
 	critChance    int
 	stats         [tierCount]tierStats
-	gear          [gearSlotCapacity]*gearDef
+	gear          [gearSourceCount]*gearDef
 	recipe        *abilityRecipe
 	passives      []passiveEffect
 	fortifyPower  int
@@ -131,6 +131,7 @@ func (d *Data) buildHero(u Unit, heroBuild bool) (*hero, error) {
 	}
 	h.recipe = d.recipeFor(def.ability.key, def.ability.mechanics)
 	h.passives = d.passives[def.dataID()]
+	h.gear[heroAuraSource] = d.heroAuras[def.id]
 	if !heroBuild {
 		return h, nil
 	}

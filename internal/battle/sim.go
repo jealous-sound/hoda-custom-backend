@@ -128,11 +128,19 @@ type unit struct {
 	marked                   int
 	faction                  uint32
 	gameChangerApplied       bool
-	gearTriggerWorth         [gearSlotCapacity]int64
+	gearTriggerWorth         [gearSourceCount]int64
 	passiveCutPct            int
 }
 
 func (u *unit) giant() bool { return u.hero.def.giant }
+
+func (u *unit) defenderAbsorbPct() int {
+	specialtyPct := 0
+	if u.hero.def.hasSpecialty(specDefender) {
+		specialtyPct = defenderAbsorbPct
+	}
+	return max(u.gear.defenderPct, specialtyPct)
+}
 
 func (u *unit) passiveValuePct(effect *passiveEffect) float32 {
 	if u.passiveCutPct <= 0 {
@@ -1004,10 +1012,22 @@ func (s *sim) mitigatedDamage(actor, t *unit, damage int) int {
 	return damageAfterResist(damage, shield, resist)
 }
 
+func (s *sim) sideSeesStealth(side int) bool {
+	if s.runeBonus[side].perceptive {
+		return true
+	}
+	for slot := 0; slot < SlotCount; slot++ {
+		u := &s.units[side*SlotCount+slot]
+		if u.present && u.gear.perceptive {
+			return true
+		}
+	}
+	return false
+}
+
 func (s *sim) hitIsHidden(actor, t *unit) bool {
 	stealth := s.runeBonus[actor.side].stealth || actor.gear.stealth
-	perceptive := s.runeBonus[t.side].perceptive || t.gear.perceptive
-	return stealth && !perceptive
+	return stealth && !s.sideSeesStealth(t.side)
 }
 
 func (s *sim) runeRetaliates(actor, t *unit) bool {
@@ -1361,10 +1381,7 @@ func (s *sim) attack(actorIdx int, r *abilityRecipe, hit *attackRecipe, attacks,
 		if t.marked > 0 {
 			base[i] += lround(mul(float32(base[i]), percent(t.marked)))
 		}
-		absorbPct := t.gear.defenderPct
-		if t.hero.def.hasSpecialty(specDefender) {
-			absorbPct = defenderAbsorbPct
-		}
+		absorbPct := t.defenderAbsorbPct()
 		if n > 1 && absorbPct > 0 {
 			defender, defenderPct = i, absorbPct
 		}
