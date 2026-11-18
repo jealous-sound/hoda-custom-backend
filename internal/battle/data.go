@@ -12,6 +12,7 @@ const (
 	GeneratedRecipesFile  = "ability_recipes.json"
 	BuiltinRecipesFile    = "battle_recipes.json"
 	GearFile              = "gear.json"
+	HeroAurasFile         = "hero_auras.json"
 	RunesFile             = "runes.json"
 	ConsumeFile           = "consume_tables.json"
 	CampaignRostersFile   = "campaign_rosters.json"
@@ -27,6 +28,7 @@ type Data struct {
 	builtinRecipes   map[string]*abilityRecipe
 	generatedRecipes map[string]*abilityRecipe
 	gear             map[string]*gearDef
+	heroAuras        map[string]*gearDef
 	runes            []*runeDef
 	runesByID        map[string]*runeDef
 	consume          map[string]*consumeProfile
@@ -52,6 +54,7 @@ func Load(read func(name string) ([]byte, error)) (*Data, error) {
 		{BuiltinRecipesFile, func(b []byte) (err error) { d.builtinRecipes, err = loadBuiltinRecipes(b); return }},
 		{GeneratedRecipesFile, func(b []byte) (err error) { d.generatedRecipes, err = loadGeneratedRecipes(b); return }},
 		{GearFile, func(b []byte) (err error) { d.gear, err = loadGear(b); return }},
+		{HeroAurasFile, func(b []byte) (err error) { d.heroAuras, err = loadHeroAuras(b); return }},
 		{RunesFile, func(b []byte) (err error) { d.runes, d.runesByID, err = loadRunes(b); return }},
 		{FortifyFile, func(b []byte) (err error) { d.fortify, err = loadFortify(b); return }},
 		{ConsumeFile, func(b []byte) (err error) { d.consume, err = loadConsume(b, d.fortify.archetypes); return }},

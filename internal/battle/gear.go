@@ -83,7 +83,11 @@ type gearDef struct {
 	effects []gearEffect
 }
 
-const gearSlotCapacity = 5
+const (
+	gearSlotCapacity = 5
+	heroAuraSource   = gearSlotCapacity
+	gearSourceCount  = gearSlotCapacity + 1
+)
 
 func gearTerms(terms [][]string, each bool, f *filter) {
 	if len(terms) == 0 {
@@ -104,6 +108,25 @@ func gearTerms(terms [][]string, each bool, f *filter) {
 }
 
 func loadGear(data []byte) (map[string]*gearDef, error) {
+	return loadGearItems("gear", data)
+}
+
+const heroAuraVersion = 1
+
+func loadHeroAuras(data []byte) (map[string]*gearDef, error) {
+	var root struct {
+		Version int `json:"version"`
+	}
+	if err := json.Unmarshal(data, &root); err != nil {
+		return nil, fmt.Errorf("hero auras: %w", err)
+	}
+	if root.Version != heroAuraVersion {
+		return nil, fmt.Errorf("hero auras: version %d, want %d", root.Version, heroAuraVersion)
+	}
+	return loadGearItems("hero auras", data)
+}
+
+func loadGearItems(table string, data []byte) (map[string]*gearDef, error) {
 	var root struct {
 		Items []struct {
 			ID      string `json:"id"`
@@ -121,7 +144,7 @@ func loadGear(data []byte) (map[string]*gearDef, error) {
 		} `json:"items"`
 	}
 	if err := json.Unmarshal(data, &root); err != nil {
-		return nil, fmt.Errorf("gear: %w", err)
+		return nil, fmt.Errorf("%s: %w", table, err)
 	}
 	gear := map[string]*gearDef{}
 	for _, item := range root.Items {
@@ -130,7 +153,7 @@ func loadGear(data []byte) (map[string]*gearDef, error) {
 			stat, known := gearStatNames[raw.Stat]
 			on, triggered := gearTriggerNames[raw.On]
 			if !known || !triggered {
-				return nil, fmt.Errorf("gear: %s has an unknown effect", item.ID)
+				return nil, fmt.Errorf("%s: %s has an unknown effect", table, item.ID)
 			}
 			effect := gearEffect{stat: stat, on: on, damageBasis: raw.Basis == "damage", value: raw.Value}
 			effect.recipient = filter{scope: parseScope(raw.Scope), includeSource: true}

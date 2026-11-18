@@ -672,7 +672,7 @@ func TestPvpChosenBotsKeepTheirTrophiesAndTheServersSeed(t *testing.T) {
 	raw, squad := veteranProfile(t)
 	day := ruleNow.Unix() / battle.SecondsPerDay
 	for _, event := range []bool{false, true} {
-		bot := c.Battle.PvpBotCount() - 1
+		bot := c.Battle.PvpBotCount() / 2
 		server := &profile.ServerState{StoreRNG: 3}
 		_, match := matchOpponent(t, raw, server, PvpMatchRequest{Event: event, Bot: &bot}, 5)
 		want := c.Battle.PvpOpponentFromBot(bot, 5, day, pvpMatchSeed(5, event, bot))

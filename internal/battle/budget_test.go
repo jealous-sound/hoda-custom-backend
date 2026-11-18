@@ -438,7 +438,7 @@ func TestStatBudgetMetersWhatOneItemsTriggersGive(t *testing.T) {
 	swing(s)
 	swing(s)
 	hit, friend = &s.units[hitIdx], &s.units[friendIdx]
-	if hit.health != 40000-2000+50000 || hit.power != 1400 || friend.power != 1400 {
+	if hit.health != 40000-2000+50000 || hit.power != 1800 || friend.power != 1800 {
 		t.Errorf("without the budget: %d health, %d and %d power", hit.health, hit.power, friend.power)
 	}
 }
