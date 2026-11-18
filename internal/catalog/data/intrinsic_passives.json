@@ -15,7 +15,7 @@
   "coverage": {
     "catalog_characters": 676,
     "manifest_characters": 587,
-    "supported_battle_start_stat_clauses": 704,
+    "supported_battle_start_stat_clauses": 705,
     "unresolved_battle_start_stat_clauses": 0,
     "supported_power_vs_target_clauses": 3,
     "unresolved_power_vs_target_clauses": 0,
@@ -29995,6 +29995,23 @@
           "value_pct": 40,
           "recipient": {
             "scope": "allies",
+            "include_source": true
+          },
+          "stacking": "additive",
+          "confidence": "explicit",
+          "source_text": "+40% Health and Power for Allies",
+          "id": "unit_xenontheantiquarian_01"
+        },
+        {
+          "kind": "stat_percent",
+          "trigger": "battle_start",
+          "stats": [
+            "health",
+            "power"
+          ],
+          "value_pct": 10,
+          "recipient": {
+            "scope": "allies",
             "include_source": true,
             "match": {
               "mode": "any",
@@ -30008,8 +30025,8 @@
           },
           "stacking": "additive",
           "confidence": "explicit",
-          "source_text": "Allies get: +40% Health and Power (extra +10% for Nobility)",
-          "id": "unit_xenontheantiquarian_01"
+          "source_text": "+10% Health and Power for Nobility",
+          "id": "unit_xenontheantiquarian_02"
         }
       ],
       "unresolved": []

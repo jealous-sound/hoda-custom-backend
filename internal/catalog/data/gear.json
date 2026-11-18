@@ -6788,7 +6788,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Blight"
@@ -7539,7 +7539,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "tag",
        "GIANT"
@@ -8552,7 +8552,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Tevinter"
@@ -9281,8 +9281,8 @@
      "basis": "damage"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base",
@@ -9937,7 +9937,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "specialty",
        "POWERGAIN"
@@ -11201,8 +11201,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -11426,8 +11426,8 @@
      ]
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -11605,8 +11605,8 @@
      "basis": "damage"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"

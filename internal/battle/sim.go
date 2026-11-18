@@ -18,6 +18,10 @@ const (
 	gearStrongTargetWeight     = float32(3.0)
 	gearFlankWeight            = float32(3.0)
 	gearFlankReduction         = float32(0.5)
+	gearAvoidTargetWeight      = float32(0.5)
+	gearAssassinateMatchWeight = float32(4.0)
+	gearTargetRuleCapacity     = 16
+	immuneResistPct            = 100
 	gearDeathPasses            = 4
 	gearActionReserve          = 64
 	defenderAbsorbPct          = 25
@@ -106,15 +110,19 @@ type gearState struct {
 	stunResistPct, slowResistPct, drainResistPct int
 	cursePowerResistPct, curseHealthResistPct    int
 	defenderPct                                  int
+	stunImmune, slowImmune, drainImmune          bool
+	cursePowerImmune, curseHealthImmune          bool
 	stealth, perceptive, haste, flankReduction   bool
 	targetHighestPower, targetLowestHealth       bool
 	targetBackRow, targetQuick, targetSlowest    bool
+	targetFrontRow, targetEvenRows               bool
 }
 
 type unit struct {
 	hero                     *hero
 	recipe                   *abilityRecipe
 	gear                     gearState
+	targetRules              []*gearEffect
 	present, alive           bool
 	side, slot               int
 	maxHealth, health        int
@@ -139,6 +147,21 @@ func (u *unit) gearEffectValue(source int, effect *gearEffect) int {
 		return effect.value
 	}
 	return effect.value * (100 - u.passiveCutPct) / 100
+}
+
+func (s *sim) gearPerCount(wearer *unit, effect *gearEffect) int {
+	if !effect.per.hasMatch {
+		return 1
+	}
+	count := 0
+	for i := range unitCount {
+		count += filterMatchCount(&effect.per, wearer, &s.units[i])
+	}
+	return count
+}
+
+func (s *sim) gearScaledValue(wearer *unit, source int, effect *gearEffect) int {
+	return wearer.gearEffectValue(source, effect) * s.gearPerCount(wearer, effect)
 }
 
 func (u *unit) defenderAbsorbPct() int {
@@ -331,6 +354,32 @@ func versusCount(f *filter, candidate *unit) int {
 	return 0
 }
 
+func gearTermMatches(term *matchTerm, holder, candidate *unit) bool {
+	if term.kind == termOpposingFaction {
+		return hasAdvantage(holder.faction, candidate.faction)
+	}
+	return termMatches(term, candidate.hero)
+}
+
+func gearVersusCount(f *filter, holder, candidate *unit) int {
+	if !f.hasMatch {
+		return 1
+	}
+	matches := 0
+	for i := range f.terms {
+		if gearTermMatches(&f.terms[i], holder, candidate) {
+			matches++
+		}
+	}
+	if f.each {
+		return matches
+	}
+	if matches > 0 {
+		return 1
+	}
+	return 0
+}
+
 func wearerQualifies(effect *gearEffect, wearer *unit) bool {
 	return filterMatchCount(&effect.wearer, wearer, wearer) > 0
 }
@@ -371,7 +420,32 @@ func applyGearStat(g *gearState, stat gearStat, value int) {
 		g.targetQuick = true
 	case gearStatTargetSlowest:
 		g.targetSlowest = true
+	case gearStatTargetFrontRow:
+		g.targetFrontRow = true
+	case gearStatTargetEvenRows:
+		g.targetEvenRows = true
+	case gearStatStunImmune:
+		g.stunImmune = true
+	case gearStatSlowImmune:
+		g.slowImmune = true
+	case gearStatDrainImmune:
+		g.drainImmune = true
+	case gearStatCursePowerImmune:
+		g.cursePowerImmune = true
+	case gearStatCurseHealthImmune:
+		g.curseHealthImmune = true
 	}
+}
+
+func gearStatIsTargetRule(stat gearStat) bool {
+	return stat == gearStatTargetMatch || stat == gearStatTargetAvoid || stat == gearStatAssassinateMatch
+}
+
+func (u *unit) addTargetRule(effect *gearEffect) {
+	if len(u.targetRules) >= gearTargetRuleCapacity {
+		return
+	}
+	u.targetRules = append(u.targetRules, effect)
 }
 
 type gearShare struct {
@@ -409,8 +483,12 @@ func (share gearShare) pct(value int) float32 {
 }
 
 func gearEffectIsAura(effect *gearEffect, wearer *unit) bool {
-	return effect.on == onBattle && !effect.versus.hasMatch && effect.stat != gearStatTargetMatch &&
+	return effect.on == onBattle && !effect.versus.hasMatch && !gearStatIsTargetRule(effect.stat) &&
 		wearerQualifies(effect, wearer)
+}
+
+func gearEffectIsTargetRule(effect *gearEffect, wearer *unit) bool {
+	return effect.on == onBattle && gearStatIsTargetRule(effect.stat) && wearerQualifies(effect, wearer)
 }
 
 func (s *sim) gearAuraShare(wearer *unit, source int, def *gearDef) gearShare {
@@ -425,7 +503,7 @@ func (s *sim) gearAuraShare(wearer *unit, source int, def *gearDef) gearShare {
 		}
 		for recipientIdx := range unitCount {
 			if multiplier := filterMatchCount(&effect.recipient, wearer, &s.units[recipientIdx]); multiplier > 0 {
-				asked += s.budget.gearPooledPoints(effect.stat, wearer.gearEffectValue(source, effect)*multiplier)
+				asked += s.budget.gearPooledPoints(effect.stat, s.gearScaledValue(wearer, source, effect)*multiplier)
 			}
 		}
 	}
@@ -448,7 +526,8 @@ func (s *sim) gearAuras(healthPct, powerPct *[unitCount]float32) {
 			share := s.gearAuraShare(wearer, source, def)
 			for e := range def.effects {
 				effect := &def.effects[e]
-				if !gearEffectIsAura(effect, wearer) {
+				targetRule := gearEffectIsTargetRule(effect, wearer)
+				if !targetRule && !gearEffectIsAura(effect, wearer) {
 					continue
 				}
 				for recipientIdx := range unitCount {
@@ -457,7 +536,11 @@ func (s *sim) gearAuras(healthPct, powerPct *[unitCount]float32) {
 					if multiplier <= 0 {
 						continue
 					}
-					value := wearer.gearEffectValue(source, effect) * multiplier
+					if targetRule {
+						recipient.addTargetRule(effect)
+						continue
+					}
+					value := s.gearScaledValue(wearer, source, effect) * multiplier
 					switch {
 					case effect.stat == gearStatPower:
 						powerPct[recipientIdx] += share.pct(value)
@@ -495,25 +578,27 @@ func (s *sim) gearVersusStat(recipient, other *unit, stat gearStat) int {
 					!wearerQualifies(effect, wearer) {
 					continue
 				}
-				total += wearer.gearEffectValue(source, effect) * filterMatchCount(&effect.recipient, wearer, recipient) *
-					versusCount(&effect.versus, other)
+				total += s.gearScaledValue(wearer, source, effect) * filterMatchCount(&effect.recipient, wearer, recipient) *
+					gearVersusCount(&effect.versus, recipient, other)
 			}
 		}
 	}
 	return total
 }
 
-func gearPrefersMatchedTarget(attacker, target *unit) bool {
-	for _, def := range attacker.hero.gear {
-		if def == nil {
-			continue
+func gearTargetRuleMatches(attacker, target *unit, stat gearStat) bool {
+	for _, rule := range attacker.targetRules {
+		if rule.stat == stat && gearVersusCount(&rule.versus, attacker, target) > 0 {
+			return true
 		}
-		for e := range def.effects {
-			effect := &def.effects[e]
-			if effect.stat == gearStatTargetMatch && wearerQualifies(effect, attacker) &&
-				versusCount(&effect.recipient, target) > 0 {
-				return true
-			}
+	}
+	return false
+}
+
+func hasTargetRule(attacker *unit, stat gearStat) bool {
+	for _, rule := range attacker.targetRules {
+		if rule.stat == stat {
+			return true
 		}
 	}
 	return false
@@ -703,15 +788,24 @@ func (s *sim) gearTargetMultiplier(attacker, t *unit) float32 {
 	if g.targetQuick && t.hero.def.speed == speedQuick {
 		multiplier = mul(multiplier, gearStrongTargetWeight)
 	}
-	if gearPrefersMatchedTarget(attacker, t) {
+	if gearTargetRuleMatches(attacker, t, gearStatTargetMatch) {
 		multiplier = mul(multiplier, gearTargetWeight)
+	}
+	if gearTargetRuleMatches(attacker, t, gearStatTargetAvoid) {
+		multiplier = mul(multiplier, gearAvoidTargetWeight)
 	}
 	return multiplier
 }
 
-func flankWeight(attacker, t *unit) float32 {
+func rowWeight(attacker, t *unit) float32 {
+	if attacker.gear.targetEvenRows || t.giant() {
+		return 1
+	}
+	if attacker.gear.targetFrontRow && slotIsFront(t.slot) {
+		return gearTargetWeight
+	}
 	flanks := attacker.hero.def.hasSpecialty(specFlank) || attacker.gear.targetBackRow
-	if !flanks || t.giant() || !slotIsBack(t.slot) {
+	if !flanks || !slotIsBack(t.slot) {
 		return 1
 	}
 	if t.gear.flankReduction {
@@ -744,7 +838,7 @@ func (s *sim) targetWeight(attacker, t *unit) float32 {
 			w = mul(w, elusiveWeight)
 		}
 	}
-	w = mul(w, flankWeight(attacker, t))
+	w = mul(w, rowWeight(attacker, t))
 	if t.marked > 0 {
 		w = mul(w, markedWeight)
 	}
@@ -986,6 +1080,13 @@ func (s *sim) runeResists(resistPct int) bool {
 	return resistPct > 0 && s.chance(resistPct)
 }
 
+func resistOrImmune(immune bool, resistPct int) int {
+	if immune && resistPct < immuneResistPct {
+		return immuneResistPct
+	}
+	return resistPct
+}
+
 func (s *sim) effectLands(chancePct, resistPct int) bool {
 	if chancePct <= 0 {
 		return false
@@ -1092,7 +1193,8 @@ func (s *sim) gearTriggerAmount(effect *gearEffect, value int, recipient *unit, 
 		}
 		return lround(mul(float32(base), pct))
 	case gearStatDrain:
-		if s.runeResists(s.runeBonus[recipient.side].drainResistPct + recipient.gear.drainResistPct) {
+		resist := s.runeBonus[recipient.side].drainResistPct + recipient.gear.drainResistPct
+		if s.runeResists(resistOrImmune(recipient.gear.drainImmune, resist)) {
 			return 0
 		}
 		return lround(mul(float32(recipient.startPower), pct))
@@ -1158,12 +1260,18 @@ func (s *sim) gearMeterTrigger(reaction *gearReaction, spent *int64, effect *gea
 	*spent += left
 }
 
-func (s *sim) gearFireEffect(reaction *gearReaction, wearer *unit, source int, effect *gearEffect, amount int) {
-	if !wearerQualifies(effect, wearer) {
+func gearCausedBy(effect *gearEffect, wearer, cause *unit) bool {
+	return !effect.by.hasMatch || gearVersusCount(&effect.by, wearer, cause) > 0
+}
+
+func (s *sim) gearFireEffect(
+	reaction *gearReaction, wearer *unit, source int, effect *gearEffect, cause *unit, amount int,
+) {
+	if !wearerQualifies(effect, wearer) || !gearCausedBy(effect, wearer, cause) {
 		return
 	}
 	metered := gearStatIsMetered(effect.stat)
-	value := wearer.gearEffectValue(source, effect)
+	value := s.gearScaledValue(wearer, source, effect)
 	var amounts [unitCount]int
 	var reached [unitCount]bool
 	for idx := range unitCount {
@@ -1195,14 +1303,14 @@ func (s *sim) gearFireEffect(reaction *gearReaction, wearer *unit, source int, e
 	}
 }
 
-func (s *sim) gearFireTrigger(reaction *gearReaction, wearer *unit, on gearTrigger, amount int) {
+func (s *sim) gearFireTrigger(reaction *gearReaction, wearer *unit, on gearTrigger, cause *unit, amount int) {
 	for source, def := range wearer.hero.gear {
 		if def == nil {
 			continue
 		}
 		for e := range def.effects {
 			if def.effects[e].on == on {
-				s.gearFireEffect(reaction, wearer, source, &def.effects[e], amount)
+				s.gearFireEffect(reaction, wearer, source, &def.effects[e], cause, amount)
 			}
 		}
 	}
@@ -1242,7 +1350,7 @@ func (s *sim) gearResolveDeaths(actorIdx int) {
 				continue
 			}
 			dead := &s.units[deadIdx]
-			s.gearFireTrigger(&reaction, dead, onSelfDeath, s.gearLastDamage)
+			s.gearFireTrigger(&reaction, dead, onSelfDeath, dead, s.gearLastDamage)
 			for idx := range unitCount {
 				wearer := &s.units[idx]
 				if !wearer.alive {
@@ -1252,7 +1360,7 @@ func (s *sim) gearResolveDeaths(actorIdx int) {
 				if wearer.side == dead.side {
 					on = onAllyDeath
 				}
-				s.gearFireTrigger(&reaction, wearer, on, s.gearLastDamage)
+				s.gearFireTrigger(&reaction, wearer, on, dead, s.gearLastDamage)
 			}
 		}
 		s.gearEmitReaction(actorIdx, &reaction)
@@ -1282,14 +1390,14 @@ func (s *sim) gearReactToAttack(actorIdx int, hits []Target) {
 			}
 			switch {
 			case wearer.side != target.side:
-				s.gearFireTrigger(&reaction, wearer, onEnemyHit, dealt)
+				s.gearFireTrigger(&reaction, wearer, onEnemyHit, target, dealt)
 			case hidden:
 				continue
 			default:
 				if wearer == target {
-					s.gearFireTrigger(&reaction, wearer, onSelfHit, dealt)
+					s.gearFireTrigger(&reaction, wearer, onSelfHit, target, dealt)
 				}
-				s.gearFireTrigger(&reaction, wearer, onAllyHit, dealt)
+				s.gearFireTrigger(&reaction, wearer, onAllyHit, target, dealt)
 			}
 		}
 	}
@@ -1304,14 +1412,37 @@ func (s *sim) gearReactToAttack(actorIdx int, hits []Target) {
 			if idx == actorIdx {
 				on = onSelfAttack
 			}
-			s.gearFireTrigger(&reaction, wearer, on, dealtTotal)
+			s.gearFireTrigger(&reaction, wearer, on, actor, dealtTotal)
 			if idx == actorIdx {
-				s.gearFireTrigger(&reaction, wearer, onAllyAttack, dealtTotal)
+				s.gearFireTrigger(&reaction, wearer, onAllyAttack, actor, dealtTotal)
 			}
 		}
 	}
 	s.gearEmitReaction(actorIdx, &reaction)
 	s.gearResolveDeaths(actorIdx)
+}
+
+func (s *sim) pickAssassinationVictim(actor *unit, choices []int) int {
+	if !hasTargetRule(actor, gearStatAssassinateMatch) {
+		return choices[s.rangeRoll(0, len(choices)-1)]
+	}
+	weights := make([]float32, len(choices))
+	total := float32(0)
+	for i, choice := range choices {
+		weights[i] = 1
+		if gearTargetRuleMatches(actor, &s.units[choice], gearStatAssassinateMatch) {
+			weights[i] = gearAssassinateMatchWeight
+		}
+		total += weights[i]
+	}
+	roll := mul(float32(s.rand()%targetRollResolution)/targetRollResolution, total)
+	for i, choice := range choices {
+		roll -= weights[i]
+		if roll <= 0 {
+			return choice
+		}
+	}
+	return choices[len(choices)-1]
 }
 
 type landedHit struct {
@@ -1423,7 +1554,7 @@ func (s *sim) attack(actorIdx int, r *abilityRecipe, hit *attackRecipe, attacks,
 			}
 		}
 		if len(choices) > 0 {
-			assassinateTarget = choices[s.rangeRoll(0, len(choices)-1)]
+			assassinateTarget = s.pickAssassinationVictim(actor, choices)
 		}
 	}
 
@@ -1436,20 +1567,22 @@ func (s *sim) attack(actorIdx int, r *abilityRecipe, hit *attackRecipe, attacks,
 		bt := Target{Unit: picked[i], HealthDelta: -base[i], HealthFactionDelta: -extra}
 		ailments := uint32(0)
 		defense := &s.runeBonus[t.side]
-		if s.effectLands(hit.stunPct, defense.stunResistPct+t.gear.stunResistPct) {
+		g := &t.gear
+		if s.effectLands(hit.stunPct, resistOrImmune(g.stunImmune, defense.stunResistPct+g.stunResistPct)) {
 			ailments |= ailStunned
 		}
-		if s.effectLands(hit.slowPct, defense.slowResistPct+t.gear.slowResistPct) {
+		if s.effectLands(hit.slowPct, resistOrImmune(g.slowImmune, defense.slowResistPct+g.slowResistPct)) {
 			bt.InitiativeDelta += hit.slowAmt
 		}
 		if hit.drainPct > 0 && (hit.drainChance == 0 || s.chance(hit.drainChance)) &&
-			!s.runeResists(defense.drainResistPct+t.gear.drainResistPct) {
+			!s.runeResists(resistOrImmune(g.drainImmune, defense.drainResistPct+g.drainResistPct)) {
 			bt.PowerDelta -= lround(mul(float32(actor.power), percent(hit.drainPct)))
 		}
-		if s.effectLands(hit.cursePowerPct, t.gear.cursePowerResistPct) && !defense.cursePowerImmune {
+		if s.effectLands(hit.cursePowerPct, resistOrImmune(g.cursePowerImmune, g.cursePowerResistPct)) &&
+			!defense.cursePowerImmune {
 			ailments |= ailCursePower
 		}
-		if s.effectLands(hit.curseHealthPct, t.gear.curseHealthResistPct) {
+		if s.effectLands(hit.curseHealthPct, resistOrImmune(g.curseHealthImmune, g.curseHealthResistPct)) {
 			ailments |= ailCurseHealth
 		}
 		if picked[i] == assassinateTarget {
