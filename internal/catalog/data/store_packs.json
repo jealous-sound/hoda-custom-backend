@@ -128,7 +128,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -174,7 +174,7 @@
       "minimum_rarity": "Common",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 5500,
         "Uncommon": 3800,
@@ -219,7 +219,7 @@
       "minimum_rarity": "Uncommon",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 6000,
@@ -269,7 +269,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -317,7 +317,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 3,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 10,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -361,7 +361,7 @@
       "minimum_rarity": "Uncommon",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 6000,
@@ -406,7 +406,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -451,7 +451,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -497,7 +497,7 @@
       "minimum_rarity": "Legendary",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -542,7 +542,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -586,7 +586,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 3,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -631,7 +631,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 1,
       "guaranteed_epic": 2,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -677,7 +677,7 @@
       "minimum_rarity": "Uncommon",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 10000,
@@ -726,7 +726,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -779,7 +779,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -830,7 +830,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -881,7 +881,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -932,7 +932,7 @@
       "minimum_rarity": "Epic",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 34,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -976,7 +976,7 @@
       "minimum_rarity": "Common",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 5500,
         "Uncommon": 3800,
@@ -1025,7 +1025,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1073,7 +1073,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1121,7 +1121,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1169,7 +1169,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1217,7 +1217,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1265,7 +1265,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1313,7 +1313,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1360,7 +1360,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1407,7 +1407,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1451,7 +1451,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 1,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1495,7 +1495,7 @@
       "minimum_rarity": "Epic",
       "guaranteed_legendary": 2,
       "guaranteed_epic": 2,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1542,7 +1542,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1589,7 +1589,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1636,7 +1636,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1683,7 +1683,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1730,7 +1730,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1777,7 +1777,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1824,7 +1824,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1871,7 +1871,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1918,7 +1918,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1965,7 +1965,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -2012,7 +2012,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,

@@ -9,8 +9,9 @@ import (
 )
 
 const (
-	runInitialStep = 1
-	newPlayerLevel = 1
+	runInitialStep            = 1
+	newPlayerLevel            = 1
+	releasedClientPityCounter = "champion_since_legendary"
 )
 
 var starterRunes = []string{"rune-power-1", "rune-health-1", "rune-knowledge-1", "rune-greed-1"}
@@ -52,11 +53,12 @@ func newPlayerEconomy(c *catalog.Catalog, upload document) document {
 	account.setInt("gems", StartGems)
 
 	store := document{
-		"opened_by_pack": zeros(catalog.StoreCounterCount),
-		"vouchers":       zeros(catalog.VoucherCapacity),
+		"opened_by_pack":    zeros(catalog.StoreCounterCount),
+		"vouchers":          zeros(catalog.VoucherCapacity),
+		packsSinceLegendary: map[string]any{},
 	}
 	store.setInt("opened_total", 0)
-	store.setInt("champion_since_legendary", 0)
+	store.setInt(releasedClientPityCounter, 0)
 
 	run := document{
 		"committed": false, "reset": false, "escrow_units": zeros(int(catalog.RarityMythic) + 1),
