@@ -56,3 +56,17 @@ func TestAnyPerceptiveSquadmateRevealsStealthHits(t *testing.T) {
 		t.Errorf("with a perceptive squadmate the hit gave %d power", got)
 	}
 }
+
+func TestPvpTrimCutsOnlyTheHeroAuraByItsPassiveShare(t *testing.T) {
+	effect := &gearEffect{stat: gearStatDefender, value: 65}
+	trimmed := &unit{passiveCutPct: 40}
+	if got := trimmed.gearEffectValue(heroAuraSource, effect); got != 39 {
+		t.Errorf("a 40%% trim leaves a 65%% aura at %d%%", got)
+	}
+	if got := trimmed.gearEffectValue(0, effect); got != 65 {
+		t.Errorf("a 40%% trim cut worn gear to %d%%", got)
+	}
+	if got := (&unit{}).gearEffectValue(heroAuraSource, effect); got != 65 {
+		t.Errorf("an untrimmed aura gives %d%%", got)
+	}
+}

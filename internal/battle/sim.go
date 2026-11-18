@@ -134,6 +134,13 @@ type unit struct {
 
 func (u *unit) giant() bool { return u.hero.def.giant }
 
+func (u *unit) gearEffectValue(source int, effect *gearEffect) int {
+	if source != heroAuraSource || u.passiveCutPct <= 0 {
+		return effect.value
+	}
+	return effect.value * (100 - u.passiveCutPct) / 100
+}
+
 func (u *unit) defenderAbsorbPct() int {
 	specialtyPct := 0
 	if u.hero.def.hasSpecialty(specDefender) {
@@ -406,7 +413,7 @@ func gearEffectIsAura(effect *gearEffect, wearer *unit) bool {
 		wearerQualifies(effect, wearer)
 }
 
-func (s *sim) gearAuraShare(wearer *unit, def *gearDef) gearShare {
+func (s *sim) gearAuraShare(wearer *unit, source int, def *gearDef) gearShare {
 	if s.budget == nil {
 		return gearFullShare
 	}
@@ -418,7 +425,7 @@ func (s *sim) gearAuraShare(wearer *unit, def *gearDef) gearShare {
 		}
 		for recipientIdx := range unitCount {
 			if multiplier := filterMatchCount(&effect.recipient, wearer, &s.units[recipientIdx]); multiplier > 0 {
-				asked += s.budget.gearPooledPoints(effect.stat, effect.value*multiplier)
+				asked += s.budget.gearPooledPoints(effect.stat, wearer.gearEffectValue(source, effect)*multiplier)
 			}
 		}
 	}
@@ -434,11 +441,11 @@ func (s *sim) gearAuras(healthPct, powerPct *[unitCount]float32) {
 		if !wearer.present {
 			continue
 		}
-		for _, def := range wearer.hero.gear {
+		for source, def := range wearer.hero.gear {
 			if def == nil {
 				continue
 			}
-			share := s.gearAuraShare(wearer, def)
+			share := s.gearAuraShare(wearer, source, def)
 			for e := range def.effects {
 				effect := &def.effects[e]
 				if !gearEffectIsAura(effect, wearer) {
@@ -450,7 +457,7 @@ func (s *sim) gearAuras(healthPct, powerPct *[unitCount]float32) {
 					if multiplier <= 0 {
 						continue
 					}
-					value := effect.value * multiplier
+					value := wearer.gearEffectValue(source, effect) * multiplier
 					switch {
 					case effect.stat == gearStatPower:
 						powerPct[recipientIdx] += share.pct(value)
@@ -478,7 +485,7 @@ func (s *sim) gearVersusStat(recipient, other *unit, stat gearStat) int {
 		if !wearer.present {
 			continue
 		}
-		for _, def := range wearer.hero.gear {
+		for source, def := range wearer.hero.gear {
 			if def == nil {
 				continue
 			}
@@ -488,7 +495,7 @@ func (s *sim) gearVersusStat(recipient, other *unit, stat gearStat) int {
 					!wearerQualifies(effect, wearer) {
 					continue
 				}
-				total += effect.value * filterMatchCount(&effect.recipient, wearer, recipient) *
+				total += wearer.gearEffectValue(source, effect) * filterMatchCount(&effect.recipient, wearer, recipient) *
 					versusCount(&effect.versus, other)
 			}
 		}
@@ -1057,8 +1064,8 @@ func gearStatIsMetered(stat gearStat) bool {
 	return stat == gearStatDamage || stat == gearStatDrain || gearStatIsPooled(stat)
 }
 
-func (s *sim) gearTriggerAmount(effect *gearEffect, recipient *unit, amount int) int {
-	pct := percent(effect.value)
+func (s *sim) gearTriggerAmount(effect *gearEffect, value int, recipient *unit, amount int) int {
+	pct := percent(value)
 	switch effect.stat {
 	case gearStatPower:
 		base := recipient.startPower
@@ -1090,7 +1097,7 @@ func (s *sim) gearTriggerAmount(effect *gearEffect, recipient *unit, amount int)
 		}
 		return lround(mul(float32(recipient.startPower), pct))
 	}
-	return effect.value
+	return value
 }
 
 func (s *sim) gearReactionAdd(reaction *gearReaction, effect *gearEffect, recipientIdx, amount int) {
@@ -1151,11 +1158,12 @@ func (s *sim) gearMeterTrigger(reaction *gearReaction, spent *int64, effect *gea
 	*spent += left
 }
 
-func (s *sim) gearFireEffect(reaction *gearReaction, wearer *unit, slot int, effect *gearEffect, amount int) {
+func (s *sim) gearFireEffect(reaction *gearReaction, wearer *unit, source int, effect *gearEffect, amount int) {
 	if !wearerQualifies(effect, wearer) {
 		return
 	}
 	metered := gearStatIsMetered(effect.stat)
+	value := wearer.gearEffectValue(source, effect)
 	var amounts [unitCount]int
 	var reached [unitCount]bool
 	for idx := range unitCount {
@@ -1165,7 +1173,7 @@ func (s *sim) gearFireEffect(reaction *gearReaction, wearer *unit, slot int, eff
 		}
 		multiplier := filterMatchCount(&effect.recipient, wearer, recipient)
 		for range multiplier {
-			fired := s.gearTriggerAmount(effect, recipient, amount)
+			fired := s.gearTriggerAmount(effect, value, recipient, amount)
 			if metered {
 				amounts[idx] += fired
 			} else {
@@ -1178,7 +1186,7 @@ func (s *sim) gearFireEffect(reaction *gearReaction, wearer *unit, slot int, eff
 		return
 	}
 	if s.budget != nil {
-		s.gearMeterTrigger(reaction, &wearer.gearTriggerWorth[slot], effect, &amounts)
+		s.gearMeterTrigger(reaction, &wearer.gearTriggerWorth[source], effect, &amounts)
 	}
 	for idx := range unitCount {
 		if reached[idx] {
@@ -1188,13 +1196,13 @@ func (s *sim) gearFireEffect(reaction *gearReaction, wearer *unit, slot int, eff
 }
 
 func (s *sim) gearFireTrigger(reaction *gearReaction, wearer *unit, on gearTrigger, amount int) {
-	for slot, def := range wearer.hero.gear {
+	for source, def := range wearer.hero.gear {
 		if def == nil {
 			continue
 		}
 		for e := range def.effects {
 			if def.effects[e].on == on {
-				s.gearFireEffect(reaction, wearer, slot, &def.effects[e], amount)
+				s.gearFireEffect(reaction, wearer, source, &def.effects[e], amount)
 			}
 		}
 	}
