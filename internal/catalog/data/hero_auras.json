@@ -24,67 +24,13 @@
    "large": 75
   },
   "unstated_defender_pct": 25,
-  "unscoped_negative": "applies to enemies, as data/intrinsic_passives.json reads red aura text"
+  "unscoped_negative": "applies to enemies, as data/intrinsic_passives.json reads red aura text",
+  "immune": "stun_immune and the other *_immune flags hold through PvP trims and enemy resist cuts",
+  "target_rules": "target_match, target_avoid and assassinate_match steer the scope/who attackers toward or away from the vs heroes",
+  "per": "the value counts once per allied hero matching per; per_self counts the hero itself too",
+  "by": "a trigger fires only when the hero that was hit, attacked or died matches by"
  },
- "unsupported": [
-  "UNIT_ARLATHANGENERAL: Grants hatred of Tevinter to allies",
-  "UNIT_ARTIFICERVARRIC: More likely to attack the front row",
-  "UNIT_AVVARWARNUG: +35% Health for each Avvar ally",
-  "UNIT_CARVERHAWKE: Equal chance to attack front or back row",
-  "UNIT_CHARTER: Allies more likely to target slowest enemy",
-  "UNIT_DANYLA: Less likely to attack Elves",
-  "UNIT_DAVETH: Less likely to attack Morrigan",
-  "UNIT_DIVINEGUARD: Gains +10% bonus damage and damage resist for each Divine ally",
-  "UNIT_FAIRBANKS: Allies are more likely to attack Outlaws, and get +35% damage resist and bonus damage vs Outlaws",
-  "UNIT_GAMORDANSTORMRIDERDRAGONLING: Gains +10% 2X damage chance for each dragonling in the party",
-  "UNIT_GATEKEEPER: Werewolves are more likely to attack Humans and Elves",
-  "UNIT_GREATERMISTRALDRAGONLING: Gains +20% damage resist for each dragonling in the party",
-  "UNIT_GREYWARDENFIONA: Allies more likely to attack Nobility heroes",
-  "UNIT_KALTENZAHNDRAGONLING: Gains +10% bonus damage for each dragonling in the party",
-  "UNIT_KALTENZAHNDRAGONLING: Equal chance to attack front or back row",
-  "UNIT_KEEPERDESHANNA: Less likely to attack Humans and Elves",
-  "UNIT_MALVERNIS: Allies more likely to attack Hawke",
-  "UNIT_MARJOLAINE: Allies more likely to attack Leliana",
-  "UNIT_NUGKING: Nug King gains +25% Power for every Nug in the squad",
-  "UNIT_SEBASTIANVAEL: Less likely to attack Templars",
-  "UNIT_SERA: Receives +250% Health and Power per each common/uncommon ally",
-  "UNIT_SHIANNI: Less likely to attack large creatures",
-  "UNIT_SILVERHALLA: Less likely to attack Creatures or Elves",
-  "UNIT_SPIRITCHAMPION: Equal chance to attack front and back row",
-  "UNIT_SUNDERMOUNTVARTERRAL: Less likely to attack Elves",
-  "UNIT_SUNSHINE: Less likely to attack Templars",
-  "UNIT_THEDOWAGER: Much more likely to assassinate Nobility",
-  "UNIT_VAEA: More likely to stun the slowest enemy",
-  "UNIT_VINSOMERDRAGONLING: Gains +25% power drain resist for each dragonling in the party",
-  "UNIT_WARDEN-COMMANDERSOPHIA: Allies more likely to attack Ferelden and Nobility",
-  "UNIT_WINTERSENDHARLEQUIN: Equal chance to attack front or back row"
- ],
- "unparsed": [
-  "UNIT_ANCIENTDARKSPAWN: Converts 10% damage dealt by Blighted allies into power for Blighted allies",
-  "UNIT_BERAHT: Converts 5% damage taken by Carta allies into power for Carta allies",
-  "UNIT_BRANKA: Takes less damage vs Mages",
-  "UNIT_CHAUNCEY: Allies and Xenon gain +15% Power when this hero is hit (stacking)",
-  "UNIT_FREEMARCHER: Allies resist slow",
-  "UNIT_GREATERMISTRALDRAGONLING: Dragon allies gain +3% all effect resists when Dragon allies are attacked",
-  "UNIT_HIVERNAL: When allies are hit or attack, all enemies take 5% damage dealt or received",
-  "UNIT_KALTENZAHNDRAGONLING: Dragons gain +5% damage resist when Dragon allies attack",
-  "UNIT_KINGMARIC: Reavers resist 2500 damage per hit, and are immune to stun",
-  "UNIT_LADYSEEKERCASSANDRA: 35% bonus damage for allies vs opposing faction (stacking)",
-  "UNIT_MARYDEN: Inquisition allies gain +10% power when Inquisition allies attack",
-  "UNIT_MOTHERGISELLE: Heals allies 5% when an ally or enemy is hit or dies",
-  "UNIT_PROFESSORBRAMKENRIC: When hit, power drains enemies a very small amount",
-  "UNIT_RITTS: White faction allies take 20% less damage from all other factions",
-  "UNIT_SKYCULTIST: On death, heals allies +25%, and grants Sky Cult allies +35% power",
-  "UNIT_SNOUFLEUR: When Snoufleur dies, allies gain 100% Power",
-  "UNIT_TEVINTERBANNER: Allies gain medium power when this banner is attacked and when it's killed",
-  "UNIT_THADDEUSGIGANTUSCRUMBUM: On enemy death, heals allies 25% of damage dealt",
-  "UNIT_THEHIGHESTONE: Allies heal 5% and enemies are drained 2% Power when enemies are hit",
-  "UNIT_VELGHAST: Slow Resist to Creature and Mage allies",
-  "UNIT_WINTERSENDROCKWRAITH: Grants power drain resistance to allies",
-  "UNIT_WINTERSENDVIVIENNE: On attack, converts 15% of damage dealt into health for allies and power for self",
-  "UNIT_WRYME: On death, allies suffer 15% health loss and power drain",
-  "UNIT_XENONTHEANTIQUARIAN: Allies get: +40% Health and Power (extra +10% for Nobility), +50% curse power resist, and resist 2k damage per hit"
- ],
+ "unparsed": [],
  "items": [
   {
    "id": "UNIT_ABELAS",
@@ -679,8 +625,8 @@
      "basis": "damage"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -978,6 +924,25 @@
      ]
     },
     {
+     "stat": "power",
+     "value": 10,
+     "on": "ally_attack",
+     "scope": "allies",
+     "basis": "damage",
+     "who": [
+      [
+       "group",
+       "Blight"
+      ]
+     ],
+     "by": [
+      [
+       "group",
+       "Blight"
+      ]
+     ]
+    },
+    {
      "stat": "defender",
      "value": 25,
      "on": "battle",
@@ -1176,8 +1141,8 @@
      "basis": "damage"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -1343,8 +1308,8 @@
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -1437,15 +1402,15 @@
      ]
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -1791,6 +1756,19 @@
      ]
     },
     {
+     "stat": "target_match",
+     "value": 1,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Tevinter"
+      ]
+     ]
+    },
+    {
      "stat": "target_back_row",
      "value": 1,
      "on": "battle",
@@ -1943,8 +1921,8 @@
      ]
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -2139,6 +2117,13 @@
      "on": "battle",
      "scope": "enemies",
      "basis": "base"
+    },
+    {
+     "stat": "target_front_row",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base"
     }
    ]
   },
@@ -2259,15 +2244,15 @@
      ]
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -2314,8 +2299,8 @@
    "aura_key": "aura_personal_slow_resist",
    "effects": [
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -2327,8 +2312,8 @@
    "aura_key": "aura_plus50health_to_blood_mages_and_demons_and_powergain_on_ally_hit_and_personal_powerdrainresist",
    "effects": [
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -2347,8 +2332,8 @@
    "aura_key": "aura_plus35pct_power_vs_inquisition_personal_and_aura_personal_stun_resist_100_25hp_orlesian_rogue",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -2373,8 +2358,8 @@
    "aura_key": "aura_plus50power_to_qunari_outlaw_plus35health_personal_slowimmune_and_minus25_power_to_spirits_25resist_warrior_self_velusive",
    "effects": [
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -2741,8 +2726,8 @@
    "aura_key": "aura_plus50health_to_beasts_and_aura_power_drain_resist_100_to_goats",
    "effects": [
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -2832,8 +2817,8 @@
    "aura_key": "aura_plus50power_to_beasts_and_aura_slow_resist_100_to_goats",
    "effects": [
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -2871,8 +2856,8 @@
    "aura_key": "aura_plus50health_to_beasts_and_aura_plus_100stunresist_to_goats",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -3004,15 +2989,15 @@
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -3500,6 +3485,25 @@
     },
     {
      "stat": "power",
+     "value": 5,
+     "on": "ally_hit",
+     "scope": "allies",
+     "basis": "damage",
+     "who": [
+      [
+       "group",
+       "Carta"
+      ]
+     ],
+     "by": [
+      [
+       "group",
+       "Carta"
+      ]
+     ]
+    },
+    {
+     "stat": "power",
      "value": 10,
      "on": "ally_attack",
      "scope": "allies",
@@ -3591,8 +3595,8 @@
    "aura_key": "aura_plus40p_all_15p_hawke_family_cursehimmunity_to_ferelden_health_gain_when_ally_hit10__dmg_resist_to_nobility_ferelden15_cursehresist_minus25_all",
    "effects": [
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -3933,6 +3937,25 @@
    ]
   },
   {
+   "id": "UNIT_BRANKA",
+   "aura_key": "aura_plus50power_to_dwarves_and_aura_plus50health_to_dwarves_and_aura_dmg_resist_pct_25_vs_mages_personal",
+   "effects": [
+    {
+     "stat": "damage_resist",
+     "value": 15,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Mage"
+      ]
+     ]
+    }
+   ]
+  },
+  {
    "id": "UNIT_BRIALA",
    "aura_key": "aura_plus50health_elves_orlesian_stacking_pwgain25_allies_on_enemy_death_and_plus25_stun_slow_pdresist_orlesian_elves_stacking",
    "effects": [
@@ -4086,8 +4109,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -4332,8 +4355,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -4449,8 +4472,8 @@
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -4462,8 +4485,8 @@
      ]
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -4609,8 +4632,8 @@
      "basis": "damage"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -4711,8 +4734,8 @@
      "basis": "damage"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -4778,8 +4801,8 @@
      ]
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -4849,6 +4872,13 @@
    "id": "UNIT_CARVERHAWKE",
    "aura_key": "aura_fr_br_equ_chance_and_plus20hp_all_ext15_hwkfam_ext15_archwk_and_defender35_and_plus5dr_ferelden_hwkfam_stack",
    "effects": [
+    {
+     "stat": "target_even_rows",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base"
+    },
     {
      "stat": "defender",
      "value": 35,
@@ -5068,8 +5098,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -5226,6 +5256,13 @@
      "on": "battle",
      "scope": "self",
      "basis": "base"
+    },
+    {
+     "stat": "target_slowest",
+     "value": 1,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base"
     }
    ]
   },
@@ -5285,6 +5322,27 @@
        "UNIT_XENONTHEANTIQUARIAN"
       ]
      ]
+    },
+    {
+     "stat": "power",
+     "value": 15,
+     "on": "self_hit",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "power",
+     "value": 15,
+     "on": "self_hit",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "character_id",
+       "UNIT_XENONTHEANTIQUARIAN"
+      ]
+     ],
+     "each": true
     },
     {
      "stat": "stun_resist",
@@ -5579,8 +5637,8 @@
    "aura_key": "aura_30hp_stunimmune_to_inquisition_30hp_red_faction_crit_chance_10_allies",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -5717,8 +5775,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -6442,8 +6500,8 @@
    "aura_key": "aura_personal_stun_resist_100_and_power_gain_when_self_hit_50_and_dmg_resist25_personal",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -6542,8 +6600,8 @@
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -6611,13 +6669,6 @@
      "on": "battle",
      "scope": "self",
      "basis": "base"
-    },
-    {
-     "stat": "power",
-     "value": 15,
-     "on": "self_hit",
-     "scope": "self",
-     "basis": "damage"
     },
     {
      "stat": "power",
@@ -6756,6 +6807,19 @@
      "on": "battle",
      "scope": "enemies",
      "basis": "base"
+    },
+    {
+     "stat": "target_avoid",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Elves"
+      ]
+     ]
     }
    ]
   },
@@ -6784,8 +6848,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -6854,10 +6918,23 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Warden"
+      ]
+     ]
+    },
+    {
+     "stat": "target_avoid",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "vs": [
+      [
+       "character_id",
+       "UNIT_MORRIGAN"
       ]
      ]
     }
@@ -7188,8 +7265,8 @@
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -7243,6 +7320,56 @@
      "on": "battle",
      "scope": "self",
      "basis": "base"
+    },
+    {
+     "stat": "bonus_damage",
+     "value": 10,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "per": [
+      [
+       "character_id",
+       "UNIT_DIVINECASSANDRA"
+      ],
+      [
+       "character_id",
+       "UNIT_DIVINEGUARD"
+      ],
+      [
+       "character_id",
+       "UNIT_DIVINELELIANA"
+      ],
+      [
+       "character_id",
+       "UNIT_DIVINEVIVIENNE"
+      ]
+     ]
+    },
+    {
+     "stat": "damage_resist",
+     "value": 10,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "per": [
+      [
+       "character_id",
+       "UNIT_DIVINECASSANDRA"
+      ],
+      [
+       "character_id",
+       "UNIT_DIVINEGUARD"
+      ],
+      [
+       "character_id",
+       "UNIT_DIVINELELIANA"
+      ],
+      [
+       "character_id",
+       "UNIT_DIVINEVIVIENNE"
+      ]
+     ]
     }
    ]
   },
@@ -7300,8 +7427,8 @@
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -7432,8 +7559,8 @@
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -7500,8 +7627,8 @@
      ]
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -8599,8 +8726,8 @@
      "basis": "damage"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -8926,8 +9053,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -9013,7 +9140,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Ferelden"
@@ -9561,6 +9688,45 @@
       ]
      ],
      "each": true
+    },
+    {
+     "stat": "target_match",
+     "value": 1,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Outlaw"
+      ]
+     ]
+    },
+    {
+     "stat": "damage_resist",
+     "value": 35,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Outlaw"
+      ]
+     ]
+    },
+    {
+     "stat": "bonus_damage",
+     "value": 35,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Outlaw"
+      ]
+     ]
     }
    ]
   },
@@ -9707,15 +9873,15 @@
      "basis": "damage"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -9753,7 +9919,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Nug"
@@ -9892,8 +10058,8 @@
      ]
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -10050,8 +10216,8 @@
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -10221,6 +10387,19 @@
    ]
   },
   {
+   "id": "UNIT_FREEMARCHER",
+   "aura_key": "aura_plus25power_and_plus25health_to_warriors_and_slow_resist_50",
+   "effects": [
+    {
+     "stat": "slow_resist",
+     "value": 15,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base"
+    }
+   ]
+  },
+  {
    "id": "UNIT_GALLOWSGUARDIAN",
    "aura_key": "aura_plus40hp25slowpdresall_extra10redlyrium_50hprlmeredith_gain20heal20allselfhit_defender75_stunimm_minus20crit",
    "effects": [
@@ -10286,8 +10465,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -10391,6 +10570,36 @@
      ]
     },
     {
+     "stat": "crit",
+     "value": 10,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "per": [
+      [
+       "character_id",
+       "UNIT_DRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_GREATERMISTRALDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_VINSOMERDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_KALTENZAHNDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_GAMORDANSTORMRIDERDRAGONLING"
+      ]
+     ],
+     "per_self": true
+    },
+    {
      "stat": "defender",
      "value": 50,
      "on": "battle",
@@ -10484,8 +10693,8 @@
      ]
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -10632,6 +10841,29 @@
        "Werewolves"
       ]
      ]
+    },
+    {
+     "stat": "target_match",
+     "value": 1,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Werewolves"
+      ]
+     ],
+     "vs": [
+      [
+       "group",
+       "Human"
+      ],
+      [
+       "group",
+       "Elves"
+      ]
+     ]
     }
    ]
   },
@@ -10679,22 +10911,22 @@
    "aura_key": "aura_pd_stun_and_slow_immune_and_and_plus50pdres_squad_and_plus35pandh_and_plus25slowres_to_demons_and_heal_on_allydeath_and_plus25dmg_vs_temp_squad",
    "effects": [
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -10765,8 +10997,8 @@
    "aura_key": "aura_personal_power_drain_resist",
    "effects": [
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -11420,15 +11652,15 @@
    "aura_key": "aura_plus20healthpowerformagescircleorlesians_and_plus50curseresistallies_and_curseimmuneself_and_minus20stunresistenemies",
    "effects": [
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -11669,15 +11901,15 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -11802,6 +12034,131 @@
      ]
     },
     {
+     "stat": "damage_resist",
+     "value": 20,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "per": [
+      [
+       "character_id",
+       "UNIT_DRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_GREATERMISTRALDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_VINSOMERDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_KALTENZAHNDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_GAMORDANSTORMRIDERDRAGONLING"
+      ]
+     ],
+     "per_self": true
+    },
+    {
+     "stat": "stun_resist",
+     "value": 3,
+     "on": "ally_hit",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ],
+     "by": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ]
+    },
+    {
+     "stat": "slow_resist",
+     "value": 3,
+     "on": "ally_hit",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ],
+     "by": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ]
+    },
+    {
+     "stat": "drain_resist",
+     "value": 3,
+     "on": "ally_hit",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ],
+     "by": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ]
+    },
+    {
+     "stat": "curse_power_resist",
+     "value": 3,
+     "on": "ally_hit",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ],
+     "by": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ]
+    },
+    {
+     "stat": "curse_health_resist",
+     "value": 3,
+     "on": "ally_hit",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ],
+     "by": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ]
+    },
+    {
      "stat": "stun_resist",
      "value": -25,
      "on": "battle",
@@ -11854,13 +12211,6 @@
     {
      "stat": "power",
      "value": 10,
-     "on": "self_hit",
-     "scope": "self",
-     "basis": "damage"
-    },
-    {
-     "stat": "power",
-     "value": 10,
      "on": "ally_hit",
      "scope": "self",
      "basis": "damage"
@@ -11887,8 +12237,8 @@
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -11926,8 +12276,8 @@
      ]
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -12137,6 +12487,19 @@
      "on": "self_hit",
      "scope": "allies",
      "basis": "base"
+    },
+    {
+     "stat": "target_match",
+     "value": 1,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Nobility"
+      ]
+     ]
     }
    ]
   },
@@ -12172,8 +12535,8 @@
      ]
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -12185,8 +12548,8 @@
      ]
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -12764,8 +13127,8 @@
    "aura_key": "aura_plus50health_power_to_inq_elves_flemeth_and_stun_immunity_and_plus50stunres_allies_and_plus50curshealthres_allies_and_defender25",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -12981,8 +13344,8 @@
      "basis": "damage"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -13001,8 +13364,8 @@
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -13506,13 +13869,6 @@
     {
      "stat": "power",
      "value": 10,
-     "on": "self_hit",
-     "scope": "self",
-     "basis": "base"
-    },
-    {
-     "stat": "power",
-     "value": 10,
      "on": "ally_hit",
      "scope": "self",
      "basis": "base"
@@ -13525,8 +13881,8 @@
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -13612,8 +13968,8 @@
      ]
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -13699,8 +14055,8 @@
    "aura_key": "aura_personal_stunresist100_and_plus35stunresist_to_beasts_and_reavers_and_plus35health_to_reavers",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -14074,6 +14430,20 @@
      ]
     },
     {
+     "stat": "damage",
+     "value": 5,
+     "on": "ally_hit",
+     "scope": "enemies",
+     "basis": "damage"
+    },
+    {
+     "stat": "damage",
+     "value": 5,
+     "on": "ally_attack",
+     "scope": "enemies",
+     "basis": "damage"
+    },
+    {
      "stat": "defender",
      "value": 50,
      "on": "battle",
@@ -14247,8 +14617,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -14259,7 +14629,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "specialty",
        "STEALTH"
@@ -14368,8 +14738,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -14666,8 +15036,8 @@
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -14737,8 +15107,8 @@
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -15032,8 +15402,8 @@
      "basis": "damage"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -15820,8 +16190,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -15989,10 +16359,66 @@
      ]
     },
     {
+     "stat": "bonus_damage",
+     "value": 10,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "per": [
+      [
+       "character_id",
+       "UNIT_DRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_GREATERMISTRALDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_VINSOMERDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_KALTENZAHNDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_GAMORDANSTORMRIDERDRAGONLING"
+      ]
+     ],
+     "per_self": true
+    },
+    {
      "stat": "health",
      "value": 20,
      "on": "ally_hit",
      "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "damage_resist",
+     "value": 5,
+     "on": "ally_attack",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ],
+     "by": [
+      [
+       "group",
+       "Dragon"
+      ]
+     ]
+    },
+    {
+     "stat": "target_even_rows",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
      "basis": "base"
     }
    ]
@@ -16015,15 +16441,15 @@
    "aura_key": "aura_plus50health_to_inquisition_and_aura_plus35power_to_red_faction_and_aura_personal_stun_resist_100_and_aura_personal_slow_resist",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -16116,6 +16542,23 @@
      "on": "battle",
      "scope": "enemies",
      "basis": "base"
+    },
+    {
+     "stat": "target_avoid",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Human"
+      ],
+      [
+       "group",
+       "Elves"
+      ]
+     ]
     }
    ]
   },
@@ -16551,6 +16994,32 @@
      "basis": "base"
     },
     {
+     "stat": "raw_damage_resist",
+     "value": 2500,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Reavers"
+      ]
+     ]
+    },
+    {
+     "stat": "stun_immune",
+     "value": 1,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Reavers"
+      ]
+     ]
+    },
+    {
      "stat": "defender",
      "value": 65,
      "on": "battle",
@@ -16632,22 +17101,22 @@
      ]
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -16782,7 +17251,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Mage"
@@ -16933,7 +17402,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Red_Lyrium"
@@ -16978,8 +17447,8 @@
      "each": true
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -17100,7 +17569,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Mage"
@@ -17597,18 +18066,32 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
+    },
+    {
+     "stat": "bonus_damage",
+     "value": 35,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "vs": [
+      [
+       "opposing_faction",
+       "*"
+      ]
+     ],
+     "each": true
     },
     {
      "stat": "stun_resist",
@@ -17645,8 +18128,8 @@
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -17679,8 +18162,8 @@
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -17692,22 +18175,22 @@
      ]
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -17718,7 +18201,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "speed",
        "Quick"
@@ -19282,8 +19765,8 @@
    "aura_key": "aura_plus50health_to_mages_and_aura_plus100stunresist_to_circle_and_aura_slow_resist_50_to_apostate",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -19295,8 +19778,8 @@
      ]
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -19604,6 +20087,47 @@
      "on": "self_death",
      "scope": "allies",
      "basis": "base"
+    },
+    {
+     "stat": "target_match",
+     "value": 1,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "vs": [
+      [
+       "character_id",
+       "UNIT_BATTLEMASTERGARRETTHAWKE"
+      ],
+      [
+       "character_id",
+       "UNIT_BATTLEMASTERMARIANHAWKE"
+      ],
+      [
+       "character_id",
+       "UNIT_ARCANEGARRETTHAWKE"
+      ],
+      [
+       "character_id",
+       "UNIT_ARCANEMARIANHAWKE"
+      ],
+      [
+       "character_id",
+       "UNIT_SABOTEURGARRETTHAWKE"
+      ],
+      [
+       "character_id",
+       "UNIT_SABOTEURMARIANHAWKE"
+      ],
+      [
+       "character_id",
+       "UNIT_BETHANYHAWKE"
+      ],
+      [
+       "character_id",
+       "UNIT_CARVERHAWKE"
+      ]
+     ]
     }
    ]
   },
@@ -19671,8 +20195,8 @@
    "aura_key": "aura_plus25healh_and_power_to_rogues_and_immunestun_and_allies_gainpower_on_allyhit_and_flank_and_allies_hatred_leliana",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -19690,6 +20214,19 @@
      "on": "battle",
      "scope": "self",
      "basis": "base"
+    },
+    {
+     "stat": "target_match",
+     "value": 1,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "vs": [
+      [
+       "character_id",
+       "UNIT_LELIANA"
+      ]
+     ]
     }
    ]
   },
@@ -19712,8 +20249,8 @@
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -19725,8 +20262,8 @@
      ]
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -19798,6 +20335,25 @@
      "on": "battle",
      "scope": "allies",
      "basis": "base"
+    },
+    {
+     "stat": "power",
+     "value": 10,
+     "on": "ally_attack",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Inquisition"
+      ]
+     ],
+     "by": [
+      [
+       "group",
+       "Inquisition"
+      ]
+     ]
     },
     {
      "stat": "power",
@@ -19977,6 +20533,34 @@
    "id": "UNIT_MOTHERGISELLE",
    "aura_key": "aura_plus25_hp_for_ferelden_orlesian_elves_chantry_stacking_and_heal_allies5_on_any_hit_death_and_defender25_and_plus35_all_resists_for_allies",
    "effects": [
+    {
+     "stat": "health",
+     "value": 5,
+     "on": "ally_hit",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "health",
+     "value": 5,
+     "on": "enemy_hit",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "health",
+     "value": 5,
+     "on": "ally_death",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "health",
+     "value": 5,
+     "on": "enemy_death",
+     "scope": "allies",
+     "basis": "base"
+    },
     {
      "stat": "defender",
      "value": 25,
@@ -20415,8 +20999,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -20620,6 +21204,20 @@
    "aura_key": "aura_plus25power_25health_to_beasts_health_gain_when_ally_hit_15",
    "effects": [
     {
+     "stat": "power",
+     "value": 25,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "per": [
+      [
+       "group",
+       "Nug"
+      ]
+     ],
+     "per_self": true
+    },
+    {
      "stat": "health",
      "value": 15,
      "on": "ally_hit",
@@ -20699,15 +21297,15 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -21211,7 +21809,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "specialty",
        "POWERDRAIN"
@@ -21811,6 +22409,13 @@
        "Inquisition"
       ]
      ]
+    },
+    {
+     "stat": "drain",
+     "value": 5,
+     "on": "self_hit",
+     "scope": "enemies",
+     "basis": "base"
     }
    ]
   },
@@ -22158,36 +22763,36 @@
      ]
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -22607,8 +23212,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -22693,8 +23298,8 @@
      ]
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -22940,8 +23545,8 @@
      ]
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -23036,8 +23641,8 @@
    "aura_key": "aura_plus25power_to_red_lyrium_and_aura_slow_resist_100_to_red_lyrium_and_hatred_mage",
    "effects": [
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -23054,7 +23659,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Mage"
@@ -23569,8 +24174,8 @@
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -23623,8 +24228,8 @@
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -23644,8 +24249,8 @@
      ]
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -23880,6 +24485,33 @@
        "Inquisition"
       ]
      ]
+    },
+    {
+     "stat": "damage_resist",
+     "value": 20,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "faction",
+       "White"
+      ]
+     ],
+     "vs": [
+      [
+       "faction",
+       "Black"
+      ],
+      [
+       "faction",
+       "Red"
+      ],
+      [
+       "faction",
+       "Blue"
+      ]
+     ]
     }
    ]
   },
@@ -23968,8 +24600,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -23996,8 +24628,8 @@
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -24165,8 +24797,8 @@
      ]
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -24184,8 +24816,8 @@
    "aura_key": "aura_plus50health_and_pdimmunity_for_qunari_and_plus50damage_redbluefaction_vs_whiteblackfaction_and_ally_heal40_when_self_attack",
    "effects": [
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -24349,7 +24981,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Mage"
@@ -25020,6 +25652,19 @@
      "on": "battle",
      "scope": "self",
      "basis": "base"
+    },
+    {
+     "stat": "target_avoid",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Templar"
+      ]
+     ]
     }
    ]
   },
@@ -25258,6 +25903,40 @@
      "basis": "base"
     },
     {
+     "stat": "health",
+     "value": 250,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "per": [
+      [
+       "rarity",
+       "Common"
+      ],
+      [
+       "rarity",
+       "Uncommon"
+      ]
+     ]
+    },
+    {
+     "stat": "power",
+     "value": 250,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "per": [
+      [
+       "rarity",
+       "Common"
+      ],
+      [
+       "rarity",
+       "Uncommon"
+      ]
+     ]
+    },
+    {
      "stat": "target_back_row",
      "value": 1,
      "on": "battle",
@@ -25393,7 +26072,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Blood_Mage"
@@ -25414,8 +26093,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -26191,6 +26870,19 @@
      "on": "battle",
      "scope": "self",
      "basis": "base"
+    },
+    {
+     "stat": "target_avoid",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "vs": [
+      [
+       "tag",
+       "GIANT"
+      ]
+     ]
     }
    ]
   },
@@ -26324,6 +27016,29 @@
    ]
   },
   {
+   "id": "UNIT_SILVERHALLA",
+   "aura_key": "aura_hatred_all_except_beasts_and_elves",
+   "effects": [
+    {
+     "stat": "target_avoid",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Beast"
+      ],
+      [
+       "group",
+       "Elves"
+      ]
+     ]
+    }
+   ]
+  },
+  {
    "id": "UNIT_SISTERNIGHTINGALE",
    "aura_key": "aura_plus50power_to_chantry_and_aura_dmg_resist_pct_10_and_plus50_stun_and_slow_resist_to_chantry_and_plus25_health_to_schmooples",
    "effects": [
@@ -26416,8 +27131,8 @@
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -26429,8 +27144,8 @@
      ]
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -26438,6 +27153,34 @@
       [
        "character_id",
        "UNIT_SKYHORROR"
+      ]
+     ]
+    },
+    {
+     "stat": "health",
+     "value": 25,
+     "on": "self_death",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "power",
+     "value": 35,
+     "on": "self_death",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "character_id",
+       "UNIT_SKYCULTIST"
+      ],
+      [
+       "character_id",
+       "UNIT_SKYHORROR"
+      ],
+      [
+       "character_id",
+       "UNIT_SKYWATCHER"
       ]
      ]
     },
@@ -26509,8 +27252,8 @@
      "basis": "damage"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -26631,8 +27374,8 @@
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -26651,10 +27394,23 @@
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
+     "basis": "base"
+    }
+   ]
+  },
+  {
+   "id": "UNIT_SNOUFLEUR",
+   "aura_key": "aura_outlaws_orlesian_25health_25power_allies_gain_power",
+   "effects": [
+    {
+     "stat": "power",
+     "value": 100,
+     "on": "self_death",
+     "scope": "allies",
      "basis": "base"
     }
    ]
@@ -26739,8 +27495,8 @@
      "basis": "damage"
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -26965,43 +27721,43 @@
      ]
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -27017,6 +27773,13 @@
      "value": 25,
      "on": "self_hit",
      "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "target_even_rows",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
      "basis": "base"
     }
    ]
@@ -27166,7 +27929,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "faction",
        "Black"
@@ -27285,8 +28048,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -27373,8 +28136,8 @@
      "each": true
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -27498,8 +28261,8 @@
      ]
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -27802,8 +28565,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -27849,6 +28612,19 @@
      "on": "battle",
      "scope": "enemies",
      "basis": "base"
+    },
+    {
+     "stat": "target_avoid",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Elves"
+      ]
+     ]
     }
    ]
   },
@@ -28076,6 +28852,19 @@
      "on": "battle",
      "scope": "self",
      "basis": "base"
+    },
+    {
+     "stat": "target_avoid",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Templar"
+      ]
+     ]
     }
    ]
   },
@@ -28191,7 +28980,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Warrior"
@@ -28400,7 +29189,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Nobility"
@@ -28428,8 +29217,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -28469,8 +29258,8 @@
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -28524,8 +29313,8 @@
      "basis": "damage"
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -28544,8 +29333,8 @@
    "aura_key": "aura_personal_stun_resist_100",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -28570,8 +29359,8 @@
      ]
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -28690,7 +29479,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Mage"
@@ -28796,15 +29585,29 @@
    "aura_key": "aura_plus60hp_tevinter_and_powergain_allies_50_on_self_hit_and_death_and_immune_stun_slow_and_plus40_all_resists",
    "effects": [
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "power",
+     "value": 35,
+     "on": "self_hit",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "power",
+     "value": 35,
+     "on": "self_death",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -28888,8 +29691,8 @@
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -28994,6 +29797,13 @@
      "on": "battle",
      "scope": "self",
      "basis": "base"
+    },
+    {
+     "stat": "health",
+     "value": 25,
+     "on": "enemy_death",
+     "scope": "allies",
+     "basis": "damage"
     },
     {
      "stat": "stun_resist",
@@ -29216,8 +30026,8 @@
      ]
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -29438,6 +30248,19 @@
    "id": "UNIT_THEDOWAGER",
    "aura_key": "aura_hatred_and_plus80health_nobility_and_heal_allies_onhit_and_powergain_allies_ondeath",
    "effects": [
+    {
+     "stat": "assassinate_match",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Nobility"
+      ]
+     ]
+    },
     {
      "stat": "health",
      "value": 50,
@@ -29667,8 +30490,8 @@
      ]
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -29958,6 +30781,20 @@
        "Elves"
       ]
      ]
+    },
+    {
+     "stat": "health",
+     "value": 5,
+     "on": "enemy_hit",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "drain",
+     "value": 2,
+     "on": "enemy_hit",
+     "scope": "enemies",
+     "basis": "base"
     },
     {
      "stat": "crit",
@@ -30511,7 +31348,7 @@
      "on": "battle",
      "scope": "self",
      "basis": "base",
-     "who": [
+     "vs": [
       [
        "group",
        "Blood_Mage"
@@ -30641,8 +31478,8 @@
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -30707,8 +31544,8 @@
      ]
     },
     {
-     "stat": "curse_power_resist",
-     "value": 100,
+     "stat": "curse_power_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -30720,8 +31557,8 @@
      ]
     },
     {
-     "stat": "curse_health_resist",
-     "value": 100,
+     "stat": "curse_health_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -30875,13 +31712,6 @@
     {
      "stat": "power",
      "value": 10,
-     "on": "self_hit",
-     "scope": "self",
-     "basis": "damage"
-    },
-    {
-     "stat": "power",
-     "value": 10,
      "on": "ally_hit",
      "scope": "self",
      "basis": "damage"
@@ -30908,8 +31738,8 @@
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -30947,10 +31777,17 @@
      ]
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "target_slowest",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
      "basis": "base"
     }
    ]
@@ -31158,6 +31995,29 @@
    ]
   },
   {
+   "id": "UNIT_VELGHAST",
+   "aura_key": "aura_slow_resist_to_beasts_and_mages",
+   "effects": [
+    {
+     "stat": "slow_resist",
+     "value": 15,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "who": [
+      [
+       "group",
+       "Beast"
+      ],
+      [
+       "group",
+       "Mage"
+      ]
+     ]
+    }
+   ]
+  },
+  {
    "id": "UNIT_VELGHASTCHIEFTAIN",
    "aura_key": "aura_35h_allies_25p_beasts_slow_50resist_to_beasts_and_mages_50p_allies_self_death",
    "effects": [
@@ -31281,8 +32141,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -31375,8 +32235,8 @@
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -31627,8 +32487,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -31729,8 +32589,8 @@
      ]
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -31839,6 +32699,36 @@
        "UNIT_VINSOMERDRAGONLING"
       ]
      ]
+    },
+    {
+     "stat": "drain_resist",
+     "value": 25,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base",
+     "per": [
+      [
+       "character_id",
+       "UNIT_DRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_GREATERMISTRALDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_VINSOMERDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_KALTENZAHNDRAGONLING"
+      ],
+      [
+       "character_id",
+       "UNIT_GAMORDANSTORMRIDERDRAGONLING"
+      ]
+     ],
+     "per_self": true
     },
     {
      "stat": "power",
@@ -32088,6 +32978,23 @@
        "Nobility"
       ]
      ]
+    },
+    {
+     "stat": "target_match",
+     "value": 1,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base",
+     "vs": [
+      [
+       "group",
+       "Ferelden"
+      ],
+      [
+       "group",
+       "Nobility"
+      ]
+     ]
     }
    ]
   },
@@ -32117,8 +33024,8 @@
      "basis": "base"
     },
     {
-     "stat": "stun_resist",
-     "value": 100,
+     "stat": "stun_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -32528,6 +33435,13 @@
      "basis": "base"
     },
     {
+     "stat": "target_even_rows",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base"
+    },
+    {
      "stat": "damage_resist",
      "value": 5,
      "on": "self_hit",
@@ -32569,8 +33483,8 @@
      "basis": "base"
     },
     {
-     "stat": "drain_resist",
-     "value": 100,
+     "stat": "drain_immune",
+     "value": 1,
      "on": "battle",
      "scope": "self",
      "basis": "base"
@@ -32596,8 +33510,8 @@
      "basis": "base"
     },
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",
@@ -32671,24 +33585,31 @@
    "aura_key": "aura_personal_power_drain_and_stun_resist_and_slow_resist",
    "effects": [
     {
+     "stat": "drain_immune",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base"
+    },
+    {
+     "stat": "slow_immune",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base"
+    },
+    {
+     "stat": "stun_immune",
+     "value": 1,
+     "on": "battle",
+     "scope": "self",
+     "basis": "base"
+    },
+    {
      "stat": "drain_resist",
-     "value": 100,
+     "value": 15,
      "on": "battle",
-     "scope": "self",
-     "basis": "base"
-    },
-    {
-     "stat": "slow_resist",
-     "value": 100,
-     "on": "battle",
-     "scope": "self",
-     "basis": "base"
-    },
-    {
-     "stat": "stun_resist",
-     "value": 100,
-     "on": "battle",
-     "scope": "self",
+     "scope": "allies",
      "basis": "base"
     }
    ]
@@ -32717,6 +33638,20 @@
      "on": "battle",
      "scope": "self",
      "basis": "base"
+    },
+    {
+     "stat": "health",
+     "value": 15,
+     "on": "self_attack",
+     "scope": "allies",
+     "basis": "damage"
+    },
+    {
+     "stat": "power",
+     "value": 15,
+     "on": "self_attack",
+     "scope": "self",
+     "basis": "damage"
     },
     {
      "stat": "damage",
@@ -32812,6 +33747,20 @@
      "value": -10,
      "on": "self_hit",
      "scope": "enemies",
+     "basis": "base"
+    },
+    {
+     "stat": "damage",
+     "value": 15,
+     "on": "self_death",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "drain",
+     "value": 15,
+     "on": "self_death",
+     "scope": "allies",
      "basis": "base"
     }
    ]
@@ -32936,6 +33885,20 @@
    "aura_key": "aura_allies40hppow_nob10hppow_50cursepowres_res2kperhit_allies20powselfhit_100powondeath_2drnenmonenmhit_minus35allres",
    "effects": [
     {
+     "stat": "curse_power_resist",
+     "value": 50,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
+     "stat": "raw_damage_resist",
+     "value": 2000,
+     "on": "battle",
+     "scope": "allies",
+     "basis": "base"
+    },
+    {
      "stat": "power",
      "value": 20,
      "on": "self_hit",
@@ -32998,8 +33961,8 @@
    "aura_key": "aura_slow_immune_reavers_and_35handp_allies_and_dragons_and_2500_raw_dmg_resist",
    "effects": [
     {
-     "stat": "slow_resist",
-     "value": 100,
+     "stat": "slow_immune",
+     "value": 1,
      "on": "battle",
      "scope": "allies",
      "basis": "base",

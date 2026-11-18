@@ -70,12 +70,13 @@ const (
 	termRarity
 	termSpeed
 	termTag
+	termOpposingFaction
 	termUnknown
 )
 
 var termKindNames = map[string]termKind{
 	"group": termGroup, "faction": termFaction, "character_id": termCharacterID, "specialty": termSpecialty,
-	"rarity": termRarity, "speed": termSpeed, "tag": termTag,
+	"rarity": termRarity, "speed": termSpeed, "tag": termTag, "opposing_faction": termOpposingFaction,
 }
 
 func parseTermKind(name string) termKind {

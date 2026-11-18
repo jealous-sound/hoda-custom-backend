@@ -33,6 +33,15 @@ const (
 	gearStatTargetMatch
 	gearStatDamage
 	gearStatDrain
+	gearStatStunImmune
+	gearStatSlowImmune
+	gearStatDrainImmune
+	gearStatCursePowerImmune
+	gearStatCurseHealthImmune
+	gearStatTargetAvoid
+	gearStatTargetFrontRow
+	gearStatTargetEvenRows
+	gearStatAssassinateMatch
 )
 
 var gearStatNames = map[string]gearStat{
@@ -45,7 +54,11 @@ var gearStatNames = map[string]gearStat{
 	"target_highest_power": gearStatTargetHighestPower, "target_lowest_health": gearStatTargetLowestHealth,
 	"target_back_row": gearStatTargetBackRow, "target_quick": gearStatTargetQuick,
 	"target_slowest": gearStatTargetSlowest, "target_match": gearStatTargetMatch, "damage": gearStatDamage,
-	"drain": gearStatDrain,
+	"drain": gearStatDrain, "stun_immune": gearStatStunImmune, "slow_immune": gearStatSlowImmune,
+	"drain_immune": gearStatDrainImmune, "curse_power_immune": gearStatCursePowerImmune,
+	"curse_health_immune": gearStatCurseHealthImmune, "target_avoid": gearStatTargetAvoid,
+	"target_front_row": gearStatTargetFrontRow, "target_even_rows": gearStatTargetEvenRows,
+	"assassinate_match": gearStatAssassinateMatch,
 }
 
 type gearTrigger int
@@ -76,6 +89,8 @@ type gearEffect struct {
 	recipient   filter
 	wearer      filter
 	versus      filter
+	per         filter
+	by          filter
 }
 
 type gearDef struct {
@@ -131,15 +146,18 @@ func loadGearItems(table string, data []byte) (map[string]*gearDef, error) {
 		Items []struct {
 			ID      string `json:"id"`
 			Effects []struct {
-				Stat   string     `json:"stat"`
-				On     string     `json:"on"`
-				Value  int        `json:"value"`
-				Basis  string     `json:"basis"`
-				Each   bool       `json:"each"`
-				Scope  string     `json:"scope"`
-				Who    [][]string `json:"who"`
-				Wearer [][]string `json:"wearer"`
-				Vs     [][]string `json:"vs"`
+				Stat    string     `json:"stat"`
+				On      string     `json:"on"`
+				Value   int        `json:"value"`
+				Basis   string     `json:"basis"`
+				Each    bool       `json:"each"`
+				Scope   string     `json:"scope"`
+				Who     [][]string `json:"who"`
+				Wearer  [][]string `json:"wearer"`
+				Vs      [][]string `json:"vs"`
+				Per     [][]string `json:"per"`
+				PerSelf bool       `json:"per_self"`
+				By      [][]string `json:"by"`
 			} `json:"effects"`
 		} `json:"items"`
 	}
@@ -160,6 +178,9 @@ func loadGearItems(table string, data []byte) (map[string]*gearDef, error) {
 			gearTerms(raw.Who, raw.Each, &effect.recipient)
 			gearTerms(raw.Wearer, false, &effect.wearer)
 			gearTerms(raw.Vs, raw.Each, &effect.versus)
+			effect.per = filter{scope: scopeAllies, includeSource: raw.PerSelf}
+			gearTerms(raw.Per, false, &effect.per)
+			gearTerms(raw.By, false, &effect.by)
 			def.effects = append(def.effects, effect)
 		}
 		if _, seen := gear[item.ID]; !seen {
