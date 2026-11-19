@@ -49,6 +49,7 @@ type goldenOpponent struct {
 	Now              int64       `json:"now"`
 	Seed             uint32      `json:"seed"`
 	Banners          int         `json:"banners"`
+	Side             int         `json:"side"`
 	Bot              int         `json:"bot"`
 	Squad            int         `json:"squad"`
 	OpponentTrophies int         `json:"opponent_trophies"`
@@ -158,7 +159,7 @@ func TestRecordedPvpOpponentsMatchTheClient(t *testing.T) {
 		case "ladder":
 			opponent = d.PvpLadderOpponent(golden.Level, golden.Trophies, golden.Now/SecondsPerDay, golden.Seed)
 		case "event":
-			opponent = d.PvpEventOpponent(golden.Level, golden.Banners, golden.Now, golden.Seed)
+			opponent = d.PvpEventOpponent(golden.Level, golden.Banners, golden.Now, golden.Side, golden.Seed)
 		case "bot":
 			opponent = d.PvpOpponentFromBot(golden.Bot, golden.Level, golden.Now/SecondsPerDay, golden.Seed)
 		case "revenge":

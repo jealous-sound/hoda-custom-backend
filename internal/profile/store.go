@@ -61,6 +61,7 @@ type PvpMatch struct {
 	Trophies int    `json:"trophies"`
 	Seed     uint32 `json:"seed"`
 	At       int64  `json:"at"`
+	Side     int    `json:"side,omitempty"`
 }
 
 type PendingBattle struct {

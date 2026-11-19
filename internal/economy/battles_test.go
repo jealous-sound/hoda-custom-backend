@@ -656,7 +656,7 @@ func TestPvpEventMatchmakingReadsTheServersBannersAndClock(t *testing.T) {
 	cycle := c.Battle.PvpEventCycle(ruleNow.Unix())
 	server := &profile.ServerState{PvpEvent: profile.PvpEventState{Cycle: cycle, Banners: 400}}
 	_, match := matchOpponent(t, raw, server, PvpMatchRequest{Event: true}, 7)
-	want := c.Battle.PvpEventOpponent(5, 400, ruleNow.Unix(), pvpMatchSeed(7, true, -1))
+	want := c.Battle.PvpEventOpponent(5, 400, ruleNow.Unix(), 0, pvpMatchSeed(7, true, -1))
 	if match.Bot != want.Bot || match.Squad != want.Squad || match.Seed != want.Seed || !match.Event {
 		t.Fatalf("match = %+v, want %+v", match, want)
 	}

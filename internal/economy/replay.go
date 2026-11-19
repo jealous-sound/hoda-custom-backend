@@ -13,6 +13,7 @@ import (
 
 const (
 	SquadChanged    RefusalCode = "squad_changed"
+	SquadNotAllowed RefusalCode = "squad_not_allowed"
 	OpponentChanged RefusalCode = "opponent_changed"
 	OutcomeMismatch RefusalCode = "outcome_mismatch"
 
