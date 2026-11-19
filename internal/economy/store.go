@@ -19,6 +19,7 @@ const (
 	RuneInventoryCapacity = 512
 	RuneInventoryLifetime = 30 * 24 * time.Hour
 	RefillGemCost         = 3
+	RevivePotionGemCost   = 5
 	voucherOfferPrice     = 1
 	firstRuneUUID         = 1
 	firstInstanceID       = 1
