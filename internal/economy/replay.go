@@ -205,10 +205,11 @@ type PvpOpponentRequest struct {
 
 const OpponentRevenge = "revenge"
 
-func (s *pvpStats) lostDefenseAt(at int64, seed uint32) *pvpBattle {
+func (s *pvpStats) botDefenseAt(at int64, seed uint32) *pvpBattle {
 	for i := range s.History {
 		entry := &s.History[i]
-		if entry.Defense && !entry.Won && !entry.Revenged && entry.At == at && entry.Seed == nonZeroSeed(seed) {
+		if entry.Defense && entry.OpponentID == "" && !entry.Revenged && entry.At == at &&
+			entry.Seed == nonZeroSeed(seed) {
 			return entry
 		}
 	}
@@ -225,19 +226,18 @@ func rivalOf(opponent battle.PvpOpponent) pvpOpponent {
 func (p *player) pvpRival(request BattleStartRequest, stats *pvpStats) (
 	pvpOpponent, battle.Side, *battle.Changer, error,
 ) {
-	exclusive := 0
-	for _, chosen := range []bool{request.Event, request.Duel != "", request.RevengeAt != 0} {
-		if chosen {
-			exclusive++
-		}
-	}
-	if exclusive > 1 {
-		return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable, "a battle is one of an event battle, a duel or a revenge")
+	if request.Duel != "" && request.RevengeAt != 0 || request.Event && request.RevengeAt != 0 {
+		return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable,
+			"a battle is one of a matched battle, a duel or a revenge on a bot")
 	}
 	data := p.catalog.Battle
 	o := request.Opponent
 	switch {
 	case request.Duel != "":
+		now := p.now.Unix()
+		if err := stats.mayAttack(request.Duel, now); err != nil {
+			return pvpOpponent{}, battle.Side{}, nil, err
+		}
 		match, err := p.duels.DuelOpponent(request.Duel)
 		if err != nil {
 			return pvpOpponent{}, battle.Side{}, nil, err
@@ -248,13 +248,18 @@ func (p *player) pvpRival(request BattleStartRequest, stats *pvpStats) (
 		}
 		rival := pvpOpponent{
 			level: min(max(match.Level, 1), pvpMaxLevel), trophies: max(match.Trophies, 0),
-			seed: nonZeroSeed(o.Seed), name: match.Name,
+			seed: nonZeroSeed(o.Seed), name: match.Name, player: request.Duel,
 		}
-		return rival, enemy, nil, nil
+		var changer *battle.Changer
+		if request.Event {
+			changer = data.PvpEventChanger(data.PvpEventCycle(now))
+		}
+		stats.noteAttack(request.Duel, now)
+		return rival, enemy, changer, nil
 	case request.RevengeAt != 0:
-		target := stats.lostDefenseAt(request.RevengeAt, o.Seed)
+		target := stats.botDefenseAt(request.RevengeAt, o.Seed)
 		if target == nil {
-			return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable, "no lost defense at %d to revenge",
+			return pvpOpponent{}, battle.Side{}, nil, refuse(Unavailable, "no bot defense at %d to revenge",
 				request.RevengeAt)
 		}
 		target.Revenged = true
@@ -276,32 +281,11 @@ func (p *player) duelEnemy(member string) (battle.Side, error) {
 	if err != nil {
 		return battle.Side{}, err
 	}
-	data := p.catalog.Battle
-	enemy := battle.Side{
-		Units: []battle.Unit{}, Runes: []string{}, HeroBuilds: duel.HeroBuilds, Renown: duel.Renown.Canonical(),
-	}
-	for _, unit := range duel.Units {
-		if unit.Slot < 0 || unit.Slot >= battle.SlotCount || unit.ID == "" || !data.Knows(unit.ID) {
-			continue
-		}
-		fielded := battle.Unit{
-			Slot: unit.Slot, ID: unit.ID, Tier: battle.ParseTier(unit.Tier).String(), Level: max(unit.Level, 1),
-		}
-		if duel.HeroBuilds {
-			fielded.ConsumeXP, fielded.Ascended = unit.ConsumeXP, unit.Ascended
-			fielded.Gear, fielded.Fortify = unit.Gear, unit.Fortify
-		}
-		enemy.Units = append(enemy.Units, fielded)
-	}
-	for _, id := range duel.Runes {
-		if data.RuneKnown(id) && len(enemy.Runes) < battle.RuneSlotCount {
-			enemy.Runes = append(enemy.Runes, id)
-		}
-	}
+	enemy := duelSide(p.catalog.Battle, duel)
 	if len(enemy.Units) == 0 {
 		return battle.Side{}, refuse(Unavailable, "%s has no squad to duel", member)
 	}
-	return canonicalSide(enemy), nil
+	return enemy, nil
 }
 
 func (p *player) checkEnemy(request BattleStartRequest, enemy battle.Side, changer *battle.Changer) error {

@@ -103,6 +103,11 @@ func loadAccount(doc document, rules *catalog.RenownRules) (*account, error) {
 	return a, nil
 }
 
+func (a *account) name() string {
+	name, _ := a.doc["name"].(string)
+	return name
+}
+
 func (a *account) experienceBounds() (low, high int64) {
 	if a.Level < MaxPlayerLevel {
 		return xpForCurrentLevel(a.Level), xpForNextLevel(a.Level)

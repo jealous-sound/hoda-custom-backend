@@ -46,26 +46,26 @@ type action func(record *profile.Record) (granted any, err error)
 
 func (s *Server) runAction(
 	w http.ResponseWriter, r *http.Request, player, name string, decode func([]byte) (action, error),
-) {
+) (committed bool) {
 	expected, ok := parseIfMatch(r.Header.Get("If-Match"))
 	if !ok {
 		writeError(w, http.StatusPreconditionRequired, "If-Match with the last seen revision is required")
-		return
+		return false
 	}
 	body, err := io.ReadAll(io.LimitReader(r.Body, maxActionBodyBytes+1))
 	if err != nil || len(body) > maxActionBodyBytes {
 		writeError(w, http.StatusBadRequest, "could not read body")
-		return
+		return false
 	}
 	var envelope actionEnvelope
 	if err := json.Unmarshal(body, &envelope); err != nil || !requestIDPattern.MatchString(envelope.RequestID) {
 		writeError(w, http.StatusBadRequest, "request_id must be 8-64 letters, digits, '-' or '_'")
-		return
+		return false
 	}
 	apply, err := decode(body)
 	if err != nil {
 		writeError(w, http.StatusBadRequest, err.Error())
-		return
+		return false
 	}
 	name = cmp.Or(name, envelope.Action)
 
@@ -141,6 +141,7 @@ func (s *Server) runAction(
 		writeRevision(w, record.Revision)
 		writeJSON(w, http.StatusOK, actionResponse{Revision: record.Revision, Profile: record.Profile, Granted: granted})
 	}
+	return err == nil
 }
 
 type purchaseBody struct {
@@ -194,7 +195,8 @@ type genericActionBody struct {
 }
 
 func (s *Server) playerAction(w http.ResponseWriter, r *http.Request, player string) {
-	s.runAction(w, r, player, namedInBody, func(body []byte) (action, error) {
+	var strikes []economy.Strike
+	committed := s.runAction(w, r, player, namedInBody, func(body []byte) (action, error) {
 		var request genericActionBody
 		if err := json.Unmarshal(body, &request); err != nil || request.Action == "" {
 			return nil, errors.New(`body must be {"request_id", "action", ...}`)
@@ -219,9 +221,29 @@ func (s *Server) playerAction(w http.ResponseWriter, r *http.Request, player str
 					return nil, creditErr
 				}
 			}
+			strikes = result.Strikes()
 			return result, err
 		}, nil
 	})
+	if committed {
+		for _, strike := range strikes {
+			s.landStrike(player, strike)
+		}
+	}
+}
+
+func (s *Server) landStrike(attacker string, strike economy.Strike) {
+	strike.Attacker = attacker
+	strike.AttackerName = cmp.Or(strike.AttackerName, attacker)
+	_, err := s.profiles.AmendKeepingRevision(strike.Defender, func(record *profile.Record) error {
+		next, err := economy.LandStrike(record.Profile, strike)
+		record.Profile = next
+		return err
+	})
+	if err != nil {
+		s.log.Error("land a pvp attack on its defender", "attacker", attacker, "defender", strike.Defender,
+			"error", err)
+	}
 }
 
 func (s *Server) creditBattle(record *profile.Record, player string, result economy.BattleResult) error {
