@@ -186,6 +186,7 @@ type Catalog struct {
 	TimedQuests      TimedQuestRules
 	Renown           RenownRules
 	Vault            VaultRules
+	ChallengeDrops   ChallengeDrops
 	Battle           *battle.Data
 
 	packIndex    map[string]int
@@ -494,6 +495,9 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		return nil, err
 	}
 	if err := c.loadRules(read); err != nil {
+		return nil, err
+	}
+	if err := c.loadChallengeDrops(read); err != nil {
 		return nil, err
 	}
 	if err := c.loadExpeditions(read); err != nil {
