@@ -104,7 +104,7 @@ guesses, one back every 30 seconds; the right token is never limited.
 | Path | |
 | --- | --- |
 | `/admin/overview` | who is online and on which client version, today's totals, player and guild counts, gems in wallets and Vaults, memory, disk, the deployed commit |
-| `/admin/activity` | peak players online per 5 minutes for 7 days, and per UTC day for 90: peak, distinct players, sign-ups |
+| `/admin/activity` | peak players online per 5 minutes for 7 days and per hour for 31; every UTC day since tracking began (peak and when, average online, distinct players, sign-ups); all-time records; accounts made per UTC day |
 | `/admin/traffic` | requests per minute for the last hour, totals per route, actions by name and the latest 200 refusals |
 | `/admin/players`, `/admin/players/{id}` | every account and profile in brief, with its login if it has one; one player with the stored save |
 | `/admin/guilds`, `/admin/guilds/{id}` | guilds in brief; one guild with its members, applications and chat |

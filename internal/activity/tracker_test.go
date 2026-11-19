@@ -1,6 +1,7 @@
 package activity
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"testing"
@@ -102,7 +103,7 @@ func TestDayCountsEachPlayerOnceAndStartsOverAtMidnight(t *testing.T) {
 	}
 }
 
-func TestHistoryIsBounded(t *testing.T) {
+func TestPeaksAreBoundedButDaysAreKeptForGood(t *testing.T) {
 	c := newClock()
 	tracker := NewTracker(c.now)
 	for range BucketsKept + 5 {
@@ -112,12 +113,118 @@ func TestHistoryIsBounded(t *testing.T) {
 	if got := len(tracker.History().Buckets); got != BucketsKept {
 		t.Fatalf("kept %d buckets, want %d", got, BucketsKept)
 	}
-	for range DaysKept + 5 {
+	for range HoursKept + 5 {
+		sample(t, tracker)
+		c.advance(HourLength)
+	}
+	if got := len(tracker.History().Hours); got != HoursKept {
+		t.Fatalf("kept %d hours, want %d", got, HoursKept)
+	}
+	const twoYears = 2 * 366
+	days := len(tracker.History().Days)
+	for range twoYears {
 		tracker.SignedUp()
 		c.advance(24 * time.Hour)
 	}
-	if got := len(tracker.History().Days); got != DaysKept {
-		t.Fatalf("kept %d days, want %d", got, DaysKept)
+	if got := len(tracker.History().Days); got != days+twoYears {
+		t.Fatalf("kept %d days, want all %d", got, days+twoYears)
+	}
+}
+
+func TestEachHourKeepsItsHighestSample(t *testing.T) {
+	c := newClock()
+	tracker := NewTracker(c.now)
+	tracker.Seen("a", UnknownClient)
+	sample(t, tracker)
+	c.advance(20 * time.Minute)
+	tracker.Seen("a", UnknownClient)
+	tracker.Seen("b", UnknownClient)
+	tracker.Seen("c", UnknownClient)
+	sample(t, tracker)
+	c.advance(39 * time.Minute)
+	sample(t, tracker)
+	c.advance(time.Minute)
+	sample(t, tracker)
+	hours := tracker.History().Hours
+	if len(hours) != 2 || hours[0].Peak != 3 || hours[1].Peak != 0 {
+		t.Fatalf("hours = %+v, want a peak of 3 then 0", hours)
+	}
+	if hours[0].Start != c.current.Add(-time.Hour).Unix() || hours[1].Start != c.current.Unix() {
+		t.Fatalf("hours = %+v, want them to start on the hour", hours)
+	}
+}
+
+func TestADayRemembersWhenItsPeakWasFirstReachedAndItsAverage(t *testing.T) {
+	c := newClock()
+	tracker := NewTracker(c.now)
+	tracker.Seen("a", UnknownClient)
+	sample(t, tracker)
+	c.advance(SampleEvery)
+	tracker.Seen("b", UnknownClient)
+	sample(t, tracker)
+	peakedAt := c.current.Unix()
+	c.advance(SampleEvery)
+	sample(t, tracker)
+	today := tracker.Today()
+	if today.PeakOnline != 2 || today.PeakOnlineAt != peakedAt {
+		t.Fatalf("today = %+v, want a peak of 2 first reached at %d", today, peakedAt)
+	}
+	if today.Samples != 3 || today.OnlineSum != 1+2+2 {
+		t.Fatalf("today = %+v, want 3 samples adding up to 5", today)
+	}
+}
+
+func TestRecordsHoldTheBestDayOfEachKind(t *testing.T) {
+	c := newClock()
+	tracker := NewTracker(c.now)
+	tracker.Seen("a", UnknownClient)
+	tracker.Seen("b", UnknownClient)
+	sample(t, tracker)
+	peakedAt := c.current.Unix()
+	c.advance(24 * time.Hour)
+	tracker.Seen("a", UnknownClient)
+	tracker.SignedUp()
+	tracker.SignedUp()
+	sample(t, tracker)
+	c.advance(time.Hour)
+	tracker.Seen("b", UnknownClient)
+	tracker.Seen("c", UnknownClient)
+	c.advance(24 * time.Hour)
+	tracker.SignedUp()
+	records := tracker.History().Records
+	want := Records{
+		Since:       "2026-11-07",
+		PeakOnline:  Record{Count: 2, Date: "2026-11-07", At: peakedAt},
+		MostPlayers: Record{Count: 3, Date: "2026-11-08"},
+		MostSignups: Record{Count: 2, Date: "2026-11-08"},
+	}
+	if records != want {
+		t.Fatalf("records = %+v, want %+v", records, want)
+	}
+}
+
+func TestHistoryFromBeforeHourlyPeaksGainsThemFromItsBuckets(t *testing.T) {
+	c := newClock()
+	dir := t.TempDir()
+	start := c.current.Unix()
+	earlier := `{"buckets":[{"start":%d,"peak":1},{"start":%d,"peak":4},{"start":%d,"peak":2}],` +
+		`"days":[{"date":"2026-11-06","peak_online":7,"players":9,"signups":1},` +
+		`{"date":"2026-11-07","peak_online":4,"players":5,"signups":0}],"today_players":[]}`
+	saved := fmt.Sprintf(earlier, start, start+int64(BucketLength/time.Second), start+int64(time.Hour/time.Second))
+	if err := os.WriteFile(filepath.Join(dir, fileName), []byte(saved), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	history := open(t, dir, c).History()
+	if len(history.Hours) != 2 || history.Hours[0] != (Bucket{Start: start, Peak: 4}) ||
+		history.Hours[1].Peak != 2 {
+		t.Fatalf("hours = %+v, want the bucket peaks rolled up by hour", history.Hours)
+	}
+	firstFour := start + int64(BucketLength/time.Second)
+	if history.Days[1].PeakOnlineAt != firstFour || history.Days[0].PeakOnlineAt != 0 {
+		t.Fatalf("days = %+v, want only the day its buckets cover to learn its peak time", history.Days)
+	}
+	if record := history.Records.PeakOnline; record != (Record{Count: 7, Date: "2026-11-06"}) {
+		t.Fatalf("peak record = %+v, want the older day without a time", record)
 	}
 }
 
