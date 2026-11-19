@@ -3,6 +3,7 @@ package api
 import (
 	"encoding/json"
 	"net/http"
+	"slices"
 	"strings"
 	"testing"
 	"time"
@@ -290,6 +291,28 @@ func TestActivityReportsTodayAndTheBucketLength(t *testing.T) {
 	if reply.BucketSeconds != int64(activity.BucketLength/time.Second) || len(reply.Days) != 1 ||
 		reply.Days[0].Players != 1 || reply.Days[0].Date != fixedNow.UTC().Format(time.DateOnly) {
 		t.Fatalf("activity = %+v", reply)
+	}
+}
+
+func TestActivityCountsAccountsByTheUTCDayTheyWereMade(t *testing.T) {
+	h := newMaintenanceHarness(t)
+	h.createGuest()
+	firstDay := h.now.UTC().Format(time.DateOnly)
+	h.pass(40 * 24 * time.Hour)
+	h.createGuest()
+	h.createGuest()
+	lastDay := h.now.UTC().Format(time.DateOnly)
+	var reply activityReply
+	h.adminRead(adminActivityPath, &reply)
+	want := []accountsOnDay{{Date: firstDay, Accounts: 1}, {Date: lastDay, Accounts: 2}}
+	if !slices.Equal(reply.AccountsCreated, want) {
+		t.Fatalf("accounts_created = %+v, want %+v", reply.AccountsCreated, want)
+	}
+	if reply.HourSeconds != int64(time.Hour/time.Second) || reply.SampleSeconds != int64(activity.SampleEvery/time.Second) {
+		t.Fatalf("hour_seconds = %d sample_seconds = %d", reply.HourSeconds, reply.SampleSeconds)
+	}
+	if players := h.overview().Players; players.Accounts != 3 || players.Created30d != 2 || players.Created7d != 2 {
+		t.Fatalf("players = %+v, want 3 accounts with 2 made this month", players)
 	}
 }
 
