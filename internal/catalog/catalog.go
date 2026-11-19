@@ -58,7 +58,7 @@ const (
 const (
 	StoreCounterCount   = 4
 	VoucherCapacity     = 16
-	heroWeightTotal     = 10000
+	HeroWeightTotal     = 10000
 	maxHeroesPerPack    = 10
 	runePackSlotLimit   = 3
 	gearPackItemLimit   = 5
@@ -109,7 +109,7 @@ type Pack struct {
 	FixedHeroes         []string
 	PoolTag             string
 	UniqueHeroes        bool
-	LegendaryPity       int
+	LegendaryPityPacks  int
 	Weights             [RarityLegendary + 1]int
 	RuneChancePct       int
 	RuneCount           int
@@ -194,6 +194,17 @@ type Catalog struct {
 	heroIndex    map[string]int
 	runeIndex    map[string]int
 	rarityPool   [RarityLegendary + 1][]int
+}
+
+func (p *Pack) PityCounter() string {
+	if p.Rotation != nil {
+		return p.Rotation.Group
+	}
+	return p.ID
+}
+
+func (p *Pack) GuaranteedSlots() int {
+	return len(p.FixedHeroes) + p.GuaranteedLegendary + p.GuaranteedEpic + p.GuaranteedRare
 }
 
 func (c *Catalog) Pack(id string) (*Pack, bool) {
@@ -290,7 +301,7 @@ type rawPack struct {
 	FixedHeroes         []string       `json:"fixed_heroes"`
 	PoolTag             string         `json:"pool_tag"`
 	UniqueHeroes        bool           `json:"unique_heroes"`
-	LegendaryPity       int            `json:"legendary_pity"`
+	LegendaryPityPacks  int            `json:"legendary_pity_packs"`
 	Weights             map[string]int `json:"weights"`
 	RuneChancePct       int            `json:"rune_chance_pct"`
 	RuneCount           int            `json:"rune_count"`
@@ -592,7 +603,7 @@ func (c *Catalog) parseHeroContents(pack *Pack, raw rawPack) error {
 	pack.FixedHeroes = raw.FixedHeroes
 	pack.PoolTag = raw.PoolTag
 	pack.UniqueHeroes = raw.UniqueHeroes
-	pack.LegendaryPity = raw.LegendaryPity
+	pack.LegendaryPityPacks = raw.LegendaryPityPacks
 	pack.RuneChancePct = raw.RuneChancePct
 	pack.RuneCount = raw.RuneCount
 	pack.RuneMinRarity = raw.RuneMinRarity
@@ -608,10 +619,14 @@ func (c *Catalog) parseHeroContents(pack *Pack, raw rawPack) error {
 		pack.Weights[rarity] = raw.Weights[name]
 		total += raw.Weights[name]
 	}
-	guaranteed := len(pack.FixedHeroes) + pack.GuaranteedLegendary + pack.GuaranteedEpic + pack.GuaranteedRare
+	guaranteed := pack.GuaranteedSlots()
 	if pack.HeroCount <= 0 || pack.HeroCount > maxHeroesPerPack || guaranteed > pack.HeroCount ||
-		pack.OpenedCounter < 0 || pack.OpenedCounter >= StoreCounterCount || total != heroWeightTotal {
+		pack.OpenedCounter < 0 || pack.OpenedCounter >= StoreCounterCount || total != HeroWeightTotal ||
+		pack.LegendaryPityPacks < 0 {
 		return fmt.Errorf("invalid hero pack contents")
+	}
+	if pack.LegendaryPityPacks > 0 && (guaranteed == pack.HeroCount || pack.Weights[RarityLegendary] == 0) {
+		return fmt.Errorf("a Legendary pity needs a rolled slot that can be Legendary")
 	}
 	for _, id := range pack.FixedHeroes {
 		if _, ok := c.heroIndex[id]; !ok {

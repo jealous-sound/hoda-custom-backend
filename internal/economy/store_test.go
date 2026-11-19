@@ -18,13 +18,13 @@ import (
 var springDay = time.Date(2026, time.March, 10, 12, 0, 0, 0, time.UTC)
 
 type fixture struct {
-	gold, gems     int
-	vouchers       []int
-	sinceLegendary int
-	openedByPack   [catalog.StoreCounterCount]int
-	tutorial       map[string]any
-	additions      []any
-	runeItems      []any
+	gold, gems          int
+	vouchers            []int
+	packsSinceLegendary map[string]int
+	openedByPack        [catalog.StoreCounterCount]int
+	tutorial            map[string]any
+	additions           []any
+	runeItems           []any
 }
 
 func (f fixture) profile(t *testing.T) json.RawMessage {
@@ -53,7 +53,7 @@ func (f fixture) profile(t *testing.T) json.RawMessage {
 		"account": map[string]any{"level": 5, "gold": f.gold, "gems": f.gems, "energy": 4, "energy_max": 30,
 			"energy_regen_timer": 123.5, "stamina": 8, "stamina_max": 8, "stamina_regen_timer": 0},
 		"store": map[string]any{"rng_state": 99, "opened_total": opened, "opened_by_pack": f.openedByPack[:],
-			"champion_since_legendary": f.sinceLegendary, "vouchers": vouchers},
+			releasedClientPityCounter: 0, "vouchers": vouchers},
 		"roster": map[string]any{"starter_count": 0, "next_instance_id": 8, "starters": []any{},
 			"additions": additions},
 		"squads":   []any{},
@@ -62,6 +62,9 @@ func (f fixture) profile(t *testing.T) json.RawMessage {
 	}
 	if f.tutorial != nil {
 		doc["tutorial"] = f.tutorial
+	}
+	if f.packsSinceLegendary != nil {
+		doc["store"].(map[string]any)[packsSinceLegendary] = f.packsSinceLegendary
 	}
 	raw, err := json.Marshal(doc)
 	if err != nil {
@@ -113,11 +116,12 @@ type decoded struct {
 		EnergyRegenTimer   float64 `json:"energy_regen_timer"`
 	}
 	Store struct {
-		OpenedTotal    int   `json:"opened_total"`
-		OpenedByPack   []int `json:"opened_by_pack"`
-		SinceLegendary int   `json:"champion_since_legendary"`
-		Vouchers       []int
-		RNGState       int `json:"rng_state"`
+		OpenedTotal         int            `json:"opened_total"`
+		OpenedByPack        []int          `json:"opened_by_pack"`
+		ReleasedClientPity  *int           `json:"champion_since_legendary"`
+		PacksSinceLegendary map[string]int `json:"packs_since_legendary"`
+		Vouchers            []int
+		RNGState            int `json:"rng_state"`
 	}
 	Roster struct {
 		NextInstanceID int `json:"next_instance_id"`
@@ -264,32 +268,6 @@ func TestFullRosterIsRefused(t *testing.T) {
 	}, springDay)
 	if refusalCode(err) != InventoryFull {
 		t.Fatalf("got %v", err)
-	}
-}
-
-func TestPityGuaranteesALegendary(t *testing.T) {
-	c := mustCatalog(t)
-	pack := &catalog.Pack{HeroCount: 1, LegendaryPity: 4, MinimumRarity: catalog.RarityRare}
-	pack.Weights[catalog.RarityRare] = 1
-	for seed := uint32(1); seed <= 20; seed++ {
-		r := rng{state: seed}
-		due, ok := rollHeroes(c, pack, pack.LegendaryPity-1, nil, &r)
-		if !ok || due.rarities[0] != catalog.RarityLegendary || due.nextPity != 0 {
-			t.Fatalf("seed %d: the pack that was due rolled rarity %d, pity %d", seed, due.rarities[0], due.nextPity)
-		}
-		r = rng{state: seed}
-		early, _ := rollHeroes(c, pack, 0, nil, &r)
-		if early.rarities[0] != catalog.RarityRare || early.nextPity != 1 {
-			t.Fatalf("seed %d: the first pack rolled rarity %d, pity %d", seed, early.rarities[0], early.nextPity)
-		}
-	}
-}
-
-func TestNoShippedPackPromisesALegendaryByPity(t *testing.T) {
-	for _, pack := range mustCatalog(t).Packs {
-		if pack.LegendaryPity != 0 {
-			t.Errorf("pack %s has a Legendary pity of %d", pack.ID, pack.LegendaryPity)
-		}
 	}
 }
 

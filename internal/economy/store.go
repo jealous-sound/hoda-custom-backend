@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"math"
 	"slices"
+	"strconv"
 	"time"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
@@ -23,6 +24,7 @@ const (
 	firstInstanceID       = 1
 	newHeroLevel          = 1
 	summonedMissionStat   = "summoned"
+	packsSinceLegendary   = "packs_since_legendary"
 )
 
 type RefusalCode string
@@ -188,11 +190,11 @@ func tutorialFinished(doc document) (bool, error) {
 }
 
 type wallet struct {
-	gold, gems     int64
-	vouchers       []int64
-	openedTotal    int64
-	openedByPack   []int64
-	sinceLegendary int64
+	gold, gems          int64
+	vouchers            []int64
+	openedTotal         int64
+	openedByPack        []int64
+	packsSinceLegendary map[string]int64
 }
 
 func (p *purchase) loadWallet() (*wallet, error) {
@@ -213,7 +215,6 @@ func (p *purchase) loadWallet() (*wallet, error) {
 		{account, "gold", &w.gold},
 		{account, "gems", &w.gems},
 		{store, "opened_total", &w.openedTotal},
-		{store, "champion_since_legendary", &w.sinceLegendary},
 	}
 	for _, field := range fields {
 		value, err := field.section.int64Field(field.name)
@@ -239,7 +240,41 @@ func (p *purchase) loadWallet() (*wallet, error) {
 	if err != nil || len(w.openedByPack) != catalog.StoreCounterCount {
 		return nil, refuse(BadProfile, "store.opened_by_pack must hold %d counters", catalog.StoreCounterCount)
 	}
+	if w.packsSinceLegendary, err = loadPacksSinceLegendary(store); err != nil {
+		return nil, refuse(BadProfile, "%v", err)
+	}
 	return w, nil
+}
+
+func loadPacksSinceLegendary(store document) (map[string]int64, error) {
+	counters := map[string]int64{}
+	value, present := store[packsSinceLegendary]
+	if !present {
+		return counters, nil
+	}
+	object, ok := value.(map[string]any)
+	if !ok {
+		return nil, fmt.Errorf("store.%s is not an object", packsSinceLegendary)
+	}
+	for counter, raw := range object {
+		count, err := numberValue(raw, packsSinceLegendary+"."+counter)
+		if err != nil {
+			return nil, err
+		}
+		if count < 0 || count > math.MaxInt32 {
+			return nil, fmt.Errorf("store.%s.%s is out of range", packsSinceLegendary, counter)
+		}
+		counters[counter] = count
+	}
+	return counters, nil
+}
+
+func storePacksSinceLegendary(store document, counters map[string]int64) {
+	object := map[string]any{}
+	for counter, count := range counters {
+		object[counter] = json.Number(strconv.FormatInt(count, 10))
+	}
+	store[packsSinceLegendary] = object
 }
 
 func (w *wallet) activeOffer(pack *catalog.Pack) catalog.Offer {
@@ -282,7 +317,7 @@ func (w *wallet) store(doc document) error {
 	store["vouchers"] = numberArray(w.vouchers)
 	store.setInt("opened_total", w.openedTotal)
 	store["opened_by_pack"] = numberArray(w.openedByPack)
-	store.setInt("champion_since_legendary", w.sinceLegendary)
+	storePacksSinceLegendary(store, w.packsSinceLegendary)
 	return nil
 }
 
@@ -302,9 +337,11 @@ func (p *purchase) buyHeroPack(w *wallet, offer catalog.Offer, scripted *catalog
 		return refuse(CounterLimit, "pack counters are at their limit")
 	}
 	roll := heroRoll{}
+	pityCounter := p.pack.PityCounter()
+	sinceLegendary := int(w.packsSinceLegendary[pityCounter])
 	if scripted == nil {
 		var ok bool
-		roll, ok = rollHeroes(p.catalog, p.pack, int(w.sinceLegendary), ownedHeroes(p.catalog, p.doc), &p.rng)
+		roll, ok = rollHeroes(p.catalog, p.pack, sinceLegendary, ownedHeroes(p.catalog, p.doc), &p.rng)
 		if !ok {
 			return refuse(Unavailable, "pack %s has no heroes to roll", p.pack.ID)
 		}
@@ -357,8 +394,8 @@ func (p *purchase) buyHeroPack(w *wallet, offer catalog.Offer, scripted *catalog
 
 	w.openedTotal++
 	w.openedByPack[counter]++
-	if roll.tracksPity {
-		w.sinceLegendary = int64(roll.nextPity)
+	if scripted == nil && p.pack.LegendaryPityPacks > 0 {
+		w.packsSinceLegendary[pityCounter] = int64(packsSinceLegendaryAfter(sinceLegendary, roll.rarities))
 	}
 	if err := addMissionCounter(p.doc, summonedMissionStat, int64(p.pack.HeroCount)); err != nil {
 		return err

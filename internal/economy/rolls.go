@@ -1,6 +1,8 @@
 package economy
 
 import (
+	"slices"
+
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 )
 
@@ -65,12 +67,16 @@ func rollRarity(pack *catalog.Pack, r *rng) catalog.Rarity {
 	return catalog.RarityLegendary
 }
 
+func pityDue(pack *catalog.Pack, sinceLegendary int) bool {
+	return pack.LegendaryPityPacks > 0 && sinceLegendary >= pack.LegendaryPityPacks-1
+}
+
 func slotRarity(pack *catalog.Pack, rolledSlot int, pity bool, r *rng) catalog.Rarity {
 	legendaryEnd := pack.GuaranteedLegendary
 	epicEnd := legendaryEnd + pack.GuaranteedEpic
 	rareEnd := epicEnd + pack.GuaranteedRare
 	switch {
-	case rolledSlot < legendaryEnd || pity:
+	case rolledSlot < legendaryEnd || (pity && rolledSlot == rareEnd):
 		return catalog.RarityLegendary
 	case rolledSlot < epicEnd:
 		return catalog.RarityEpic
@@ -78,6 +84,13 @@ func slotRarity(pack *catalog.Pack, rolledSlot int, pity bool, r *rng) catalog.R
 		return catalog.RarityRare
 	}
 	return rollRarity(pack, r)
+}
+
+func packsSinceLegendaryAfter(sinceLegendary int, rarities []catalog.Rarity) int {
+	if slices.Contains(rarities, catalog.RarityLegendary) {
+		return 0
+	}
+	return sinceLegendary + 1
 }
 
 func alreadyRolled(hero int, rolled []int) bool {
@@ -131,16 +144,15 @@ func rollPackHero(
 }
 
 type heroRoll struct {
-	heroes     []int
-	rarities   []catalog.Rarity
-	nextPity   int
-	tracksPity bool
+	heroes   []int
+	rarities []catalog.Rarity
 }
 
 func rollHeroes(
 	c *catalog.Catalog, pack *catalog.Pack, sinceLegendary int, owned map[int]bool, r *rng,
 ) (heroRoll, bool) {
-	roll := heroRoll{tracksPity: pack.LegendaryPity > 0, nextPity: sinceLegendary}
+	roll := heroRoll{}
+	pity := pityDue(pack, sinceLegendary)
 	for i := 0; i < pack.HeroCount; i++ {
 		var hero int
 		var rarity catalog.Rarity
@@ -151,7 +163,6 @@ func rollHeroes(
 			}
 			hero, rarity = index, c.Heroes[index].Rarity
 		} else {
-			pity := roll.tracksPity && roll.nextPity >= pack.LegendaryPity-1
 			rarity = slotRarity(pack, i-len(pack.FixedHeroes), pity, r)
 			hero = rollPackHero(c, pack, rarity, owned, roll.heroes, r)
 		}
@@ -160,13 +171,6 @@ func rollHeroes(
 		}
 		roll.heroes = append(roll.heroes, hero)
 		roll.rarities = append(roll.rarities, rarity)
-		if roll.tracksPity {
-			if rarity == catalog.RarityLegendary {
-				roll.nextPity = 0
-			} else {
-				roll.nextPity++
-			}
-		}
 	}
 	return roll, true
 }
