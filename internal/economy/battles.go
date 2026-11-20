@@ -129,11 +129,16 @@ func (p *player) StartBattle(request BattleStartRequest) (BattleResult, error) {
 func (p *player) spendForBattle(request BattleStartRequest, start *battleStart) error {
 	switch request.Mode {
 	case BattleCampaign:
+		progress, err := p.loadCampaign()
+		if err != nil {
+			return err
+		}
 		node := p.catalog.Campaign[request.Map].Nodes[request.Node]
-		if finished, _ := tutorialFinished(p.doc); !finished && p.account.Energy < int64(node.EnergyCost) {
+		cost := campaignEnergyCost(node, progress.losses[request.Map*catalog.CampaignMaxNodes+request.Node])
+		if finished, _ := tutorialFinished(p.doc); !finished && p.account.Energy < cost {
 			p.account.Energy = p.account.EnergyMax
 		}
-		return p.account.spendEnergy(int64(node.EnergyCost))
+		return p.account.spendEnergy(cost)
 	case BattlePvp:
 		return p.account.spendStamina(pvpStaminaCost)
 	}
@@ -287,6 +292,13 @@ func (c *campaignProgress) mapUnlocked(maps []catalog.CampaignMap, index int) bo
 		}
 	}
 	return true
+}
+
+func campaignEnergyCost(node catalog.CampaignNode, losses int64) int64 {
+	if losses > 0 {
+		return 0
+	}
+	return int64(node.EnergyCost)
 }
 
 func masteryWin(node catalog.CampaignNode, wins int64) bool {
