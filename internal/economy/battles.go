@@ -366,5 +366,8 @@ func (p *player) settleCampaign(pending profile.PendingBattle, outcome battle.Ou
 		gems = int64(node.MasteryGems)
 	}
 	result.Gems = max(gems, 0)
-	return result, p.payBattle(&result, max(gold, 0), max(xp, 0), outcome.Crits, true)
+	if err := p.payBattle(&result, max(gold, 0), max(xp, 0), outcome.Crits, true); err != nil || !node.Grind {
+		return result, err
+	}
+	return result, p.awardChallengeDrop(maps[pending.Map].ID)
 }
