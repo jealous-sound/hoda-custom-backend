@@ -11,6 +11,7 @@ type PvpMatchRequest struct {
 	Event bool `json:"event"`
 	Bot   *int `json:"bot"`
 	Next  bool `json:"next"`
+	Side  int  `json:"side"`
 }
 
 func (s *pvpStats) spendNext(limit int, day int64) bool {
@@ -56,6 +57,13 @@ func (p *player) MatchPvp(request PvpMatchRequest) (BattleResult, error) {
 		}
 	}
 	now := p.now.Unix()
+	sides := 0
+	if request.Event {
+		sides = data.PvpEventSides(data.PvpEventCycle(now))
+	}
+	if request.Side < 0 || request.Side >= max(sides, 1) {
+		return BattleResult{}, refuse(Unavailable, "this event has no side %d", request.Side)
+	}
 	stats := readPvpStats(p.doc)
 	if request.Next {
 		if !stats.spendNext(p.catalog.Pvp.Matchmaking.DailyNexts, pvpDay(now)) {
@@ -75,10 +83,12 @@ func (p *player) MatchPvp(request PvpMatchRequest) (BattleResult, error) {
 	level, day := p.account.Level, pvpDay(now)
 	var opponent battle.PvpOpponent
 	switch {
+	case request.Bot != nil && request.Event:
+		opponent = data.PvpEventOpponentFromBot(bot, level, now, request.Side, seed)
 	case request.Bot != nil:
 		opponent = data.PvpOpponentFromBot(bot, level, day, seed)
 	case request.Event:
-		opponent = data.PvpEventOpponent(level, p.server.PvpEvent.Banners, now, seed)
+		opponent = data.PvpEventOpponent(level, p.server.PvpEvent.Banners, now, request.Side, seed)
 	default:
 		opponent = data.PvpLadderOpponent(level, stats.Trophies, day, seed)
 	}
@@ -86,6 +96,7 @@ func (p *player) MatchPvp(request PvpMatchRequest) (BattleResult, error) {
 	match := profile.PvpMatch{
 		ID: p.server.PvpMatches, Event: request.Event, Chosen: request.Bot != nil, Bot: opponent.Bot,
 		Squad: opponent.Squad, Level: opponent.Level, Trophies: opponent.Trophies, Seed: opponent.Seed, At: now,
+		Side: request.Side,
 	}
 	stored := match
 	p.server.PvpMatch = &stored

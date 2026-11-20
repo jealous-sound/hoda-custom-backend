@@ -4,11 +4,17 @@ import "testing"
 
 func TestPvpSquadsRankFromWeakestToStrongest(t *testing.T) {
 	tables := loadTestData(t).pvp
-	if len(tables.squadsWeakestFirst) != len(tables.squads) {
-		t.Fatalf("%d of %d squads are ranked", len(tables.squadsWeakestFirst), len(tables.squads))
+	eventsOnly := 0
+	for _, squad := range tables.squads {
+		if squad.eventsOnly {
+			eventsOnly++
+		}
+	}
+	if len(tables.ladder)+eventsOnly != len(tables.squads) {
+		t.Fatalf("%d ladder and %d event squads of %d", len(tables.ladder), eventsOnly, len(tables.squads))
 	}
 	ranked := make([]bool, len(tables.squads))
-	for rank, squad := range tables.squadsWeakestFirst {
+	for rank, squad := range tables.ladder {
 		if ranked[squad] {
 			t.Fatalf("squad %d is ranked twice", squad)
 		}
@@ -16,7 +22,7 @@ func TestPvpSquadsRankFromWeakestToStrongest(t *testing.T) {
 		if rank == 0 {
 			continue
 		}
-		weaker := tables.squadsWeakestFirst[rank-1]
+		weaker := tables.ladder[rank-1]
 		gap := tables.squads[squad].strength - tables.squads[weaker].strength
 		if gap < 0 || (gap == 0 && squad < weaker) {
 			t.Fatalf("rank %d: squad %d (strength %d) follows squad %d (strength %d)", rank, squad,
@@ -24,8 +30,8 @@ func TestPvpSquadsRankFromWeakestToStrongest(t *testing.T) {
 		}
 	}
 	lowest, top := tables.botStrengthRank(0), tables.botStrengthRank(len(tables.bots)-1)
-	if lowest != 0 || top != len(tables.squads)-1 {
-		t.Fatalf("the ladder spans strength ranks %d to %d of %d squads", lowest, top, len(tables.squads))
+	if lowest != 0 || top != len(tables.ladder)-1 {
+		t.Fatalf("the ladder spans strength ranks %d to %d of %d squads", lowest, top, len(tables.ladder))
 	}
 }
 

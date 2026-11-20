@@ -61,11 +61,17 @@ type BattleResult struct {
 	Strike      *Strike           `json:"-"`
 }
 
+type eventSquadRule struct {
+	cycle int64
+	side  int
+}
+
 type battleStart struct {
-	pending profile.PendingBattle
-	enemy   battle.Side
-	changer *battle.Changer
-	matched bool
+	pending   profile.PendingBattle
+	enemy     battle.Side
+	changer   *battle.Changer
+	matched   bool
+	squadRule *eventSquadRule
 }
 
 func (p *player) StartBattle(request BattleStartRequest) (BattleResult, error) {
@@ -95,6 +101,11 @@ func (p *player) StartBattle(request BattleStartRequest) (BattleResult, error) {
 	squad, err := p.battleSquad(request.Squad, request.RuneIDs)
 	if err != nil {
 		return BattleResult{}, err
+	}
+	if rule := start.squadRule; rule != nil {
+		if err := p.catalog.Battle.CheckPvpEventSquad(rule.cycle, rule.side, squad); err != nil {
+			return BattleResult{}, refuse(SquadNotAllowed, "%v", err)
+		}
 	}
 	if err := p.checkEnemy(request, start.enemy, start.changer); err != nil {
 		return BattleResult{}, err

@@ -510,6 +510,476 @@
     ]
    },
    {
+    "title_key": "PVP_EPIC_BLITZ_MAY_27_TITLE_KEY",
+    "text_key": "",
+    "original_text_key": "PVP_EPIC_BLITZ_MAY_27_DESC_KEY",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "Epic",
+     "rarities": [],
+     "unique_heroes": false,
+     "members": {
+      "factions": [],
+      "groups": []
+     },
+     "sides": []
+    },
+    "source": {
+     "event_key": "pvp|epic expectations",
+     "record_id": "R0353",
+     "event_date": "2019-09-07"
+    },
+    "omitted_prizes": [
+     "Banished Plane Key",
+     "Potion Drop Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1474,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "maferaths_maul",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1977,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_red_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 50000,
+      "gems": 75,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICPRESTIGEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_faction_all"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 48000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_white_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 46000,
+      "gems": 51,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 44000,
+      "gems": 45,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 40000,
+      "gems": 36,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_blue_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 36000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_white_pt"
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 32000,
+      "gems": 24,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 28000,
+      "gems": 12,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 26000,
+      "gems": 9,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_blue_pt"
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 24000,
+      "gems": 6,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 20000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 16000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "title_key": "PVP_BLACK_FACTION_JULY_11_TITLE_KEY",
     "text_key": "PVP_BLACK_FACTION_JULY_11_DESC_KEY",
     "effects": [
@@ -909,6 +1379,477 @@
         "count": 1,
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title_key": "PVP_PEASANT_REVOLT_MAR_5_TITLE_KEY",
+    "text_key": "",
+    "original_text_key": "PVP_PEASANT_REVOLT_MAR_5_DESC_KEY",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "Uncommon",
+     "rarities": [],
+     "unique_heroes": false,
+     "members": {
+      "factions": [],
+      "groups": []
+     },
+     "sides": []
+    },
+    "source": {
+     "event_key": "pvp|champions of the just",
+     "record_id": "R0320",
+     "event_date": "2019-04-02"
+    },
+    "omitted_prizes": [
+     "Giant Quest Key",
+     "Potion Drop Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1564,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "strouds_targe",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1993,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 37500,
+      "gems": 50,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "tome_of_rifts",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "certainty",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "arms_of_the_champion",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "elgarnan_enaste",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 36000,
+      "gems": 40,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "certainty",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "arms_of_the_champion",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "elgarnan_enaste",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "red_lyrium_idol",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 34500,
+      "gems": 34,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "arms_of_the_champion",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "elgarnan_enaste",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "red_lyrium_idol",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "vestments_of_the_dragon_hunter",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 33000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "elgarnan_enaste",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "red_lyrium_idol",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "vestments_of_the_dragon_hunter",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "soothers_sapphire",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 30000,
+      "gems": 24,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "red_lyrium_idol",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "vestments_of_the_dragon_hunter",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "soothers_sapphire",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "oath_breaker",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 27000,
+      "gems": 20,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "vestments_of_the_dragon_hunter",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "soothers_sapphire",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "oath_breaker",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "loose_ends",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 24000,
+      "gems": 16,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "soothers_sapphire",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "oath_breaker",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "loose_ends",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "scout_coat_arms",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 21000,
+      "gems": 8,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "oath_breaker",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "loose_ends",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "scout_coat_arms",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "legionnaire_plate",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 19500,
+      "gems": 6,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "loose_ends",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "scout_coat_arms",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "legionnaire_plate",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "crow_dagger",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 18000,
+      "gems": 4,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "scout_coat_arms",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "legionnaire_plate",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "crow_dagger",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 15000,
+      "gems": 2,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "legionnaire_plate",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "crow_dagger",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 12000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "crow_dagger",
+        "count": 1,
+        "icon": ""
        },
        {
         "kind": "unit",
@@ -1846,6 +2787,493 @@
     ]
    },
    {
+    "title_key": "PVP_GO_FOR_GOLD_JULY_21_TITLE_KEY",
+    "text_key": "",
+    "original_text_key": "PVP_GO_FOR_GOLD_JULY_21_DESC_KEY",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "",
+     "rarities": [
+      "Rare"
+     ],
+     "unique_heroes": true,
+     "members": {
+      "factions": [],
+      "groups": []
+     },
+     "sides": []
+    },
+    "source": {
+     "event_key": "pvp|quick draw",
+     "record_id": "R0300",
+     "event_date": "2018-08-09"
+    },
+    "omitted_prizes": [
+     "Banished Plane Keys"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1013,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "banners": 1067,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "sentinel_plate_pauldron",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1800,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_black_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 30000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_TEVINTERBANNER",
+        "count": 1,
+        "icon": "tex.b_tevinterbanner_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMNUG",
+        "count": 1,
+        "icon": "tex.c_redlyriumnug_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEDOWAGER",
+        "count": 1,
+        "icon": "tex.hf_nc_thedowager_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 28000,
+      "gems": 50,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_TEVINTERBANNER",
+        "count": 1,
+        "icon": "tex.b_tevinterbanner_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMNUG",
+        "count": 1,
+        "icon": "tex.c_redlyriumnug_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEDOWAGER",
+        "count": 1,
+        "icon": "tex.hf_nc_thedowager_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
+        "count": 1,
+        "icon": "tex.c_primaldracolisk_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 26000,
+      "gems": 40,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMNUG",
+        "count": 1,
+        "icon": "tex.c_redlyriumnug_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEDOWAGER",
+        "count": 1,
+        "icon": "tex.hf_nc_thedowager_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
+        "count": 1,
+        "icon": "tex.c_primaldracolisk_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "icon": "tex.c_hallawintersend_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 24000,
+      "gems": 35,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THEDOWAGER",
+        "count": 1,
+        "icon": "tex.hf_nc_thedowager_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
+        "count": 1,
+        "icon": "tex.c_primaldracolisk_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "icon": "tex.c_hallawintersend_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GREYWARDENCARVER",
+        "count": 1,
+        "icon": "tex.hm_tw_greywardencarver_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 22000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
+        "count": 1,
+        "icon": "tex.c_primaldracolisk_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "icon": "tex.c_hallawintersend_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GREYWARDENCARVER",
+        "count": 1,
+        "icon": "tex.hm_tw_greywardencarver_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_AVVARGOATEPIC",
+        "count": 1,
+        "icon": "tex.c_avvargoat_epic_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 20000,
+      "gems": 20,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "icon": "tex.c_hallawintersend_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GREYWARDENCARVER",
+        "count": 1,
+        "icon": "tex.hm_tw_greywardencarver_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_AVVARGOATEPIC",
+        "count": 1,
+        "icon": "tex.c_avvargoat_epic_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_white_pt"
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 18000,
+      "gems": 10,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_GREYWARDENCARVER",
+        "count": 1,
+        "icon": "tex.hm_tw_greywardencarver_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_AVVARGOATEPIC",
+        "count": 1,
+        "icon": "tex.c_avvargoat_epic_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_blue_pt"
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 16000,
+      "gems": 5,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_AVVARGOATEPIC",
+        "count": 1,
+        "icon": "tex.c_avvargoat_epic_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 14000,
+      "gems": 4,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 12000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 10000,
+      "gems": 2,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 8000,
+      "gems": 1,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "title_key": "PVP_HEDGE_MAGES_FEBRUARY_16_TITLE_KEY",
     "text_key": "PVP_HEDGE_MAGES_FEBRUARY_16_DESC_KEY",
     "effects": [
@@ -2236,6 +3664,431 @@
       "first": 181,
       "last": 241,
       "gold": 8000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title_key": "PVP_RED_FACTION_BLITZ_OCTOBER_6_TITLE_KEY",
+    "text_key": "",
+    "original_text_key": "PVP_RED_FACTION_BLITZ_OCTOBER_6_DESC_KEY",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "",
+     "rarities": [],
+     "unique_heroes": false,
+     "members": {
+      "factions": [
+       "Red"
+      ],
+      "groups": []
+     },
+     "sides": []
+    },
+    "source": {
+     "event_key": "pvp|a single strike",
+     "record_id": "R0358",
+     "event_date": "2019-10-03"
+    },
+    "omitted_prizes": [
+     "Banished Plane Key",
+     "Potion Drop Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1474,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "emblazoned_kirkwall_shield",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1977,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICGIANTWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_large_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 50000,
+      "gems": 75,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_GEREONALEXIUS",
+        "count": 1,
+        "icon": "tex.hm_mw_alexius_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEMOTHER",
+        "count": 1,
+        "icon": "tex.c_themother_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CRETAHL",
+        "count": 1,
+        "icon": "tex.c_cretahl_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GASPARDDECHALONS",
+        "count": 1,
+        "icon": "tex.hm_tw_gasparddechalons_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 48000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THEMOTHER",
+        "count": 1,
+        "icon": "tex.c_themother_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CRETAHL",
+        "count": 1,
+        "icon": "tex.c_cretahl_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GASPARDDECHALONS",
+        "count": 1,
+        "icon": "tex.hm_tw_gasparddechalons_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIORDAN",
+        "count": 1,
+        "icon": "tex.hm_tw_riordan_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 46000,
+      "gems": 51,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_CRETAHL",
+        "count": 1,
+        "icon": "tex.c_cretahl_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GASPARDDECHALONS",
+        "count": 1,
+        "icon": "tex.hm_tw_gasparddechalons_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIORDAN",
+        "count": 1,
+        "icon": "tex.hm_tw_riordan_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_QUNARISHOCKTROOPER",
+        "count": 1,
+        "icon": "tex.qm_tw_qunarishocktrooper_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 44000,
+      "gems": 45,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_GASPARDDECHALONS",
+        "count": 1,
+        "icon": "tex.hm_tw_gasparddechalons_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIORDAN",
+        "count": 1,
+        "icon": "tex.hm_tw_riordan_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_QUNARISHOCKTROOPER",
+        "count": 1,
+        "icon": "tex.qm_tw_qunarishocktrooper_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ARVAARAD",
+        "count": 1,
+        "icon": "tex.qm_tw_arvaarad_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 40000,
+      "gems": 36,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RIORDAN",
+        "count": 1,
+        "icon": "tex.hm_tw_riordan_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_QUNARISHOCKTROOPER",
+        "count": 1,
+        "icon": "tex.qm_tw_qunarishocktrooper_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ARVAARAD",
+        "count": 1,
+        "icon": "tex.qm_tw_arvaarad_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PLAIDEWEAVEVIVIENNE",
+        "count": 1,
+        "icon": "tex.hf_mw_plaideweavevivienne_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 36000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_QUNARISHOCKTROOPER",
+        "count": 1,
+        "icon": "tex.qm_tw_qunarishocktrooper_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ARVAARAD",
+        "count": 1,
+        "icon": "tex.qm_tw_arvaarad_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PLAIDEWEAVEVIVIENNE",
+        "count": 1,
+        "icon": "tex.hf_mw_plaideweavevivienne_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 32000,
+      "gems": 24,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_ARVAARAD",
+        "count": 1,
+        "icon": "tex.qm_tw_arvaarad_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PLAIDEWEAVEVIVIENNE",
+        "count": 1,
+        "icon": "tex.hf_mw_plaideweavevivienne_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 28000,
+      "gems": 12,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_PLAIDEWEAVEVIVIENNE",
+        "count": 1,
+        "icon": "tex.hf_mw_plaideweavevivienne_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 3,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 26000,
+      "gems": 9,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 4,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 24000,
+      "gems": 6,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 3,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 20000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 16000,
       "gems": 0,
       "prizes": [
        {
@@ -3169,6 +5022,465 @@
     ]
    },
    {
+    "title_key": "pvp_warden_wars_finals_october_2_title_key",
+    "text_key": "",
+    "original_text_key": "pvp_warden_wars_finals_october_2_desc_key",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "",
+     "rarities": [],
+     "unique_heroes": false,
+     "members": {
+      "factions": [],
+      "groups": [
+       "Warden"
+      ]
+     },
+     "sides": []
+    },
+    "source": {
+     "event_key": "pvp|weight of the crown",
+     "record_id": "R0344",
+     "event_date": "2019-08-05"
+    },
+    "omitted_prizes": [
+     "2x Banished Plane Key",
+     "Double XP Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1474,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "senior_wardens_staff",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1977,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 50000,
+      "gems": 75,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_NORTHERNHUNTER",
+        "count": 1,
+        "icon": "tex.c_northernhunter_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_QUEENOFTHEEASTERNSEAS",
+        "count": 1,
+        "icon": "tex.hf_dw_queenoftheeasternseas_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SANDYHOWLER",
+        "count": 1,
+        "icon": "tex.c_sandyhowler_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 48000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_QUEENOFTHEEASTERNSEAS",
+        "count": 1,
+        "icon": "tex.hf_dw_queenoftheeasternseas_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SANDYHOWLER",
+        "count": 1,
+        "icon": "tex.c_sandyhowler_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LYRIUMFENRIS",
+        "count": 1,
+        "icon": "tex.em_tw_lyriumfenris_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 46000,
+      "gems": 51,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_SANDYHOWLER",
+        "count": 1,
+        "icon": "tex.c_sandyhowler_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LYRIUMFENRIS",
+        "count": 1,
+        "icon": "tex.em_tw_lyriumfenris_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 44000,
+      "gems": 45,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LYRIUMFENRIS",
+        "count": 1,
+        "icon": "tex.em_tw_lyriumfenris_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THANESVARAHSUN-HAIR",
+        "count": 1,
+        "icon": "tex.hf_tw_thane_svarah_sun_hair_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 40000,
+      "gems": 36,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LYRIUMFENRIS",
+        "count": 1,
+        "icon": "tex.em_tw_lyriumfenris_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THANESVARAHSUN-HAIR",
+        "count": 1,
+        "icon": "tex.hf_tw_thane_svarah_sun_hair_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
+        "count": 1,
+        "icon": "tex.ef_mw_knightenchanterhelaine_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 36000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THANESVARAHSUN-HAIR",
+        "count": 1,
+        "icon": "tex.hf_tw_thane_svarah_sun_hair_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
+        "count": 1,
+        "icon": "tex.ef_mw_knightenchanterhelaine_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SERPOUNCE-A-LOT",
+        "count": 1,
+        "icon": "tex.c_serpouncealot_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 32000,
+      "gems": 24,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THANESVARAHSUN-HAIR",
+        "count": 1,
+        "icon": "tex.hf_tw_thane_svarah_sun_hair_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
+        "count": 1,
+        "icon": "tex.ef_mw_knightenchanterhelaine_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SERPOUNCE-A-LOT",
+        "count": 1,
+        "icon": "tex.c_serpouncealot_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_VIDDASALA",
+        "count": 1,
+        "icon": "tex.qf_sw_viddasala_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 28000,
+      "gems": 12,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
+        "count": 1,
+        "icon": "tex.ef_mw_knightenchanterhelaine_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SERPOUNCE-A-LOT",
+        "count": 1,
+        "icon": "tex.c_serpouncealot_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_VIDDASALA",
+        "count": 1,
+        "icon": "tex.qf_sw_viddasala_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 26000,
+      "gems": 9,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_SERPOUNCE-A-LOT",
+        "count": 1,
+        "icon": "tex.c_serpouncealot_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_VIDDASALA",
+        "count": 1,
+        "icon": "tex.qf_sw_viddasala_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 24000,
+      "gems": 6,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_VIDDASALA",
+        "count": 1,
+        "icon": "tex.qf_sw_viddasala_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 20000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 16000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "title_key": "PVP_BLACK_FACTION_2_TITLE_KEY",
     "text_key": "PVP_BLACK_FACTION_2_DESC_KEY",
     "effects": [
@@ -3611,6 +5923,515 @@
         "id": "UNIT_OGHREN",
         "count": 1,
         "icon": "tex.dm_tw_oghren_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title_key": "pvp_faction_wars_9_21_title_key",
+    "text_key": "",
+    "original_text_key": "pvp_faction_wars_9_21_desc_key",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "",
+     "rarities": [],
+     "unique_heroes": false,
+     "members": {
+      "factions": [],
+      "groups": []
+     },
+     "sides": [
+      {
+       "factions": [
+        "Red"
+       ],
+       "groups": []
+      },
+      {
+       "factions": [
+        "Blue"
+       ],
+       "groups": []
+      },
+      {
+       "factions": [
+        "White"
+       ],
+       "groups": []
+      },
+      {
+       "factions": [
+        "Black"
+       ],
+       "groups": []
+      }
+     ]
+    },
+    "source": {
+     "event_key": "pvp|break the line",
+     "record_id": "R0293",
+     "event_date": "2018-06-28"
+    },
+    "omitted_prizes": [
+     "Banished Plane Keys"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1013,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "banners": 1067,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "boots_of_faith",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1800,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_red_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 30000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LURKER",
+        "count": 1,
+        "icon": "tex.c_lurker_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-CAPTAINCULLEN",
+        "count": 1,
+        "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 28000,
+      "gems": 50,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LURKER",
+        "count": 1,
+        "icon": "tex.c_lurker_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-CAPTAINCULLEN",
+        "count": 1,
+        "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CORRUPTEDSPIDERLING",
+        "count": 1,
+        "icon": "tex.c_legendary_corruptedspider_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 26000,
+      "gems": 40,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LURKER",
+        "count": 1,
+        "icon": "tex.c_lurker_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-CAPTAINCULLEN",
+        "count": 1,
+        "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CORRUPTEDSPIDERLING",
+        "count": 1,
+        "icon": "tex.c_legendary_corruptedspider_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEHERALD",
+        "count": 1,
+        "icon": "tex.c_theherald_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 24000,
+      "gems": 35,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-CAPTAINCULLEN",
+        "count": 1,
+        "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CORRUPTEDSPIDERLING",
+        "count": 1,
+        "icon": "tex.c_legendary_corruptedspider_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEHERALD",
+        "count": 1,
+        "icon": "tex.c_theherald_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MAGISTERPAVUS",
+        "count": 1,
+        "icon": "tex.hm_mw_magisterpavus_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 22000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_CORRUPTEDSPIDERLING",
+        "count": 1,
+        "icon": "tex.c_legendary_corruptedspider_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEHERALD",
+        "count": 1,
+        "icon": "tex.c_theherald_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MAGISTERPAVUS",
+        "count": 1,
+        "icon": "tex.hm_mw_magisterpavus_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ASHWRAITH",
+        "count": 1,
+        "icon": "tex.c_ashwraith_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 20000,
+      "gems": 20,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THEHERALD",
+        "count": 1,
+        "icon": "tex.c_theherald_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MAGISTERPAVUS",
+        "count": 1,
+        "icon": "tex.hm_mw_magisterpavus_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ASHWRAITH",
+        "count": 1,
+        "icon": "tex.c_ashwraith_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CIRCLEMAGEBETHANY",
+        "count": 1,
+        "icon": "tex.hf_mw_circlemagebethany_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 18000,
+      "gems": 10,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MAGISTERPAVUS",
+        "count": 1,
+        "icon": "tex.hm_mw_magisterpavus_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ASHWRAITH",
+        "count": 1,
+        "icon": "tex.c_ashwraith_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CIRCLEMAGEBETHANY",
+        "count": 1,
+        "icon": "tex.hf_mw_circlemagebethany_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NOBLENUG",
+        "count": 1,
+        "icon": "tex.c_nugnoble_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 16000,
+      "gems": 5,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_ASHWRAITH",
+        "count": 1,
+        "icon": "tex.c_ashwraith_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CIRCLEMAGEBETHANY",
+        "count": 1,
+        "icon": "tex.hf_mw_circlemagebethany_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NOBLENUG",
+        "count": 1,
+        "icon": "tex.c_nugnoble_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIDEABOMINATION",
+        "count": 1,
+        "icon": "tex.c_prideabomination_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 14000,
+      "gems": 4,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_CIRCLEMAGEBETHANY",
+        "count": 1,
+        "icon": "tex.hf_mw_circlemagebethany_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NOBLENUG",
+        "count": 1,
+        "icon": "tex.c_nugnoble_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIDEABOMINATION",
+        "count": 1,
+        "icon": "tex.c_prideabomination_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIFTWRAITH",
+        "count": 1,
+        "icon": "tex.c_riftwraith_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 12000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_NOBLENUG",
+        "count": 1,
+        "icon": "tex.c_nugnoble_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIDEABOMINATION",
+        "count": 1,
+        "icon": "tex.c_prideabomination_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIFTWRAITH",
+        "count": 1,
+        "icon": "tex.c_riftwraith_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 10000,
+      "gems": 2,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIDEABOMINATION",
+        "count": 1,
+        "icon": "tex.c_prideabomination_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIFTWRAITH",
+        "count": 1,
+        "icon": "tex.c_riftwraith_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 8000,
+      "gems": 1,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RIFTWRAITH",
+        "count": 1,
+        "icon": "tex.c_riftwraith_t1_pt"
        },
        {
         "kind": "unit",
@@ -26985,6 +29806,2091 @@
      "level": 68
     }
    ]
+  },
+  {
+   "strength": 5937,
+   "cells": [
+    {
+     "id": "UNIT_MARSHALPROULX",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_DAGNA",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_FIRSTENCHANTERIRVING",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "I",
+     "level": 1
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8417,
+   "cells": [
+    {
+     "id": "UNIT_ANCIENTDARKSPAWN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_KNIGHT-CAPTAINCULLEN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_CHEVALIER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_KNIGHT-ENCHANTERVIVIENNE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_SUNDERMOUNTVARTERRAL",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6277,
+   "cells": [
+    {
+     "id": "UNIT_SEEKERCASSANDRA",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_KNIGHT-COMMANDERDELRINBARRIS",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_FELIXALEXIUS",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_SHAHWYRD",
+     "tier": "IV",
+     "level": 45
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6677,
+   "cells": [
+    {
+     "id": "UNIT_CIRCLEMAGEBETHANY",
+     "tier": "III",
+     "level": 22
+    },
+    {
+     "id": "UNIT_LEANDRAAMELL",
+     "tier": "III",
+     "level": 22
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "III",
+     "level": 22
+    },
+    {
+     "id": "UNIT_LOYALBETYARDRAGONSLAYER",
+     "tier": "III",
+     "level": 22
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3226,
+   "cells": [
+    {
+     "id": "UNIT_TESSAFORSYTHIA",
+     "tier": "II",
+     "level": 14
+    },
+    {
+     "id": "UNIT_CAPTAINISABELA",
+     "tier": "II",
+     "level": 14
+    },
+    null,
+    {
+     "id": "UNIT_PALA",
+     "tier": "II",
+     "level": 14
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7887,
+   "cells": [
+    {
+     "id": "UNIT_BLACKNUGLYSWEATER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_THANESVARAHSUN-HAIR",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_REDLYRIUMSAMSON",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_BERESKARN",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5978,
+   "cells": [
+    {
+     "id": "UNIT_REDNUGLYSWEATER",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_WINTERSENDVIVIENNE",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_LORDWOOLSLEY",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_ASHWRAITH",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_SILVERHALLA",
+     "tier": "II",
+     "level": 18
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3254,
+   "cells": [
+    {
+     "id": "UNIT_THEWITHERED",
+     "tier": "I",
+     "level": 4
+    },
+    {
+     "id": "UNIT_DESIREDEMON",
+     "tier": "I",
+     "level": 4
+    },
+    null,
+    {
+     "id": "UNIT_MOVRANTHEUNDER",
+     "tier": "I",
+     "level": 4
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6942,
+   "cells": [
+    {
+     "id": "UNIT_CROWZEVRAN",
+     "tier": "IV",
+     "level": 30
+    },
+    {
+     "id": "UNIT_SUNSHINE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_MALIPHANT",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_TUSKET",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_ICEGIANT",
+     "tier": "IV",
+     "level": 35
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5760,
+   "cells": [
+    {
+     "id": "UNIT_YOUNGCASSANDRA",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_HURLOCKVANGUARD",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_GUARDSMANDONNIC",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_DUKEPROSPER",
+     "tier": "III",
+     "level": 24
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3491,
+   "cells": [
+    {
+     "id": "UNIT_AVVARGOATRARE",
+     "tier": "II",
+     "level": 16
+    },
+    {
+     "id": "UNIT_DESPAIRDEMON",
+     "tier": "II",
+     "level": 16
+    },
+    null,
+    {
+     "id": "UNIT_DUKEPROSPER",
+     "tier": "II",
+     "level": 16
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6745,
+   "cells": [
+    {
+     "id": "UNIT_CHOCOLATENUG",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_KOLGRIM",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_CULTISTREAVER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_CROWZEVRAN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_OGRECOMMANDER",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5271,
+   "cells": [
+    {
+     "id": "UNIT_DALISH",
+     "tier": "III",
+     "level": 25
+    },
+    {
+     "id": "UNIT_REDJENNYSERA",
+     "tier": "III",
+     "level": 25
+    },
+    {
+     "id": "UNIT_DRAKE",
+     "tier": "III",
+     "level": 25
+    },
+    {
+     "id": "UNIT_SANDAL",
+     "tier": "III",
+     "level": 25
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4755,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_GREYWARDENGENEVIEVE",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "I",
+     "level": 1
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9592,
+   "cells": [
+    {
+     "id": "UNIT_SANTABLACKWALL",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_WARDENCOMMANDERCLAREL",
+     "tier": "IV",
+     "level": 65
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_WARDENCOMMANDERDUNCAN",
+     "tier": "IV",
+     "level": 65
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8158,
+   "cells": [
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "IV",
+     "level": 45
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5135,
+   "cells": [
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "III",
+     "level": 22
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "III",
+     "level": 22
+    },
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "III",
+     "level": 22
+    },
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "III",
+     "level": 22
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3750,
+   "cells": [
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 14
+    },
+    {
+     "id": "UNIT_SERSTROUD",
+     "tier": "II",
+     "level": 14
+    },
+    null,
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "II",
+     "level": 14
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8519,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7730,
+   "cells": [
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "II",
+     "level": 18
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2187,
+   "cells": [
+    {
+     "id": "UNIT_STROUD",
+     "tier": "I",
+     "level": 4
+    },
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "I",
+     "level": 4
+    },
+    null,
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "I",
+     "level": 4
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9286,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "IV",
+     "level": 30
+    },
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 35
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6154,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_SERSTROUD",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "III",
+     "level": 24
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5183,
+   "cells": [
+    {
+     "id": "UNIT_SANTABLACKWALL",
+     "tier": "II",
+     "level": 16
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 16
+    },
+    null,
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "II",
+     "level": 16
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9986,
+   "cells": [
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENGENEVIEVE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6514,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "III",
+     "level": 25
+    },
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "III",
+     "level": 25
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "III",
+     "level": 25
+    },
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "III",
+     "level": 25
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9395,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7370,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "IV",
+     "level": 43
+    },
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "IV",
+     "level": 43
+    },
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "IV",
+     "level": 43
+    },
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "IV",
+     "level": 43
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5135,
+   "cells": [
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "III",
+     "level": 24
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4266,
+   "cells": [
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "II",
+     "level": 12
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "II",
+     "level": 12
+    },
+    null,
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "II",
+     "level": 12
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8899,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7615,
+   "cells": [
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "III",
+     "level": 26
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6250,
+   "cells": [
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "II",
+     "level": 12
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "II",
+     "level": 12
+    },
+    null,
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "II",
+     "level": 12
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9585,
+   "cells": [
+    {
+     "id": "UNIT_ISSEYA",
+     "tier": "IV",
+     "level": 46
+    },
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_BLACKWALL",
+     "tier": "IV",
+     "level": 46
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7133,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "III",
+     "level": 30
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "III",
+     "level": 30
+    },
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "III",
+     "level": 30
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "III",
+     "level": 30
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8559,
+   "cells": [
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "IV",
+     "level": 35
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "IV",
+     "level": 42
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "IV",
+     "level": 42
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 42
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 44
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6786,
+   "cells": [
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "II",
+     "level": 18
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8980,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7445,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "III",
+     "level": 26
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8919,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "III",
+     "level": 16
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "III",
+     "level": 16
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "III",
+     "level": 16
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "III",
+     "level": 16
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "III",
+     "level": 16
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3600,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "II",
+     "level": 14
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 14
+    },
+    null,
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "II",
+     "level": 14
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9442,
+   "cells": [
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7146,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "II",
+     "level": 18
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "II",
+     "level": 18
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4150,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "I",
+     "level": 8
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "I",
+     "level": 8
+    },
+    null,
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "I",
+     "level": 8
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6739,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "IV",
+     "level": 45
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7336,
+   "cells": [
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 24
+    },
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "II",
+     "level": 24
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "II",
+     "level": 24
+    },
+    {
+     "id": "UNIT_GREYWARDENGENEVIEVE",
+     "tier": "II",
+     "level": 24
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "II",
+     "level": 24
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4830,
+   "cells": [
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "II",
+     "level": 14
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "II",
+     "level": 14
+    },
+    null,
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "II",
+     "level": 14
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9415,
+   "cells": [
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_NATHANIELHOWE",
+     "tier": "IV",
+     "level": 60
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6419,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "III",
+     "level": 26
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9816,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7520,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "IV",
+     "level": 40
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "IV",
+     "level": 40
+    },
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "IV",
+     "level": 40
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "IV",
+     "level": 40
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7119,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "III",
+     "level": 30
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "III",
+     "level": 30
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "III",
+     "level": 30
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "III",
+     "level": 30
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3138,
+   "cells": [
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 10
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "II",
+     "level": 10
+    },
+    null,
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "II",
+     "level": 10
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8702,
+   "cells": [
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENGENEVIEVE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5876,
+   "cells": [
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "III",
+     "level": 24
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "III",
+     "level": 24
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3532,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "II",
+     "level": 12
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "II",
+     "level": 12
+    },
+    null,
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "II",
+     "level": 12
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9442,
+   "cells": [
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9028,
+   "cells": [
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "IV",
+     "level": 40
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 40
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "IV",
+     "level": 40
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "IV",
+     "level": 40
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9001,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5434,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "I",
+     "level": 11
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "I",
+     "level": 11
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "I",
+     "level": 11
+    },
+    null,
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "I",
+     "level": 11
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9510,
+   "cells": [
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_JUSTICE",
+     "tier": "IV",
+     "level": 60
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7044,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 45
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7989,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENGENEVIEVE",
+     "tier": "IV",
+     "level": 34
+    },
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "IV",
+     "level": 34
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "IV",
+     "level": 30
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "IV",
+     "level": 30
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4211,
+   "cells": [
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "II",
+     "level": 14
+    },
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "II",
+     "level": 14
+    },
+    null,
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "II",
+     "level": 14
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8913,
+   "cells": [
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7622,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "IV",
+     "level": 35
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "IV",
+     "level": 41
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 35
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "IV",
+     "level": 30
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2676,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "I",
+     "level": 6
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "I",
+     "level": 6
+    },
+    null,
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "I",
+     "level": 6
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8620,
+   "cells": [
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "IV",
+     "level": 45
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6385,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_SANTABLACKWALL",
+     "tier": "IV",
+     "level": 45
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6229,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "II",
+     "level": 14
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "II",
+     "level": 14
+    },
+    null,
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "II",
+     "level": 14
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7982,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENALISTAIR",
+     "tier": "IV",
+     "level": 46
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8478,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "II",
+     "level": 20
+    },
+    {
+     "id": "UNIT_KINGALISTAIR",
+     "tier": "II",
+     "level": 20
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "II",
+     "level": 20
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "II",
+     "level": 20
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "II",
+     "level": 20
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9565,
+   "cells": [
+    {
+     "id": "UNIT_NATHANIELHOWE",
+     "tier": "IV",
+     "level": 49
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_JUSTICE",
+     "tier": "IV",
+     "level": 49
+    },
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 45
+    }
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7846,
+   "cells": [
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 45
+    },
+    {
+     "id": "UNIT_GARAHEL",
+     "tier": "IV",
+     "level": 65
+    },
+    null
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5305,
+   "cells": [
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "III",
+     "level": 26
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "III",
+     "level": 26
+    },
+    null
+   ],
+   "events_only": true
   }
  ]
 }
