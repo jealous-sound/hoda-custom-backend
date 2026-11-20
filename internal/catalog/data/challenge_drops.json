@@ -641,6 +641,57 @@
      "weight": 50
     }
    ]
+  },
+  {
+   "map": "PVE_MAP_16",
+   "source": "No recorded runs; Eluvian (15) rates with Blackmarsh heroes and runes",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_DEVOURINGSKELETON",
+     "weight": 16916
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_HUNGERDEMON",
+     "weight": 11976
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_PRIDEABOMINATION",
+     "weight": 14022
+    },
+    {
+     "kind": "rune",
+     "id": "rune-damage-shielding-3",
+     "weight": 14222
+    },
+    {
+     "kind": "rune",
+     "id": "rune-stun-3",
+     "weight": 19212
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_THEBARONESS",
+     "weight": 399
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_PRIDEDEMON",
+     "weight": 499
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_THEFIRST",
+     "weight": 100
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_RISENOGRE",
+     "weight": 50
+    }
+   ]
   }
  ]
 }

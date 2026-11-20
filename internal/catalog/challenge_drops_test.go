@@ -32,13 +32,8 @@ func TestChallengeDropsCoverEveryChallengeNodeWithResearchRates(t *testing.T) {
 	}
 	for _, m := range c.Campaign {
 		listed := len(drops.Maps[m.ID]) > 0
-		if hasGrind := m.Nodes[len(m.Nodes)-1].Grind; listed && !hasGrind {
-			t.Errorf("%s has drops but no challenge node", m.ID)
-		}
-	}
-	for _, id := range []string{"PVE_MAP_02", "PVE_MAP_08", "PVE_MAP_15"} {
-		if len(drops.Maps[id]) == 0 {
-			t.Errorf("%s has no challenge drops", id)
+		if hasGrind := m.Nodes[len(m.Nodes)-1].Grind; listed != hasGrind {
+			t.Errorf("%s: challenge node %v, drops listed %v", m.ID, hasGrind, listed)
 		}
 	}
 	bear, ok := drops.Pick("PVE_MAP_02", 40738)
