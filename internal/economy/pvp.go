@@ -222,7 +222,7 @@ func (p *player) startPvp(request BattleStartRequest) (battleStart, error) {
 	}
 	pending := profile.PendingBattle{PvpEvent: request.Event, Opponent: profile.PendingRival{
 		Bot: rival.bot, Squad: rival.squad, Level: rival.level, Trophies: rival.trophies, Seed: rival.seed,
-		Name: rival.name,
+		Name: rival.name, Player: rival.player,
 	}}
 	if request.Event {
 		pending.BannerPct = pvpBannerPct(&p.catalog.Pvp, stats.Trophies, rival.trophies)
@@ -237,6 +237,7 @@ func (p *player) settlePvp(pending profile.PendingBattle, outcome battle.Outcome
 	rival := pvpOpponent{
 		bot: pending.Opponent.Bot, squad: pending.Opponent.Squad, level: pending.Opponent.Level,
 		trophies: pending.Opponent.Trophies, seed: pending.Opponent.Seed, name: pending.Opponent.Name,
+		player: pending.Opponent.Player,
 	}
 	result := BattleResult{}
 	gold := pvpGold(rules, rival.level, outcome.Won)
@@ -264,8 +265,12 @@ func (p *player) settlePvp(pending profile.PendingBattle, outcome battle.Outcome
 		elapsed := p.now.Unix() % rules.Events.DurationSeconds
 		result.EventRank = EventRank(rules, p.rivals, state.Banners, state.Cycle, elapsed)
 	}
+	attackerTrophies := stats.Trophies
 	result.TrophyDelta = p.recordAttack(&stats, rival, outcome.Won, pending.PvpEvent, result.Banners)
-	p.simulateDefense(&stats)
+	result.Strike = p.strikeOn(rival, attackerTrophies, result.TrophyDelta, outcome.Won, pending.PvpEvent)
+	if err := p.simulateDefense(&stats); err != nil {
+		return BattleResult{}, err
+	}
 	if err := stats.write(p.doc); err != nil {
 		return BattleResult{}, err
 	}

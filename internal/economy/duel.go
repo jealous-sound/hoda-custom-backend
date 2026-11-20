@@ -8,7 +8,10 @@ import (
 	"github.com/jealous-sound/hoda-custom-backend/internal/catalog"
 )
 
-const squadCells = 5
+const (
+	squadCells   = 5
+	defenceSquad = 0
+)
 
 type DuelUnit struct {
 	Slot      int                   `json:"slot"`
@@ -40,9 +43,8 @@ type duelProfile struct {
 		Level      int    `json:"level"`
 		Experience int64  `json:"experience"`
 	} `json:"account"`
-	CurrentSquad int        `json:"current_squad"`
-	Squads       [][]*int64 `json:"squads"`
-	Roster       struct {
+	Squads [][]*int64 `json:"squads"`
+	Roster struct {
 		Starters  []storedHero `json:"starters"`
 		Additions []storedHero `json:"additions"`
 	} `json:"roster"`
@@ -86,8 +88,8 @@ func DuelOpponentFrom(c *catalog.Catalog, playerID string, raw json.RawMessage, 
 	if opponent.Name == "" {
 		opponent.Name = playerID
 	}
-	squad := stored.CurrentSquad
-	if squad < 0 || squad >= len(stored.Squads) {
+	squad := defenceSquad
+	if squad >= len(stored.Squads) {
 		return opponent, nil
 	}
 	units := map[int64]storedHero{}

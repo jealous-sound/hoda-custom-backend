@@ -188,7 +188,7 @@ func TestOnslaughtStandingsNeedAStartedGuildEvent(t *testing.T) {
 	expectStatus(t, response, body, http.StatusUnprocessableEntity)
 }
 
-func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
+func TestADuelFightsTheMembersFirstSquadAndLandsOnThem(t *testing.T) {
 	h := newHarness(t)
 	leader, ally, _ := h.guildWithAlly(t)
 	if _, err := h.profiles.Put("ally", 1, json.RawMessage(duelistProfile)); err != nil {
@@ -242,23 +242,6 @@ func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
 	}
 	rewards := shop.Pvp.Rewards
 	duelStart := economy.BattleStartRequest{Mode: economy.BattlePvp, Duel: "ally", Squad: guildSquad(), Enemy: fielded}
-	duel := h.battle("local", leader, 2, "duel-battle-1", duelStart)
-	if want := int64(rewards.WinGoldBase + rewards.WinGoldPerLevel*14); duel.Granted.Gold < want {
-		t.Fatalf("duel gold = %d, want at least %d", duel.Granted.Gold, want)
-	}
-	trophies := shop.Pvp.Trophies
-	if want := trophies.BaseGain + 120/trophies.PointsPerStep; duel.Granted.TrophyDelta != want {
-		t.Fatalf("duel against 120 trophies gained %d, want %d", duel.Granted.TrophyDelta, want)
-	}
-	eventDuel := `{"request_id":"duel-battle-2","action":"battle_start","mode":"pvp","duel":"ally","event":true}`
-	response, body = h.do("POST", "/v1/players/local/actions", leader, fmt.Sprint(duel.Revision), eventDuel)
-	expectStatus(t, response, body, http.StatusUnprocessableEntity)
-	strangerDuel, _ := json.Marshal(map[string]any{
-		"request_id": "duel-battle-3", "action": "battle_start", "mode": "pvp", "duel": "ally", "squad": guildSquad(),
-		"enemy": duelStart.Enemy,
-	})
-	response, body = h.do("POST", "/v1/players/stranger/actions", stranger, "1", string(strangerDuel))
-	expectStatus(t, response, body, http.StatusUnprocessableEntity)
 	changed := duelStart
 	changed.Squad = h.storedSquad("local")
 	changed.Enemy = battle.Side{Units: []battle.Unit{{Slot: 0, ID: "UNIT_VIVIENNE", Tier: "II", Level: 9}},
@@ -266,13 +249,70 @@ func TestDuelFightsTheMembersCurrentSquad(t *testing.T) {
 	changedBody, _ := json.Marshal(changed)
 	var fields map[string]any
 	_ = json.Unmarshal(changedBody, &fields)
-	fields["request_id"], fields["action"] = "duel-battle-4", economy.ActionBattleStart
+	fields["request_id"], fields["action"] = "duel-battle-0", economy.ActionBattleStart
 	changedBody, _ = json.Marshal(fields)
-	response, body = h.do("POST", "/v1/players/local/actions", leader, fmt.Sprint(duel.Revision), string(changedBody))
+	response, body = h.do("POST", "/v1/players/local/actions", leader, "2", string(changedBody))
 	expectStatus(t, response, body, http.StatusUnprocessableEntity)
 	if !strings.Contains(body, `"code":"opponent_changed"`) {
 		t.Fatalf("a weaker duel opponent was accepted: %s", body)
 	}
+
+	defenderBefore, err := h.profiles.Get("ally")
+	if err != nil {
+		t.Fatal(err)
+	}
+	duel := h.battle("local", leader, 2, "duel-battle-1", duelStart)
+	if want := int64(rewards.WinGoldBase + rewards.WinGoldPerLevel*14); duel.Granted.Gold < want {
+		t.Fatalf("duel gold = %d, want at least %d", duel.Granted.Gold, want)
+	}
+	trophies := shop.Pvp.Trophies
+	gain := trophies.BaseGain + 120/trophies.PointsPerStep
+	if duel.Granted.TrophyDelta != gain {
+		t.Fatalf("duel against 120 trophies gained %d, want %d", duel.Granted.TrophyDelta, gain)
+	}
+	defender, err := h.profiles.Get("ally")
+	if err != nil {
+		t.Fatal(err)
+	}
+	var defended struct {
+		Pvp struct {
+			Trophies      int `json:"trophies"`
+			DefenseLosses int `json:"defense_losses"`
+			History       []struct {
+				Defense     bool   `json:"defense"`
+				Won         bool   `json:"won"`
+				Opponent    string `json:"opponent"`
+				OpponentID  string `json:"opponent_id"`
+				TrophyDelta int    `json:"trophy_delta"`
+			} `json:"history"`
+		} `json:"pvp"`
+	}
+	if err := json.Unmarshal(defender.Profile, &defended); err != nil {
+		t.Fatal(err)
+	}
+	pvp := defended.Pvp
+	if pvp.Trophies != 120-gain || pvp.DefenseLosses != 1 || len(pvp.History) != 1 || !pvp.History[0].Defense ||
+		pvp.History[0].Won || pvp.History[0].Opponent != "Hawke" || pvp.History[0].OpponentID != "local" ||
+		pvp.History[0].TrophyDelta != -gain {
+		t.Fatalf("the defender after losing its first squad's defence: %+v", pvp)
+	}
+	if defender.Revision != defenderBefore.Revision || !defender.UpdatedAt.Equal(defenderBefore.UpdatedAt) {
+		t.Errorf("landing the attack moved the defender's revision %d to %d", defenderBefore.Revision,
+			defender.Revision)
+	}
+
+	eventDuel := `{"request_id":"duel-battle-2","action":"battle_start","mode":"pvp","duel":"ally","event":true}`
+	response, body = h.do("POST", "/v1/players/local/actions", leader, fmt.Sprint(duel.Revision), eventDuel)
+	expectStatus(t, response, body, http.StatusUnprocessableEntity)
+	if !strings.Contains(body, `"code":"attack_cooldown"`) {
+		t.Fatalf("attacked the same member twice in a day: %s", body)
+	}
+	strangerDuel, _ := json.Marshal(map[string]any{
+		"request_id": "duel-battle-3", "action": "battle_start", "mode": "pvp", "duel": "ally", "squad": guildSquad(),
+		"enemy": duelStart.Enemy,
+	})
+	response, body = h.do("POST", "/v1/players/stranger/actions", stranger, "1", string(strangerDuel))
+	expectStatus(t, response, body, http.StatusUnprocessableEntity)
 }
 
 func duelSide(t *testing.T, opponent string) battle.Side {

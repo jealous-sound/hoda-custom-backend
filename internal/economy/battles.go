@@ -58,6 +58,7 @@ type BattleResult struct {
 	Settled     *BattleResult     `json:"settled,omitempty"`
 	TrophyDelta int               `json:"trophy_delta,omitempty"`
 	Match       *profile.PvpMatch `json:"match,omitempty"`
+	Strike      *Strike           `json:"-"`
 }
 
 type battleStart struct {
