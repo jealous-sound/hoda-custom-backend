@@ -132,6 +132,9 @@ func (d *Data) buildHero(u Unit, heroBuild bool) (*hero, error) {
 	h.recipe = d.recipeFor(def.ability.key, def.ability.mechanics)
 	h.passives = d.passives[def.dataID()]
 	h.gear[heroAuraSource] = d.heroAuras[def.id]
+	if err := d.wearGear(h, u); err != nil {
+		return nil, err
+	}
 	if !heroBuild {
 		return h, nil
 	}
@@ -149,8 +152,12 @@ func (d *Data) buildHero(u Unit, heroBuild bool) (*hero, error) {
 	if err := d.fortifyHero(h, profile.archetype, u.Fortify); err != nil {
 		return nil, err
 	}
+	return h, nil
+}
+
+func (d *Data) wearGear(h *hero, u Unit) error {
 	if len(u.Gear) > gearSlotCapacity {
-		return nil, fmt.Errorf("unit %s has %d gear slots", u.ID, len(u.Gear))
+		return fmt.Errorf("unit %s has %d gear slots", u.ID, len(u.Gear))
 	}
 	for slot, id := range u.Gear {
 		if id == "" {
@@ -158,11 +165,11 @@ func (d *Data) buildHero(u Unit, heroBuild bool) (*hero, error) {
 		}
 		gear, ok := d.gear[id]
 		if !ok {
-			return nil, fmt.Errorf("unknown gear %s", id)
+			return fmt.Errorf("unknown gear %s", id)
 		}
 		h.gear[slot] = gear
 	}
-	return h, nil
+	return nil
 }
 
 func (d *Data) buildSide(s Side, heroBuilds bool) (*side, error) {
