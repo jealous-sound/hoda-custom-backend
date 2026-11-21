@@ -53,9 +53,10 @@ func newPlayerEconomy(c *catalog.Catalog, upload document) document {
 	account.setInt("gems", StartGems)
 
 	store := document{
-		"opened_by_pack":    zeros(catalog.StoreCounterCount),
-		"vouchers":          zeros(catalog.VoucherCapacity),
-		packsSinceLegendary: map[string]any{},
+		"opened_by_pack":        zeros(catalog.StoreCounterCount),
+		"vouchers":              zeros(catalog.VoucherCapacity),
+		packsSinceLegendary:     map[string]any{},
+		packsSinceStarGuarantee: map[string]any{},
 	}
 	store.setInt("opened_total", 0)
 	store.setInt(releasedClientPityCounter, 0)

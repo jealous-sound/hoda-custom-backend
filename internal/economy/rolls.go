@@ -70,6 +70,53 @@ func pityDue(pack *catalog.Pack, sinceLegendary int) bool {
 	return pack.LegendaryPityPacks > 0 && sinceLegendary >= pack.LegendaryPityPacks-1
 }
 
+type starCounters [catalog.LegendaryStarMax + 1]int
+
+type packDue struct {
+	sinceLegendary  int
+	guaranteedStars int
+}
+
+func (d packDue) legendary(pack *catalog.Pack) bool {
+	return pityDue(pack, d.sinceLegendary) || d.guaranteedStars > 0
+}
+
+func starGuaranteeDue(pack *catalog.Pack, sinceFired starCounters, lowestStars int) bool {
+	every := pack.StarGuaranteePacks[lowestStars]
+	return every > 0 && sinceFired[lowestStars] >= every-1
+}
+
+func dueStarGuarantee(pack *catalog.Pack, sinceFired starCounters) int {
+	for stars := catalog.LegendaryStarMax; stars >= catalog.StarGuaranteeLowest; stars-- {
+		if starGuaranteeDue(pack, sinceFired, stars) {
+			return stars
+		}
+	}
+	return 0
+}
+
+func starCountersAfter(pack *catalog.Pack, sinceFired starCounters, firedStars int) starCounters {
+	for stars := catalog.StarGuaranteeLowest; stars <= catalog.LegendaryStarMax; stars++ {
+		every := pack.StarGuaranteePacks[stars]
+		switch {
+		case every <= 0:
+			continue
+		case stars == firedStars:
+			sinceFired[stars] = 0
+		default:
+			sinceFired[stars] = min(sinceFired[stars]+1, every-1)
+		}
+	}
+	return sinceFired
+}
+
+func slotLowestStars(pack *catalog.Pack, rolledSlot, guaranteedStars int) int {
+	if guaranteedStars > 0 && rolledSlot == pack.PitySlot() {
+		return guaranteedStars
+	}
+	return catalog.LegendaryStarMin
+}
+
 func slotRarity(pack *catalog.Pack, rolledSlot int, pity bool, r *rng) catalog.Rarity {
 	legendaryEnd := pack.GuaranteedLegendary
 	epicEnd := legendaryEnd + pack.GuaranteedEpic
@@ -120,20 +167,21 @@ func legendaryCandidates(c *catalog.Catalog, stars int, unownedOnly bool, histor
 	return candidates
 }
 
-func rollLegendaryStars(c *catalog.Catalog, pack *catalog.Pack, history rollHistory, r *rng) int {
-	var weights [catalog.LegendaryStarMax + 1]int
+func rollLegendaryStars(c *catalog.Catalog, pack *catalog.Pack, history rollHistory, lowestStars int, r *rng) int {
+	var allowed, weights [catalog.LegendaryStarMax + 1]int
 	total := 0
-	for stars := 1; stars <= catalog.LegendaryStarMax; stars++ {
+	for stars := lowestStars; stars <= catalog.LegendaryStarMax; stars++ {
+		allowed[stars] = pack.LegendaryStarWeights[stars]
 		if !pack.LegendaryNoDupeAcrossStars || len(legendaryCandidates(c, stars, true, history)) > 0 {
-			weights[stars] = pack.LegendaryStarWeights[stars]
+			weights[stars] = allowed[stars]
 		}
 		total += weights[stars]
 	}
 	if total == 0 {
-		weights, total = pack.LegendaryStarWeights, catalog.HeroWeightTotal
+		weights, total = allowed, pack.StarWeightFrom(lowestStars)
 	}
 	roll := r.below(total)
-	for stars := 1; stars <= catalog.LegendaryStarMax; stars++ {
+	for stars := catalog.LegendaryStarMin; stars <= catalog.LegendaryStarMax; stars++ {
 		if roll < weights[stars] {
 			return stars
 		}
@@ -142,8 +190,8 @@ func rollLegendaryStars(c *catalog.Catalog, pack *catalog.Pack, history rollHist
 	return catalog.LegendaryStarMax
 }
 
-func pickLegendary(c *catalog.Catalog, pack *catalog.Pack, history rollHistory, r *rng) int {
-	stars := rollLegendaryStars(c, pack, history, r)
+func pickLegendary(c *catalog.Catalog, pack *catalog.Pack, history rollHistory, lowestStars int, r *rng) int {
+	stars := rollLegendaryStars(c, pack, history, lowestStars, r)
 	pool := legendaryCandidates(c, stars, true, history)
 	if len(pool) == 0 {
 		pool = legendaryCandidates(c, stars, false, history)
@@ -154,14 +202,22 @@ func pickLegendary(c *catalog.Catalog, pack *catalog.Pack, history rollHistory, 
 	return pool[r.below(len(pool))]
 }
 
-func pickHero(
-	c *catalog.Catalog, pack *catalog.Pack, rarity catalog.Rarity, owned map[int]bool, rolled []int, r *rng,
-) int {
+type heroSlot struct {
+	rarity      catalog.Rarity
+	lowestStars int
+}
+
+func anyStars(rarity catalog.Rarity) heroSlot {
+	return heroSlot{rarity: rarity, lowestStars: catalog.LegendaryStarMin}
+}
+
+func pickHero(c *catalog.Catalog, pack *catalog.Pack, slot heroSlot, owned map[int]bool, rolled []int, r *rng) int {
+	rarity := slot.rarity
 	pool := c.RarityPool(rarity)
 	if pack.PoolTag != "" {
 		pool = c.TaggedPool(pack.PoolTag, rarity)
 	} else if rarity == catalog.RarityLegendary {
-		return pickLegendary(c, pack, rollHistory{owned: owned, rolled: rolled}, r)
+		return pickLegendary(c, pack, rollHistory{owned: owned, rolled: rolled}, slot.lowestStars, r)
 	}
 	if len(pool) == 0 {
 		return noRoll
@@ -169,12 +225,10 @@ func pickHero(
 	return pool[r.below(len(pool))]
 }
 
-func rollPackHero(
-	c *catalog.Catalog, pack *catalog.Pack, rarity catalog.Rarity, owned map[int]bool, rolled []int, r *rng,
-) int {
-	hero := pickHero(c, pack, rarity, owned, rolled, r)
+func rollPackHero(c *catalog.Catalog, pack *catalog.Pack, slot heroSlot, owned map[int]bool, rolled []int, r *rng) int {
+	hero := pickHero(c, pack, slot, owned, rolled, r)
 	for attempt := 0; pack.UniqueHeroes && attempt < uniqueHeroRerolls && alreadyRolled(hero, rolled); attempt++ {
-		hero = pickHero(c, pack, rarity, owned, rolled, r)
+		hero = pickHero(c, pack, slot, owned, rolled, r)
 	}
 	return hero
 }
@@ -184,11 +238,9 @@ type heroRoll struct {
 	rarities []catalog.Rarity
 }
 
-func rollHeroes(
-	c *catalog.Catalog, pack *catalog.Pack, sinceLegendary int, owned map[int]bool, r *rng,
-) (heroRoll, bool) {
+func rollHeroes(c *catalog.Catalog, pack *catalog.Pack, due packDue, owned map[int]bool, r *rng) (heroRoll, bool) {
 	roll := heroRoll{}
-	pity := pityDue(pack, sinceLegendary)
+	legendaryDue := due.legendary(pack)
 	for i := 0; i < pack.HeroCount; i++ {
 		var hero int
 		var rarity catalog.Rarity
@@ -199,8 +251,10 @@ func rollHeroes(
 			}
 			hero, rarity = index, c.Heroes[index].Rarity
 		} else {
-			rarity = slotRarity(pack, i-len(pack.FixedHeroes), pity, r)
-			hero = rollPackHero(c, pack, rarity, owned, roll.heroes, r)
+			rolledSlot := i - len(pack.FixedHeroes)
+			rarity = slotRarity(pack, rolledSlot, legendaryDue, r)
+			slot := heroSlot{rarity: rarity, lowestStars: slotLowestStars(pack, rolledSlot, due.guaranteedStars)}
+			hero = rollPackHero(c, pack, slot, owned, roll.heroes, r)
 		}
 		if hero == noRoll {
 			return roll, false

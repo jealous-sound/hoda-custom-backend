@@ -60,7 +60,9 @@ const (
 	StoreCounterCount   = 4
 	VoucherCapacity     = 16
 	HeroWeightTotal     = 10000
+	LegendaryStarMin    = 1
 	LegendaryStarMax    = 3
+	StarGuaranteeLowest = 2
 	maxHeroesPerPack    = 10
 	runePackSlotLimit   = 3
 	gearPackItemLimit   = 5
@@ -128,6 +130,7 @@ type Pack struct {
 
 	LegendaryStarWeights       [LegendaryStarMax + 1]int
 	LegendaryNoDupeAcrossStars bool
+	StarGuaranteePacks         [LegendaryStarMax + 1]int
 }
 
 type Hero struct {
@@ -216,6 +219,27 @@ func (p *Pack) RollsOpenLegendary() bool {
 
 func (p *Pack) GuaranteedSlots() int {
 	return len(p.FixedHeroes) + p.GuaranteedLegendary + p.GuaranteedEpic + p.GuaranteedRare
+}
+
+func (p *Pack) PitySlot() int {
+	return p.GuaranteedLegendary + p.GuaranteedEpic + p.GuaranteedRare
+}
+
+func (p *Pack) StarWeightFrom(lowestStars int) int {
+	total := 0
+	for stars := lowestStars; stars <= LegendaryStarMax; stars++ {
+		total += p.LegendaryStarWeights[stars]
+	}
+	return total
+}
+
+func (p *Pack) HasStarGuarantees() bool {
+	for stars := StarGuaranteeLowest; stars <= LegendaryStarMax; stars++ {
+		if p.StarGuaranteePacks[stars] > 0 {
+			return true
+		}
+	}
+	return false
 }
 
 func (c *Catalog) Pack(id string) (*Pack, bool) {
@@ -343,6 +367,7 @@ type rawPack struct {
 
 	LegendaryStarWeights       map[string]int `json:"legendary_star_weights"`
 	LegendaryNoDupeAcrossStars bool           `json:"legendary_no_dupe_across_stars"`
+	LegendaryStarGuarantees    map[string]int `json:"legendary_star_guarantees"`
 }
 
 type rawStore struct {
@@ -689,6 +714,20 @@ func (c *Catalog) parseLegendaryStars(pack *Pack, raw rawPack) error {
 	}
 	if !pack.RollsOpenLegendary() && total != 0 {
 		return fmt.Errorf("star weights on a pack that rolls no open Legendary")
+	}
+	return parseStarGuarantees(pack, raw)
+}
+
+func parseStarGuarantees(pack *Pack, raw rawPack) error {
+	for name, every := range raw.LegendaryStarGuarantees {
+		lowest, err := strconv.Atoi(name)
+		if err != nil || lowest < StarGuaranteeLowest || lowest > LegendaryStarMax || every < 0 {
+			return fmt.Errorf("invalid star guarantee %q: %d", name, every)
+		}
+		if every > 0 && (pack.LegendaryPityPacks <= 0 || pack.StarWeightFrom(lowest) <= 0) {
+			return fmt.Errorf("a %d-star guarantee needs a Legendary pity slot and a star weight to roll", lowest)
+		}
+		pack.StarGuaranteePacks[lowest] = every
 	}
 	return nil
 }

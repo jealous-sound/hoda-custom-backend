@@ -53,17 +53,17 @@ func TestTheDuePackHoldsALegendaryInItsFirstRolledSlot(t *testing.T) {
 	bulk := rareOnlyPack(3, 1, 4)
 	for seed := uint32(1); seed <= 20; seed++ {
 		r := rng{state: seed}
-		due, ok := rollHeroes(c, single, single.LegendaryPityPacks-1, nil, &r)
+		due, ok := rollHeroes(c, single, packDue{sinceLegendary: single.LegendaryPityPacks - 1}, nil, &r)
 		if !ok || due.rarities[0] != catalog.RarityLegendary {
 			t.Fatalf("seed %d: the pack that was due rolled %v", seed, due.rarities)
 		}
 		r = rng{state: seed}
-		early, _ := rollHeroes(c, single, single.LegendaryPityPacks-2, nil, &r)
+		early, _ := rollHeroes(c, single, packDue{sinceLegendary: single.LegendaryPityPacks - 2}, nil, &r)
 		if early.rarities[0] != catalog.RarityRare {
 			t.Fatalf("seed %d: a pack one short of the pity rolled %v", seed, early.rarities)
 		}
 		r = rng{state: seed}
-		bulkDue, _ := rollHeroes(c, bulk, bulk.LegendaryPityPacks-1, nil, &r)
+		bulkDue, _ := rollHeroes(c, bulk, packDue{sinceLegendary: bulk.LegendaryPityPacks - 1}, nil, &r)
 		want := []catalog.Rarity{catalog.RarityEpic, catalog.RarityLegendary, catalog.RarityRare}
 		if !slices.Equal(bulkDue.rarities, want) {
 			t.Fatalf("seed %d: the due bulk pack rolled %v, want its Epic kept and one Legendary", seed, bulkDue.rarities)
