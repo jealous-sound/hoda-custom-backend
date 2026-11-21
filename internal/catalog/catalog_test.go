@@ -184,3 +184,50 @@ func TestARetieredHeroMeetsRequirementsAtTheRarityItIsShownAt(t *testing.T) {
 		}
 	}
 }
+
+func legendaryRawPack(starWeights map[string]int) rawPack {
+	return rawPack{
+		ID: "stars", HeroCount: 1, MinimumRarity: "Legendary", LegendaryStarWeights: starWeights,
+		Weights: map[string]int{"Legendary": HeroWeightTotal},
+	}
+}
+
+func TestOpenLegendaryPacksNeedWholeStarWeights(t *testing.T) {
+	c := mustDefault(t)
+	valid := map[string]int{"1": 2000, "2": 7000, "3": 1000}
+	if err := c.parseHeroContents(&Pack{}, legendaryRawPack(valid)); err != nil {
+		t.Fatalf("whole star weights refused: %v", err)
+	}
+	for name, weights := range map[string]map[string]int{
+		"missing":      nil,
+		"short":        {"1": 2000, "2": 7000},
+		"unknown star": {"1": 2000, "2": 7000, "4": 1000},
+		"negative":     {"1": 11000, "2": -1000},
+	} {
+		if err := c.parseHeroContents(&Pack{}, legendaryRawPack(weights)); err == nil {
+			t.Errorf("%s star weights were accepted", name)
+		}
+	}
+	tagged := legendaryRawPack(valid)
+	tagged.PoolTag = "WISP"
+	if err := c.parseHeroContents(&Pack{}, tagged); err == nil {
+		t.Error("a tagged pack took star weights it never rolls")
+	}
+}
+
+func TestStarWeightsNeedALegendaryOfThatStar(t *testing.T) {
+	c := mustDefault(t)
+	twoStarsOnly := *c
+	twoStarsOnly.rarityPool[RarityLegendary] = nil
+	for _, index := range c.rarityPool[RarityLegendary] {
+		if c.Heroes[index].Stars == 2 {
+			twoStarsOnly.rarityPool[RarityLegendary] = append(twoStarsOnly.rarityPool[RarityLegendary], index)
+		}
+	}
+	if err := twoStarsOnly.parseHeroContents(&Pack{}, legendaryRawPack(map[string]int{"2": 10000})); err != nil {
+		t.Fatalf("a two-star-only pack was refused: %v", err)
+	}
+	if err := twoStarsOnly.parseHeroContents(&Pack{}, legendaryRawPack(map[string]int{"1": 1, "2": 9999})); err == nil {
+		t.Error("a weight on a star tier with no heroes was accepted")
+	}
+}

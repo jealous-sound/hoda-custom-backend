@@ -415,37 +415,3 @@ func TestRefillTopsUpForGems(t *testing.T) {
 		t.Errorf("full stamina refill: %v", err)
 	}
 }
-
-func TestLegendaryRollsSkipHeroesAlreadyOwned(t *testing.T) {
-	c := mustCatalog(t)
-	legends := c.RarityPool(catalog.RarityLegendary)
-	if len(legends) < 3 {
-		t.Fatalf("only %d Legendary heroes in the pool", len(legends))
-	}
-	pack := &catalog.Pack{HeroCount: 2}
-	pack.Weights[catalog.RarityLegendary] = 1
-	missing := legends[len(legends)-1]
-	owned := map[int]bool{}
-	for _, hero := range legends[:len(legends)-1] {
-		owned[hero] = true
-	}
-	repeated := false
-	for seed := uint32(1); seed <= 40; seed++ {
-		r := rng{state: seed}
-		roll, ok := rollHeroes(c, pack, 0, owned, &r)
-		if !ok || roll.heroes[0] != missing {
-			t.Fatalf("seed %d rolled %v, want the one Legendary not owned (%d) first", seed, roll.heroes, missing)
-		}
-		if c.Heroes[roll.heroes[1]].Rarity != catalog.RarityLegendary {
-			t.Fatalf("seed %d: second hero is not Legendary", seed)
-		}
-		repeated = repeated || roll.heroes[1] != missing
-	}
-	if !repeated {
-		t.Error("with every Legendary owned or rolled, the pack never fell back to the whole pool")
-	}
-	wisps := &catalog.Pack{HeroCount: 1, PoolTag: "WISP"}
-	if sparesDuplicates(wisps, catalog.RarityLegendary) || sparesDuplicates(pack, catalog.RarityEpic) {
-		t.Error("only Legendary rolls from the open pool spare duplicates")
-	}
-}

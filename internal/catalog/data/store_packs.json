@@ -143,6 +143,11 @@
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
       "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      },
       "tutorial_only": true
     },
     {
@@ -283,7 +288,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "grand_champion",
@@ -331,7 +341,12 @@
       "rune_count": 10,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 6500,
+        "3": 1500
+      }
     },
     {
       "id": "mercenary",
@@ -420,7 +435,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "iron",
@@ -465,7 +485,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2500,
+        "2": 7500,
+        "3": 0
+      }
     },
     {
       "id": "bloodstone",
@@ -511,7 +536,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 6500,
+        "3": 1500
+      },
+      "legendary_no_dupe_across_stars": true
     },
     {
       "id": "lyrium_vein",
@@ -556,7 +587,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "wisp",
@@ -793,7 +829,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "booster_redblue",
@@ -844,7 +885,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "booster_giant",
@@ -895,7 +941,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "booster_prestige",
@@ -946,7 +997,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 6500,
+        "3": 1500
+      }
     },
     {
       "id": "goat",
@@ -1039,7 +1095,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "dragon",
@@ -1087,7 +1148,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "romance",
@@ -1135,7 +1201,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "wintersend",
@@ -1183,7 +1254,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "harvest",
@@ -1231,7 +1307,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "anniversary",
@@ -1279,7 +1360,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "library",
@@ -1327,7 +1413,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "mac_tir",
@@ -1374,7 +1465,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "new_release",
@@ -1421,7 +1517,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "legendary",
@@ -1465,7 +1566,12 @@
       "rune_count": 5,
       "gear_chance_pct": 40,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 5
+      "gear_max_rarity": 5,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 6500,
+        "3": 1500
+      }
     },
     {
       "id": "ultimate",
@@ -1509,7 +1615,12 @@
       "rune_count": 10,
       "gear_chance_pct": 40,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 5
+      "gear_max_rarity": 5,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 6500,
+        "3": 1500
+      }
     },
     {
       "id": "flash",
@@ -1556,7 +1667,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_black_friday",
@@ -1603,7 +1719,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_dragon_hunt",
@@ -1650,7 +1771,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_exclusively",
@@ -1697,7 +1823,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_fine_dwarven_crafts",
@@ -1744,7 +1875,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_fireworks",
@@ -1791,7 +1927,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_good_company",
@@ -1838,7 +1979,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_star_struck",
@@ -1885,7 +2031,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_stocking_stuffers",
@@ -1932,7 +2083,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_university_supplies",
@@ -1979,7 +2135,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_valentines_gifts",
@@ -2026,7 +2187,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "speed_kills",
