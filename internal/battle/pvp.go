@@ -11,7 +11,6 @@ const (
 	pvpLevelSalt        = 0x51ED27
 	pvpBotSalt          = 0x7A3C11
 	pvpSquadSalt        = 0x2F90D3
-	pvpRuneSalt         = 0x64B8E1
 	pvpDriftSalt        = 0x1C8A77
 	pvpEventSalt        = 0x4E11A9
 	pvpEventSkillJitter = 25
@@ -46,14 +45,14 @@ func pvpRoll(seed, salt uint32, count int) int {
 
 type pvpSquad struct {
 	strength int
+	elite    bool
 	cells    []Unit
+	runes    []string
 }
 
 type pvpTables struct {
 	windowBelow, windowAbove, botDailyDrift, levelSpread int
 	candidates                                           int
-	firstRuneLevel, levelsPerRune, levelsPerRarity       int
-	maxRuneRarity                                        int
 	eventDuration, eventBannerWindow, topBotBanners      int64
 	guildEveryCycles                                     int64
 	statBudget                                           bool
@@ -77,12 +76,6 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 		Squads struct {
 			Candidates int `json:"candidates"`
 		} `json:"squads"`
-		Runes struct {
-			FirstRuneLevel  int `json:"first_rune_level"`
-			LevelsPerRune   int `json:"levels_per_rune"`
-			LevelsPerRarity int `json:"levels_per_rarity"`
-			MaxRarity       int `json:"max_rarity"`
-		} `json:"runes"`
 		Events struct {
 			DurationSeconds         int64      `json:"duration_seconds"`
 			MatchmakingBannerWindow int64      `json:"matchmaking_banner_window"`
@@ -99,7 +92,9 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 		} `json:"bots"`
 		SquadPool []struct {
 			Strength int        `json:"strength"`
+			Elite    bool       `json:"elite"`
 			Cells    []*rawCell `json:"cells"`
+			Runes    []string   `json:"runes"`
 		} `json:"squad_pool"`
 	}
 	if err := json.Unmarshal(data, &root); err != nil {
@@ -108,9 +103,7 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 	t := &pvpTables{
 		windowBelow: root.Matchmaking.WindowBelow, windowAbove: root.Matchmaking.WindowAbove,
 		botDailyDrift: root.Matchmaking.BotDailyDrift, levelSpread: root.Matchmaking.LevelSpread,
-		candidates: root.Squads.Candidates, firstRuneLevel: root.Runes.FirstRuneLevel,
-		levelsPerRune: root.Runes.LevelsPerRune, levelsPerRarity: root.Runes.LevelsPerRarity,
-		maxRuneRarity: root.Runes.MaxRarity,
+		candidates:    root.Squads.Candidates,
 		eventDuration: root.Events.DurationSeconds, eventBannerWindow: root.Events.MatchmakingBannerWindow,
 		topBotBanners: root.Events.TopBotBanners, guildEveryCycles: root.Events.GuildEveryCycles,
 		statBudget: root.Battle.StatBudget,
@@ -118,7 +111,7 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 	if len(root.Bots) == 0 || len(root.Bots) > maxPvpBots || len(root.SquadPool) == 0 ||
 		len(root.SquadPool) > maxPvpSquads || len(root.Events.Catalog) == 0 ||
 		len(root.Events.Catalog) > maxPvpEvents || len(root.Events.GuildCatalog) > maxPvpGuildEvents ||
-		t.eventDuration <= 0 || t.levelsPerRune == 0 || t.levelsPerRarity == 0 {
+		t.eventDuration <= 0 {
 		return nil, fmt.Errorf("pvp rules: incomplete tables")
 	}
 	if len(root.Events.GuildCatalog) > 0 && t.guildEveryCycles <= 0 {
@@ -131,19 +124,31 @@ func loadPvpTables(data []byte) (*pvpTables, error) {
 		if len(raw.Cells) > SlotCount {
 			return nil, fmt.Errorf("pvp rules: squad %d has too many cells", i)
 		}
-		squad := pvpSquad{strength: raw.Strength}
+		if len(raw.Runes) > RuneSlotCount {
+			return nil, fmt.Errorf("pvp rules: squad %d has %d runes", i, len(raw.Runes))
+		}
+		squad := pvpSquad{strength: raw.Strength, elite: raw.Elite, runes: append([]string{}, raw.Runes...)}
 		for slot, cell := range raw.Cells {
-			if cell != nil {
-				squad.cells = append(squad.cells, Unit{
-					Slot: slot, ID: cell.ID, Tier: ParseTier(cell.Tier).String(), Level: max(cellLevel(cell.Level), 1),
-				})
+			if cell == nil {
+				continue
 			}
+			gear, err := wornSlots(cell.Gear)
+			if err != nil {
+				return nil, fmt.Errorf("pvp rules: squad %d slot %d: %w", i, slot, err)
+			}
+			squad.cells = append(squad.cells, Unit{
+				Slot: slot, ID: cell.ID, Tier: ParseTier(cell.Tier).String(), Level: max(cellLevel(cell.Level), 1),
+				Ascended: cell.Ascended && gear != nil, Gear: gear,
+			})
 		}
 		t.squads = append(t.squads, squad)
 		t.squadsWeakestFirst = append(t.squadsWeakestFirst, i)
 	}
 	slices.SortStableFunc(t.squadsWeakestFirst, func(squad, other int) int {
-		return cmp.Compare(t.squads[squad].strength, t.squads[other].strength)
+		return cmp.Or(
+			cmp.Compare(eliteRank(t.squads[squad]), eliteRank(t.squads[other])),
+			cmp.Compare(t.squads[squad].strength, t.squads[other].strength),
+		)
 	})
 	for _, list := range []struct {
 		raw []rawEvent
@@ -225,27 +230,41 @@ func (t *pvpTables) pickSquad(bot int, seed uint32) int {
 	return t.squadsWeakestFirst[weakest+pvpRoll(seed, pvpSquadSalt, span)]
 }
 
-func (d *Data) pvpRunes(level int, seed uint32) []string {
-	t := d.pvp
-	runes := []string{}
-	if level < t.firstRuneLevel {
-		return runes
+func eliteRank(squad pvpSquad) int {
+	if squad.elite {
+		return 1
 	}
-	wanted := min(1+(level-t.firstRuneLevel)/t.levelsPerRune, RuneSlotCount)
-	rarityCap := min(1+level/t.levelsPerRarity, t.maxRuneRarity)
-	var pool []*runeDef
-	for _, def := range d.runes {
-		if def.rarity <= rarityCap && def.rollable() {
-			pool = append(pool, def)
+	return 0
+}
+
+func wornSlots(worn []string) ([]string, error) {
+	if len(worn) > gearSlotCapacity {
+		return nil, fmt.Errorf("%d gear slots", len(worn))
+	}
+	if !slices.ContainsFunc(worn, func(id string) bool { return id != "" }) {
+		return nil, nil
+	}
+	slots := make([]string, gearSlotCapacity)
+	copy(slots, worn)
+	return slots, nil
+}
+
+func (d *Data) checkPvpLoadouts() error {
+	for i, squad := range d.pvp.squads {
+		for _, id := range squad.runes {
+			if _, ok := d.runesByID[id]; !ok {
+				return fmt.Errorf("pvp rules: squad %d has unknown rune %s", i, id)
+			}
+		}
+		for _, cell := range squad.cells {
+			for _, id := range cell.Gear {
+				if _, ok := d.gear[id]; id != "" && !ok {
+					return fmt.Errorf("pvp rules: squad %d wears unknown gear %s", i, id)
+				}
+			}
 		}
 	}
-	for i := 0; i < wanted && len(pool) > 0; i++ {
-		pick := pvpRoll(seed, pvpRuneSalt+uint32(i), len(pool))
-		runes = append(runes, pool[pick].id)
-		pool[pick] = pool[len(pool)-1]
-		pool = pool[:len(pool)-1]
-	}
-	return runes
+	return nil
 }
 
 func (d *Data) PvpStatBudget() bool { return d.pvp.statBudget }
@@ -326,7 +345,12 @@ func (d *Data) PvpRoster(o PvpOpponent) (Side, error) {
 	if o.Squad < 0 || o.Squad >= len(d.pvp.squads) {
 		return Side{}, fmt.Errorf("no pvp squad %d", o.Squad)
 	}
-	roster := Side{Units: append([]Unit{}, d.pvp.squads[o.Squad].cells...), Runes: d.pvpRunes(o.Level, o.Seed)}
+	squad := d.pvp.squads[o.Squad]
+	roster := Side{Units: make([]Unit, len(squad.cells)), Runes: append([]string{}, squad.runes...)}
+	for i, unit := range squad.cells {
+		unit.Gear = slices.Clone(unit.Gear)
+		roster.Units[i] = unit
+	}
 	for _, unit := range roster.Units {
 		if _, ok := d.characters[unit.ID]; !ok {
 			return Side{}, fmt.Errorf("pvp unit %s is not in the catalog", unit.ID)

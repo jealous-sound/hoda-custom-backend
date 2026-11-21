@@ -61,7 +61,12 @@ func Load(read func(name string) ([]byte, error)) (*Data, error) {
 		{CampaignRostersFile, func(b []byte) (err error) { d.campaignRosters, err = loadRosters(b); return }},
 		{NexusRostersFile, func(b []byte) (err error) { d.nexusRosters, err = loadRosters(b); return }},
 		{NexusGameChangersFile, func(b []byte) (err error) { d.nexusChangers, err = loadNexusChangers(b); return }},
-		{PvpRulesFile, func(b []byte) (err error) { d.pvp, err = loadPvpTables(b); return }},
+		{PvpRulesFile, func(b []byte) (err error) {
+			if d.pvp, err = loadPvpTables(b); err != nil {
+				return err
+			}
+			return d.checkPvpLoadouts()
+		}},
 		{StatBudgetFile, func(b []byte) (err error) { d.statBudget, err = loadStatBudget(b); return }},
 		{StatBudgetHeroesFile, func(b []byte) error { return d.statBudget.loadHeroes(b) }},
 	}
@@ -83,9 +88,11 @@ type rosterKey struct {
 }
 
 type rawCell struct {
-	ID    string           `json:"id"`
-	Tier  string           `json:"tier"`
-	Level *json.RawMessage `json:"level"`
+	ID       string           `json:"id"`
+	Tier     string           `json:"tier"`
+	Level    *json.RawMessage `json:"level"`
+	Ascended bool             `json:"ascended"`
+	Gear     []string         `json:"gear"`
 }
 
 func cellLevel(raw *json.RawMessage) int {

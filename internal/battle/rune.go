@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"math"
-	"strings"
 )
 
 type runeBuff int
@@ -41,23 +40,14 @@ var runeBuffNames = map[string]runeBuff{
 }
 
 const (
-	RuneSlotCount         = 3
-	runeResistMaxPct      = 100
-	overchargedRuneIDMark = "-6-"
-	specialRuneIDMark     = "Special"
+	RuneSlotCount    = 3
+	runeResistMaxPct = 100
 )
 
 type runeDef struct {
-	id              string
-	buff            runeBuff
-	value           int
-	durationMinutes int
-	rarity          int
-}
-
-func (r *runeDef) rollable() bool {
-	return r.durationMinutes > 0 && !strings.Contains(r.id, overchargedRuneIDMark) &&
-		!strings.Contains(r.id, specialRuneIDMark)
+	id    string
+	buff  runeBuff
+	value int
 }
 
 type runeTarget int
@@ -138,11 +128,9 @@ func runeApplyPct(value, pct int) int {
 func loadRunes(data []byte) ([]*runeDef, map[string]*runeDef, error) {
 	var root struct {
 		Runes []struct {
-			ID              string `json:"id"`
-			BuffType        string `json:"buff_type"`
-			BuffValue       int    `json:"buff_value"`
-			DurationMinutes int    `json:"duration_minutes"`
-			Rarity          int    `json:"rarity"`
+			ID        string `json:"id"`
+			BuffType  string `json:"buff_type"`
+			BuffValue int    `json:"buff_value"`
 		} `json:"runes"`
 	}
 	if err := json.Unmarshal(data, &root); err != nil {
@@ -155,9 +143,7 @@ func loadRunes(data []byte) ([]*runeDef, map[string]*runeDef, error) {
 		if !ok {
 			return nil, nil, fmt.Errorf("runes: unknown buff type %s", raw.BuffType)
 		}
-		def := &runeDef{
-			id: raw.ID, buff: buff, value: raw.BuffValue, durationMinutes: raw.DurationMinutes, rarity: raw.Rarity,
-		}
+		def := &runeDef{id: raw.ID, buff: buff, value: raw.BuffValue}
 		list = append(list, def)
 		if _, seen := byID[raw.ID]; !seen {
 			byID[raw.ID] = def
