@@ -13,7 +13,6 @@ const (
 	gearOutputShift         = 8
 	percent                 = 100
 	uniqueHeroRerolls       = 32
-	noDuplicateRarity       = catalog.RarityLegendary
 	noRoll                  = -1
 )
 
@@ -102,18 +101,57 @@ func alreadyRolled(hero int, rolled []int) bool {
 	return false
 }
 
-func sparesDuplicates(pack *catalog.Pack, rarity catalog.Rarity) bool {
-	return rarity == noDuplicateRarity && pack.PoolTag == ""
+type rollHistory struct {
+	owned  map[int]bool
+	rolled []int
 }
 
-func notYetOwned(pool []int, owned map[int]bool, rolled []int) []int {
-	fresh := make([]int, 0, len(pool))
-	for _, hero := range pool {
-		if !owned[hero] && !alreadyRolled(hero, rolled) {
-			fresh = append(fresh, hero)
+func (h rollHistory) has(hero int) bool {
+	return h.owned[hero] || alreadyRolled(hero, h.rolled)
+}
+
+func legendaryCandidates(c *catalog.Catalog, stars int, unownedOnly bool, history rollHistory) []int {
+	var candidates []int
+	for _, hero := range c.RarityPool(catalog.RarityLegendary) {
+		if c.Heroes[hero].Stars == stars && (!unownedOnly || !history.has(hero)) {
+			candidates = append(candidates, hero)
 		}
 	}
-	return fresh
+	return candidates
+}
+
+func rollLegendaryStars(c *catalog.Catalog, pack *catalog.Pack, history rollHistory, r *rng) int {
+	var weights [catalog.LegendaryStarMax + 1]int
+	total := 0
+	for stars := 1; stars <= catalog.LegendaryStarMax; stars++ {
+		if !pack.LegendaryNoDupeAcrossStars || len(legendaryCandidates(c, stars, true, history)) > 0 {
+			weights[stars] = pack.LegendaryStarWeights[stars]
+		}
+		total += weights[stars]
+	}
+	if total == 0 {
+		weights, total = pack.LegendaryStarWeights, catalog.HeroWeightTotal
+	}
+	roll := r.below(total)
+	for stars := 1; stars <= catalog.LegendaryStarMax; stars++ {
+		if roll < weights[stars] {
+			return stars
+		}
+		roll -= weights[stars]
+	}
+	return catalog.LegendaryStarMax
+}
+
+func pickLegendary(c *catalog.Catalog, pack *catalog.Pack, history rollHistory, r *rng) int {
+	stars := rollLegendaryStars(c, pack, history, r)
+	pool := legendaryCandidates(c, stars, true, history)
+	if len(pool) == 0 {
+		pool = legendaryCandidates(c, stars, false, history)
+	}
+	if len(pool) == 0 {
+		return noRoll
+	}
+	return pool[r.below(len(pool))]
 }
 
 func pickHero(
@@ -122,10 +160,8 @@ func pickHero(
 	pool := c.RarityPool(rarity)
 	if pack.PoolTag != "" {
 		pool = c.TaggedPool(pack.PoolTag, rarity)
-	} else if sparesDuplicates(pack, rarity) {
-		if fresh := notYetOwned(pool, owned, rolled); len(fresh) > 0 {
-			pool = fresh
-		}
+	} else if rarity == catalog.RarityLegendary {
+		return pickLegendary(c, pack, rollHistory{owned: owned, rolled: rolled}, r)
 	}
 	if len(pool) == 0 {
 		return noRoll
