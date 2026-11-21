@@ -231,3 +231,36 @@ func TestStarWeightsNeedALegendaryOfThatStar(t *testing.T) {
 		t.Error("a weight on a star tier with no heroes was accepted")
 	}
 }
+
+func pityRawPack(pity int, starWeights, guarantees map[string]int) rawPack {
+	raw := legendaryRawPack(starWeights)
+	raw.MinimumRarity = "Rare"
+	raw.Weights = map[string]int{"Rare": HeroWeightTotal - 100, "Legendary": 100}
+	raw.LegendaryPityPacks = pity
+	raw.LegendaryStarGuarantees = guarantees
+	return raw
+}
+
+func TestStarGuaranteesNeedAPitySlotAndATierToRoll(t *testing.T) {
+	c := mustDefault(t)
+	standard := map[string]int{"1": 2000, "2": 7000, "3": 1000}
+	pack := &Pack{}
+	if err := c.parseHeroContents(pack, pityRawPack(100, standard, map[string]int{"2": 125, "3": 1000})); err != nil {
+		t.Fatalf("valid star guarantees refused: %v", err)
+	}
+	if pack.StarGuaranteePacks != [LegendaryStarMax + 1]int{0, 0, 125, 1000} || !pack.HasStarGuarantees() {
+		t.Errorf("parsed star guarantees %v", pack.StarGuaranteePacks)
+	}
+	for name, raw := range map[string]rawPack{
+		"one-star":            pityRawPack(100, standard, map[string]int{"1": 50}),
+		"four-star":           pityRawPack(100, standard, map[string]int{"4": 50}),
+		"unnamed":             pityRawPack(100, standard, map[string]int{"two": 50}),
+		"negative":            pityRawPack(100, standard, map[string]int{"2": -1}),
+		"without a pity":      pityRawPack(0, standard, map[string]int{"2": 125}),
+		"on a missing weight": pityRawPack(100, map[string]int{"1": 2500, "2": 7500, "3": 0}, map[string]int{"3": 1000}),
+	} {
+		if err := c.parseHeroContents(&Pack{}, raw); err == nil {
+			t.Errorf("a star guarantee %s was accepted", name)
+		}
+	}
+}

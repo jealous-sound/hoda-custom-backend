@@ -21,6 +21,7 @@ type fixture struct {
 	gold, gems          int
 	vouchers            []int
 	packsSinceLegendary map[string]int
+	starCounters        map[string]map[string]int
 	openedByPack        [catalog.StoreCounterCount]int
 	tutorial            map[string]any
 	additions           []any
@@ -65,6 +66,9 @@ func (f fixture) profile(t *testing.T) json.RawMessage {
 	}
 	if f.packsSinceLegendary != nil {
 		doc["store"].(map[string]any)[packsSinceLegendary] = f.packsSinceLegendary
+	}
+	if f.starCounters != nil {
+		doc["store"].(map[string]any)[packsSinceStarGuarantee] = f.starCounters
 	}
 	raw, err := json.Marshal(doc)
 	if err != nil {
@@ -116,10 +120,11 @@ type decoded struct {
 		EnergyRegenTimer   float64 `json:"energy_regen_timer"`
 	}
 	Store struct {
-		OpenedTotal         int            `json:"opened_total"`
-		OpenedByPack        []int          `json:"opened_by_pack"`
-		ReleasedClientPity  *int           `json:"champion_since_legendary"`
-		PacksSinceLegendary map[string]int `json:"packs_since_legendary"`
+		OpenedTotal         int                       `json:"opened_total"`
+		OpenedByPack        []int                     `json:"opened_by_pack"`
+		ReleasedClientPity  *int                      `json:"champion_since_legendary"`
+		PacksSinceLegendary map[string]int            `json:"packs_since_legendary"`
+		StarCounters        map[string]map[string]int `json:"packs_since_star_guarantee"`
 		Vouchers            []int
 		RNGState            int `json:"rng_state"`
 	}

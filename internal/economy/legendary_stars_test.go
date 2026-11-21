@@ -37,7 +37,7 @@ func rollLegend(
 ) int {
 	t.Helper()
 	r := rng{state: seed}
-	hero := pickHero(c, pack, catalog.RarityLegendary, owned, rolled, &r)
+	hero := pickHero(c, pack, anyStars(catalog.RarityLegendary), owned, rolled, &r)
 	if hero == noRoll || c.Heroes[hero].Rarity != catalog.RarityLegendary {
 		t.Fatalf("seed %d rolled %d, want a Legendary", seed, hero)
 	}
@@ -123,7 +123,7 @@ func TestIronPityLegendariesStopAtTwoStars(t *testing.T) {
 	}
 	for seed := uint32(1); seed <= legendSeeds; seed++ {
 		r := rng{state: seed}
-		roll, ok := rollHeroes(c, iron, iron.LegendaryPityPacks-1, map[int]bool{}, &r)
+		roll, ok := rollHeroes(c, iron, packDue{sinceLegendary: iron.LegendaryPityPacks - 1}, map[int]bool{}, &r)
 		if !ok || roll.rarities[0] != catalog.RarityLegendary {
 			t.Fatalf("seed %d: the due iron pack held %v", seed, roll.rarities)
 		}
