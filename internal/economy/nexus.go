@@ -259,7 +259,7 @@ func (p *player) AwardNexusRun() (BattleResult, error) {
 	}
 	var heroes []string
 	for rarity, count := range n.escrowUnits() {
-		pool := p.catalog.RarityPool(catalog.Rarity(rarity))
+		pool := p.catalog.NexusRewardPool(catalog.Rarity(rarity))
 		for range count {
 			if len(pool) == 0 || len(heroes) >= catalog.NexusMaxNodes {
 				break
