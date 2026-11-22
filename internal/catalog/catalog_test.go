@@ -2,8 +2,10 @@ package catalog
 
 import (
 	"bytes"
+	"encoding/json"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 	"time"
 )
@@ -262,5 +264,42 @@ func TestStarGuaranteesNeedAPitySlotAndATierToRoll(t *testing.T) {
 		if err := c.parseHeroContents(&Pack{}, raw); err == nil {
 			t.Errorf("a star guarantee %s was accepted", name)
 		}
+	}
+}
+
+func TestNexusRollsHeroesAtTheRarityTheyAreShownAtButNeverALegendary(t *testing.T) {
+	c := mustDefault(t)
+	const drawnLegendaryPlayedAsRare = "UNIT_SISTERNIGHTINGALE"
+	drawnLegendaryRewarded := false
+	for shown := RarityCommon; shown <= RarityMythic; shown++ {
+		for _, index := range c.NexusRewardPool(shown) {
+			hero := c.Heroes[index]
+			if hero.OriginalRarity != shown || hero.Rarity >= RarityLegendary || !heroInDefaultPool(hero) {
+				t.Fatalf("%s plays at %d and is shown at %d, yet the Nexus hands it out at %d", hero.ID, hero.Rarity,
+					hero.OriginalRarity, shown)
+			}
+			drawnLegendaryRewarded = drawnLegendaryRewarded ||
+				(hero.ID == drawnLegendaryPlayedAsRare && shown == RarityLegendary)
+		}
+	}
+	if !drawnLegendaryRewarded {
+		t.Errorf("a Nexus Legendary roll never hands out %s", drawnLegendaryPlayedAsRare)
+	}
+
+	decode := func(rarities string) []rawNexusEvent {
+		var events []rawNexusEvent
+		raw := `[{"id":"Test","difficulties":[{"id":"Easy_Test","nodes":[{"reward_rarity":` + rarities + `}]}]}]`
+		if err := json.Unmarshal([]byte(raw), &events); err != nil {
+			t.Fatal(err)
+		}
+		return events
+	}
+	fresh := *c
+	fresh.Nexus = nil
+	if err := fresh.parseNexus(decode("[1, 5]")); err != nil {
+		t.Errorf("a Nexus node rolling Common and Legendary: %v", err)
+	}
+	if err := fresh.parseNexus(decode("[1, 6]")); err == nil || !strings.Contains(err.Error(), "rarity 6") {
+		t.Errorf("a Nexus node rolling Mythic loaded with %v", err)
 	}
 }

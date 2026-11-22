@@ -204,6 +204,7 @@ type Catalog struct {
 	heroIndex    map[string]int
 	runeIndex    map[string]int
 	rarityPool   [RarityLegendary + 1][]int
+	nexusPool    [RarityMythic + 1][]int
 }
 
 func (p *Pack) PityCounter() string {
@@ -283,6 +284,13 @@ func (c *Catalog) RarityPool(rarity Rarity) []int {
 		return nil
 	}
 	return c.rarityPool[rarity]
+}
+
+func (c *Catalog) NexusRewardPool(shown Rarity) []int {
+	if shown < RarityCommon || shown > RarityMythic {
+		return nil
+	}
+	return c.nexusPool[shown]
 }
 
 func (c *Catalog) TaggedPool(tag string, rarity Rarity) []int {
@@ -481,8 +489,12 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		c.Heroes = append(c.Heroes, hero)
 	}
 	for index, hero := range c.Heroes {
-		if heroInDefaultPool(hero) {
-			c.rarityPool[hero.Rarity] = append(c.rarityPool[hero.Rarity], index)
+		if !heroInDefaultPool(hero) {
+			continue
+		}
+		c.rarityPool[hero.Rarity] = append(c.rarityPool[hero.Rarity], index)
+		if hero.Rarity < RarityLegendary {
+			c.nexusPool[hero.OriginalRarity] = append(c.nexusPool[hero.OriginalRarity], index)
 		}
 	}
 	for _, index := range c.rarityPool[RarityLegendary] {
