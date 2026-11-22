@@ -208,10 +208,10 @@ func (c *character) grownTier(current Tier) Tier {
 
 func (h *hero) grownStats() budgetStats {
 	st := &h.def.stats[h.def.grownTier(h.tier)]
-	steps := max(st.maxLevel, 1) - 1
+	level := max(st.catalogMaxLevel, 1)
 	return budgetStats{
-		power:  st.basePower + steps*st.powerPerLevel,
-		health: st.baseHealth + steps*st.healthPerLevel,
+		power:  st.powerAt(level),
+		health: st.healthAt(level),
 	}
 }
 

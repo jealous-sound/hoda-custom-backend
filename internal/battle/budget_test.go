@@ -125,9 +125,11 @@ func TestStatBudgetKeepsTheShareOfGrowthAHeroHasEarned(t *testing.T) {
 	b := testBudget()
 	def := &character{id: "UNIT_GROWER", rarity: rarityLegendary, maxTier: TierII}
 	def.hasTier[TierI], def.hasTier[TierII] = true, true
-	def.stats[TierI] = tierStats{basePower: 100, baseHealth: 500, maxLevel: 10, powerPerLevel: 10, healthPerLevel: 50}
+	def.stats[TierI] = tierStats{
+		basePower: 100, baseHealth: 500, maxPower: 190, maxHealth: 950, maxLevel: 10, catalogMaxLevel: 10,
+	}
 	def.stats[TierII] = tierStats{
-		basePower: 200, baseHealth: 1000, maxLevel: 11, powerPerLevel: 20, healthPerLevel: 100,
+		basePower: 200, baseHealth: 1000, maxPower: 400, maxHealth: 2000, maxLevel: 11, catalogMaxLevel: 11,
 	}
 	h := &hero{def: def, rarity: def.rarity, stats: def.stats}
 	if grown := h.grownStats(); grown.power != 400 || grown.health != 2000 {
