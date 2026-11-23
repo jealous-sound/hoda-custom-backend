@@ -103,12 +103,12 @@ type hero struct {
 
 func (h *hero) statPower() int {
 	st := &h.stats[h.tier]
-	return st.basePower + (h.level-1)*st.powerPerLevel + h.fortifyPower
+	return st.powerAt(h.level) + h.fortifyPower
 }
 
 func (h *hero) statHealth() int {
 	st := &h.stats[h.tier]
-	return st.baseHealth + (h.level-1)*st.healthPerLevel + h.fortifyHealth
+	return st.healthAt(h.level) + h.fortifyHealth
 }
 
 type side struct {
