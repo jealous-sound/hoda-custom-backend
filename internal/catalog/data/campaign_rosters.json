@@ -4207,10 +4207,10 @@
        "why": "Sundermount corpses (DA2)"
       },
       {
-       "id": "UNIT_VARTERRAL",
+       "id": "UNIT_SUNDERMOUNTVARTERRAL",
        "tier": "IV",
        "level": 59,
-       "why": "BOSS — desc's 'ancient elven guardian' = Varterral per wiki Mirror Image entry ('Exterminate the Varterral of Sundermount'); unit also drops from this map"
+       "why": "BOSS — desc's 'ancient elven guardian' = Varterral per wiki Mirror Image entry ('Exterminate the Varterral of Sundermount'); fielded as the Sundermount Varterral because UNIT_VARTERRAL's 5000 flat damage resist for Elves covers itself and no hit at this level gets through"
       }
      ],
      "notes": "Boss node. Varterral identification cross-confirmed by the wiki Quests page (Mirror Image challenge text) and the Eluvian(15) drop log. Shade fill replaced by the nest's Corrupted Spiderling so the guardian's node outweighs the preceding trash node."
@@ -4450,10 +4450,10 @@
        "why": "official drop-pool mirror (240/2004)"
       },
       {
-       "id": "UNIT_VARTERRAL",
+       "id": "UNIT_SUNDERMOUNTVARTERRAL",
        "tier": "IV",
        "level": 65,
-       "why": "in the official drop pool (10/2004); the map's guardian giant"
+       "why": "UNIT_VARTERRAL is in the official drop pool (10/2004); the map's guardian giant, fielded as the Sundermount Varterral because UNIT_VARTERRAL's 5000 flat damage resist for Elves covers itself and Keeper Marethari"
       }
      ],
      "notes": "Challenge spike: every unit appears in the official Capital Games Eluvian(15) drop log (Kiv post + community spreadsheet); drop pools mirrored themes but are not observed squads. Revenant was dropped (catalog Revenant attacks a ROW, contradicting the single-target hint the cell claimed) and Walking Corpse (339/2004, kept in nodes 2/5/6) gave way to the pool's Legendary and Epic so the challenge is unambiguously the strongest node. Epics/Legendary carry the +5 spike (65/69); Rares sit at their tier-IV cap of 45."
