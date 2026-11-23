@@ -104,9 +104,9 @@ func fortifySharesFaction(parent, child *character) bool {
 func (h *hero) maxLevelStat(power bool) int {
 	st := &h.stats[h.tier]
 	if power {
-		return st.basePower + (st.maxLevel-1)*st.powerPerLevel
+		return st.powerAt(st.maxLevel)
 	}
-	return st.baseHealth + (st.maxLevel-1)*st.healthPerLevel
+	return st.healthAt(st.maxLevel)
 }
 
 func (d *Data) fortifyBonus(parent *hero, archetype *fortifyArchetype, child FortifyChild) (fortifyBonus, error) {
