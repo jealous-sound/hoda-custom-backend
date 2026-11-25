@@ -46,6 +46,7 @@ starts with the local game's progress. Logging out in the game leaves the next r
 | `-min-client-version` | empty | sends `426 Upgrade Required` to older clients |
 | `-client-releases`, `-client-releases-every` | the client repo's latest release, `15m` | source of `latest` in `/v1/client` |
 | `-client-download-url` | `https://hodareborn.com/#download` | the page the client opens to update |
+| `-web-origins` | `https://hodareborn.com` | comma-separated origins whose pages may call `/v1/` from a browser; empty turns CORS off |
 
 ## Deploy
 
@@ -53,6 +54,12 @@ Railway builds the `Dockerfile` (see `railway.json`, health check `/healthz`). T
 data in `/data`, and runs with `-trust-cf-connecting-ip`. The Railway variable `HOD_MIN_CLIENT_VERSION` feeds
 `-min-client-version`. Raise it only for a client release that older clients cannot play alongside, such as a change
 to the simulation or to an action's shape.
+
+The browser build of the client calls `/v1/` from `-web-origins`. Every `/v1/` response to an allowed `Origin` carries
+`Access-Control-Allow-Origin` and exposes `X-Profile-Revision`. A preflight is answered `204` for `GET`, `POST` and
+`PUT` with `Authorization`, `Content-Type` and `If-Match`, cached for two hours, and counted as the `preflight` route.
+Other origins get no CORS headers, and `/admin` and `/healthz` never do. Browsers can't set `User-Agent`, so the `426`
+gate doesn't see their version; the client refuses Online by itself when `/v1/client` says it is below `minimum`.
 
 ## Maintenance
 
