@@ -63,6 +63,7 @@ type options struct {
 	clientDownload  string
 	adminToken      string
 	revision        string
+	webOrigins      string
 }
 
 func parseOptions() options {
@@ -93,6 +94,9 @@ func parseOptions() options {
 		"how often to look up the newest client release")
 	flag.StringVar(&o.clientDownload, "client-download-url", defaultClientDownloadURL,
 		"page the client opens to download a new version")
+	flag.StringVar(&o.webOrigins, "web-origins", api.DefaultWebOrigins,
+		"comma-separated origins whose pages may call /v1/ from a browser, such as the browser build's site; "+
+			"empty turns cross-origin access off")
 	flag.Parse()
 	o.adminToken = os.Getenv(adminTokenVariable)
 	o.revision = os.Getenv(deployedRevisionVariable)
@@ -233,6 +237,10 @@ func run(o options, log *slog.Logger) error {
 	if err != nil {
 		return err
 	}
+	webOrigins, err := api.ParseWebOrigins(o.webOrigins)
+	if err != nil {
+		return fmt.Errorf("-web-origins: %w", err)
+	}
 	if o.adminToken != "" && len(o.adminToken) < api.MinAdminTokenLength {
 		return fmt.Errorf("%s must be at least %d characters", adminTokenVariable, api.MinAdminTokenLength)
 	}
@@ -256,7 +264,7 @@ func run(o options, log *slog.Logger) error {
 		Handler: api.NewServer(accounts, store, sessions, shopCatalog, guilds, reports, time.Now, log, api.Config{
 			OpenUnregistered: o.unregistered, TrustCloudflareHeader: o.trustCloudflare, Limits: api.DefaultLimits(),
 			ClientUpdates: updates, Maintenance: schedule, AdminToken: o.adminToken, Activity: tracker,
-			Revision: o.revision, DataDir: o.dataDir,
+			Revision: o.revision, DataDir: o.dataDir, WebOrigins: webOrigins,
 		}).Handler(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}
