@@ -4,6 +4,7 @@ import (
 	"embed"
 	"encoding/json"
 	"fmt"
+	"strconv"
 	"strings"
 
 	"github.com/jealous-sound/hoda-custom-backend/internal/battle"
@@ -58,7 +59,10 @@ const (
 const (
 	StoreCounterCount   = 4
 	VoucherCapacity     = 16
-	heroWeightTotal     = 10000
+	HeroWeightTotal     = 10000
+	LegendaryStarMin    = 1
+	LegendaryStarMax    = 3
+	StarGuaranteeLowest = 2
 	maxHeroesPerPack    = 10
 	runePackSlotLimit   = 3
 	gearPackItemLimit   = 5
@@ -109,7 +113,7 @@ type Pack struct {
 	FixedHeroes         []string
 	PoolTag             string
 	UniqueHeroes        bool
-	LegendaryPity       int
+	LegendaryPityPacks  int
 	Weights             [RarityLegendary + 1]int
 	RuneChancePct       int
 	RuneCount           int
@@ -123,12 +127,17 @@ type Pack struct {
 
 	GearCount     int
 	TomeChancePct int
+
+	LegendaryStarWeights       [LegendaryStarMax + 1]int
+	LegendaryNoDupeAcrossStars bool
+	StarGuaranteePacks         [LegendaryStarMax + 1]int
 }
 
 type Hero struct {
 	ID             string
 	Rarity         Rarity
 	OriginalRarity Rarity
+	Stars          int
 	Obtainable     bool
 	InitialTier    string
 	Name           string
@@ -186,6 +195,7 @@ type Catalog struct {
 	TimedQuests      TimedQuestRules
 	Renown           RenownRules
 	Vault            VaultRules
+	ChallengeDrops   ChallengeDrops
 	Battle           *battle.Data
 
 	packIndex    map[string]int
@@ -194,6 +204,43 @@ type Catalog struct {
 	heroIndex    map[string]int
 	runeIndex    map[string]int
 	rarityPool   [RarityLegendary + 1][]int
+	nexusPool    [RarityMythic + 1][]int
+}
+
+func (p *Pack) PityCounter() string {
+	if p.Rotation != nil {
+		return p.Rotation.Group
+	}
+	return p.ID
+}
+
+func (p *Pack) RollsOpenLegendary() bool {
+	return p.PoolTag == "" && (p.Weights[RarityLegendary] > 0 || p.GuaranteedLegendary > 0)
+}
+
+func (p *Pack) GuaranteedSlots() int {
+	return len(p.FixedHeroes) + p.GuaranteedLegendary + p.GuaranteedEpic + p.GuaranteedRare
+}
+
+func (p *Pack) PitySlot() int {
+	return p.GuaranteedLegendary + p.GuaranteedEpic + p.GuaranteedRare
+}
+
+func (p *Pack) StarWeightFrom(lowestStars int) int {
+	total := 0
+	for stars := lowestStars; stars <= LegendaryStarMax; stars++ {
+		total += p.LegendaryStarWeights[stars]
+	}
+	return total
+}
+
+func (p *Pack) HasStarGuarantees() bool {
+	for stars := StarGuaranteeLowest; stars <= LegendaryStarMax; stars++ {
+		if p.StarGuaranteePacks[stars] > 0 {
+			return true
+		}
+	}
+	return false
 }
 
 func (c *Catalog) Pack(id string) (*Pack, bool) {
@@ -222,11 +269,28 @@ func (c *Catalog) RuneKnown(id string) bool {
 	return ok
 }
 
+func (c *Catalog) LegendaryStarCount(stars int) int {
+	count := 0
+	for _, index := range c.rarityPool[RarityLegendary] {
+		if c.Heroes[index].Stars == stars {
+			count++
+		}
+	}
+	return count
+}
+
 func (c *Catalog) RarityPool(rarity Rarity) []int {
 	if rarity < RarityCommon || rarity > RarityLegendary {
 		return nil
 	}
 	return c.rarityPool[rarity]
+}
+
+func (c *Catalog) NexusRewardPool(shown Rarity) []int {
+	if shown < RarityCommon || shown > RarityMythic {
+		return nil
+	}
+	return c.nexusPool[shown]
 }
 
 func (c *Catalog) TaggedPool(tag string, rarity Rarity) []int {
@@ -290,7 +354,7 @@ type rawPack struct {
 	FixedHeroes         []string       `json:"fixed_heroes"`
 	PoolTag             string         `json:"pool_tag"`
 	UniqueHeroes        bool           `json:"unique_heroes"`
-	LegendaryPity       int            `json:"legendary_pity"`
+	LegendaryPityPacks  int            `json:"legendary_pity_packs"`
 	Weights             map[string]int `json:"weights"`
 	RuneChancePct       int            `json:"rune_chance_pct"`
 	RuneCount           int            `json:"rune_count"`
@@ -308,6 +372,10 @@ type rawPack struct {
 	MinRarity     int `json:"min_rarity"`
 	MaxRarity     int `json:"max_rarity"`
 	TomeChancePct int `json:"tome_chance_pct"`
+
+	LegendaryStarWeights       map[string]int `json:"legendary_star_weights"`
+	LegendaryNoDupeAcrossStars bool           `json:"legendary_no_dupe_across_stars"`
+	LegendaryStarGuarantees    map[string]int `json:"legendary_star_guarantees"`
 }
 
 type rawStore struct {
@@ -325,6 +393,7 @@ type rawHeroPool struct {
 		ID             string         `json:"id"`
 		Rarity         string         `json:"rarity"`
 		OriginalRarity string         `json:"original_rarity"`
+		Stars          int            `json:"stars"`
 		Obtainable     bool           `json:"obtainable"`
 		InitialTier    string         `json:"initial_tier"`
 		Name           string         `json:"name"`
@@ -401,9 +470,9 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 			return nil, fmt.Errorf("hero %s has tiers %q to %q", raw.ID, raw.InitialTier, raw.MaxTier)
 		}
 		hero := Hero{
-			ID: raw.ID, Rarity: ParseRarity(raw.Rarity), Obtainable: raw.Obtainable, InitialTier: raw.InitialTier,
-			Name: raw.Name, Factions: parseFactions(raw.Faction), Groups: raw.Groups, Giant: raw.Giant,
-			MaxTier: maxTier,
+			ID: raw.ID, Rarity: ParseRarity(raw.Rarity), Stars: raw.Stars, Obtainable: raw.Obtainable,
+			InitialTier: raw.InitialTier, Name: raw.Name, Factions: parseFactions(raw.Faction), Groups: raw.Groups,
+			Giant: raw.Giant, MaxTier: maxTier,
 		}
 		hero.OriginalRarity = hero.Rarity
 		if raw.OriginalRarity != "" {
@@ -420,8 +489,18 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		c.Heroes = append(c.Heroes, hero)
 	}
 	for index, hero := range c.Heroes {
-		if heroInDefaultPool(hero) {
-			c.rarityPool[hero.Rarity] = append(c.rarityPool[hero.Rarity], index)
+		if !heroInDefaultPool(hero) {
+			continue
+		}
+		c.rarityPool[hero.Rarity] = append(c.rarityPool[hero.Rarity], index)
+		if hero.Rarity < RarityLegendary {
+			c.nexusPool[hero.OriginalRarity] = append(c.nexusPool[hero.OriginalRarity], index)
+		}
+	}
+	for _, index := range c.rarityPool[RarityLegendary] {
+		if stars := c.Heroes[index].Stars; stars < 1 || stars > LegendaryStarMax {
+			return nil, fmt.Errorf("hero %s is Legendary with %d stars, want 1 to %d", c.Heroes[index].ID, stars,
+				LegendaryStarMax)
 		}
 	}
 	for _, rune := range runes.Runes {
@@ -483,6 +562,9 @@ func Load(read func(name string) ([]byte, error)) (*Catalog, error) {
 		return nil, err
 	}
 	if err := c.loadRules(read); err != nil {
+		return nil, err
+	}
+	if err := c.loadChallengeDrops(read); err != nil {
 		return nil, err
 	}
 	if err := c.loadExpeditions(read); err != nil {
@@ -592,7 +674,7 @@ func (c *Catalog) parseHeroContents(pack *Pack, raw rawPack) error {
 	pack.FixedHeroes = raw.FixedHeroes
 	pack.PoolTag = raw.PoolTag
 	pack.UniqueHeroes = raw.UniqueHeroes
-	pack.LegendaryPity = raw.LegendaryPity
+	pack.LegendaryPityPacks = raw.LegendaryPityPacks
 	pack.RuneChancePct = raw.RuneChancePct
 	pack.RuneCount = raw.RuneCount
 	pack.RuneMinRarity = raw.RuneMinRarity
@@ -608,15 +690,56 @@ func (c *Catalog) parseHeroContents(pack *Pack, raw rawPack) error {
 		pack.Weights[rarity] = raw.Weights[name]
 		total += raw.Weights[name]
 	}
-	guaranteed := len(pack.FixedHeroes) + pack.GuaranteedLegendary + pack.GuaranteedEpic + pack.GuaranteedRare
+	guaranteed := pack.GuaranteedSlots()
 	if pack.HeroCount <= 0 || pack.HeroCount > maxHeroesPerPack || guaranteed > pack.HeroCount ||
-		pack.OpenedCounter < 0 || pack.OpenedCounter >= StoreCounterCount || total != heroWeightTotal {
+		pack.OpenedCounter < 0 || pack.OpenedCounter >= StoreCounterCount || total != HeroWeightTotal ||
+		pack.LegendaryPityPacks < 0 {
 		return fmt.Errorf("invalid hero pack contents")
+	}
+	if pack.LegendaryPityPacks > 0 && (guaranteed == pack.HeroCount || pack.Weights[RarityLegendary] == 0) {
+		return fmt.Errorf("a Legendary pity needs a rolled slot that can be Legendary")
 	}
 	for _, id := range pack.FixedHeroes {
 		if _, ok := c.heroIndex[id]; !ok {
 			return fmt.Errorf("fixed hero %s is not in the hero pool", id)
 		}
+	}
+	return c.parseLegendaryStars(pack, raw)
+}
+
+func (c *Catalog) parseLegendaryStars(pack *Pack, raw rawPack) error {
+	pack.LegendaryNoDupeAcrossStars = raw.LegendaryNoDupeAcrossStars
+	total := 0
+	for name, weight := range raw.LegendaryStarWeights {
+		stars, err := strconv.Atoi(name)
+		if err != nil || stars < 1 || stars > LegendaryStarMax || weight < 0 {
+			return fmt.Errorf("invalid star weight %q: %d", name, weight)
+		}
+		if weight > 0 && c.LegendaryStarCount(stars) == 0 {
+			return fmt.Errorf("weights %d-star Legendaries but the pool has none", stars)
+		}
+		pack.LegendaryStarWeights[stars] = weight
+		total += weight
+	}
+	if pack.RollsOpenLegendary() && total != HeroWeightTotal {
+		return fmt.Errorf("star weights total %d, want %d", total, HeroWeightTotal)
+	}
+	if !pack.RollsOpenLegendary() && total != 0 {
+		return fmt.Errorf("star weights on a pack that rolls no open Legendary")
+	}
+	return parseStarGuarantees(pack, raw)
+}
+
+func parseStarGuarantees(pack *Pack, raw rawPack) error {
+	for name, every := range raw.LegendaryStarGuarantees {
+		lowest, err := strconv.Atoi(name)
+		if err != nil || lowest < StarGuaranteeLowest || lowest > LegendaryStarMax || every < 0 {
+			return fmt.Errorf("invalid star guarantee %q: %d", name, every)
+		}
+		if every > 0 && (pack.LegendaryPityPacks <= 0 || pack.StarWeightFrom(lowest) <= 0) {
+			return fmt.Errorf("a %d-star guarantee needs a Legendary pity slot and a star weight to roll", lowest)
+		}
+		pack.StarGuaranteePacks[lowest] = every
 	}
 	return nil
 }

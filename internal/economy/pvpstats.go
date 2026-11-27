@@ -34,7 +34,9 @@ type pvpBattle struct {
 	Defense          bool   `json:"defense"`
 	Won              bool   `json:"won"`
 	Revenged         bool   `json:"revenged"`
+	Event            bool   `json:"event,omitempty"`
 	Opponent         string `json:"opponent,omitempty"`
+	OpponentID       string `json:"opponent_id,omitempty"`
 }
 
 type pvpStats struct {
@@ -52,6 +54,7 @@ type pvpStats struct {
 	NextsDay         int64                         `json:"nexts_day"`
 	HeldSince        [len(pvpHoldThresholds)]int64 `json:"held_since"`
 	History          []pvpBattle                   `json:"history"`
+	Attacked         map[string]int64              `json:"attacked"`
 }
 
 var pvpClientFieldDefaults = map[string]func() any{
@@ -64,7 +67,7 @@ var pvpClientFieldDefaults = map[string]func() any{
 }
 
 func readPvpStats(doc document) pvpStats {
-	stats := pvpStats{History: []pvpBattle{}}
+	stats := pvpStats{History: []pvpBattle{}, Attacked: map[string]int64{}}
 	section, ok := doc.optionalSection("pvp")
 	if !ok {
 		return stats
@@ -75,6 +78,9 @@ func readPvpStats(doc document) pvpStats {
 	}
 	if stats.History == nil {
 		stats.History = []pvpBattle{}
+	}
+	if stats.Attacked == nil {
+		stats.Attacked = map[string]int64{}
 	}
 	return stats
 }
@@ -162,6 +168,7 @@ type pvpOpponent struct {
 	trophies int
 	seed     uint32
 	name     string
+	player   string
 }
 
 func nonZeroSeed(seed uint32) uint32 {
@@ -250,54 +257,60 @@ func (p *player) recordAttack(stats *pvpStats, opponent pvpOpponent, won, event 
 	stats.push(pvpBattle{
 		At: now, Bot: opponent.bot, Squad: opponent.squad, Level: opponent.level,
 		OpponentTrophies: opponent.trophies, TrophyDelta: delta, Gold: pvpGold(rules, opponent.level, won),
-		XP: pvpXP(rules, opponent.level, won), Banners: banners, Seed: opponent.seed, Won: won,
-		Opponent: opponent.name,
+		XP: pvpXP(rules, opponent.level, won), Banners: banners, Seed: opponent.seed, Won: won, Event: event,
+		Opponent: opponent.name, OpponentID: opponent.player,
 	})
 	return delta
 }
 
-func (p *player) simulateDefense(stats *pvpStats) {
+func (p *player) simulateDefense(stats *pvpStats) error {
 	if stats.Wins+stats.Losses == 0 {
-		return
+		return nil
 	}
 	rules := &p.catalog.Pvp
 	defense := rules.Defense
 	now := p.now.Unix()
 	if stats.DefenseCheckedAt <= 0 || stats.DefenseCheckedAt > now {
 		stats.DefenseCheckedAt = now
-		return
+		return nil
 	}
 	due := (now - stats.DefenseCheckedAt) / defense.AttackIntervalSeconds
 	if due <= 0 {
-		return
+		return nil
 	}
 	attacks := min(due, defense.MaxAttacksPerLogin)
 	for i := range attacks {
 		at := now - (attacks-1-i)*defense.AttackIntervalSeconds
 		seed := pvpMix(uint32(at), pvpDefenseSalt+uint32(i))
 		opponent := p.generatedOpponent(stats.Trophies, pvpDay(at), seed)
-		won := pvpRoll(seed, pvpDefenseSalt, percent) < defense.WinPct
-		stake := trophyLoss(rules, stats.Trophies, opponent.trophies) * defense.LossSharePct / percent
-		if !won {
-			stake = -stake
+		won, err := p.firstSquadHolds(opponent, at)
+		if err != nil {
+			return err
 		}
-		delta := stats.applyTrophies(stake, at)
-		if won {
-			stats.DefenseWins++
-		} else {
-			stats.DefenseLosses++
-		}
+		delta := stats.applyTrophies(botDefenseTrophies(rules, opponent.trophies, stats.Trophies, !won), at)
+		stats.countDefense(won)
 		stats.push(pvpBattle{
 			At: at, Bot: opponent.bot, Squad: opponent.squad, Level: opponent.level,
 			OpponentTrophies: opponent.trophies, TrophyDelta: delta, Seed: opponent.seed, Defense: true, Won: won,
 		})
 	}
 	stats.DefenseCheckedAt += due * defense.AttackIntervalSeconds
+	return nil
+}
+
+func (s *pvpStats) countDefense(won bool) {
+	if won {
+		s.DefenseWins++
+	} else {
+		s.DefenseLosses++
+	}
 }
 
 func (p *player) DefendPvp() (BattleResult, error) {
 	stats := readPvpStats(p.doc)
-	p.simulateDefense(&stats)
+	if err := p.simulateDefense(&stats); err != nil {
+		return BattleResult{}, err
+	}
 	return BattleResult{}, stats.write(p.doc)
 }
 

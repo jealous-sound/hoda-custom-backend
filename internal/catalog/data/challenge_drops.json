@@ -1,0 +1,697 @@
+{
+ "version": 1,
+ "roll_total": 100000,
+ "source": "Community \"Challenge Node Drop Rates\" spreadsheet (2013-2014), one roll per challenge-node win",
+ "maps": [
+  {
+   "map": "PVE_MAP_02",
+   "source": "Brecilian (2), 2333 recorded runs",
+   "drops": [
+    {
+     "kind": "rune",
+     "id": "rune-wounded-targeting-1",
+     "weight": 9130
+    },
+    {
+     "kind": "rune",
+     "id": "rune-health-1",
+     "weight": 7673
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_WEREWOLF",
+     "weight": 7330
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_LADYOFTHEFOREST",
+     "weight": 86
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_WOLF",
+     "weight": 8744
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_BEAR",
+     "weight": 9601
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_SYLVAN",
+     "weight": 6601
+    },
+    {
+     "kind": "rune",
+     "id": "rune-health-2",
+     "weight": 5058
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_03",
+   "source": "Deep Roads (3), 298 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_HURLOCKBOLTER",
+     "weight": 16443
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_HURLOCKGRUNT",
+     "weight": 10738
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_HURLOCKEMISSARY",
+     "weight": 7383
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_REVENANT",
+     "weight": 336
+    },
+    {
+     "kind": "rune",
+     "id": "rune-stun-1",
+     "weight": 13758
+    },
+    {
+     "kind": "rune",
+     "id": "rune-stun-2",
+     "weight": 10067
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_04",
+   "source": "Dust Town (4), 119 recorded runs",
+   "drops": [
+    {
+     "kind": "rune",
+     "id": "rune-stun-1",
+     "weight": 6723
+    },
+    {
+     "kind": "rune",
+     "id": "rune-quick-targeting-1",
+     "weight": 5042
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_CARTATHUG",
+     "weight": 12605
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_CARTAASSASSIN",
+     "weight": 10084
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_COTERIETHIEF",
+     "weight": 10924
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_GREYWARDENROGUE",
+     "weight": 336
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_05",
+   "source": "Ferelden (5), 5067 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_TEMPLARCARVER",
+     "weight": 5921
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_CIRCLESENIORENCHANTER",
+     "weight": 6079
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_BLACKSTONEIRREGULAR",
+     "weight": 6197
+    },
+    {
+     "kind": "rune",
+     "id": "rune-health-1",
+     "weight": 6335
+    },
+    {
+     "kind": "rune",
+     "id": "rune-power-1",
+     "weight": 5684
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_MABARI",
+     "weight": 5960
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_GREYWARDENCARVER",
+     "weight": 257
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_SERCAUTHRIEN",
+     "weight": 20
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_06",
+   "source": "Tevinter (6), 1348 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_TEVINTERBATTLEMAGE",
+     "weight": 7418
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_TEVINTERARCANEWARRIOR",
+     "weight": 5415
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_TEVINTERWARRIOR",
+     "weight": 4674
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_TEVINTERSLAVER",
+     "weight": 5490
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_FENRIS",
+     "weight": 297
+    },
+    {
+     "kind": "rune",
+     "id": "rune-power-2",
+     "weight": 5786
+    },
+    {
+     "kind": "rune",
+     "id": "rune-damage-shielding-2",
+     "weight": 5935
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_07",
+   "source": "Circle (7), 910 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_CIRCLEMAGEBETHANY",
+     "weight": 5055
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ABOMINATION",
+     "weight": 5385
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_CIRCLESENIORENCHANTER",
+     "weight": 5165
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ANDERS",
+     "weight": 330
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_DESIREDEMON",
+     "weight": 5604
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ELVENMAGE",
+     "weight": 5275
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ELFBANDIT",
+     "weight": 4725
+    },
+    {
+     "kind": "rune",
+     "id": "rune-knowledge-2",
+     "weight": 6044
+    },
+    {
+     "kind": "rune",
+     "id": "rune-powerdrain-3",
+     "weight": 3956
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_08",
+   "source": "Dalish (8), 30491 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_DALISHWARRIOR",
+     "weight": 7842
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_CHARREDSYLVAN",
+     "weight": 7586
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_DALISHARCANEWARRIOR",
+     "weight": 8091
+    },
+    {
+     "kind": "rune",
+     "id": "rune-health-3",
+     "weight": 7904
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ELFBARD",
+     "weight": 7878
+    },
+    {
+     "kind": "rune",
+     "id": "rune-wounded-targeting-3",
+     "weight": 7904
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ELFBANDIT",
+     "weight": 9962
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_MERRILL",
+     "weight": 49
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_DALISHMAGE",
+     "weight": 7481
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_FIRSTENCHANTERORSINO",
+     "weight": 403
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_09",
+   "source": "Qunari (9), 2871 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_NUG",
+     "weight": 10240
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_KARASHOK",
+     "weight": 10728
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_TAL-VASHOTHBERSERKER",
+     "weight": 9962
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_STEN",
+     "weight": 11285
+    },
+    {
+     "kind": "rune",
+     "id": "rune-power-3",
+     "weight": 9683
+    },
+    {
+     "kind": "rune",
+     "id": "rune-health-3",
+     "weight": 10484
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_THEARISHOK",
+     "weight": 697
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ISABELA",
+     "weight": 35
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_10",
+   "source": "Undead (10), 1605 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_QUEENOFTHEBLACKMARSH",
+     "weight": 125
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_PRIDEDEMON",
+     "weight": 374
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_SKELETONMAGE",
+     "weight": 9283
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_DEVOURINGCORPSE",
+     "weight": 11589
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_DESIREDEMON",
+     "weight": 13146
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ABOMINATION",
+     "weight": 12461
+    },
+    {
+     "kind": "rune",
+     "id": "rune-knowledge-3",
+     "weight": 10218
+    },
+    {
+     "kind": "rune",
+     "id": "rune-power-3",
+     "weight": 10903
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_11",
+   "source": "Fade (11), 1107 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_DEVOURINGCORPSE",
+     "weight": 13008
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_RAGEDEMON",
+     "weight": 13369
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_REVENANT",
+     "weight": 12105
+    },
+    {
+     "kind": "rune",
+     "id": "rune-greed-3",
+     "weight": 12556
+    },
+    {
+     "kind": "rune",
+     "id": "rune-stun-3",
+     "weight": 11563
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ASHWRAITH",
+     "weight": 271
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ARCANEHORROR",
+     "weight": 181
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_SHAHWYRD",
+     "weight": 271
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_12",
+   "source": "Ancient Thaig (12), latest block, 5983 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_SHRIEK",
+     "weight": 14758
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_GENLOCKALPHA",
+     "weight": 14123
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ARMOREDOGRE",
+     "weight": 14224
+    },
+    {
+     "kind": "rune",
+     "id": "rune-quick-targeting-3",
+     "weight": 13655
+    },
+    {
+     "kind": "rune",
+     "id": "rune-initiative-3",
+     "weight": 435
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_OGRECOMMANDER",
+     "weight": 301
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_CORYPHEUS",
+     "weight": 384
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ANCIENTDARKSPAWN",
+     "weight": 134
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_13",
+   "source": "Nevarra (13), 1736 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_TEVINTERWARRIOR",
+     "weight": 18260
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_TEVINTERSLAVER",
+     "weight": 9389
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_HARLEQUIN",
+     "weight": 8353
+    },
+    {
+     "kind": "rune",
+     "id": "rune-damage-shielding-3",
+     "weight": 15611
+    },
+    {
+     "kind": "rune",
+     "id": "rune-greed-3",
+     "weight": 14631
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_CASSANDRAPENTAGHAST",
+     "weight": 288
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_LELIANA",
+     "weight": 230
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_BARKSPAWN",
+     "weight": 173
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_14",
+   "source": "Chateau (14), 1198 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_APOSTATEWANDERER",
+     "weight": 15860
+    },
+    {
+     "kind": "rune",
+     "id": "rune-stun-3",
+     "weight": 14524
+    },
+    {
+     "kind": "rune",
+     "id": "rune-power-3",
+     "weight": 14858
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_VELGHAST",
+     "weight": 11436
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_WYVERN",
+     "weight": 9432
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_CHEVALIER",
+     "weight": 167
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_STONEGOLEM",
+     "weight": 250
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_LEOPOLD",
+     "weight": 83
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_15",
+   "source": "Eluvian (15), 2004 recorded runs",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_WALKINGCORPSE",
+     "weight": 16916
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_RAGEDEMON",
+     "weight": 11976
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ABOMINATION",
+     "weight": 14022
+    },
+    {
+     "kind": "rune",
+     "id": "rune-health-3",
+     "weight": 14222
+    },
+    {
+     "kind": "rune",
+     "id": "rune-brave-targeting-3",
+     "weight": 19212
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_ARCANEHORROR",
+     "weight": 399
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_VARTERRAL",
+     "weight": 499
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_MERRILL",
+     "weight": 100
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_KEEPERMARETHARI",
+     "weight": 50
+    }
+   ]
+  },
+  {
+   "map": "PVE_MAP_16",
+   "source": "No recorded runs; Eluvian (15) rates with Blackmarsh heroes and runes",
+   "drops": [
+    {
+     "kind": "unit",
+     "id": "UNIT_DEVOURINGSKELETON",
+     "weight": 16916
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_HUNGERDEMON",
+     "weight": 11976
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_PRIDEABOMINATION",
+     "weight": 14022
+    },
+    {
+     "kind": "rune",
+     "id": "rune-damage-shielding-3",
+     "weight": 14222
+    },
+    {
+     "kind": "rune",
+     "id": "rune-stun-3",
+     "weight": 19212
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_THEBARONESS",
+     "weight": 399
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_PRIDEDEMON",
+     "weight": 499
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_THEFIRST",
+     "weight": 100
+    },
+    {
+     "kind": "unit",
+     "id": "UNIT_RISENOGRE",
+     "weight": 50
+    }
+   ]
+  }
+ ]
+}

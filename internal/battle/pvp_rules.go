@@ -130,13 +130,22 @@ func (f heroFilter) passes(c *character) bool {
 	return slices.ContainsFunc(f.groups, c.hasGroup)
 }
 
-func (r *squadRules) rarityAllowed(c *character) bool {
-	return c.rarity <= r.maxRarity && (r.rarities == 0 || r.rarities&rarityBit(c.rarity) != 0)
+func (r *squadRules) rarityAllowed(h fieldedHero) bool {
+	shown := h.shownRarity()
+	return shown <= r.maxRarity && (r.rarities == 0 || r.rarities&rarityBit(shown) != 0)
 }
 
 type fieldedHero struct {
-	slot int
-	hero *character
+	slot     int
+	hero     *character
+	ascended bool
+}
+
+func (h fieldedHero) shownRarity() rarity {
+	if h.ascended {
+		return rarityMythic
+	}
+	return h.hero.originalRarity
 }
 
 func (r *squadRules) sideMisfit(heroes []fieldedHero, side int) int {
@@ -193,7 +202,7 @@ func (r *squadRules) judge(heroes []fieldedHero, side int) (int, *SquadViolation
 		return 0, violation(ViolationEmpty, heroes, -1, 0)
 	}
 	for i, fielded := range heroes {
-		if !r.rarityAllowed(fielded.hero) {
+		if !r.rarityAllowed(fielded) {
 			return 0, violation(ViolationRarity, heroes, i, 0)
 		}
 		if !r.members.passes(fielded.hero) {
@@ -218,7 +227,7 @@ func (d *Data) fieldedHeroes(units []Unit) ([]fieldedHero, error) {
 		if !ok {
 			return nil, fmt.Errorf("unit %s is not in the catalog", unit.ID)
 		}
-		heroes = append(heroes, fieldedHero{slot: unit.Slot, hero: c})
+		heroes = append(heroes, fieldedHero{slot: unit.Slot, hero: c, ascended: unit.Ascended})
 	}
 	slices.SortStableFunc(heroes, func(a, b fieldedHero) int { return cmp.Compare(a.slot, b.slot) })
 	return heroes, nil

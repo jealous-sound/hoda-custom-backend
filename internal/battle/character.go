@@ -248,29 +248,47 @@ type ability struct {
 }
 
 type tierStats struct {
-	basePower      int
-	baseHealth     int
-	maxLevel       int
-	powerPerLevel  int
-	healthPerLevel int
+	basePower       int
+	baseHealth      int
+	maxPower        int
+	maxHealth       int
+	maxLevel        int
+	catalogMaxLevel int
+}
+
+func statAtLevel(base, maxStat, catalogMaxLevel, level int) int {
+	growthLevels := catalogMaxLevel - 1
+	if growthLevels < 1 {
+		return base
+	}
+	return base + ((level-1)*(maxStat-base)+growthLevels/2)/growthLevels
+}
+
+func (st *tierStats) powerAt(level int) int {
+	return statAtLevel(st.basePower, st.maxPower, st.catalogMaxLevel, level)
+}
+
+func (st *tierStats) healthAt(level int) int {
+	return statAtLevel(st.baseHealth, st.maxHealth, st.catalogMaxLevel, level)
 }
 
 type character struct {
-	id          string
-	basedOn     string
-	rarity      rarity
-	stars       int
-	giant       bool
-	speed       speed
-	faction     faction
-	groups      []string
-	specialties []specialty
-	ability     ability
-	gearSlots   int
-	prestige    bool
-	maxTier     Tier
-	hasTier     [tierCount]bool
-	stats       [tierCount]tierStats
+	id             string
+	basedOn        string
+	rarity         rarity
+	originalRarity rarity
+	stars          int
+	giant          bool
+	speed          speed
+	faction        faction
+	groups         []string
+	specialties    []specialty
+	ability        ability
+	gearSlots      int
+	prestige       bool
+	maxTier        Tier
+	hasTier        [tierCount]bool
+	stats          [tierCount]tierStats
 }
 
 func (c *character) dataID() string {
@@ -284,6 +302,7 @@ type rawCharacter struct {
 	ID          string   `json:"id"`
 	BasedOn     string   `json:"based_on"`
 	Rarity      string   `json:"rarity"`
+	Original    string   `json:"original_rarity"`
 	Stars       int      `json:"stars"`
 	Giant       bool     `json:"giant"`
 	Speed       string   `json:"speed"`
@@ -299,11 +318,11 @@ type rawCharacter struct {
 		Mechanics []string `json:"mechanics"`
 	} `json:"ability"`
 	Tiers map[string]struct {
-		BasePower      int `json:"base_power"`
-		BaseHealth     int `json:"base_health"`
-		MaxLevel       int `json:"max_level"`
-		PowerPerLevel  int `json:"power_per_level"`
-		HealthPerLevel int `json:"health_per_level"`
+		BasePower  int `json:"base_power"`
+		BaseHealth int `json:"base_health"`
+		MaxPower   int `json:"max_power"`
+		MaxHealth  int `json:"max_health"`
+		MaxLevel   int `json:"max_level"`
 	} `json:"tiers"`
 }
 
@@ -312,6 +331,10 @@ func (raw rawCharacter) parse() *character {
 		id: raw.ID, basedOn: raw.BasedOn, rarity: parseRarity(raw.Rarity), stars: raw.Stars, giant: raw.Giant,
 		speed: parseSpeed(raw.Speed), faction: parseFaction(raw.Faction), gearSlots: raw.GearSlots,
 		prestige: raw.Prestige, maxTier: ParseTier(raw.MaxTier),
+	}
+	c.originalRarity = c.rarity
+	if raw.Original != "" {
+		c.originalRarity = parseRarity(raw.Original)
 	}
 	for _, group := range raw.Groups {
 		if len(c.groups) == maxGroups {
@@ -332,8 +355,8 @@ func (raw rawCharacter) parse() *character {
 		t := ParseTier(name)
 		c.hasTier[t] = true
 		c.stats[t] = tierStats{
-			basePower: stats.BasePower, baseHealth: stats.BaseHealth, maxLevel: stats.MaxLevel,
-			powerPerLevel: stats.PowerPerLevel, healthPerLevel: stats.HealthPerLevel,
+			basePower: stats.BasePower, baseHealth: stats.BaseHealth, maxPower: stats.MaxPower,
+			maxHealth: stats.MaxHealth, maxLevel: stats.MaxLevel, catalogMaxLevel: stats.MaxLevel,
 		}
 	}
 	return c

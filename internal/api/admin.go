@@ -122,8 +122,10 @@ type playerTotals struct {
 	InGuild          int `json:"in_guild"`
 	Active24h        int `json:"active_24h"`
 	Active7d         int `json:"active_7d"`
+	Active30d        int `json:"active_30d"`
 	Created24h       int `json:"created_24h"`
 	Created7d        int `json:"created_7d"`
+	Created30d       int `json:"created_30d"`
 }
 
 type gemTotals struct {
@@ -202,7 +204,8 @@ func onlineOf(players []adminPlayer) onlineStatus {
 
 func totalsOf(players []adminPlayer, now time.Time) playerTotals {
 	var totals playerTotals
-	dayAgo, weekAgo := now.Add(-24*time.Hour).Unix(), now.Add(-7*24*time.Hour).Unix()
+	dayAgo, weekAgo, monthAgo := now.Add(-24*time.Hour).Unix(), now.Add(-7*24*time.Hour).Unix(),
+		now.Add(-30*24*time.Hour).Unix()
 	for _, player := range players {
 		if player.Registered {
 			totals.Accounts++
@@ -225,11 +228,17 @@ func totalsOf(players []adminPlayer, now time.Time) playerTotals {
 		if player.LastActiveAt > weekAgo {
 			totals.Active7d++
 		}
+		if player.LastActiveAt > monthAgo {
+			totals.Active30d++
+		}
 		if player.Registered && player.CreatedAt > dayAgo {
 			totals.Created24h++
 		}
 		if player.Registered && player.CreatedAt > weekAgo {
 			totals.Created7d++
+		}
+		if player.Registered && player.CreatedAt > monthAgo {
+			totals.Created30d++
 		}
 	}
 	return totals
@@ -287,16 +296,46 @@ func (s *Server) adminOverview(w http.ResponseWriter, _ *http.Request) {
 	writeJSON(w, http.StatusOK, reply)
 }
 
+type accountsOnDay struct {
+	Date     string `json:"date"`
+	Accounts int    `json:"accounts"`
+}
+
 type activityReply struct {
-	ServerTime    int64 `json:"server_time"`
-	BucketSeconds int64 `json:"bucket_seconds"`
+	ServerTime      int64           `json:"server_time"`
+	BucketSeconds   int64           `json:"bucket_seconds"`
+	HourSeconds     int64           `json:"hour_seconds"`
+	SampleSeconds   int64           `json:"sample_seconds"`
+	AccountsCreated []accountsOnDay `json:"accounts_created"`
 	activity.History
 }
 
+func accountsCreatedByDay(players []adminPlayer) []accountsOnDay {
+	counts := map[string]int{}
+	for _, player := range players {
+		if player.Registered && player.CreatedAt > 0 {
+			counts[time.Unix(player.CreatedAt, 0).UTC().Format(time.DateOnly)]++
+		}
+	}
+	days := make([]accountsOnDay, 0, len(counts))
+	for date, accounts := range counts {
+		days = append(days, accountsOnDay{Date: date, Accounts: accounts})
+	}
+	slices.SortFunc(days, func(a, b accountsOnDay) int { return strings.Compare(a.Date, b.Date) })
+	return days
+}
+
 func (s *Server) adminActivity(w http.ResponseWriter, _ *http.Request) {
+	players, err := s.adminDirectory()
+	if err != nil {
+		s.log.Error("admin activity", "error", err)
+		writeError(w, http.StatusInternalServerError, "could not read players")
+		return
+	}
 	writeJSON(w, http.StatusOK, activityReply{
 		ServerTime: s.now().Unix(), BucketSeconds: int64(activity.BucketLength / time.Second),
-		History: s.activity.History(),
+		HourSeconds: int64(activity.HourLength / time.Second), SampleSeconds: int64(activity.SampleEvery / time.Second),
+		AccountsCreated: accountsCreatedByDay(players), History: s.activity.History(),
 	})
 }
 

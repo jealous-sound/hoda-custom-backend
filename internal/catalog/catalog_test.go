@@ -2,8 +2,10 @@ package catalog
 
 import (
 	"bytes"
+	"encoding/json"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 	"time"
 )
@@ -182,5 +184,122 @@ func TestARetieredHeroMeetsRequirementsAtTheRarityItIsShownAt(t *testing.T) {
 		if hero.OriginalRarity < hero.Rarity {
 			t.Fatalf("%s is shown below the rarity it plays at", hero.ID)
 		}
+	}
+}
+
+func legendaryRawPack(starWeights map[string]int) rawPack {
+	return rawPack{
+		ID: "stars", HeroCount: 1, MinimumRarity: "Legendary", LegendaryStarWeights: starWeights,
+		Weights: map[string]int{"Legendary": HeroWeightTotal},
+	}
+}
+
+func TestOpenLegendaryPacksNeedWholeStarWeights(t *testing.T) {
+	c := mustDefault(t)
+	valid := map[string]int{"1": 2000, "2": 7000, "3": 1000}
+	if err := c.parseHeroContents(&Pack{}, legendaryRawPack(valid)); err != nil {
+		t.Fatalf("whole star weights refused: %v", err)
+	}
+	for name, weights := range map[string]map[string]int{
+		"missing":      nil,
+		"short":        {"1": 2000, "2": 7000},
+		"unknown star": {"1": 2000, "2": 7000, "4": 1000},
+		"negative":     {"1": 11000, "2": -1000},
+	} {
+		if err := c.parseHeroContents(&Pack{}, legendaryRawPack(weights)); err == nil {
+			t.Errorf("%s star weights were accepted", name)
+		}
+	}
+	tagged := legendaryRawPack(valid)
+	tagged.PoolTag = "WISP"
+	if err := c.parseHeroContents(&Pack{}, tagged); err == nil {
+		t.Error("a tagged pack took star weights it never rolls")
+	}
+}
+
+func TestStarWeightsNeedALegendaryOfThatStar(t *testing.T) {
+	c := mustDefault(t)
+	twoStarsOnly := *c
+	twoStarsOnly.rarityPool[RarityLegendary] = nil
+	for _, index := range c.rarityPool[RarityLegendary] {
+		if c.Heroes[index].Stars == 2 {
+			twoStarsOnly.rarityPool[RarityLegendary] = append(twoStarsOnly.rarityPool[RarityLegendary], index)
+		}
+	}
+	if err := twoStarsOnly.parseHeroContents(&Pack{}, legendaryRawPack(map[string]int{"2": 10000})); err != nil {
+		t.Fatalf("a two-star-only pack was refused: %v", err)
+	}
+	if err := twoStarsOnly.parseHeroContents(&Pack{}, legendaryRawPack(map[string]int{"1": 1, "2": 9999})); err == nil {
+		t.Error("a weight on a star tier with no heroes was accepted")
+	}
+}
+
+func pityRawPack(pity int, starWeights, guarantees map[string]int) rawPack {
+	raw := legendaryRawPack(starWeights)
+	raw.MinimumRarity = "Rare"
+	raw.Weights = map[string]int{"Rare": HeroWeightTotal - 100, "Legendary": 100}
+	raw.LegendaryPityPacks = pity
+	raw.LegendaryStarGuarantees = guarantees
+	return raw
+}
+
+func TestStarGuaranteesNeedAPitySlotAndATierToRoll(t *testing.T) {
+	c := mustDefault(t)
+	standard := map[string]int{"1": 2000, "2": 7000, "3": 1000}
+	pack := &Pack{}
+	if err := c.parseHeroContents(pack, pityRawPack(100, standard, map[string]int{"2": 125, "3": 1000})); err != nil {
+		t.Fatalf("valid star guarantees refused: %v", err)
+	}
+	if pack.StarGuaranteePacks != [LegendaryStarMax + 1]int{0, 0, 125, 1000} || !pack.HasStarGuarantees() {
+		t.Errorf("parsed star guarantees %v", pack.StarGuaranteePacks)
+	}
+	for name, raw := range map[string]rawPack{
+		"one-star":            pityRawPack(100, standard, map[string]int{"1": 50}),
+		"four-star":           pityRawPack(100, standard, map[string]int{"4": 50}),
+		"unnamed":             pityRawPack(100, standard, map[string]int{"two": 50}),
+		"negative":            pityRawPack(100, standard, map[string]int{"2": -1}),
+		"without a pity":      pityRawPack(0, standard, map[string]int{"2": 125}),
+		"on a missing weight": pityRawPack(100, map[string]int{"1": 2500, "2": 7500, "3": 0}, map[string]int{"3": 1000}),
+	} {
+		if err := c.parseHeroContents(&Pack{}, raw); err == nil {
+			t.Errorf("a star guarantee %s was accepted", name)
+		}
+	}
+}
+
+func TestNexusRollsHeroesAtTheRarityTheyAreShownAtButNeverALegendary(t *testing.T) {
+	c := mustDefault(t)
+	const drawnLegendaryPlayedAsRare = "UNIT_SISTERNIGHTINGALE"
+	drawnLegendaryRewarded := false
+	for shown := RarityCommon; shown <= RarityMythic; shown++ {
+		for _, index := range c.NexusRewardPool(shown) {
+			hero := c.Heroes[index]
+			if hero.OriginalRarity != shown || hero.Rarity >= RarityLegendary || !heroInDefaultPool(hero) {
+				t.Fatalf("%s plays at %d and is shown at %d, yet the Nexus hands it out at %d", hero.ID, hero.Rarity,
+					hero.OriginalRarity, shown)
+			}
+			drawnLegendaryRewarded = drawnLegendaryRewarded ||
+				(hero.ID == drawnLegendaryPlayedAsRare && shown == RarityLegendary)
+		}
+	}
+	if !drawnLegendaryRewarded {
+		t.Errorf("a Nexus Legendary roll never hands out %s", drawnLegendaryPlayedAsRare)
+	}
+
+	decode := func(rarities string) []rawNexusEvent {
+		var events []rawNexusEvent
+		raw := `[{"id":"Test","difficulties":[{"id":"Easy_Test","nodes":[{"reward_rarity":` + rarities + `}]}]}]`
+		if err := json.Unmarshal([]byte(raw), &events); err != nil {
+			t.Fatal(err)
+		}
+		return events
+	}
+	fresh := *c
+	fresh.Nexus = nil
+	if err := fresh.parseNexus(decode("[1, 5]")); err != nil {
+		t.Errorf("a Nexus node rolling Common and Legendary: %v", err)
+	}
+	if err := fresh.parseNexus(decode("[1, 6]")); err == nil || !strings.Contains(err.Error(), "rarity 6") {
+		t.Errorf("a Nexus node rolling Mythic loaded with %v", err)
 	}
 }

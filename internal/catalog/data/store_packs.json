@@ -128,7 +128,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -143,6 +143,11 @@
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
       "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      },
       "tutorial_only": true
     },
     {
@@ -174,7 +179,7 @@
       "minimum_rarity": "Common",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 5500,
         "Uncommon": 3800,
@@ -219,7 +224,7 @@
       "minimum_rarity": "Uncommon",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 6000,
@@ -269,7 +274,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -283,7 +288,16 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      },
+      "legendary_star_guarantees": {
+        "2": 125,
+        "3": 1000
+      }
     },
     {
       "id": "grand_champion",
@@ -317,7 +331,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 3,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 10,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -331,7 +345,16 @@
       "rune_count": 10,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 6500,
+        "3": 1500
+      },
+      "legendary_star_guarantees": {
+        "2": 13,
+        "3": 64
+      }
     },
     {
       "id": "mercenary",
@@ -361,7 +384,7 @@
       "minimum_rarity": "Uncommon",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 6000,
@@ -406,7 +429,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -420,7 +443,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "iron",
@@ -451,7 +479,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -465,7 +493,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2500,
+        "2": 7500,
+        "3": 0
+      }
     },
     {
       "id": "bloodstone",
@@ -497,7 +530,7 @@
       "minimum_rarity": "Legendary",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -511,7 +544,13 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 6500,
+        "3": 1500
+      },
+      "legendary_no_dupe_across_stars": true
     },
     {
       "id": "lyrium_vein",
@@ -542,7 +581,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -556,7 +595,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "wisp",
@@ -586,7 +630,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 3,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -631,7 +675,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 1,
       "guaranteed_epic": 2,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -677,7 +721,7 @@
       "minimum_rarity": "Uncommon",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 10000,
@@ -726,7 +770,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -779,7 +823,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -793,7 +837,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "booster_redblue",
@@ -830,7 +879,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -844,7 +893,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "booster_giant",
@@ -881,7 +935,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -895,7 +949,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "booster_prestige",
@@ -932,7 +991,7 @@
       "minimum_rarity": "Epic",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 34,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -946,7 +1005,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 6500,
+        "3": 1500
+      }
     },
     {
       "id": "goat",
@@ -976,7 +1040,7 @@
       "minimum_rarity": "Common",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 5500,
         "Uncommon": 3800,
@@ -1025,7 +1089,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1039,7 +1103,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "dragon",
@@ -1073,7 +1142,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1087,7 +1156,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "romance",
@@ -1121,7 +1195,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1135,7 +1209,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "wintersend",
@@ -1169,7 +1248,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1183,7 +1262,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "harvest",
@@ -1217,7 +1301,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1231,7 +1315,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "anniversary",
@@ -1265,7 +1354,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1279,7 +1368,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "library",
@@ -1313,7 +1407,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1327,7 +1421,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "mac_tir",
@@ -1360,7 +1459,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1374,7 +1473,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "new_release",
@@ -1407,7 +1511,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 0,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1421,7 +1525,12 @@
       "rune_count": 1,
       "gear_chance_pct": 0,
       "gear_min_rarity": 1,
-      "gear_max_rarity": 3
+      "gear_max_rarity": 3,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "legendary",
@@ -1451,7 +1560,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 1,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1465,7 +1574,12 @@
       "rune_count": 5,
       "gear_chance_pct": 40,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 5
+      "gear_max_rarity": 5,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 6500,
+        "3": 1500
+      }
     },
     {
       "id": "ultimate",
@@ -1495,7 +1609,7 @@
       "minimum_rarity": "Epic",
       "guaranteed_legendary": 2,
       "guaranteed_epic": 2,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 0,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1509,7 +1623,12 @@
       "rune_count": 10,
       "gear_chance_pct": 40,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 5
+      "gear_max_rarity": 5,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 6500,
+        "3": 1500
+      }
     },
     {
       "id": "flash",
@@ -1542,7 +1661,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1556,7 +1675,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_black_friday",
@@ -1589,7 +1713,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1603,7 +1727,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_dragon_hunt",
@@ -1636,7 +1765,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1650,7 +1779,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_exclusively",
@@ -1683,7 +1817,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1697,7 +1831,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_fine_dwarven_crafts",
@@ -1730,7 +1869,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1744,7 +1883,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_fireworks",
@@ -1777,7 +1921,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1791,7 +1935,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_good_company",
@@ -1824,7 +1973,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1838,7 +1987,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_star_struck",
@@ -1871,7 +2025,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1885,7 +2039,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_stocking_stuffers",
@@ -1918,7 +2077,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1932,7 +2091,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_university_supplies",
@@ -1965,7 +2129,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -1979,7 +2143,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "flash_valentines_gifts",
@@ -2012,7 +2181,7 @@
       "minimum_rarity": "Rare",
       "guaranteed_legendary": 0,
       "guaranteed_epic": 1,
-      "legendary_pity": 0,
+      "legendary_pity_packs": 100,
       "weights": {
         "Common": 0,
         "Uncommon": 0,
@@ -2026,7 +2195,12 @@
       "rune_count": 2,
       "gear_chance_pct": 25,
       "gear_min_rarity": 2,
-      "gear_max_rarity": 4
+      "gear_max_rarity": 4,
+      "legendary_star_weights": {
+        "1": 2000,
+        "2": 7000,
+        "3": 1000
+      }
     },
     {
       "id": "speed_kills",

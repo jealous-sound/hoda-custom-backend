@@ -47,9 +47,12 @@ func TestAnEnemySideWithHeroBuildsIsBuiltLikeAPlayerSide(t *testing.T) {
 	squad := builtSquad()
 	asPlayer := buildPlayerHero(t, d, squad.Units[0])
 	bare := buildEnemy(t, d, squad)
-	if bare.gear[0] != nil || bare.fortifyPower != 0 || bare.fortifyHealth != 0 || bare.critChance != 0 ||
+	if bare.fortifyPower != 0 || bare.fortifyHealth != 0 || bare.critChance != 0 ||
 		bare.statPower() >= asPlayer.statPower() || bare.statHealth() >= asPlayer.statHealth() {
 		t.Errorf("an enemy without hero builds fights as %+v", bare)
+	}
+	if bare.gear != asPlayer.gear {
+		t.Errorf("an enemy without hero builds wears %v, want its listed gear %v", bare.gear, asPlayer.gear)
 	}
 	squad.HeroBuilds = true
 	if grown := buildEnemy(t, d, squad); !reflect.DeepEqual(grown, asPlayer) {

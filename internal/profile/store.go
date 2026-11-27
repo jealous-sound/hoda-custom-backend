@@ -86,6 +86,7 @@ type PendingRival struct {
 	Trophies int    `json:"trophies,omitempty"`
 	Seed     uint32 `json:"seed,omitempty"`
 	Name     string `json:"name,omitempty"`
+	Player   string `json:"player,omitempty"`
 }
 
 type PvpEventState struct {
@@ -246,6 +247,28 @@ func (s *Store) Transact(playerID string, change func(record *Record) error) (Re
 	next.PlayerID = playerID
 	next.Revision = current.Revision + 1
 	next.UpdatedAt = s.now().UTC()
+	if err := s.write(next); err != nil {
+		return Record{}, err
+	}
+	return next, nil
+}
+
+func (s *Store) AmendKeepingRevision(playerID string, change func(record *Record) error) (Record, error) {
+	if !ValidPlayerID(playerID) {
+		return Record{}, ErrInvalidPlayerID
+	}
+	s.mutex.Lock()
+	defer s.mutex.Unlock()
+	current, err := s.read(playerID)
+	if err != nil {
+		return Record{}, err
+	}
+	next := current
+	next.Server = current.Server.Clone()
+	if err := change(&next); err != nil {
+		return current, err
+	}
+	next.PlayerID, next.Revision, next.UpdatedAt = playerID, current.Revision, current.UpdatedAt
 	if err := s.write(next); err != nil {
 		return Record{}, err
 	}

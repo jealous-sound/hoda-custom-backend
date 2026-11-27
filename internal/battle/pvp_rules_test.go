@@ -7,8 +7,15 @@ import (
 
 const eventPoolMinSquads = 64
 
+func squadRanksBelow(squad, weaker pvpSquad) bool {
+	if squad.elite != weaker.elite {
+		return weaker.elite
+	}
+	return squad.strength < weaker.strength
+}
+
 func ruleHero(id string, r rarity, f faction, giant bool, groups ...string) fieldedHero {
-	return fieldedHero{hero: &character{id: id, rarity: r, faction: f, giant: giant, groups: groups}}
+	return fieldedHero{hero: &character{id: id, rarity: r, originalRarity: r, faction: f, giant: giant, groups: groups}}
 }
 
 func squadOf(heroes ...fieldedHero) []fieldedHero {
@@ -64,6 +71,22 @@ func TestSquadRulesCapAndListRarities(t *testing.T) {
 	wantViolation(t, "a common among rares", v, ViolationRarity, 1)
 	_, v = rares.judge(squadOf(rare, otherRare, rare), anySide)
 	wantViolation(t, "the same rare twice", v, ViolationDuplicate, 2)
+}
+
+func TestSquadRulesJudgeTheRarityOnTheCard(t *testing.T) {
+	drawnLegendary := ruleHero("UNIT_A", rarityRare, factionRed, false)
+	drawnLegendary.hero.originalRarity = rarityLegendary
+	drawnRare := ruleHero("UNIT_B", rarityEpic, factionRed, false)
+	drawnRare.hero.originalRarity = rarityRare
+
+	rares := mustRules(t, rawSquadRules{Rarities: []string{"Rare"}})
+	_, v := rares.judge(squadOf(drawnLegendary), anySide)
+	wantViolation(t, "a card drawn Legendary", v, ViolationRarity, 0)
+	_, v = rares.judge(squadOf(drawnRare), anySide)
+	wantViolation(t, "a card drawn Rare", v, "", 0)
+	drawnRare.ascended = true
+	_, v = rares.judge(squadOf(drawnRare), anySide)
+	wantViolation(t, "an ascended card", v, ViolationRarity, 0)
 }
 
 func TestSquadRulesFactionsLetLargeCreaturesJoinButGroupsDoNot(t *testing.T) {
@@ -155,7 +178,7 @@ func TestRuleEventBotsDefendWithSquadsTheRuleAllows(t *testing.T) {
 				if !event.rules.fieldsAgainst(heroes, side) {
 					t.Errorf("event %d side %d fields squad %d, which its rule refuses", e, side, squad)
 				}
-				if rank > 0 && d.pvp.squads[squad].strength < d.pvp.squads[pool[rank-1]].strength {
+				if rank > 0 && squadRanksBelow(d.pvp.squads[squad], d.pvp.squads[pool[rank-1]]) {
 					t.Errorf("event %d side %d pool is not weakest first at rank %d", e, side, rank)
 				}
 			}

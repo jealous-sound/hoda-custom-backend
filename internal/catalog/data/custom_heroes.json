@@ -66,47 +66,39 @@
    "tiers": {
     "I": {
      "base_power": 267,
-     "max_power": 750,
+     "max_power": 745,
      "base_health": 1376,
-     "max_health": 3722,
-     "max_level": 70,
-     "power_per_level": 7,
-     "health_per_level": 34,
-     "max_fortify_power": 2090,
-     "max_fortify_health": 10385
+     "max_health": 3770,
+     "max_level": 80,
+     "max_fortify_power": 2080,
+     "max_fortify_health": 10520
     },
     "II": {
      "base_power": 336,
-     "max_power": 928,
+     "max_power": 913,
      "base_health": 1725,
-     "max_health": 4685,
-     "max_level": 75,
-     "power_per_level": 8,
-     "health_per_level": 40,
-     "max_fortify_power": 2590,
-     "max_fortify_health": 13070
+     "max_health": 4731,
+     "max_level": 85,
+     "max_fortify_power": 2545,
+     "max_fortify_health": 13200
     },
     "III": {
      "base_power": 386,
-     "max_power": 1018,
+     "max_power": 1036,
      "base_health": 1981,
-     "max_health": 5457,
-     "max_level": 80,
-     "power_per_level": 8,
-     "health_per_level": 44,
-     "max_fortify_power": 2840,
-     "max_fortify_health": 15225
+     "max_health": 5473,
+     "max_level": 90,
+     "max_fortify_power": 2890,
+     "max_fortify_health": 15270
     },
     "IV": {
      "base_power": 420,
-     "max_power": 1176,
+     "max_power": 1218,
      "base_health": 2257,
-     "max_health": 6289,
-     "max_level": 85,
-     "power_per_level": 9,
-     "health_per_level": 48,
-     "max_fortify_power": 3280,
-     "max_fortify_health": 17545
+     "max_health": 6260,
+     "max_level": 95,
+     "max_fortify_power": 3400,
+     "max_fortify_health": 17465
     }
    },
    "max_tier": "IV",

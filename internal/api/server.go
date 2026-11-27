@@ -52,6 +52,7 @@ type Server struct {
 	dataUsage             measuredDataUsage
 	storedPlayers         storedPlayers
 	rankedPlayers         rankedPlayers
+	webOrigins            map[string]bool
 }
 
 type Config struct {
@@ -65,6 +66,7 @@ type Config struct {
 	Activity              *activity.Tracker
 	Revision              string
 	DataDir               string
+	WebOrigins            []string
 }
 
 func NewServer(
@@ -81,7 +83,7 @@ func NewServer(
 		limiters:              newLimiters(config.Limits, now), battleSeeds: config.BattleSeeds,
 		clientUpdates: config.ClientUpdates, maintenance: config.Maintenance, adminToken: config.AdminToken,
 		activity: config.Activity, traffic: traffic.NewRecorder(now), started: now(), revision: config.Revision,
-		dataDir: config.DataDir,
+		dataDir: config.DataDir, webOrigins: originSet(config.WebOrigins),
 	}
 }
 
@@ -122,7 +124,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /v1/players/{player}/guilds/{guild}", s.authorized(s.observeGuild))
 	mux.HandleFunc("POST /v1/players/{player}/guilds/{guild}/join", s.authorized(s.joinGuild))
 	mux.HandleFunc("POST /v1/players/{player}/guilds/{guild}/cancel", s.authorized(s.cancelGuildApplication))
-	return s.logged(s.currentClientsOnly(mux))
+	return s.logged(s.crossOrigin(s.currentClientsOnly(mux)))
 }
 
 func (s *Server) logged(next http.Handler) http.Handler {
@@ -144,6 +146,8 @@ func (s *Server) logged(next http.Handler) http.Handler {
 
 func (s *Server) routeOf(r *http.Request) string {
 	switch {
+	case isPreflight(r):
+		return preflightRoute
 	case r.Pattern != "":
 		return r.Pattern
 	case s.clientTooOld(r):

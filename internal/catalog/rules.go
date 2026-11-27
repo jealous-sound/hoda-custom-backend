@@ -451,6 +451,12 @@ func (c *Catalog) parseNexus(events []rawNexusEvent) error {
 				return fmt.Errorf("nexus %s has a difficulty with %d nodes", raw.ID, len(rawDifficulty.Nodes))
 			}
 			for _, rawNode := range rawDifficulty.Nodes {
+				for _, shown := range rawNode.RewardRarity {
+					if len(c.NexusRewardPool(Rarity(shown))) == 0 {
+						return fmt.Errorf("nexus %s rolls rarity %d, which no hero below Legendary is shown at",
+							rawDifficulty.ID, shown)
+					}
+				}
 				difficulty.Nodes = append(difficulty.Nodes, NexusNode{
 					Gold: rawNode.Gold, XP: rawNode.XP, PotionReward: rawNode.PotionReward,
 					RewardRarity: rawNode.RewardRarity,

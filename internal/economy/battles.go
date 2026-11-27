@@ -58,6 +58,7 @@ type BattleResult struct {
 	Settled     *BattleResult     `json:"settled,omitempty"`
 	TrophyDelta int               `json:"trophy_delta,omitempty"`
 	Match       *profile.PvpMatch `json:"match,omitempty"`
+	Strike      *Strike           `json:"-"`
 }
 
 type eventSquadRule struct {
@@ -140,11 +141,16 @@ func (p *player) StartBattle(request BattleStartRequest) (BattleResult, error) {
 func (p *player) spendForBattle(request BattleStartRequest, start *battleStart) error {
 	switch request.Mode {
 	case BattleCampaign:
+		progress, err := p.loadCampaign()
+		if err != nil {
+			return err
+		}
 		node := p.catalog.Campaign[request.Map].Nodes[request.Node]
-		if finished, _ := tutorialFinished(p.doc); !finished && p.account.Energy < int64(node.EnergyCost) {
+		cost := campaignEnergyCost(node, progress.losses[request.Map*catalog.CampaignMaxNodes+request.Node])
+		if finished, _ := tutorialFinished(p.doc); !finished && p.account.Energy < cost {
 			p.account.Energy = p.account.EnergyMax
 		}
-		return p.account.spendEnergy(int64(node.EnergyCost))
+		return p.account.spendEnergy(cost)
 	case BattlePvp:
 		return p.account.spendStamina(pvpStaminaCost)
 	}
@@ -300,6 +306,13 @@ func (c *campaignProgress) mapUnlocked(maps []catalog.CampaignMap, index int) bo
 	return true
 }
 
+func campaignEnergyCost(node catalog.CampaignNode, losses int64) int64 {
+	if losses > 0 {
+		return 0
+	}
+	return int64(node.EnergyCost)
+}
+
 func masteryWin(node catalog.CampaignNode, wins int64) bool {
 	return wins > 0 && !node.Grind && node.WinsToMaster > 0 && wins == int64(node.WinsToMaster-1)
 }
@@ -365,5 +378,8 @@ func (p *player) settleCampaign(pending profile.PendingBattle, outcome battle.Ou
 		gems = int64(node.MasteryGems)
 	}
 	result.Gems = max(gems, 0)
-	return result, p.payBattle(&result, max(gold, 0), max(xp, 0), outcome.Crits, true)
+	if err := p.payBattle(&result, max(gold, 0), max(xp, 0), outcome.Crits, true); err != nil || !node.Grind {
+		return result, err
+	}
+	return result, p.awardChallengeDrop(maps[pending.Map].ID)
 }

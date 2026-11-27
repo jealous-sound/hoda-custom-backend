@@ -282,6 +282,27 @@ func TestCampaignBattleStartChecksTheNodeAndEnergy(t *testing.T) {
 	}
 }
 
+func TestCampaignRetryAfterALossIsFree(t *testing.T) {
+	raw := gameProfile(t, nil)
+	server := &profile.ServerState{StoreRNG: 3}
+	request := campaignStart(t, 0, 0)
+	lost, _, _ := fight(t, raw, server, request, false)
+	section(lost, "account")["energy"] = 0
+	started, _, err := startBattle(t, reencode(t, lost), &profile.ServerState{StoreRNG: 3}, squadFor(request, true), 1)
+	if err != nil {
+		t.Fatalf("retrying a lost node with no energy: %v", err)
+	}
+	if energy := number(t, asMap(t, started), "account", "energy"); energy != 0 {
+		t.Errorf("energy after a free retry = %v", energy)
+	}
+	won, _, _ := fight(t, reencode(t, lost), server, request, true)
+	section(won, "account")["energy"] = 0
+	again := &profile.ServerState{StoreRNG: 3}
+	if _, _, err := startBattle(t, reencode(t, won), again, squadFor(request, true), 1); refusalCode(err) != CantAfford {
+		t.Errorf("a win should end the free retries: %v", err)
+	}
+}
+
 func TestCampaignMasteryPaysOnce(t *testing.T) {
 	c := mustCatalog(t)
 	node := c.Campaign[0].Nodes[0]
@@ -832,6 +853,31 @@ func TestNexusLossNeedsAPotionToContinue(t *testing.T) {
 	revived, _, _ := fight(t, reencode(t, lost), server, request, true)
 	if number(t, revived, "nexus", "potions") != 1 {
 		t.Errorf("potions = %v", section(revived, "nexus")["potions"])
+	}
+}
+
+func TestRevivePotionsCanBeBoughtForGems(t *testing.T) {
+	c := mustCatalog(t)
+	withGems := func(gems, potions int) json.RawMessage {
+		return gameProfile(t, func(doc map[string]any) {
+			section(doc, "account")["gems"] = gems
+			section(doc, "nexus")["potions"] = potions
+		})
+	}
+	next, err := Refill(c, withGems(RevivePotionGemCost+1, 0), &profile.ServerState{}, RefillRevive, ruleNow)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if doc := asMap(t, next); number(t, doc, "nexus", "potions") != 1 || number(t, doc, "account", "gems") != 1 {
+		t.Errorf("nexus = %v account = %v", doc["nexus"], doc["account"])
+	}
+	poor := withGems(RevivePotionGemCost-1, 0)
+	if _, err := Refill(c, poor, &profile.ServerState{}, RefillRevive, ruleNow); refusalCode(err) != CantAfford {
+		t.Errorf("poor revive: %v", err)
+	}
+	full := withGems(RevivePotionGemCost, 10)
+	if _, err := Refill(c, full, &profile.ServerState{}, RefillRevive, ruleNow); refusalCode(err) != AlreadyFull {
+		t.Errorf("full potions: %v", err)
 	}
 }
 
