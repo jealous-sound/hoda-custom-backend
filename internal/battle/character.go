@@ -273,21 +273,22 @@ func (st *tierStats) healthAt(level int) int {
 }
 
 type character struct {
-	id          string
-	basedOn     string
-	rarity      rarity
-	stars       int
-	giant       bool
-	speed       speed
-	faction     faction
-	groups      []string
-	specialties []specialty
-	ability     ability
-	gearSlots   int
-	prestige    bool
-	maxTier     Tier
-	hasTier     [tierCount]bool
-	stats       [tierCount]tierStats
+	id             string
+	basedOn        string
+	rarity         rarity
+	originalRarity rarity
+	stars          int
+	giant          bool
+	speed          speed
+	faction        faction
+	groups         []string
+	specialties    []specialty
+	ability        ability
+	gearSlots      int
+	prestige       bool
+	maxTier        Tier
+	hasTier        [tierCount]bool
+	stats          [tierCount]tierStats
 }
 
 func (c *character) dataID() string {
@@ -301,6 +302,7 @@ type rawCharacter struct {
 	ID          string   `json:"id"`
 	BasedOn     string   `json:"based_on"`
 	Rarity      string   `json:"rarity"`
+	Original    string   `json:"original_rarity"`
 	Stars       int      `json:"stars"`
 	Giant       bool     `json:"giant"`
 	Speed       string   `json:"speed"`
@@ -329,6 +331,10 @@ func (raw rawCharacter) parse() *character {
 		id: raw.ID, basedOn: raw.BasedOn, rarity: parseRarity(raw.Rarity), stars: raw.Stars, giant: raw.Giant,
 		speed: parseSpeed(raw.Speed), faction: parseFaction(raw.Faction), gearSlots: raw.GearSlots,
 		prestige: raw.Prestige, maxTier: ParseTier(raw.MaxTier),
+	}
+	c.originalRarity = c.rarity
+	if raw.Original != "" {
+		c.originalRarity = parseRarity(raw.Original)
 	}
 	for _, group := range raw.Groups {
 		if len(c.groups) == maxGroups {

@@ -231,6 +231,14 @@ consume level, fortify and gear. A side without the flag, such as a bot's squad 
 level alone. An older client that leaves the builds out is refused with `opponent_changed`, so this needs a client
 release and a raised `HOD_MIN_CLIENT_VERSION` before it goes live.
 
+A PvP event can carry `squad_rules` in `pvp_rules.json`: a rarity cap (`max_rarity`) or allowed set (`rarities`),
+`unique_heroes`, `members` (every hero from one of the listed factions or groups; large creatures have no faction
+colour and pass a faction rule) and `sides` (every hero from one side, against a bot of another side). The bots of
+such an event field only pool squads the rule allows, including the `events_only` squads the client's builder adds
+for thin pools. `pvp_match` takes the squad's `side` (0 when the event has none) and stores it on the match;
+`battle_start` refuses a squad that breaks the event's rule or fits another side with `422 squad_not_allowed`, before
+any stamina is spent and without using up the match. The client checks the same rule before it sends anything.
+
 PvP battles replay under the PvP rules (`stat_budget.json` and `stat_budget_heroes.json`) while `battle.stat_budget`
 in `pvp_rules.json` is on, as it ships. `scale_stats` in `stat_budget.json` picks the mode. Off, as it ships, heroes
 fight on their original stats and only the heroes listed in `stat_budget_heroes.json` are trimmed: their stats, status

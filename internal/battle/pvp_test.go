@@ -7,11 +7,17 @@ import (
 
 func TestPvpSquadsRankFromWeakestToStrongest(t *testing.T) {
 	tables := loadTestData(t).pvp
-	if len(tables.squadsWeakestFirst) != len(tables.squads) {
-		t.Fatalf("%d of %d squads are ranked", len(tables.squadsWeakestFirst), len(tables.squads))
+	eventsOnly := 0
+	for _, squad := range tables.squads {
+		if squad.eventsOnly {
+			eventsOnly++
+		}
+	}
+	if len(tables.ladder)+eventsOnly != len(tables.squads) {
+		t.Fatalf("%d ladder and %d event squads of %d", len(tables.ladder), eventsOnly, len(tables.squads))
 	}
 	ranked := make([]bool, len(tables.squads))
-	for rank, squad := range tables.squadsWeakestFirst {
+	for rank, squad := range tables.ladder {
 		if ranked[squad] {
 			t.Fatalf("squad %d is ranked twice", squad)
 		}
@@ -19,7 +25,7 @@ func TestPvpSquadsRankFromWeakestToStrongest(t *testing.T) {
 		if rank == 0 {
 			continue
 		}
-		weaker := tables.squadsWeakestFirst[rank-1]
+		weaker := tables.ladder[rank-1]
 		elite, afterElite := tables.squads[squad].elite, tables.squads[weaker].elite
 		if afterElite && !elite {
 			t.Fatalf("rank %d: campaign squad %d follows elite squad %d", rank, squad, weaker)
@@ -30,13 +36,13 @@ func TestPvpSquadsRankFromWeakestToStrongest(t *testing.T) {
 				tables.squads[squad].strength, weaker, tables.squads[weaker].strength)
 		}
 	}
-	strongest := tables.squadsWeakestFirst[len(tables.squadsWeakestFirst)-1]
-	if !tables.squads[strongest].elite || tables.squads[tables.squadsWeakestFirst[0]].elite {
+	strongest := tables.ladder[len(tables.ladder)-1]
+	if !tables.squads[strongest].elite || tables.squads[tables.ladder[0]].elite {
 		t.Fatalf("the ladder does not end on an elite squad")
 	}
 	lowest, top := tables.botStrengthRank(0), tables.botStrengthRank(len(tables.bots)-1)
-	if lowest != 0 || top != len(tables.squads)-1 {
-		t.Fatalf("the ladder spans strength ranks %d to %d of %d squads", lowest, top, len(tables.squads))
+	if lowest != 0 || top != len(tables.ladder)-1 {
+		t.Fatalf("the ladder spans strength ranks %d to %d of %d squads", lowest, top, len(tables.ladder))
 	}
 }
 

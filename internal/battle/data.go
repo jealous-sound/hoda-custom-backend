@@ -62,7 +62,7 @@ func Load(read func(name string) ([]byte, error)) (*Data, error) {
 		{NexusRostersFile, func(b []byte) (err error) { d.nexusRosters, err = loadRosters(b); return }},
 		{NexusGameChangersFile, func(b []byte) (err error) { d.nexusChangers, err = loadNexusChangers(b); return }},
 		{PvpRulesFile, func(b []byte) (err error) {
-			if d.pvp, err = loadPvpTables(b); err != nil {
+			if d.pvp, err = loadPvpTables(b, d.characters); err != nil {
 				return err
 			}
 			return d.checkPvpLoadouts()

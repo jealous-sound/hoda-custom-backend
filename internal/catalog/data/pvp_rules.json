@@ -504,6 +504,476 @@
     ]
    },
    {
+    "title_key": "PVP_EPIC_BLITZ_MAY_27_TITLE_KEY",
+    "text_key": "",
+    "original_text_key": "PVP_EPIC_BLITZ_MAY_27_DESC_KEY",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "Epic",
+     "rarities": [],
+     "unique_heroes": false,
+     "members": {
+      "factions": [],
+      "groups": []
+     },
+     "sides": []
+    },
+    "source": {
+     "event_key": "pvp|epic expectations",
+     "record_id": "R0353",
+     "event_date": "2019-09-07"
+    },
+    "omitted_prizes": [
+     "Banished Plane Key",
+     "Potion Drop Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1474,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "maferaths_maul",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1977,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_red_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 50000,
+      "gems": 75,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICPRESTIGEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_faction_all"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 48000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_white_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 46000,
+      "gems": 51,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 44000,
+      "gems": 45,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 40000,
+      "gems": 36,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_blue_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 36000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_white_pt"
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 32000,
+      "gems": 24,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 28000,
+      "gems": 12,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LEGENDARYBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_legendary_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 26000,
+      "gems": 9,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_blue_pt"
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 24000,
+      "gems": 6,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 20000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 16000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_EPICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_epic_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "title_key": "PVP_BLACK_FACTION_JULY_11_TITLE_KEY",
     "text_key": "PVP_BLACK_FACTION_JULY_11_DESC_KEY",
     "effects": [
@@ -903,6 +1373,477 @@
         "count": 1,
         "icon": "cache:tex.Voucher_IronPack",
         "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title_key": "PVP_PEASANT_REVOLT_MAR_5_TITLE_KEY",
+    "text_key": "",
+    "original_text_key": "PVP_PEASANT_REVOLT_MAR_5_DESC_KEY",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "Uncommon",
+     "rarities": [],
+     "unique_heroes": false,
+     "members": {
+      "factions": [],
+      "groups": []
+     },
+     "sides": []
+    },
+    "source": {
+     "event_key": "pvp|champions of the just",
+     "record_id": "R0320",
+     "event_date": "2019-04-02"
+    },
+    "omitted_prizes": [
+     "Giant Quest Key",
+     "Potion Drop Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1564,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "strouds_targe",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1993,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 37500,
+      "gems": 50,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "tome_of_rifts",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "certainty",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "arms_of_the_champion",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "elgarnan_enaste",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 36000,
+      "gems": 40,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "certainty",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "arms_of_the_champion",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "elgarnan_enaste",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "red_lyrium_idol",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 34500,
+      "gems": 34,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "arms_of_the_champion",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "elgarnan_enaste",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "red_lyrium_idol",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "vestments_of_the_dragon_hunter",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 33000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "elgarnan_enaste",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "red_lyrium_idol",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "vestments_of_the_dragon_hunter",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "soothers_sapphire",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 30000,
+      "gems": 24,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "red_lyrium_idol",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "vestments_of_the_dragon_hunter",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "soothers_sapphire",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "oath_breaker",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 27000,
+      "gems": 20,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "vestments_of_the_dragon_hunter",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "soothers_sapphire",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "oath_breaker",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "loose_ends",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 24000,
+      "gems": 16,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "soothers_sapphire",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "oath_breaker",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "loose_ends",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "scout_coat_arms",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 21000,
+      "gems": 8,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "oath_breaker",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "loose_ends",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "scout_coat_arms",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "legionnaire_plate",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 19500,
+      "gems": 6,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "loose_ends",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "scout_coat_arms",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "legionnaire_plate",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "crow_dagger",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 18000,
+      "gems": 4,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "scout_coat_arms",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "legionnaire_plate",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "crow_dagger",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 15000,
+      "gems": 2,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "legionnaire_plate",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "gear",
+        "id": "crow_dagger",
+        "count": 1,
+        "icon": ""
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 12000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "crow_dagger",
+        "count": 1,
+        "icon": ""
        },
        {
         "kind": "unit",
@@ -1840,6 +2781,493 @@
     ]
    },
    {
+    "title_key": "PVP_GO_FOR_GOLD_JULY_21_TITLE_KEY",
+    "text_key": "",
+    "original_text_key": "PVP_GO_FOR_GOLD_JULY_21_DESC_KEY",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "",
+     "rarities": [
+      "Rare"
+     ],
+     "unique_heroes": true,
+     "members": {
+      "factions": [],
+      "groups": []
+     },
+     "sides": []
+    },
+    "source": {
+     "event_key": "pvp|quick draw",
+     "record_id": "R0300",
+     "event_date": "2018-08-09"
+    },
+    "omitted_prizes": [
+     "Banished Plane Keys"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1013,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "banners": 1067,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "sentinel_plate_pauldron",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1800,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_black_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 30000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_TEVINTERBANNER",
+        "count": 1,
+        "icon": "tex.b_tevinterbanner_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMNUG",
+        "count": 1,
+        "icon": "tex.c_redlyriumnug_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEDOWAGER",
+        "count": 1,
+        "icon": "tex.hf_nc_thedowager_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 28000,
+      "gems": 50,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_TEVINTERBANNER",
+        "count": 1,
+        "icon": "tex.b_tevinterbanner_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMNUG",
+        "count": 1,
+        "icon": "tex.c_redlyriumnug_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEDOWAGER",
+        "count": 1,
+        "icon": "tex.hf_nc_thedowager_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
+        "count": 1,
+        "icon": "tex.c_primaldracolisk_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 26000,
+      "gems": 40,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMNUG",
+        "count": 1,
+        "icon": "tex.c_redlyriumnug_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEDOWAGER",
+        "count": 1,
+        "icon": "tex.hf_nc_thedowager_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
+        "count": 1,
+        "icon": "tex.c_primaldracolisk_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "icon": "tex.c_hallawintersend_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 24000,
+      "gems": 35,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THEDOWAGER",
+        "count": 1,
+        "icon": "tex.hf_nc_thedowager_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
+        "count": 1,
+        "icon": "tex.c_primaldracolisk_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "icon": "tex.c_hallawintersend_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GREYWARDENCARVER",
+        "count": 1,
+        "icon": "tex.hm_tw_greywardencarver_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 22000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIMAL-TRAINEDLONGMADRACOLISK",
+        "count": 1,
+        "icon": "tex.c_primaldracolisk_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "icon": "tex.c_hallawintersend_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GREYWARDENCARVER",
+        "count": 1,
+        "icon": "tex.hm_tw_greywardencarver_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_AVVARGOATEPIC",
+        "count": 1,
+        "icon": "tex.c_avvargoat_epic_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 20000,
+      "gems": 20,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_WINTERSENDHALLA",
+        "count": 1,
+        "icon": "tex.c_hallawintersend_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GREYWARDENCARVER",
+        "count": 1,
+        "icon": "tex.hm_tw_greywardencarver_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_AVVARGOATEPIC",
+        "count": 1,
+        "icon": "tex.c_avvargoat_epic_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_white_pt"
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 18000,
+      "gems": 10,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_GREYWARDENCARVER",
+        "count": 1,
+        "icon": "tex.hm_tw_greywardencarver_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_AVVARGOATEPIC",
+        "count": 1,
+        "icon": "tex.c_avvargoat_epic_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_blue_pt"
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 16000,
+      "gems": 5,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_AVVARGOATEPIC",
+        "count": 1,
+        "icon": "tex.c_avvargoat_epic_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 14000,
+      "gems": 4,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_white_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 12000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_blue_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 10000,
+      "gems": 2,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 8000,
+      "gems": 1,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RAREBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_rare_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "title_key": "PVP_HEDGE_MAGES_FEBRUARY_16_TITLE_KEY",
     "text_key": "PVP_HEDGE_MAGES_FEBRUARY_16_DESC_KEY",
     "effects": [
@@ -2230,6 +3658,431 @@
       "first": 181,
       "last": 241,
       "gold": 8000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title_key": "PVP_RED_FACTION_BLITZ_OCTOBER_6_TITLE_KEY",
+    "text_key": "",
+    "original_text_key": "PVP_RED_FACTION_BLITZ_OCTOBER_6_DESC_KEY",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "",
+     "rarities": [],
+     "unique_heroes": false,
+     "members": {
+      "factions": [
+       "Red"
+      ],
+      "groups": []
+     },
+     "sides": []
+    },
+    "source": {
+     "event_key": "pvp|a single strike",
+     "record_id": "R0358",
+     "event_date": "2019-10-03"
+    },
+    "omitted_prizes": [
+     "Banished Plane Key",
+     "Potion Drop Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1474,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "emblazoned_kirkwall_shield",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1977,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICGIANTWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_large_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 50000,
+      "gems": 75,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_GEREONALEXIUS",
+        "count": 1,
+        "icon": "tex.hm_mw_alexius_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEMOTHER",
+        "count": 1,
+        "icon": "tex.c_themother_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CRETAHL",
+        "count": 1,
+        "icon": "tex.c_cretahl_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GASPARDDECHALONS",
+        "count": 1,
+        "icon": "tex.hm_tw_gasparddechalons_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 48000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THEMOTHER",
+        "count": 1,
+        "icon": "tex.c_themother_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CRETAHL",
+        "count": 1,
+        "icon": "tex.c_cretahl_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GASPARDDECHALONS",
+        "count": 1,
+        "icon": "tex.hm_tw_gasparddechalons_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIORDAN",
+        "count": 1,
+        "icon": "tex.hm_tw_riordan_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 46000,
+      "gems": 51,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_CRETAHL",
+        "count": 1,
+        "icon": "tex.c_cretahl_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_GASPARDDECHALONS",
+        "count": 1,
+        "icon": "tex.hm_tw_gasparddechalons_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIORDAN",
+        "count": 1,
+        "icon": "tex.hm_tw_riordan_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_QUNARISHOCKTROOPER",
+        "count": 1,
+        "icon": "tex.qm_tw_qunarishocktrooper_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 44000,
+      "gems": 45,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_GASPARDDECHALONS",
+        "count": 1,
+        "icon": "tex.hm_tw_gasparddechalons_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIORDAN",
+        "count": 1,
+        "icon": "tex.hm_tw_riordan_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_QUNARISHOCKTROOPER",
+        "count": 1,
+        "icon": "tex.qm_tw_qunarishocktrooper_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ARVAARAD",
+        "count": 1,
+        "icon": "tex.qm_tw_arvaarad_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 40000,
+      "gems": 36,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RIORDAN",
+        "count": 1,
+        "icon": "tex.hm_tw_riordan_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_QUNARISHOCKTROOPER",
+        "count": 1,
+        "icon": "tex.qm_tw_qunarishocktrooper_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ARVAARAD",
+        "count": 1,
+        "icon": "tex.qm_tw_arvaarad_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PLAIDEWEAVEVIVIENNE",
+        "count": 1,
+        "icon": "tex.hf_mw_plaideweavevivienne_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 36000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_QUNARISHOCKTROOPER",
+        "count": 1,
+        "icon": "tex.qm_tw_qunarishocktrooper_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ARVAARAD",
+        "count": 1,
+        "icon": "tex.qm_tw_arvaarad_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PLAIDEWEAVEVIVIENNE",
+        "count": 1,
+        "icon": "tex.hf_mw_plaideweavevivienne_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 32000,
+      "gems": 24,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_ARVAARAD",
+        "count": 1,
+        "icon": "tex.qm_tw_arvaarad_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PLAIDEWEAVEVIVIENNE",
+        "count": 1,
+        "icon": "tex.hf_mw_plaideweavevivienne_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 28000,
+      "gems": 12,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_PLAIDEWEAVEVIVIENNE",
+        "count": 1,
+        "icon": "tex.hf_mw_plaideweavevivienne_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 3,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 26000,
+      "gems": 9,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 4,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 24000,
+      "gems": 6,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 3,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 20000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 16000,
       "gems": 0,
       "prizes": [
        {
@@ -3163,6 +5016,465 @@
     ]
    },
    {
+    "title_key": "pvp_warden_wars_finals_october_2_title_key",
+    "text_key": "",
+    "original_text_key": "pvp_warden_wars_finals_october_2_desc_key",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "",
+     "rarities": [],
+     "unique_heroes": false,
+     "members": {
+      "factions": [],
+      "groups": [
+       "Warden"
+      ]
+     },
+     "sides": []
+    },
+    "source": {
+     "event_key": "pvp|weight of the crown",
+     "record_id": "R0344",
+     "event_date": "2019-08-05"
+    },
+    "omitted_prizes": [
+     "2x Banished Plane Key",
+     "Double XP Key"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1474,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "senior_wardens_staff",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1977,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICBLUEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_blue_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 50000,
+      "gems": 75,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_NORTHERNHUNTER",
+        "count": 1,
+        "icon": "tex.c_northernhunter_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_QUEENOFTHEEASTERNSEAS",
+        "count": 1,
+        "icon": "tex.hf_dw_queenoftheeasternseas_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SANDYHOWLER",
+        "count": 1,
+        "icon": "tex.c_sandyhowler_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 48000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_QUEENOFTHEEASTERNSEAS",
+        "count": 1,
+        "icon": "tex.hf_dw_queenoftheeasternseas_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SANDYHOWLER",
+        "count": 1,
+        "icon": "tex.c_sandyhowler_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LYRIUMFENRIS",
+        "count": 1,
+        "icon": "tex.em_tw_lyriumfenris_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 46000,
+      "gems": 51,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_SANDYHOWLER",
+        "count": 1,
+        "icon": "tex.c_sandyhowler_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LYRIUMFENRIS",
+        "count": 1,
+        "icon": "tex.em_tw_lyriumfenris_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 44000,
+      "gems": 45,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_REDLYRIUMBLACKWALL",
+        "count": 1,
+        "icon": "tex.hm_sw_redlyriumblackwall_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LYRIUMFENRIS",
+        "count": 1,
+        "icon": "tex.em_tw_lyriumfenris_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THANESVARAHSUN-HAIR",
+        "count": 1,
+        "icon": "tex.hf_tw_thane_svarah_sun_hair_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 40000,
+      "gems": 36,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LYRIUMFENRIS",
+        "count": 1,
+        "icon": "tex.em_tw_lyriumfenris_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THANESVARAHSUN-HAIR",
+        "count": 1,
+        "icon": "tex.hf_tw_thane_svarah_sun_hair_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
+        "count": 1,
+        "icon": "tex.ef_mw_knightenchanterhelaine_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 36000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THANESVARAHSUN-HAIR",
+        "count": 1,
+        "icon": "tex.hf_tw_thane_svarah_sun_hair_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
+        "count": 1,
+        "icon": "tex.ef_mw_knightenchanterhelaine_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SERPOUNCE-A-LOT",
+        "count": 1,
+        "icon": "tex.c_serpouncealot_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 32000,
+      "gems": 24,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THANESVARAHSUN-HAIR",
+        "count": 1,
+        "icon": "tex.hf_tw_thane_svarah_sun_hair_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
+        "count": 1,
+        "icon": "tex.ef_mw_knightenchanterhelaine_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SERPOUNCE-A-LOT",
+        "count": 1,
+        "icon": "tex.c_serpouncealot_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_VIDDASALA",
+        "count": 1,
+        "icon": "tex.qf_sw_viddasala_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 28000,
+      "gems": 12,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-ENCHANTERHELAINE",
+        "count": 1,
+        "icon": "tex.ef_mw_knightenchanterhelaine_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_SERPOUNCE-A-LOT",
+        "count": 1,
+        "icon": "tex.c_serpouncealot_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_VIDDASALA",
+        "count": 1,
+        "icon": "tex.qf_sw_viddasala_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 26000,
+      "gems": 9,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_SERPOUNCE-A-LOT",
+        "count": 1,
+        "icon": "tex.c_serpouncealot_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_VIDDASALA",
+        "count": 1,
+        "icon": "tex.qf_sw_viddasala_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 24000,
+      "gems": 6,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_VIDDASALA",
+        "count": 1,
+        "icon": "tex.qf_sw_viddasala_t1_pt"
+       },
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 20000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 16000,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 2,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
     "title_key": "PVP_BLACK_FACTION_2_TITLE_KEY",
     "text_key": "PVP_BLACK_FACTION_2_DESC_KEY",
     "effects": [
@@ -3605,6 +5917,515 @@
         "id": "UNIT_OGHREN",
         "count": 1,
         "icon": "tex.dm_tw_oghren_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONWHITEWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_white_pt"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title_key": "pvp_faction_wars_9_21_title_key",
+    "text_key": "",
+    "original_text_key": "pvp_faction_wars_9_21_desc_key",
+    "effects": [],
+    "squad_rules": {
+     "max_rarity": "",
+     "rarities": [],
+     "unique_heroes": false,
+     "members": {
+      "factions": [],
+      "groups": []
+     },
+     "sides": [
+      {
+       "factions": [
+        "Red"
+       ],
+       "groups": []
+      },
+      {
+       "factions": [
+        "Blue"
+       ],
+       "groups": []
+      },
+      {
+       "factions": [
+        "White"
+       ],
+       "groups": []
+      },
+      {
+       "factions": [
+        "Black"
+       ],
+       "groups": []
+      }
+     ]
+    },
+    "source": {
+     "event_key": "pvp|break the line",
+     "record_id": "R0293",
+     "event_date": "2018-06-28"
+    },
+    "omitted_prizes": [
+     "Banished Plane Keys"
+    ],
+    "milestones": [
+     {
+      "banners": 100,
+      "gold": 500,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 250,
+      "gold": 1000,
+      "gems": 0,
+      "prizes": []
+     },
+     {
+      "banners": 500,
+      "gold": 0,
+      "gems": 5,
+      "prizes": []
+     },
+     {
+      "banners": 1013,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       }
+      ]
+     },
+     {
+      "banners": 1067,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "gear",
+        "id": "boots_of_faith",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     },
+     {
+      "banners": 1800,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MYTHICREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_mythic_red_pt"
+       }
+      ]
+     },
+     {
+      "banners": 2000,
+      "gold": 0,
+      "gems": 0,
+      "prizes": [
+       {
+        "kind": "tome",
+        "id": "tome",
+        "count": 1,
+        "icon": ""
+       }
+      ]
+     }
+    ],
+    "rank_rewards": [
+     {
+      "first": 1,
+      "last": 1,
+      "gold": 30000,
+      "gems": 60,
+      "prizes": [
+       {
+        "kind": "voucher",
+        "id": "iron",
+        "count": 1,
+        "icon": "cache:tex.Voucher_IronPack",
+        "index": 3
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LURKER",
+        "count": 1,
+        "icon": "tex.c_lurker_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-CAPTAINCULLEN",
+        "count": 1,
+        "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 2,
+      "last": 3,
+      "gold": 28000,
+      "gems": 50,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_CARVERHAWKE",
+        "count": 1,
+        "icon": "tex.hm_tw_carverhawke_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_LURKER",
+        "count": 1,
+        "icon": "tex.c_lurker_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-CAPTAINCULLEN",
+        "count": 1,
+        "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CORRUPTEDSPIDERLING",
+        "count": 1,
+        "icon": "tex.c_legendary_corruptedspider_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 4,
+      "last": 6,
+      "gold": 26000,
+      "gems": 40,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_LURKER",
+        "count": 1,
+        "icon": "tex.c_lurker_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-CAPTAINCULLEN",
+        "count": 1,
+        "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CORRUPTEDSPIDERLING",
+        "count": 1,
+        "icon": "tex.c_legendary_corruptedspider_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEHERALD",
+        "count": 1,
+        "icon": "tex.c_theherald_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 7,
+      "last": 10,
+      "gold": 24000,
+      "gems": 35,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_KNIGHT-CAPTAINCULLEN",
+        "count": 1,
+        "icon": "tex.hm_tw_knightcaptaincullen_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CORRUPTEDSPIDERLING",
+        "count": 1,
+        "icon": "tex.c_legendary_corruptedspider_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEHERALD",
+        "count": 1,
+        "icon": "tex.c_theherald_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MAGISTERPAVUS",
+        "count": 1,
+        "icon": "tex.hm_mw_magisterpavus_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 11,
+      "last": 15,
+      "gold": 22000,
+      "gems": 30,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_CORRUPTEDSPIDERLING",
+        "count": 1,
+        "icon": "tex.c_legendary_corruptedspider_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_THEHERALD",
+        "count": 1,
+        "icon": "tex.c_theherald_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MAGISTERPAVUS",
+        "count": 1,
+        "icon": "tex.hm_mw_magisterpavus_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ASHWRAITH",
+        "count": 1,
+        "icon": "tex.c_ashwraith_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 16,
+      "last": 25,
+      "gold": 20000,
+      "gems": 20,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_THEHERALD",
+        "count": 1,
+        "icon": "tex.c_theherald_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_MAGISTERPAVUS",
+        "count": 1,
+        "icon": "tex.hm_mw_magisterpavus_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ASHWRAITH",
+        "count": 1,
+        "icon": "tex.c_ashwraith_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CIRCLEMAGEBETHANY",
+        "count": 1,
+        "icon": "tex.hf_mw_circlemagebethany_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 26,
+      "last": 40,
+      "gold": 18000,
+      "gems": 10,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_MAGISTERPAVUS",
+        "count": 1,
+        "icon": "tex.hm_mw_magisterpavus_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_ASHWRAITH",
+        "count": 1,
+        "icon": "tex.c_ashwraith_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CIRCLEMAGEBETHANY",
+        "count": 1,
+        "icon": "tex.hf_mw_circlemagebethany_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NOBLENUG",
+        "count": 1,
+        "icon": "tex.c_nugnoble_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 41,
+      "last": 60,
+      "gold": 16000,
+      "gems": 5,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_ASHWRAITH",
+        "count": 1,
+        "icon": "tex.c_ashwraith_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_CIRCLEMAGEBETHANY",
+        "count": 1,
+        "icon": "tex.hf_mw_circlemagebethany_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NOBLENUG",
+        "count": 1,
+        "icon": "tex.c_nugnoble_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIDEABOMINATION",
+        "count": 1,
+        "icon": "tex.c_prideabomination_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 61,
+      "last": 90,
+      "gold": 14000,
+      "gems": 4,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_CIRCLEMAGEBETHANY",
+        "count": 1,
+        "icon": "tex.hf_mw_circlemagebethany_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_NOBLENUG",
+        "count": 1,
+        "icon": "tex.c_nugnoble_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIDEABOMINATION",
+        "count": 1,
+        "icon": "tex.c_prideabomination_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIFTWRAITH",
+        "count": 1,
+        "icon": "tex.c_riftwraith_t1_pt"
+       }
+      ]
+     },
+     {
+      "first": 91,
+      "last": 130,
+      "gold": 12000,
+      "gems": 3,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_NOBLENUG",
+        "count": 1,
+        "icon": "tex.c_nugnoble_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIDEABOMINATION",
+        "count": 1,
+        "icon": "tex.c_prideabomination_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIFTWRAITH",
+        "count": 1,
+        "icon": "tex.c_riftwraith_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       }
+      ]
+     },
+     {
+      "first": 131,
+      "last": 180,
+      "gold": 10000,
+      "gems": 2,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_PRIDEABOMINATION",
+        "count": 1,
+        "icon": "tex.c_prideabomination_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_RIFTWRAITH",
+        "count": 1,
+        "icon": "tex.c_riftwraith_t1_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONREDWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_red_pt"
+       },
+       {
+        "kind": "unit",
+        "id": "UNIT_UNCOMMONBLACKWISP",
+        "count": 1,
+        "icon": "tex.c_wisp_uncommon_black_pt"
+       }
+      ]
+     },
+     {
+      "first": 181,
+      "last": 241,
+      "gold": 8000,
+      "gems": 1,
+      "prizes": [
+       {
+        "kind": "unit",
+        "id": "UNIT_RIFTWRAITH",
+        "count": 1,
+        "icon": "tex.c_riftwraith_t1_pt"
        },
        {
         "kind": "unit",
@@ -50071,6 +52892,5659 @@
     "rune-guard-7"
    ],
    "elite": true
+  },
+  {
+   "strength": 1419,
+   "cells": [
+    {
+     "id": "UNIT_FENNEC",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_CORRUPTEDNUG",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_CULTISTMAGE",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_FREEMARCHER",
+     "tier": "I",
+     "level": 1
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 5859,
+   "cells": [
+    {
+     "id": "UNIT_ABOMINATION",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "maferaths_maul",
+      "revered_defender_maul",
+      "winterweight",
+      "ritual_breaker",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "cuirass_of_the_winds",
+      "oath_breaker",
+      "senior_wardens_staff",
+      "fade_touched_silverite",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GENLOCKALPHA",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "oath_breaker",
+      "the_elders_grimoire",
+      "winterweight",
+      "maferaths_maul",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_TEVINTERARCANEWARRIOR",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "maferaths_maul",
+      "belt_of_the_architect",
+      "demons_advocate",
+      "spirit_maul",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_ARMOREDOGRE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "belt_of_the_architect",
+      "fade_touched_silverite",
+      "mythals_blessing",
+      "dragons_testament",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-damage-shielding-5",
+    "rune-stun-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4335,
+   "cells": [
+    {
+     "id": "UNIT_NOBLENUG",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "forge_masters_hammer",
+      "templar_breastplate",
+      "gamordan_stormrider_scale",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GENLOCKALPHA",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "tome_of_skill_and_sundry",
+      "templar_breastplate",
+      "captains_plate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_CULTISTASSASSIN",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "scout_armor",
+      "tome_of_skill_and_sundry",
+      "templar_helmet",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SHADOWWEREWOLF",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "tome_of_skill_and_sundry",
+      "dalish_ring",
+      "scout_armor",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SILVERHALLA",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "gamordan_stormrider_scale",
+      "expensive_dog_treats",
+      "dalish_ring",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-stun-3",
+    "rune-health-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3528,
+   "cells": [
+    {
+     "id": "UNIT_CORRUPTEDNUG",
+     "tier": "III",
+     "level": 16,
+     "gear": [
+      "vinsomer_scale",
+      "kaddis_of_the_mountainfather",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "III",
+     "level": 16,
+     "gear": [
+      "dalish_staff",
+      "enchanter_fire_staff",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_FENNEC",
+     "tier": "III",
+     "level": 16,
+     "gear": [
+      "mantle_of_the_hold_beast",
+      "kaddis_of_the_mountainfather",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DALISHWARRIOR",
+     "tier": "III",
+     "level": 16,
+     "gear": [
+      "fade_wall",
+      "tome_of_physical_technique",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_CHARREDSYLVAN",
+     "tier": "III",
+     "level": 16,
+     "gear": [
+      "kaddis_of_the_mountainfather",
+      "mantle_of_the_hold_beast",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-brave-targeting-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 1770,
+   "cells": [
+    {
+     "id": "UNIT_FREEMARCHER",
+     "tier": "II",
+     "level": 12
+    },
+    {
+     "id": "UNIT_CORRUPTEDNUG",
+     "tier": "II",
+     "level": 12
+    },
+    null,
+    {
+     "id": "UNIT_FENNEC",
+     "tier": "II",
+     "level": 12
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 5559,
+   "cells": [
+    {
+     "id": "UNIT_BLACKNUGLYSWEATER",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "spectral_scale",
+      "dworkins_high_explosives",
+      "asaarash_saddle",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SLAVEFENRIS",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "loose_ends",
+      "jar_of_bees",
+      "maul_of_tacitus",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SLOTHDEMON",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "isanas_song",
+      "dworkins_high_explosives",
+      "soulwrecker_staff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_LAYSISTERLELIANA",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "jar_of_bees",
+      "dworkins_high_explosives",
+      "redcliffe_shield",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WINTERSENDROCKWRAITH",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "of_things_not_lost",
+      "dalish_robes",
+      "warm_orb",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-targeting-4",
+    "rune-power-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2447,
+   "cells": [
+    {
+     "id": "UNIT_DALISHWARRIOR",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "soldiers_plate",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STEN",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "brute_hammer",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RAGEDEMON",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "staff_of_shadows",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DALISHMAGE",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "inquisition_warmage_pauldron",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_CHARREDSYLVAN",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "asaarash_peytral",
+      "",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-wounded-targeting-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 611,
+   "cells": [
+    {
+     "id": "UNIT_FENNEC",
+     "tier": "I",
+     "level": 4
+    },
+    {
+     "id": "UNIT_DALISHWARRIOR",
+     "tier": "I",
+     "level": 4
+    },
+    null,
+    {
+     "id": "UNIT_FREEMARCHER",
+     "tier": "I",
+     "level": 4
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 5807,
+   "cells": [
+    {
+     "id": "UNIT_CIRCLEMAGEBETHANY",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "shield_of_le_marque",
+      "soulwrecker_staff",
+      "voracity",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SERCAUTHRIEN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "legionnaire_plate",
+      "alamarri_warstaff",
+      "ser_alvards_sword",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "dworkins_high_explosives",
+      "jar_of_bees",
+      "ser_alvards_sword",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STEN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "hisseras_mask",
+      "legionnaire_plate",
+      "saarebas_restraints",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BERESKARN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "asaarash_saddle",
+      "asaarash_criniere",
+      "spectral_scale",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-quick-targeting-4",
+    "rune-brave-targeting-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3743,
+   "cells": [
+    {
+     "id": "UNIT_SLOTHDEMON",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "enchanter_fire_staff",
+      "dalish_staff",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DRAKE",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "mantle_of_the_hold_beast",
+      "vinsomer_scale",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "orlesian_mask",
+      "fade_wall",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DESIREDEMON",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "seer_staff",
+      "dalish_staff",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-power-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2363,
+   "cells": [
+    {
+     "id": "UNIT_BARTRANDTETHRAS",
+     "tier": "II",
+     "level": 14
+    },
+    {
+     "id": "UNIT_DALISHARCANEWARRIOR",
+     "tier": "II",
+     "level": 14
+    },
+    null,
+    {
+     "id": "UNIT_CULTISTASSASSIN",
+     "tier": "II",
+     "level": 14
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 6393,
+   "cells": [
+    {
+     "id": "UNIT_STROUD",
+     "tier": "IV",
+     "level": 36,
+     "gear": [
+      "fade_touched_silverite",
+      "boots_of_the_river_dane",
+      "gloves_of_the_river_dane",
+      "the_bind_that_guides",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BRANKA",
+     "tier": "IV",
+     "level": 36,
+     "gear": [
+      "ardent_blossom",
+      "diplomatic_missives",
+      "helm_of_justice",
+      "the_eye_that_weeps",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 36,
+     "gear": [
+      "hauberk_of_the_lady",
+      "virtuosity",
+      "belt_of_the_architect",
+      "fade_touched_silverite",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_CIRCLESENIORENCHANTER",
+     "tier": "IV",
+     "level": 36,
+     "gear": [
+      "first_enchanters_robes",
+      "bloodline",
+      "vestments_of_the_dragon_hunter",
+      "cuirass_of_the_winds",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_ARMOREDOGRE",
+     "tier": "IV",
+     "level": 36,
+     "gear": [
+      "fade_touched_silverite",
+      "belt_of_the_architect",
+      "strouds_targe",
+      "mythals_blessing",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-health-5",
+    "rune-damage-shielding-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2174,
+   "cells": [
+    {
+     "id": "UNIT_CORRUPTEDNUG",
+     "tier": "II",
+     "level": 14,
+     "gear": [
+      "asaarash_peytral",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SPIRITOFVALOR",
+     "tier": "II",
+     "level": 14,
+     "gear": [
+      "fereldan_soldier_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null,
+    {
+     "id": "UNIT_FERELDANBANN",
+     "tier": "II",
+     "level": 14,
+     "gear": [
+      "soldiers_plate",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_CHARREDSYLVAN",
+     "tier": "II",
+     "level": 14,
+     "gear": [
+      "asaarash_peytral",
+      "",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-powerdrain-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5501,
+   "cells": [
+    {
+     "id": "UNIT_REVENANT",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "the_bind_that_guides",
+      "the_elders_grimoire",
+      "oath_breaker",
+      "maul_of_the_dragon",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BLUENUGLYSWEATER",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "kaddis_of_the_lady",
+      "spirit_maul",
+      "soothers_sapphire",
+      "the_ancestors_greaves",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BRANKA",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "vigilance",
+      "ruby_ring",
+      "spirit_maul",
+      "helm_of_the_dragon_hunter",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_REANIMATEDLEANDRA",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "cobra_crown",
+      "the_elders_grimoire",
+      "the_bind_that_guides",
+      "the_ancestors_greaves",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WYVERN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "asaarash_chanfron",
+      "blackmetal_torque",
+      "greater_mistral_scale",
+      "the_ancestors_greaves",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-powerdrain-5",
+    "rune-slow-5",
+    "rune-stealth-7"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4342,
+   "cells": [
+    {
+     "id": "UNIT_MAGENUG",
+     "tier": "IV",
+     "level": 43,
+     "gear": [
+      "blood_dragon_greaves",
+      "tome_of_the_mortal_vessel",
+      "asaarash_flanchard",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_TAL-VASHOTHBERSERKER",
+     "tier": "IV",
+     "level": 43,
+     "gear": [
+      "tome_of_skill_and_sundry",
+      "gauntlets_of_the_nug",
+      "inquisition_longsword",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WHITENUGLYSWEATER",
+     "tier": "IV",
+     "level": 43,
+     "gear": [
+      "stonehammer_plate",
+      "gamordan_stormrider_scale",
+      "templar_helmet",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_HARLEQUIN",
+     "tier": "IV",
+     "level": 43,
+     "gear": [
+      "orlesian_hennin",
+      "scout_quiver",
+      "puzzle_ring",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-initiative-3",
+    "rune-power-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3535,
+   "cells": [
+    {
+     "id": "UNIT_BRANKA",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "orlesian_mask",
+      "greaves_of_the_beresaad",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_CULTISTOVERSEER",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "helm_of_the_skies",
+      "enchanter_fire_staff",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_VELGHAST",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "grimoire_of_the_frozen_wastes",
+      "mantle_of_the_hold_beast",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SERCAUTHRIEN",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "vanguard_armor",
+      "orlesian_mask",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-power-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 1575,
+   "cells": [
+    {
+     "id": "UNIT_TEVINTERARCANEMAGE",
+     "tier": "II",
+     "level": 12
+    },
+    {
+     "id": "UNIT_VELGHAST",
+     "tier": "II",
+     "level": 12
+    },
+    null,
+    {
+     "id": "UNIT_DALISHMAGE",
+     "tier": "II",
+     "level": 12
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 4882,
+   "cells": [
+    {
+     "id": "UNIT_SLOTHABOMINATION",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "saarebas_restraints",
+      "dworkins_high_explosives",
+      "jar_of_bees",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_TAL-VASHOTHBERSERKER",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "legionnaire_plate",
+      "fereldan_claymore",
+      "maul_of_tacitus",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BLUENUGLYSWEATER",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "jar_of_bees",
+      "asaarash_criniere",
+      "spectral_scale",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_HUNGERDEMON",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "dworkins_high_explosives",
+      "fereldan_claymore",
+      "boots_of_faith",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-power-4",
+    "rune-stun-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3092,
+   "cells": [
+    {
+     "id": "UNIT_TEVINTERARCANEWARRIOR",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "brute_hammer",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DESIREDEMON",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "inquisition_warmage_pauldron",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_TEVINTERSLAVER",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "inquisition_staff",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DALISHWARRIOR",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "soldiers_plate",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-health-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 1354,
+   "cells": [
+    {
+     "id": "UNIT_FENNEC",
+     "tier": "I",
+     "level": 6
+    },
+    {
+     "id": "UNIT_CORRUPTEDNUG",
+     "tier": "I",
+     "level": 6
+    },
+    null,
+    {
+     "id": "UNIT_RAGEDEMON",
+     "tier": "I",
+     "level": 6
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 5332,
+   "cells": [
+    {
+     "id": "UNIT_REDNUGLYSWEATER",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "jar_of_bees",
+      "shield_of_le_marque",
+      "spectral_scale",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_HARLEQUIN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "jar_of_bees",
+      "crow_dagger",
+      "ring_of_resilience",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_ZATHRIAN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "jar_of_bees",
+      "voracity",
+      "soulwrecker_staff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_KNIGHTCOMMANDERGREAGOIR",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "dworkins_high_explosives",
+      "alamarri_warstaff",
+      "lineage",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WINTERSENDROCKWRAITH",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "remarkable_emerald",
+      "dalish_robes",
+      "warm_orb",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-4",
+    "rune-stun-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4440,
+   "cells": [
+    {
+     "id": "UNIT_TEVINTERLAETANMAGE",
+     "tier": "IV",
+     "level": 30,
+     "gear": [
+      "stonehammer_plate",
+      "forge_masters_hammer",
+      "greaves_of_the_lady",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SPIRITOFVALOR",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "helm_of_the_mountain_father",
+      "dirthamens_wisdom",
+      "tome_of_the_mortal_vessel",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_ZATHRIAN",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "dworkins_safe_explosives",
+      "swiftrunners_shield",
+      "masterwork_witch_staff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DALISHWARRIOR",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "tome_of_skill_and_sundry",
+      "qunari_tower_shield",
+      "sentinel_greaves",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-brave-targeting-3",
+    "rune-initiative-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5598,
+   "cells": [
+    {
+     "id": "UNIT_SLOTHABOMINATION",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "first_enchanters_robes",
+      "belt_of_the_architect",
+      "cobra_crown",
+      "great_dragon_staff",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_HUNGERDEMON",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "ruby_ring",
+      "revered_defender_maul",
+      "the_elders_grimoire",
+      "ritual_breaker",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_HARLEQUIN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "ardent_blossom",
+      "the_bind_that_guides",
+      "walking_death",
+      "the_eye_that_weeps",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "ardent_blossom",
+      "boots_of_the_river_dane",
+      "senior_wardens_staff",
+      "helm_of_justice",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_CHARREDSYLVAN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "greater_mistral_scale",
+      "blackmetal_torque",
+      "kaddis_of_the_lady",
+      "fade_touched_silverite",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-power-5",
+    "rune-health-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3815,
+   "cells": [
+    {
+     "id": "UNIT_FENNEC",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "asaarash_peytral",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SHADOWWEREWOLF",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "bow_of_the_beresaad",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_CORRUPTEDNUG",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "asaarash_peytral",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_CULTISTMAGE",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "inquisition_staff",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DRAGONTHRALL",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "asaarash_peytral",
+      "",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-damage-shielding-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7317,
+   "cells": [
+    {
+     "id": "UNIT_PRIDEABOMINATION",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "the_elders_grimoire",
+      "vigilance",
+      "spirit_maul",
+      "glandivalis",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DALISHLUNARWARRIOR",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "helm_of_justice",
+      "cuirass_of_the_winds",
+      "arlathan_focusing_crystal",
+      "the_golden_princes_helm",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_TEVINTERBATTLEMAGE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "hauberk_of_the_lady",
+      "great_dragon_staff",
+      "first_enchanters_robes",
+      "arms_of_the_champion",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_TEVINTERLAETANMAGE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "vestments_of_the_dragon_hunter",
+      "ruby_ring",
+      "sidereal_staff",
+      "the_skin_that_stalks",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WINTERSENDDRAGON",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "asaarash_chanfron",
+      "blackmetal_torque",
+      "kaddis_of_the_lady",
+      "kaltenzahn_scale",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-targeting-5",
+    "rune-powerdrain-5",
+    "rune-retaliation-7"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4453,
+   "cells": [
+    {
+     "id": "UNIT_DALISHSOLISWARRIOR",
+     "tier": "III",
+     "level": 32,
+     "gear": [
+      "templar_breastplate",
+      "gauntlets_of_the_nug",
+      "forge_masters_hammer",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_ABOMINATION",
+     "tier": "III",
+     "level": 32,
+     "gear": [
+      "tome_of_skill_and_sundry",
+      "gauntlets_of_the_nug",
+      "captains_plate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_PRIDEABOMINATION",
+     "tier": "III",
+     "level": 32,
+     "gear": [
+      "swiftrunners_shield",
+      "dirthamens_wisdom",
+      "forge_masters_hammer",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DARKREVENANTIV",
+     "tier": "IV",
+     "level": 32,
+     "gear": [
+      "templar_breastplate",
+      "forge_masters_hammer",
+      "dirthamens_wisdom",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-brave-targeting-3",
+    "rune-health-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4277,
+   "cells": [
+    {
+     "id": "UNIT_CULTISTASSASSIN",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "tome_of_physical_technique",
+      "crow_shield",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_HUNGERDEMON",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "tome_of_physical_technique",
+      "greaves_of_the_beresaad",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_FENNEC",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "mantle_of_the_hold_beast",
+      "kaddis_of_the_mountainfather",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RABIDWEREWOLF",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "kaddis_of_the_mountainfather",
+      "bow_of_cleansing_fire",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BERESKARN",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "kaddis_of_the_mountainfather",
+      "mantle_of_the_hold_beast",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-wounded-targeting-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 1393,
+   "cells": [
+    {
+     "id": "UNIT_FERELDANBANN",
+     "tier": "II",
+     "level": 12
+    },
+    {
+     "id": "UNIT_RAGEDEMON",
+     "tier": "II",
+     "level": 12
+    },
+    null,
+    {
+     "id": "UNIT_FENNEC",
+     "tier": "II",
+     "level": 12
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 5722,
+   "cells": [
+    {
+     "id": "UNIT_BLUENUGLYSWEATER",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "asaarash_criniere",
+      "jar_of_bees",
+      "spectral_scale",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RIFTWRAITH",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "jar_of_bees",
+      "dworkins_high_explosives",
+      "dalish_robes",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WHITENUGLYSWEATER",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "dworkins_high_explosives",
+      "asaarash_criniere",
+      "warden_tower_shield",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_FREEMARCHER",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "jar_of_bees",
+      "talon_of_the_skies",
+      "maul_of_tacitus",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BERESKARN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "asaarash_criniere",
+      "spectral_scale",
+      "asaarash_saddle",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-stun-4",
+    "rune-powerdrain-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3444,
+   "cells": [
+    {
+     "id": "UNIT_LAYSISTERLELIANA",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "inquisition_shield",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RABIDWEREWOLF",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "asaarash_peytral",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_FERELDANBANN",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "fereldan_soldier_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RAGEDEMON",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "inquisition_staff",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-stun-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 722,
+   "cells": [
+    {
+     "id": "UNIT_FENNEC",
+     "tier": "I",
+     "level": 8
+    },
+    {
+     "id": "UNIT_FERELDANBANN",
+     "tier": "I",
+     "level": 8
+    },
+    null,
+    {
+     "id": "UNIT_DALISHMAGE",
+     "tier": "I",
+     "level": 8
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 5911,
+   "cells": [
+    {
+     "id": "UNIT_NOBLENUG",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "spectral_scale",
+      "dworkins_high_explosives",
+      "jar_of_bees",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_AVVARGOATRARE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "asaarash_criniere",
+      "jar_of_bees",
+      "spectral_scale",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DALISHLUNARWARRIOR",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "alamarri_warstaff",
+      "ser_alvards_sword",
+      "jar_of_bees",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_FERELDANARL",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "dworkins_high_explosives",
+      "warden_tower_shield",
+      "legionnaire_helmet",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SILVERHALLA",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "asaarash_criniere",
+      "asaarash_saddle",
+      "spectral_scale",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-damage-shielding-4",
+    "rune-initiative-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5032,
+   "cells": [
+    {
+     "id": "UNIT_AVVARGOATRARE",
+     "tier": "IV",
+     "level": 40,
+     "gear": [
+      "dworkins_safe_explosives",
+      "helm_of_the_mountain_father",
+      "templar_breastplate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_REDNUGLYSWEATER",
+     "tier": "IV",
+     "level": 40,
+     "gear": [
+      "forge_masters_hammer",
+      "gamordan_stormrider_scale",
+      "templar_longsword",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_REVENANT",
+     "tier": "IV",
+     "level": 40,
+     "gear": [
+      "forge_masters_hammer",
+      "chevaliers_cutlass",
+      "templar_breastplate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_VELGHAST",
+     "tier": "IV",
+     "level": 40,
+     "gear": [
+      "tome_of_the_mortal_vessel",
+      "staff_of_corruption",
+      "expensive_dog_treats",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-powerdrain-3",
+    "rune-stun-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2402,
+   "cells": [
+    {
+     "id": "UNIT_DARKREVENANTIV",
+     "tier": "IV",
+     "level": 18,
+     "gear": [
+      "brute_hammer",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WINTERSENDNUG",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "asaarash_peytral",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null,
+    {
+     "id": "UNIT_DALISHWARRIOR",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "fereldan_soldier_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-health-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6119,
+   "cells": [
+    {
+     "id": "UNIT_NOBLENUG",
+     "tier": "IV",
+     "level": 44,
+     "gear": [
+      "kaddis_of_the_lady",
+      "ruby_ring",
+      "diplomatic_missives",
+      "ardent_blossom",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_TEVINTERBATTLEMAGE",
+     "tier": "IV",
+     "level": 44,
+     "gear": [
+      "the_bind_that_guides",
+      "cobra_crown",
+      "ruby_ring",
+      "virtuosity",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SPIRITOFVALOR",
+     "tier": "IV",
+     "level": 44,
+     "gear": [
+      "ritual_breaker",
+      "ardent_blossom",
+      "revered_defender_maul",
+      "vigilance",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DARKREVENANTIV",
+     "tier": "IV",
+     "level": 44,
+     "gear": [
+      "vigilance",
+      "magekiller",
+      "oath_breaker",
+      "ritual_breaker",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WINTERSENDDRAGON",
+     "tier": "IV",
+     "level": 44,
+     "gear": [
+      "asaarash_chanfron",
+      "walking_death",
+      "greater_mistral_scale",
+      "blackmetal_torque",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-power-5",
+    "rune-slow-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3027,
+   "cells": [
+    {
+     "id": "UNIT_DALISHWARRIOR",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "brute_hammer",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_FERELDANBANN",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "fereldan_soldier_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RABIDWEREWOLF",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "asaarash_peytral",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_AVVARBARBARIAN",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "fereldan_soldier_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-quick-targeting-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5996,
+   "cells": [
+    {
+     "id": "UNIT_DRAKE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "ruby_ring",
+      "blackmetal_torque",
+      "asaarash_chanfron",
+      "the_ancestors_greaves",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "senior_wardens_staff",
+      "magekiller",
+      "oath_breaker",
+      "bulls_edge",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_TEMPLARCARVER",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "lyrium_kit",
+      "ardent_blossom",
+      "the_divine_helmet",
+      "the_skin_that_stalks",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_CIRCLESENIORENCHANTER",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "fade_touched_silverite",
+      "grand_enchanters_staff",
+      "sidereal_staff",
+      "mortalitasi_cowl",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BERESKARN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "greater_mistral_scale",
+      "kaddis_of_the_lady",
+      "belt_of_the_architect",
+      "robes_of_the_architect",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-wounded-targeting-5",
+    "rune-quick-targeting-5",
+    "rune-guard-7"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4954,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "templar_breastplate",
+      "staff_of_faith",
+      "sentinel_gauntlets",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RABIDWEREWOLF",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "swiftrunners_shield",
+      "expensive_dog_treats",
+      "scout_armor",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "prowler_mail",
+      "templar_breastplate",
+      "lyrium_reinforced_longbow",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_FERELDANBANN",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "forge_masters_hammer",
+      "greaves_of_the_lady",
+      "chevaliers_cutlass",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-initiative-3",
+    "rune-wounded-targeting-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3554,
+   "cells": [
+    {
+     "id": "UNIT_SHADOWWEREWOLF",
+     "tier": "III",
+     "level": 29,
+     "gear": [
+      "crow_shield",
+      "mantle_of_the_hold_beast",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_FREEMARCHER",
+     "tier": "III",
+     "level": 29,
+     "gear": [
+      "chantry_shield",
+      "fade_wall",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DESIREDEMON",
+     "tier": "III",
+     "level": 29,
+     "gear": [
+      "grimoire_of_the_frozen_wastes",
+      "dalish_staff",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SHRIEKALPHA",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "crow_shield",
+      "elusive_icebow",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-quick-targeting-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4453,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_GREYWARDENGENEVIEVE",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "I",
+     "level": 1
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "I",
+     "level": 1
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 9778,
+   "cells": [
+    {
+     "id": "UNIT_SANTABLACKWALL",
+     "tier": "IV",
+     "level": 71,
+     "gear": [
+      "ritual_breaker",
+      "spirit_maul",
+      "ruby_ring",
+      "hauberk_of_the_lady",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WARDENCOMMANDERCLAREL",
+     "tier": "IV",
+     "level": 71,
+     "gear": [
+      "ruby_ring",
+      "the_eye_that_weeps",
+      "virtuosity",
+      "first_enchanters_robes",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 65,
+     "gear": [
+      "ruby_ring",
+      "revered_defender_maul",
+      "ardent_blossom",
+      "maferaths_maul",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WARDENCOMMANDERDUNCAN",
+     "tier": "IV",
+     "level": 71,
+     "gear": [
+      "ruby_ring",
+      "magekiller",
+      "walking_death",
+      "griffon_plate",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 71,
+     "gear": [
+      "magekiller",
+      "asaarash_chanfron",
+      "spirit_maul",
+      "the_bind_that_guides",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-5",
+    "rune-slow-targeting-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8567,
+   "cells": [
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "puzzle_ring",
+      "templar_helmet",
+      "tome_of_skill_and_sundry",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WARDENCOMMANDERDUNCAN",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "swiftrunners_shield",
+      "greaves_of_the_lady",
+      "templar_breastplate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "scout_armor",
+      "scout_quiver",
+      "templar_helmet",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "blood_dragon_greaves",
+      "helm_of_the_mountain_father",
+      "dalish_ring",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "qunari_tower_shield",
+      "helm_of_the_mountain_father",
+      "tome_of_skill_and_sundry",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-3",
+    "rune-quick-targeting-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6165,
+   "cells": [
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "III",
+     "level": 16,
+     "gear": [
+      "venatori_helmet",
+      "vanguard_armor",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "III",
+     "level": 16,
+     "gear": [
+      "bow_of_cleansing_fire",
+      "elusive_icebow",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "III",
+     "level": 16,
+     "gear": [
+      "vanguard_armor",
+      "chantry_shield",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "III",
+     "level": 16,
+     "gear": [
+      "venatori_helmet",
+      "vanguard_armor",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "III",
+     "level": 16,
+     "gear": [
+      "greaves_of_the_beresaad",
+      "fade_wall",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-targeting-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3144,
+   "cells": [
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 12
+    },
+    {
+     "id": "UNIT_SERSTROUD",
+     "tier": "II",
+     "level": 12
+    },
+    null,
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "II",
+     "level": 12
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 8320,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "crow_dagger",
+      "assassins_recurve",
+      "duster_leather_armor",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "sentinel_staff",
+      "girdle_of_the_skies",
+      "saarebas_restraints",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "barbarian_lord_maul",
+      "boots_of_faith",
+      "warden_tower_shield",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "jar_of_bees",
+      "asaarash_criniere",
+      "dworkins_high_explosives",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "legionnaire_plate",
+      "legionnaire_helmet",
+      "ser_alvards_sword",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-4",
+    "rune-brave-targeting-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6829,
+   "cells": [
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "bow_of_the_beresaad",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "inquisition_shield",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "soldiers_plate",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "fereldan_soldier_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "warden_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-brave-targeting-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2180,
+   "cells": [
+    {
+     "id": "UNIT_STROUD",
+     "tier": "I",
+     "level": 4
+    },
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "I",
+     "level": 4
+    },
+    null,
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "I",
+     "level": 4
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 8574,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "IV",
+     "level": 46,
+     "gear": [
+      "jar_of_bees",
+      "isanas_song",
+      "dreamweaver_staff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "IV",
+     "level": 46,
+     "gear": [
+      "crow_dagger",
+      "jar_of_bees",
+      "redcliffe_shield",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 46,
+     "gear": [
+      "augurs_witchstaff",
+      "girdle_of_the_skies",
+      "saarebas_restraints",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 46,
+     "gear": [
+      "redcliffe_shield",
+      "alamarri_warstaff",
+      "talon_of_the_skies",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 46,
+     "gear": [
+      "alamarri_warstaff",
+      "lineage",
+      "fereldan_claymore",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-4",
+    "rune-slow-targeting-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5742,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "seer_staff",
+      "orlesian_mask",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "kaddis_of_the_mountainfather",
+      "vinsomer_scale",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SERSTROUD",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "vanguard_armor",
+      "greaves_of_the_beresaad",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "seer_staff",
+      "grimoire_of_the_frozen_wastes",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-quick-targeting-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4342,
+   "cells": [
+    {
+     "id": "UNIT_SANTABLACKWALL",
+     "tier": "II",
+     "level": 14
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 14
+    },
+    null,
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "II",
+     "level": 14
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 9485,
+   "cells": [
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "IV",
+     "level": 36,
+     "gear": [
+      "soothers_sapphire",
+      "gloves_of_the_river_dane",
+      "ruby_ring",
+      "vigilance",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_JUSTICE",
+     "tier": "IV",
+     "level": 36,
+     "gear": [
+      "oath_breaker",
+      "ruby_ring",
+      "magekiller",
+      "the_bind_that_guides",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "IV",
+     "level": 36,
+     "gear": [
+      "the_bind_that_guides",
+      "magekiller",
+      "the_eye_that_weeps",
+      "soothers_sapphire",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "IV",
+     "level": 36,
+     "gear": [
+      "cobra_crown",
+      "soothers_sapphire",
+      "the_bind_that_guides",
+      "the_elders_grimoire",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 36,
+     "gear": [
+      "griffon_plate",
+      "kaddis_of_the_lady",
+      "revered_defender_maul",
+      "blackmetal_torque",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-powerdrain-5",
+    "rune-health-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6061,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "II",
+     "level": 14,
+     "gear": [
+      "inquisition_shield",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "II",
+     "level": 14,
+     "gear": [
+      "inquisition_warmage_pauldron",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null,
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "II",
+     "level": 14,
+     "gear": [
+      "asaarash_peytral",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "II",
+     "level": 14,
+     "gear": [
+      "warden_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-stun-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9257,
+   "cells": [
+    {
+     "id": "UNIT_GARAHEL",
+     "tier": "IV",
+     "level": 81,
+     "gear": [
+      "red_lyrium_idol",
+      "cuirass_of_the_winds",
+      "ardent_blossom",
+      "hakkons_wrath",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "IV",
+     "level": 81,
+     "gear": [
+      "blackmetal_torque",
+      "senior_wardens_staff",
+      "ritual_breaker",
+      "the_golden_princes_helm",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_VENGEANCEANDERS",
+     "tier": "IV",
+     "level": 81,
+     "gear": [
+      "hauberk_of_the_lady",
+      "sidereal_staff",
+      "virtuosity",
+      "mortalitasi_cowl",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 81,
+     "gear": [
+      "senior_wardens_staff",
+      "belt_of_the_architect",
+      "the_elders_grimoire",
+      "the_ladys_wrath",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 81,
+     "gear": [
+      "spirit_maul",
+      "vigilance",
+      "the_bind_that_guides",
+      "bulls_edge",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-targeting-5",
+    "rune-slow-5",
+    "rune-retaliation-7"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7630,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "IV",
+     "level": 43,
+     "gear": [
+      "stonehammer_plate",
+      "dirthamens_wisdom",
+      "forge_masters_hammer",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WARDENCOMMANDERCLAREL",
+     "tier": "IV",
+     "level": 43,
+     "gear": [
+      "wilhelms_staff",
+      "staff_of_corruption",
+      "earnest_reprisal_staff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "IV",
+     "level": 43,
+     "gear": [
+      "templar_helmet",
+      "swiftrunners_shield",
+      "dworkins_safe_explosives",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "IV",
+     "level": 43,
+     "gear": [
+      "puzzle_ring",
+      "scout_quiver",
+      "templar_breastplate",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-power-3",
+    "rune-initiative-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4804,
+   "cells": [
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "kaddis_of_the_mountainfather",
+      "vinsomer_scale",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "bow_of_cleansing_fire",
+      "helm_of_the_skies",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "chantry_shield",
+      "helm_of_the_skies",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "kaddis_of_the_mountainfather",
+      "greaves_of_the_beresaad",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-slow-targeting-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3593,
+   "cells": [
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "II",
+     "level": 12
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "II",
+     "level": 12
+    },
+    null,
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "II",
+     "level": 12
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 7454,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "IV",
+     "level": 62,
+     "gear": [
+      "duster_leather_armor",
+      "legionnaire_plate",
+      "alamarri_warstaff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WARDENCOMMANDERCLAREL",
+     "tier": "IV",
+     "level": 62,
+     "gear": [
+      "voracity",
+      "saarebas_restraints",
+      "augurs_witchstaff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "IV",
+     "level": 62,
+     "gear": [
+      "ser_alvards_sword",
+      "dworkins_high_explosives",
+      "fereldan_claymore",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "IV",
+     "level": 62,
+     "gear": [
+      "talon_of_the_skies",
+      "loose_ends",
+      "ring_of_resilience",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-quick-targeting-4",
+    "rune-initiative-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6692,
+   "cells": [
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "brute_hammer",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "fereldan_soldier_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "soldiers_plate",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "III",
+     "level": 26,
+     "gear": [
+      "smugglers_dagger",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-power-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5143,
+   "cells": [
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "I",
+     "level": 6
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "I",
+     "level": 6
+    },
+    null,
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "I",
+     "level": 6
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 8092,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "girdle_of_the_skies",
+      "augurs_witchstaff",
+      "shield_of_le_marque",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "saarebas_restraints",
+      "jar_of_bees",
+      "ring_of_resilience",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "dworkins_high_explosives",
+      "redcliffe_shield",
+      "jar_of_bees",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "maul_of_tacitus",
+      "jar_of_bees",
+      "alamarri_warstaff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "legionnaire_helmet",
+      "ser_alvards_sword",
+      "lineage",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-targeting-4",
+    "rune-damage-shielding-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6744,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "forge_masters_hammer",
+      "blood_dragon_greaves",
+      "stonehammer_plate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "captains_plate",
+      "blood_dragon_greaves",
+      "templar_breastplate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "staff_of_corruption",
+      "puzzle_ring",
+      "sentinel_greaves",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "scout_armor",
+      "dworkins_safe_explosives",
+      "expensive_dog_treats",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-power-3",
+    "rune-stun-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9433,
+   "cells": [
+    {
+     "id": "UNIT_VENGEANCEANDERS",
+     "tier": "IV",
+     "level": 78,
+     "gear": [
+      "cuirass_of_the_winds",
+      "grand_enchanters_staff",
+      "soothers_sapphire",
+      "ruby_ring",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "IV",
+     "level": 78,
+     "gear": [
+      "the_elders_grimoire",
+      "ruby_ring",
+      "magekiller",
+      "ardent_blossom",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GARAHEL",
+     "tier": "IV",
+     "level": 78,
+     "gear": [
+      "red_lyrium_idol",
+      "senior_wardens_staff",
+      "ardent_blossom",
+      "the_eye_that_weeps",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "IV",
+     "level": 78,
+     "gear": [
+      "walking_death",
+      "senior_wardens_staff",
+      "the_bind_that_guides",
+      "oath_breaker",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 78,
+     "gear": [
+      "boots_of_the_river_dane",
+      "winterweight",
+      "senior_wardens_staff",
+      "the_bind_that_guides",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-stun-5",
+    "rune-wounded-targeting-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6282,
+   "cells": [
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "gauntlets_of_the_skies",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "warden_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "apprentice_coat",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "gauntlets_of_the_skies",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "fereldan_soldier_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-stun-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8990,
+   "cells": [
+    {
+     "id": "UNIT_JUSTICE",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "griffon_plate",
+      "demons_advocate",
+      "spirit_maul",
+      "the_hand_that_cuts",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "maferaths_maul",
+      "ardent_blossom",
+      "asaarash_chanfron",
+      "arms_of_the_champion",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WARDEN-COMMANDERSOPHIA",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "the_eye_that_weeps",
+      "gloves_of_the_river_dane",
+      "the_elders_grimoire",
+      "the_golden_princes_pauldron",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "arlathan_focusing_crystal",
+      "soothers_sapphire",
+      "ruby_ring",
+      "orb_of_destruction",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "maferaths_maul",
+      "soothers_sapphire",
+      "gloves_of_the_river_dane",
+      "the_golden_princes_helm",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-brave-targeting-5",
+    "rune-powerdrain-5",
+    "rune-stealth-7"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5097,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "III",
+     "level": 32,
+     "gear": [
+      "duster_leather_gauntlets",
+      "chevaliers_cutlass",
+      "helm_of_the_mountain_father",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "III",
+     "level": 32,
+     "gear": [
+      "sentinel_greaves",
+      "masterwork_witch_staff",
+      "staff_of_corruption",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "III",
+     "level": 32,
+     "gear": [
+      "templar_longsword",
+      "earnest_reprisal_staff",
+      "expensive_dog_treats",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "III",
+     "level": 32,
+     "gear": [
+      "gamordan_stormrider_scale",
+      "dalish_ring",
+      "expensive_dog_treats",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-damage-shielding-3",
+    "rune-power-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8242,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "helm_of_the_skies",
+      "crow_shield",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "grimoire_of_the_frozen_wastes",
+      "circle_mage_staff",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "tome_of_physical_technique",
+      "crow_shield",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "helm_of_the_skies",
+      "greaves_of_the_beresaad",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "vinsomer_scale",
+      "chantry_shield",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-brave-targeting-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2858,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "II",
+     "level": 12
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 12
+    },
+    null,
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "II",
+     "level": 12
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 8951,
+   "cells": [
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "IV",
+     "level": 63,
+     "gear": [
+      "talon_of_the_skies",
+      "assassins_recurve",
+      "dworkins_high_explosives",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "IV",
+     "level": 63,
+     "gear": [
+      "legionnaire_helmet",
+      "fereldan_claymore",
+      "jar_of_bees",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "warden_tower_shield",
+      "ring_of_resilience",
+      "jar_of_bees",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 63,
+     "gear": [
+      "ring_of_resilience",
+      "mercys_crest",
+      "voracity",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 63,
+     "gear": [
+      "boots_of_faith",
+      "ser_alvards_sword",
+      "legionnaire_plate",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-initiative-4",
+    "rune-brave-targeting-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5227,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "gauntlets_of_the_skies",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "warden_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "inquisition_warmage_pauldron",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "warden_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-stun-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3339,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "I",
+     "level": 8
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "I",
+     "level": 8
+    },
+    null,
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "I",
+     "level": 8
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 8027,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "IV",
+     "level": 46,
+     "gear": [
+      "boots_of_faith",
+      "warden_tower_shield",
+      "dworkins_high_explosives",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 46,
+     "gear": [
+      "talon_of_the_skies",
+      "girdle_of_the_skies",
+      "voracity",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "IV",
+     "level": 46,
+     "gear": [
+      "boots_of_faith",
+      "redcliffe_shield",
+      "lineage",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "IV",
+     "level": 46,
+     "gear": [
+      "saarebas_restraints",
+      "dreamweaver_staff",
+      "voracity",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 46,
+     "gear": [
+      "asaarash_saddle",
+      "legionnaire_plate",
+      "lineage",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-power-4",
+    "rune-stun-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7226,
+   "cells": [
+    {
+     "id": "UNIT_STROUD",
+     "tier": "IV",
+     "level": 40,
+     "gear": [
+      "gauntlets_of_the_nug",
+      "inquisition_longsword",
+      "dirthamens_wisdom",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WARDENCOMMANDERDUNCAN",
+     "tier": "IV",
+     "level": 40,
+     "gear": [
+      "rebound_dagger",
+      "swiftrunners_shield",
+      "expensive_dog_treats",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "IV",
+     "level": 40,
+     "gear": [
+      "staff_of_faith",
+      "sentinel_greaves",
+      "chevaliers_cutlass",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENGENEVIEVE",
+     "tier": "IV",
+     "level": 40,
+     "gear": [
+      "chevaliers_cutlass",
+      "tome_of_skill_and_sundry",
+      "swiftrunners_shield",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-quick-targeting-3",
+    "rune-power-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4244,
+   "cells": [
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "inquisition_shield",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "staff_of_shadows",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null,
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "II",
+     "level": 18,
+     "gear": [
+      "apprentice_coat",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-damage-shielding-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9654,
+   "cells": [
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "IV",
+     "level": 44,
+     "gear": [
+      "hauberk_of_the_lady",
+      "armada_captains_knife",
+      "oath_breaker",
+      "the_eye_that_weeps",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "IV",
+     "level": 44,
+     "gear": [
+      "oath_breaker",
+      "helm_of_justice",
+      "vigilance",
+      "the_eye_that_weeps",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 44,
+     "gear": [
+      "cobra_crown",
+      "ardent_blossom",
+      "vestments_of_the_dragon_hunter",
+      "fade_touched_silverite",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "IV",
+     "level": 44,
+     "gear": [
+      "fade_touched_silverite",
+      "ardent_blossom",
+      "ruby_ring",
+      "maferaths_maul",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 44,
+     "gear": [
+      "vigilance",
+      "hauberk_of_the_lady",
+      "helm_of_justice",
+      "griffon_plate",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-quick-targeting-5",
+    "rune-stun-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5865,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "warden_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "staff_of_shadows",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "fereldan_soldier_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "soldiers_plate",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-brave-targeting-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9798,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "IV",
+     "level": 85,
+     "gear": [
+      "maferaths_maul",
+      "the_bind_that_guides",
+      "aeducans_hammer",
+      "chestplate_of_the_fortress",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "IV",
+     "level": 87,
+     "gear": [
+      "hauberk_of_the_lady",
+      "ruby_ring",
+      "the_eye_that_weeps",
+      "glandivalis",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "IV",
+     "level": 87,
+     "gear": [
+      "senior_wardens_staff",
+      "gift_of_the_talons",
+      "the_elders_grimoire",
+      "the_black_foxs_jerkin",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_KINGALISTAIR",
+     "tier": "IV",
+     "level": 87,
+     "gear": [
+      "demons_advocate",
+      "hauberk_of_the_lady",
+      "cuirass_of_the_winds",
+      "maul_of_the_dragon",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 85,
+     "gear": [
+      "kaddis_of_the_lady",
+      "boots_of_the_river_dane",
+      "oath_breaker",
+      "helm_of_the_dragon_hunter",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-brave-targeting-5",
+    "rune-wounded-targeting-5",
+    "rune-dispel-7"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7454,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "IV",
+     "level": 65,
+     "gear": [
+      "templar_longsword",
+      "earnest_reprisal_staff",
+      "rebound_dagger",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_DUNCAN",
+     "tier": "IV",
+     "level": 65,
+     "gear": [
+      "scout_quiver",
+      "stonehammer_plate",
+      "tome_of_the_mortal_vessel",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "IV",
+     "level": 65,
+     "gear": [
+      "templar_longsword",
+      "dalish_ring",
+      "swiftrunners_shield",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "IV",
+     "level": 65,
+     "gear": [
+      "templar_longsword",
+      "templar_helmet",
+      "dworkins_safe_explosives",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-power-3",
+    "rune-slow-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6601,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "III",
+     "level": 29,
+     "gear": [
+      "seer_staff",
+      "enchanter_fire_staff",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "III",
+     "level": 29,
+     "gear": [
+      "seer_staff",
+      "grimoire_of_the_frozen_wastes",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "III",
+     "level": 29,
+     "gear": [
+      "orlesian_mask",
+      "greaves_of_the_beresaad",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "III",
+     "level": 30,
+     "gear": [
+      "orlesian_mask",
+      "vanguard_armor",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-brave-targeting-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2858,
+   "cells": [
+    {
+     "id": "UNIT_STROUD",
+     "tier": "II",
+     "level": 10
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "II",
+     "level": 10
+    },
+    null,
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "II",
+     "level": 10
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 8691,
+   "cells": [
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "senior_wardens_staff",
+      "gloves_of_the_river_dane",
+      "hauberk_of_the_lady",
+      "spirit_maul",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "the_elders_grimoire",
+      "mythals_judgment",
+      "ruby_ring",
+      "senior_wardens_staff",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENGENEVIEVE",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "magekiller",
+      "senior_wardens_staff",
+      "the_bind_that_guides",
+      "vigilance",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 65,
+     "gear": [
+      "oath_breaker",
+      "the_eye_that_weeps",
+      "gloves_of_the_river_dane",
+      "maferaths_maul",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "kaddis_of_the_lady",
+      "helm_of_justice",
+      "winterweight",
+      "revered_defender_maul",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-damage-shielding-5",
+    "rune-wounded-targeting-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5325,
+   "cells": [
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "dalish_staff",
+      "enchanter_fire_staff",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "kaddis_of_the_mountainfather",
+      "venatori_helmet",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "circle_mage_staff",
+      "seer_staff",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "chantry_shield",
+      "greaves_of_the_beresaad",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-health-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2975,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "II",
+     "level": 12
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "II",
+     "level": 12
+    },
+    null,
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "II",
+     "level": 12
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 6595,
+   "cells": [
+    {
+     "id": "UNIT_VENGEANCEANDERS",
+     "tier": "IV",
+     "level": 62,
+     "gear": [
+      "girdle_of_the_skies",
+      "bow_of_the_righteous",
+      "dworkins_high_explosives",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "IV",
+     "level": 62,
+     "gear": [
+      "jar_of_bees",
+      "redcliffe_shield",
+      "barbarian_lord_maul",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BLACKWALL",
+     "tier": "IV",
+     "level": 62,
+     "gear": [
+      "dworkins_high_explosives",
+      "shield_of_le_marque",
+      "talon_of_the_skies",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 62,
+     "gear": [
+      "alamarri_warstaff",
+      "barbarian_lord_maul",
+      "fereldan_claymore",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-powerdrain-4",
+    "rune-slow-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 7864,
+   "cells": [
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "templar_longsword",
+      "prowler_mail",
+      "swiftrunners_shield",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "forge_masters_hammer",
+      "dworkins_safe_explosives",
+      "templar_longsword",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_THOMRAINIER",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "stonehammer_plate",
+      "captains_plate",
+      "gauntlets_of_the_nug",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "III",
+     "level": 28,
+     "gear": [
+      "dirthamens_wisdom",
+      "expensive_dog_treats",
+      "tome_of_the_mortal_vessel",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-brave-targeting-3",
+    "rune-wounded-targeting-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8457,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "IV",
+     "level": 52,
+     "gear": [
+      "ardent_blossom",
+      "the_bind_that_guides",
+      "ritual_breaker",
+      "ruby_ring",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_WARDENCOMMANDERCLAREL",
+     "tier": "IV",
+     "level": 52,
+     "gear": [
+      "ardent_blossom",
+      "belt_of_the_architect",
+      "great_dragon_staff",
+      "vestments_of_the_dragon_hunter",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "IV",
+     "level": 52,
+     "gear": [
+      "revered_defender_maul",
+      "ritual_breaker",
+      "greater_mistral_scale",
+      "helm_of_justice",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BLACKWALL",
+     "tier": "IV",
+     "level": 52,
+     "gear": [
+      "demons_advocate",
+      "the_bind_that_guides",
+      "helm_of_justice",
+      "ardent_blossom",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 52,
+     "gear": [
+      "griffon_plate",
+      "revered_defender_maul",
+      "magekiller",
+      "gloves_of_the_river_dane",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-5",
+    "rune-damage-shielding-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 4218,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "I",
+     "level": 15
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "I",
+     "level": 14
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "I",
+     "level": 14
+    },
+    {
+     "id": "UNIT_RIORDAN",
+     "tier": "I",
+     "level": 14
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 9524,
+   "cells": [
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "griffon_plate",
+      "grand_enchanters_staff",
+      "the_bind_that_guides",
+      "arms_of_the_champion",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "vigilance",
+      "boots_of_the_river_dane",
+      "gloves_of_the_river_dane",
+      "helm_of_the_dragon_hunter",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "grand_enchanters_staff",
+      "soothers_sapphire",
+      "belt_of_the_architect",
+      "garahels_helm",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "ardent_blossom",
+      "ruby_ring",
+      "boots_of_the_river_dane",
+      "joining_chalice",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "griffon_plate",
+      "asaarash_chanfron",
+      "helm_of_justice",
+      "enchanted_silver_armor",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-damage-shielding-5",
+    "rune-slow-targeting-5",
+    "rune-dispel-7"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8391,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "masterwork_witch_staff",
+      "staff_of_faith",
+      "templar_breastplate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "captains_plate",
+      "templar_breastplate",
+      "staff_of_faith",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "chevaliers_cutlass",
+      "templar_breastplate",
+      "earnest_reprisal_staff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "staff_of_faith",
+      "tome_of_arcane_technique",
+      "templar_breastplate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 49,
+     "gear": [
+      "chevaliers_cutlass",
+      "gauntlets_of_the_nug",
+      "gamordan_stormrider_scale",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-slow-targeting-3",
+    "rune-power-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6907,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENGENEVIEVE",
+     "tier": "III",
+     "level": 22,
+     "gear": [
+      "venatori_helmet",
+      "vanguard_armor",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "III",
+     "level": 22,
+     "gear": [
+      "elusive_icebow",
+      "duster_leather_pauldron",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "III",
+     "level": 22,
+     "gear": [
+      "vanguard_armor",
+      "venatori_helmet",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "III",
+     "level": 22,
+     "gear": [
+      "vanguard_armor",
+      "chantry_shield",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-brave-targeting-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 3203,
+   "cells": [
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "II",
+     "level": 14
+    },
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "II",
+     "level": 14
+    },
+    null,
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "II",
+     "level": 14
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 8417,
+   "cells": [
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "mercys_crest",
+      "redcliffe_shield",
+      "jar_of_bees",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "asaarash_criniere",
+      "asaarash_saddle",
+      "jar_of_bees",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "warden_tower_shield",
+      "spectral_scale",
+      "alamarri_warstaff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "voracity",
+      "loose_ends",
+      "sentinel_staff",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "fereldan_claymore",
+      "barbarian_lord_maul",
+      "talon_of_the_skies",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-brave-targeting-4",
+    "rune-health-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5944,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "III",
+     "level": 27,
+     "gear": [
+      "cutpurse_slicer",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_STROUD",
+     "tier": "III",
+     "level": 27,
+     "gear": [
+      "brute_hammer",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "III",
+     "level": 27,
+     "gear": [
+      "inquisition_shield",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null,
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "III",
+     "level": 27,
+     "gear": [
+      "gauntlets_of_the_skies",
+      "",
+      "",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-damage-shielding-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 2428,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENWARRIOR",
+     "tier": "I",
+     "level": 6
+    },
+    {
+     "id": "UNIT_BARKSPAWN",
+     "tier": "I",
+     "level": 6
+    },
+    null,
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "I",
+     "level": 6
+    },
+    null
+   ],
+   "runes": [],
+   "events_only": true
+  },
+  {
+   "strength": 8971,
+   "cells": [
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "IV",
+     "level": 42,
+     "gear": [
+      "boots_of_faith",
+      "legionnaire_plate",
+      "maul_of_tacitus",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 42,
+     "gear": [
+      "dreamweaver_staff",
+      "dworkins_high_explosives",
+      "voracity",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "IV",
+     "level": 35,
+     "gear": [
+      "shield_of_le_marque",
+      "talon_of_the_skies",
+      "jar_of_bees",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "IV",
+     "level": 35,
+     "gear": [
+      "legionnaire_helmet",
+      "ser_alvards_sword",
+      "barbarian_lord_maul",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 35,
+     "gear": [
+      "fereldan_claymore",
+      "barbarian_lord_maul",
+      "ser_alvards_sword",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-damage-shielding-4",
+    "rune-health-4"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5019,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENSIGRUN",
+     "tier": "III",
+     "level": 22,
+     "gear": [
+      "tome_of_physical_technique",
+      "elusive_icebow",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "III",
+     "level": 22,
+     "gear": [
+      "chantry_shield",
+      "venatori_helmet",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENCARVER",
+     "tier": "III",
+     "level": 22,
+     "gear": [
+      "venatori_helmet",
+      "fade_wall",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SANTABLACKWALL",
+     "tier": "III",
+     "level": 22,
+     "gear": [
+      "vanguard_armor",
+      "helm_of_the_skies",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-damage-shielding-2"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5449,
+   "cells": [
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "II",
+     "level": 12,
+     "gear": [
+      "inquisition_shield",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENFIONA",
+     "tier": "II",
+     "level": 12,
+     "gear": [
+      "warden_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null,
+    {
+     "id": "UNIT_REDLYRIUMBLACKWALL",
+     "tier": "II",
+     "level": 12,
+     "gear": [
+      "smugglers_dagger",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-quick-targeting-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8470,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "great_dragon_staff",
+      "senior_wardens_staff",
+      "grand_enchanters_staff",
+      "vestments_of_the_dragon_hunter",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "ardent_blossom",
+      "vigilance",
+      "senior_wardens_staff",
+      "helm_of_justice",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "IV",
+     "level": 65,
+     "gear": [
+      "senior_wardens_staff",
+      "first_enchanters_robes",
+      "the_bind_that_guides",
+      "sidereal_staff",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENALISTAIR",
+     "tier": "IV",
+     "level": 65,
+     "gear": [
+      "the_bind_that_guides",
+      "gloves_of_the_river_dane",
+      "maferaths_maul",
+      "diplomatic_missives",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 68,
+     "gear": [
+      "oath_breaker",
+      "revered_defender_maul",
+      "ritual_breaker",
+      "kaddis_of_the_lady",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-brave-targeting-5",
+    "rune-slow-5"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 6210,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENLOGHAIN",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "brute_hammer",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENMAGE",
+     "tier": "II",
+     "level": 25,
+     "gear": [
+      "inquisition_warmage_pauldron",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENOGHREN",
+     "tier": "III",
+     "level": 24,
+     "gear": [
+      "warden_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SERSTROUD",
+     "tier": "II",
+     "level": 25,
+     "gear": [
+      "warden_helmet",
+      "",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-quick-targeting-1"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 9680,
+   "cells": [
+    {
+     "id": "UNIT_GREYWARDENROGUE",
+     "tier": "IV",
+     "level": 45,
+     "gear": [
+      "griffon_plate",
+      "the_bind_that_guides",
+      "red_lyrium_idol",
+      "orb_of_destruction",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_JUSTICE",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "helm_of_justice",
+      "oath_breaker",
+      "winterweight",
+      "garahels_helm",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENBETHANY",
+     "tier": "IV",
+     "level": 65,
+     "gear": [
+      "the_eye_that_weeps",
+      "bloodline",
+      "cobra_crown",
+      "robes_of_the_architect",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_AVERNUS",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "cuirass_of_the_winds",
+      "cobra_crown",
+      "first_enchanters_robes",
+      "orb_of_fenharel",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 74,
+     "gear": [
+      "maferaths_maul",
+      "blackmetal_torque",
+      "greater_mistral_scale",
+      "maul_of_the_dragon",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-power-5",
+    "rune-powerdrain-5",
+    "rune-dispel-7"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 8027,
+   "cells": [
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "IV",
+     "level": 55,
+     "gear": [
+      "tome_of_the_mortal_vessel",
+      "dalish_ring",
+      "captains_plate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_MHAIRI",
+     "tier": "IV",
+     "level": 55,
+     "gear": [
+      "tome_of_the_mortal_vessel",
+      "chevaliers_cutlass",
+      "templar_breastplate",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_JANEKA",
+     "tier": "IV",
+     "level": 30,
+     "gear": [
+      "tome_of_the_mortal_vessel",
+      "forge_masters_hammer",
+      "sentinel_plate_pauldron",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_BLIGHTEDOGHREN",
+     "tier": "IV",
+     "level": 55,
+     "gear": [
+      "expensive_dog_treats",
+      "templar_breastplate",
+      "swiftrunners_shield",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENKNIGHT",
+     "tier": "IV",
+     "level": 55,
+     "gear": [
+      "chevaliers_cutlass",
+      "tome_of_skill_and_sundry",
+      "greaves_of_the_lady",
+      "",
+      ""
+     ]
+    }
+   ],
+   "runes": [
+    "rune-damage-shielding-3",
+    "rune-slow-3"
+   ],
+   "events_only": true
+  },
+  {
+   "strength": 5000,
+   "cells": [
+    {
+     "id": "UNIT_LARIUS",
+     "tier": "III",
+     "level": 29,
+     "gear": [
+      "greaves_of_the_beresaad",
+      "vanguard_armor",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SOPHIADRYDEN",
+     "tier": "III",
+     "level": 29,
+     "gear": [
+      "fade_wall",
+      "vanguard_armor",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_SERPOUNCE-A-LOT",
+     "tier": "III",
+     "level": 29,
+     "gear": [
+      "kaddis_of_the_mountainfather",
+      "mantle_of_the_hold_beast",
+      "",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": "UNIT_GREYWARDENVELANNA",
+     "tier": "III",
+     "level": 29,
+     "gear": [
+      "circle_mage_staff",
+      "enchanter_fire_staff",
+      "",
+      "",
+      ""
+     ]
+    },
+    null
+   ],
+   "runes": [
+    "rune-power-2"
+   ],
+   "events_only": true
   }
  ]
 }
